@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiwiMeowo's art</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+<script>
+function PageNum(){
+let a= document.getElementsByClassName("pagenum2")[1];
+let b= a.getElementsByTagName("a");
+for (i = 0; i < b.length; i++){
+b[i].innerText=i+1;
+}
+}
+function JumpPage(){
+let x = window.location.hash;
+let a= document.getElementsByClassName("pagenum2")[1];
+let b= a.getElementsByTagName("a");
+let list=["a","b","c","d","e","f","g","h"]
+for (i = 0; i < list.length; i++){
+if (x === "#" + (i+1).toString()){
+  document.getElementsByClassName("fra")[0].src="2024"+list[i]+".html";
+}
+}
+}
+</script>
+    <style>
+    .main2 {
+  margin: 0px auto;
+}
+    </style>
+  </head>
+ <body onload="PageNum();JumpPage()">
+  <div class="quick-nav">
+    <div class="navbar">
+      <a href="/index.html">Home</a>
+      <a href="/art.html">Back</a>
+    </div>
+  </div>
+  <div class="page-wrapper">
+    <div class="main2">
+      <div class="box" style="min-width: calc(100vw - 110px);"><div class="tit"><h1>2024 Art</h1></div><div class="inner">
+      <center><p>Hover to see my comments! If images aren't loading, try clicking on them, and they still don't load, I probably broke the links.</p></center> 
+      <p style="display: block;width: fit-content;margin:0.75em auto;" class="pagenum">
+      <span style="text-align:center" class="pagenum2">Pages: </span>
+      <span class="pagenum2">
+      <a href="2024h.html" target="frame" href="#1"></a><span class="numdivider"></span><a href="2024g.html" target="frame"></a><span class="numdivider"></span><a href="2024f.html" target="frame"></a><span class="numdivider"></span><a href="2024e.html" target="frame"></a><span class="numdivider"></span><a href="2024d.html" target="frame"></a><span class="numdivider"></span><a href="2024c.html" target="frame"></a><span class="numdivider"></span><a href="2024b.html" target="frame"></a><span class="numdivider"></span><a href="2024a.html" target="frame"></a><span class="numdivider"></span>
+      </span></p>
+        <iframe src="2024h.html" name="frame" class="fra"></iframe>
+        </div></div>
+    </div>
+    </div>
+  <script src="/e.js"></script>
+</body>
+</html>
