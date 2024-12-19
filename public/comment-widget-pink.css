@@ -93,7 +93,7 @@
     background-color: var(--yellow);
     border-radius: 7.5px;
     padding: 15px 25px;
-    box-shadow: 4px 4px 4px 2px var(--shadow), inset 0 50px 50px -20px color-mix(in srgb, var(--yellow), #b99077),inset 0 -50px 50px -20px color-mix(in srgb, var(--yellow), #b99077);
+    box-shadow: 4px 4px 4px 2px var(--shadow), inset 0 50px 50px -20px color-mix(in srgb, var(--yellow),#b99077),inset 0 -50px 50px -20px color-mix(in srgb, var(--yellow), #b99077);
 }
 #c_container {margin-top: 10px;}
 
