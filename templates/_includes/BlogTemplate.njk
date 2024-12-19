@@ -6,21 +6,32 @@
     <title>Kiwi's blog</title>
     <link rel="icon" type="image/x-icon" href="../../favicon.ico?">
     <link href="../../style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../../style-my-tooltips.css" rel="stylesheet" type="text/css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="../../jquery.style-my-tooltips.js"></script>
   </head>
  <body><span id="top"></span>
     <div class="quick-nav">
     <div class="navbar">
-      <a href="../../../index.html">Home</a>
-      <a href="../../index.html">Blog</a>
+      <a href="../../index.html">Home</a>
+      <a href="../index.html">Blog</a>
     </div>
   </div>
   <div class="page-wrapper">
     <div class="main2">
       <div class="box"><div class="tit"><h1>{{ title }}</h1></div><div class="inner min">
       <h1>{{ subtitle }}</h1>
+      <div class="statusbox">
+        <p>Weather: {{ weather }}</p>
+        <p>Listening to: {% if not nosong %}<a href="{{ songlink }}" target="_blank" title="{{ songcomment }}">{{ songname }}</a>{% else %}{{ nosong }}{% endif %}</p>
+        <p>Mood: {{ mood }}</p>
+        <p>Random thought: {{ thought }}</p>
+        </div>
+        <div class="text">
         {{ content | safe }}
         <p class="date">( {{ blogdate }} )</p>
         <hr>
+        </div>
       </div></div>
       <div id="c_widget"></div>
     <script src="../../comment-widget.js"></script>
