@@ -280,7 +280,7 @@ button.navcoll.act{
 .page-wrapper {
   padding: 50px 50px;
   margin: 0 auto;
-  background: linear-gradient(#637b8759, #7750c359 150%), url(/fancy1.png); /*Gradient makes tiles "fade in".*/
+  background: linear-gradient(#637b8759, #7750c359 150%), url(fancy1.png); /*Gradient makes tiles "fade in".*/
   min-height:calc(100vh - 100px);
   display:flex;
 }
