@@ -1,0 +1,13 @@
+{
+    "name": "kiwimeowonpm",
+    "private": true,
+    "scripts": {
+        "build": "npx @11ty/eleventy"
+    },
+    "devDependencies": {
+        "@11ty/eleventy": "^3.0.0"
+    },
+    "dependencies": {
+        "html-minifier-terser": "^7.2.0"
+    }
+}
