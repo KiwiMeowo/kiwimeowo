@@ -281,7 +281,7 @@ canvas.ff-canvas.ff-canvas-ready{border-radius: 5px;image-rendering: pixelated;}
       <center><div id="new" style="display:inline-block"></div></center>
       <hr>
       <h2>New Blog:</h2>
-      <center><a href="/blog.html" id="new2"></a></center>
+      <center id="new2"></center>
       </div>
       <hr id="autohr">
       <div id="auto2">
@@ -929,7 +929,7 @@ function fetchHtml2() {
   .then((html) => {
     var parser = new DOMParser();
     var doc = parser.parseFromString(html, "text/html");
-    var newblog = doc.querySelector('.collapsible');
+    var newblog = doc.getElementById('current').querySelector('a');
     document.getElementById("new2").innerHTML = newblog.outerHTML;
   })
   .catch(error => {
