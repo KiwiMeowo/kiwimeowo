@@ -261,7 +261,7 @@ button.navcoll.act{
   border: 5px solid #fff;
   border-radius: 50%;
   filter: drop-shadow(3px 3px var(--highlightteal));
-  content: url("/cat.png");
+  content: url("cat.png");
   position: absolute;
   right: 0;
   }

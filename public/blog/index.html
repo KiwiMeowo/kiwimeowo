@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiwi's Blog, and Bedroom</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico?">
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
+    <link href="../style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../style-my-tooltips.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="/jquery.style-my-tooltips.js"></script>
     <style>
@@ -17,8 +17,8 @@
     .bar.lock{filter:grayscale(1) var(--dropshadow) !important;background: linear-gradient(0.25turn, #A9D1DD73, #A9D1DD2E) !important;cursor:default;}
     .bar.lock:hover{translate:0 0;}
     .bar.lock:after{content: url("data:image/svg+xml,%3Csvg fill='%230E1A36' height='1em' width='1em' version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 330 330' xml:space='preserve' stroke='%230E1A36'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cg id='XMLID_509_'%3E%3Cpath id='XMLID_510_' d='M65,330h200c8.284,0,15-6.716,15-15V145c0-8.284-6.716-15-15-15h-15V85c0-46.869-38.131-85-85-85 S80,38.131,80,85v45H65c-8.284,0-15,6.716-15,15v170C50,323.284,56.716,330,65,330z M180,234.986V255c0,8.284-6.716,15-15,15 s-15-6.716-15-15v-20.014c-6.068-4.565-10-11.824-10-19.986c0-13.785,11.215-25,25-25s25,11.215,25,25 C190,223.162,186.068,230.421,180,234.986z M110,85c0-30.327,24.673-55,55-55s55,24.673,55,55v45H110V85z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");margin-left: 5px;display: inline-block;translate: 0 2px;}
-    .header {height: 250px;background: linear-gradient(rgba(10,0,10,0.5), #ff8dff3b), url(/blog/IMG_4104.jpg);background-size: cover;background-position: 0px 250px;}
-.page-wrapper{background:linear-gradient(#0b263b75, #1f084e73 150%), url(/fancy1.png);}
+    .header {height: 250px;background: linear-gradient(rgba(10,0,10,0.5), #ff8dff3b), url(IMG_4104.jpg);background-size: cover;background-position: 0px 250px;}
+.page-wrapper{background:linear-gradient(#0b263b75, #1f084e73 150%), url(../fancy1.png);}
 .title-pic{content:none;}
 
 .circle-out {
@@ -152,17 +152,17 @@ a{cursor:pointer}
 		<div class="open open2">
 		<div>
 		  <a class="bar2" onclick="Current();ShesGone();TagNumbers()">Oct-Dec</a>
-		<a class="bar2" onclick="fetchHtml('/blog/2024c.html');wait()">Jul-Sep</a>
-		<a class="bar2" onclick="fetchHtml('/blog/2024b.html');wait()">Apr-Jun</a>
-		<a class="bar2" onclick="fetchHtml('/blog/2024a.html');wait()">Jan-Mar</a>
+		<a class="bar2" onclick="fetchHtml('2024c.html');wait()">Jul-Sep</a>
+		<a class="bar2" onclick="fetchHtml('2024b.html');wait()">Apr-Jun</a>
+		<a class="bar2" onclick="fetchHtml('2024a.html');wait()">Jan-Mar</a>
 		</div>
 		</div>
-		<a onclick="fetchHtml('/blog/2023.html');wait()">2023 Blog</a>
+		<a onclick="fetchHtml('2023.html');wait()">2023 Blog</a>
 		</div>
 		</div>
     </div>
   </div>
-    <script src="/navcoll.js"></script>
+    <script src="../navcoll.js"></script>
   <div class="header"></div>
     <div class="title">
       <div class="title-text">
@@ -181,11 +181,11 @@ a{cursor:pointer}
 		<a class="bar coll">2024 Blogs...</a>
 		<div class="cont">
 		<a class="bar bar2" onclick="Current();ShesGone();TagNumbers()">Oct-Dec</a>
-		<a class="bar bar2" onclick="fetchHtml('/blog/2024c.html');wait()">Jul-Sep</a>
-		<a class="bar bar2" onclick="fetchHtml('/blog/2024b.html');wait()">Apr-Jun</a>
-		<a class="bar bar2" onclick="fetchHtml('/blog/2024a.html');wait()">Jan-Mar</a>
+		<a class="bar bar2" onclick="fetchHtml('2024c.html');wait()">Jul-Sep</a>
+		<a class="bar bar2" onclick="fetchHtml('2024b.html');wait()">Apr-Jun</a>
+		<a class="bar bar2" onclick="fetchHtml('2024a.html');wait()">Jan-Mar</a>
 		</div>
-		<a class="bar" onclick="fetchHtml('/blog/2023.html');wait()">2023 Blog</a>
+		<a class="bar" onclick="fetchHtml('2023.html');wait()">2023 Blog</a>
 <script>
 var coll = document.getElementsByClassName("coll");
 var i;
@@ -324,7 +324,7 @@ for (i = 0; i < coll.length; i++) {
         <hr>
         </div>
         -->
-        <button class="collapsible" title="Art">git commit suici-- <span class="blogdate">( 19 Dec 2024 )</span></button>
+        <a href="post/2024Dec19.html" target="_blank"><button class="collapsible" title="Art">git commit suici-- <span class="blogdate">( 19 Dec 2024 )</span></button></a>
         <div class="content">
         <h1>Why do I do this to myself</h1>
         <div class="statusbox">
@@ -334,12 +334,6 @@ for (i = 0; i < coll.length; i++) {
         <p>Random thought: Would it make sense to say the definition of Light and Dark elements to be "They are the rawer forms of magic compared to the other three"? That's my idea for world building</p>
         </div>
           <div class="text">
-          <p>Today while I was messing with my blog page, I noticed that when I open a collapsible, the page lags a bit. It is a bit concerning, perhaps I have yapped too much this year. Anyways I feel like putting all blog posts in one page might not have been an idea, I'm starting to regret this decision (I felt like making a new page every blog was too tedious).</p>
-          <p>I remembered that static site generators (like 11ty, which I will be using) can make the bog templates quickly, so I decided to start using Git and whatever the fuck I needed. And man, today's been one hell of a ride.</p>
-          <p>I actually made a Github account a while ago, but upon creating my account, I got very overwhelmed by the very confusing layout, which stopped me from touching it for a while. But today, I have some guides helping me. After fiddling with the terminal a bit, I successfully uploaded my files to my Github using Git AND deplot to Neocities. It did take me a long time, with the password thing not working properly, and terminal isn't exactly easy to understand, plain black and white screen can feel a bit intimidating. I had to start over because I didn't know what I did wrong :(</p>
-          <p>My next step is to connect my VSCode to Github. This was my first reason to start using Github, because the Neocities text editor isn't very nice to use, and it is getting laggy (ofc Kiwi look at your 1k lines of code). This part is fairly easy, what's the best is that there's a user interface that you just click a few buttons to push updates, awesome.</p>
-          <p>Lastly, I downloaded 11ty. While there's a handful of stuff I needed to do, having templates might help me out a lot in the future. What's more is that I can add a comment box on the bottom now! I worry about that troll a bit but I think that guy only targets guestbooks, or else my chatbox would have been a disaster as well.</p>
-          <p>I think I will start officially use these templates in 2025, I am not moving my old blogs into templates, too much work.</p>
 	        </div>
         <p class="date"></p>
         <hr>
@@ -1476,6 +1470,7 @@ close[i].addEventListener("click", function() {
 });
 }
 for (i = 0; i < loadblogs.length; i++) {
+  if(loadblogs[i].parentNode.tagName!="A"){
   loadblogs[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
@@ -1485,6 +1480,7 @@ for (i = 0; i < loadblogs.length; i++) {
     content.style.maxHeight = content.scrollHeight + 5000 + "px";
     } 
   });
+}
 }
 }
 /*Calculates the number of blogs containing each tag (for old blogs)*/
@@ -1507,9 +1503,11 @@ for ( y=0;y<loadblogs.length;y++ ){
 /*Checks all include tag options and shows all blogs*/
  function showAll(){
         for (i = 0; i < blogs.length; i++) {
+          if(blogs[i].parentNode.tagName!="A"){
           blogs[i].classList.remove("active");
           var content = blogs[i].nextElementSibling;
           content.style.maxHeight = null;
+          }
         }
         for ( y=0;y<select.length;y++ ){
         select[y].checked=true;
@@ -1522,9 +1520,11 @@ for ( y=0;y<loadblogs.length;y++ ){
 /*Unchecks all include tag options and hides all blogs*/
 function hideAll(){
         for (i = 0; i < blogs.length; i++) {
+          if(blogs[i].parentNode.tagName!="A"){
           blogs[i].classList.remove("active");
           var content = blogs[i].nextElementSibling;
           content.style.maxHeight = null;
+          }
         }
         for ( y=0;y<select.length;y++ ){
         select[y].checked=false;
@@ -1648,9 +1648,11 @@ select[i].checked=true;
   }
   incl=blogs[y].getAttribute("data-include");
   if (parseInt(incl)==0){
+    if(blogs[y].parentNode.tagName!="A"){
   blogs[y].classList.remove("active");
   var content = blogs[y].nextElementSibling;
   content.style.maxHeight = null;
+    }
   } 
   }
   });
@@ -1678,10 +1680,12 @@ for ( i=0;i<exclude.length;i++ ){
   }
     excl=blogs[y].getAttribute("data-exclude");
   if (parseInt(excl)>0){
+    if(blogs[y].parentNode.tagName!="A"){
   blogs[y].classList.remove("active");
   var content = blogs[y].nextElementSibling;
   content.style.maxHeight = null;
   }
+}
   }
   });
   }
@@ -1798,8 +1802,8 @@ document.body.onpointermove = event => {
 }
 </script>
 <script src="blogdate.js"></script>
-    <script src="/e.js"></script>
-    <script src="/spoiler.js"></script>
+    <script src="../e.js"></script>
+    <script src="../spoiler.js"></script>
       </div>
     </div></div>
   </div>

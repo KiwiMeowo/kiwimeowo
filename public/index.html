@@ -7,7 +7,7 @@
     <title>KiwiMeowo's site</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico?">
     <link href="style.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
+    <link href="style-my-tooltips.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <style>
     :root {
@@ -22,7 +22,7 @@
       border-color: #933b25 var(--dblue) var(--dblue) #933b25;
     }
     .page-wrapper{
-      background:linear-gradient(#67500759, #365e4259 150%), url(/fancy1.png);
+      background:linear-gradient(#67500759, #365e4259 150%), url(fancy1.png);
     }
     .bar,.coolbutton{
       background:linear-gradient(0.25turn, #b1f6bd78, #e1ff8933);
@@ -250,7 +250,7 @@ canvas.ff-canvas.ff-canvas-ready{border-radius: 5px;image-rendering: pixelated;}
         <img src="IMG_1526.jpg" style="border:1px solid;filter: brightness(120%); max-width:100%;display:none;" alt="Drawing of Cosmos, Lavender, Grey, Ruth and Wolf">
         <img src="IMG_7552.jpg" alt="Drawing of Cosmos, Lavender, Kyrea and Jaspers in a group photo" style=" animation-name: spin;animation-duration: 5000ms;animation-iteration-count: infinite;animation-timing-function: linear; border:1px solid;display:none;">
           <div class="text">
-          <p>Welcome to<u>&nbsp;Kiwi's&nbsp;</u>website meow, this is where I will post random stuff, like fandom rambles and original art stuff. As a socially-awkward person, I found it extremely difficult to express myself, even on the internet. Fortunately, I found sharing on my own site is way less stressful, and unlike in other social media, I don't have to worry about likes or views, it feels more comfortable talking about my more personal stuff. So here you might understand me more! <img class="emote" title=":nya:" src="https://cdn.discordapp.com/emojis/1189415939884728451.webp?size=240&quality=lossless"></p>
+          <p>Welcome to<u>&nbsp;Kiwi's&nbsp;</u>website, this is where I will post random stuff, like fandom rambles and original art stuff. As a socially-awkward person, I found it extremely difficult to express myself, even on the internet. Fortunately, I found sharing on my own site is way less stressful, and unlike in other social media, I don't have to worry about likes or views, it feels more comfortable talking about my more personal stuff. So here you might understand me more! <img class="emote" title=":nya:" src="https://cdn.discordapp.com/emojis/1189415939884728451.webp?size=240&quality=lossless"></p>
           <p>Note that the layout is heavily modified from a template, all credits are in the footer.</p>
 	        </div>
 	        <center><p><i><u>- This website is mobile-friendly, but it is recommended to view on 1920×1080 desktop display.
@@ -904,7 +904,7 @@ function StopMarquee() {
   </div> 
   <script>
   function fetchHtml() {
-  fetch('/art/2024.html')
+  fetch('art/2024.html')
   .then((response) => {
     return response.text();
   })
@@ -919,7 +919,7 @@ function StopMarquee() {
   });
 }
 function fetchHtml2() {
-  fetch('/blog/index.html')
+  fetch('blog/index.html')
   .then((response) => {
     return response.text();
   })
@@ -934,7 +934,7 @@ function fetchHtml2() {
   });
 }
 function fetchSong() {
-  fetch('/song.html')
+  fetch('song.html')
   .then((response) => {
     return response.text();
   })

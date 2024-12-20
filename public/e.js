@@ -21,10 +21,11 @@ close[i].addEventListener("click", function() {
             block: 'center',
         });
     content.style.maxHeight = null;
-    untoggle.classList.toggle("active");
+    untoggle.classList.remove("active");
 });
 }
 for (i = 0; i < coll.length; i++) {
+  if(coll[i].parentNode.tagName!="A"){
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
@@ -34,4 +35,5 @@ for (i = 0; i < coll.length; i++) {
     content.style.maxHeight = content.scrollHeight + 5000 + "px";
     } 
   });
+}
 }

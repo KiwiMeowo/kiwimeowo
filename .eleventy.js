@@ -21,7 +21,7 @@ module.exports = function (eleventyConfig) {
     return {
       dir: {
         input: "templates",
-        output: "public/blog/post",
+        output: "public",
       },
     };
   };
