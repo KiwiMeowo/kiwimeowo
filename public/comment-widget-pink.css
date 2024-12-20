@@ -55,7 +55,6 @@
 /* Main */
 #c_widget {
     box-sizing: border-box;
-    height: 100%;
     background-attachment: fixed;
     font-size: 14px;
 }
