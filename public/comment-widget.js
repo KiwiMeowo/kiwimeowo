@@ -49,12 +49,14 @@ const s_filterReplacement = '[REDACTED]'; // Change what filtered words are cens
 const s_filteredWords = [ // Add words to filter by putting them in quotes and separating with commas (ie. 'heck', 'dang')
     'nigga', 'nigger','faggot'
 ]
+// dear troll if you are seeing this, wouldn't it be funnier if your messages shows a whole paragraph of [REDACTED]s instead of trying to bypass the filter?
+
 
 // Text - Change what messages/text appear on the form and in the comments section (Mostly self explanatory)
 const s_widgetTitle = 'Be Nice!';
 const s_nameFieldLabel = 'Name: ';
 const s_websiteFieldLabel = 'Website (Optional): ';
-const s_textFieldLabel = 'Comment anything (maybe your song recommendations?)';
+const s_textFieldLabel = 'Comment your thoughts (maybe your song recommendations too?)';
 const s_submitButtonLabel = 'Submit';
 const s_loadingText = 'Loading comments...';
 const s_noCommentsText = 'No comments yet!';
