@@ -1,7 +1,7 @@
 var coll = document.getElementsByClassName("collapsible");
-var i;
-for (i = 0; i < coll.length; i++){
 var content = document.getElementsByClassName("content");
+var i;
+for (i = 0; i < content.length; i++){
 var date1 = content[i].getElementsByTagName('hr');
 const para = document.createElement("center");
 const button = document.createElement("a");

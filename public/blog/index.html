@@ -5,11 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiwi's Blog, and Bedroom</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico?">
     <link href="../style.css" rel="stylesheet" type="text/css" media="all">
     <link href="../style-my-tooltips.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-    <script src="/jquery.style-my-tooltips.js"></script>
+    <script src="../jquery.style-my-tooltips.js"></script>
     <style>
     :root{--yellow:#E2DBC7;--lteal:#9db5b7;--highlightteal:#B7CBD6;--teal:#1C3F5C;--blue:#0E1A36;--dblue:#000527;--shadow:#1b357082;}
     .title{border-color: #153959 var(--dblue) var(--dblue) #153959;}
@@ -152,12 +152,12 @@ a{cursor:pointer}
 		<div class="open open2">
 		<div>
 		  <a class="bar2" onclick="Current();ShesGone();TagNumbers()">Oct-Dec</a>
-		<a class="bar2" onclick="fetchHtml('2024c.html');wait()">Jul-Sep</a>
-		<a class="bar2" onclick="fetchHtml('2024b.html');wait()">Apr-Jun</a>
-		<a class="bar2" onclick="fetchHtml('2024a.html');wait()">Jan-Mar</a>
+		<a class="bar2" onclick="fetchHtml('2024c.html');waitold()">Jul-Sep</a>
+		<a class="bar2" onclick="fetchHtml('2024b.html');waitold()">Apr-Jun</a>
+		<a class="bar2" onclick="fetchHtml('2024a.html');waitold()">Jan-Mar</a>
 		</div>
 		</div>
-		<a onclick="fetchHtml('2023.html');wait()">2023 Blog</a>
+		<a onclick="fetchHtml('2023.html');waitold()">2023 Blog</a>
 		</div>
 		</div>
     </div>
@@ -181,11 +181,11 @@ a{cursor:pointer}
 		<a class="bar coll">2024 Blogs...</a>
 		<div class="cont">
 		<a class="bar bar2" onclick="Current();ShesGone();TagNumbers()">Oct-Dec</a>
-		<a class="bar bar2" onclick="fetchHtml('2024c.html');wait()">Jul-Sep</a>
-		<a class="bar bar2" onclick="fetchHtml('2024b.html');wait()">Apr-Jun</a>
-		<a class="bar bar2" onclick="fetchHtml('2024a.html');wait()">Jan-Mar</a>
+		<a class="bar bar2" onclick="fetchHtml('2024c.html');waitold()">Jul-Sep</a>
+		<a class="bar bar2" onclick="fetchHtml('2024b.html');waitold()">Apr-Jun</a>
+		<a class="bar bar2" onclick="fetchHtml('2024a.html');waitold()">Jan-Mar</a>
 		</div>
-		<a class="bar" onclick="fetchHtml('2023.html');wait()">2023 Blog</a>
+		<a class="bar" onclick="fetchHtml('2023.html');waitold()">2023 Blog</a>
 <script>
 var coll = document.getElementsByClassName("coll");
 var i;
@@ -1437,6 +1437,8 @@ function BlogDate(){
 for (i = 0; i < loadblogs.length; i++){
 loaddate1[i].innerText = loadblogs[i].getElementsByClassName("blogdate")[0].innerText;
 };
+}
+function BlogTag(){
 for ( x=0;x<loadblogs.length;x++ ){
 var classtags=loadblogs[x].title.split(", ");
 loadblogs[x].setAttribute("data-include",classtags.length);
@@ -1586,8 +1588,23 @@ function spoiler(){
 }
 function wait(){
 if (load.innerHTML!=""){
+BlogTag();
+TagNumbersLoad();
+ShesGone();
+spoiler();
+setTimeout(Tooltips,100);
+document.getElementsByClassName("circle-out")[0].style.display="none";
+return
+} else{
+setTimeout(wait,250);
+document.getElementsByClassName("circle-out")[0].style.display="block";
+}
+}
+function waitold(){
+if (load.innerHTML!=""){
 collapse();
 BlogDate();
+BlogTag();
 TagNumbersLoad();
 ShesGone();
 spoiler();
