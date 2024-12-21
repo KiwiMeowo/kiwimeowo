@@ -179,5 +179,5 @@
     margin-left: 4px;
 }
 .nocomment{
-    text-shadow: 2px 2px var(--shadow);
+    text-shadow: 2px 2px 2px var(--shadow);
 }
