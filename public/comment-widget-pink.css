@@ -178,3 +178,6 @@
     margin-right: 4px;
     margin-left: 4px;
 }
+.nocomment{
+    text-shadow: 2px 2px var(--shadow);
+}
