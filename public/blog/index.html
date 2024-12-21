@@ -318,12 +318,12 @@ for (i = 0; i < coll.length; i++) {
         <hr>
         </div>
         -->
-        <a href="/blog/post/2024-12-21.html" target="_blank"><div class="collapsible" title="Vent, Life">My silly interests <span class="blogdate">( 21 Dec 2024 )</span></div></a>
+        <a href="/blog/post/2024-12-21.html" target="_blank" class="collapsible" title="Vent, Life">My silly interests <span class="blogdate">( 21 Dec 2024 )</span></a>
         <div class="content">
         <p class="date"></p>
         <hr>
         </div>
-        <a href="/blog/post/2024-12-19.html" target="_blank"><div class="collapsible" title="Art">git commit suici-- <span class="blogdate">( 19 Dec 2024 )</span></div></a>
+        <a href="/blog/post/2024-12-19.html" target="_blank" class="collapsible" title="Art">git commit suici-- <span class="blogdate">( 19 Dec 2024 )</span></a>
         <div class="content">
         <h1>Why do I do this to myself</h1>
         <div class="statusbox">
@@ -1471,7 +1471,7 @@ close[i].addEventListener("click", function() {
 });
 }
 for (i = 0; i < loadblogs.length; i++) {
-  if(loadblogs[i].parentNode.tagName!="A"){
+  if(loadblogs[i].tagName!="A"){
   loadblogs[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
@@ -1504,7 +1504,7 @@ for ( y=0;y<loadblogs.length;y++ ){
 /*Checks all include tag options and shows all blogs*/
  function showAll(){
         for (i = 0; i < blogs.length; i++) {
-          if(blogs[i].parentNode.tagName!="A"){
+          if(blogs[i].tagName!="A"){
           blogs[i].classList.remove("active");
           var content = blogs[i].nextElementSibling;
           content.style.maxHeight = null;
@@ -1521,7 +1521,7 @@ for ( y=0;y<loadblogs.length;y++ ){
 /*Unchecks all include tag options and hides all blogs*/
 function hideAll(){
         for (i = 0; i < blogs.length; i++) {
-          if(blogs[i].parentNode.tagName!="A"){
+          if(blogs[i].tagName!="A"){
           blogs[i].classList.remove("active");
           var content = blogs[i].nextElementSibling;
           content.style.maxHeight = null;
@@ -1664,7 +1664,7 @@ select[i].checked=true;
   }
   incl=blogs[y].getAttribute("data-include");
   if (parseInt(incl)==0){
-    if(blogs[y].parentNode.tagName!="A"){
+    if(blogs[y].tagName!="A"){
   blogs[y].classList.remove("active");
   var content = blogs[y].nextElementSibling;
   content.style.maxHeight = null;
@@ -1696,7 +1696,7 @@ for ( i=0;i<exclude.length;i++ ){
   }
     excl=blogs[y].getAttribute("data-exclude");
   if (parseInt(excl)>0){
-    if(blogs[y].parentNode.tagName!="A"){
+    if(blogs[y].tagName!="A"){
   blogs[y].classList.remove("active");
   var content = blogs[y].nextElementSibling;
   content.style.maxHeight = null;

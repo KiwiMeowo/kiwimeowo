@@ -624,8 +624,11 @@ your own title.
   box-shadow: 2px 2px 2px var(--shadow);
   position:relative;
   transform-style:preserve-3d;
+  display:block;
 }
-
+a.collapsible{
+  text-decoration: none;
+}
 .active, .collapsible:hover, .return:hover {
   background-color: var(--highlightteal);
   border-color: var(--dblue);
@@ -642,7 +645,7 @@ your own title.
   float: right;
   margin-left: 5px;
 }
-a .collapsible:after {
+a.collapsible:after {
   content: "\27A4";
 }
 .collapsible:hover::after {

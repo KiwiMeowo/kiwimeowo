@@ -25,7 +25,7 @@ close[i].addEventListener("click", function() {
 });
 }
 for (i = 0; i < coll.length; i++) {
-  if(coll[i].parentNode.tagName!="A"){
+  if(coll[i].tagName!="A"){
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
