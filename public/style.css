@@ -642,7 +642,9 @@ your own title.
   float: right;
   margin-left: 5px;
 }
-
+a .collapsible:after {
+  content: "\27A4";
+}
 .collapsible:hover::after {
   color: var(--dblue);
 }

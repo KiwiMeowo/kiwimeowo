@@ -33,9 +33,17 @@
         </div>
         <div class="text">
         {{ content | safe }}
+        </div>
+        {% if credit %}
+        <div class="blogcredit">
+        <h2>Credits:</h2>
+        <ul>
+        {{ credit | safe }}
+        </ul>
+        </div>
+        {% endif %}
         <p class="date">( {{ blogdate }} )</p>
         <hr>
-        </div>
       </div></div>
       <div id="c_widget"></div>
     <script src="../../comment-widget.js"></script>
