@@ -6,15 +6,29 @@
     <title>Food Log</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico?">
     <link href="style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
+    <link href="style-my-tooltips.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-    <script src="/jquery.style-my-tooltips.js"></script>
+    <script src="jquery.style-my-tooltips.js"></script>
   <style>
   .navcoll,.open,#ring{
     display:none;
   }
   .open{
     text-align: center;
+  }
+  .open button:not(#enter2){
+    background:none;
+    border:0;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size:1em;
+    margin: 3px 0px;
+    border-right: 1px solid #ffffff78;
+    padding: 2.5px 0;
+    padding-right: 10px;
+    margin-right: 7.5px;
+    filter: var(--dropshadow);
   }
   #enter2{
     margin: 7.5px 2px;
@@ -69,9 +83,10 @@ margin-bottom:15px;
   position:relative;
   z-index:-1;
 }
-#label a{
+#label button, #label div{
 background: linear-gradient(0.75turn, #c9e9ffab, #93c3e64a 200%);
 color:var(--blue);
+border:0;
 border-left: 3px solid var(--blue);
 padding: 2.5px 5px;
 cursor:pointer;
@@ -80,22 +95,24 @@ margin: 0.75em 0;
 translate: 5px;
 transition:translate 0.5s;
 user-select:none;
+font-size: 1em;
+text-align:left;
+width:100%;
 }
-#label a:hover, #label a:focus{
+#label button:hover, #label button:focus, #label div:hover, #label div:focus{
   background: linear-gradient(0.75turn, #5773d496, #11257f66 200%);
   color:var(--dblue);
   border-left: 3px solid var(--dblue);
   translate: 0px;
 }
-#label a input {
+#label div input {
     color: var(--teal);
     border-radius: 5px;
     border: 1px solid;
-    outline: none;
     background: var(--yellow);
     width: calc(100% - 5px);
 }
-#label a input:focus, #label a input:hover {
+#label div input:focus, #label button div:hover {
     border-color: var(--blue);
     box-shadow: 0 0 0 0.5px var(--blue);
 }
@@ -111,12 +128,12 @@ user-select:none;
     background: #bcb9d6bf;
     border-color: #ccc9e3;
 }
-#label a.invalid{
+#label button.invalid{
   background: linear-gradient(0.75turn, #ffc9c9ab, #e693934a 200%);
   color:#5d0028;
   border-left: 3px solid #5d0028;
 }
-#label a.invalid:hover,#label a.invalid:focus{
+#label button.invalid:hover,#label button.invalid:focus{
   background: linear-gradient(0.75turn, #d4575796, #7f111166 200%);
   color:#490000;
   border-left: 3px solid #490000;
@@ -246,20 +263,20 @@ border-color:#cca988;
       <button class="navcoll">Change Page!</button>
     <div class="open">
     <div>
-		<a onclick="openPrevious()" id="previous2">⭠ Previous</a>
- <a onclick="openNext()" id="next2">Next ⭢</a>
+		<button onclick="openPrevious()" id="previous2" type="button">⭠ Previous</button>
+ <button onclick="openNext()" id="next2" type="button">Next ⭢</button>
  <br>
- <a onclick="openFirst()">⇤ First Page</a>
- <a onclick="openLast()">Last page ⇥</a>
+ <button onclick="openFirst()" type="button">⇤ First Page</button>
+ <button onclick="openLast()" type="button">Last page ⇥</button>
  <br>
- <a>Go to Page:<br><input type="number" id="quantity2" name="quantity" min="1" max="10"></a>
+ <div style="display: inline-block;">Go to Page:<br><input type="number" id="quantity2" name="quantity" min="1" max="10"></div>
  <br>
 <button id="enter2" onclick="openPage(document.getElementById('quantity2').value)">Enter</button>
 		</div>
 		</div>
     </div>
   </div>
-<script src="/navcoll.js"></script>
+<script src="navcoll.js"></script>
   <div class="page-wrapper">
     <div class="main2">
       <div class="box"><div class="tit"><h1>Kiwi's Food Log</h1></div>
@@ -272,13 +289,13 @@ border-color:#cca988;
 </div>
       <div id="book">
 <div id="label">
- <a onclick="openPrevious()" id="previous">⭠ Previous</a>
- <a onclick="openNext()" id="next">Next ⭢</a>
- <a onclick="openFirst()">⇤ First Page</a>
- <a onclick="openLast()">Last page ⇥</a>
+ <button onclick="openPrevious()" id="previous" type="button">⭠ Previous</button>
+ <button onclick="openNext()" id="next" type="button">Next ⭢</button>
+ <button onclick="openFirst()" type="button">⇤ First Page</button>
+ <button onclick="openLast()" type="button">Last page ⇥</button>
  <br>
- <a>Go to Page:<br><input type="number" id="quantity" name="quantity" min="1" max="10" maxlength="2"></a>
- <a onclick="openPage(document.getElementById('quantity').value)" id="enter">Enter</a>
+ <div>Go to Page:<br><input type="number" id="quantity" name="quantity" min="1" max="10" maxlength="2"></div>
+ <button onclick="openPage(document.getElementById('quantity').value)" id="enter" type="button">Enter</button>
 </div>
 <!-- 
 <div class="pages" id="">
