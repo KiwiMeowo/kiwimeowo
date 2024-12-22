@@ -57,6 +57,7 @@
     box-sizing: border-box;
     background-attachment: fixed;
     font-size: 14px;
+    color:var(--teal);
 }
 
 #c_widget button, #c_widget input[type=submit] {
@@ -66,7 +67,7 @@
   border-radius: 0 10px 10px 0;
   color: var(--blue);
   font-family: "Fraunces";
-  border-left: 3px solid #474f68;
+  border-left: 3px solid var(--blue);
   padding: 5px 7.5px;
   filter: var(--dropshadow);
 }
