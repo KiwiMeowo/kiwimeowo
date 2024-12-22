@@ -676,6 +676,8 @@ a.collapsible:after {
   color:var(--dblue);
   border-radius: 7.5px;
   cursor:pointer;
+  border: 0;
+  padding: 0;
   filter: var(--dropshadow);
   background: linear-gradient(135deg, #9cc3df78, #93c3e633);
 }
@@ -809,10 +811,9 @@ img.spoiler:hover{
   margin:5px;
   border: 3px dotted;
   filter: drop-shadow(4px 4px var(--highlightteal));
-  max-height: 175px;
-  max-width: 175px;
-  height:auto;
-  width:auto;
+  max-height: 181px;
+  max-width: 181px;
+  vertical-align: middle;
 }
 .art img{
   object-fit:cover;
@@ -964,10 +965,14 @@ div.fra{
   border-radius: 7.5px;
   filter: drop-shadow(4px 4px var(--highlightteal));
   margin: 5px auto;
-  height: 190px;
-  width: 190px;
+  height: 196px;
+  width: 196px;
+  display:block;
   overflow:hidden;
   cursor:pointer;
+  padding:0;
+  color: var(--teal);
+  background:transparent;
 }
 .artborder:hover, .artborder:focus {
     color: var(--dblue);
