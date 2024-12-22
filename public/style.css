@@ -556,7 +556,7 @@ your own title.
 #x:hover{
   color:#bcb9d6;
   border-color#bcb9d6;
-  transition:color 0.5x, border-color 0.5s;
+  transition:color 0.5s, border-color 0.5s;
 }
 .window img{
     max-height: calc(100% - 40px);
