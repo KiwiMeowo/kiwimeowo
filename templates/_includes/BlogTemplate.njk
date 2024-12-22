@@ -3,7 +3,7 @@
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiwi's blog</title>
+    <title>{{ title }}</title>
     <link rel="icon" type="image/x-icon" href="../../favicon.ico?">
     <link href="../../style.css" rel="stylesheet" type="text/css" media="all">
     <link href="../../style-my-tooltips.css" rel="stylesheet" type="text/css">
@@ -29,14 +29,14 @@
         <p>Weather: {{ weather }}</p>
         <p>Listening to: {% if not nosong %}<a href="{{ songlink }}" target="_blank" title="{{ songcomment }}">{{ songname }}</a>{% else %}{{ nosong }}{% endif %}</p>
         <p>Mood: {{ mood }}</p>
-        <p>Random thought: {{ thought }}</p>
+        <p>Random thought: {{ thought | safe }}</p>
         </div>
         <div class="text">
         {{ content | safe }}
         </div>
         {% if credit %}
         <div class="blogcredit">
-        <h2>Credits:</h2>
+        <h2>Credits/Reference:</h2>
         <ul>
         {{ credit | safe }}
         </ul>
