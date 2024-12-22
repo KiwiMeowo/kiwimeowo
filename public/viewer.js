@@ -1,4 +1,8 @@
 var art = document.getElementsByClassName('artborder');
+var createwindow=document.createElement('div');
+  createwindow.classList.add('window');
+  createwindow.innerHTML='<button id="x">X</button><img src=""><div class="text"><p></p></div>';
+  document.body.appendChild(createwindow);
 	var artwindow=document.getElementsByClassName('window')[0];
 	var artwork=artwindow.getElementsByTagName("img")[0];
 	var artdesc=artwindow.getElementsByTagName("p")[0];
