@@ -556,6 +556,7 @@ your own title.
     background: transparent;
     border: 1.5px solid;
     border-radius: 5px;
+    padding: 2px 6px;
 }
 #x:hover{
   color:#bcb9d6;
@@ -927,6 +928,7 @@ div.fra{
   margin: 0;
   color: var(--blue);
   transition: color 0.5s;
+  padding: 2px 6px;
 }
 
 .arttop a{
