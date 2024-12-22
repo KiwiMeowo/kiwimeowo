@@ -1,5 +1,5 @@
 var a= document.getElementsByClassName("pagenum2")[1];
-  var b= a.getElementsByTagName("a");
+  var b= a.getElementsByTagName("button");
   b[0].style.color='var(--yellow)';
 function openCity(cityName) {
   var x = document.getElementsByClassName("row");
