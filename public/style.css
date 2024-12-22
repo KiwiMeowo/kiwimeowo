@@ -303,15 +303,19 @@ button.navcoll.act{
   }
 
 .bar {
-    display: block;
-    border-left: 3px solid var(--blue);
-    background: linear-gradient(0.25turn, #9cc3df78, #93c3e633);
-    padding: 5px;
-    margin: 10px 0;
-    color: var(--blue);
-    text-decoration: none;
-    border-radius: 0px 0px 50px 0px;
-    filter: var(--dropshadow);
+  display: block;
+  border: none;
+  text-align: left;
+  font-size: 1em;
+  border-left: 3px solid var(--blue);
+  background: linear-gradient(0.25turn, #9cc3df78, #93c3e633);
+  padding: 5px;
+  margin: 10px 0;
+  color: var(--blue);
+  text-decoration: none;
+  border-radius: 0px 0px 50px 0px;
+  filter: var(--dropshadow);
+  width: -webkit-fill-available;
   }
   
 .bar:hover, .bar:focus{
@@ -555,7 +559,7 @@ your own title.
 }
 #x:hover{
   color:#bcb9d6;
-  border-color#bcb9d6;
+  border-color:#bcb9d6;
   transition:color 0.5s, border-color 0.5s;
 }
 .window img{

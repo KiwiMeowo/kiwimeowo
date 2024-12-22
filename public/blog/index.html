@@ -39,8 +39,27 @@ border-radius:50%;
 }
 @keyframes spin {0% {rotate:0deg;}100% {rotate:360deg;}}
 .quick-nav,.cont{display:none;}
-.open .bar2 {font-size: 0.95em;}
-.bar2{margin: 9px 0;margin-left: 20px;font-size: 0.9em;padding: 4px 5px;}
+.open div button {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    margin: 3px 0px;
+    border:none;
+    border-right: 1px solid #ffffff78;
+    padding: 2.5px 0;
+    padding-right: 10px;
+    margin-right: 7.5px;
+    filter: var(--dropshadow);
+    background:none;
+    cursor: pointer;
+}
+.open div button:hover, .open div button:focus{
+    color: #bcb9d6;
+    transition: color 0.5s, text-decoration-color 0.5s;
+    text-decoration-color: #bcb9d6;
+}
+.open div .bar2 {font-size: 0.95em;}
+.bar2{margin: 9px 0;margin-left: 20px;font-size: 0.9em;padding: 4px 5px;background:none;}
 .open2 div{border-bottom: solid 1px #ffffff78;margin: 5px 10px;}
 .sidebar .act{background: linear-gradient(0.25turn, #3654bf54,#3654bf2b);border-left: 3px solid var(--dblue);color: var(--dblue);}
 
@@ -49,7 +68,7 @@ border-radius:50%;
   #sidenav{display:none;}
 }
 
-#cosmos,.bar{cursor:pointer;}
+#cosmos{cursor:pointer;}
 #id41bac878d6cb6{font-family: "Fraunces" !important;}
 @keyframes birthday {0%   {rotate:-2.5deg}100% {rotate:2.5deg}}
 .coolbutton{margin: 5px;}
@@ -148,16 +167,16 @@ a{cursor:pointer}
     <button class="navcoll">Blog Options</button>
     <div class="open">
     <div>
-		<a class="navcoll">2024 Blogs...</a>
+		<button class="navcoll" type="button" style="border-radius: 0;background: transparent;border-right: 1px solid #ffffff78;">2024 Blogs...</button>
 		<div class="open open2">
 		<div>
-		  <a class="bar2" onclick="Current();ShesGone();TagNumbers()">Oct-Dec</a>
-		<a class="bar2" onclick="fetchHtml('2024c.html');waitold()">Jul-Sep</a>
-		<a class="bar2" onclick="fetchHtml('2024b.html');waitold()">Apr-Jun</a>
-		<a class="bar2" onclick="fetchHtml('2024a.html');waitold()">Jan-Mar</a>
+		  <button class="bar2" onclick="Current();ShesGone();TagNumbers()" type="button">Oct-Dec</button>
+		<button class="bar2" onclick="fetchHtml('2024c.html');waitold()" type="button">Jul-Sep</button>
+		<button class="bar2" onclick="fetchHtml('2024b.html');waitold()" type="button">Apr-Jun</button>
+		<button class="bar2" onclick="fetchHtml('2024a.html');waitold()" type="button">Jan-Mar</button>
 		</div>
 		</div>
-		<a onclick="fetchHtml('2023.html');waitold()">2023 Blog</a>
+		<button onclick="fetchHtml('2023.html');waitold()">2023 Blog</button>
 		</div>
 		</div>
     </div>
@@ -178,14 +197,14 @@ a{cursor:pointer}
         <div class="inner">
 		<a class="bar" href="/index.html">Home</a>
 		<a class="bar lock">Unlock in 2025</a>
-		<a class="bar coll">2024 Blogs...</a>
+		<button class="bar coll" type="button">2024 Blogs...</button>
 		<div class="cont">
-		<a class="bar bar2" onclick="Current();ShesGone();TagNumbers()">Oct-Dec</a>
-		<a class="bar bar2" onclick="fetchHtml('2024c.html');waitold()">Jul-Sep</a>
-		<a class="bar bar2" onclick="fetchHtml('2024b.html');waitold()">Apr-Jun</a>
-		<a class="bar bar2" onclick="fetchHtml('2024a.html');waitold()">Jan-Mar</a>
+		<button class="bar bar2" onclick="Current();ShesGone();TagNumbers()" type="button">Oct-Dec</button>
+		<button class="bar bar2" onclick="fetchHtml('2024c.html');waitold()" type="button">Jul-Sep</button>
+		<button class="bar bar2" onclick="fetchHtml('2024b.html');waitold()" type="button">Apr-Jun</button>
+		<button class="bar bar2" onclick="fetchHtml('2024a.html');waitold()" type="button">Jan-Mar</button>
 		</div>
-		<a class="bar" onclick="fetchHtml('2023.html');waitold()">2023 Blog</a>
+		<button class="bar" onclick="fetchHtml('2023.html');waitold()" type="button">2023 Blog</button>
 <script>
 var coll = document.getElementsByClassName("coll");
 var i;
