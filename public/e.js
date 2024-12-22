@@ -4,7 +4,7 @@ var i;
 for (i = 0; i < content.length; i++){
 var date1 = content[i].getElementsByTagName('hr');
 const para = document.createElement("center");
-const button = document.createElement("a");
+const button = document.createElement("button");
 const node = document.createTextNode("[ close ]");
 button.appendChild(node);
 para.appendChild(button);
