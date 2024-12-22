@@ -635,7 +635,7 @@ your own title.
   box-shadow: 2px 2px 2px var(--shadow);
   position:relative;
   transform-style:preserve-3d;
-  display:block;
+  display: inline-block;
 }
 a.collapsible{
   text-decoration: none;
