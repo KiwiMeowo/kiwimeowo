@@ -992,6 +992,7 @@ div.fra{
   filter: drop-shadow(4px 4px var(--highlightteal));
   margin: 5px;
   width: -webkit-fill-available;
+  aspect-ratio: 1 / 1;
   display:block;
   overflow:hidden;
   cursor:pointer;
