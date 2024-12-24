@@ -143,7 +143,6 @@
 .c-reply {
     margin: 15px 0;
     padding: 15px 25px;
-    background-color: var(--yellow);
     border-top: 1.75px dashed var(--lteal);
 }
 .c-reply:last-child {margin-bottom: 0;}
