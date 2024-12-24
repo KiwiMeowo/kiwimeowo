@@ -348,6 +348,7 @@ button.navcoll.act{
   border-radius: 7.5px;
   overflow: hidden; /*Force inner divs to conform to rounded corners.*/
   background:var(--yellow);
+  position:relative;
   }
 
 .tit {
@@ -842,6 +843,8 @@ img.spoiler:hover{
   aspect-ratio: 16/9;
   width:100%;
   max-width: 700px;
+  margin: 0.75em auto;
+  display: block;
 }
 
 img.emote{

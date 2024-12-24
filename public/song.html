@@ -15,18 +15,18 @@
     box-shadow: inset 0 -0.625em 0 0 #f4c2e18f !important;
     text-decoration-color: #721a51 !important;
     }
-    .song{
+    .songlist li{
       display:inline-block;
       flex: 0 0 50%;
       margin: 0.25em 0;
     }
-    .song:nth-child(1), .song:nth-child(2) {
+    .songlist li:nth-child(1), .songlist li:nth-child(2) {
     margin-top: 0;
 }
-.song:nth-last-child(1), .song:nth-last-child(2) {
+.songlist li:nth-last-child(1), .songlist li:nth-last-child(2) {
     margin-bottom: 0;
 }
-.song:before{
+.songlist li:before{
     content: "-\00A0";
 }
     .songlist{
@@ -55,7 +55,7 @@
       .songlist{
         display:block;
       }
-      .song{
+      .songlist li{
         width:100%;
       }
     }
@@ -124,21 +124,22 @@
       <hr>
       <div class="songlist">
       <!--
-      <li class="song"><a href="" target="_blank" title="">Singer - Title</a></li>
+      <li><a href="" target="_blank" title="">Singer - Title</a></li>
       -->
-      <li class="song"><a href="https://youtu.be/Swk-epKlXlw?si=Mq-EPbjjM8N-viUc" target="_blank" title="Despite being cis, I kinda feel the theme of being confused by your identity and self-loathing">Will Wood - I/Me/Myself (2024 Edit)</a></li>
-      <li class="song"><a href="https://www.youtube.com/watch?v=seJ83vfHoIU" target="_blank" title="I remember seeing a post about 'Listening to a song --> When the part that sounds like astral journey comes on', and I think this song is one of the examples, except the entire song feels like astral journey. (I mixed up astral journey and astral projection fml)">Ghost - Mary on a Cross</a></li>
-      <li class="song"><a href="https://youtu.be/QlIUHMLSVkw?si=s697yWSHIvaLZ-tD" target="_blank" title="I think I have a thing for songs with many people singing together. This song is so joyous">Goose House - Oto No Naru Houe</a></li>
-      <li class="song"><a href="https://youtu.be/IhBzi0EpG2k?si=jk-sUG59AfDqZCFk" target="_blank" title="Holy shit the second part of the song makes me ASCEND">Saint Motel - Daydream / Wetdream / Nightmare</a></li>
-      <li class="song"><a href="https://youtu.be/Wu6xiNf5Brg?si=BNiFZZPYNtEoZjMO" target="_blank" title="This is an OST for Golden Cheese Kingdom chapters in Cookie Run Kingdom. Don't skip out the story just because it's about cookies, the stories can be very good (sometimes), and this one is so emotional, it is my favourite story of all time, and this is my favourite OST in this arc.">Sohn Minsoo (Cookie Run) - Logging Off</a></li>
-      <li class="song"><a href="https://youtu.be/1k8craCGpgs?si=DU_Gn0T4IumIf3iF" target="_blank" title="The chorus is so good it makes me ascend">Journey - Don't Stop Believin'</a></li>
-      <li class="song"><a href="https://youtu.be/nk5d5zDvJw8?si=vNvWYz4TXvMXyEV4" target="_blank" title="This sounds so pretty, have been listening to this for a while">HΔG - Don't Forget</a></li>
-      <li class="song"><a href="https://youtu.be/UHbmkxv-874?si=Tef3EoFMo-KvFd9n" target="_blank" title="I love how joyful it sounds but the lyrics are sad">ライアーダンサー／重音テトSV</a></li>
-      <li class="song"><a href="https://youtu.be/7_QydNXI_ok" target="_blank" title="This is an ost in Katamari Damacy. I never heard of the game before I stumbled upon a twitter post featuring a gameplay of it. There's a bit of sadness in this song despite the tune">Katamari Damacy - Lonely Rolling Star</a></li> 
-      <li class="song"><a href="https://youtu.be/SOhICfem_8g" target="_blank" title="It feels weird having two songs with the same artist here, but I just have to include them both. I heard that fans of Will Wood prefer more intense songs from him, so songs like Falling Up is not liked as much. I couldn't believe that because Falling Up is such a comforting and touching song, it reminds me of listening to old songs during my childhood for some reason (IDK if it sounds similar to any Canto songs). PLS LISTEN TO THIS">Will Wood - Falling up</a></li>
-      <li class="song"><a href="https://youtu.be/ghb6eDopW8I?si=9ZFu4p3egY1P-9zR" target="_blank" title="Youtube recommendation doing its job again. It's so catchy but the lyrics are sorrowful, I love it">Of Monsters and Men - Little Talks</a></li>
-      <li class="song"><a href="https://youtu.be/NwFVSclD_uc" target="_blank" title="Pretty sure I found it from Youtube recommendations, it is short but emotional.">The Walters - I Love You So</a></li>
-      <li class="song"><a href="https://youtu.be/z__B_djrJc4?si=emZMH2u0vXoGS7VY" target="_blank" title="Listening to more songs recently, many of their songs are wonderful, and I love this cover">高嶺の花子さん／back number (Cover by Goose House)</a></li>
+      <li><a href="https://youtu.be/jPiiEwgJqd8?si=1eOVHKwOW7ocUSRG" target="_blank" title="I probably looped this song for over 100 times this year">H△G - 星見る頃を過ぎても (Best Album Version)</a></li>
+      <li><a href="https://youtu.be/Swk-epKlXlw?si=Mq-EPbjjM8N-viUc" target="_blank" title="Despite being cis, I kinda feel the theme of being confused by your identity and self-loathing">Will Wood - I/Me/Myself (2024 Edit)</a></li>
+      <li><a href="https://www.youtube.com/watch?v=seJ83vfHoIU" target="_blank" title="I remember seeing a post about 'Listening to a song --> When the part that sounds like astral journey comes on', and I think this song is one of the examples, except the entire song feels like astral journey. (I mixed up astral journey and astral projection fml)">Ghost - Mary on a Cross</a></li>
+      <li><a href="https://youtu.be/QlIUHMLSVkw?si=s697yWSHIvaLZ-tD" target="_blank" title="I think I have a thing for songs with many people singing together. This song is so joyous">Goose House - Oto No Naru Houe</a></li>
+      <li><a href="https://youtu.be/IhBzi0EpG2k?si=jk-sUG59AfDqZCFk" target="_blank" title="Holy shit the second part of the song makes me ASCEND">Saint Motel - Daydream / Wetdream / Nightmare</a></li>
+      <li><a href="https://youtu.be/Wu6xiNf5Brg?si=BNiFZZPYNtEoZjMO" target="_blank" title="This is an OST for Golden Cheese Kingdom chapters in Cookie Run Kingdom. Don't skip out the story just because it's about cookies, the stories can be very good (sometimes), and this one is so emotional, it is my favourite story of all time, and this is my favourite OST in this arc.">Sohn Minsoo (Cookie Run) - Logging Off</a></li>
+      <li><a href="https://youtu.be/1k8craCGpgs?si=DU_Gn0T4IumIf3iF" target="_blank" title="The chorus is so good it makes me ascend">Journey - Don't Stop Believin'</a></li>
+      <li><a href="https://youtu.be/nk5d5zDvJw8?si=vNvWYz4TXvMXyEV4" target="_blank" title="This sounds so pretty, have been listening to this for a while">HΔG - Don't Forget</a></li>
+      <li><a href="https://youtu.be/UHbmkxv-874?si=Tef3EoFMo-KvFd9n" target="_blank" title="I love how joyful it sounds but the lyrics are sad">ライアーダンサー／重音テトSV</a></li>
+      <li><a href="https://youtu.be/7_QydNXI_ok" target="_blank" title="This is an ost in Katamari Damacy. I never heard of the game before I stumbled upon a twitter post featuring a gameplay of it. There's a bit of sadness in this song despite the tune">Katamari Damacy - Lonely Rolling Star</a></li> 
+      <li><a href="https://youtu.be/SOhICfem_8g" target="_blank" title="It feels weird having two songs with the same artist here, but I just have to include them both. I heard that fans of Will Wood prefer more intense songs from him, so songs like Falling Up is not liked as much. I couldn't believe that because Falling Up is such a comforting and touching song, it reminds me of listening to old songs during my childhood for some reason (IDK if it sounds similar to any Canto songs). PLS LISTEN TO THIS">Will Wood - Falling up</a></li>
+      <li><a href="https://youtu.be/ghb6eDopW8I?si=9ZFu4p3egY1P-9zR" target="_blank" title="Youtube recommendation doing its job again. It's so catchy but the lyrics are sorrowful, I love it">Of Monsters and Men - Little Talks</a></li>
+      <li><a href="https://youtu.be/NwFVSclD_uc" target="_blank" title="Pretty sure I found it from Youtube recommendations, it is short but emotional.">The Walters - I Love You So</a></li>
+      <li><a href="https://youtu.be/z__B_djrJc4?si=emZMH2u0vXoGS7VY" target="_blank" title="Listening to more songs recently, many of their songs are wonderful, and I love this cover">高嶺の花子さん／back number (Cover by Goose House)</a></li>
       </div>
       <hr>
       </div>

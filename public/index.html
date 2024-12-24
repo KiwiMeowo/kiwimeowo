@@ -946,7 +946,7 @@ function fetchSong() {
   .then((html) => {
     var parser = new DOMParser();
     var doc = parser.parseFromString(html, "text/html");
-    var newsong = doc.querySelector('.song');
+    var newsong = doc.querySelector('.songlist li');
     document.getElementById("new3").innerHTML = newsong.innerHTML;
     document.getElementById("playbutton").href= newsong.getElementsByTagName("a")[0].href;
   })
