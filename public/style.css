@@ -788,6 +788,11 @@ img.spoiler:hover{
     border-color: var(--teal);
     margin: 0;
 }
+@media(max-width:800px){
+  .blogcredit {
+	margin:0;
+}
+}
 /*Blorbo pages*/
 .charcontain{
   display:flex;
