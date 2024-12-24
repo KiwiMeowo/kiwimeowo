@@ -1042,17 +1042,11 @@ div.fra{
     max-width: 33%;
   }
 }
-@media (max-width: 700px){
+@media (max-width: 600px){
   .draw .col{
     flex: 0 0 50%;
     max-width: 50%;
   }
-}
-@media (max-width: 400px){
-.draw .artborder {
-    height: 110px;
-    width: 110px;
-}
 }
 /* width */
 ::-webkit-scrollbar {
