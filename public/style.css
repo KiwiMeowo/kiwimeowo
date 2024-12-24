@@ -974,7 +974,6 @@ div.fra{
 .draw img {
   object-fit:cover;
   aspect-ratio: 1/1;
-  width:200px;
 }
 
 .draw .row{
@@ -991,9 +990,8 @@ div.fra{
   border: 3px dotted;
   border-radius: 7.5px;
   filter: drop-shadow(4px 4px var(--highlightteal));
-  margin: 5px auto;
-  height: 196px;
-  width: 196px;
+  margin: 5px;
+  width: -webkit-fill-available;
   display:block;
   overflow:hidden;
   cursor:pointer;
@@ -1022,17 +1020,11 @@ div.fra{
     filter: blur(5px) saturate(50%) contrast(0.5);
 }
 
-@media (max-width: 1400px){
+@media (max-width: 1200px){
   .draw .col {
     flex: 0 0 20%;
     max-width: 20%;
   }
-}
-@media (max-width: 1200px){
-	.draw .artborder {
-    height: 150px;
-    width: 150px;
- }
 }
 
 @media (max-width: 1000px){
