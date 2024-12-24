@@ -1008,6 +1008,7 @@ div.fra{
 }
 .artborder img{
   margin:auto;
+  width: 100%;
 }
 .censor{
   border-color: #a90000;
