@@ -24,3 +24,6 @@
 	color:#fff;
 	filter: var(--dropshadow);
 }
+#s-m-t-tooltip a{
+	color:white;
+}

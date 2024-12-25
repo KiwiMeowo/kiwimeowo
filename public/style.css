@@ -580,7 +580,7 @@ your own title.
     max-width:50%;
 }
 .window p{
-  color:white;
+  --teal:white;
       text-indent: 0;
 }
 @media(max-width:900px){
