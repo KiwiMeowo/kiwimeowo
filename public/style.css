@@ -970,10 +970,6 @@ div.fra{
   margin: 15px auto;
   border-radius: 5px;
 }
-.draw img {
-  object-fit:cover;
-  aspect-ratio: 1/1;
-}
 
 .draw .row{
   border:none;
@@ -1008,16 +1004,18 @@ div.fra{
 .artborder img{
   margin:auto;
   width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
 }
-.censor{
+.artborder.censor{
   border-color: #a90000;
   filter: drop-shadow(4px 4px #ff7272);
 }
-.censor:hover{
+.artborder.censor:hover{
   border-color:#8f0000;
   filter: drop-shadow(4px 6px #ff7272);
 }
-.censor img{
+.artborder.censor img{
     filter: blur(5px) saturate(50%) contrast(0.5);
 }
 
