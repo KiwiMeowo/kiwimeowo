@@ -565,7 +565,7 @@ your own title.
   transition:color 0.5s, border-color 0.5s;
 }
 .window img{
-    max-height: calc(100% - 20px);
+    max-height: 100%;
     width: 50%;
     display: block;
     object-fit: contain;
@@ -598,7 +598,9 @@ your own title.
 #x{
   display: block;
   position: relative;
-  right: calc(-100% + 40px);
+  right: calc(-100% + 35px);
+  margin: 0;
+  margin-bottom: 5px;
 }
 }
 .coolbutton{
