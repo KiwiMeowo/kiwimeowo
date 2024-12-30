@@ -316,6 +316,7 @@ button.navcoll.act{
   border-radius: 0px 0px 50px 0px;
   filter: var(--dropshadow);
   width: -webkit-fill-available;
+  cursor:pointer;
   }
   
 .bar:hover, .bar:focus{
