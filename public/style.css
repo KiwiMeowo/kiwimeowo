@@ -727,7 +727,7 @@ a.collapsible:after {
   background: linear-gradient(135deg, #9cc3df78, #93c3e633);
 }
 
-.close:hover, .blogend a{
+.close:hover, .blogend a:hover{
   color:var(--teal);
 }
 
