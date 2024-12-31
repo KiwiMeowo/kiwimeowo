@@ -295,15 +295,6 @@ for (i = 0; i < coll.length; i++) {
       <div id="current">
       <div class="inner min blog">
       <!--
-      If reference:
-      
-      <div class="blogcredit">
-            <h2>Credits:</h2>
-            <ul>
-              <li>Decorations: Cookie Run: Ovenbreak and Cookie Run: Kingdom game assets</li>
-            </ul>
-          </div>
-      
       Tags (Put tags in title="Tag, Tag, Tag"): Art Discussion Dream Game Life OC Review Vent
       
        <a href="" target="_blank" class="collapsible" title="">Sample <span class="blogdate">( xx xxx 2024 )</span></a>
@@ -313,7 +304,7 @@ for (i = 0; i < coll.length; i++) {
         </div>
 
         -->
-        <a href="/blog/post/2024-12-31.html" target="_blank" class="collapsible special" title="Life, Art, OC" style="background: url(/background.jpg);background-size: cover;background-position: center;--teal: white;text-shadow: 1px 0px black, -1px 0px black, 0px 1px black, 0px -1px black, 0 0;border: 0;">2024 final day <span class="blogdate">( 31 Dec 2024 )</span></a>
+        <a href="/blog/post/2024-12-31.html" target="_blank" class="collapsible special" title="Life, Art, OC" style="background: url(/background.jpg);background-size: cover;background-position: center;color: white;text-shadow: 1px 0px black, -1px 0px black, 0px 1px black, 0px -1px black, 0 0;border: 0;">2024 final day <span class="blogdate">( 31 Dec 2024 )</span></a>
         <div class="content">
         <p class="date"></p>
         <hr>
@@ -1578,7 +1569,7 @@ function fetchHtml(link) {
   .then((html) => {
     var parser = new DOMParser();
     var doc = parser.parseFromString(html, "text/html");
-    var newdrawing = doc.querySelector('body').innerHTML;
+    var newdrawing = doc.querySelector('.blog').outerHTML;
     load.innerHTML = newdrawing;
   })
   .catch(error => {
