@@ -44,6 +44,13 @@
         {% endif %}
         <p class="date">( {{ blogdate }} )</p>
         <hr>
+        <div class="blogend">
+        {% set previousPost = collections.blog | getPreviousCollectionItem %}
+        {% set nextPost = collections.blog | getNextCollectionItem %}
+        {% if previousPost %}<a href="{{ previousPost.url }}">{% endif %}<span>⭠ Previous</span>{% if previousPost %}</a>{% endif %}
+        <a href="../index.html">Return</a>
+        {% if nextPost %}<a href="{{ nextPost.url }}">{% endif %}<span>Next ⭢</span>{% if nextPost %}</a>{% endif %}
+        </div>
       </div></div>
       <div id="c_widget"></div>
     <script src="../../comment-widget.js"></script>

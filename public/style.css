@@ -703,7 +703,6 @@ a.collapsible:after {
 }
 .close{
   display:inline-block;
-  background:var(--highlightteal);
   color:var(--dblue);
   border-radius: 7.5px;
   cursor:pointer;
@@ -712,7 +711,23 @@ a.collapsible:after {
   filter: var(--dropshadow);
   background: linear-gradient(135deg, #9cc3df78, #93c3e633);
 }
-.close:hover{
+
+.blogend{
+  display:flex;
+  justify-content: space-between;
+}
+
+.blogend a {
+  display: inline-block;
+  color: var(--dblue);
+  border-radius: 7.5px;
+  cursor: pointer;
+  padding: 2px 10px;
+  filter: var(--dropshadow);
+  background: linear-gradient(135deg, #9cc3df78, #93c3e633);
+}
+
+.close:hover, .blogend a{
   color:var(--teal);
 }
 
