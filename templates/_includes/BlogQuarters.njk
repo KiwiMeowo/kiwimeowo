@@ -30,7 +30,7 @@
   </head>
  <body>
     <div class="inner min blog">
-    {% for post in collections.twentyfivei %}
+    {% for post in collections.twentyfivei | reverse %}
         <a href="{{ post.url }}" target="_blank" class="collapsible{% if post.data.style %} special{% endif %}" title="{{ post.data.filter }}" {% if post.data.style %}style="{{ post.data.style }}"{% endif %}>{{ post.data.title }} <span class="blogdate">( {{ post.data.blogdate }} )</span></a>
         {% endfor %}
           </div>
