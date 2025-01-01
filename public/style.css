@@ -318,6 +318,7 @@ button.navcoll.act{
   border: none;
   text-align: left;
   font-size: 1em;
+  line-height: 145%;
   border-left: 3px solid var(--blue);
   background: linear-gradient(0.25turn, #9cc3df78, #93c3e633);
   padding: 5px;
