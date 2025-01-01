@@ -660,11 +660,10 @@ your own title.
 a.collapsible{
   text-decoration: none;
 }
-.special.collapsible:hover{filter:saturate(1.3) brightness(0.8) hue-rotate(5deg);}
-.special.collapsible.active{filter:saturate(1.3) brightness(0.8) hue-rotate(5deg);}
+.special.collapsible:hover, .special.collapsible.active{filter:saturate(1.3) brightness(0.8) hue-rotate(5deg);}
 .special img{position:absolute;z-index:1;filter:var(--dropshadow);}
 
-.active, .collapsible:hover, .return:hover {
+.active, .collapsible:hover, .collapsible:focus {
   background-color: var(--highlightteal);
   border-color: var(--dblue);
   color: var(--dblue);
@@ -683,7 +682,7 @@ a.collapsible{
 a.collapsible:after {
   content: "\27A4";
 }
-.collapsible:hover::after {
+.collapsible:hover::after,.collapsible:focus::after {
   color: var(--dblue);
 }
 
