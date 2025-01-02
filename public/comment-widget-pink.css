@@ -160,6 +160,7 @@
 .c-timestamp {
     float: right;
     opacity: 60%;
+    color:var(--teal);
 }
 .c-text {
     margin: 0;
