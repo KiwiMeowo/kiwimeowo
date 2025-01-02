@@ -33,8 +33,20 @@ body {
 a, s{
   text-decoration-thickness: 1.5px;
 }
-a,center,p,ol,ul{
+a,center,p,ol,ul,button{
   color: var(--teal); 
+}
+.secret{
+  text-decoration: none;
+  opacity: 0.5;
+  background:none;
+  border:0;
+  padding:0;
+  line-height:145%;
+}
+.secret:hover{
+  cursor:pointer;
+  color:var(--dblue);
 }
 p{
   margin: 0.75em 0;
