@@ -959,7 +959,7 @@ div.fra{
   height:auto;
   min-height:650px;
 }
-.pagenum, .arttop{
+.pagenum, .arttop, .fancybar{
       font-size: x-large;
     line-height: 1.25;
     display: block;
@@ -970,6 +970,9 @@ div.fra{
     border-radius: 5px;
     filter: var(--dropshadow);
     color: var(--blue);
+}
+.fancybar{
+  font-size:large;
 }
 .arttop{
   display:none;
@@ -988,11 +991,11 @@ div.fra{
   padding: 2px 6px;
 }
 
-.arttop a{
+.arttop a, .fancybar a{
   margin: 5px;
   color: var(--blue);
 }
-.pagenum button:hover, .arttop a:hover{
+.pagenum button:hover, .arttop a:hover, .fancybar a:hover{
   color: var(--teal);
 }
 .numdivider:after{
