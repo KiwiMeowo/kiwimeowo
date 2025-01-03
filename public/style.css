@@ -555,7 +555,7 @@ your own title.
   max-height:500px;
   }
 }
-.window{
+#window{
   display:flex;
     position: fixed;
     z-index: -1;
@@ -589,14 +589,14 @@ your own title.
   border-color:#bcb9d6;
   transition:color 0.5s, border-color 0.5s;
 }
-.window img{
+#window img{
     max-height: 100%;
     width: 50%;
     display: block;
     object-fit: contain;
     margin:auto 0;
 }
-.window .text{
+#window .text{
     transform: translateY(-50%);
     top: calc(50% - 20px);
     position: relative;
@@ -607,15 +607,15 @@ your own title.
   --dblue:#bcb9d6;
 }
 @media(max-width:900px){
-  .window{
+  #window{
   display:block;
 }
-.window img{
+#window img{
     width: 100%;
     max-height: 60%;
     margin-left:auto;
 }
-.window .text{
+#window .text{
       transform: translateY(0);
       top: 0;
               max-width: none;
