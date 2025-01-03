@@ -595,6 +595,7 @@ your own title.
     display: block;
     object-fit: contain;
     margin:auto 0;
+    background: #9cc3df3d;
 }
 #window .text{
     transform: translateY(-50%);
