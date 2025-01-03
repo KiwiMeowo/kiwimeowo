@@ -51,9 +51,11 @@ a,center,p,ol,ul,button{
 p{
   margin: 0.75em 0;
 }
+a{
+  transition: color 0.5s, text-decoration-color 0.5s;
+}
 a:hover, a:focus {
   color: var(--dblue);
-  transition: color 0.5s, text-decoration-color 0.5s;
   }
   center{
   margin:0.75em 0;
@@ -667,6 +669,7 @@ your own title.
   margin: 2.5px 0px;
   box-shadow: 2px 2px 2px var(--shadow);
   position:relative;
+  transition:none;
   transform-style:preserve-3d;
   display: inline-block;
 }
