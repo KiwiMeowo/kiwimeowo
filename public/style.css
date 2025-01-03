@@ -748,8 +748,17 @@ a.collapsible:after {
   color:var(--teal);
 }
 
-.inner.blog{
+.blog{
   padding:7.5px;
+}
+.simple .blog{
+  padding: 7.5px 15%;
+  padding-top: 40px !important;
+}
+@media(max-width:700px){
+  .simple .blog{
+    padding: 7.5px;
+  }
 }
 /*Status box in blog page*/
 .statusbox {
