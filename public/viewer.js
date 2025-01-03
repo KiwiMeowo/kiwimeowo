@@ -1,4 +1,4 @@
-var art = document.getElementsByClassName('artborder');
+var art = document.querySelectorAll('.artborder:not(a)');
 var createwindow=document.createElement('div');
   createwindow.classList.add('window');
   createwindow.innerHTML='<button id="x">X</button><img src=""><div class="text"><p></p></div>';
@@ -7,7 +7,6 @@ var createwindow=document.createElement('div');
 	var artwork=artwindow.getElementsByTagName("img")[0];
 	var artdesc=artwindow.getElementsByTagName("p")[0];
     for (i = 0; i < art.length; i++) {
-      if(art[i].tagName!="A"){
     art[i].addEventListener("click", function() {
       artwork.src=this.getElementsByTagName("img")[0].src;
       artdesc.innerHTML=this.getElementsByTagName("img")[0].title;
@@ -15,7 +14,6 @@ var createwindow=document.createElement('div');
       artwindow.style.opacity="1";
       artwindow.style.zIndex="100";
     })
-    }
   }
   window.addEventListener('click', (e) => {
     if (e.target === artwindow || e.target === document.getElementById("x")){

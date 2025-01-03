@@ -1,4 +1,4 @@
-var coll = document.getElementsByClassName("collapsible");
+var coll = document.querySelectorAll(".collapsible:not(a)");
 var content = document.getElementsByClassName("content");
 var i;
 for (i = 0; i < content.length; i++){
@@ -25,7 +25,6 @@ close[i].addEventListener("click", function() {
 });
 }
 for (i = 0; i < coll.length; i++) {
-  if(coll[i].tagName!="A"){
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
@@ -35,5 +34,4 @@ for (i = 0; i < coll.length; i++) {
     content.style.maxHeight = content.scrollHeight + 5000 + "px";
     } 
   });
-}
 }
