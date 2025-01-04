@@ -832,8 +832,8 @@ a.collapsible:after {
 .blogtag span{
   font-size: 1.1em;
   color: var(--yellow);
-  border-radius: 7.5px;
-  padding: 2px 10px;
+  border-radius: 5px;
+  padding: 4px 12px;
   filter: var(--dropshadow);
   background: linear-gradient(#1a25759e, #5877b7a3);
 }
