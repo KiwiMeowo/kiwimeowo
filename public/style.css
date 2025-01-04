@@ -564,7 +564,6 @@ your own title.
   }
 }
 #window{
-  display:flex;
     position: fixed;
     z-index: -1;
     width: calc(100% - 20px);
@@ -577,22 +576,34 @@ your own title.
     transition:transform 0.5s, opacity 0.5s, z-index 0.5s;
     top:0;
 }
-
-#x {
-    font-size: 25px;
+#artview{
+  display:flex;
+  height:90%;
+}
+#artnav{
+  display:flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+    top: 5%;
+    position: relative;
+    margin:0 30px;
+}
+#artnav button {
+    font-size: 20px;
     color: white;
     cursor: pointer;
-    right: 20px;
-    position: absolute;
     margin: 10px 0px;
     display: inline-block;
-    height: fit-content;
     background: transparent;
     border: 1.5px solid;
     border-radius: 5px;
     padding: 2px 6px;
 }
-#x:hover{
+#prevart,#nextart{
+  height:37px;
+  width:84px;
+}
+#artnav button:hover{
   color:#bcb9d6;
   border-color:#bcb9d6;
   transition:color 0.5s, border-color 0.5s;
@@ -616,7 +627,7 @@ your own title.
   --dblue:#bcb9d6;
 }
 @media(max-width:900px){
-  #window{
+  #window #artview{
   display:block;
 }
 #window img{
@@ -629,12 +640,12 @@ your own title.
       top: 0;
               max-width: none;
 }
-#x{
+#artnav{
+  margin:0 10px;
+}
+#artnav button{
   display: block;
   position: relative;
-  right: calc(-100% + 35px);
-  margin: 0;
-  margin-bottom: 5px;
 }
 }
 .coolbutton{
