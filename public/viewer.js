@@ -10,6 +10,13 @@ var createwindow=document.createElement('div');
       art[i].setAttribute("data-openid", i);
     art[i].addEventListener("click", function() {
       artwork.setAttribute("data-openid", this.getAttribute("data-openid"));
+      if (this.classList.contains("censor")){
+        artwork.classList.add("censor");
+        artwork.addEventListener("click", censor);
+      } else{
+        artwork.classList.remove("censor");
+        artwork.removeEventListener("click", censor);
+      }
       artwork.src=this.getElementsByTagName("img")[0].src;
       artdesc.innerHTML=this.getElementsByTagName("img")[0].title;
       artwindow.style.transform="translateY(0)";
@@ -27,6 +34,13 @@ var createwindow=document.createElement('div');
 document.getElementById("prevart").addEventListener("click",function(){
   if (artwork.getAttribute("data-openid")>0){
   artwork.setAttribute("data-openid", artwork.getAttribute("data-openid")-1);
+  if (art[artwork.getAttribute("data-openid")].classList.contains("censor")){
+    artwork.classList.add("censor");
+    artwork.addEventListener("click", censor);
+  } else{
+    artwork.classList.remove("censor");
+    artwork.removeEventListener("click", censor);
+  }
   artwork.src=art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].src;
   artdesc.innerHTML=art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].title;
   } else{
@@ -41,6 +55,13 @@ document.getElementById("prevart").addEventListener("click",function(){
 document.getElementById("nextart").addEventListener("click",function(){
   if (artwork.getAttribute("data-openid")<art.length-1){
   artwork.setAttribute("data-openid", parseInt(artwork.getAttribute("data-openid"))+1);
+  if (art[artwork.getAttribute("data-openid")].classList.contains("censor")){
+    artwork.classList.add("censor");
+    artwork.addEventListener("click", censor);
+  } else{
+    artwork.classList.remove("censor");
+    artwork.removeEventListener("click", censor);
+  }
   artwork.src=art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].src;
   artdesc.innerHTML=art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].title;
   }else{
@@ -52,3 +73,6 @@ document.getElementById("nextart").addEventListener("click",function(){
   },1000);
   }
 });
+function censor(){
+  artwork.classList.toggle("censor");
+}

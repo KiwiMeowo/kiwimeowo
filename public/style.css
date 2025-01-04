@@ -599,6 +599,7 @@ your own title.
     border: 1.5px solid;
     border-radius: 5px;
     padding: 2px 6px;
+    transition:color 0.5s, border-color 0.5s;
 }
 #prevart,#nextart{
   height:37px;
@@ -607,7 +608,6 @@ your own title.
 #artnav button:hover{
   color:#bcb9d6;
   border-color:#bcb9d6;
-  transition:color 0.5s, border-color 0.5s;
 }
 #window img{
     max-height: 100%;
@@ -1105,8 +1105,9 @@ div.fra{
   border-color:#8f0000;
   filter: drop-shadow(4px 6px #ff7272);
 }
-.artborder.censor img{
+.artborder.censor img, #window img.censor{
     filter: blur(5px) saturate(50%) contrast(0.5);
+    cursor:pointer;
 }
 
 @media (max-width: 1200px){
