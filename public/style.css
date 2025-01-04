@@ -771,13 +771,19 @@ a.collapsible:after {
 .blog{
   padding:7.5px;
 }
+.simple{
+  background: linear-gradient(#0b263b75, #1f084e73 150%), url(/fancy1.png);
+}
 .simple .blog{
-  padding: 7.5px 15%;
-  padding-top: 40px !important;
+  margin: 15px 15%;
+  margin-top: 45px !important;
+  background: var(--yellow);
+  border-radius: 7.5px;
+  box-shadow: 4px 4px 4px 2px var(--shadow);
 }
 @media(max-width:700px){
   .simple .blog{
-    padding: 7.5px;
+    margin: 15px 7.5px;
   }
 }
 /*Status box in blog page*/
