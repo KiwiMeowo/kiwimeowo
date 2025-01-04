@@ -824,10 +824,26 @@ a.collapsible:after {
 .statusbox p:nth-child(3),.statusbox p:nth-child(4) {
     background: linear-gradient(var(--e),#9eccff24);
 }
+.blogtag{
+  text-align: right;
+  margin: 1.25em auto;
+  width: 80%;
+}
+.blogtag span{
+  font-size: 1.1em;
+  color: var(--yellow);
+  border-radius: 7.5px;
+  padding: 2px 10px;
+  filter: var(--dropshadow);
+  background: linear-gradient(#1a25759e, #5877b7a3);
+}
 @media(max-width:800px){
   .statusbox {
 	width:100%;
 	grid-template: 'a' 'b''c' 'd';
+}
+.blogtag{
+  width:100%;
 }
 .statuscolumn p{
   width: -webkit-fill-available;
