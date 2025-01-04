@@ -17,7 +17,7 @@ var createwindow=document.createElement('div');
         artwork.classList.remove("censor");
         artwork.removeEventListener("click", censor);
       }
-      artwork.src="../loading.gif";
+      artwork.src="/loading.gif";
       setTimeout(function(){
         artwork.src=art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].src;
     },100);
@@ -44,7 +44,7 @@ document.getElementById("prevart").addEventListener("click",function(){
     artwork.classList.remove("censor");
     artwork.removeEventListener("click", censor);
   }
-  artwork.src="../loading.gif";
+  artwork.src="/loading.gif";
       setTimeout(function(){
         artwork.src=art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].src;
     },100);
@@ -68,7 +68,7 @@ document.getElementById("nextart").addEventListener("click",function(){
     artwork.classList.remove("censor");
     artwork.removeEventListener("click", censor);
   }
-  artwork.src="../loading.gif";
+  artwork.src="/loading.gif";
       setTimeout(function(){
         artwork.src=art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].src;
     },100);
