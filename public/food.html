@@ -97,7 +97,7 @@ transition:translate 0.5s;
 user-select:none;
 font-size: 1em;
 text-align:left;
-width:100%;
+width:-webkit-fill-available;
 }
 #label button:hover, #label button:focus, #label div:hover, #label div:focus{
   background: linear-gradient(0.75turn, #5773d496, #11257f66 200%);
@@ -110,7 +110,7 @@ width:100%;
     border-radius: 5px;
     border: 1px solid;
     background: var(--yellow);
-    width: calc(100% - 5px);
+    width:-webkit-fill-available;
 }
 #label div input:focus, #label button div:hover {
     border-color: var(--blue);
