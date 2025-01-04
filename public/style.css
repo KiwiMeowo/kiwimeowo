@@ -95,7 +95,7 @@ blockquote {
     border-left: var(--blue) 3px solid;
     background: linear-gradient(0.25turn, #9cc3df78, #93c3e633);
     padding: 0.1px 0.75rem;
-    margin: 0 1.5rem;
+    margin: 0.75em 1.5rem;
     border-radius: 0 5px 5px 0;
     filter: var(--dropshadow);
   }
@@ -110,6 +110,9 @@ blockquote {
   }
   pre::-webkit-scrollbar-thumb {
     border: 1px solid var(--teal);
+}
+figure{
+  margin:0.75em 40px;
 }
 ul {
   list-style: "- ";
@@ -521,6 +524,9 @@ width: calc(100% - 25vw);
 
 ul{
   padding-left:20px;
+}
+figure{
+  margin:0.75em 20px;
 }
   }
   
