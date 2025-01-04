@@ -175,6 +175,7 @@ h1, h2, h3 {
   background: rgb(15 14 49 / 50%);
   text-align: right;
   color: #fff;  
+  top:0;
   font-size: 0.875em;
   }
   
