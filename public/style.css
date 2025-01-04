@@ -774,6 +774,7 @@ a.collapsible:after {
 }
 .simple{
   background: linear-gradient(#0b263b75, #1f084e73 150%), url(/fancy1.png);
+  min-height: calc(100vh - 45px);
 }
 .simple .blog{
   margin: 15px 15%;
