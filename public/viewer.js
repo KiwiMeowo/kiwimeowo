@@ -17,8 +17,11 @@ var createwindow=document.createElement('div');
         artwork.classList.remove("censor");
         artwork.removeEventListener("click", censor);
       }
-      artwork.src=this.getElementsByTagName("img")[0].src;
-      artdesc.innerHTML=this.getElementsByTagName("img")[0].title;
+      artwork.src="../loading.gif";
+      setTimeout(function(){
+        artwork.src=art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].src;
+    },100);
+    artdesc.innerHTML=this.getElementsByTagName("img")[0].title;
       artwindow.style.transform="translateY(0)";
       artwindow.style.opacity="1";
       artwindow.style.zIndex="100";
@@ -41,7 +44,10 @@ document.getElementById("prevart").addEventListener("click",function(){
     artwork.classList.remove("censor");
     artwork.removeEventListener("click", censor);
   }
-  artwork.src=art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].src;
+  artwork.src="../loading.gif";
+      setTimeout(function(){
+        artwork.src=art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].src;
+    },100);
   artdesc.innerHTML=art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].title;
   } else{
     this.innerText="Limit!";
@@ -62,7 +68,10 @@ document.getElementById("nextart").addEventListener("click",function(){
     artwork.classList.remove("censor");
     artwork.removeEventListener("click", censor);
   }
-  artwork.src=art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].src;
+  artwork.src="../loading.gif";
+      setTimeout(function(){
+        artwork.src=art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].src;
+    },100);
   artdesc.innerHTML=art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].title;
   }else{
     this.innerText="Limit!";
