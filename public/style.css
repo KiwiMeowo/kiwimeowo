@@ -774,25 +774,6 @@ img.spoiler:hover{
   background-color:var(--highlightteal) !important;
 }
 
-/*Blorbo pages*/
-.charcontain{
-  display:flex;
-}
-.char{
-    min-width:250px;
-}
-.charhr{
-  margin:0 15px;
-}
-@media(max-width:800px){
-  .charcontain{
-  display:block;
-}
-.charhr{
-  margin:15px auto;
-}
-}
-
 .art{
   overflow-x: auto;
   overflow-y: hidden;
