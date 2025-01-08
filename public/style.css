@@ -748,6 +748,10 @@ a.collapsible:after {
 .close:hover{
   color:var(--teal);
 }
+.blogdate{
+  display:inline-block;
+  text-indent: 0;
+}
 /*Blog page spoiler censors*/
 .spoiler {
   color:var(--dblue);
