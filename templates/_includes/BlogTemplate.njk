@@ -19,6 +19,13 @@
       <a href="../index.html">Blog</a>
     </div>
   </div>
+  <div class="blognav">
+  {% set previousPost = collections.blog | getPreviousCollectionItem %}
+        {% set nextPost = collections.blog | getNextCollectionItem %}
+      {% if previousPost %}<a href="{{ previousPost.url }}">{% endif %}<span>⭠ Previous</span>{% if previousPost %}</a>{% endif %}
+        <a href="../index.html"><span>Return</span></a>
+        {% if nextPost %}<a href="{{ nextPost.url }}">{% endif %}<span>Next ⭢</span>{% if nextPost %}</a>{% endif %}
+  </div>
   <div class="page-wrapper">
     <div class="main2">
       <div class="box"><div class="tit"><h1>{{ title }}</h1></div><div class="inner min">
@@ -43,13 +50,6 @@
         {% endif %}
         <p class="date">( {{ blogdate }} )</p>
         <hr>
-        <div class="blogend">
-        {% set previousPost = collections.blog | getPreviousCollectionItem %}
-        {% set nextPost = collections.blog | getNextCollectionItem %}
-        {% if previousPost %}<a href="{{ previousPost.url }}">{% endif %}<span>⭠ Previous</span>{% if previousPost %}</a>{% endif %}
-        <a href="../index.html">Return</a>
-        {% if nextPost %}<a href="{{ nextPost.url }}">{% endif %}<span>Next ⭢</span>{% if nextPost %}</a>{% endif %}
-        </div>
       </div></div>
       <div id="c_widget"></div>
     <script src="../../comment-widget.js"></script>
