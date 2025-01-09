@@ -14,6 +14,7 @@
   display:grid;
   grid-template: 
   'a a a'
+  'button button button'
   'b c d'
   'e e d'
   'e e d';
@@ -47,7 +48,7 @@ img.button{
 }
 @media(max-width:1000px){
   .main2{
-    grid-template:'a''b''c''d''e';
+    grid-template:'a''button''b''c''d''e';
     margin:0 auto;
   }
 }
@@ -60,6 +61,10 @@ img.button{
     margin:0.5em 0;
   }
 }
+.site a{display:inline-block;margin: 2px 2px;}
+.ff-container.ff-responsive.ff-ready.ff-inactive {filter: var(--dropshadow);}
+canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
+.ff-container.ff-responsive.ff-ready.ff-inactive:hover {translate:var(--down);filter: var(--dropshadowdown);}
   </style>
   </head>
  <body><span id="top"></span>
@@ -77,11 +82,64 @@ img.button{
 	        <p>This is the place I place useful/interesting links, which allows for more stuff to be placed than the one in the main page.</p>
 	      <hr>
       </div></div>
+      <div class="box" style="grid-area:button;"><div class="tit"><h1>Cool site buttons</h1></div>
+      <div class="inner">
+        <div style="border: 7.5px double;border-radius: 5px;padding: 5px 0;display:flex;flex-wrap: wrap;justify-content: center;" id="animation" class="site freezeframe">
+          <a href="https://strawbebby228.neocities.org/" target="_blank"><img src="https://strawbebby228.neocities.org/arts/UI/ButtonPink.gif" class="button"></a>
+          <a href="https://palmistshouse.net/" target="_blank"><img src="button/palmistshouse.gif" class="button"></a>
+          <a href="https://nonkiru.art/" target="_blank"><img src="button/nonkiru_button_light.gif" class="button"></a>
+          <a href="https://neoratz.neocities.org/" target="_blank"><img src="button/neoratz.gif" class="button"></a>
+          <a href="https://puddingpudd.com/" target="_blank"><img src="button/Pudd_Button_V3.gif" class="button"></a>
+          <a href="https://icecreampizzer.art/" target="_blank"><img src="button/btn-pizzer.gif" class="button"></a>
+          <a href="https://6ooey.neocities.org/" target="_blank"><img src="button/goobutton.png" class="button"></a>
+            <a href="https://sunshine.nekoweb.org/" target="_blank"><img src="button/sunshine.gif" class="button"></a>
+          <a href="https://snewberry.neocities.org" target="_blank"><img src="button/snewbutton.gif" class="button"></a>
+          <a href="https://atomicgothic.neocities.org/" target="_blank"><img src="button/ag_main_button.gif" class="button"></a>
+          <a href="https://ranfren.neocities.org/" target="_blank"><img src="button/ranfren.gif" class="button"></a>
+          <a href="https://pianobonds.neocities.org/" target="_blank"><img src="button/8831piano.gif" class="button"></a>
+          <a href="https://wasongo.art/" target="_blank"><img src="button/wasongo_button3.gif" class="button"></a>
+            <a href="https://ninacti0n.neocities.org/" target="_blank"><img src="button/RS animated button.gif" class="button"></a>
+          <a href="https://nerucom.neocities.org/" target="_blank"><img src="button/nerucom.gif" class="button"></a>
+          <a href="https://temperature.neocities.org/" target="_blank"><img src="button/banner.gif" class="button"></a>
+          <a href="https://nenrikido.neocities.org/" target="_blank"><img src="button/nenrikido.gif" class="button"></a>
+          <a href="https://sadly.link/home/" target="_blank"><img src="button/sl-button.png" class="button"></a>
+          <a href="https://vidapon.net/" target="_blank"><img src="button/Astertrail_button.gif" class="button"></a>
+          <a href="https://neonaut.neocities.org/" target="_blank"><img src="button/neonaut-banner.png" class="button"></a>
+          <a href="https://wiggle.monster/" target="_blank"><img src="button/wiichicken.gif" class="button"></a>
+          <a href="https://melankorin.net/" target="_blank"><img src="https://melankorin.net/assets/img/buttons/button-1.gif" class="button"></a>
+          <a href="https://strovi.neocities.org/" target="_blank"><img src="button/strovi.png" class="button"></a>
+          <a href="https://melps.neocities.org/" target="_blank"><img src="button/limk1.jpg" style="width:88px;" class="button"></a>
+          <a href="https://dirtiestlaundry.neocities.org/" target="_blank"><img src="button/laundry.gif" class="button"></a>
+          <a href="https://zenmaistudio.com/" target="_blank"><img src="button/zenmai.png" class="button"></a>
+          </div>
+          <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+          <p align="center">GIF Animation: 
+          <span style="display:inline-block">
+          <button class="start coolbutton" style="margin: 0 5px;">Play</button>
+       <button class="stop coolbutton" style="margin: 0 5px;">Pause</button>
+       </span>
+       </p>
+       <script>
+     const manual = new Freezeframe('.freezeframe', {
+      trigger: false,
+      warnings: false,
+      overlay: false
+     });
+     document.querySelector('.start').addEventListener('click', () => {
+      manual.start();
+      
+     });
+     document.querySelector('.stop').addEventListener('click', () => {
+      manual.stop();
+     });
+    </script>
+      </div></div>
       <div class="box" style="grid-area:c;"><div class="tit"><h1>Interesting</h1></div>
       <div class="inner">
 	        <ul>
 	          <li><a href="https://motherfuckingwebsite.com/" target="_blank">Motherfucking Website</a></li>
 	          <li><a href="https://dimden.neocities.org/navlink/" target="_blank">Navlink Ads</a> <iframe style="border:none;aspect-ratio:1/1;max-width:180px;margin:0;display: block;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe></li>
+            <li><a href="https://caby.neocities.org/cat/" target="_blank">Please draw a cat <img src="button/plsdrawacat.gif" class="button"></a></li>
 	        </ul>
 	      <hr>
       </div></div>
@@ -91,14 +149,14 @@ img.button{
 	        <li><a href="https://www.youtube.com/@gellheroes5s/featured" target="_blank" title="An original story project by MoniiMous. A group of four teens and a dog found five gells, and gained different superpowers. Learning that Aultimins being turned into gells against their will by the Great Neev Zeltzalu, this team decided to save and fight for the Autimins.">Gell Heroes (PROJECT: 5S)</a></li>
 	        <li><a href="https://www.sbnation.com/a/17776-football" target="_blank" title="A story about eternal immortality... and American football? (Seriously it's so good, even if you don't like sports)">17776</a></li>
 	        <li><a href="https://www.deviantart.com/hi6sho/gallery/54200336/pandemonium-wizard-village-chapter1" target="_blank" title="A story about a man who wants to save his loved one and a hidden-away village which rumoured to be able to use magic. It is a tragic story with a bittersweet ending.">Pandemonium: Wizard Village</a></li>
-	        <li><a href="https://leirin.neocities.org/mm/magicmil" target="_blank" title="A story about a magic-loving child called Yona growing up in an orphanage. The watercolor art and the story gives me some sort of nostalgic and comforting vibes. This series is still ongoing!">Magical Millennium <img src="/button/pixbanner.png" class="button"></a></li>
+	        <li><a href="https://leirin.neocities.org/mm/magicmil" target="_blank" title="A story about a magic-loving child called Yona growing up in an orphanage. The watercolor art and the story gives me some sort of nostalgic and comforting vibes. This series is still ongoing!">Magical Millennium <img src="button/pixbanner.png" class="button"></a></li>
 	        </ul>
 	      <hr>
       </div></div>
       <div class="box" style="grid-area:d;"><div class="tit"><h1>Resources/Useful</h1></div>
       <div class="inner">
 	        <ul>
-	          <li><a href="https://eggramen.neocities.org/code/css_testpages" target="_blank">Eggramen: Layouts</a></li>
+	          <li><a href="https://eggramen.neocities.org/code/css_testpages" target="_blank">Eggramen: Layouts <img src="button/eggramen.png" class="button"></a></li>
 	          <li><a href="https://scripted.neocities.org/2nd" target="_blank">Scripted: Resources to beautify your website</a></li>
 	          <li><a href="https://foollovers.com" target="_blank">Foollovers: Assets<img src="button/foollovers.gif" class="button"></a></li>
 	          <li><a href="https://unicodelookup.com/" target="_blank">Unicode Lookup</a></li>
@@ -108,13 +166,14 @@ img.button{
 	          <li><a href="http://referenceangle.com/" target="_blank">View head from different angles</a></li>
 	          <li><a href="https://yoksel.github.io/url-encoder/" target="_blank">SVG URL encoder</a></li>
             <li><a href="https://github.com/marketplace/actions/deploy-to-neocities" target="_blank">Github deploy to Neocities</a></li>
+            <li><a href="https://lovelttr.neocities.org/" target="_blank">Lovelttr: Artist resource page<img src="button/button2.gif" class="button"></a></li>
 	        </ul>
 	      <hr>
       </div></div>
       <div class="box" style="grid-area:e;"><div class="tit"><h1>Credits</h1></div>
       <div class="inner">
 	        <ul class="e">
-	          <li>Layouts: <a href="https://eggramen.neocities.org/code/css_testpages" target="_blank">Eggramen</a></li>
+	          <li>Layouts: <a href="https://eggramen.neocities.org/code/css_testpages" target="_blank">Eggramen <img src="button/eggramen.png" class="button"></a></a></li>
 	          <li>Snowflake effect: <a href="https://pajasevi.github.io/CSSnowflakes/" target="_blank">CSSnowflakes</a></li>
 	          <li>Draggables: <a href="https://www.w3schools.com/howto/howto_js_draggable.asp" target="_blank">w3schools</a></li>
 	          <li>Collapsibles: <a href="https://www.w3schools.com/howto/howto_js_collapsible.asp" target="_blank">w3schools</a></li>
@@ -122,7 +181,7 @@ img.button{
 	          <li>Timezone-accurate Clock: <a href="https://codepen.io/paulera/pen/BPwPNw" target="_blank">Paulo Amaral</a></li>
 	          <li>Fonts: <a href="https://fonts.google.com/specimen/Fraunces" target="_blank">Fraunces</a>, <a href="https://fonts.adobe.com/fonts/toppan-bunkyu-mincho-pr6n#licensing-section" target="_blank">Toppan Bunkyu Mincho</a></li>
 	          <li>SVG graphics: <a href="https://www.svgrepo.com/" target="_blank">SVG Repo</a></li>
-	          <li>BGM in blog page: <a href="http://www.hmix.net/" target="_blank">H/Mix <img src="/button/hmix1.gif" class="button"></a></li>
+	          <li>BGM in blog page: <a href="http://www.hmix.net/" target="_blank">H/Mix <img src="button/hmix1.gif" class="button"></a></li>
 	          <li>Freezeframe: <a href="https://unpkg.com/freezeframe/dist/freezeframe.min.js" target="_blank">Freezeframe</a></li>
 	        </ul>
 	      <hr>

@@ -209,6 +209,7 @@ button.navcoll {
     padding: 5px 7.5px;
     border-radius: 5px;
     cursor: pointer;
+    filter:var(--dropshadow);
 }
 
 button.navcoll:hover, button.navcoll.act{
@@ -420,12 +421,13 @@ img::before {
   transition: color 0.5s, text-decoration-color 0.5s;
 }
 
-.button, .navcoll{
+img.button{
   filter: var(--dropshadow);
-      image-rendering: pixelated;
+  image-rendering: pixelated;
+  border-radius:0;
 }
 
-a .button:hover {
+a img.button:hover {
     translate: var(--down);
     filter: var(--dropshadowdown);
 }

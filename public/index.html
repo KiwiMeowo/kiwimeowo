@@ -17,25 +17,18 @@
   .quick-nav{display:block;}
   #sidenav{display:none;}}
 /*Site button collection*/
-  .site a{display:inline-block;margin: 2px 2px;}
+  .site a.sitebutton{display:block;margin: 2px 10px;width: max-content;}
   .animation .site:hover{animation-play-state: paused;}
-  .site{width:max-content;}
+  .ff-container{display:block !important;}
 .ff-container.ff-responsive.ff-ready.ff-inactive {filter: var(--dropshadow);}
-canvas.ff-canvas.ff-canvas-ready{border-radius: 5px;image-rendering: pixelated;}
+canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 .ff-container.ff-responsive.ff-ready.ff-inactive:hover {translate:var(--down);filter: var(--dropshadowdown);}
-.animation{overflow:hidden !important;}
-.animation .site{-moz-transform:translateX(100%);-webkit-transform:translateX(100%);  transform:translateX(100%); -moz-animation: example1 10s linear infinite;-webkit-animation: example1 10s linear infinite;animation: example1 10s linear infinite;width:100% !important;}
-  .animation .site:nth-child(even){animation-direction:reverse;}
-@-moz-keyframes example1 {0%   { -moz-transform: translateX(100%); }100% { -moz-transform: translateX(-250%); }}
-@-webkit-keyframes example1 {0%   { -webkit-transform: translateX(100%); }100% { -webkit-transform: translateX(-250%); }}
-@keyframes example1 {0%   { -moz-transform: translateX(120%); /* Firefox bug fix */-webkit-transform: translateX(120%); /* Firefox bug fix */transform: translateX(120%);}100% { -moz-transform: translateX(-300%); /* Firefox bug fix */-webkit-transform: translateX(-300%); /* Firefox bug fix */transform: translateX(-300%); }}
- 
-/*Other site CSS*/ 
-.gell a{animation-name:textblink;animation-duration: 2000ms;animation-iteration-count: infinite;}
-.gell img{animation-name: spin;animation-duration: 5000ms;animation-iteration-count: infinite;animation-timing-function: linear;}
-@keyframes spin {from {transform:rotate(0deg);}to {transform:rotate(360deg);}}
-@keyframes textblink{from{color:rgba(147,195,230,0.45)}to{color:#3f6884}}
-
+.site > div{padding:5px 0;}
+.site > div:nth-child(odd){background: #79c7ff59;}
+.site > div:nth-child(even){background: #c6e7ff59;}
+.site div:nth-child(odd) a.sitebutton{margin-right: auto;}
+.site div:nth-child(even) a.sitebutton{margin-left: auto;
+}
 /*Status cafe stuff*/
 #statuscafe-username-real{font-weight: 600;font-size: 1em;text-shadow: 2px 2px var(--lteal);color: var(--blue) !important;text-decoration: none !important;margin: 12.5px 0px;}
 #statuscafe-username-real:hover, #statuscafe-username-real:focus{color: var(--teal) !important;transition: color 0.5s;}
@@ -257,7 +250,7 @@ canvas.ff-canvas.ff-canvas-ready{border-radius: 5px;image-rendering: pixelated;}
 	        </div>
 	        </div>
 	        
-      <div class="box"><div class="tit"><h1>Newest Content!</h1></div><div class="inner">
+      <div class="box"><div class="tit"><h1>Newest Stuff!</h1></div><div class="inner">
       <div style="border: 1px double;border-radius: 5px;border-width: 7.5px;padding: 5px 15px;">
         <div id="autobox">
       <div id="auto1">
@@ -476,62 +469,21 @@ function showSlides() {
       
       <!--Site button-->
 <div class="box"><h1>Cool sites and people</h1><div class="inner">
-        <div style="border: 7.5px double;border-radius: 5px;padding: 15px 0;overflow-x:hidden;white-space:nowrap;">
-        <div style="overflow-x:scroll;padding: 0 15px 15px;" id="animation">
-        <div class="site freezeframe">
-        <a href="https://strawbebby228.neocities.org/" target="_blank"><img src="https://strawbebby228.neocities.org/arts/UI/ButtonPink.gif" class="button"></a>
-        <a href="https://palmistshouse.net/" target="_blank"><img src="button/palmistshouse.gif" class="button"></a>
-        <a href="https://nonkiru.art/" target="_blank"><img src="button/nonkiru_button_light.gif" class="button"></a>
-        <a href="https://neoratz.neocities.org/" target="_blank"><img src="button/neoratz.gif" class="button"></a>
-        <a href="https://puddingpudd.com/" target="_blank"><img src="button/Pudd_Button_V3.gif" class="button"></a>
-        <a href="https://icecreampizzer.art/" target="_blank"><img src="button/btn-pizzer.gif" class="button"></a>
-        <a href="https://6ooey.neocities.org/" target="_blank"><img src="button/goobutton.png" class="button"></a>
-        </div>
-        <div class="site freezeframe">
-          <a href="https://sunshine.nekoweb.org/" target="_blank"><img src="button/sunshine.gif" class="button"></a>
-        <a href="https://snewberry.neocities.org" target="_blank"><img src="button/snewbutton.gif" class="button"></a>
-        <a href="https://atomicgothic.neocities.org/" target="_blank"><img src="button/ag_main_button.gif" class="button"></a>
-        <a href="https://ranfren.neocities.org/" target="_blank"><img src="button/ranfren.gif" class="button"></a>
-        <a href="https://pianobonds.neocities.org/" target="_blank"><img src="button/8831piano.gif" class="button"></a>
-        <a href="https://lovelttr.neocities.org/" target="_blank"><img src="button/button2.gif" class="button"></a>
-        <a href="https://wasongo.art/" target="_blank"><img src="button/wasongo_button3.gif" class="button"></a>
-        </div>
-        <div class="site freezeframe">
-          <a href="https://ninacti0n.neocities.org/" target="_blank"><img src="button/RS animated button.gif" class="button"></a>
-        <a href="https://nerucom.neocities.org/" target="_blank"><img src="button/nerucom.gif" class="button"></a>
-        <a href="https://eggramen.neocities.org/" target="_blank"><img src="button/eggramen.png" class="button"></a>
-        <a href="https://temperature.neocities.org/" target="_blank"><img src="button/banner.gif" class="button"></a>
-        <a href="https://nenrikido.neocities.org/" target="_blank"><img src="button/nenrikido.gif" class="button"></a>
-        <a href="https://vidapon.net/" target="_blank"><img src="button/Astertrail_button.gif" class="button"></a>
-        <a href="https://neonaut.neocities.org/" target="_blank"><img src="button/neonaut-banner.png" class="button"></a>
-        </div>
-        <div class="site freezeframe"> 
-        <a href="https://wiggle.monster/" target="_blank"><img src="button/wiichicken.gif" class="button"></a>
-        <a href="https://melankorin.net/" target="_blank"><img src="https://melankorin.net/assets/img/buttons/button-1.gif" class="button"></a>
-        <a href="https://strovi.neocities.org/" target="_blank"><img src="button/strovi.png" class="button"></a>
-        <a href="https://melps.neocities.org/" target="_blank"><img src="button/limk1.jpg" style="width:88px;" class="button"></a>
-        <a href="https://dirtiestlaundry.neocities.org/" target="_blank"><img src="button/laundry.gif" class="button"></a>
-        <a href="https://caby.neocities.org/cat/" target="_blank"><img src="button/plsdrawacat.gif" class="button"></a>
-        <a href="https://zenmaistudio.com/" target="_blank"><img src="button/zenmai.png" class="button"></a>
-        </div>
-        </div>
-        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+        <div style="border: 7.5px double;border-radius: 5px;padding: 10px 0;" id="animation" class="site freezeframe">
+        <div><a href="https://puddingpudd.com/" target="_blank" class="sitebutton"><img src="button/Pudd_Button_V3.gif" class="button"></a></div>
+        <div><a href="https://pianobonds.neocities.org/" target="_blank" class="sitebutton"><img src="button/8831piano.gif" class="button"></a></div>
+        <div><a href="https://sadly.link/home/" target="_blank" class="sitebutton"><img src="button/sl-button.png" class="button"></a></div>
         <hr>
-        <center style="margin: 0;" id="gell">
-        <a href="https://www.youtube.com/@gellheroes5s/featured" target="_blank" title="An original story project by MoniiMous. A group of four teens and a dog found five gells, and gained different superpowers. Learning that Aultimins being turned into gells against their will by the Great Neev Zeltzalu, this team decided to save and fight for the Autimins.">Gell Heroes (PROJECT: 5S) <img class="emote" style="border-radius:50% !important;" src="https://yt3.googleusercontent.com/EHxaVU_6qrIOM8UDvmwh1H_1Ws5UBVM47-Hnnnbkx2Pj30kMxjlSXEmoj_VYxFoW71DXZ01G=s176-c-k-c0x00ffffff-no-rj"></a>
-        <br><a href="bookmark.html" style="padding: 2.5px 5px;display: inline-block;background: linear-gradient(#adddff69, #bce3ff36);filter: var(--dropshadow);border-radius: 7.5px;margin:2px;">Other links here!</a>
+        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+        <center style="margin: 0;">
+        <a href="https://www.youtube.com/@gellheroes5s/featured" target="_blank" title="An original story project by MoniiMous. A group of four teens and a dog found five gells, and gained different superpowers. Learning that Aultimins being turned into gells against their will by the Great Neev Zeltzalu, this team decided to save and fight for the Autimins.">Gell Heroes (PROJECT: 5S)</a>
+        <a href="bookmark.html" style="padding: 2.5px 10px;padding-right: 20px;display: inline-block;background: linear-gradient(#adddff69, #bce3ff36);filter: var(--dropshadow);border-radius: 0 0 20px 0;margin:5px 0;border-left: 3px solid var(--blue);color: var(--blue);">Other links here!</a>
         </center>
-        </div>
+      </div>
         <p align="center">GIF Animation: 
         <span style="display:inline-block">
         <button class="start coolbutton" style="margin: 0 5px;">Play</button>
      <button class="stop coolbutton" style="margin: 0 5px;">Pause</button>
-     </span>
-     </p>
-     <p align="center">CSS Animation: 
-     <span style="display:inline-block">
-     <button class="coolbutton" onclick="RunMarquee()" style="margin:0 5px;">Play</button>
-     <button class="coolbutton" onclick="StopMarquee()" style="margin:0 5px;">Pause</button>
      </span>
      </p>
      <script>
@@ -547,15 +499,6 @@ function showSlides() {
    document.querySelector('.stop').addEventListener('click', () => {
     manual.stop();
    });
-   
-   function RunMarquee() {
-  document.getElementById('animation').classList.add("animation");
-  document.getElementById('gell').classList.add("gell");
-}
-function StopMarquee() {
-  document.getElementById('animation').classList.remove("animation");
-  document.getElementById('gell').classList.remove("gell");
-}
   </script>
       </div></div>
       
@@ -644,6 +587,9 @@ function StopMarquee() {
       <div class="box"><h1>Update</h1><div class="inner">
         <div style="overflow-x:hidden;overflow-y:auto;height: 225px;border: 7.5px double;border-radius: 5px;padding: 5px 15px;">
         <div class="text">
+          <li>Moved buttons, added buttons, rearranged buttons.</li>
+          <p class="date">( 9 Jan 2024 )</p>
+          <hr>
           <li>The blog navigation buttons are now fixed on the bottom on your screen for easier use.</li>
           <p class="date">( 8 Jan 2024 )</p>
           <hr>
