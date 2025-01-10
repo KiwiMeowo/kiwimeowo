@@ -26,8 +26,7 @@
     <link href="{{ absolutePostUrl }}">{{ absolutePostUrl }}</link>
     <guid>{{ absolutePostUrl }}</guid>
     <description>{{ post.data.subtitle }}</description>
-    {%- set datehalf = post.date | utcdate %}
-    <pubDate>{{ datehalf | dateToRfc822 }}</pubDate>
+    <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
   </item>
   {%- endfor %}
 </channel>
