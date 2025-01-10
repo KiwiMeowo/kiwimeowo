@@ -1,0 +1,33 @@
+---json
+{
+  "permalink": "blog/feed.xml",
+  "eleventyExcludeFromCollections": true,
+  "metadata": {
+    "title": "Kiwi's Blog Feed",
+    "description": "I wonder how many people would follow my blogs using this feed...",
+    "language": "en",
+    "base": "https://kiwimeowo.neocities.org/"
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="feed.css"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<atom:link href="{{ permalink | htmlBaseUrl(metadata.base) }}" rel="self" />
+  <title>{{ metadata.title }}</title>
+  <link href="{{ metadata.base | addPathPrefixToFullUrl }}">{{ metadata.base | addPathPrefixToFullUrl }}</link>
+  <description>{{ metadata.description }}</description>
+  {%- set ten = collections.blog | reverse %}
+  {%- for post in ten | limit(20) %}
+  {%- set absolutePostUrl %}{{ post.url | htmlBaseUrl(metadata.base) }}{% endset %}
+  <item>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ absolutePostUrl }}">{{ absolutePostUrl }}</link>
+    <guid>{{ absolutePostUrl }}</guid>
+    <description>{{ post.data.subtitle }}</description>
+    <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+  </item>
+  {%- endfor %}
+</channel>
+</rss>

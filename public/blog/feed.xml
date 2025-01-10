@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="feed.css"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<atom:link href="https://kiwimeowo.neocities.org/blog/blog/feed.xml" rel="self" />
+  <title>Kiwi&#39;s Blog Feed</title>
+  <link href="https://kiwimeowo.neocities.org/">https://kiwimeowo.neocities.org/</link>
+  <description>I wonder how many people would follow my blogs using this feed...</description>
+  <item>
+    <title>Fingertip skin</title>
+    <link href="https://kiwimeowo.neocities.org/blog/post/2025-01-07.html">https://kiwimeowo.neocities.org/blog/post/2025-01-07.html</link>
+    <guid>https://kiwimeowo.neocities.org/blog/post/2025-01-07.html</guid>
+    <description>Damn this is frustrating</description>
+    <pubDate>Tue, 07 Jan 2025 08:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Project: Eden&#39;s Garden</title>
+    <link href="https://kiwimeowo.neocities.org/blog/post/2025-01-06.html">https://kiwimeowo.neocities.org/blog/post/2025-01-06.html</link>
+    <guid>https://kiwimeowo.neocities.org/blog/post/2025-01-06.html</guid>
+    <description>Devastating (It&#39;s a compliment)</description>
+    <pubDate>Mon, 06 Jan 2025 08:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Mosquitoes</title>
+    <link href="https://kiwimeowo.neocities.org/blog/post/2025-01-04.html">https://kiwimeowo.neocities.org/blog/post/2025-01-04.html</link>
+    <guid>https://kiwimeowo.neocities.org/blog/post/2025-01-04.html</guid>
+    <description>One of my major nemesises</description>
+    <pubDate>Sat, 04 Jan 2025 08:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Sticker Collector</title>
+    <link href="https://kiwimeowo.neocities.org/blog/post/2025-01-01.html">https://kiwimeowo.neocities.org/blog/post/2025-01-01.html</link>
+    <guid>https://kiwimeowo.neocities.org/blog/post/2025-01-01.html</guid>
+    <description>One of young Kiwi&#39;s fixiations</description>
+    <pubDate>Wed, 01 Jan 2025 08:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>2024 final day</title>
+    <link href="https://kiwimeowo.neocities.org/blog/post/2024-12-31.html">https://kiwimeowo.neocities.org/blog/post/2024-12-31.html</link>
+    <guid>https://kiwimeowo.neocities.org/blog/post/2024-12-31.html</guid>
+    <description>Rewind, rewind, rewind</description>
+    <pubDate>Tue, 31 Dec 2024 08:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>FOOD</title>
+    <link href="https://kiwimeowo.neocities.org/blog/post/2024-12-27.html">https://kiwimeowo.neocities.org/blog/post/2024-12-27.html</link>
+    <guid>https://kiwimeowo.neocities.org/blog/post/2024-12-27.html</guid>
+    <description>Ugh I crave chocolate</description>
+    <pubDate>Fri, 27 Dec 2024 08:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Christmas cards</title>
+    <link href="https://kiwimeowo.neocities.org/blog/post/2024-12-25.html">https://kiwimeowo.neocities.org/blog/post/2024-12-25.html</link>
+    <guid>https://kiwimeowo.neocities.org/blog/post/2024-12-25.html</guid>
+    <description>A long lost tradition of mine returning</description>
+    <pubDate>Wed, 25 Dec 2024 08:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>(Late but) Halloween</title>
+    <link href="https://kiwimeowo.neocities.org/blog/post/2024-12-22.html">https://kiwimeowo.neocities.org/blog/post/2024-12-22.html</link>
+    <guid>https://kiwimeowo.neocities.org/blog/post/2024-12-22.html</guid>
+    <description>Why hadn&#39;t I written about this</description>
+    <pubDate>Sun, 22 Dec 2024 08:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>My silly interests</title>
+    <link href="https://kiwimeowo.neocities.org/blog/post/2024-12-21.html">https://kiwimeowo.neocities.org/blog/post/2024-12-21.html</link>
+    <guid>https://kiwimeowo.neocities.org/blog/post/2024-12-21.html</guid>
+    <description>I&#39;m cringe but I&#39;m free (?</description>
+    <pubDate>Sat, 21 Dec 2024 08:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>git commit suici--</title>
+    <link href="https://kiwimeowo.neocities.org/blog/post/2024-12-19.html">https://kiwimeowo.neocities.org/blog/post/2024-12-19.html</link>
+    <guid>https://kiwimeowo.neocities.org/blog/post/2024-12-19.html</guid>
+    <description>Why do I do this to myself</description>
+    <pubDate>Thu, 19 Dec 2024 08:00:00 GMT</pubDate>
+  </item>
+</channel>
+</rss>

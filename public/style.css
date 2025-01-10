@@ -421,13 +421,13 @@ img::before {
   transition: color 0.5s, text-decoration-color 0.5s;
 }
 
-img.button{
+.button{
   filter: var(--dropshadow);
   image-rendering: pixelated;
   border-radius:0;
 }
 
-a img.button:hover {
+a .button:hover {
     translate: var(--down);
     filter: var(--dropshadowdown);
 }
