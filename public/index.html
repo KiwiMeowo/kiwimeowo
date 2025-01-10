@@ -648,7 +648,7 @@ function showSlides() {
   </div> 
   <script>
   function fetchHtml() {
-  fetch('art/2025.html')
+  fetch('art/2025.html?ver='+ (Math.floor(Math.random() * 1000)).toString)
   .then((response) => {
     return response.text();
   })
@@ -663,7 +663,7 @@ function showSlides() {
   });
 }
 function fetchHtml2() {
-  fetch('blog/index.html')
+  fetch('blog/index.html?ver='+ (Math.floor(Math.random() * 1000)).toString)
   .then((response) => {
     return response.text();
   })
@@ -678,7 +678,7 @@ function fetchHtml2() {
   });
 }
 function fetchSong() {
-  fetch('song.html')
+  fetch('song.html?ver='+ (Math.floor(Math.random() * 1000)).toString)
   .then((response) => {
     return response.text();
   })
