@@ -32,9 +32,10 @@ justify-content: space-around;
   background: var(--yellow);
   filter: var(--dropshadow);
   border-radius: 5px;
+  color: var(--dblue);
+  text-decoration-color: var(--dblue);
   }
   .blognav a span{
-    color: var(--dblue);
     border-radius: 5px;
     padding: 0 7.5px;
     filter: var(--dropshadow);
