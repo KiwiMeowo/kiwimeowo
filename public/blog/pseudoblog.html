@@ -11,6 +11,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="../jquery.style-my-tooltips.js"></script>
     <style>
+      .box{overflow:visible;}
       .coolbutton:after{
         display:block;
         content:"Post!";
@@ -27,6 +28,44 @@
     background: #93C3E64A;
     height:75vh;
         }
+        .cosmos{
+          position: absolute;
+    right: 120px;
+    width: 200px;
+    text-align: center;
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+    rotate: 344deg;
+    top: -50px;
+    filter: var(--dropshadow);
+    display:none;
+        }
+    .cosmos:after {
+    position: absolute;
+    width: 1em;
+    rotate: 45deg;
+    content: "";
+    display: block;
+    top: 12px;
+    right: -7px;
+    height: 1em;
+    background: white;
+}
+    #flush{
+      position: fixed;
+    z-index: 1000;
+    top: 0px;
+    background: #45ba45;
+    left: 50%;
+    translate: -50% 0;
+    opacity: 0;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 2px var(--shadow);
+    transition: opacity 0.5s, top 0.5s;
+    }
     </style>
   </head>
  <body><span id="top"></span>
@@ -36,26 +75,50 @@
       <a href="index.html">Blog</a>
     </div>
   </div>
+  <div id="flush"><span>Post flushed down the toilet!</span></div>
   <div class="page-wrapper">
     <div class="main2">
       <div class="box"><div class="tit"><h1>Pseudo-Blog Poster!</h1></div><div class="inner min">
       <h1>Vent all you want, then post it to the void!</h1>
         <div class="text">
         <p>This is something just for me to pretend to post a vent post. There are stuff that I often wish to talk about, but they are usually too sensitive. To make myself less lonely, I made this thing where I can write stuff, but when you click the post button, it is actually a delete button, and all the stuff you write gets flushed down the toilet (Check my code in inspect mode if you don't believe me)! A useless thing indeed, but I wanna try if it makes me feel a bit better at least o3o.</p>
+        <p>The only thing that will see this post is you only, oh and this Cosmos plush, she wants to make you feel better.</p>
         </div>
         <hr>
       </div></div>
-      <div class="box"><div class="tit"><h1>Your post</h1></div><div class="inner min">
+      <div class="box"><div class="tit"><p class="cosmos">It's alright now, I'm here with you <3</p><p class="cosmos">It is ok to feel sad, you can let yourself feel this way</p><p class="cosmos">I care for you :3</p><p class="cosmos">Pet me if you feel sad :3</p><img src="idiot.png" style="position: absolute;display: block;z-index: 9;top: -100px;right: 0;height: 200px;cursor:grab;" onclick="Cosmos()"><h1>Your post</h1></div><div class="inner min">
           <textarea></textarea>
           <center><button type="button" class="coolbutton" onclick="clearText()"></button></center>
           <hr>
         </div></div>
     </div>
     </div>
+    <audio src="https://dl.dropbox.com/scl/fi/rsnlmjo9crt0td9oshlpu/Cat_idle1.mp3?rlkey=vbbqt0c5pooc9p9bm37y0eou3&st=3s2bl7im&raw=1" class="meow"></audio>
+   <audio src="https://dl.dropbox.com/scl/fi/okd9hks3aw9e0smr9o9az/Cat_idle2.mp3?rlkey=1ewh1t2c2hnbl3dyy9e6wwq4i&st=8zyt7p1f&raw=1" class="meow"></audio>
+   <audio src="https://dl.dropbox.com/scl/fi/4jyk1le0gqkyvpsa27hx9/Cat_idle3.mp3?rlkey=5mdthxkjcs7755n4es0pommvl&st=r09qg3bi&raw=1" class="meow"></audio>
+   <audio src="https://dl.dropbox.com/scl/fi/jbimaya0xg9y146c76xlq/Cat_idle4.mp3?rlkey=yr9q6kpcgio7s8rufwvir52wf&st=6c4fo32i&raw=1" class="meow"></audio>
+   <audio src="https://dl.dropbox.com/scl/fi/fkchvivycn2q1bc90nfov/Cat_purreow1.mp3?rlkey=u9hx979osgiovj02g0umvng2o&st=deuttx6b&raw=1" class="meow"></audio>
+   <audio src="https://dl.dropbox.com/scl/fi/87g7u51laastdu1bnr9rb/Cat_purreow2.mp3?rlkey=nb7j45afv8ndyevro6bvalnup&st=4ghzey83&raw=1" class="meow"></audio>
     <script>
       function clearText(){
         var blog = document.getElementsByTagName("textarea")[0];
         blog.value="";
+        var flush = document.getElementById("flush");
+        flush.style.opacity = "1"; 
+        flush.style.top = "45px"; 
+        setTimeout(function(){ flush.style.opacity = "0";flush.style.top = "0"; }, 2500);
+      }
+      function Cosmos(){
+        var cosmos = document.getElementsByClassName("cosmos");
+        for (i = 0; i < cosmos.length; i++) {
+          cosmos[i].style.display = "none";  
+        }
+        let e = Math.floor(Math.random() * cosmos.length);
+        cosmos[e].style.display = "block";
+        setTimeout(function(){ cosmos[e].style.display = "none"; }, 2500);
+        const player = document.getElementsByClassName('meow');
+        playaudio = player[(Math.floor(Math.random()*6))];
+        playaudio.play();
       }
     </script>
 </body>
