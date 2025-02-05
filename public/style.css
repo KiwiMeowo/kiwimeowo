@@ -869,13 +869,10 @@ img.emote{
 .fra{
     border: 7.5px double var(--teal);
     width:100%;
-    height:650px;
     box-sizing: border-box;
-}
-div.fra{
   border-radius: 7.5px;
   height:auto;
-  min-height:650px;
+  aspect-ratio: 1280 / 652;
 }
 .pagenum, .arttop, .fancybar{
       font-size: x-large;
