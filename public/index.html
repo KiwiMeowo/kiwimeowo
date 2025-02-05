@@ -23,9 +23,7 @@
 .ff-container.ff-responsive.ff-ready.ff-inactive {filter: var(--dropshadow);}
 canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 .ff-container.ff-responsive.ff-ready.ff-inactive:hover {translate:var(--down);filter: var(--dropshadowdown);}
-.site > div{padding:5px 0;}
-.site > div:nth-child(odd){background: #79c7ff59;}
-.site > div:nth-child(even){background: #c6e7ff59;}
+.site > div{padding:5px 0;margin:7.5px 0;border-style: solid none;border-width: 1px;filter: var(--dropshadow);}
 .site div:nth-child(odd) a.sitebutton{margin-right: auto;}
 .site div:nth-child(even) a.sitebutton{margin-left: auto;
 }
@@ -476,9 +474,9 @@ function showSlides() {
       <!--Site button-->
 <div class="box"><h1>Cool sites and people</h1><div class="inner">
         <div style="border: 7.5px double;border-radius: 5px;padding: 10px 0;" id="animation" class="site freezeframe">
-        <div><a href="https://puddingpudd.com/" target="_blank" class="sitebutton"><img src="button/Pudd_Button_V3.gif" class="button"></a></div>
-        <div><a href="https://pianobonds.neocities.org/" target="_blank" class="sitebutton"><img src="button/8831piano.gif" class="button"></a></div>
-        <div><a href="https://sadly.link/" target="_blank" class="sitebutton"><img src="button/sl-button.png" class="button"></a></div>
+        <div style="background: linear-gradient(#ffbc42b3, #ffcf628a);border-color:#0d2661;"><a href="https://puddingpudd.com/" target="_blank" class="sitebutton"><img src="button/Pudd_Button_V3.gif" class="button"></a></div>
+        <div style="background:linear-gradient(#22163c85, #b58c3052);border-color:#5e3000;"><a href="https://pianobonds.neocities.org/" target="_blank" class="sitebutton"><img src="button/8831piano.gif" class="button"></a></div>
+        <div style="background: linear-gradient(#d842ffb3,#abceec8a);border-color:#000000;"><a href="https://sadly.link/" target="_blank" class="sitebutton"><img src="button/sl-button.png" class="button"></a></div>
         <hr>
         <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
         <center style="margin: 0;">
