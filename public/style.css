@@ -996,9 +996,6 @@ img.emote{
 }
 
 @media (max-width: 1000px){
-  .fra{
-    aspect-ratio: auto;
-  }
   .draw .col {
     flex: 0 0 25%;
     max-width: 25%;
