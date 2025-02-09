@@ -109,7 +109,7 @@ padding:5px 15px;
 background:var(--lteal);
 min-height:288px;
 }
-#info p{
+#info p, #info div, #info button{
 display:inline-block;
 background:white;
 padding:5px 10px;
@@ -119,8 +119,9 @@ filter:var(--dropshadow);
 margin: 0.75em 5px;
 font-size:1.1em;
 transition:scale 0.5s;
+vertical-align: middle;
 }
-#info a p:hover{
+#info a p:hover, #info button:hover{
   scale:1.1;
   z-index:1;
   cursor: pointer;
@@ -204,7 +205,7 @@ width:100%;
 <audio id="hampter" src="https://dl.dropbox.com/scl/fi/zi1m65c0k3ajby4hnuq2r/hampter_2024-Nov-29.mp3?rlkey=4u504xn56bsnljrcuwi6a4e7f&st=9kwt6r6e&raw=1"></audio>
   <div class="page-wrapper">
     <div class="main2">
-    <div class="box" style="min-width: calc(100vw - 300px);"><div class="tit"><center><h1>⭑ Hello, I am KiwiMeowo ⭑</h1></center></div>
+    <div class="box" style="min-width: calc(100vw - 300px);"><div class="tit"><center><h1>⭑ Hello there :3 ⭑</h1></center></div>
     <div class="inner">
       <center><u>Volume warning on clicking the hampter</u></center>
 	       <div class="intro">
@@ -214,21 +215,21 @@ width:100%;
     <h2>Look at this car instead</h2>
   <img src="blog/idiot.png">
   </div>
-<img src="/notme.jpg">
+<img src="notme.jpg">
 <center><h2>It me!</h2></center>
 </div>
 <div id="info">
-<p style="rotate:-2deg;">Name: KiwiMeow/KiwiMeowo (Kiwi)</p>
-<p style="rotate:1deg;color:salmon;">she/her</p>
-<p style="rotate:4deg;color:SandyBrown;">Birthday: 8 March</p>
-<p style="rotate:1deg;color:orangered;">Hong Kong</p>
-<p style="rotate:2deg;color:LightSeaGreen;">Language: English and 中文</p>
-<p style="rotate:-10deg;"><span style="background: linear-gradient(to right, red, orange,green, blue, purple);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-decoration-color:var(--teal)">Drawing artist</span></p>
-<a onclick="hampter()"><p style="color:DarkGoldenRod;">Hampter 🐹</p></a>
+<div style="rotate:-2deg;text-align: center;background:var(--blue);padding: 0 10px 5px;"><span style="font-size: 0.75em;color:white;">Hello, my name is:</span><br><div style="background: white;margin:0;border-radius: 2.5px;filter:none;">KiwiMeow/KiwiMeowo<br><span style="opacity:0.75;font-size:0.9em;">(Kiwi)</span></div></div>
+<div style="rotate:9deg;background:linear-gradient(180deg, #ff9876, #dc4411 64%, #ab0909 100%);padding: 28px 10px;border-radius: 50%;color: white;text-shadow: 1px 1px #b40808;position: relative;"><div style="content:'';position: absolute;filter: none;margin: 0;padding: 0;width: 95%;height: 95%;translate: -8px -26px;border-bottom: 1px solid #8ef0ff9c;box-sizing: border-box;border-radius: 50%;background: linear-gradient(360deg, #8ef0ff9c 5%, transparent 38%);"></div><div style="content:'';position: absolute;filter: none;margin: 0;padding: 0;width: 65%;height: 50%;translate: 3px -26px;box-sizing: border-box;border-radius: 50%;background: linear-gradient(180deg, #fff3c09c 19%, transparent 90%);"></div>she/her</div>
+<p style="rotate:4deg;background:SandyBrown;border:2px solid white;"><span style="color:white;font-size:0.75em">Birthday:</span><br><span style="text-shadow: 1.5px 1.5px #ed6527;color: white;text-decoration: underline;">8 March</span></p>
+<p style="rotate:1deg;color:orangered;">Hong Kong 🇭🇰</p>
+<p style="rotate:2deg;background:var(--yellow);text-decoration: underline;text-decoration-color: var(--lteal);text-underline-offset: 3px;">I can speak:<br>- English<br>- 中文</p>
+<p style="rotate:-10deg;text-align: center;background-color: white;background-image: url(paper-texture.png);"><span style="font-size: 0.9em;color: var(--blue);text-shadow: 1px 1px var(--lteal);">Drawing </span><span style="font-size:0.75em">is my</span><br><span style="background: linear-gradient(to right, red, orange,green, blue, purple);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-decoration-color:var(--teal);filter:drop-shadow(1px 1px 1px var(--shadow));filter: drop-shadow(1px 1px 0px var(--highlightteal));font-size: 1.3em;">⭑Passion⭑</span></p>
+<button onclick="hampter()" style="color:DarkGoldenRod;border: none;line-height: inherit;font-size: inherit;">Hampter 🐹</button>
 <p style="rotate:-10deg;color:DarkRed;">OC brainrotting</p>
-<a href="/oc/Cosmos.html"><p style="rotate:-10deg;background: linear-gradient(rgb(19 0 44 / 75%), #e062e03b), url(/background.jpg);background-size: cover;background-position: center; color:white;">Cosmos ∑:3</p></a>
-<a href="/fandom/Barou.html#ship"><p style="rotate:1deg;color:white; background:linear-gradient(to bottom, #560606, black 90%, #562e2e 95%);"><span style="color:red;">BAROU</span><span style="color:#badd1e">SAGI</span> OTP</p></a>
-<a href="/fandom/Pome.html"><p style="rotate:-4deg;background:linear-gradient(to bottom, #D52F25, darkred 90%, #a6231b 95%);color:white;">Pome Fan ✧(ᓀ ‸ ᓂ)✧</p></a>
+<a href="oc/Cosmos.html"><p style="rotate:-10deg;background: linear-gradient(rgb(19 0 44 / 75%), #e062e03b), url(background.jpg);background-size: cover;background-position: center; color:white;">Cosmos ∑:3</p></a>
+<a href="fandom/Barou.html#ship"><p style="rotate:1deg;color:white; background:linear-gradient(to bottom, #560606, black 90%, #562e2e 95%);"><span style="color:red;">BAROU</span><span style="color:#badd1e">SAGI</span> OTP</p></a>
+<a href="fandom/Pome.html"><p style="rotate:-4deg;background:linear-gradient(to bottom, #D52F25, darkred 90%, #a6231b 95%);color:white;">Pome Fan ✧(ᓀ ‸ ᓂ)✧</p></a>
 <a href="https://www.youtube.com/@WillWoodmusic" target="_blank"><p style="rotate:7deg;background:black;color:#d4ba91;">Will Wood enjoyer</p></a>
 <a href="https://www.youtube.com/user/thecranewives" target="_blank"><p style="rotate:-3deg;"><span style="background: linear-gradient(to right, orange,green);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-decoration-color:var(--teal)">LISTEN TO THE CRANE WIVES</span></p></a>
 </div>
