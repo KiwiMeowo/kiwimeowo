@@ -15,7 +15,6 @@
     Have fun! Bug reports are encouraged if you happen to run into any issues.
     - Ayano (https://virtualobserver.moe/)
 */
-
 // The values in this section are REQUIRED for the widget to work! Keep them in quotes!
 const s_stylePath = '/comment-widget-pink.css';
 const s_formId = '1FAIpQLSez7ykQ2-7ISNlbuYfeDR00LOo2rKa1xUKuQXe04rUPDEduDg';
@@ -24,6 +23,7 @@ const s_websiteId = '1302336403';
 const s_textId = '544822865';
 const s_pageId = '343218975';
 const s_replyId = '951997346';
+const s_moderatedId = '1485087725';
 const s_sheetId = '1LyESQ4nXu5Uaz7bg9QbK_nxpbA50YNWb-3QIQeBE1Ss';
 
 // The values below are necessary for accurate timestamps, I've filled it in with EST as an example
@@ -107,6 +107,7 @@ const v_formHtml = `
     <div id="c_textWrapper" class="c-inputWrapper">
         <label class="c-label c-textLabel" for="entry.${s_textId}">${s_textFieldLabel}</label>
         <textarea class="c-input c-textInput" name="entry.${s_textId}" id="entry.${s_textId}" rows="4" cols="50"  maxlength="${s_maxLength}" required></textarea>
+        <input name="entry.${s_moderatedId}" id="entry.${s_moderatedId}" type="hidden" readonly value="false">
     </div>
 
     <input id="c_submitButton" name="c_submitButton" type="submit" value="${s_submitButtonLabel}" disabled>
@@ -376,6 +377,9 @@ function createComment(data) {
     if (s_wordFilterOn) {filteredName = filteredName.replace(v_filteredWords, s_filterReplacement)}
     name.innerText = filteredName;
     name.className = 'c-name';
+    if(data.Moderated == false) {
+        name.innerText = 'Guest'; // Change 'Guest' to whatever you want
+    }
     comment.appendChild(name);
 
     // Timestamp
@@ -390,6 +394,9 @@ function createComment(data) {
         site.innerText = s_websiteText;
         site.href = data.Website;
         site.className = 'c-site';
+        if(data.Moderated == false) {
+            site.innerText = '';
+        }
         site.target='_blank';
         comment.appendChild(site);
     }
@@ -400,6 +407,9 @@ function createComment(data) {
     if (s_wordFilterOn) {filteredText = filteredText.replace(v_filteredWords, s_filterReplacement)}
     text.innerText = filteredText;
     text.className = 'c-text';
+    if(data.Moderated == false) {
+        text.innerText = 'This comment is awaiting moderation'; // Change this value to whatever you want
+    }
     comment.appendChild(text);
     
     return comment;
