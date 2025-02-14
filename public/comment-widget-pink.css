@@ -163,14 +163,13 @@
     color:var(--teal);
 }
 .c-text {
-    margin: 0;
-    margin-top: 10px;
+    margin: 5px 0;
+    text-indent: 25px;
     padding: 0;
 }
 
 /* Pagination */
 #c_pagination {text-align: center;}
-.c-replyButton {margin-top: 10px;}
 .c-expandButton {
     float: right;
     margin-top: 10px;
