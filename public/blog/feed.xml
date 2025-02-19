@@ -7,6 +7,13 @@
   <link href="https://kiwimeowo.neocities.org/">https://kiwimeowo.neocities.org/</link>
   <description>I wonder how many people would follow my blogs using this feed...</description>
   <item>
+    <title>Attempting to recreate GPGP with Javascript</title>
+    <link href="https://kiwimeowo.neocities.org/blog/post/2025-02-19.html">https://kiwimeowo.neocities.org/blog/post/2025-02-19.html</link>
+    <guid>https://kiwimeowo.neocities.org/blog/post/2025-02-19.html</guid>
+    <description>Pain time let&#39;s go</description>
+    <pubDate>Wed, 19 Feb 2025 08:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>It Takes Two to get divorced</title>
     <link href="https://kiwimeowo.neocities.org/blog/post/2025-02-16.html">https://kiwimeowo.neocities.org/blog/post/2025-02-16.html</link>
     <guid>https://kiwimeowo.neocities.org/blog/post/2025-02-16.html</guid>
@@ -138,13 +145,6 @@
     <guid>https://kiwimeowo.neocities.org/blog/post/2025-01-01.html</guid>
     <description>One of young Kiwi&#39;s fixiations</description>
     <pubDate>Wed, 01 Jan 2025 08:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>2024 final day</title>
-    <link href="https://kiwimeowo.neocities.org/blog/post/2024-12-31.html">https://kiwimeowo.neocities.org/blog/post/2024-12-31.html</link>
-    <guid>https://kiwimeowo.neocities.org/blog/post/2024-12-31.html</guid>
-    <description>Rewind, rewind, rewind</description>
-    <pubDate>Tue, 31 Dec 2024 08:00:00 GMT</pubDate>
   </item>
 </channel>
 </rss>
