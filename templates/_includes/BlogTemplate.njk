@@ -4,26 +4,26 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KiwiMeowo - {{ title }}</title>
-    <link rel="icon" type="image/x-icon" href="../../favicon.ico?">
-    <link href="../../style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="../blog.css" rel="stylesheet" type="text/css" media="all">
-    <link href="../../style-my-tooltips.css" rel="stylesheet" type="text/css">
-    <link type="text/css" rel="stylesheet" href="../../comment-widget-pink.css">
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico?">
+    <link href="../../../style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../../blog.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../../../style-my-tooltips.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="../../../comment-widget-pink.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-    <script src="../../jquery.style-my-tooltips.js"></script>
+    <script src="../../../jquery.style-my-tooltips.js"></script>
   </head>
  <body><span id="top"></span>
     <div class="quick-nav">
     <div class="navbar">
-      <a href="../../index.html">Home</a>
-      <a href="../index.html">Blog</a>
+      <a href="../../../index.html">Home</a>
+      <a href="../../index.html">Blog</a>
     </div>
   </div>
   <div class="blognav">
   {% set previousPost = collections.blog | getPreviousCollectionItem %}
         {% set nextPost = collections.blog | getNextCollectionItem %}
       {% if previousPost %}<a href="{{ previousPost.url }}">{% endif %}<span>⭠ Previous</span>{% if previousPost %}</a>{% endif %}
-        <a href="../index.html"><span>Return</span></a>
+        <a href="../../index.html"><span>Return</span></a>
         {% if nextPost %}<a href="{{ nextPost.url }}">{% endif %}<span>Next ⭢</span>{% if nextPost %}</a>{% endif %}
   </div>
   <div class="page-wrapper">
@@ -52,10 +52,10 @@
         <hr>
       </div></div>
       <div id="c_widget"></div>
-    <script src="../../comment-widget.js"></script>
+    <script src="../../../comment-widget.js"></script>
     </div>
     </div>
-  <script src="../../e.js"></script>
-  <script src="../../spoiler.js"></script>
+  <script src="../../../e.js"></script>
+  <script src="../../../spoiler.js"></script>
 </body>
 </html>
