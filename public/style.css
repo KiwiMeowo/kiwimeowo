@@ -136,6 +136,10 @@ iframe{
   font-family: "Toppan-Bunkyu-Mincho";
   src: url("Toppan-Bunkyu-Mincho.ttf");
 }
+@font-face {
+  font-family: "CookieRunRegular";
+  src: url("CookieRunRegular.ttf");
+}
 /*Miscellanous custom styling for various elements.*/
 h1, h2, h3 {
   font-weight:600;
