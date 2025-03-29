@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico?">
+    <link href="../../style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="fic.css" rel="stylesheet" type="text/css" media="all">
+  <style>
+  </style>
+  </head>
+ <body>
+  <div class="quick-nav">
+    <div class="navbar">
+      <a href="../../index.html">Home</a>
+      <a href="../index.html">OC</a>
+      <a href="javascript:history.back()">Back</a>
+    </div>
+  </div>
+
+  <div class="page-wrapper">
+    <div class="main2">
+      <div class="box"><div class="tit"><h1>{{ title }}</h1></div><div class="inner">
+        <div class="text">
+          <p class="tags"></p>
+            <p>{{ authornote }}</p>
+        </div>
+        <hr>
+        <p class="date"></p>
+      </div></div>
+      <div class="box"><div class="inner">
+        <p>{{ content | safe}}</p>
+        <hr>
+      </div></div>
+</div>
+</div>
+<script src="GetTagAndDate.js"></script>
+</body>
+</html>
