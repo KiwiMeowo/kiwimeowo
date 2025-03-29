@@ -84,7 +84,7 @@ h2 a, a h2{
 h2 a:hover, h2 a:focus, a h2:hover, a h2:focus{
   color: var(--teal);
   text-decoration-color:var(--teal);
-transition: color 0.5s;
+transition: color 0.5s, text-decoration-color 0.5s;
 }
 
 hr {
