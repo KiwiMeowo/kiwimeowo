@@ -71,7 +71,7 @@ document.getElementById("nextart").addEventListener("click",function(){
   artwork.src="/loading.gif";
       setTimeout(function(){
         artwork.src=art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].src;
-    },100);
+    },200);
   artdesc.innerHTML=art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].title;
   }else{
     this.innerText="Limit!";
