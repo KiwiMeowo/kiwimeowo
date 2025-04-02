@@ -2,13 +2,13 @@ var coll = document.querySelectorAll(".collapsible:not(a)");
 var content = document.getElementsByClassName("content");
 var i;
 for (i = 0; i < content.length; i++){
-var date1 = content[i].getElementsByTagName('hr');
+var endline = content[i].getElementsByTagName('hr');
 const para = document.createElement("center");
 const button = document.createElement("button");
 const node = document.createTextNode("[ close ]");
 button.appendChild(node);
 para.appendChild(button);
-date1[date1.length-1].before(para);
+endline[endline.length-1].before(para);
 button.classList.add("close");
 }
 var close = document.getElementsByClassName("close");
