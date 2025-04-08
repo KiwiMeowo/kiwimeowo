@@ -6,6 +6,7 @@
     <title>My lovely OCs~</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico?">
     <link href="../style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="oc.css" rel="stylesheet" type="text/css" media="all">
     <link href="../style-my-tooltips.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="../jquery.style-my-tooltips.js"></script>
@@ -64,15 +65,42 @@
         <li>The place Bun came from</li>
         </ul>
       </div></div>
-      <div class="box"><div class="tit"><h2>Relationship</h2></div><div class="inner">
-        <p><a href="RS.html">Claire:</a> Close friend (Trust)<br>
-        "No matter what happens to her, she always put her friends first..."</p>
-        <p><a href="RS.html">Solar:</a> Close friend (Trust)<br>
-        "She does not only see her powers as an accessory to boast about, but uses them to protect her loved ones"</p>
-        <p><a href="RS.html">Jaspers:</a> Close friend (Trust)<br>
-        "Beneath his timid nature, there is a heart braver than anyone else"</p>
-        <p><a href="Grey.html">Grey:</a> Close friend (Trust)<br>
-        "A lot of hopes and dreams, but his body is too vulnerable to achieve them"</p>
+      <div class="box"><div class="tit"><h2>Their impressions of...</h2></div><div class="inner">
+        <div class="relChar"><a class="icon" href="RS.html#Claire"><img src="chatprof/Claire.png"></a>
+          <span><h3><a href="RS.html#Claire">Claire:</a></h3>Close friend (Trust)<br>
+            <button onclick="openRel('Claire')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="Claire">
+          <p>"No matter what happens to her, she always put her friends first..."</p>
+        </div>
+
+        <div class="relChar"><a class="icon" href="RS.html#Solar"><img src="chatprof/Solar.png"></a>
+          <span><h3><a href="Solar.html">Solar:</a></h3>Close friend (Trust)<br>
+            <button onclick="openRel('Solar')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="Solar">
+          <p>"She does not only see her powers as an accessory to boast about, but uses them to protect her loved ones"</p>
+        </div>
+
+        <div class="relChar"><a class="icon" href="RS.html#Jaspers"><img src="chatprof/Jaspers.png"></a>
+          <span><h3><a href="RS.html#Jaspers">Jaspers:</a></h3>Close friend (Trust)<br>
+            <button onclick="openRel('Jaspers')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="Jaspers">
+          <p>"Beneath his timid nature, there is a heart braver than anyone else"</p>
+        </div>
+
+        <div class="relChar"><a class="icon" href="Grey.html"><img src="chatprof/Grey.png"></a>
+          <span><h3><a href="Grey.html">Grey:</a></h3>Close friend (Trust)<br>
+            <button onclick="openRel('Grey')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="Grey">
+          <p>"His body is like a glass bottle, not sturdy enough to hold all his hope and dreams"</p>
+        </div>
         </div></div>
     </div>
       <div class="main">
@@ -110,6 +138,7 @@
 </div>
 </div>
 </div>
+<script src="rel.js"></script>
   <script src="../viewer.js"></script>
 </body>
 </html>

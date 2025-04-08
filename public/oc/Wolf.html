@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My lovely OCs~</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico?">
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="oc.css" rel="stylesheet" type="text/css" media="all">
     <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-    <script src="/jquery.style-my-tooltips.js"></script>
+    <script src="../jquery.style-my-tooltips.js"></script>
     <style>
     :root{
         --yellow: #e5fffc;
@@ -57,13 +58,51 @@
         </ul>
         </div>
       </div>
-      <div class="box" style="display:none;"><div class="tit"><h2>Relationship</h2></div><div class="inner">
-        <p><a href="/oc/Lav.html">Lavender:</a> Close friend (Trust)<br>
-        "She may look cold, but she always protects us from danger!"</p>
-        <p><a href="/oc/Grey.html">Grey:</a> Acquaintance<br>
-        "Hmm he feels somewhat familiar..."</p>
-        <p><a href="/oc/Ruth.html">Ruth:</a> Travel Companion (Trust)<br>
-        "When I just met her, I already felt that she's nice!"</p>
+      <div class="box"><div class="tit"><h2>His impressions of...</h2></div><div class="inner">
+        <div class="relChar"><a class="icon" href="Lavender.html"><img src="chatprof/Lavender.png"></a>
+          <span><h3><a href="Lavender.html">Lavender:</a></h3>Travel Companion (Neutral)<br>
+            <button onclick="openRel('Lavender')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="Lavender">
+          <p>"The mystery behind her magic element makes me even more curious about her!"</p>
+        </div>
+        <div class="relChar"><a class="icon" href="Cosmos.html"><img src="chatprof/Cosmos.png"></a>
+          <span><h3><a href="Cosmos.html">Cosmos:</a></h3>Travel Companion (Neutral)<br>
+            <button onclick="openRel('Cosmos')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="Cosmos">
+          <p>"...A cometling?... Not interested."</p>
+        </div>
+        
+        <div class="relChar"><a class="icon" href="Ruth.html"><img src="chatprof/Ruth.png"></a>
+          <span><h3><a href="Ruth.html">Ruth:</a></h3>Travel Companion (Friendly)<br>
+            <button onclick="openRel('Ruth')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="Ruth">
+          <p>"I can see the potential within you, you should become my sidekick!"</p>
+        </div>
+
+        <div class="relChar"><a class="icon" href="Grey.html"><img src="chatprof/Grey.png"></a>
+          <span><h3><a href="Grey.html">Grey:</a></h3>Travel Companion (Friendly)<br>
+            <button onclick="openRel('Grey')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="Grey">
+          <p>"Join me, and I shall make you as powerful as me!"</p>
+        </div>
+        
+        <button onclick="unhideRel(this,'A')" class="secret">???</button>
+        <div class="relChar"><a class="icon"><img src="chatprof/Raven.png"></a>
+          <span><h3><a>Raven:</a></h3>Close friend...? (Wary)<br>
+            <button onclick="openRel('Raven')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="Raven">
+          <p>"I will prove you wrong..."</p>
+        </div>
         </div>
       </div>
     </div>
@@ -99,6 +138,7 @@
       </div></div>
 </div>
 </div>
-  <script src="/viewer.js"></script>
+<script src="rel.js"></script>
+  <script src="../viewer.js"></script>
 </body>
 </html>

@@ -6,6 +6,7 @@
     <title>My lovely OCs~</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico?">
     <link href="../style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="oc.css" rel="stylesheet" type="text/css" media="all">
     <link href="../style-my-tooltips.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="../jquery.style-my-tooltips.js"></script>
@@ -15,24 +16,12 @@
         --teal:#775e8d;
         --lteal:#b856d477;
         --blue:#4e307f;
-        --highlightteal:#e2b4e0;
+        --highlightteal:#ffc1fca3;
       }
     .page-wrapper{
     background: linear-gradient(#6540a46e, #9c56bd6e 100%), url(/fancy1.png)
 }
-.pop{
-  display:none;
-}
     </style>
-    <script>
-    function openRel(BoxName) {
-  var i;
-  var x = document.getElementsByClassName("pop");
-  document.getElementById(BoxName).style.display = "block"; 
-  var close = BoxName + 1;
-  document.getElementById(close).style.display = "none"; 
-}
-    </script>
   </head>
  <body>
   <div class="quick-nav">
@@ -63,17 +52,52 @@
       </ul>
       </div></div>
       <div class="box">
-        <div class="tit"><h2>Relationship</h2></div>
+        <div class="tit"><h2>Her impressions of...</h2></div>
         <div class="inner">
-        <p><a href="/oc/Cosmos.html">Cosmos:</a> Close friends (Trust)<br>
-        "Despite her carefree attitude, she hold potential as a powerful magic user"</p>
-        <p><a href="/oc/Grey.html">Grey:</a> Travel companion (Wary)<br>
-        "A knowledge-seeking but reckless individual..."</p>
-        <p><a href="/oc/Ruth.html">Ruth:</a> Travel Companion (Neutral)<br>
-        "She is a bit uncautious around people, even strangers."</p>
-        <p><button onclick="openRel('A')" id="A1" class="secret">???</button></p>
-        <p class="pop" id="A"><a href="Mira.html">Mira:</a> Close friend..? (???)<br>
-        "...I'm sorry..."</p>
+        <div class="relChar"><a class="icon" href="Cosmos.html"><img src="chatprof/Cosmos.png"></a>
+          <span><h3><a href="Cosmos.html">Cosmos:</a></h3>Close friends (Trust)<br>
+            <button onclick="openRel('Cosmos')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="Cosmos">
+          <p>"Despite her carefree attitude, she holds potential as a powerful magic user"</p>
+        </div>
+        <div class="relChar"><a class="icon" href="Grey.html"><img src="chatprof/Grey.png"></a>
+          <span><h3><a href="Grey.html">Grey:</a></h3>Travel companion (Neutral)<br>
+            <button onclick="openRel('Grey')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="Grey">
+          <p>"Despite his young age, he's travelling alone seeking for his long missing companions..."</p>
+        </div>
+
+        <div class="relChar"><a class="icon" href="Ruth.html"><img src="chatprof/Ruth.png"></a>
+          <span><h3><a href="Ruth.html">Ruth:</a></h3>Travel Companion (Neutral)<br>
+            <button onclick="openRel('Ruth')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="Ruth">
+          <p>"She is a bit uncautious around people, even strangers."</p>
+        </div>
+
+        <div class="relChar"><a class="icon" href="Wolf.html"><img src="chatprof/Wolf.png"></a>
+          <span><h3><a href="Wolf.html">Wolf:</a></h3>Travel Companion (Wary)<br>
+            <button onclick="openRel('Wolf')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="Wolf">
+          <p>"...This will be difficult"</p>
+        </div>
+
+        <button onclick="unhideRel(this,'A')" class="secret">???</button>
+        <div class="relChar pop" id="A"><a class="icon" href="Mira.html"><img src="chatprof/Mira.png"></a>
+          <span><h3><a href="Mira.html">Mira:</a></h3>Close friend..? (???)<br>
+            <button onclick="openRel('Mira')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="Mira">
+          <p>"...I'm sorry..."</p>
+        </div>
         </div>
       </div>
       <div class="box">
@@ -101,7 +125,7 @@
           </ul>
         <hr>
         <ul>
-          <li>Her design originated from one of my dreams, and her design resemble <a href="/oc/Kyrea.html">another OC of mine</a></li>
+          <li>Her design originated from one of my dreams, and her design resemble <a href="Kyrea.html">another OC of mine</a></li>
           <li>There is another character that appeared with her in my dream, except her design was too bland, I'm still working on her till this day</li>
           </ul>
           <hr>
@@ -125,5 +149,6 @@
 </div>
 </div>
   <script src="../viewer.js"></script>
+  <script src="rel.js"></script>
 </body>
 </html>

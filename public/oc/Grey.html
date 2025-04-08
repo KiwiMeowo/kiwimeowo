@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My lovely OCs~</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico?">
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
+    <link href="../style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="oc.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../style-my-tooltips.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-    <script src="/jquery.style-my-tooltips.js"></script>
+    <script src="../jquery.style-my-tooltips.js"></script>
     <style>
     :root{
       --yellow:#332849;
@@ -21,29 +22,13 @@
     .page-wrapper{
     background: linear-gradient(#3d07236e, #1b22187a 90%), url(/fancy1.png);
     }
-
-  .pop{
-  display:none;
-}
-.Rel:hover{
-  cursor:pointer;
-}
     </style>
-    <script>
-    function openRel(BoxName) {
-  var i;
-  var x = document.getElementsByClassName("pop");
-  document.getElementById(BoxName).style.display = "block"; 
-  var close = BoxName + 1;
-  document.getElementById(close).style.display = "none"; 
-}
-    </script>
   </head>
  <body>
   <div class="quick-nav">
     <div class="navbar">
       <a href="/index.html">Home</a>
-      <a href="/oc.html">OCs</a>
+      <a href="index.html">OCs</a>
     </div>
   </div>
   <div class="page-wrapper">
@@ -68,22 +53,79 @@
       <li>Feeling left behind</li>
       </ul>
       </div></div>
-      <div class="box"><div class="tit"><h2>Relationship</h2></div><div class="inner">
-      <p><a href="/oc/Lavender.html">Lavender:</a> Travel companion (Friendly)<br>
-      "She is quite skillful in magic, I should learn from her."</p>
-      <p><a href="/oc/Cosmos.html">Cosmos:</a> Travel companion (Wary)<br>
-      "Sorry... Can you stay a bit further away from me?"</p>
-      <p><a href="/oc/Ruth.html">Ruth:</a> Travel companion (Neutral)<br>
-      "...She seems curious about my necklace."</p>
-      <p><a href="/oc/missing.html#claire">Claire:</a> Mentor (Trust)<br>
-      "I wish I could've help her more..."</p>
-      <p><a href="/oc/missing.html#solar">Solar:</a> Close Friend (Trust)<br>
-      "She was very kind, even if it didn't seem like it"</p>
-      <p><a href="/oc/missing.html#jaspers">Jaspers:</a> Close Friend (Trust)<br>
-      "He wasn't actually a bad person."</p>
-      <p><button onclick="openRel('A')" id="A1" class="secret">???</button></p>
-        <p class="pop" id="A"><a href="Bun.html">Bun:</a> Friend (Trust)<br>
-        "I didn't have much time to get to know them, but they are very caring towards their friends"</p>
+      <div class="box"><div class="tit"><h2>His impressions of...</h2></div><div class="inner">
+        <div class="relChar"><a class="icon" href="Lavender.html"><img src="chatprof/Lavender.png"></a>
+          <span><h3><a href="Lavender.html">Lavender:</a></h3>Travel companion (Friendly)<br>
+            <button onclick="openRel('Lavender')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="Lavender">
+          <p>"She is quite skillful in magic, I should learn from her."</p>
+        </div>
+
+      <div class="relChar"><a class="icon" href="Cosmos.html"><img src="chatprof/Cosmos.png"></a>
+        <span><h3><a href="Cosmos.html">Cosmos:</a></h3>Travel companion (Wary)<br>
+          <button onclick="openRel('Cosmos')">open</button>
+        </span>
+      </div>
+      <div class="impression" id="Cosmos">
+        <p>"Sorry... Can you stay a bit further away from me?"</p>
+      </div>
+
+      <div class="relChar"><a class="icon" href="Ruth.html"><img src="chatprof/Ruth.png"></a>
+        <span><h3><a href="Ruth.html">Ruth:</a></h3>Travel companion (Neutral)<br>
+          <button onclick="openRel('Ruth')">open</button>
+        </span>
+      </div>
+      <div class="impression" id="Ruth">
+        <p>"...She seems curious about my necklace."</p>
+      </div>
+
+      <div class="relChar"><a class="icon" href="Wolf.html"><img src="chatprof/Wolf.png"></a>
+        <span><h3><a href="Wolf.html">Wolf:</a></h3>Travel companion (Neutral)<br>
+          <button onclick="openRel('Wolf')">open</button>
+        </span>
+      </div>
+      <div class="impression" id="Wolf">
+        <p>"When he actually takes things seriously, he is very good at being a leader."</p>
+      </div>
+
+      <div class="relChar"><a class="icon" href="RS.html#Claire"><img src="chatprof/Claire.png"></a>
+        <span><h3><a href="RS.html#Claire">Claire:</a></h3>Mentor (Trust)<br>
+          <button onclick="openRel('Claire')">open</button>
+        </span>
+      </div>
+      <div class="impression" id="Claire">
+        <p>"I wish I could've help her more..."</p>
+      </div>
+
+      <div class="relChar"><a class="icon" href="RS.html#Solar"><img src="chatprof/Solar.png"></a>
+        <span><h3><a href="RS.html#Solar">Solar:</a></h3>Close Friend (Trust)<br>
+          <button onclick="openRel('Solar')">open</button>
+        </span>
+      </div>
+      <div class="impression" id="Solar">
+        <p>"She was very kind, even if it didn't seem like it at first"</p>
+      </div>
+
+      <div class="relChar"><a class="icon" href="RS.html#Jaspers"><img src="chatprof/Jaspers.png"></a>
+        <span><h3><a href="RS.html#Jaspers">Jaspers:</a></h3>Close Friend (Trust)<br>
+          <button onclick="openRel('Jaspers')">open</button>
+        </span>
+      </div>
+      <div class="impression" id="Jaspers">
+        <p>"He wasn't actually a bad person."</p>
+      </div>
+
+      <button onclick="unhideRel(this,'A')" class="secret">???</button>
+      <div class="relChar pop" id="A"><a class="icon" href="Bun.html"><img src="chatprof/Bun.png"></a>
+        <span><h3><a href="Bun.html">Bun:</a></h3>Friend (Trust)<br>
+          <button onclick="openRel('Bun')">open</button>
+        </span>
+      </div>
+      <div class="impression" id="Bun">
+        <p>"I didn't have much time to get to know them, but they are very caring towards their friends"</p>
+      </div>
       </div></div>
     </div>
     
@@ -130,6 +172,7 @@
       </div></div>
 </div>
 </div>
-  <script src="/viewer.js"></script>
+<script src="rel.js"></script>
+  <script src="../viewer.js"></script>
 </body>
 </html>

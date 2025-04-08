@@ -6,6 +6,7 @@
     <title>My lovely OCs~</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico?">
     <link href="../style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="oc.css" rel="stylesheet" type="text/css" media="all">
     <link href="../style-my-tooltips.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="../jquery.style-my-tooltips.js"></script>
@@ -64,22 +65,7 @@ body .jasp{
   color: #b08d5c;
   text-decoration-color:#b08d5c;
 }
-.pop{
-  display:none;
-}
-.Rel:hover{
-  cursor:pointer;
-}
     </style>
-    <script>
-    function openRel(BoxName) {
-  var i;
-  var x = document.getElementsByClassName("pop");
-  document.getElementById(BoxName).style.display = "block"; 
-  var close = BoxName + 1;
-  document.getElementById(close).style.display = "none"; 
-}
-    </script>
   </head>
  <body><span id="top"></span>
   <div class="quick-nav">
@@ -94,9 +80,9 @@ body .jasp{
   <div class="page-wrapper">
   <span class="claire">
       <div class="box"><div class="tit"><h1>The Missing Travellers</h1></div><div class="inner">
-        <center><i>" Three prodigious members of a drama club called <u> Reach for the Stars</u> left their community,<u> the Luminescence</u>, and never returned. According to <a href="/oc/Grey.html">the member who left behind</a>, they had travelled to the deadly Voided Lands. Despite great efforts, it seemed they already had went too deep into the area, and rescue was impossible. Years had gone by, and the team was assumed dead. However, this was not the end of the story. "</i></center>
+        <center><i>" Three prodigious members of a drama club called <u> Reach for the Stars</u> left their community,<u> the Luminescence</u>, and never returned. According to <a href="Grey.html">the member who left behind</a>, they had travelled to the deadly Voided Lands. Despite great efforts, it seemed they already had went too deep into the area, and rescue was impossible. Years had gone by, and the team was assumed dead. However, this was not the end of the story. "</i></center>
       </div></div>
-      <span id="claire"></span>
+      <span id="Claire"></span>
       <div class="e">
     <div class="sidebar">
       <div class="box"><div class="inner">
@@ -118,16 +104,43 @@ body .jasp{
         <li>Teachers</li>
         </ul>
       </div></div>
-      <div class="box"><div class="tit"><h2>Relationship</h2></div><div class="inner">
-        <p><a href="#solar">Solar:</a> Close friend (Trust)<br>
-        "She doesn't have to be perfect all the time..."</p>
-        <p><a href="#jaspers">Jaspers:</a> Close friend (Trust)<br>
-        "People always mistake him as a scary person, but he is actually quite shy!"</p>
-        <p><a href="Grey.html">Grey:</a> Close friend (Trust)<br>
-        "I wish he can stay well and healthy..."</p>
-        <p><button onclick="openRel('A')" id="A1" class="secret">???</button></p>
-        <p class="pop" id="A"><a href="Bun.html">Bun:</a> Close friend (Trust)<br>
-        "I'm amazed how far they can plan ahead!"</p>
+      <div class="box"><div class="tit"><h2>Her impressions of...</h2></div><div class="inner">
+        <div class="relChar"><a class="icon" href="#Solar"><img src="chatprof/Solar.png"></a>
+          <span><h3><a href="#Solar">Solar:</a></h3>Close friend (Trust)<br>
+            <button onclick="openRel('ClaireSolar')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="ClaireSolar">
+          <p>"Despite what she might think, not matter what she becomes, she's always loved."</p>
+        </div>
+
+        <div class="relChar"><a class="icon" href="#Jaspers"><img src="chatprof/Jaspers.png"></a>
+          <span><h3><a href="#Jaspers">Jaspers:</a></h3>Close friend (Trust)<br>
+            <button onclick="openRel('ClaireJaspers')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="ClaireJaspers">
+          <p>"People always mistake him as a scary person, but he is actually quite shy!"</p>
+        </div>
+
+        <div class="relChar"><a class="icon" href="Grey.html"><img src="chatprof/Grey.png"></a>
+          <span><h3><a href="Grey.html">Grey:</a></h3>Close friend (Trust)<br>
+            <button onclick="openRel('ClaireGrey')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="ClaireGrey">
+          <p>"I wish he can stay well and healthy..."</p>
+        </div>
+
+        <button onclick="unhideRel(this,'A')" class="secret">???</button>
+        <div class="relChar pop" id="A"><a class="icon" href="Bun.html"><img src="chatprof/Bun.png"></a>
+          <span><h3><a href="Bun.html">Bun:</a></h3>Close friend (Trust)<br>
+            <button onclick="openRel('ClaireBun')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="ClaireBun">
+          <p>"I'm amazed how far they can plan ahead!"</p>
+        </div>
         </div></div>
     </div>
     <div class="main">
@@ -168,7 +181,7 @@ body .jasp{
       </div></div>
       </div>
       </span>
-      <span id="solar"></span>
+      <span id="Solar"></span>
       <div class="solar">
       <div class="sidebar">
       <div class="box"><div class="inner">
@@ -189,16 +202,43 @@ body .jasp{
         <li>Being underestimated</li>
         </ul>
       </div></div>
-      <div class="box"><div class="tit"><h2>Relationship</h2></div><div class="inner">
-        <p><a href="#claire">Claire:</a> Close friend (Trust)<br>
-        "Not sure why but she keeps following me around!"</p>
-        <p><a href="#jaspers">Jaspers:</a> Rival (Trust)<br>
-        "One day I will beat him fair and square!"</p>
-        <p><a href="/oc/Grey.html">Grey:</a> Close friend (Friendly)<br>
-        "He does not understand my brilliance, oh well, he's just a kid"</p>
-        <p><button onclick="openRel('B')" id="B1" class="secret">???</button></p>
-        <p class="pop" id="B"><a href="Bun.html">Bun:</a> Close friend (Trust)<br>
-        "They seem to nag a lot... but I had to admit they are very smart!"</p>
+      <div class="box"><div class="tit"><h2>Her impressions of...</h2></div><div class="inner">
+        <div class="relChar"><a class="icon" href="Claire.html"><img src="chatprof/Claire.png"></a>
+          <span><h3><a href="Claire.html">Claire:</a></h3>Close friend (Trust)<br>
+            <button onclick="openRel('SolarClaire')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="SolarClaire">
+          <p>"She always stay with me no matter what happens!</p>
+        </div>
+
+        <div class="relChar"><a class="icon" href="Jaspers.html"><img src="chatprof/Jaspers.png"></a>
+          <span><h3><a href="Jaspers.html">Jaspers:</a></h3>Rival (Trust)<br>
+            <button onclick="openRel('SolarJaspers')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="SolarJaspers">
+          <p>"One day I will beat him fair and square!"</p>
+        </div>
+
+        <div class="relChar"><a class="icon" href="Grey.html"><img src="chatprof/Grey.png"></a>
+          <span><h3><a href="Grey.html">Grey:</a></h3>Close friend (Trust)<br>
+            <button onclick="openRel('SolarGrey')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="SolarGrey">
+          <p>"He does not understand my brilliance, oh well, he's just a kid!"</p>
+        </div>
+
+        <button onclick="unhideRel(this,'B')" class="secret">???</button>
+        <div class="relChar pop" id="B"><a class="icon" href="Bun.html"><img src="chatprof/Bun.png"></a>
+          <span><h3><a href="Bun.html">Bun:</a></h3>Close friend (Trust)<br>
+            <button onclick="openRel('ClaireBun')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="ClaireBun">
+          <p>"They seem to nag a lot... but I had to admit they are very smart!"</p>
+        </div>
         </div></div>
     </div>
       <div class="main">
@@ -238,7 +278,7 @@ body .jasp{
           </div>
       </div></div></div>
       </div>
-      <span id="jaspers"></span>
+      <span id="Jaspers"></span>
       <div class="jasp">
       <div class="sidebar">
       <div class="box"><div class="inner">
@@ -260,16 +300,43 @@ body .jasp{
         <li>Confrontation</li>
         </ul>
       </div></div>
-      <div class="box"><div class="tit"><h2>Relationship</h2></div><div class="inner">
-        <p><a href="#claire">Claire:</a> Close friend (Trust)<br>
-        "She always comes looking for me when I'm lonely..."</p>
-        <p><a href="#solar">Solar:</a> Close friend (Trust)<br>
-        "As frustrating as she can be, I wish I'm a bit more like her"</p>
-        <p><a href="/oc/Grey.html">Grey:</a> Close friend (Trust)<br>
-        "He's somehow not that scared of me"</p>
-        <p><button onclick="openRel('C')" id="C1" class="secret">???</button></p>
-        <p class="pop" id="C"><a href="Bun.html">Bun:</a> Friend..? (Wary)<br>
-        "Is it just me, or are they hiding something from us?"</p>
+      <div class="box"><div class="tit"><h2>His impressions of...</h2></div><div class="inner">
+        <div class="relChar"><a class="icon" href="Claire.html"><img src="chatprof/Claire.png"></a>
+          <span><h3><a href="Claire.html">Claire:</a></h3>Close friend (Trust)<br>
+            <button onclick="openRel('JaspersClaire')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="JaspersClaire">
+          <p>"She always comes looking for me when I'm lonely..."</p>
+        </div>
+
+        <div class="relChar"><a class="icon" href="Solar.html"><img src="chatprof/Solar.png"></a>
+          <span><h3><a href="Solar.html">Solar:</a></h3>Close friend (Trust)<br>
+            <button onclick="openRel('JaspersSolar')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="JaspersSolar">
+          <p>"She might be quite loud at times, but I wish I'm a bit more like her"</p>
+        </div>
+
+        <div class="relChar"><a class="icon" href="Grey.html"><img src="chatprof/Grey.png"></a>
+          <span><h3><a href="Grey.html">Grey:</a></h3>Close friend (Trust)<br>
+            <button onclick="openRel('JaspersGrey')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="JaspersGrey">
+          <p>"He's somehow not that scared of me"</p>
+        </div>
+
+        <p><button onclick="openRel(this,'C')" class="secret">???</button></p>
+        <div class="relChar pop" id="C"><a class="icon" href="Bun.html"><img src="chatprof/Bun.png"></a>
+          <span><h3><a href="Bun.html">Bun:</a></h3>Friend..? (Wary)<br>
+            <button onclick="openRel('ClaireBun')">open</button>
+          </span>
+        </div>
+        <div class="impression" id="ClaireBun">
+          <p>"Is it just me, or are they hiding something from us?"</p>
+        </div>
         </div></div>
     </div>
       <div class="main">
@@ -314,5 +381,6 @@ body .jasp{
 <center><p class="outboxtext"><a href="Bun.html">???</a></p></center>
 </div>
   <script src="../viewer.js"></script>
+  <script src="rel.js"></script>
 </body>
 </html>
