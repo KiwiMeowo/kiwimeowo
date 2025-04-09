@@ -74,6 +74,82 @@ h3 a{
 .impression.impressactive{
   max-height:500px;
 }
+
+#playlist.box{
+  border-radius: 0;
+  background:linear-gradient(var(--yellow),#a8b8c3 150%);
+  box-shadow: 4px 4px 4px 2px var(--shadow);
+  border-radius: 2.5px;
+}
+
+#playlist .tit{
+  border-bottom: 1px solid var(--lteal);
+  background: linear-gradient(var(--yellow),#a8b8c3 150%);
+}
+
+#playlist .tit h2{
+  text-shadow: 1px 1px var(--lteal);
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+}
+#playlist .tit h2:before{
+  content:"♫ ";
+}
+#playlist .tit h2:after{
+  content:" ♬";
+}
+#playlist .song{
+  margin: 10px 20px;
+  border: 1px solid;
+  border-radius: 5px;
+  background: black;
+  --teal: white;
+    color: white;
+}
+#playlist li {
+  filter: drop-shadow(3px 3px 5px var(--highlightteal)) drop-shadow(-3px -3px 5px var(--highlightteal));
+  border-bottom: 1px solid white;
+  padding:5px 0;
+}
+#playlist li:first-child:after{
+  content: "♪";
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: note;
+    display: inline-block;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    scale:1.1;
+}
+
+#playbuttons{
+  display:flex;
+  margin:10px 20px;
+}
+#playbuttons button {
+  max-width: 33.333%;
+  flex: 0 0 33.333%;
+  border:1.5px solid;
+  border-radius: 2.5px;
+  background: linear-gradient(var(--yellow),#a8b8c3 150%);
+  cursor:pointer;
+  filter: var(--dropshadow);
+  padding:2.5px 0;
+}
+#playbuttons button:hover {
+  filter: brightness(0.9) saturate(1.2) var(--dropshadowdown);
+  translate: 1px 1px;
+}
+@keyframes note{
+  0%{
+    translate: 0 2px;
+  }
+  100%{
+    translate:0 -2px;
+  }
+}
 .relChar.pop{
   display:none;
 }
