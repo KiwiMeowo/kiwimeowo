@@ -19,16 +19,29 @@
 .relChar h3{
   margin:5px auto;
 }
-a.icon{
+.relChar div{
   background: linear-gradient(var(--teal), var(--blue));
   padding:5px;
 }
-.relChar img{
-  margin:0;
-  image-rendering: pixelated;
+a.icon {
   background: var(--yellow);
+  display: block;
+  border-radius: 5px;
+  transition:filter 0.5s;
+}
+
+a.icon:hover {
+    filter: brightness(1.1) saturate(1.2);
+}
+
+a.icon img{
+  image-rendering: pixelated;
   height:64px;
   width:64px;
+  transition: scale 0.5s;
+}
+a.icon:hover img{
+    scale:1.2;
 }
 h3 a{
   color:var(--blue);
