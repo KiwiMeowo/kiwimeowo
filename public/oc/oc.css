@@ -123,7 +123,9 @@ h3 a{
     animation-timing-function: ease-in-out;
     scale:1.1;
 }
-
+#playlist a:hover {
+  color: var(--lteal);
+}
 #playbuttons{
   display:flex;
   margin:10px 20px;
