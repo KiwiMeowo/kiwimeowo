@@ -20,7 +20,7 @@
   margin:5px auto;
 }
 a.icon{
-  background:var(--teal);
+  background: linear-gradient(var(--teal), var(--blue));
   padding:5px;
 }
 .relChar img{
