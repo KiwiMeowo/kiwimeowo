@@ -21,6 +21,7 @@ var createwindow=document.createElement('div');
       setTimeout(function(){
         artwork.src=art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].src;
     },100);
+    artwork.setAttribute("alt", this.getElementsByTagName("img")[0].getAttribute("alt"));
     artdesc.innerHTML=this.getElementsByTagName("img")[0].title;
       artwindow.style.transform="translateY(0)";
       artwindow.style.opacity="1";
@@ -48,6 +49,7 @@ document.getElementById("prevart").addEventListener("click",function(){
       setTimeout(function(){
         artwork.src=art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].src;
     },100);
+    artwork.setAttribute("alt", art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].getAttribute("alt"));
   artdesc.innerHTML=art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].title;
   } else{
     this.innerText="Limit!";
@@ -72,6 +74,7 @@ document.getElementById("nextart").addEventListener("click",function(){
       setTimeout(function(){
         artwork.src=art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].src;
     },200);
+    artwork.setAttribute("alt", art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].getAttribute("alt"));
   artdesc.innerHTML=art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].title;
   }else{
     this.innerText="Limit!";

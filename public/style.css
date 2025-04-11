@@ -407,6 +407,8 @@ button.navcoll.act{
   display: block;
   position:relative;
   margin:auto;
+  text-wrap: auto;
+  text-align: left;
   }
 
 img::before {
