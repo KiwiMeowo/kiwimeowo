@@ -28,7 +28,7 @@
         background:linear-gradient(var(--yellow),#a8b8c3 150%);
     }
     .inner{
-        height:482px;
+      height: calc(100% - 138px);
         margin: 10px 20px;
   border: 1px solid;
   border-radius: 5px;
@@ -50,7 +50,7 @@
     li.fav{
         list-style:"- ♥ ";
     }
-    h2,p,li, .inner button, h3,a{
+    h2,p,li, .inner button, h3,.inner a{
         --teal:white;
         text-shadow: 0px 0px 3px #83cbff, 0px 0px 5px var(--lteal);
     }
@@ -287,7 +287,6 @@
 </div>
 </div>
 <script>
-    document.getElementById('menu').getElementsByTagName('button')[0].focus();
     function playlist(playlist){
         var menus = document.getElementsByClassName('text')
         for (x=0;x<menus.length;x++){
