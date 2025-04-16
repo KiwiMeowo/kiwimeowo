@@ -508,7 +508,7 @@ width: calc(100% - 25vw);
 	.double.page-wrapper{
 	display: block;
 	}
-	.double .sidebar,.double .main, .double .main2, .double .sidebar2{
+	.double .sidebar,.double .main, .double .sidebar2{
     display: block;
     margin: 0 auto;
     position: static;

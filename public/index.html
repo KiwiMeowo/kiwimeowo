@@ -590,6 +590,9 @@ function showSlides() {
       <div class="box"><h1>Update</h1><div class="inner">
         <div style="overflow-x:hidden;overflow-y:auto;height: 225px;border: 7.5px double;border-radius: 5px;padding: 5px 15px;">
         <div class="text">
+          <li>Redesigned <a href="song.html">Song Page</a>, the bottom buttons doesn't do anything for now.</li>
+          <p class="date">( 16 Apr 2025 )</p>
+          <hr>
           <li>A bit more edits on the relchart design</li>
           <li>Gave the OC playlist cool design</li>
           <p class="date">( 9 Apr 2025 )</p>
@@ -720,7 +723,7 @@ function fetchSong() {
   .then((html) => {
     var parser = new DOMParser();
     var doc = parser.parseFromString(html, "text/html");
-    var newsong = doc.querySelector('.songlist li');
+    var newsong = doc.querySelector('#new li');
     document.getElementById("new3").innerHTML = newsong.innerHTML;
     document.getElementById("playbutton").href= newsong.getElementsByTagName("a")[0].href;
   })
