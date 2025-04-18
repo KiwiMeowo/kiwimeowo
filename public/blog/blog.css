@@ -126,6 +126,7 @@ justify-content: space-around;
 }
 .statuscolumn p{
   width: -webkit-fill-available;
+  width:-moz-available;
 }
 }
 .blogcredit{
@@ -137,6 +138,7 @@ justify-content: space-around;
     display: inline-block;
     border-radius: 5px;
     width: -webkit-fill-available;
+    width:-moz-available;
 }
 .blogcredit h2{
   text-shadow: none;

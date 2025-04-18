@@ -352,6 +352,7 @@ button.navcoll.act{
   border-radius: 0px 0px 50px 0px;
   filter: var(--dropshadow);
   width: -webkit-fill-available;
+  width:-moz-available;
   cursor:pointer;
   }
   
@@ -368,6 +369,7 @@ button.navcoll.act{
 .main2 {
   margin: 0 6vw;
   width: -webkit-fill-available;
+  width:-moz-available;
 }
 .main{
 	width: calc(100% - 320px);
@@ -689,6 +691,7 @@ your own title.
   cursor: pointer;
   padding: 10px;
   width: -webkit-fill-available;
+  width:-moz-available;
   text-align: left;
   font-size: 0.98em;
   border-radius: 7.5px;
@@ -963,6 +966,7 @@ img.emote{
   filter: drop-shadow(4px 4px var(--highlightteal));
   margin: 5px;
   width: -webkit-fill-available;
+  width:-moz-available;
   aspect-ratio: 1 / 1;
   display:block;
   overflow:hidden;
