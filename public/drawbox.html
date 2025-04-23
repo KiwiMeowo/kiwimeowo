@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRAWBOX</title>
+    <style>
+        * {box-sizing: border-box;}
+        canvas {
+            border: 1px solid black;
+            cursor: crosshair;
+        }
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .image-container {
+            border: 1px solid #ccc;
+            padding: 5px;
+            max-width: 200px;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>DRAWBOX</h1>
+    <canvas id="drawboxcanvas" width="500" height="500"></canvas>
+    <br>
+    <div onclick="change_color(this)" style="background:red" class="stroke-color"></div>
+    <div onclick="change_color(this)" style="background:blue" class="stroke-color"></div>
+    
+    <button onclick="Restore()">Undo</button>
+    <button onclick="Clear()">Clear</button>
+    
+    <input type="color" oninput="stroke_color = this.value">
+    <input type="range" min="1" max="100" oninput="stroke_width = this.value">
+    
+    <button id="submit">Submit drawing</button>
+    <p id="status"></p>
+
+	
+    <h1>Submitted Drawings ☻</h1>
+    <div id="gallery">Loading images...</div>
+    
+    
+    <script src="drawbox.js"></script>
+
+</body>
+</html>
