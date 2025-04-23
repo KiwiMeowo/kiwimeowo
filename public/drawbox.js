@@ -182,17 +182,21 @@ async function fetchImages() {
 
       if (imgUrl.startsWith("http")) {
         const div = document.createElement("div");
-        div.classList.add("image-container");
+        div.classList.add("flex");
 
         if (columns[2].trim()!="FALSE"){
             div.innerHTML = `
+            <div class="image-container">
                     <img src="${imgUrl}" alt="drawing">
                     <p>${timestamp}</p>
+                    </div>
                 `;
         } else{
             div.innerHTML = `
+            <div class="image-container">
                     <p>Drawing awaiting moderation...</p>
                     <p>${timestamp}</p>
+                    </div>
                 `;
         }
         gallery.appendChild(div);

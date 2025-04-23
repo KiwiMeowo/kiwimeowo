@@ -16,20 +16,38 @@
         #gallery {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+        }
+        .flex{
+            flex:0 0 16.66667%;
         }
         .image-container {
-            border: 1px solid #ccc;
-            padding: 5px;
-            flex: 0 0 20%;
-            text-align: center;
+            padding:5px;
+  text-align: center;
+  background: linear-gradient(var(--highlightteal), #bce3ff36);
+  color: var(--blue);
+  border-radius:5px;
+  filter: var(--dropshadow);
+  margin:5px;
         }
         .image-container img {
             max-width: 100%;
+            aspect-ratio: 1/1;
             height: auto;
             display: block;
         }
-
+        .image-container p{
+            color:var(--blue);
+        }
+        @media(max-width:1200px){
+            .flex{
+                flex:0 0 25%
+            }
+        }
+        @media(max-width:700px){
+            .flex{
+                flex:0 0 50%
+            }
+        }
     </style>
 </head>
 <body>
