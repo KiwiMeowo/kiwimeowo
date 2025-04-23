@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
     <title>DRAWBOX</title>
     <style>
-        * {box-sizing: border-box;}
         canvas {
             border: 1px solid black;
             cursor: crosshair;
+        }
+        .box{
+            position: static;
         }
         #gallery {
             display: flex;
@@ -18,7 +21,7 @@
         .image-container {
             border: 1px solid #ccc;
             padding: 5px;
-            max-width: 200px;
+            flex: 0 0 20%;
             text-align: center;
         }
         .image-container img {
@@ -30,26 +33,34 @@
     </style>
 </head>
 <body>
-    <h1>DRAWBOX</h1>
-    <canvas id="drawboxcanvas" width="500" height="500"></canvas>
-    <br>
-    <div onclick="change_color(this)" style="background:red" class="stroke-color"></div>
-    <div onclick="change_color(this)" style="background:blue" class="stroke-color"></div>
-    
-    <button onclick="Restore()">Undo</button>
-    <button onclick="Clear()">Clear</button>
-    
-    <input type="color" oninput="stroke_color = this.value">
-    <input type="range" min="1" max="100" oninput="stroke_width = this.value">
-    
-    <button id="submit">Submit drawing</button>
-    <p id="status"></p>
-
-	
-    <h1>Submitted Drawings ☻</h1>
-    <div id="gallery">Loading images...</div>
-    
-    
+    <div class="page-wrapper">
+        <div class="main2">
+            <div class="box"><div class="tit"><h1>Have fun drawing!</h1></div>
+      <div class="inner">
+        <center>
+            <canvas id="drawboxcanvas" width="500" height="500"></canvas>
+        <br>
+        <div onclick="change_color(this)" style="background:red" class="stroke-color"></div>
+        <div onclick="change_color(this)" style="background:blue" class="stroke-color"></div>
+        
+        <button onclick="Restore()" class="coolbutton">Undo</button>
+        <button onclick="Clear()" class="coolbutton">Clear</button>
+        
+        <input type="color" oninput="stroke_color = this.value">
+        <input type="range" min="1" max="100" oninput="stroke_width = this.value">
+        
+        <button id="submit" class="coolbutton">Submit</button>
+        <p id="status"></p>
+        </center>
+	      <hr>
+      </div></div>
+      <div class="box"><div class="tit"><h1>Submitted Drawings</h1></div>
+      <div class="inner">
+        <div id="gallery">Loading images...</div>
+	      <hr>
+      </div></div>
+    </div>
+    </div>
     <script src="drawbox.js"></script>
 
 </body>

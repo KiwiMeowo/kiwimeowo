@@ -10,10 +10,11 @@
 				: © ):´;      ¸  {
 				 `·.¸ `·  ¸.·´\`·¸)
 				     `\\´´\¸.·´
-                     
+                     https://docs.google.com/forms/d/e/1FAIpQLSfPu4g7oXeVvwPLdzLtm0rQ7Kj1-3HtB5319l1TFa9sBIN2Lw/viewform?usp=pp_url&entry.912999888=link&entry.715768607=false
 */
 const GOOGLE_FORM_ID = "1FAIpQLSfPu4g7oXeVvwPLdzLtm0rQ7Kj1-3HtB5319l1TFa9sBIN2Lw";
 const ENTRY_ID = "entry.912999888";
+const MOD_ID="entry.715768607"
 const GOOGLE_SHEET_ID = "1_tWK48W5A6pyRInHC-ksJnf12AoB-Ag4RlVldaNQdqk";
 const DISPLAY_IMAGES = true;
 
@@ -139,6 +140,7 @@ document.getElementById("submit").addEventListener("click", async function () {
 
     const googleFormData = new FormData();
     googleFormData.append(ENTRY_ID, imageUrl);
+    googleFormData.append(MOD_ID, "False");
 
     await fetch(GOOGLE_FORM_URL, {
       method: "POST",
@@ -147,7 +149,7 @@ document.getElementById("submit").addEventListener("click", async function () {
     });
 
     statusText.textContent = "Upload successful!";
-    alert("Image uploaded and submitted successfully ☻");
+    alert("Image uploaded and submitted successfully :3");
     location.reload();
   } catch (error) {
     console.error(error);
@@ -182,10 +184,17 @@ async function fetchImages() {
         const div = document.createElement("div");
         div.classList.add("image-container");
 
-        div.innerHTML = `
+        if (columns[2].trim()!="FALSE"){
+            div.innerHTML = `
                     <img src="${imgUrl}" alt="drawing">
                     <p>${timestamp}</p>
                 `;
+        } else{
+            div.innerHTML = `
+                    <p>Drawing awaiting moderation...</p>
+                    <p>${timestamp}</p>
+                `;
+        }
         gallery.appendChild(div);
       }
     });
