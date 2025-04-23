@@ -207,5 +207,13 @@ async function fetchImages() {
     document.getElementById("gallery").textContent = "Failed to load images.";
   }
 }
-
+const colors = document.getElementsByClassName("colorinput");
+for (i = 0; i < colors.length; i++) {
+  colors[i].addEventListener("click", function() {
+    for (e = 0; e < colors.length; e++) {
+      colors[e].classList.remove("color");
+    }
+  this.classList.add("color");
+  })
+  }
 fetchImages();
