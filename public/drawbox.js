@@ -10,7 +10,7 @@
 				: © ):´;      ¸  {
 				 `·.¸ `·  ¸.·´\`·¸)
 				     `\\´´\¸.·´
-        https://docs.google.com/forms/d/e/1FAIpQLSfPu4g7oXeVvwPLdzLtm0rQ7Kj1-3HtB5319l1TFa9sBIN2Lw/viewform?usp=pp_url&entry.912999888=Image+link
+                     
 */
 const GOOGLE_FORM_ID = "1FAIpQLSfPu4g7oXeVvwPLdzLtm0rQ7Kj1-3HtB5319l1TFa9sBIN2Lw";
 const ENTRY_ID = "entry.912999888";
