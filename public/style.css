@@ -173,7 +173,7 @@ h1, h2, h3 {
   cursor:grabbing;
 }
 /*Sticky navigation links at the top of the page.*/
-.quick-nav {
+.navbar {
   position:fixed;
   z-index: 99;
   width: 100%;
@@ -183,11 +183,6 @@ h1, h2, h3 {
   top:0;
   font-size: 0.875em;
   }
-  
-.navbar {
-  padding: 1px 25px;
-  }
-  
   .navbar a {
   display: inline-block;
   text-decoration: none;
