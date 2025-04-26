@@ -34,6 +34,7 @@ table{
     border:1px solid grey;
     border-collapse: collapse;
     width: -webkit-fill-available;
+    width:-moz-available;
 }
 #stops{
     margin-bottom: 20px;
