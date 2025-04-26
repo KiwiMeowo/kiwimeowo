@@ -82,13 +82,9 @@ h3 a{
   border-radius: 2.5px;
 }
 
-#playlist .tit{
+#playlist h1{
   border-bottom: 1px solid var(--lteal);
-  background: linear-gradient(var(--yellow),#a8b8c3 150%);
-}
-
-#playlist .tit h2{
-  text-shadow: 1px 1px var(--lteal);
+  background: linear-gradient(var(--yellow),#a8b8c3 150%);text-shadow: 1px 1px var(--lteal);
     text-align: center;
     text-decoration: underline;
     text-underline-offset: 3px;

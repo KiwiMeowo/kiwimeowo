@@ -390,13 +390,12 @@ button.navcoll.act{
   position:relative;
   }
 
-.tit {
-  padding: 5px 20px;
+  .main .box > h1,.main2 .box > h1 {
+  padding: 15px 20px;
   border-bottom: 1.75px dashed var(--lteal);
+  margin:0;
 }
-.tit h1, .tit h2 {
-  margin: 10px 0;
-}
+
 /*Inner content div for boxes. Padding goes here so sidebar headers etc can keep their no-margin look.*/
 .inner {
   padding: 15px 25px;

@@ -1,0 +1,1057 @@
+:root{
+    --yellow:#f3e3b8;
+    --lteal:#8cacac;
+    --highlightteal:#9cc3dfab;
+    --teal:#3f6884;
+    --blue:#2d3758;
+    --dblue:#1b1d4c;
+    --shadow:#1a38748c;
+    --boxdark:#b9907796;
+    --dropshadow:drop-shadow(2px 2px 1px var(--shadow));
+    --dropshadowdown:drop-shadow(1px 1px 1px var(--shadow));
+    --down:1px 1px;
+  }
+  html{
+    font-weight:500;
+    font-family: "Fraunces","Toppan-Bunkyu-Mincho",serif, sans-serif;
+    color: var(--teal);
+    text-decoration-color:var(--teal);
+    scroll-behavior: smooth;
+  }
+  button, input, textarea{
+    font-weight:500;
+    font-family: "Fraunces","Toppan-Bunkyu-Mincho",serif, sans-serif;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background: #626d90;
+    line-height: 145%;
+    font-size: 0.90em;
+    overflow-x: hidden;
+    position:relative;
+    }
+  a, s{
+    text-decoration-thickness: 1.5px;
+  }
+  a,center,p,ol,ul,button{
+    color: var(--teal); 
+  }
+  .secret{
+    text-decoration: none;
+    opacity: 0.5;
+    background:none;
+    border:0;
+    padding:0;
+    line-height:145%;
+  }
+  .secret:hover{
+    cursor:pointer;
+    color:var(--dblue);
+  }
+  p{
+    margin: 0.75em 0;
+  }
+  a{
+    transition: color 0.5s, text-decoration-color 0.5s;
+  }
+  a:hover, a:focus {
+    color: var(--dblue);
+    }
+    center{
+    margin:0.75em 0;
+  }
+  u {
+    color:var(--blue);
+    box-shadow:inset 0 -0.625em 0 0 var(--highlightteal);
+    text-decoration: none;
+    font-weight:600;
+  }
+  a u{
+    text-decoration: underline;
+    text-decoration-color: var(--blue);
+  }
+  a u:hover{
+    color: var(--teal);
+    text-decoration-color: var(--teal);
+    transition: color 0.5s, text-decoration-color 0.5s;
+  }
+  h2 a, a h2{
+    color:var(--blue);
+    text-decoration-color:var(--blue);
+  }
+  
+  h2 a:hover, h2 a:focus, a h2:hover, a h2:focus{
+    color: var(--teal);
+    text-decoration-color:var(--teal);
+  transition: color 0.5s, text-decoration-color 0.5s;
+  }
+  
+  hr {
+    border: 1px dashed var(--lteal);
+    margin: 15px auto;
+  }
+  
+  blockquote {
+      border-left: var(--blue) 3px solid;
+      background: linear-gradient(0.25turn, #9cc3df78, #93c3e633);
+      padding: 0.1px 0.75rem;
+      margin: 0.75em 1.5rem;
+      border-radius: 0 5px 5px 0;
+      filter: var(--dropshadow);
+    }
+    
+    pre{
+      background: var(--blue);
+      color: var(--yellow);
+      padding: 5px 10px;
+      border-radius: 5px;
+      overflow-x: scroll;
+      border: 1px solid var(--blue);
+    }
+    pre::-webkit-scrollbar-thumb {
+      border: 1px solid var(--teal);
+  }
+  figure{
+    margin:0.75em 40px;
+  }
+  ul {
+    list-style: "- ";
+    color:var(--teal);
+  }
+  li, ul p{
+    margin:0.5em 0;
+  }
+  .song li{
+        list-style:"-\00A0";
+      }
+  iframe{
+        border-radius: 7.5px;
+      }
+  @font-face {
+    font-family: "Fraunces";
+    src: url("Fraunces.ttf");
+  }
+  @font-face {
+    font-family: "Toppan-Bunkyu-Mincho";
+    src: url("Toppan-Bunkyu-Mincho.ttf");
+  }
+  @font-face {
+    font-family: "CookieRunRegular";
+    src: url("CookieRunRegular.ttf");
+  }
+  /*Miscellanous custom styling for various elements.*/
+  h1, h2, h3 {
+    font-weight:600;
+    color: var(--blue);
+    text-shadow: 2px 2px var(--lteal);
+    line-height: 1;
+    margin: 12.5px 0px;
+  }
+  h1{
+    font-size: 2em;
+  }
+  h2{
+    font-size: 1.5em;
+  }
+  .text p{
+    text-indent: 25px;
+  }
+  .text center p{
+    text-indent: 0;
+  }
+  .date{
+    text-align: right;
+    font-size: 0.9em;
+    margin: 0.5em 0;
+  }
+  @media(max-width:900px){
+    .draggable{
+      display:none;
+    }
+  }
+  .draggable{
+    cursor:grab;
+    position:absolute;
+    z-index:10;
+  }
+  .draggable:active{
+    cursor:grabbing;
+  }
+  /*Sticky navigation links at the top of the page.*/
+  .quick-nav {
+    position:fixed;
+    z-index: 99;
+    width: 100%;
+    background: rgb(15 14 49 / 50%);
+    text-align: right;
+    color: #fff;  
+    top:0;
+    font-size: 0.875em;
+    }
+    
+  .navbar {
+    padding: 1px 25px;
+    }
+    
+    .navbar a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    margin: 3px 0px;
+    border-right: 1px solid #ffffff78;
+        padding: 2.5px 0;
+    padding-right: 10px;
+    margin-right: 7.5px;
+    filter: var(--dropshadow);
+    }
+    
+  .navbar a:hover, footer a:hover, .navbar a:focus, footer a:focus {
+    color: #bcb9d6;
+    transition: color 0.5s ,text-decoration-color 0.5s;
+    text-decoration-color: #bcb9d6;
+    }
+  
+  button.navcoll {
+      margin: 7.5px 2px;
+      color: var(--blue);
+      background: #ebebffbf;
+      border: 1px solid white;
+      padding: 5px 7.5px;
+      border-radius: 5px;
+      cursor: pointer;
+      filter:var(--dropshadow);
+  }
+  
+  button.navcoll:hover, button.navcoll.act{
+      background: #bcb9d6bf;
+      border-color:#ccc9e3;
+      transition: background 0.5s, border-color 0.5s;
+  }
+  button.navcoll.act{
+    translate:var(--down);
+    filter:var(--dropshadowdown);
+  }
+  .navcoll:after, aside .bar.coll:after{
+    display: inline-block;
+    margin-left: 5px;
+    transition:rotate 0.5s;
+    content:"\25B7";
+  }
+  .open{
+    max-height:0;
+    transition: max-height 0.5s;
+    overflow:hidden;
+  }
+  .open a{
+    cursor:pointer;
+  }
+  .open div:first-child {
+      padding: 7.5px 0px;
+      border-top: solid 1px #ffffff78;
+  }
+  
+  .act.navcoll:after,aside .bar.coll.act:after{
+    rotate:90deg;
+  }
+  
+  /*Header image.*/
+  header {
+    height: 200px;
+    background: linear-gradient(rgba(10,0,10,0.5), #ff8dff3b), url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    }
+  
+  /*Title bar with icon and title/tagline.*/
+  .title {
+    background: linear-gradient(var(--dblue), var(--blue));
+    text-align: right;
+    border: 5px;
+    border-style: outset inset inset outset;
+    border-color: #344b91 var(--dblue) var(--dblue) #344b91;
+    }
+    
+  .title-text, .title-pic {
+    padding:0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+    }
+    
+  /*Contains the text tagline.*/
+  .title-text {
+    width: calc(100% - 220px);
+    line-height: 167%;
+    padding-right: 220px;
+    }
+    
+  .title-text h1 {
+    text-shadow:2px 2px var(--highlightteal);
+    padding:0;
+    font-size: 32px;
+    color: #fff;
+    margin: 0.5em;
+    }
+  
+  /*Contains the profile pic. This can be left out and should still look okay.*/
+  .title-pic {
+    height: 100px;
+    margin-right: 100px;
+    margin-top: -25px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    filter: drop-shadow(3px 3px var(--highlightteal));
+    content: url("cat.png");
+    position: absolute;
+    right: 0;
+    }
+    
+  .prof {
+    margin: 10px auto;
+    height: 140px;
+    aspect-ratio:1/1;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    filter: drop-shadow(4px 4px var(--highlightteal));
+    overflow:hidden;
+    }
+    
+  /*Contains the main content and sidebar.*/
+  main {
+    padding: 50px 50px;
+    margin: 0 auto;
+    background: linear-gradient(#637b8759, #7750c359 150%), url(fancy1.png); /*Gradient makes tiles "fade in".*/
+    min-height:calc(100vh - 100px);
+    display:flex;
+  }
+  
+  /*Contains the sidebar boxes.*/
+  aside {
+    width: 320px;
+    margin: 0;
+    }
+  aside h1, aside h2{
+    font-size: 1.2rem;
+    padding: 10px;
+    margin: auto;
+    border-bottom: 1.75px dashed var(--lteal);
+    text-align: center;
+    }
+    
+    aside .inner{
+      padding: 10px 20px;
+    }
+  
+  .bar {
+    display: block;
+    border: none;
+    text-align: left;
+    font-size: 1em;
+    line-height: 145%;
+    border-left: 3px solid var(--blue);
+    background: linear-gradient(0.25turn, #9cc3df78, #93c3e633);
+    padding: 5px;
+    margin: 10px 0;
+    color: var(--blue);
+    text-decoration: none;
+    border-radius: 0px 0px 50px 0px;
+    filter: var(--dropshadow);
+    width: -webkit-fill-available;
+    width:-moz-available;
+    cursor:pointer;
+    }
+    
+  .bar:hover, .bar:focus{
+    background: linear-gradient(0.25turn, #3654bf54,#3654bf21);
+    border-left: 3px solid var(--dblue);
+    color: var(--dblue);
+    translate: var(--down);
+    filter: var(--dropshadowdown);
+    transition: none;
+    }
+    
+  /*Contains main content boxes.*/
+  .main2 {
+    margin: 0 6vw;
+    width: -webkit-fill-available;
+    width:-moz-available;
+  }
+  section{
+      width: calc(100% - 320px);
+      margin-left:15px;
+  }
+  .double section{
+      width: calc(100% - 640px);
+      margin: 0 15px;
+  }
+    
+  /*Basic container type for subsections of main and sidebar divs*/
+  article{
+    margin-bottom: 15px;
+    box-shadow: 4px 4px 4px 2px var(--shadow), inset 0 50px 50px -20px var(--boxdark),inset 0 -50px 50px -20px var(--boxdark);
+    border-radius: 7.5px;
+    overflow: hidden; /*Force inner divs to conform to rounded corners.*/
+    background:var(--yellow);
+    position:relative;
+    }
+  
+  .tit {
+    padding: 5px 20px;
+    border-bottom: 1.75px dashed var(--lteal);
+  }
+  .tit h1, .tit h2 {
+    margin: 10px 0;
+  }
+  /*Inner content div for boxes. Padding goes here so sidebar headers etc can keep their no-margin look.*/
+  .inner {
+    padding: 15px 25px;
+    }
+    
+  .inner img {
+    max-width: 100%; /*Prevent image overflow.*/
+    height: auto;
+    border-radius: 5px; /*Give images in content rounded corners.*/
+    display: block;
+    position:relative;
+    margin:auto;
+    text-wrap: auto;
+    text-align: left;
+    }
+  
+  img::before {
+    position: absolute;
+    white-space: wrap;
+    display: block;
+  }
+    
+  .outboxtext, .outboxtext a{
+    color: var(--yellow);
+    text-shadow: 3px 3px 2px var(--shadow);
+    font-size: 1.25em;
+    text-decoration-color: var(--yellow);
+  }
+  
+  .outboxtext a:hover{
+    color:#e6a95c;
+    text-decoration-color: #e6a95c;
+    transition: color 0.5s, text-decoration-color 0.5s;
+  }
+  
+  img.button, svg.button{
+    filter: var(--dropshadow);
+    image-rendering: pixelated;
+    border-radius:0;
+  }
+  
+  a img.button:hover,a svg.button:hover {
+      translate: var(--down);
+      filter: var(--dropshadowdown);
+  }
+    
+  /*Footer section.*/
+  footer {
+    background: linear-gradient(180deg, var(--dblue), var(--blue) 125%);
+    color: #fff;
+    padding: 5px 20px;
+    font-size: 0.75em;
+    padding-bottom: 10px;
+    display:flex;
+    }
+    footer p{
+      color:#fff;
+    }
+  
+  footer h2{
+    color: #fff;
+    text-shadow:2px 2px var(--highlightteal);
+    font-size: 2em;
+    margin: 5px 0;
+  }
+  footer ul {
+      padding-left: 15px;
+  }
+  footer a {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: #fff;
+    }
+  
+  /*Individual column of the footer. You can have 3 of these at the current given width.*/
+  .footer-column {
+    margin: 7.5px 10px;
+      display: inline-block;
+      vertical-align: top;
+      border-left: 1px dashed var(--highlightteal);
+      padding: 0px 15px;
+    }
+  
+  
+  /*Adapt to narrower screens.*/
+  @media(max-width: 1200px) {
+    main {
+      padding: 50px 50px;
+      }
+      
+    aside {
+      width: 25vw;
+      }
+      
+    section{
+  width: calc(100% - 25vw);
+      }
+      .double section{
+      width: calc(100% - 50vw);
+      margin: 0 15px;
+      }
+    .title-pic {
+      margin-right: 7vw;
+      }
+      
+    .title-text {
+      padding-right: 200px;
+      }
+    }
+  @media(max-width:1000px) { 
+      main.double{
+      display: block;
+      }
+      .double aside,.double section, .double aside.sidebar2{
+      display: block;
+      margin: 0 auto;
+      position: static;
+      width: 100%;    
+      }
+  }
+  /*Mobile layout.*/
+  @media(max-width:900px) { 
+      main{
+      display: block;
+      }
+    aside, section, .main2{
+      display: block;
+      margin: 0 auto;
+      position: static;
+      width: 100%;    
+      }
+  
+    footer{
+      display:block;
+    }
+  .footer-column{
+    margin: 17.5px 0px;
+  }
+  
+  ul{
+    padding-left:20px;
+  }
+  figure{
+    margin:0.75em 20px;
+  }
+    }
+    
+  /***
+  For really narrow screens which cause the title text to wrap. 
+  You may need to adjust the width at which this kicks in to fit 
+  your own title.
+  ***/
+  @media(max-width: 600px) {
+    .title-text {
+      padding-right: 140px;
+      width: calc(100% - 140px);
+      }
+      
+    .title-text h1 {
+      font-size: 6vw;
+      line-height: 100%;
+      }
+      
+    main {
+      padding: 50px 4vw;
+      }
+      
+    /*For extra narrow screens where the columns would get too skinny.*/
+    .footer-column {
+      display: block;
+      width: calc(100% - 18px);
+      margin: 17.5px 0;
+      }
+    }
+    
+  @media (min-width: 700px){
+  .min img{
+    max-height:500px;
+    }
+  }
+  #window{
+      position: fixed;
+      z-index: -1;
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);
+      background-color: #071738b0;
+      padding:10px;
+      color:white;
+      transform: translateY(-50%);
+            opacity:0;
+      transition:transform 0.5s, opacity 0.5s, z-index 0.5s;
+      top:0;
+  }
+  #artview{
+    display:flex;
+    height:90%;
+  }
+  #artnav{
+    display:flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+      top: 5%;
+      position: relative;
+      margin:0 30px;
+  }
+  #artnav button {
+      font-size: 20px;
+      color: white;
+      cursor: pointer;
+      margin: 10px 0px;
+      display: inline-block;
+      background: transparent;
+      border: 1.5px solid;
+      border-radius: 5px;
+      padding: 2px 6px;
+      transition:color 0.5s, border-color 0.5s;
+  }
+  #prevart,#nextart{
+    height:37px;
+    width:84px;
+  }
+  #artnav button:hover{
+    color:#bcb9d6;
+    border-color:#bcb9d6;
+  }
+  #window img{
+      max-height: 100%;
+      width: 50%;
+      display: block;
+      object-fit: contain;
+      margin:auto 0;
+      background: #9cc3df3d;
+  }
+  #window .text{
+      transform: translateY(-50%);
+      top: calc(50% - 20px);
+      position: relative;
+      height: fit-content;
+      margin:0.75em;
+      max-width:50%;
+    --teal:white;
+    --dblue:#bcb9d6;
+  }
+  @media(max-width:900px){
+    #window #artview{
+    display:block;
+  }
+  #window img{
+      width: 100%;
+      max-height: 60%;
+      margin-left:auto;
+  }
+  #window .text{
+        transform: translateY(0);
+        top: 0;
+                max-width: none;
+  }
+  #artnav{
+    margin:0 10px;
+  }
+  #artnav button{
+    display: block;
+    position: relative;
+  }
+  }
+  .coolbutton{
+      background: linear-gradient(0.25turn, #92bcdb6b, #93c3e633);
+    border: none;
+    border-radius: 0 10px 10px 0;
+    height: 30px;
+    min-width: 60px;
+    color: var(--blue);
+    border-left: 3px solid var(--blue);
+    margin: 0 5px;
+    font-size: initial;
+    padding:2px 7.5px;
+    filter: var(--dropshadow);
+  }
+  .coolbutton:hover{
+    background: linear-gradient(0.25turn, #3654bf54,#3654bf2b);
+    border-left: 3px solid var(--dblue);
+    color: var(--dblue);
+    cursor:pointer;
+    translate: var(--down);
+    filter: var(--dropshadowdown);
+  }
+  
+    /*Collapsable*/
+    .collapsible {
+    background-color: var(--yellow);
+    color: var(--teal); 
+    cursor: pointer;
+    padding: 10px;
+    width: -webkit-fill-available;
+    width:-moz-available;
+    text-align: left;
+    font-size: 0.98em;
+    border-radius: 7.5px;
+    border: 2.5px;
+    border-color: var(--teal);
+    border-style: solid;
+    margin: 2.5px 0px;
+    box-shadow: 2px 2px 2px var(--shadow);
+    position:relative;
+    transition:none;
+    transform-style:preserve-3d;
+    display: inline-block;
+  }
+  a.collapsible{
+    text-decoration: none;
+  }
+  .special.collapsible:hover, .special.collapsible.active{filter:saturate(1.3) brightness(0.8) hue-rotate(5deg);}
+  .special img{position:absolute;z-index:1;filter:var(--dropshadow);}
+  
+  .active, .collapsible:hover, .collapsible:focus {
+    background-color: var(--highlightteal);
+    border-color: var(--dblue);
+    color: var(--dblue);
+  }
+  .active{
+    translate: var(--down);
+    box-shadow: 1px 1px 2px var(--shadow);
+  }
+  .collapsible:after {
+    content: '\002B';
+    color: var(--teal);
+    font-weight: bolder;
+    float: right;
+    margin-left: 5px;
+  }
+  a.collapsible:after {
+    content: "\27A4";
+  }
+  .collapsible:hover::after,.collapsible:focus::after {
+    color: var(--dblue);
+  }
+  
+  .active:after {
+    content: "\2212";
+    color: var(--dblue);
+  }
+  
+  .content {
+    padding: 0 10px;
+    max-height:0;
+    min-height:0;
+    overflow: hidden;
+    transition: min-height 0.5s,max-height 0.5s;
+  }
+  .content img{
+    margin:15px auto;
+  }
+  .close{
+    display:inline-block;
+    color:var(--dblue);
+    border-radius: 7.5px;
+    cursor:pointer;
+    border: 0;
+    padding: 0;
+    filter: var(--dropshadow);
+    background: linear-gradient(135deg, #9cc3df78, #93c3e633);
+  }
+  .close:hover{
+    color:var(--teal);
+  }
+  .blogdate{
+    display:inline-block;
+    text-indent: 0;
+  }
+  /*Blog page spoiler censors*/
+  .spoiler {
+    color:var(--dblue);
+    background-color: var(--dblue);
+    transition: 0.5s ease-in-out;
+    cursor:pointer;
+  }
+  
+  .spoiler:hover{
+    background-color:var(--teal);
+    color:var(--teal);
+  }
+  img.spoiler {
+    filter: blur(20px) contrast(0.4);
+    transition: 0.5s ease-in-out;
+    cursor:pointer;
+  }
+  
+  img.spoiler:hover{
+    filter: blur(20px) contrast(0.5);
+  }
+  .unspoiler{
+    filter: none !important;
+    background-color:var(--highlightteal) !important;
+  }
+  
+  .art{
+    overflow-x: auto;
+    overflow-y: hidden;
+    border: 7.5px double;
+    border-radius: 5px;
+    padding: 5px 10px;
+    white-space: nowrap;
+    color: var(--teal);
+  }
+  
+  .art .artborder{
+    object-fit:cover; 
+    display:inline-block;
+    margin:5px;
+    border: 3px dotted;
+    filter: drop-shadow(4px 4px var(--highlightteal));
+    max-height: 181px;
+    max-width: 181px;
+    vertical-align: middle;
+  }
+  .art img{
+    object-fit:cover;
+    aspect-ratio: 1/1;
+    width:175px;
+    margin:auto;
+  }
+  .yt{
+    aspect-ratio: 16/9;
+    width:100%;
+    max-width: 700px;
+    margin: 0.75em auto;
+    display: block;
+  }
+  
+  img.emote{
+    display:inline-block;
+    height:1em;
+    border-radius: 0px;
+      vertical-align:text-top;
+      margin:0 2px;
+      scale:1.5;
+  }
+  .emoji{
+    text-shadow: -0.8px 0 var(--lteal), 0 0.8px var(--lteal), 0.8px 0 var(--lteal), 0 -0.8px var(--lteal);
+  }
+  /*OC gallery*/
+  .col .prof:hover {
+      translate: 2px 2px;
+      filter: drop-shadow(2px 2px var(--highlightteal));
+  }
+  .col{
+      flex: 0 0 20%;
+      max-width: 20%;
+  }
+  @media (max-width: 1200px){
+      .col{
+      flex: 0 0 25%;
+      max-width: 25%;
+  }
+  }
+  @media (max-width: 1100px){
+      .col{
+      flex: 0 0 33%;
+      max-width: 33%;
+  }
+  }
+  
+  @media (max-width: 800px){
+    .col {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  
+  @media (max-width: 500px){
+      .col .prof {
+      height: 100px;
+      border-width: 5px;
+  }
+  }
+  
+  /*Art gallery stuff, don't ask me, I don't understand what I did as well*/
+  .inner.draw{
+    padding:5px;
+  }
+  .fra{
+      border: 7.5px double var(--teal);
+      width:100%;
+      box-sizing: border-box;
+    border-radius: 7.5px;
+    height:auto;
+    aspect-ratio: 1280 / 652;
+  }
+  .pagenum, .arttop, .fancybar{
+        font-size: x-large;
+      line-height: 1.25;
+      display: block;
+      width: fit-content;
+      margin: 0.75em auto;
+      background: linear-gradient(#228bff3b, #9eccff24);
+      padding: 5px 10px;
+      border-radius: 5px;
+      filter: var(--dropshadow);
+      color: var(--blue);
+  }
+  .fancybar{
+    font-size:large;
+  }
+  .arttop{
+    display:none;
+        margin-bottom: 0.25em;
+  }
+  
+  .pagenum button{
+    text-decoration: underline;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: inherit;
+    margin: 0;
+    color: var(--blue);
+    transition: color 0.5s;
+    padding: 2px 6px;
+  }
+  
+  .arttop a, .fancybar a{
+    margin: 5px;
+    color: var(--blue);
+  }
+  .pagenum button:hover, .arttop a:hover, .fancybar a:hover{
+    color: var(--teal);
+  }
+  .numdivider:after{
+    content:"\00A0\007C\00A0";
+  }
+  .numdivider:nth-last-child(1):after{
+    content:"";
+  }
+  @media(max-width:700px){
+      .pagenum2 {
+      display: block;
+  }
+  .arttop{
+    display:block;
+  }
+  .numdivider:nth-child(12n):after{
+    content:"";
+    display:block;
+  }
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    border: 7.5px double var(--teal);
+    margin: 15px auto;
+    border-radius: 5px;
+  }
+  
+  .draw .row{
+    border:none;
+    margin:0;
+  }
+  
+  .draw .col {
+      flex: 0 0 16.6666666667%;
+      max-width: 16.6666666667%;
+    }
+  
+  .artborder{
+    border: 3px dotted;
+    border-radius: 7.5px;
+    filter: drop-shadow(4px 4px var(--highlightteal));
+    margin: 5px;
+    width: -webkit-fill-available;
+    width:-moz-available;
+    aspect-ratio: 1 / 1;
+    display:block;
+    overflow:hidden;
+    cursor:pointer;
+    padding:0;
+    color: var(--teal);
+    background:transparent;
+  }
+  .artborder:hover, .artborder:focus {
+      color: var(--dblue);
+      transition: color 0.5s, translate 0.1s;
+      translate: 0px -2px;
+      filter: drop-shadow(4px 6px var(--highlightteal));
+  }
+  .artborder img{
+    margin:auto;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+  }
+  .artborder.censor{
+    border-color: #a90000;
+    filter: drop-shadow(4px 4px #ff7272);
+  }
+  .artborder.censor:hover{
+    border-color:#8f0000;
+    filter: drop-shadow(4px 6px #ff7272);
+  }
+  .artborder.censor img, #window img.censor{
+      filter: blur(5px) saturate(50%) contrast(0.5);
+      cursor:pointer;
+  }
+  
+  @media (max-width: 1200px){
+    .draw .col {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+  }
+  
+  @media (max-width: 1000px){
+    .draw .col {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+  }
+  
+  @media (max-width: 800px){
+    .draw .col {
+      flex: 0 0 33%;
+      max-width: 33%;
+    }
+  }
+  @media (max-width: 600px){
+    .draw .col{
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height:10px;
+  }
+   
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: var(--teal);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--yellow); 
+    border-radius: 10px;
+    border: 1px solid;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--blue); 
+  }
+  
