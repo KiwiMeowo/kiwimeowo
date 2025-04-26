@@ -1,0 +1,147 @@
+body{
+    background: rgb(240, 124, 124);
+    margin:0;
+    padding:0;
+}
+h1{
+    color:white;
+    text-align: center;
+    text-shadow: 2px 2px darkred;
+}
+#title{
+    animation-name: title;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    font-size: 3em;
+}
+@keyframes title{
+    0% {
+        rotate: -5deg;
+    }
+    100% {
+        rotate: 5deg;
+    }
+}
+section{
+    margin:10px;
+}
+table{
+    background:white;
+    margin:auto 10px;
+    border-radius: 7.5px;
+    border:1px solid grey;
+    border-collapse: collapse;
+    width: -webkit-fill-available;
+}
+#stops{
+    margin-bottom: 20px;
+}
+tr{
+    border:1px solid grey;
+    background: linear-gradient(white, #f0e5e5);
+}
+td{
+    border:1px solid grey;
+    padding:5px;
+}
+td[onclick*="getStops"]{
+    background: linear-gradient(#ffd8d8, #ff9595);
+}
+td[onclick*="getStops"]:hover{
+    background:linear-gradient(#e8b7b7, #e37690);
+}
+
+td[onclick*="saveStop"],td[onclick*="deleteStop"]{
+    background: linear-gradient(#fffbd8, #ffd895);
+    text-align: center;
+}
+td[onclick*="saveStop"]:hover,td[onclick*="deleteStop"]:hover{
+    background: linear-gradient(#ead9af, #dd916b);
+}
+td[onclick]:hover{
+    cursor:pointer;
+}
+#nav{
+    position:sticky;
+    top:0;
+    background: #00000077;
+    padding:5px 0;
+    color:white;
+}
+#nav button{
+    display:inline-block;
+}
+#refresh{
+    margin:10px auto;
+    display:block;
+    font-size:1.2em;
+    padding:5px 10px;
+    border-radius:7.5px;
+}
+#refresh,#refresh2{
+    background: linear-gradient(#ff9090, #dc1919);
+    border: 1px solid rgb(143, 0, 0);
+    text-shadow: 2px 2px #8a0000;
+    color:white;
+}
+#search{
+    margin:auto;
+    text-align: center;
+    font-size: 1.1em;
+}
+button[onclick*="scroll"],input {
+    font-size: 1.1em;
+}
+.return,#refresh2, button[onclick*="getSaved"]{
+    margin:10px;
+    display:inline-block;
+    font-size:1.2em;
+    padding:5px 10px;
+    border-radius:7.5px;
+}
+.return, button[onclick*="getSaved"]{
+    background: linear-gradient(lightblue, #4499eb);
+    border: 1px solid #0c00a8;
+    text-shadow: 2px 2px #0c00a8;
+    color: white;
+}
+button{
+    filter:drop-shadow(2px 2px 2px rgb(113, 34, 2));
+}
+button:hover, button:active{
+    translate: 1px 1px;
+    filter:brightness(0.5) drop-shadow(1px 1px 2px rgb(113, 34, 2));
+    cursor:pointer;
+}
+.head{
+    text-align: center;
+    width:100%;
+}
+#infocontainer,#savedcontainer{
+    width:100%;
+    position:fixed;
+    top:0;
+    overflow:scroll;
+    width:100%;
+    height:100%;
+    background: rgb(255, 201, 189);
+    translate: 100%;
+    opacity: 0;
+    transition: translate 1s, opacity 1s;
+}
+#infocontainer.active, #savedcontainer.active{
+    translate:0;
+    opacity:1;
+}
+#info,#savedinner{
+    width:100%;
+    background:rgb(255, 201, 189);
+    position:absolute;
+    top:0;
+}
+span{
+    color:#4c57a3;
+    margin-left: 10px;
+}

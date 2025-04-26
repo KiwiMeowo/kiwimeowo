@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+ <body>
+  <h1 id="title">Bus Stop Routes</h1>
+  <img src="Bus.jpg" style="width: 100vw;object-fit: cover;object-position: 0 75%;display: block;aspect-ratio: 1440/300;">
+  <div id="nav">
+    <center><button id="refresh" onclick="getRouteInfo()">Refresh</button><button onclick="getSaved()">Saved Routes</button></center>
+    <div id="search"><b>Search: </b><input type="text" id="input"><button onclick="document.getElementById(document.getElementById('input').value.toUpperCase()).scrollIntoView({
+      behavior: 'auto',
+      block: 'center',
+      inline: 'center'
+  });">Go</button></div>
+  </div>
+    <section>
+        <table id="route"></table>
+    </section>
+    <div id="savedcontainer">
+      <div id="savedinner">
+          <div class="head">
+              <h1>Your Saved Routes</h1>
+          <button class="return" onclick="Return('savedcontainer')">Return</button>
+          <button class="return" onclick="ClearAll()">Clear All</button>
+          </div>
+          <table id="saved"></table>
+      </div>
+  </div>
+    <div id="infocontainer">
+        <div id="info">
+            <div class="head">
+                <h1>Stops</h1>
+            <button class="return" onclick="Return('infocontainer')">Return</button><button id="refresh2">Refresh</button>
+            </div>
+            <table id="stops"></table>
+        </div>
+    </div>
+  <script src="app.js"></script>
+</body>
+</html>
