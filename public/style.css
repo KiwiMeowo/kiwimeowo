@@ -5,6 +5,7 @@
   --teal:#3f6884;
   --blue:#2d3758;
   --dblue:#1b1d4c;
+  --bg:#637b8759, #7750c359 150%;
   --shadow:#1a38748c;
   --boxdark:#b9907796;
   --dropshadow:drop-shadow(2px 2px 1px var(--shadow));
@@ -310,7 +311,7 @@ button.navcoll.act{
 .page-wrapper {
   padding: 50px 50px;
   margin: 0 auto;
-  background: linear-gradient(#637b8759, #7750c359 150%), url(fancy1.png); /*Gradient makes tiles "fade in".*/
+  background: linear-gradient(var(--bg)), url(fancy1.png); /*Gradient makes tiles "fade in".*/
   min-height:calc(100vh - 100px);
   display:flex;
 }
