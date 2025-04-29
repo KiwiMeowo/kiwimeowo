@@ -140,7 +140,7 @@ document.getElementById("submit").addEventListener("click", async function () {
 
     const googleFormData = new FormData();
     googleFormData.append(ENTRY_ID, imageUrl);
-    googleFormData.append(MOD_ID, "False");
+    googleFormData.append(MOD_ID, "TRUE");
 
     await fetch(GOOGLE_FORM_URL, {
       method: "POST",
