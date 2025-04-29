@@ -297,16 +297,6 @@ button.navcoll.act{
   right: 0;
   }
   
-.prof {
-  margin: 10px auto;
-  height: 140px;
-  aspect-ratio:1/1;
-  border: 6px solid #fff;
-  border-radius: 50%;
-  filter: drop-shadow(4px 4px var(--highlightteal));
-  overflow:hidden;
-  }
-  
 /*Contains the main content and sidebar.*/
 .page-wrapper {
   padding: 50px 50px;
@@ -833,6 +823,18 @@ img.emote{
   text-shadow: -0.8px 0 var(--lteal), 0 0.8px var(--lteal), 0.8px 0 var(--lteal), 0 -0.8px var(--lteal);
 }
 /*OC gallery*/
+.prof {
+  margin: 10px auto;
+  height: 140px;
+  aspect-ratio:1/1;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  filter: drop-shadow(4px 4px var(--highlightteal));
+  }
+.prof img{
+  border-radius: 50%;
+}
+
 .col .prof:hover {
     translate: 2px 2px;
     filter: drop-shadow(2px 2px var(--highlightteal));
