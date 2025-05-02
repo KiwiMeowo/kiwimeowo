@@ -75,7 +75,7 @@ h3 a{
   max-height:500px;
 }
 
-#playlist.box{
+#playlistarticle{
   border-radius: 0;
   background:linear-gradient(var(--yellow),#a8b8c3 150%);
   box-shadow: 4px 4px 4px 2px var(--shadow);
