@@ -13,11 +13,11 @@
     <script src="../jquery.style-my-tooltips.js"></script>
   </head>
  <body class="simple">
-    <div class="navbar">
+    <nav>
       <a href="../index.html">Home</a>
       <a href="index.html">Blog</a>
       <a href="blogmap.html">Blog Map</a>
-  </div>
+  </nav>
     <div class="inner min blog">
     {% for post in collections.twentyfivea | reverse %}
         <a href="{{ post.url }}" target="_blank" class="collapsible{% if post.data.style or post.data.deco %} special{% endif %}" title="{{ post.data.filter }}" {% if post.data.style %}style="{{ post.data.style }}"{% endif %}>{{ post.data.title }} <span class="blogdate">( {{ post.data.date | datestring }} )</span>{{ post.data.deco | safe }}</a>

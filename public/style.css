@@ -174,7 +174,7 @@ h1, h2, h3 {
   cursor:grabbing;
 }
 /*Sticky navigation links at the top of the page.*/
-.navbar {
+nav {
   position:fixed;
   z-index: 99;
   width: 100%;
@@ -184,7 +184,7 @@ h1, h2, h3 {
   top:0;
   font-size: 0.875em;
   }
-  .navbar a {
+  nav a {
   display: inline-block;
   text-decoration: none;
   color: #fff;
@@ -196,7 +196,7 @@ h1, h2, h3 {
   filter: var(--dropshadow);
   }
   
-.navbar a:hover, footer a:hover, .navbar a:focus, footer a:focus {
+nav a:hover, footer a:hover, nav a:focus, footer a:focus {
   color: #bcb9d6;
   transition: color 0.5s ,text-decoration-color 0.5s;
   text-decoration-color: #bcb9d6;
@@ -222,7 +222,7 @@ button.navcoll.act{
   translate:var(--down);
   filter:var(--dropshadowdown);
 }
-.navcoll:after, .sidebar .bar.coll:after{
+.navcoll:after, aside .bar.coll:after{
   display: inline-block;
   margin-left: 5px;
   transition:rotate 0.5s;
@@ -241,7 +241,7 @@ button.navcoll.act{
     border-top: solid 1px #ffffff78;
 }
 
-.act.navcoll:after,.sidebar .bar.coll.act:after{
+.act.navcoll:after,aside .bar.coll.act:after{
   rotate:90deg;
 }
 
@@ -298,7 +298,7 @@ header {
   }
   
 /*Contains the main content and sidebar.*/
-.page-wrapper {
+main {
   padding: 50px 50px;
   margin: 0 auto;
   background: linear-gradient(var(--bg)), url(fancy1.png); /*Gradient makes tiles "fade in".*/
@@ -307,11 +307,11 @@ header {
 }
 
 /*Contains the sidebar boxes.*/
-.sidebar, .sidebar2 {
+aside{
   width: 320px;
   margin: 0;
   }
-.sidebar h1 ,.sidebar2 h1{
+aside h1{
   font-size: 1.2rem;
   padding: 10px;
   margin: auto;
@@ -319,7 +319,7 @@ header {
   text-align: center;
   }
   
-  .sidebar .inner, .sidebar2 .inner{
+  aside .inner{
     padding: 10px 20px;
   }
 
@@ -468,11 +468,11 @@ footer a {
 
 /*Adapt to narrower screens.*/
 @media(max-width: 1200px) {
-  .page-wrapper {
+  main {
     padding: 50px 50px;
     }
     
-  .sidebar ,.sidebar2{
+  aside{
     width: 25vw;
     }
     
@@ -492,10 +492,10 @@ width: calc(100% - 25vw);
     }
   }
 @media(max-width:1000px) { 
-	.double.page-wrapper{
+	.doublemain{
 	display: block;
 	}
-	.double .sidebar,.double .main, .double .sidebar2{
+	.double aside,.double .main{
     display: block;
     margin: 0 auto;
     position: static;
@@ -504,10 +504,10 @@ width: calc(100% - 25vw);
 }
 /*Mobile layout.*/
 @media(max-width:900px) { 
-	.page-wrapper{
+	main{
 	display: block;
 	}
-  .sidebar, .main, .main2, .sidebar2{
+  aside, .main, .main2{
     display: block;
     margin: 0 auto;
     position: static;
@@ -545,7 +545,7 @@ your own title.
     line-height: 100%;
     }
     
-  .page-wrapper {
+  main {
     padding: 50px 4vw;
     }
     

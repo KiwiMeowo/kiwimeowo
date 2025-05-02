@@ -38,7 +38,7 @@ border-radius:50%;
   z-index:999;
 }
 @keyframes spin {0% {rotate:0deg;}100% {rotate:360deg;}}
-.navbar,.cont{display:none;}
+nav,.cont{display:none;}
 .open div button {display: inline-block;text-decoration: none;color: #fff;margin: 3px 0px;border:none;border-right: 1px solid #ffffff78;padding: 2.5px 0;padding-right: 10px;margin-right: 7.5px;filter: var(--dropshadow);background:none;cursor: pointer;}
 
 .open div button:hover, .open div button:focus{
@@ -49,10 +49,10 @@ border-radius:50%;
 .bar2{margin:9px 0;margin-left: 20px;font-size: 0.9em;padding:4.5px;}
 
 .open2 div{border-bottom: solid 1px #ffffff78;margin: 5px 10px;}
-.sidebar .act{background: linear-gradient(0.25turn, #3654bf54,#3654bf2b);border-left: 3px solid var(--dblue);color: var(--dblue);}
+aside .act{background: linear-gradient(0.25turn, #3654bf54,#3654bf2b);border-left: 3px solid var(--dblue);color: var(--dblue);}
 
 @media(max-width:900px){
-  .navbar{display:block;}
+  nav{display:block;}
   #sidenav{display:none;}
 }
 
@@ -144,7 +144,7 @@ a{cursor:pointer}
    <audio src="https://dl.dropbox.com/scl/fi/jbimaya0xg9y146c76xlq/Cat_idle4.mp3?rlkey=yr9q6kpcgio7s8rufwvir52wf&st=6c4fo32i&raw=1" class="meow"></audio>
    <audio src="https://dl.dropbox.com/scl/fi/fkchvivycn2q1bc90nfov/Cat_purreow1.mp3?rlkey=u9hx979osgiovj02g0umvng2o&st=deuttx6b&raw=1" class="meow"></audio>
    <audio src="https://dl.dropbox.com/scl/fi/87g7u51laastdu1bnr9rb/Cat_purreow2.mp3?rlkey=nb7j45afv8ndyevro6bvalnup&st=4ghzey83&raw=1" class="meow"></audio>
-    <div class="navbar">
+    <nav>
     <a href="/index.html">Home</a>
     <a href="blogmap.html">Full Blog Map</a>
     <button class="navcoll">Blog Options</button>
@@ -169,7 +169,7 @@ a{cursor:pointer}
 		<button onclick="fetchHtml('2023.html');waitold()">2023 Blog</button>
 		</div>
 		</div>
-    </div>
+    </nav>
     <script src="../navcoll.js"></script>
   <header></header>
     <div class="title">
@@ -179,8 +179,8 @@ a{cursor:pointer}
         <div class="title-pic" style="border-color:#F1F2F5;background:#92BDB4;width:100px;" title="Yup she's not here"></div>
     </div>
   
-  <div class="page-wrapper">
-    <div class="sidebar">
+  <main>
+    <aside>
       <div class="box" id="sidenav">
       <h1>Sidebar</h1>
         <div class="inner">
@@ -241,7 +241,7 @@ for (i = 0; i < coll.length; i++) {
         <audio class="myAudio" src="https://dl.dropbox.com/scl/fi/yypvil0u2xick11yauye9/Cat_purr3.mp3?rlkey=f4dk2c6gol98tbrlm4zierpxz&st=bj70fk20&raw=1"></audio>
         </div>
       </div>
-    </div>
+    </aside>
     
     <div class="main">
     
@@ -704,7 +704,7 @@ document.body.onpointermove = event => {
 </script>
       </div>
     </div></div>
-  </div>
+  </main>
   <footer>
     <div class="footer-column">
     <h2>Credits</h2>

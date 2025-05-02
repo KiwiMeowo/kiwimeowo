@@ -7,7 +7,7 @@
     --dblue: #480702;
     --shadow:#4304047a;
 }
-.page-wrapper{
+main{
     background:linear-gradient(#af271ca3, #c52c4385 75%), url(/fancy1.png)
     }
   ::-webkit-scrollbar-track {

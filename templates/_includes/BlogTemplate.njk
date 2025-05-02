@@ -13,10 +13,10 @@
     <script src="../../../jquery.style-my-tooltips.js"></script>
   </head>
  <body>
-    <div class="navbar">
+    <nav>
       <a href="../../../index.html">Home</a>
       <a href="../../index.html">Blog</a>
-  </div>
+  </nav>
   <div class="blognav">
   {% set previousPost = collections.blog | getPreviousCollectionItem %}
         {% set nextPost = collections.blog | getNextCollectionItem %}
@@ -24,7 +24,7 @@
         <a href="../../index.html"><span>Return</span></a>
         {% if nextPost %}<a href="{{ nextPost.url }}">{% endif %}<span>Next ⭢</span>{% if nextPost %}</a>{% endif %}
   </div>
-  <div class="page-wrapper">
+  <main>
     <div class="main2">
       <div class="box"><h1>{{ title | safe }}</h1><div class="inner min">
       <h1>{{ subtitle }}</h1>
@@ -52,7 +52,7 @@
       <div id="c_widget"></div>
     <script src="../../../comment-widget.js"></script>
     </div>
-    </div>
+    </main>
   <script src="../../../spoiler.js"></script>
 </body>
 </html>
