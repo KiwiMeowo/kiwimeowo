@@ -196,7 +196,7 @@ h1, h2, h3 {
   filter: var(--dropshadow);
   }
   
-.navbar a:hover, .footer a:hover, .navbar a:focus, .footer a:focus {
+.navbar a:hover, footer a:hover, .navbar a:focus, footer a:focus {
   color: #bcb9d6;
   transition: color 0.5s ,text-decoration-color 0.5s;
   text-decoration-color: #bcb9d6;
@@ -246,7 +246,7 @@ button.navcoll.act{
 }
 
 /*Header image.*/
-.header {
+header {
   height: 200px;
   background: linear-gradient(rgba(10,0,10,0.5), #ff8dff3b), url(background.jpg);
   background-size: cover;
@@ -429,7 +429,7 @@ a img.button:hover,a svg.button:hover {
 }
   
 /*Footer section.*/
-.footer {
+footer {
   background: linear-gradient(180deg, var(--dblue), var(--blue) 125%);
   color: #fff;
   padding: 5px 20px;
@@ -437,20 +437,20 @@ a img.button:hover,a svg.button:hover {
   padding-bottom: 10px;
   display:flex;
   }
-  .footer p{
+  footer p{
     color:#fff;
   }
 
-.footer h2{
+footer h2{
   color: #fff;
   text-shadow:2px 2px var(--highlightteal);
   font-size: 2em;
   margin: 5px 0;
 }
-.footer ul {
+footer ul {
     padding-left: 15px;
 }
-.footer a {
+footer a {
   color: #fff;
   text-decoration: underline;
   text-decoration-color: #fff;
@@ -514,7 +514,7 @@ width: calc(100% - 25vw);
     width: 100%;    
     }
 
-  .footer{
+  footer{
     display:block;
   }
 .footer-column{
