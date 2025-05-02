@@ -1,3 +1,13 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - blog
+permalink: /blog/{{ tag }}.html
+---
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,8 +29,8 @@
       <a href="blogmap.html">Blog Map</a>
   </nav>
     <div class="inner min blog">
-    {% for post in collections.twentyfivea | reverse %}
-        <a href="{{ post.url }}" target="_blank" class="collapsible{% if post.data.style or post.data.deco %} special{% endif %}" title="{{ post.data.filter }}" {% if post.data.style %}style="{{ post.data.style }}"{% endif %}>{{ post.data.title }} <span class="blogdate">( {{ post.data.date | datestring }} )</span>{{ post.data.deco | safe }}</a>
+    {% for post in collections[ tag ] | reverse %}
+        <a href="{{ post.url }}" target="_blank" class="collapsible{% if post.data.style or post.data.deco %} special{% endif %}" title="{{ post.data.filter }}" {% if post.data.style %}style="{{ post.data.style }}"{% endif %}>{{ post.data.title | safe }} <span class="blogdate">( {{ post.data.date | datestring }} )</span>{{ post.data.deco | safe }}</a>
         {% endfor %}
           </div>
 </body>
