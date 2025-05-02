@@ -1,0 +1,9 @@
+section.wide {
+    margin: 0px auto;
+  }
+  .row{
+    display:none;
+  }
+  .row:first-child{
+    display:flex;
+  }
