@@ -149,6 +149,9 @@ h1, h2, h3 {
   line-height: 1;
   margin: 12.5px 0px;
 }
+h1{
+  font-size: 2em;
+}
 .text p{
   text-indent: 25px;
 }
@@ -352,16 +355,16 @@ aside h1{
   }
   
 /*Contains main content boxes.*/
-.main2 {
+section{
+	width: calc(100% - 320px);
+	margin-left:15px;
+}
+section.wide {
   margin: 0 6vw;
   width: -webkit-fill-available;
   width:-moz-available;
 }
-.main{
-	width: calc(100% - 320px);
-	margin-left:15px;
-}
-.double .main{
+.double section{
     width: calc(100% - 640px);
     margin: 0 15px;
 }
@@ -376,7 +379,7 @@ aside h1{
   position:relative;
   }
 
-  .main .box > h1,.main2 .box > h1 {
+  section .box > h1{
   padding: 15px 20px;
   border-bottom: 1.75px dashed var(--lteal);
   margin:0;
@@ -476,10 +479,10 @@ footer a {
     width: 25vw;
     }
     
-  .main{
+  section{
 width: calc(100% - 25vw);
     }
-    .double .main{
+    section.double{
     width: calc(100% - 50vw);
     margin: 0 15px;
 	}
@@ -495,7 +498,7 @@ width: calc(100% - 25vw);
 	.doublemain{
 	display: block;
 	}
-	.double aside,.double .main{
+	.double aside,.double section{
     display: block;
     margin: 0 auto;
     position: static;
@@ -507,7 +510,7 @@ width: calc(100% - 25vw);
 	main{
 	display: block;
 	}
-  aside, .main, .main2{
+  aside, section{
     display: block;
     margin: 0 auto;
     position: static;

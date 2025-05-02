@@ -25,7 +25,7 @@
         {% if nextPost %}<a href="{{ nextPost.url }}">{% endif %}<span>Next ⭢</span>{% if nextPost %}</a>{% endif %}
   </div>
   <main>
-    <div class="main2">
+    <section class="wide">
       <div class="box"><h1>{{ title | safe }}</h1><div class="inner min">
       <h1>{{ subtitle }}</h1>
       <div class="statusbox">
@@ -51,7 +51,7 @@
       </div></div>
       <div id="c_widget"></div>
     <script src="../../../comment-widget.js"></script>
-    </div>
+    </section>
     </main>
   <script src="../../../spoiler.js"></script>
 </body>
