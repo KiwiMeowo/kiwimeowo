@@ -379,7 +379,7 @@ article{
   position:relative;
   }
 
-  section article > h1{
+  article > h1:not(aside h1){
   padding: 15px 20px;
   border-bottom: 1.75px dashed var(--lteal);
   margin:0;

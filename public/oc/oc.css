@@ -1,11 +1,13 @@
 .relChar{
-  display: flex;
   border-radius: 5px;
   background: linear-gradient(var(--highlightteal), transparent 150%);
   overflow: hidden;
   filter:var(--dropshadow);
   margin:5px 0;
   border: 1px solid;
+}
+.relContain{
+  display:flex;
 }
 .relChar h3{
   margin:12.5px auto;
@@ -19,35 +21,40 @@
 .relChar h3{
   margin:5px auto;
 }
-.relChar div{
+.icon{
   background: linear-gradient(var(--teal), var(--blue));
   padding:5px;
+  border-radius: 5px 0;
 }
-a.icon {
+.icon a {
   background: var(--yellow);
   display: block;
   border-radius: 5px;
   transition:filter 0.5s;
 }
 
-a.icon:hover {
+.icon a:hover {
     filter: brightness(1.1) saturate(1.2);
 }
 
-a.icon img{
+.icon a img{
   image-rendering: pixelated;
   height:64px;
   width:64px;
   transition: scale 0.5s;
 }
-a.icon:hover img{
+.icon a:hover img{
     scale:1.2;
 }
+
 h3 a{
   color:var(--blue);
 }
+
 .relChar button{
-  width:100%;
+  width:-webkit-fill-available;
+  width:-moz-available;
+  margin:2px;
   background: var(--yellow);
   border:1px solid var(--blue);
   color:var(--blue);
@@ -74,7 +81,14 @@ h3 a{
 .impression.impressactive{
   max-height:500px;
 }
+.relChar.pop{
+  display:none;
+}
+.Rel:hover{
+  cursor:pointer;
+}
 
+/*Playlist stuff*/
 #playlist{
   border-radius: 0;
   background:linear-gradient(var(--yellow),#a8b8c3 150%);
@@ -147,10 +161,4 @@ h3 a{
   100%{
     translate:0 -2px;
   }
-}
-.relChar.pop{
-  display:none;
-}
-.Rel:hover{
-  cursor:pointer;
 }
