@@ -1,3 +1,48 @@
+.prof {
+  margin: 10px auto;
+  height: 140px;
+  aspect-ratio:1/1;
+  border: 5px double #fff;
+  border-radius: 15px;
+  filter: drop-shadow(4px 4px var(--highlightteal));
+  }
+.prof img{
+  border-radius: 10px;
+}
+.row{
+  border-width: 5px;
+}
+.col .prof:hover {
+    translate: 2px 2px;
+    filter: drop-shadow(2px 2px var(--highlightteal));
+}
+.col{
+	flex: 0 0 20%;
+    max-width: 20%;
+}
+.col h2{
+  text-align: center;
+}
+@media (max-width: 1200px){
+	.col{
+	flex: 0 0 33%;
+    max-width: 33%;
+}
+}
+
+@media (max-width: 800px){
+  .col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 500px){
+	.col .prof {
+    height: 100px;
+    border-width: 2px;
+}
+}
 .relChar{
   border-radius: 5px;
   background: linear-gradient(var(--highlightteal), transparent 150%);

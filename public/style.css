@@ -152,10 +152,10 @@ h1, h2, h3 {
 h1{
   font-size: 2em;
 }
-.text p{
+.text p, section .inner p{
   text-indent: 25px;
 }
-.text center p{
+.text center p, section .inner center p{
   text-indent: 0;
 }
 .date{
@@ -824,53 +824,6 @@ img.emote{
 }
 .emoji{
   text-shadow: -0.8px 0 var(--lteal), 0 0.8px var(--lteal), 0.8px 0 var(--lteal), 0 -0.8px var(--lteal);
-}
-/*OC gallery*/
-.prof {
-  margin: 10px auto;
-  height: 140px;
-  aspect-ratio:1/1;
-  border: 6px solid #fff;
-  border-radius: 50%;
-  filter: drop-shadow(4px 4px var(--highlightteal));
-  }
-.prof img{
-  border-radius: 50%;
-}
-
-.col .prof:hover {
-    translate: 2px 2px;
-    filter: drop-shadow(2px 2px var(--highlightteal));
-}
-.col{
-	flex: 0 0 20%;
-    max-width: 20%;
-}
-@media (max-width: 1200px){
-	.col{
-	flex: 0 0 25%;
-    max-width: 25%;
-}
-}
-@media (max-width: 1100px){
-	.col{
-	flex: 0 0 33%;
-    max-width: 33%;
-}
-}
-
-@media (max-width: 800px){
-  .col {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-@media (max-width: 500px){
-	.col .prof {
-    height: 100px;
-    border-width: 5px;
-}
 }
 
 /*Art gallery stuff, don't ask me, I don't understand what I did as well*/
