@@ -95,6 +95,7 @@ justify-content: space-around;
   --e: color-mix(in srgb, #55a6ff3b, #9eccff24);
   filter: var(--dropshadow);
   margin:0;
+  text-indent: 0 !important;
 }
 .statusbox p:first-child,.statusbox p:nth-child(2) {
     background: linear-gradient(#55a6ff3b, var(--e));

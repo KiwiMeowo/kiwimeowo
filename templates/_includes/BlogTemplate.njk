@@ -36,9 +36,7 @@
         <p>Random thought: {{ thought | safe }}</p>
         </div>
         <p class="blogtag"><span>Tags: {{ filter }}</span></p>
-        <div class="text">
         {{ content | safe }}
-        </div>
         {% if credit %}
         <div class="blogcredit">
         <h2>Credits/Reference:</h2>

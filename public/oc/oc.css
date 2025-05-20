@@ -1,3 +1,9 @@
+p,i,li{
+  text-shadow: 1px 1px var(--lteal);
+}
+article{
+            border-radius: 2.5px;
+        }
 .prof {
   margin: 10px auto;
   height: 140px;
