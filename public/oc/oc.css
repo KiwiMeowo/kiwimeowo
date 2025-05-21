@@ -1,9 +1,11 @@
 p,i,li{
   text-shadow: 1px 1px var(--lteal);
 }
-article{
-            border-radius: 2.5px;
-        }
+article {
+    border-radius: 1px;
+    outline: 1px solid var(--yellow);
+    border: 3px solid;
+}
 .prof {
   margin: 10px auto;
   height: 140px;
@@ -144,6 +146,8 @@ h3 a{
   background:linear-gradient(var(--yellow),#a8b8c3 150%);
   box-shadow: 4px 4px 4px 2px var(--shadow);
   border-radius: 2.5px;
+  border:0;
+  outline:0;
 }
 
 #playlist h1{
