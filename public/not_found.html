@@ -16,10 +16,70 @@
     }
   }
   body{
-    filter: sepia(0.4) brightness(0.8) contrast(0.9);
+    filter: sepia(0.4) brightness(0.8);
   }
   article{
     rotate:-2deg;
+  }
+  img#bnuuy{
+    max-height:375px;aspect-ratio:1/1;animation-name: spin;animation-duration: 2500ms;animation-iteration-count: infinite;animation-timing-function: linear;margin-left: 0;
+  }
+  #flex{
+    display:flex;
+    align-items: center;
+  }
+  #bubble{
+    background: white;
+    width:250px;
+    margin:20px auto;
+    margin-right: 0;
+    padding:10px;
+    border-radius: 5px;
+    position: relative;
+    filter:var(--dropshadow);
+    height:100px;
+  }
+  #bubble p{
+    position: absolute;
+    top:50%;
+    translate: 0 -50%;
+    margin:0;
+    z-index: 1;
+  }
+  #bubble:before{
+    height: 33px;
+    width: 30px;
+    position: absolute;
+    background: white;
+    content: '';
+    top: 10px;
+    right: -4px;
+    transform: rotate(-225deg) skew(35deg, 10deg);
+    z-index:10;
+    pointer-events: none;
+    z-index: 0;
+  }
+  @media (max-width:700px){
+    #flex{
+      display:block;
+    }
+    #bubble{
+      width:-webkit-fill-available;
+      width:-moz-available;
+      margin-right: auto;
+    }
+    #bubble:before{
+        transform: rotate(-109deg) skew(35deg, 10deg);
+        top: auto;
+        bottom: -13px;
+        right: 54px;
+    }
+    #bubble p{
+      width: calc(100% - 20px);
+    }
+    img#bnuuy{
+      margin-left:auto;
+    }
   }
     </style>
   </head>
@@ -29,9 +89,13 @@
     <section class="wide">
       <article><h1>Oh how did you end up here?</h1>
       <div class="inner">
-        <center><p>Apologies, let me lead you back.</p>
-        <img style="max-height:375px;aspect-ratio:1/1;animation-name: spin;animation-duration: 2500ms;animation-iteration-count: infinite;animation-timing-function: linear;" src="/bnuuy.png">
-        <p class="fancybar">✭ <a href="/index.html">Home</a> | <a href="javascript:history.back()">Back</a> ✭</p></center>
+        <center><p>Apologies, let me lead you back.</p></center>
+        <div id="flex">
+          <div id="bubble">
+            <p>If you found an error, inform me on <a href="https://neocities.org/site/kiwimeowo" target="_blank">Neocities</a>, <a href="mailto:kiwimeow0308@gmail.com">e-mail (kiwimeow0308@gmail.com)</a>, or Discord (@KiwiMeowo)</p>
+            </div>
+          <img id="bnuuy" src="/bnuuy.png"></div>
+        <div class="fancybar">✭ <a href="/index.html">Home</a> | <a href="javascript:history.back()">Back</a> ✭</div>
         <hr>
       </div>
     </article>
