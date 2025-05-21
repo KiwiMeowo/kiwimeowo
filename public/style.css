@@ -940,11 +940,11 @@ img.emote{
   object-fit: cover;
   aspect-ratio: 1 / 1;
 }
-a.artborder{
+a.artborder, .art a.artborder{
   border: 2px dashed #31b700;
   filter: drop-shadow(4px 4px #78d80b6c);
 }
-a.artborder:hover{
+a.artborder:hover, .art a.artborder:hover{
   border-color:green;
   filter: drop-shadow(4px 6px #78d80b6c);
 }
