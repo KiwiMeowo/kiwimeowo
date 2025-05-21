@@ -30,22 +30,33 @@ section.wide{
         animation-delay: 0s;
         animation-name: an;
 }
-.intro{
-border:2px solid var(--blue);
+article{
+  overflow:visible;
+}
+#info{
+border:4px solid var(--blue);
 border-radius:5px;
 margin:0 50px;
-border-collapse:collapse;
+padding:5px 15px;
+background:linear-gradient(var(--highlightteal),#76e0db41);
+min-height:288px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 #photo{
-width:25%;
-outline:2px solid var(--blue);
-background: var(--blue);
-float:left;
-margin-right:10px;
-border-radius:0 0 5px 5px;
-position:relative;
+position: absolute;
+    width: 150px;
+    outline: 4px solid var(--blue);
+    background: var(--blue);
+    border-radius: 5px;
+    z-index: 1;
+    filter:var(--dropshadow);
+        top: 25px;
+    left: 25px;
+    rotate: -13deg;
 }
-#photo h2{
+#photo h3{
 color:var(--yellow);
 }
 #photo img,#photo .meow{
@@ -64,7 +75,7 @@ aspect-ratio: 1/1;
 #photo .meow img{
   object-fit: contain;
 }
-#photo .meow h2 {
+#photo .meow h3 {
     position: absolute;
     color: var(--teal);
     z-index: 2;
@@ -72,20 +83,19 @@ aspect-ratio: 1/1;
     rotate: -21deg;
     text-shadow: none;
 }
-#photo .meow h2:nth-child(2) {
-    translate: -44px -23px;
+#photo .meow h3:nth-child(2) {
+    translate: -25px -20px;
     rotate: -21deg;
 }
-#photo .meow h2:before {
+#photo .meow h3:before {
     position: absolute;
     -webkit-text-stroke: 0.25em white;
     z-index: -1;
-        filter: var(--dropshadow);
 }
-#photo .meow h2:first-child:before{
+#photo .meow h3:first-child:before{
   content: "Don't look at me";
 }
-#photo .meow h2:nth-child(2):before{
+#photo .meow h3:nth-child(2):before{
   content: "Look at this car instead";
 }
 #photo:hover .meow {
@@ -104,12 +114,7 @@ aspect-ratio: 1/1;
     translate: 0 0;
         }
       }
-#info{
-padding:5px 15px;
-background:var(--lteal);
-min-height:288px;
-}
-#info p, #info div, #info button{
+#info p, #info div:not(#photo, .meow), #info button{
 display:inline-block;
 background:white;
 padding:5px 10px;
@@ -127,24 +132,29 @@ text-indent: 0;
   z-index:1;
   cursor: pointer;
 }
+#info div#nametag{
+  rotate:-2deg;text-align: center;background:var(--blue);
+  padding: 0 10px 5px;
+  margin-left: 120px;
+  color:white;
+}
 @media(max-width:900px){
 #info p{
 margin: 0.75em 5px;
 padding:5px 10px;
 }
-}
-@media(max-width:700px){
-#photo{
-width:100%;
-}
-}
-@media(max-width:500px){
-#photo{
-width:100%;
-}
-.intro{
+#info{
   margin:0;
+  justify-content: space-around;
 }
+    #photo {
+        width: 200px;
+        position: static;
+        margin: auto;
+    }
+  #info div#nametag{
+    margin-left:5px;
+  }
 }
 .badge img{
   display:inline-block !important;
@@ -206,18 +216,17 @@ width:100%;
     <article><h1 style="text-align: center;">⭑ Hello there :3 ⭑</h1>
     <div class="inner">
       <center><u>Volume warning on clicking the hampter</u></center>
-	       <div class="intro">
-<div id="photo">
+	       <div id="info">
+          <div id="photo">
   <div class="meow">
-    <h2>Don't look at me</h2>
-    <h2>Look at this car instead</h2>
+    <h3>Don't look at me</h3>
+    <h3>Look at this car instead</h3>
   <img src="blog/idiot.png">
   </div>
 <img src="notme.jpg">
-<center><h2>It me!</h2></center>
+<center><h3>It me!</h3></center>
 </div>
-<div id="info">
-<div style="rotate:-2deg;text-align: center;background:var(--blue);padding: 0 10px 5px;"><span style="font-size: 0.75em;color:white;">Hello, my name is:</span><br><div style="background: white;margin:0;border-radius: 2.5px;filter:none;">KiwiMeow/KiwiMeowo<br><span style="opacity:0.75;font-size:0.9em;">(Kiwi)</span></div></div>
+<div id="nametag">Hello, my name is:</span><br><div style="background: white;margin:0;border-radius: 2.5px;filter:none;color:var(--teal)">KiwiMeow/KiwiMeowo<br><span style="opacity:0.75;font-size:0.9em;">(Kiwi)</span></div></div>
 <div style="rotate:9deg;background:linear-gradient(180deg, #ff9876, #dc4411 64%, #ab0909 100%);padding: 28px 10px;border-radius: 50%;color: white;text-shadow: 1px 1px #b40808;position: relative;"><div style="content:'';position: absolute;filter: none;margin: 0;padding: 0;width: 95%;height: 95%;translate: -8px -26px;border-bottom: 1px solid #8ef0ff9c;box-sizing: border-box;border-radius: 50%;background: linear-gradient(360deg, #8ef0ff9c 5%, transparent 38%);"></div><div style="content:'';position: absolute;filter: none;margin: 0;padding: 0;width: 65%;height: 50%;translate: 3px -26px;box-sizing: border-box;border-radius: 50%;background: linear-gradient(180deg, #fff3c09c 19%, transparent 90%);"></div>she/her</div>
 <p style="rotate:4deg;background:SandyBrown;border:2px solid white;"><span style="color:white;font-size:0.75em">Birthday:</span><br><span style="text-shadow: 1.5px 1.5px #ed6527;color: white;text-decoration: underline;">8 March</span></p>
 <p style="rotate:1deg;color:orangered;">Hong Kong 🇭🇰</p>
@@ -230,7 +239,6 @@ width:100%;
 <a href="fandom/Pome.html"><p style="rotate:-4deg;background:linear-gradient(to bottom, #D52F25, darkred 90%, #a6231b 95%);color:white;">Pome Fan ✧(ᓀ ‸ ᓂ)✧</p></a>
 <a href="https://www.youtube.com/@WillWoodmusic" target="_blank"><p style="rotate:7deg;background:black;color:#d4ba91;">Will Wood enjoyer</p></a>
 <a href="https://www.youtube.com/user/thecranewives" target="_blank"><p style="rotate:-3deg;"><span style="background: linear-gradient(to right, orange,green);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-decoration-color:var(--teal)">LISTEN TO THE CRANE WIVES</span></p></a>
-</div>
 </div>
 <hr>
     <center>
