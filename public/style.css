@@ -839,6 +839,7 @@ img.emote{
   aspect-ratio: 1280 / 652;
 }
 .pagenum, .arttop, .fancybar{
+  text-indent: 0;
       font-size: x-large;
     line-height: 1.25;
     display: block;
