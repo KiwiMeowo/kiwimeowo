@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="../style.css" rel="stylesheet" type="text/css" media="all">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body{
+            background: linear-gradient(var(--bg)), url(fancy1.png);
+            font-size: 0.75em;
+        }
+        .plant {
+            width: 250px;
+            height: 250px;
+            position: relative;
+        }
+        header{
+            height:25px;
+        }
+        .title{
+            border: 2.5px;
+            border-style: outset inset inset outset;
+            border-color: #344b91 var(--dblue) var(--dblue) #344b91;
+        }
+        .title-text h1{
+            font-size: 1em;
+        }
+        .title-pic{
+            height: 45px;
+    border-width: 3px;
+    margin-top: -20px;
+    margin-right: 15px;
+    z-index: 2;
+        }
+        article{
+            height: -webkit-fill-available;
+    margin: 15px 30px;
+        height: 173px;
+        }
+        article > h1:not(aside h1) {
+    padding: 10px 15px;
+    border-bottom: 1.75px dashed var(--lteal);
+    font-size:1.75em;
+}
+h2{
+    font-size: 2em;
+}
+img{
+    background: linear-gradient(#9cc3df78, #93c3e633);
+    filter: var(--dropshadow);
+    padding: 2px;
+    image-rendering: pixelated;
+    border-radius: 5px;
+    margin:10px auto;
+    display:block;
+    animation-name: meow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+#bubble{
+    opacity: 0;
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    filter: var(--dropshadow);
+    transition: opacity 0.5s;
+}
+#bubble:before{
+    height: 12px;
+    width: 10px;
+    position: absolute;
+    background: white;
+    content: '';
+    top: 21px;
+    left: 15px;
+    transform: rotate(90deg) skew(35deg, 10deg);
+    pointer-events: none;
+  }
+img:hover ~ #bubble{
+    opacity: 1;
+}
+@keyframes meow{
+    0% {
+    rotate: -5deg;
+}
+100% {
+    rotate: 5deg;
+}
+}
+    </style>
+</head>
+
+<body>
+    <div class="plant">
+        <header></header>
+        <div class="title">
+      <div class="title-text">
+      </div>
+        <div class="title-pic"></div>
+    </div>
+        <article>
+            <h1>KiwiMeowo</h1>
+            <img src="oc/chatprof/Cosmos.png">
+            <div id="bubble">Meow :3</div>
+            <h2 style="text-align: center;"><a href="index.html">Enter?</a></h2>
+        </article>
+    </div>
+</body>
