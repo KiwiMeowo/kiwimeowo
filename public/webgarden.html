@@ -60,7 +60,6 @@ img{
     animation-timing-function: ease-in-out;
 }
 #bubble{
-    opacity: 0;
     position: absolute;
     top: 35px;
     right: 10px;
@@ -69,21 +68,25 @@ img{
     border-radius: 5px;
     filter: var(--dropshadow);
     transition: opacity 0.5s;
+    width: 50px;
+    line-height: 1;
 }
-#bubble:before{
+#bubble span{
+    position: relative;
+    z-index: 1;
+}
+#bubble #e{
     height: 12px;
     width: 10px;
     position: absolute;
     background: white;
     content: '';
-    top: 21px;
+    bottom: -5px;
     left: 15px;
     transform: rotate(90deg) skew(35deg, 10deg);
     pointer-events: none;
+    z-index: 0;
   }
-img:hover ~ #bubble{
-    opacity: 1;
-}
 @keyframes meow{
     0% {
     rotate: -5deg;
@@ -106,8 +109,8 @@ img:hover ~ #bubble{
         <article>
             <h1>KiwiMeowo</h1>
             <img src="oc/chatprof/Cosmos.png">
-            <div id="bubble">Meow :3</div>
-            <h2 style="text-align: center;"><a href="index.html">Enter?</a></h2>
+            <div id="bubble"><span>OCs, art, blogs :3</span><div id="e"></div></div>
+            <h2 style="text-align: center;"><a href="index.html" target="_blank">Enter?</a></h2>
         </article>
     </div>
 </body>

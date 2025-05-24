@@ -17,7 +17,17 @@ main{
     ::-webkit-scrollbar-thumb {
   border-color:#b1251a;
   }
-
+.prof {
+    margin: 10px auto;
+    height: 140px;
+    aspect-ratio: 1 / 1;
+    border: 5px double #fff;
+    border-radius: 15px;
+    filter: drop-shadow(4px 4px var(--highlightteal));
+}
+.prof img{
+  border-radius: 10px;
+}
 .charcontain{
     display:flex;
   }

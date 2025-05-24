@@ -14,6 +14,23 @@
 .bo{
   animation-name: fade;animation-duration: 1.5s;
 }
+.fan{
+  display:block;
+  border:2px solid;
+  border-radius: 5px;
+  padding: 17.5px 25px;
+  margin: 0.75em auto;
+  max-width: 1000px;
+  background: linear-gradient(#281f1f48,#281f1f48), var(--fanbg);
+  text-shadow: 1px 0px white, -1px 0px white, 0px 1px white, 0px -1px white, 0 0, 2px 2px var(--highlightteal);
+  filter: var(--dropshadow);
+  background-size: cover;
+  color:var(--blue);
+}
+a.fan:hover{
+  filter: brightness(1.1) saturate(1.1) var(--dropshadowdown);
+  translate: var(--down);
+}
 @keyframes fade {from {opacity: .6} to {opacity: 1}}
 @keyframes wiggle {0% {rotate: -5deg;} 100%{rotate: 5deg;}}
 .rows {
@@ -129,7 +146,7 @@ header{
   
     <div class="title">
       <div class="title-text">
-      <h1>KiwiMeowo's Fandoms</h1>
+      <h1>KiwiMeowo's Interests</h1>
       </div>
         <div class="title-pic"></div>
     </div>
@@ -139,26 +156,21 @@ header{
       <article id="fandom"><h1>I spent too much time online</h1>
         <div class="inner">
         <div class="text"><p>As someone who kinda grew up in the internet, I have my fair shair of fandom experiences. In this fandom section, I will share what I was fixiated with, and perhaps even write an whole essay on a certain topic. Hope you will get to know me and the media more!</p></div>
-        <p style="text-align:center;">( Note: The fandoms are ordered from earliest to latest )</p>
         <hr>
-        <h1>A list of my fandoms</h1>
-        <ul>
-        <li>Undertale/Deltarune (semi-active)</li>
-        <li>Danganronpa (old)</li>
-        <li>Houseki no Kuni (old)</li>
-        <li><u>Cookie Run (semi-active)&nbsp;</u></li>
-        <li>The Promised Neverland (old)</li>
-        <li>Dororo (old)</li>
-        <li>Your Turn to Die (semi-active)</li>
-        <li>Sky : Children of the Light (old)</li>
-        <li>Milgram (old)</li>
-        <li><u>Blue Lock (semi-active)&nbsp;</u></li>
-        </ul>
+        <h1>A list of my fixiations</h1>
+        <p>- Undertale/Deltarune</p>
+        <p>- Danganronpa</p>
+        <p>- Houseki no Kuni</p>
+        <p>- Dororo</p>
+        <p>- Your Turn to Die</p>
+        <p>- The Crane Wives</p>
+        <p>- Will Wood</p>
+        <div class="fan" style="--fanbg: url(deco/Legend_of_the_millennial_tree_title_screen.webp);background-position: 0 32%;">Cookie Run</div>
+        <div class="fan" style="--fanbg:url(deco/IMG_5663.jpg);background-position: 0 72%;">Sky : Children of the Light</div>
+        <div class="fan" style="--fanbg:url(deco/bllk.jpg);background-position: 0 86%;">Blue Lock</div>
         <hr>
         <h1>Media I also love</h1>
-        <ul>
-        <li><a href="/fandom/SmallCampus.html">小校園：學習大樓 (Small Campus: Study Building)</a></li>
-        </ul>
+        <a href="SmallCampus.html" class="fan" style="--fanbg: url(deco/StudyBuilding.png);background-position: 0 67%;--teal:black;">小校園：學習大樓 (Small Campus: Study Building)</a>
         <hr>
         </div>
       </article>
@@ -443,7 +455,7 @@ header{
         <li>DJ Cookie x Lemon Cookie (Cookie Run)</li>
         <li>Vault Elder x Wasteland Elder (Sky: Children of the Light)</li>
         <li>Hollyberry Cookie x Pitaya Cookie (Cookie Run: Kingdom)</li>
-        <li><a href="/fandom/Barou.html#ship"><u>Barou Shouei x Isagi Yoichi (Blue Lock) </u></a></li>
+        <li><a href="Barou.html#ship"><u>Barou Shouei x Isagi Yoichi (Blue Lock) </u></a></li>
         </ul>
           <hr>
       </div>

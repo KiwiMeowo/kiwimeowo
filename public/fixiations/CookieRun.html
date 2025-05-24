@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiwiMeowo's site</title>
+    <link rel="icon" type="image/x-icon" href="deco/pome.ico?">
+    <link href="../style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="fandom.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="/jquery.style-my-tooltips.js"></script>
+    <!--
+<style>
+        :root{
+            --yellow:#FDF5DB;
+            --teal:#2E1D0D;
+        }
+        html{
+            font-family: "CookieRunRegular";
+        }
+        hr{
+            border:1px dashed #AB7F51;
+        }
+        main{
+            background: var(--border);
+        }
+        article{
+            box-shadow: 5px 5px 0 0 #34200E;
+            border:5px #AB7F51 solid;
+        }
+        article > h1:not(aside h1){
+            background:#F8D190;
+            border: none;
+        }
+        h1,h2,h3{
+            color:white;
+            text-shadow: 2px 2px 0 var(--border),-2px 2px 0 var(--border),2px -2px 0 var(--border),-2px -2px 0 var(--border),0px 2px 0 var(--border),0px -2px 0 var(--border),-2px 0px 0 var(--border),2px 0px 0 var(--border),2px 2px 0 var(--border),-2px 2px 0 var(--border),2px -2px 0 var(--border),-2px -2px 0 var(--border),0px 2px 0 var(--border),0px -2px 0 var(--border),-2px 0px 0 var(--border),2px 0px 0 var(--border),2px 2px 0 var(--border),-2px 2px 0 var(--border),2px -2px 0 var(--border),-2px -2px 0 var(--border),2px 2px 0 var(--border),-2px 2px 0 var(--border),2px -2px 0 var(--border),-2px -2px 0 var(--border);
+        }
+    </style>
+    -->
+    <style>
+        :root{
+            --border:#5E3A1B;
+            --teal:#2E1D0D;
+        }
+        html,button{
+            font-family: "CookieRunRegular";
+        }
+        body{
+            overflow:hidden;
+        }
+        main{
+            background:url(deco/Lobby_WitchsKitchen.png);
+            background-size: cover;
+            overflow: hidden;
+            display: block;
+            min-height: auto;
+            padding:0;
+            aspect-ratio: 1382 / 720;
+        }
+        #pome{
+            position: absolute;
+            top:55%;
+            left:50%;
+            translate: -50% -50%;
+            width:15%;
+            animation-name: pome;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            cursor: pointer;
+        }
+        @keyframes pome{
+            0%{
+                transform: skew(2deg, 0deg) translate(-3px);
+            }
+            100%{
+                transform: skew(-2deg, 0deg) translate(3px);
+            }
+        }
+        .bubble{
+            background: #ffffffd4;
+    position: absolute;
+    border: 3px solid #000000;
+    color: #3E424B;
+    padding: 20px;
+    max-width: 300px;
+    top: 30%;
+    right: 55%;
+    border-radius: 20px;
+    box-shadow: inset 0 -3px #4a4a4a85;
+    font-weight: bold;
+            display: none;
+            text-align: center;
+        }
+        #menu{
+            position: absolute;
+            right:0;
+            width: 30%;
+            top:50%;
+            translate: 5px -50%;
+        }
+        #menu button, #menu a{
+            padding: 5px;
+            text-align: left;
+            width:100%;
+            background: linear-gradient(135deg,var(--g1),var(--g2));
+            border:4px solid var(--border);
+            border-radius: 20px 0 0 20px;
+            cursor: pointer;
+            box-shadow: inset 1px -3px 1px #8000807a, inset 2px 3px 1px #ffffffc4;
+            position: relative;
+            margin:5px 0;
+            display: inline-block;
+        }
+        #menu button:active,#menu a:active{
+            opacity:0.75;
+        }
+        #menu p{
+            color:white;
+            font-size: 1.5em;
+            margin:0;
+            top: 50%;
+    translate: 0 -50%;
+    position: absolute;
+    display: inline-block;
+        }
+        #menu span{
+            position: relative;
+        }
+        #menu button p:before,#menu a p:before,article > h1:before, .tabs button:not(.X):before {
+    content: attr(data-border);
+    -webkit-text-stroke: 6px var(--border);
+    position: absolute;
+}
+
+.cricon{
+        width: 18%;
+    height: 18%;
+    aspect-ratio: 1/1;
+    background-color: #59002124;
+    display: inline-block;
+    margin:1px 5px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border:2px solid #ffffffc4;
+    box-shadow: inset 0px 3px 1px #59002124;
+}
+.cricon img{
+    height:100%;
+}
+#notice,#about,#experience{
+    position: absolute;
+    background: #00000072;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+#about,#experience{
+    display: none;
+}
+section{
+    margin: 50px 100px;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    border: 5px #674119 solid;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.tabs{
+    background: linear-gradient(#7C5534,#A87F49);
+    border-bottom: 4px solid #FDF5DB;
+    padding:5px 20px;
+    padding-bottom:0;
+}
+.tabs button:not(.X){
+    padding:10px 20px;
+    border:4px solid var(--border);
+    border-bottom:0;
+    border-radius: 20px 20px 0 0;
+    margin:0 5px;
+    background: #FDF5DB;
+    color:#F8D190;
+}
+.tabs button{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.X{
+    background:transparent;
+    border:0;
+    float: right;
+    translate: 0 25%;
+    position: relative;
+    color:var(--border);
+}
+.X:before{
+    content: attr(class);
+    -webkit-text-stroke: 3px #FDF5DB;
+    position: absolute;
+}
+article{
+    box-shadow: 5px 5px 0 0 #34200e;
+    --yellow: #FDF5DB;
+    height: calc(100% - 62px);
+    margin: 0;
+    border-radius: 0;
+    overflow-y: scroll;
+}
+article > h1:not(aside h1){
+    background:#F8D190;
+    border: none;
+    color:white;
+}
+span {
+    position: relative;
+    z-index: 1;
+}
+    </style>
+  </head>
+ <body>
+  <nav>
+      <a href="/index.html">Home</a>
+      <a href="index.html">Fixiations</a>
+    </nav>
+  <main>
+    <div class="bubble">I knew you would come.</div>
+    <div class="bubble">I have no need for your compliments.</div>
+    <div class="bubble">...You have no business with me.</div>
+    <div class="bubble">...Have you no fear.</div>
+    <div class="bubble">Do you wish to peer into the Darkness within you?</div>
+    <div class="bubble">My Master is always in my thoughts...</div>
+    <div class="bubble">Blessings aren't my thing, but curses I know well.</div>
+    <img id="pome" src="deco/PomeLobby.png" onclick="dialog()">
+    <div id="notice">
+        <section>
+            <div class="tabs">
+                <button data-border="Notices"><span>Notices</span></button>
+                <button class="X" onclick="document.getElementById('notice').style.display='none';"><span>X</span></button>
+            </div>
+            <article>
+            <h1 data-border="Notice!"><span>Notice!</span></h1>
+            <div class="inner">
+                <p>Greetings from KiwiMeowo!</p>
+                <p>This page is designed to be viewed in desktop, ironic how Cookie Run Ovenbreak is a mobile app and I can't make this page mobile-friendly.</p>
+                <p>Click here to go back to the fixiation page, or to proceed, click the X on the top right corner.</p>
+            </div>
+        </article>
+        </section>
+    </div>
+    <div id="about">
+        <section>
+            <div class="tabs">
+                <button data-border="About"><span>About</span></button>
+                <button class="X" onclick="document.getElementById('about').style.display='none';"><span>X</span></button>
+            </div>
+            <article>
+            <h1 data-border="What is Cookie Run?"><span>What is Cookie Run?</span></h1>
+            <div class="inner">
+                <p>Cookie Run is a series of mobile games made by Devsisters, a Korean game company. Like the name suggests, the theme is running cookies. While the game contains plenty of stories, it often focuses on the protagonist, Gingerbrave, who escapes from the oven and the witch, and meets up various other cookies and goes on an adventure.</p>
+                <p>The first version of Cookie Run, Ovenbreak (2009) has a vastly different artstyle, though the theme of cookies and witches, and the gameplay is still there. This is also where Dozer (A cookie not present in any games but Witch's Castle) made his first appearance, but he presummedly got eaten by the witch.</p>
+                <img src="https://dl.dropbox.com/scl/fi/c8646mgg3doz33scwxve8/OvenBreak1_20250524.webp?rlkey=5ols0l1uqiwlayoac262kzytu&raw=1" loading="lazy">
+                <p>In 2011, Ovenbreak 2 was released, with more playable cookies, such as GingerBright, GingerBerry (Currently known as Strawberry Cookie), NinjaBread (Current known as Ninja Cookie), and more. It's also where pets are first implemented.</p>
+                <img src="https://dl.dropbox.com/scl/fi/z6ygyhwkydkhb841f5wfk/Ovenbreak2_20250524.jpeg?rlkey=tzuqsna9jaisi1kmgz8mdcrqi&raw=1" loading="lazy">
+                <p>Eventually, Cookie Run for Line, Kakao and QQ was released (2014). In this game, plenty of new content and lore was added. Plenty of cookies are added (such as Moonlight Cookie, Tiger Lily Cookie, Peach Cookie etc.), and they have different ranks (rarities). It establishes several worldbuilding stuff, including Dragon's Valley, Dessert Paradise, Cookie Kingdom (A.K.A. Hollyberry Kingdom currently) and City of Wizards.</p>
+                <img src="https://dl.dropbox.com/scl/fi/ptmubzucplaamssze3jti/CRLine_20250524.webp?rlkey=u0pp95bjm5ath2ep5pb4xuyda&raw=1" loading="lazy">
+                <p>In 2016, Cookie Run Ovenbreak was released (My first CR game). Not only does it have plenty of game modes and monthly updates, it also releases entertaining stories frequently, they are either slice-of-life stories, or lore heavy stuff that build the worldbuilding and the personalities of the cookies. The mainline stories include Cookies of Darkness, Time Balance Department, the Dragons, the Nova Cookies and more.</p>
+                <img src="deco/Legend_of_the_millennial_tree_title_screen.webp" loading="lazy">
+                <p>In 2021, Cookie Run Kingdom is released, which is perhaps the one you are most familiar with. Instead of the usual runner gameplay, this game focuses on kingdom building and RPG-style gaming. The story mainly focuses on the Ancients, the Cookies of Darkness and the Beasts.</p>
+            </div>
+        </article>
+        </section>
+    </div>
+    <div id="menu">
+        <button style="--g1:#FAEC85;--g2:#F3DA74" onclick="document.getElementById('about').style.display='block';">
+            <div class="cricon"><img src="deco/cookie0001_head.png"></div><p data-border="About"><span>About</span></p>
+        </button>
+        <a style="--g1:#F0D36D;--g2:#E7B055" href="/blog/post/2025/03-20.html" target="_blank">
+            <div class="cricon"><img src="deco/IoM.png"></div><p data-border="My Experience"><span>My Experience</span></p>
+        </a>
+        <button style="--g1:#E7B256;--g2:#D6746E;" onclick="music()">
+            <div class="cricon"><img src="deco/Sprouted_Jelly_Bean.webp"></div><p data-border="Toggle Music"><span>Toggle Music</span></p>
+        </button>
+    </div>
+</main>
+<audio src="https://dl.dropbox.com/scl/fi/1nmwkd0ifasphv70uhzbn/WitchsKitchen.mp3?rlkey=85i8dgvwpofe7kzn21jk38i3t&raw=1" preload="metadata" id="ost" loop></audio>
+<script>
+    function dialog(){
+        var dialog=document.getElementsByClassName('bubble');
+        for (i = 0; i < dialog.length; i++) {
+          dialog[i].style.display = "none";  
+        }
+        var random = Math.floor(Math.random() * dialog.length);
+        dialog[random].style.display = "block";
+        setTimeout(function(){ dialog[random].style.display = "none"; }, 2500);
+    }
+    function music(){
+        if (document.getElementById('ost').paused){
+            document.getElementById('ost').play();
+        } else{
+            document.getElementById('ost').pause();
+        }
+    }
+</script>
+</body>
+</html>
