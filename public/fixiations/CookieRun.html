@@ -156,7 +156,7 @@
     background: #00000072;
     height: 100%;
     width: 100%;
-    z-index: 10;
+    z-index: 100;
 }
 #about,#experience{
     display: none;
@@ -218,6 +218,14 @@ span {
     position: relative;
     z-index: 1;
 }
+@media (orientation:portrait){
+    #notice{
+        height:100vh;
+    }
+    #notice section{
+        margin: 0;
+    }
+}
     </style>
   </head>
  <body>
@@ -245,7 +253,7 @@ span {
             <div class="inner">
                 <p>Greetings from KiwiMeowo!</p>
                 <p>This page is designed to be viewed in desktop, ironic how Cookie Run Ovenbreak is a mobile app and I can't make this page mobile-friendly.</p>
-                <p>Click here to go back to the fixiation page, or to proceed, click the X on the top right corner.</p>
+                <p>Click here to go back to the <a href="index.html">fixiation page</a>, or to proceed, click the X on the top right corner.</p>
             </div>
         </article>
         </section>
