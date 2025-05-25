@@ -851,6 +851,9 @@ img.emote{
     filter: var(--dropshadow);
     color: var(--blue);
 }
+.pagenum2{
+  text-indent: 0;
+}
 .fancybar{
   font-size:large;
 }
