@@ -18,18 +18,40 @@
   display:block;
   border:2px solid;
   border-radius: 5px;
-  padding: 17.5px 25px;
+  padding: 10px 20px;
   margin: 0.75em auto;
-  max-width: 1000px;
-  background: linear-gradient(#281f1f48,#281f1f48), var(--fanbg);
+  max-width: 800px;
+  background: var(--yellow);
   text-shadow: 1px 0px white, -1px 0px white, 0px 1px white, 0px -1px white, 0 0, 2px 2px var(--highlightteal);
   filter: var(--dropshadow);
-  background-size: cover;
-  color:var(--blue);
+}
+a.fan[style]{
+  background:linear-gradient(#281f1f48,#281f1f48), var(--fanbg);
+      background-size: cover;
+}
+.ship .fan{
+  border-style: dashed;
+  text-align: center;
+}
+.ship .fan img{
+  display: inline-block;
+  filter:drop-shadow(1px 1px var(--lteal));
+  height: 1em;
+  scale:3;
+}
+.ship .fan img:first-of-type{
+  margin-right:20px;
+}
+.ship .fan img:last-of-type{
+  margin-left:20px;
 }
 a.fan:hover{
   filter: brightness(1.1) saturate(1.1) var(--dropshadowdown);
   translate: var(--down);
+}
+a.fan:after {
+  content: "\27A4";
+  float: right;
 }
 @keyframes fade {from {opacity: .6} to {opacity: 1}}
 @keyframes wiggle {0% {rotate: -5deg;} 100%{rotate: 5deg;}}
@@ -89,6 +111,16 @@ a .frame center{
     margin:auto;
 }
 img.deco{position: absolute;z-index: 10;}
+flex{
+  display: flex;
+}
+flex hr{
+  margin: 0 15px;
+}
+#games,#shows{
+  width:50%;
+  padding:0 10px;
+}
 @media(max-width:1200px){
   .item{
   flex: 0 0 25%;
@@ -96,6 +128,13 @@ img.deco{position: absolute;z-index: 10;}
 }
 }
 @media(max-width:800px){
+  flex{
+    display: block;
+  }
+  #games,#shows{
+    width:100%;
+    padding: 0;
+  }
   .item{
   flex: 0 0 50%;
     max-width: 50%;
@@ -154,24 +193,40 @@ header{
   <main>
     <section class="wide">
       <article id="fandom"><h1>I spent too much time online</h1>
-        <div class="inner">
-        <div class="text"><p>As someone who kinda grew up in the internet, I have my fair shair of fandom experiences. In this fandom section, I will share what I was fixiated with, and perhaps even write an whole essay on a certain topic. Hope you will get to know me and the media more!</p></div>
+        <div class="inner" id="fan">
+        <p>As someone who kinda grew up in the internet, I have my fair shair of fandom experiences. In this fandom section, I will share what I was fixiated with, and perhaps even write an whole essay on a certain topic. Hope you will get to know me and the media more!</p>
         <hr>
         <h1>A list of my fixiations</h1>
-        <p>- Undertale/Deltarune</p>
-        <p>- Danganronpa</p>
-        <p>- Houseki no Kuni</p>
-        <p>- Dororo</p>
-        <p>- Your Turn to Die</p>
-        <p>- The Crane Wives</p>
-        <p>- Will Wood</p>
-        <div class="fan" style="--fanbg: url(deco/Legend_of_the_millennial_tree_title_screen.webp);background-position: 0 32%;">Cookie Run</div>
+        <div class="fan">Undertale/Deltarune</div>
+        <div class="fan">Danganronpa</div>
+        <div class="fan">Houseki no Kuni</div>
+        <a class="fan" href="CookieRun.html" style="--fanbg: url(deco/Legend_of_the_millennial_tree_title_screen.webp);background-position: 0 32%;">Cookie Run</a>
         <div class="fan" style="--fanbg:url(deco/IMG_5663.jpg);background-position: 0 72%;">Sky : Children of the Light</div>
+        <div class="fan">Dororo (2019)</div>
+        <div class="fan">Your Turn to Die</div>
+        <div class="fan">The Crane Wives</div>
+        <div class="fan">Will Wood</div>
         <div class="fan" style="--fanbg:url(deco/bllk.jpg);background-position: 0 86%;">Blue Lock</div>
         <hr>
         <h1>Media I also love</h1>
-        <a href="SmallCampus.html" class="fan" style="--fanbg: url(deco/StudyBuilding.png);background-position: 0 67%;--teal:black;">小校園：學習大樓 (Small Campus: Study Building)</a>
+        <flex>
+          <div id="games">
+            <h2>Games</h2>
+            <div class="fan">Potion Craft</div>
+            <div class="fan">Project: Eden's Garden</div>
+            <a class="fan" href="SmallCampus.html" style="--fanbg: url(deco/StudyBuilding.png);background-position: 0 67%;">小校園：學習大樓 (Small Campus: Study Building)</a>
+          </div>
+          <hr>
+          <div id="shows">
+            <h2>Shows</h2>
+            <div class="fan">The Promised Neverland</div>
+          </div>
+        </flex>
         <hr>
+        <h2>Others</h2>
+        <div class="fan">Hamilton</div>
+        <div class="fan">Milgram</div>
+        <div class="fan">Ride the Cyclone</div>
         </div>
       </article>
         <article id="blorbo">
@@ -443,20 +498,16 @@ header{
         </div>
       </article>
       <article>
-      <h1>Ships sailed~</h1><div class="inner">
-        <div class="text">
+      <h1>Ships sailed~</h1><div class="inner ship">
         <p><u>I don't often ship characters,</u> honestly I'm surprised to learn that many people have OTPs ever since they were very young. Not sure why but 99% of the time I don't care the romantic potential of characters ( maybe related to the fact I don't like romance plots ).</p>
         <p>But over the years, I actually found pairing that I find adorable, either due to<u>&nbsp;cute fan art,</u>&nbsp;or the fact its<u>&nbsp;enemies to lovers&nbsp;</u><span style="font-size:0.66em">(I love enemies to lovers)</span>.</p>
-        </div>
         <p style="text-align:center;">( Note: The ships are ordered from earliest to latest )</p>
         <hr>
         <h1>A list of my OTPs</h1>
-        <ul>
-        <li>DJ Cookie x Lemon Cookie (Cookie Run)</li>
-        <li>Vault Elder x Wasteland Elder (Sky: Children of the Light)</li>
-        <li>Hollyberry Cookie x Pitaya Cookie (Cookie Run: Kingdom)</li>
-        <li><a href="Barou.html#ship"><u>Barou Shouei x Isagi Yoichi (Blue Lock) </u></a></li>
-        </ul>
+        <div class="fan"><img src="deco/cookie0127_head.png">DJ Cookie x Lemon Cookie (Cookie Run)<img src="deco/cookie0052_head.png"></div>
+        <div class="fan">Vault Elder x Wasteland Elder (Sky: Children of the Light)</div>
+        <div class="fan"><img src="deco/Hollyberry_head.webp" style="scale:2.5">Hollyberry Cookie x Pitaya Cookie (Cookie Run: Kingdom)<img src="deco/Pitaya_dragon_head.webp"></div>
+        <a class="fan" href="Barou.html#ship"><u>Barou Shouei x Isagi Yoichi (Blue Lock) </u></a>
           <hr>
       </div>
     </article>
@@ -485,7 +536,6 @@ header{
 	</ul>
     </div>
   </footer>
-  <script src="/e.js"></script>
   <script src="/spoiler.js"></script>
 </body>
 </html>

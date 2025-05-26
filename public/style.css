@@ -479,7 +479,7 @@ footer a {
     width: 25vw;
     }
     
-  section, section.wide{
+  section{
 width: calc(100% - 25vw);
     }
     section.double{
