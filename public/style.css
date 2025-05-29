@@ -89,7 +89,8 @@ transition: color 0.5s, text-decoration-color 0.5s;
 }
 
 hr {
-  border: 1px dashed var(--lteal);
+  border:0;
+  border-top: 2px dashed var(--lteal);
   margin: 15px auto;
 }
 

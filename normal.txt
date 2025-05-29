@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiwiMeowo's site</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico?">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="/jquery.style-my-tooltips.js"></script>
+    </head>
+</html>
+<body>
+    <nav>
+      <a href="/index.html">Home</a>
+  </nav>
+  <main>
+    <section class="wide">
+        <article>
+            <h1>E</h1>
+            <div class="inner">
+             <p>e</p>   
+            </div>
+        </article>
+    </section>
+  </main>
+</body>
