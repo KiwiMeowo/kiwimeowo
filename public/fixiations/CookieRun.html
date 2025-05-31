@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KiwiMeowo's site</title>
+    <title>Cookie Run</title>
     <link rel="icon" type="image/x-icon" href="deco/pome.ico?">
     <link href="../style.css" rel="stylesheet" type="text/css" media="all">
     <link href="fandom.css" rel="stylesheet" type="text/css" media="all">
@@ -130,7 +130,7 @@
 .cricon img{
     height:100%;
 }
-#notice,#about,#experience{
+#notice,#about,#experience, #credits{
     position: absolute;
     background: #00000072;
     height: 100%;
@@ -198,10 +198,9 @@ span {
 }
 @media (max-width:700px){
     #notice{
-        height:100vh;
         display: block;
     }
-    #notice, #about, #experience{
+    #notice, #about, #experience, #credits{
         height:100vh;
     }
     section{
@@ -244,6 +243,20 @@ span {
                 <p>Greetings from KiwiMeowo!</p>
                 <p>This page is designed to be viewed in desktop, ironic how Cookie Run Ovenbreak is a mobile app and I can't make this page mobile-friendly.</p>
                 <p>Click here to go back to the <a href="index.html">fixiation page</a>, or to proceed, click the X on the top right corner.</p>
+            </div>
+        </article>
+        </section>
+    </div>
+    <div id="credits">
+        <section>
+            <div class="tabs">
+                <button data-border="Credits"><span>Credits</span></button>
+                <button class="X" onclick="document.getElementById('credits').style.display='none';opensfx('close');"><span>X</span></button>
+            </div>
+            <article>
+            <h1 data-border="Credits"><span>Credits</span></h1>
+            <div class="inner">
+                <p>All the images and audio used in this page are from the Cookie Run games by Devsisters.</p>
             </div>
         </article>
         </section>
@@ -338,7 +351,10 @@ span {
         <button style="--g1:#F0D36D;--g2:#E7B055" onclick="document.getElementById('experience').style.display='block';opensfx('open');">
             <div class="cricon"><img src="deco/CR/IoM.png"></div><p data-border="My Experience"><span>My Experience</span></p>
         </button>
-        <button style="--g1:#E7B256;--g2:#D6746E;" onclick="music();opensfx('open')">
+        <button style="--g1:#E7B256;--g2:#D6746E;" onclick="document.getElementById('credits').style.display='block';opensfx('open')">
+            <div class="cricon"><img src="deco/CR/tr0038.png"></div><p data-border="Credits"><span>Credits</span></p>
+        </button>
+        <button style="--g1:#DE8552;--g2:#CF6DA0;" onclick="music();opensfx('open')">
             <div class="cricon"><img src="deco/CR/Sprouted_Jelly_Bean.webp"></div><p data-border="Toggle Music"><span>Toggle Music</span></p>
         </button>
     </div>
