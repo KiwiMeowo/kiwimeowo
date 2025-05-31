@@ -91,6 +91,7 @@ transition: color 0.5s, text-decoration-color 0.5s;
 hr {
   border:0;
   border-top: 2px dashed var(--lteal);
+  border-right: 2px dashed var(--lteal);
   margin: 15px auto;
 }
 

@@ -17,16 +17,18 @@ nav{display:none}
   nav{display:block;}
   #sidenav{display:none;}}
 /*Site button collection*/
-  .site a.sitebutton{display:block;margin: 2px 10px;width: max-content;}
+  .site .sitebutton a{display:block;width: max-content;}
   .animation .site:hover{animation-play-state: paused;}
   .ff-container{display:block !important;}
 .ff-container.ff-responsive.ff-ready.ff-inactive {filter: var(--dropshadow);}
 canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 .ff-container.ff-responsive.ff-ready.ff-inactive:hover {translate:var(--down);filter: var(--dropshadowdown);}
-.site > div{padding:5px 0;margin:7.5px 0;border-style: solid none;border-width: 1px;filter: var(--dropshadow);}
-.site div:nth-child(odd) a.sitebutton{margin-right: auto;}
-.site div:nth-child(even) a.sitebutton{margin-left: auto;
-}
+.site > div{filter: var(--dropshadow);}
+#animation .hr{background-image: linear-gradient(#3a180091, #51080845), url(freepik-wood.jpg);height: 5px;border-radius: 5px;width: -webkit-fill-available;width: -moz-available;margin: 5px auto;}
+#control{border: 2px solid #240000;background: linear-gradient(#4e190761, #7f717145), url(freepik-wood.jpg);border-radius: 5px;padding:5px 0;filter:var(--dropshadow);text-align: center;color:var(--yellow);margin:10px 20px;text-shadow: 2px 2px var(--shadow);}
+#control button{background: transparent;border:1px solid var(--yellow);color:var(--yellow);border-radius: 5px;margin:0 2px;padding:2px 5px;filter:var(--dropshadow);cursor:pointer;transition: color 0.5s, border 0.5s;}
+#control button:hover{border:1px solid #D2BA9B;color:#D2BA9B;}
+
 /*Status cafe stuff*/
 #statuscafe-username-real{font-weight: 600;font-size: 1em;text-shadow: 2px 2px var(--lteal);color: var(--blue) !important;text-decoration: none !important;margin: 12.5px 0px;}
 #statuscafe-username-real:hover, #statuscafe-username-real:focus{color: var(--teal) !important;transition: color 0.5s;}
@@ -466,23 +468,26 @@ function showSlides() {
       <!--Site button-->
 <article><h1>Cool sites and people</h1>
   <div class="inner">
-        <div style="border: 7.5px double;border-radius: 5px;padding: 10px 0;" id="animation" class="site freezeframe">
-        <div style="background: linear-gradient(#ffbc42b3, #ffcf628a);border-color:#0d2661;"><a href="https://puddingpudd.com/" target="_blank" class="sitebutton"><img src="button/Pudd_Button_V3.gif" class="button"></a></div>
-        <div style="background:linear-gradient(#22163c85, #b58c3052);border-color:#5e3000;"><a href="https://pianobonds.neocities.org/" target="_blank" class="sitebutton"><img src="button/8831piano.gif" class="button"></a></div>
-        <div style="background: linear-gradient(#d842ffb3,#abceec8a);border-color:#000000;"><a href="https://sadly.link/" target="_blank" class="sitebutton"><img src="button/sl-button.png" class="button"></a></div>
-        <hr>
-        <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
-        <center style="margin: 0;">
-        <a href="https://www.youtube.com/@gellheroes5s/featured" target="_blank" title="An original story project by MoniiMous. A group of four teens and a dog found five gells, and gained different superpowers. Learning that Aultimins being turned into gells against their will by the Great Neev Zeltzalu, this team decided to save and fight for the Autimins.">Gell Heroes (PROJECT: 5S)</a>
+        <div style="border: 4px solid #550000;background: linear-gradient(#ffca8561, #ffe4e445), url(freepik-wood.jpg);border-radius: 5px;padding:10px 15px;filter:var(--dropshadow)" id="animation" class="site freezeframe">
+        <div class="sitebutton"><a href="https://puddingpudd.com/" target="_blank" style="margin-right: auto;"><img src="button/Pudd_Button_V3.gif" class="button"></a></div>
+        <div class="hr"></div>
+        <div class="sitebutton"><a href="https://pianobonds.neocities.org/" target="_blank" style="margin-left: auto;"><img src="button/8831piano.gif" class="button"></a></div>
+        <div class="hr"></div>
+        <div class="sitebutton"><a href="https://sadly.link/" target="_blank" style="margin-right: auto;"><img src="button/sl-button.png" class="button"></a></div>
+        <div class="hr"></div>
+      </div>
+        <div align="center" id="control">GIF Animation: 
+        <span style="display:inline-block">
+        <button class="start">Play</button>
+     <button class="stop">Stop</button>
+        </span>
+        </div>
+     <hr>
+     <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+     <center style="margin: 0;">
         <a href="bookmark.html" style="padding: 2.5px 10px;padding-right: 20px;display: block;background: linear-gradient(#adddff69, #bce3ff36);filter: var(--dropshadow);border-radius: 0 0 20px 0;margin:5px 0;border-left: 3px solid var(--blue);color: var(--blue);width:max-content">Other links here!</a>
         </center>
-      </div>
-        <p align="center">GIF Animation: 
-        <span style="display:inline-block">
-        <button class="start coolbutton" style="margin: 0 5px;">Play</button>
-     <button class="stop coolbutton" style="margin: 0 5px;">Pause</button>
      </span>
-     </p>
      <script>
    const manual = new Freezeframe('.freezeframe', {
     trigger: false,
