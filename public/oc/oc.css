@@ -18,7 +18,11 @@ article {
   border-radius: 10px;
 }
 .row{
-  border-width: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 5px double var(--teal);
+  margin: 15px auto;
+  border-radius: 5px;
 }
 .col .prof:hover {
     translate: 2px 2px;

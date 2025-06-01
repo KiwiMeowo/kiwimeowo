@@ -829,18 +829,7 @@ img.emote{
 }
 
 /*Art gallery stuff, don't ask me, I don't understand what I did as well*/
-.inner.draw{
-  padding:5px;
-}
-.fra{
-    border: 7.5px double var(--teal);
-    width:100%;
-    box-sizing: border-box;
-  border-radius: 7.5px;
-  height:auto;
-  aspect-ratio: 1280 / 652;
-}
-.pagenum, .arttop, .fancybar{
+.fancybar{
   text-indent: 0;
       font-size: x-large;
     line-height: 1.25;
@@ -853,71 +842,15 @@ img.emote{
     filter: var(--dropshadow);
     color: var(--blue);
 }
-.pagenum2{
-  text-indent: 0;
-}
 .fancybar{
   font-size:large;
 }
-.arttop{
-  display:none;
-      margin-bottom: 0.25em;
+.fancybar a{
+  color:var(--blue);
 }
-
-.pagenum button{
-  text-decoration: underline;
-  cursor: pointer;
-  background: none;
-  border: none;
-  font-size: inherit;
-  margin: 0;
-  color: var(--blue);
-  transition: color 0.5s;
-  padding: 2px 6px;
-}
-
-.arttop a, .fancybar a{
-  margin: 5px;
-  color: var(--blue);
-}
-.pagenum button:hover, .arttop a:hover, .fancybar a:hover{
+.fancybar a:hover{
   color: var(--teal);
 }
-.numdivider:after{
-  content:"\00A0\007C\00A0";
-}
-.numdivider:nth-last-child(1):after{
-  content:"";
-}
-@media(max-width:700px){
-	.pagenum2 {
-    display: block;
-}
-.arttop{
-  display:block;
-}
-.numdivider:nth-child(12n):after{
-  content:"";
-  display:block;
-}
-}
-.row{
-  display: flex;
-  flex-wrap: wrap;
-  border: 7.5px double var(--teal);
-  margin: 15px auto;
-  border-radius: 5px;
-}
-
-.draw .row{
-  border:none;
-  margin:0;
-}
-
-.draw .col {
-    flex: 0 0 16.6666666667%;
-    max-width: 16.6666666667%;
-  }
 
 .artborder{
   border: 3px dotted;
@@ -965,33 +898,6 @@ a.artborder:hover, .art a.artborder:hover{
 .artborder.censor img, #window img.censor{
     filter: blur(5px) saturate(50%) contrast(0.5);
     cursor:pointer;
-}
-
-@media (max-width: 1200px){
-  .draw .col {
-    flex: 0 0 20%;
-    max-width: 20%;
-  }
-}
-
-@media (max-width: 1000px){
-  .draw .col {
-    flex: 0 0 25%;
-    max-width: 25%;
-  }
-}
-
-@media (max-width: 800px){
-  .draw .col {
-    flex: 0 0 33%;
-    max-width: 33%;
-  }
-}
-@media (max-width: 600px){
-  .draw .col{
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
 }
 /* width */
 ::-webkit-scrollbar {
