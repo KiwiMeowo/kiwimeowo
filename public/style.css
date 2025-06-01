@@ -608,10 +608,6 @@ your own title.
   height:37px;
   width:84px;
 }
-#artnav button:hover{
-  color:#bcb9d6;
-  border-color:#bcb9d6;
-}
 #window img{
     max-height: 100%;
     width: 50%;
@@ -629,6 +625,24 @@ your own title.
     max-width:50%;
   --teal:white;
   --dblue:#bcb9d6;
+}
+#window #link{
+  display: none;
+    margin: auto;
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+    width: fit-content;
+    cursor: pointer;
+    background: transparent;
+    border: 1.5px solid;
+    border-radius: 5px;
+    padding: 4px 10px;
+    transition: color 0.5s, border-color 0.5s;
+}
+#artnav button:hover, #window #link:hover{
+  color:#bcb9d6;
+  border-color:#bcb9d6;
 }
 @media(max-width:900px){
   #window #artview{
