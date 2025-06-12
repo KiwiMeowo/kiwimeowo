@@ -1,5 +1,3 @@
-main{
-  background: linear-gradient(#0b263b75, #1f084e73 150%), url(../fancy1.png);}
 :root{
   --yellow:#E2DBC7;
   --lteal:#9db5b7;
@@ -8,6 +6,7 @@ main{
   --blue:#0E1A36;
   --dblue:#000527;
   --shadow:#1b357082;
+  --bg:#0b263b75, #1f084e73;
 }
 
 .blognav {
