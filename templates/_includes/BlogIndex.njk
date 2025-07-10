@@ -154,7 +154,8 @@ a{cursor:pointer}
     <button class="navcoll" type="button" style="border-radius: 0;background: transparent;border-right: 1px solid #ffffff78;">2025 Blogs...</button>
 		<div class="open open2">
 		<div>
-    <button class="bar2" onclick="Current();ShesGone();TagNumbers()" type="button">Jan-Mar</button>
+    <button class="bar2" onclick="Current();ShesGone();TagNumbers()" type="button">Jul-Sep</button>
+    <button class="bar2" onclick="fetchHtml('2025b.html');wait()" type="button">Apr-Jun</button>
 		<button class="bar2" onclick="fetchHtml('2025a.html');wait()" type="button">Jan-Mar</button>
 		</div>
 		</div>
@@ -190,8 +191,8 @@ a{cursor:pointer}
         <button class="bar coll" type="button">2025 Blogs...</button>
 		<div class="cont">
 		<button class="bar bar2 lock" type="button">Oct-Dec</button>
-		<button class="bar bar2 lock" type="button">Jul-Sep</button>
-		<button class="bar bar2" onclick="Current();ShesGone();TagNumbers()" type="button">Apr-Jun</button>
+		<button class="bar bar2" onclick="Current();ShesGone();TagNumbers()" type="button">Jul-Sep</button>
+		<button class="bar bar2" onclick="fetchHtml('2025b.html');wait()" type="button">Apr-Jun</button>
 		<button class="bar bar2" onclick="fetchHtml('2025a.html');wait()" type="button">Jan-Mar</button>
 		</div>
 		<button class="bar coll" type="button">2024 Blogs...</button>
@@ -300,7 +301,7 @@ for (i = 0; i < coll.length; i++) {
       <div width="100%" style="box-sizing:border-box;min-height: calc(100vh - 50px);border-radius: 7.5px;border: 7.5px double;" id="frame">
       <div id="current">
     <div class="inner min blog">
-        {% for post in collections.2025b | reverse %}
+        {% for post in collections.2025c | reverse %}
         <a href="{{ post.url }}" target="_blank" class="collapsible{% if post.data.style or post.data.deco %} special{% endif %}" title="{{ post.data.filter }}" {% if post.data.style %}style="{{ post.data.style }}"{% endif %}>{{ post.data.title | safe }} <span class="blogdate">( {{ post.data.date | datestring }} )</span>{{ post.data.deco | safe }}</a>
         {% endfor %}
     </div>
