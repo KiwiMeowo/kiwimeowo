@@ -17,7 +17,7 @@
     content:url(https://dl.dropbox.com/scl/fi/ll8xvatkw3gq9glub7dfn/IMG_4914_20250517.jpg?rlkey=gnlx1hfhjutwg9zkmx1hhq12d&st=bhzwizbk&raw=1);
 }
 h1{
-    text-shadow: 2px 2px var(--theme);
+    text-shadow: 2px 2px var(--theme) !important;
 }
 main, article{
     background:var(--black);
