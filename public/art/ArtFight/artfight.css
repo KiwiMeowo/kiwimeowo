@@ -43,7 +43,7 @@ hr{
     outline: 2px dashed var(--theme);
   filter: none !important;
   translate: 0 !important;
-  border: 5px solid var(--black);
+  border: 5px solid var(--black) !important;
 }
 .pagenum, .arttop{
     background: var(--grey);
