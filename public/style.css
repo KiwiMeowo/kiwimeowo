@@ -803,6 +803,7 @@ img.spoiler:hover{
   padding: 5px 10px;
   white-space: nowrap;
   color: var(--teal);
+  min-height: 190px;
 }
 
 .art .artborder{
