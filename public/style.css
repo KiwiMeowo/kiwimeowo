@@ -38,6 +38,14 @@ a, s{
 a,center,p,ol,ul,button{
   color: var(--teal); 
 }
+a[target="_blank"]{
+  cursor:alias;
+}
+a[target="_blank"]:after{
+  position: absolute;
+  content: "+";
+  font-size: 0.75em;
+}
 .secret{
   text-decoration: none;
   opacity: 0.5;
@@ -881,6 +889,9 @@ img.emote{
   color: var(--teal);
   background:transparent;
 }
+a[target="_blank"] .artborder{
+  cursor:alias;
+}
 .artborder:hover, .artborder:focus {
     color: var(--dblue);
     transition: color 0.5s, translate 0.1s;
@@ -894,11 +905,11 @@ img.emote{
   aspect-ratio: 1 / 1;
 }
 a.artborder, .art a.artborder{
-  border: 2px dashed #31b700;
+  border: 2px dashed #478431;
   filter: drop-shadow(4px 4px #78d80b6c);
 }
 a.artborder:hover, .art a.artborder:hover{
-  border-color:green;
+  border-color:rgb(0, 73, 0);
   filter: drop-shadow(4px 6px #78d80b6c);
 }
 .artborder.censor{

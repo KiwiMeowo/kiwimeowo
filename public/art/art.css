@@ -16,6 +16,7 @@ section.wide {
 }
 .pagenum > .pagenum2:first-child{
   text-align: center;
+  display:block;
 }
 .pagenum2{
   text-indent: 0;
@@ -57,6 +58,9 @@ section.wide {
     display: block;
   display:block;
 }
+}
+a[target="_blank"]:after{
+  display:none;
 }
 .fra{
     border: 7.5px double var(--teal);
