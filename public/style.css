@@ -41,11 +41,6 @@ a,center,p,ol,ul,button{
 a[target="_blank"]{
   cursor:alias;
 }
-a[target="_blank"]:after{
-  position: absolute;
-  content: "+";
-  font-size: 0.75em;
-}
 .secret{
   text-decoration: none;
   opacity: 0.5;
