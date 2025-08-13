@@ -3,8 +3,16 @@ p,i,li{
 }
 article {
     border-radius: 1px;
-    outline: 1px solid var(--yellow);
-    border: 3px solid;
+    border: 2px solid var(--yellow);
+  padding: 3px;
+  background:none;
+  box-shadow:4px 4px 4px 2px var(--shadow);
+}
+article > h1{
+  background:var(--yellow);
+}
+.inner{
+  background:var(--yellow);
 }
 .prof {
   margin: 10px auto;
@@ -152,6 +160,9 @@ h3 a{
   border-radius: 2.5px;
   border:0;
   outline:0;
+  padding:0;
+  padding-bottom: 10px;
+  overflow: hidden;
 }
 
 #playlist h1{
@@ -196,7 +207,7 @@ h3 a{
 }
 #playbuttons{
   display:flex;
-  margin:10px 20px;
+  margin:0 20px;
 }
 #playbuttons button {
   max-width: 33.333%;
