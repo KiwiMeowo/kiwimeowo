@@ -695,7 +695,7 @@ your own title.
   background-color: var(--yellow);
   color: var(--teal); 
   cursor: pointer;
-  padding: 10px;
+  padding: 7.5px 10px;
   width: -webkit-fill-available;
   width:-moz-available;
   text-align: left;
@@ -730,8 +730,9 @@ a.collapsible{
   content: '\002B';
   color: var(--teal);
   font-weight: bolder;
-  float: right;
-  margin-left: 5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 a.collapsible:after {
   content: "\27A4";
@@ -767,6 +768,10 @@ a.collapsible:after {
 }
 .close:hover{
   color:var(--teal);
+}
+.collapsible hr{
+  margin:5px 0;
+  border: 1px dashed var(--lteal);
 }
 .blogdate{
   display:inline-block;
