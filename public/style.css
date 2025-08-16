@@ -731,7 +731,7 @@ a.collapsible{
   color: var(--teal);
   font-weight: bolder;
   position: absolute;
-  top: 10px;
+  top: 7.5px;
   right: 10px;
 }
 a.collapsible:after {
