@@ -777,6 +777,13 @@ a.collapsible:after {
   display:inline-block;
   text-indent: 0;
 }
+.blogpreviewtag{
+  font-size:0.75em;
+  background: var(--teal);
+  color: var(--yellow);
+  padding: 2.5px 5px;
+  border-radius: 5px;
+}
 /*Blog page spoiler censors*/
 .spoiler {
   color:var(--dblue);

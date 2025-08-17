@@ -8,13 +8,6 @@
   --shadow:#1b357082;
   --bg:#0b263b75, #1f084e73;
 }
-.blogpreviewtag{
-  font-size:0.75em;
-  background: var(--teal);
-  color: var(--yellow);
-  padding: 2.5px 5px;
-  border-radius: 5px;
-}
 .collapsible:hover .blogpreviewtag,.collapsible:focus .blogpreviewtag{
   background: var(--dblue);
 }
