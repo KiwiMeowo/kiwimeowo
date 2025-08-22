@@ -86,11 +86,7 @@ for ( y=0;y<loadblogs.length;y++ ){
 /*Checks all include tag options and shows all blogs*/
  function showAll(){
         for (i = 0; i < blogs.length; i++) {
-          if(blogs[i].tagName!="A"){
-          blogs[i].classList.remove("active");
-          var content = blogs[i].nextElementSibling;
-          content.style.maxHeight = null;
-          }
+          blogHide(blogs[i])
         }
         for ( y=0;y<select.length;y++ ){
         select[y].checked=true;
@@ -103,18 +99,12 @@ for ( y=0;y<loadblogs.length;y++ ){
 /*Unchecks all include tag options and hides all blogs*/
 function hideAll(){
         for (i = 0; i < blogs.length; i++) {
-          if(blogs[i].tagName!="A"){
-          blogs[i].classList.remove("active");
-          var content = blogs[i].nextElementSibling;
-          content.style.maxHeight = null;
-          }
+          blogHide(blogs[i])
         }
         for ( y=0;y<select.length;y++ ){
         select[y].checked=false;
         }
         for ( x=0;x<blogs.length;x++ ){
-        var classtags=blogs[x].title.split(", ");
-        incl=blogs[x].getAttribute("data-include");
         blogs[x].setAttribute("data-include",0);
         }
       }
@@ -161,8 +151,9 @@ function fetchHtml(link) {
   setTimeout(Tooltips,100);
   document.getElementsByClassName("circle-out")[0].style.display="none";
   })
-  .catch(error => {
-     load.innerHTML = "Whoops my code broke";
+  .catch((error) => {
+     load.innerHTML = "<p>Whoops my code broke</p>"+`<p>${error}</p>`;
+     document.getElementsByClassName("circle-out")[0].style.display="none";
   });
 }
 /*Reset tags back to default (Check all include tags, uncheck all exclude tags)*/
@@ -180,46 +171,14 @@ function spoiler(){
   });
 }
 }
-// function wait(){
-// if (load.innerHTML!=""){
-// BlogTag();
-// TagNumbersLoad();
-// ShesGone();
-// setTimeout(Tooltips,100);
-// document.getElementsByClassName("circle-out")[0].style.display="none";
-// return
-// } else{
-// setTimeout(wait,250);
-// document.getElementsByClassName("circle-out")[0].style.display="block";
-// }
-// }
-
-// function waitold(){
-// if (load.innerHTML!=""){
-// collapse();
-// BlogDate();
-// BlogTag();
-// TagNumbersLoad();
-// ShesGone();
-// spoiler();
-// setTimeout(Tooltips,100);
-// document.getElementsByClassName("circle-out")[0].style.display="none";
-// return
-// } else{
-// setTimeout(waitold,250);
-// document.getElementsByClassName("circle-out")[0].style.display="block";
-// }
-// }
-
 /*Codes that run on load*/
  /*Calculates the number of blogs containing each tag (for current blogs)*/
   function TagNumbers(){
 for ( x=0;x<number.length;x++ ){
 number[x].innerHTML=0;
-var find=select[x].id;
 for ( y=0;y<blogs.length;y++ ){
   var tag=blogs[y].title.split(", ");
-  if (tag.includes(find)){
+  if (tag.includes(select[x].id)){
   number[x].innerHTML=parseInt(number[x].innerHTML)+1;
   }
   }
@@ -239,25 +198,17 @@ select[i].checked=true;
   select[i].addEventListener("click", function() {
   hp=this.id;
   for ( y=0;y<blogs.length;y++ ){
-  var hide=false;
   var tag=blogs[y].title.split(", ");
-  if (tag.includes(hp)){
-  hide=true;
-  }
   incl=blogs[y].getAttribute("data-include");
-   if (this.checked == false && hide==true){
+   if (this.checked == false && tag.includes(hp)){
     blogs[y].setAttribute("data-include",parseInt(incl)-1);
-  } else if (this.checked == true && hide==true){
+  } else if (this.checked == true && tag.includes(hp)){
     blogs[y].setAttribute("data-include",parseInt(incl)+1);
      
   }
   incl=blogs[y].getAttribute("data-include");
   if (parseInt(incl)==0){
-    if(blogs[y].tagName!="A"){
-  blogs[y].classList.remove("active");
-  var content = blogs[y].nextElementSibling;
-  content.style.maxHeight = null;
-    }
+    blogHide(blogs[y])
   } 
   }
   });
@@ -269,25 +220,24 @@ for ( i=0;i<exclude.length;i++ ){
   exclude[i].addEventListener("click", function() {
   hp=this.id.split("2")[0];
   for ( y=0;y<blogs.length;y++ ){
-  var hide=false;
   var tag=blogs[y].title.split(", ");
-  if (tag.includes(hp)){
-  hide=true;
-  }
   excl=blogs[y].getAttribute("data-exclude");
-   if (this.checked == false && hide==true){
+   if (this.checked == false && tag.includes(hp)){
     blogs[y].setAttribute("data-exclude",parseInt(excl)-1);
-  } else if (this.checked == true && hide==true){
+  } else if (this.checked == true && tag.includes(hp)){
      blogs[y].setAttribute("data-exclude",parseInt(excl)+1);
   }
     excl=blogs[y].getAttribute("data-exclude");
   if (parseInt(excl)>0){
-    if(blogs[y].tagName!="A"){
-  blogs[y].classList.remove("active");
-  var content = blogs[y].nextElementSibling;
-  content.style.maxHeight = null;
-  }
+    blogHide(blogs[y])
 }
   }
   });
   }
+function blogHide(blog){
+  if(blog.tagName!="A"){
+  blog.classList.remove("active");
+  var content = blog.nextElementSibling;
+  content.style.maxHeight = null;
+  }
+}
