@@ -156,7 +156,7 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 /*Auto update section*/
 #autobox{display:flex}
 #auto1, #auto2{width:50%;display:inline-block;}
-#new img, #piclog{width: 200px;aspect-ratio:1/1;object-fit: cover;}
+#new img, #piclog{width: 200px;aspect-ratio:1/1;object-fit: cover;display: inline-block;}
 #new .artborder{height:auto;width:auto;}
 #piclog{border: 3px dotted;filter: drop-shadow(4px 4px var(--highlightteal));}
 #piclog:hover{transition: color 0.5s, translate 0.1s;translate: 0px -2px;filter: drop-shadow(4px 6px var(--highlightteal));}
@@ -271,23 +271,23 @@ time.shift();
 time.shift();
 return [emoji,(time.join(" "))];
 }
-function wait(){
-if (document.getElementById("statuscafe-username").innerText!=""){
-  let [x,y]=emoji();
-document.getElementsByClassName("emoji")[0].innerHTML=x;
-document.getElementById("time").innerHTML=y;
-return
-} else{
-setTimeout(wait,250);
-}
-}
-wait()
+var observer = new MutationObserver(function(mutations) {
+   if (document.getElementById("statuscafe-username").innerText!="") {
+        console.log(":3");
+        let [x,y]=emoji();
+        document.getElementsByClassName("emoji")[0].innerHTML=x;
+        document.getElementById("time").innerHTML=y;
+        observer.disconnect();
+    }
+});
+
+observer.observe(document, {attributes: false, childList: true, characterData: false, subtree:true});
       </script>
       </div>
       <div id="statuscafe-content"></div><script src="https://status.cafe/current-status.js?name=kiwimeowo" defer></script>
       <center><a style="display:inline-block;" href="https://status.cafe" target="_blank"><img src="https://status.cafe/assets/button.png" alt="Status Cafe" class="button"></a></center>
       <hr>
-      <center><a href="https://piclog.blue/profile.php?id=445" target="_blank" style="display: inline-block;"><img src="https://piclog.blue/latest.php?id=445" id="piclog" styl="width: 200px;aspect-ratio: 1/1;object-fit: cover;border: 3px dotted;display: inline-block; filter: drop-shadow(4px 4px #97b8b5c2);"></a>
+      <center><a href="https://piclog.blue/profile.php?id=445" target="_blank"><img src="https://piclog.blue/latest.php?id=445" id="piclog"></a>
       <h2><a href="https://piclog.blue/profile.php?id=445" target="_blank">piclog</a> <a href="https://piclog.blue/profile.php?id=445" target="_blank"><img src="https://piclog.blue/logo.png" style="display:inline-block;height: 19px;vertical-align: middle;" class="button"></a></h2></center>
       </div>
       </div>
@@ -772,7 +772,17 @@ function fetchSong() {
 fetchHtml();
 fetchHtml2();
 fetchSong();
-function fetchJS() {
+var piclogobserver = new MutationObserver(function(mutations) {
+   if (document.getElementById("new").innerHTML!="" && document.getElementById("new2").innerHTML!="" && document.getElementById("new3").innerHTML!="") {
+        console.log("All fetch functions finished");
+        getTooltips();
+        indexwindow();
+        piclogobserver.disconnect();
+    }
+});
+
+piclogobserver.observe(document, {attributes: false, childList: true, characterData: false, subtree:true});
+function getTooltips() {
 //style-my-tootltips by malihu (http://manos.malihu.gr)
 //plugin home http://manos.malihu.gr/style-my-tooltips-jquery-plugin
 (function($) {
@@ -911,7 +921,7 @@ function fetchJS() {
 
 }
 
-function abcd(){
+function indexwindow(){
   var art = document.querySelectorAll('.artborder:not(a)');
 var createwindow=document.createElement('div');
   createwindow.id="window";
@@ -1000,16 +1010,6 @@ function censor(){
   artwork.classList.toggle("censor");
 }
 }
-function tooltipload(){
-if (document.getElementById("new").innerHTML!="" && document.getElementById("new2").innerHTML!="" && document.getElementById("new3").innerHTML!=""){
-fetchJS();
-abcd();
-return
-} else{
-setTimeout(tooltipload,250);
-}
-}
-tooltipload()
 </script>
 </body>
 </html>

@@ -133,11 +133,14 @@ function Current(){
         load.innerHTML = "";
         showAll();
         unexcludeAll();
+        ShesGone();
+        TagNumbers();
       }
 /*Fetch old blogs*/
 function fetchHtml(link) {
   document.getElementById("current").style.display = "none";
   load.innerHTML = "";
+  document.getElementsByClassName("circle-out")[0].style.display="block";
   fetch(link)
   .then((response) => {
     return response.text();
@@ -147,6 +150,16 @@ function fetchHtml(link) {
     var doc = parser.parseFromString(html, "text/html");
     var newdrawing = doc.querySelector('.blog').outerHTML;
     load.innerHTML = newdrawing;
+    if (link.includes("2023")||link.includes("2024")){
+      collapse();
+      BlogDate();
+      spoiler();
+    }
+    BlogTag();
+  TagNumbersLoad();
+  ShesGone();
+  setTimeout(Tooltips,100);
+  document.getElementsByClassName("circle-out")[0].style.display="none";
   })
   .catch(error => {
      load.innerHTML = "Whoops my code broke";
@@ -167,35 +180,36 @@ function spoiler(){
   });
 }
 }
-function wait(){
-if (load.innerHTML!=""){
-BlogTag();
-TagNumbersLoad();
-ShesGone();
-setTimeout(Tooltips,100);
-document.getElementsByClassName("circle-out")[0].style.display="none";
-return
-} else{
-setTimeout(wait,250);
-document.getElementsByClassName("circle-out")[0].style.display="block";
-}
-}
-function waitold(){
-if (load.innerHTML!=""){
-collapse();
-BlogDate();
-BlogTag();
-TagNumbersLoad();
-ShesGone();
-spoiler();
-setTimeout(Tooltips,100);
-document.getElementsByClassName("circle-out")[0].style.display="none";
-return
-} else{
-setTimeout(waitold,250);
-document.getElementsByClassName("circle-out")[0].style.display="block";
-}
-}
+// function wait(){
+// if (load.innerHTML!=""){
+// BlogTag();
+// TagNumbersLoad();
+// ShesGone();
+// setTimeout(Tooltips,100);
+// document.getElementsByClassName("circle-out")[0].style.display="none";
+// return
+// } else{
+// setTimeout(wait,250);
+// document.getElementsByClassName("circle-out")[0].style.display="block";
+// }
+// }
+
+// function waitold(){
+// if (load.innerHTML!=""){
+// collapse();
+// BlogDate();
+// BlogTag();
+// TagNumbersLoad();
+// ShesGone();
+// spoiler();
+// setTimeout(Tooltips,100);
+// document.getElementsByClassName("circle-out")[0].style.display="none";
+// return
+// } else{
+// setTimeout(waitold,250);
+// document.getElementsByClassName("circle-out")[0].style.display="block";
+// }
+// }
 
 /*Codes that run on load*/
  /*Calculates the number of blogs containing each tag (for current blogs)*/
