@@ -95,11 +95,11 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 #galactic-box .spot-name {width:auto;}
 #galactic-box .gw-nav-wrapper .gw-link {line-height: normal;}
 
-.mybutton{display:block;}
-.mybuttoncont{width:100%;}
+.webringarea{display:block;}
+.mywebrings{width:100%;}
 @media(max-width:1000px) and (min-width:550px){
-  .mybutton{display:flex;}
-  .mybuttoncont{width:50%;}
+  .webringarea{display:flex;}
+  .mywebrings{width:50%;}
 }
 
 /*OC chatbox stuff*/
@@ -156,7 +156,7 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 /*Auto update section*/
 #autobox{display:flex}
 #auto1, #auto2{width:50%;display:inline-block;}
-#new img, #piclog{width: 200px;aspect-ratio:1/1;object-fit: cover;display: inline-block;}
+#new img, #piclog{width: 175px;aspect-ratio:1/1;object-fit: cover;display: inline-block;}
 #new .artborder{height:auto;width:auto;}
 #piclog{border: 3px dotted;filter: drop-shadow(4px 4px var(--highlightteal));}
 #piclog:hover{transition: color 0.5s, translate 0.1s;translate: 0px -2px;filter: drop-shadow(4px 6px var(--highlightteal));}
@@ -165,10 +165,11 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 #playbar svg{fill:white;transition:fill 0.5s;filter: var(--dropshadow);}
 #playbar svg:hover{fill:#bcb9d6;filter: var(--dropshadowdown);translate:var(--down)}
 @keyframes spin{0%{rotate:0deg}100%{rotate:360deg}}
+#hrt{display:none;}
 @media ((max-width:1200px)and (min-width:1000px)) or (max-width:600px){
   #auto1, #auto2{width:100%;}
   #autohr{margin:15px 0;}
-  #autobox{display:block;}
+  #autobox,#hrt{display:block;}
 }
 @keyframes cache {0%   {rotate:-5deg}100% {rotate:5deg}}
   </style>
@@ -316,8 +317,6 @@ observer.observe(document, {attributes: false, childList: true, characterData: f
 	        <article>
 	      <h1>My best works</h1>
 	      <div class="inner">
-	      <center><p>If you want to see more, check out my <a href="art.html">art page</a></p>
-	      <p>(Hover to see my comments, click to view full image/album! Click outside the content or click on the close button to close image viewer.)</p></center>
 	      <div class="art">
 	      <button class="artborder"><img loading="lazy" src="https://dl.dropbox.com/scl/fi/zsct3tgucdo925byhgiu0/cosmosbirth3.jpg?rlkey=k6t8be7eb902g302umjjs9kc2&st=aaa3e60u&raw=1" title="Happy 3rd birthday Cosmos! I'm glad I prepared the art early, so that I can post this art on time despite my horrible food poisoning (15 Nov 2024)" alt="3rd birthday art for Cosmos"></button>
 	      <button class="artborder"><img loading="lazy" src="https://dl.dropbox.com/scl/fi/hnjrhxnwh5hec95catnh0/GC1mHesbEAAS-1K.jpeg?rlkey=a5tsq6oz9wqxewwwe4nd8kp41&st=rqsqwg6h&raw=1" title="I made a drawing for my Ipad cover! I love how it feels like a comic book cover. However, it turns out the Ipad case is very blurry, smh." alt="Drawing of Lavender and Cosmos" style="object-position: center -5px;"></button>
@@ -351,20 +350,22 @@ observer.observe(document, {attributes: false, childList: true, characterData: f
         </div>
       </article>
       <article>
+        <h1>Buttons and Webrings</h1>
        <div class="inner">
-	<div class="mybutton">
-	<div class="mybuttoncont">
-	<h3>Neocities button:</h3> 
+        <div id="mybuttons" style="max-width:275px;margin:auto;background: linear-gradient(#54b7ff78, #aecee633);padding: 7.5px;border-radius: 2.5px;border: 1px solid;padding-top: 0;filter: drop-shadow(2px 2px 1px var(--shadow));">
+          <h3 style="color:white;">Neocities<span style="float:right;text-shadow: 2px 2px #ce9db9;">Nekoweb</span></h3>
+	<div style="display:flex;">
+	<div style="width:50%;">
 	<img src="button/KiwiMeowo.png" class="button" style="image-rendering: pixelated;">
 	</div>
-	<div class="mybuttoncont">
-	<h3 style="color:#8a0b35;text-shadow: 2px 2px #fcbfe2;">Nekoweb button:</h3> 
-	<center><a href="https://kiwimeowo.nekoweb.org/" target="_blank"><img src="button/Kyrea.png" style="image-rendering: pixelated;display:inline-block;" class="button"></a></center>
+	<div style="width:50%;">
+	<a href="https://kiwimeowo.nekoweb.org/" target="_blank"><img src="button/Kyrea.png" style="image-rendering: pixelated;" class="button"></a>
 	</div>
 	</div>
+        </div>
 	<hr>
-	<div class="mybutton">
-	<div class="mybuttoncont">
+	<div class="webringarea">
+	<div class="mywebrings">
 		<div id="selfinsertwebring">
 				<script src="webring/showWebring.js"></script>
 		</div>
@@ -373,7 +374,7 @@ observer.observe(document, {attributes: false, childList: true, characterData: f
       <script type="text/javascript" src="https://darkosparko.nekoweb.org/webrings/galactic-webring/galactic-webring-widget.js"></script>
       </div>
 		</div>
-		<div class="mybuttoncont">
+		<div class="mywebrings">
 		<center><a href="https://zorrpu.com/Webring/GalleryRing" target="_blank" style="display:inline-block"><div style="width: 140px; height: 120px; border: 3px solid #328FF0; border-radius: 5px; padding: 3px; background-color:#A2DEFF;" id="galleryring">
     <img src="https://zorrpu.com/Webring/G.png" style="image-rendering: pixelated;"><br>
     <img src="webring/Gallery_Ring.png" style="margin-left: 33px; border-radius: 5px;image-rendering: pixelated;outline: 1px solid white;"></div></a>
@@ -587,112 +588,54 @@ function showSlides() {
         </div>
       </article>
       
-      <article><h1>Update</h1>
+      <article>
+        <h1>Update</h1>
         <div class="inner">
-        <div style="overflow-x:hidden;overflow-y:auto;height: 225px;border: 7.5px double;border-radius: 5px;padding: 5px 15px;">
-        <div class="text">
-          <!--
-          <li>Text</li>
-          <p class="date">( xx xxx 2025 )</p>
-          <hr>
-          -->
-          <li>Changed Wolf's glove and shoes colors</li>
-          <li>Changed the format of blog buttons to show the tags directly instead of just through hovering</li>
-          <p class="date">( 16 Aug 2025 )</p>
-          <hr>
-          <li>Added new OC <a href="oc/other/Kaylee.html">Kaylee</a></li>
-          <p class="date">( 20 Jul 2025 )</p>
-          <hr>
-          <li>Edited the cool site section to look a bit cooler.</li>
-          <p class="date">( 31 May 2025 )</p>
-          <hr>
-          <li>Some file renaming, and added<a href="fixiations/SkyCOTL.html">Sky: COTL shrine</a>.</li>
-          <p class="date">( 29 May 2025 )</p>
-          <hr>
-          <li>Renamed fandom page to fixiations page, and added<a href="fixiations/CookieRun.html">Cookie Run shrine</a>.</li>
-          <p class="date">( 24 May 2025 )</p>
-          <hr>
-          <li>Redesigned OC section</li>
-          <p class="date">( 20 May 2025 )</p>
-          <hr>
-          <li>Replaced many tags with semantic HTML tags... I hope it doesn't break anything as well...</li>
-          <p class="date">( 2 May 2025 )</p>
-          <hr>
-          <li>Guess what?! <a href="oc/Wolf.html">Wolf got a ref now</a>!!</li>
-          <p class="date">( 28 Apr 2025 )</p>
-          <hr>
-          <li>Removed the tit tag for hundreds of pages. I hope it doesn't break anything...</li>
-          <p class="date">( 16 Apr 2025 )</p>
-          <hr>
-          <li>Added <a href="drawbox.html">Drawbox</a> page, it works similarly like the drawing board in strawpage. Code made by <a href="https://drawbox.nekoweb.org/" target="_blank">Jhorn</a>!</li>
-          <p class="date">( 16 Apr 2025 )</p>
-          <hr>
-          <li>Redesigned <a href="song.html">Song Page</a>, the bottom buttons doesn't do anything for now.</li>
-          <p class="date">( 16 Apr 2025 )</p>
-          <hr>
-          <li>A bit more edits on the relchart design</li>
-          <li>Gave the OC playlist cool design</li>
-          <p class="date">( 9 Apr 2025 )</p>
-          <hr>
-          <li>Added Grey, Ruth, Claire, Solar and Jaspers's OC chat pfps, and some relationship section revamps</li>
-          <p class="date">( 8 Apr 2025 )</p>
-          <hr>
-          <li>April Fools event has ended, you can check <a href="art/AprilFools/2025/index.html">here</a> if you missed it!</li>
-          <li>Not found page mini css edit, it looks cooler now</li>
-          <p class="date">( 4 Apr 2025 )</p>
-          <hr>
-          <li><a href="oc/story/index.html">Writing page</a> redesigned!</li>
-          <p class="date">( 29 Mar 2025 )</p>
-          <hr>
-          <li><a href="oc/story/Skella.html">Skella! (The story I made back in 9 Oct 2024)</a> is added to the writings page! I also renamed the story pages to be the same as the titles (without special characters). I should do a bit of an overhaul for the pages, maybe add a psuedo tag system like AO3? And also I should move the writings page to somewhere else...</li>
-          <p class="date">( 24 Mar 2025 )</p>
-          <hr>
-          <li><a href="oc/story/The_Ultimate_Game_of_Cards.html">Game of UNO with the main gang</a> and <a href="oc/story/Math_Exam_Preparation.html">Claire suffering from Math</a>! Wow I'm writing a lot.</li>
-          <p class="date">( 27 Mar 2025 )</p>
-          <hr>
-          <li><a href="oc/story/A_Guitar_in_the_Lonely_Room.html">New story!</a> A 2.7k-words fic about Jaspers' earliest memories and how he started playing his guitar.</li>
-          <p class="date">( 24 Mar 2025 )</p>
-          <hr>
-          <li>Added moderation function in blog comment widget.</li>
-          <p class="date">( 11 Feb 2025 )</p>
-          <hr>
-          <li>Added new decor in about page</li>
-          <p class="date">( 9 Feb 2025 )</p>
-          <hr>
-          <li>Little useless secret added somewhere in the blogs?</li>
-          <p class="date">( 12 Jan 2025 )</p>
-          <hr>
-          <li>Added <a href="blog/feed.xml" target="_blank">Blog RSS feed</a></li>
-          <p class="date">( 10 Jan 2025 )</p>
-          <hr>
-          <li>Moved buttons, added buttons, rearranged buttons.</li>
-          <p class="date">( 9 Jan 2025 )</p>
-          <hr>
-          <li>The blog navigation buttons are now fixed on the bottom on your screen for easier use.</li>
-          <p class="date">( 8 Jan 2025 )</p>
-          <hr>
-          <li>I kinda promised myself to stop joining webrings because my sidebar is running out of space. But HOLY SHIT the concept of Galactic Webring is so cool, you can navigate websites represented as space objects using a telescope? Awesome</li>
-          <p class="date">( 7 Jan 2025 )</p>
-          <hr>
-          <li>Added Surf Club widget</li>
-          <p class="date">( 6 Jan 2025 )</p>
-          <hr>
-          <li>Now you can check the tags of the blog page under the status box.</li>
-          <li>Art viewer update, now you can click the prev or next button to view other art without leaving the window!</li>
-          <li>Made simple blog pages less ugly</li>
-          <p class="date">( 4 Jan 2025 )</p>
-          <hr>
-          <li>Added <a href="blog/blogmap.html">Full Blog Map</a> for when the blog index breaks, you can still view the blogs in a simplier format.</li>
-          <li>Changed titles of some pages to be cooler</li>
-          <li>Added fancy deco in OC index</li>
-          <li>I made the secret links a bit more... ghosty-looking :3</li>
-          <li>Had to mass rename images because deploy neocities thing hates capitalised file format like .PNG or .JPG etc, well at least my files look more organised</li>
-          <p class="date">( 2 Jan 2025 )</p>
-        <hr>
-        
-        <center><p><a href="updatelog.html">More update logs here</a></p></center>
-        </div></div>
+        <div id="log" style="overflow-x:hidden;overflow-y:auto;border: 7.5px double;border-radius: 5px;padding: 5px 15px;">
+        <center><a href="updatelog.html">More update logs here</a></center>
+        </div>
       </div>
+      <script>
+  fetch('updatelog.html', {cache: "no-store"})
+  .then((response) => {
+    return response.text();
+  })
+  .then((html) => {
+    var parser = new DOMParser();
+    var doc = parser.parseFromString(html, "text/html");
+    var newblog = doc.querySelector('.log');
+    document.getElementById("log").prepend(newblog);
+  })
+  .catch(error => {
+     document.getElementById("log").innerHTML = "error";
+  });
+      </script>
+    </article>
+    <article id="hrt">
+      <div class="inner">
+        <div style="border: 2px solid green;width: -moz-available;height: 250px;position: relative;border-radius:5px;background: linear-gradient(90deg,#7C7809,#D2A87D);">
+  <a href="https://x.com/snakesandrews" target="_blank"><img style="animation-name: hor-movement, ver-movement;animation-duration: 2.164s, 5.21s;animation-iteration-count: infinite;animation-direction: alternate;animation-timing-function: linear;position: absolute;image-rendering: pixelated;" src="JM.png"></a>
+</div>
+      </div>
+<style>
+@keyframes hor-movement {
+  from {
+    left: 0%;
+  }
+  to {
+    left: calc(100% - 26px);
+  }
+}
+
+@keyframes ver-movement {
+  from {
+    top: 0%;
+  }
+  to {
+    top: calc(100% - 32px);
+  }
+}
+</style>
     </article>
     </aside>
   </main>

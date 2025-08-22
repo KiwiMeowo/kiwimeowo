@@ -784,6 +784,9 @@ a.collapsible:after {
   padding: 2.5px 5px;
   border-radius: 5px;
 }
+.collapsible:hover .blogpreviewtag,.collapsible:focus .blogpreviewtag{
+  background: var(--dblue);
+}
 /*Blog page spoiler censors*/
 .spoiler {
   color:var(--dblue);

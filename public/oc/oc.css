@@ -6,7 +6,8 @@ article {
     border: 2px solid var(--yellow);
   padding: 3px;
   background:none;
-  box-shadow:4px 4px 4px 2px var(--shadow);
+  filter: drop-shadow(5px 5px 2px var(--shadow));
+  box-shadow: none;
 }
 article > h1{
   background:var(--yellow);

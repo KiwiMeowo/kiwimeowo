@@ -8,9 +8,6 @@
   --shadow:#1b357082;
   --bg:#0b263b75, #1f084e73;
 }
-.collapsible:hover .blogpreviewtag,.collapsible:focus .blogpreviewtag{
-  background: var(--dblue);
-}
 .blognav {
   position:fixed;
   z-index: 99;
