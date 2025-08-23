@@ -30,6 +30,9 @@ const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/" + GOOGLE_FORM_ID + 
 
 let canvas = document.getElementById("drawboxcanvas");
 let context = canvas.getContext("2d");
+let container = document.getElementById("container");
+canvas.width = container.clientWidth;
+canvas.height = container.clientWidth;
 context.fillStyle = "white";
 context.fillRect(0, 0, canvas.width, canvas.height);
 
