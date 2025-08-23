@@ -14,7 +14,7 @@ fetch('https://data.etabus.gov.hk/v1/transport/kmb/route/')
     }
 }
 function loadRoutes(item) {
-  var row = tcontent.insertRow();
+  var row = document.createElement("div");
   row.setAttribute('data-route',item.route);
   if(item.bound=='O'){
     row.setAttribute('data-bound','outbound');
@@ -24,18 +24,23 @@ function loadRoutes(item) {
   row.setAttribute('data-service',item.service_type);
   row.setAttribute('id',item.route);
 
-  var routeCell = row.insertCell();
-  routeCell.innerHTML = item.route;
+  var routeCell = document.createElement("div");
+  routeCell.innerHTML = `${item.route} <span>(${item.service_type})</span>`;
 
-  var originCell = row.insertCell();
-  originCell.innerHTML = item.orig_en+'<br> => '+item.dest_en;
+  var originCell = document.createElement("div");
+  originCell.innerHTML = `<div>From: ${item.orig_en}</div><div>To: ${item.dest_en}</div>`;
   originCell.setAttribute('onclick','getStops("'+row.getAttribute("data-route")+'", "'+row.getAttribute("data-bound")+'", '+row.getAttribute("data-service")+')');
 
-  var serveCell = row.insertCell();
-  serveCell.innerHTML = item.service_type;
-  var saveCell = row.insertCell();
-  saveCell.innerText="★";
+  var saveCell = document.createElement("div");
+  saveCell.innerHTML="<span>★</span>";
   saveCell.setAttribute('onclick','saveStop("'+row.getAttribute("data-route")+'", "'+row.getAttribute("data-bound")+'", '+row.getAttribute("data-service")+')');
+
+  var bottomflex=document.createElement("div");
+  row.appendChild(routeCell);
+  bottomflex.appendChild(originCell);
+  bottomflex.appendChild(saveCell);
+  row.appendChild(bottomflex);
+  tcontent.appendChild(row);
 }
 function getStops(route,bound,service){
   document.getElementById('infocontainer').classList.add('active');
@@ -52,9 +57,13 @@ function getStopName(stopid,route,bound,service){
   fetch(('https://data.etabus.gov.hk/v1/transport/kmb/stop/'+stopid))
   .then((response) => response.json())
   .then((html)=>{
-      var row = stops.insertRow();
-        var routeCell = row.insertCell();
+      var row = document.createElement("div");
+      stops.appendChild(row);
+        var routeCell = document.createElement("div");
+        row.appendChild(routeCell);
         routeCell.innerHTML = html.data.name_en;
+        var timeCell = document.createElement("div");
+        row.appendChild(timeCell);
         fetch('https://data.etabus.gov.hk/v1/transport/kmb/eta/'+stopid+'/'+route+'/'+service)
         .then((res) => res.json())
         .then((e)=>{
@@ -66,12 +75,12 @@ function getStopName(stopid,route,bound,service){
                 var distance = date - now;
                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 if (minutes<=0){
-                  routeCell.innerHTML += '<br><span>'+'- Bus coming!';
+                  timeCell.innerHTML += '<div>- Bus coming!</div>';
                 }else{
-                  routeCell.innerHTML += '<br><span>'+'- '+minutes+' minute(s) left</span>';
+                  timeCell.innerHTML += `<div>- ${minutes} minute(s) left</div>`;
                 }
               } else{
-                routeCell.innerHTML += '<br><span>No upcoming buses</span>';
+                timeCell.innerHTML += '<div>No upcoming buses</div>';
                 break
               }
             } 
@@ -101,7 +110,7 @@ function getSaved(){
     fetch('https://data.etabus.gov.hk/v1/transport/kmb/route/'+routeinfo[0]+'/'+routeinfo[1]+'/'+routeinfo[2])
       .then((response) => response.json())
       .then((html)=>{
-        var row = saved.insertRow();
+        var row = document.createElement('div');
   row.setAttribute('data-route',html.data.route);
   if(html.data.bound=='O'){
     row.setAttribute('data-bound','outbound');
@@ -110,19 +119,23 @@ function getSaved(){
   }
   row.setAttribute('data-service',html.data.service_type);
 
-  var routeCell = row.insertCell();
-  routeCell.innerHTML = html.data.route;
+  var routeCell = document.createElement('div');
+  routeCell.innerHTML = `${html.data.route} <span>(${html.data.service_type})</span>`;
 
-  var originCell = row.insertCell();
-  originCell.innerHTML = html.data.orig_en+'<br> => '+html.data.dest_en;
+  var originCell = document.createElement('div');
+  originCell.innerHTML = `<div>From: ${html.data.orig_en}</div><div>To: ${html.data.dest_en}</div>`;
   originCell.setAttribute('onclick','getStops("'+row.getAttribute("data-route")+'", "'+row.getAttribute("data-bound")+'", '+row.getAttribute("data-service")+')');
 
-  var serveCell = row.insertCell();
-  serveCell.innerHTML = html.data.service_type;
-
-  var deleteCell = row.insertCell();
-  deleteCell.innerText="Del";
+  var deleteCell = document.createElement('div');
+  deleteCell.innerHTML="<span>Del</span>";
   deleteCell.setAttribute('onclick','deleteStop(this,"'+row.getAttribute("data-route")+'", "'+row.getAttribute("data-bound")+'", '+row.getAttribute("data-service")+')');
+
+  var bottomflex=document.createElement("div");
+  row.appendChild(routeCell);
+  bottomflex.appendChild(originCell);
+  bottomflex.appendChild(deleteCell);
+  row.appendChild(bottomflex);
+  saved.appendChild(row);
       })
     }
   }
@@ -147,4 +160,13 @@ function Return(box){
     document.body.style.overflow='auto'
   }
 }
+document.addEventListener('keypress',function(){
+  if (event.key === 'Enter') {
+  document.getElementById(document.getElementById('input').value.toUpperCase()).scrollIntoView({
+      behavior: 'auto',
+      block: 'center',
+      inline: 'center'
+  });
+}
+})
 getRouteInfo();

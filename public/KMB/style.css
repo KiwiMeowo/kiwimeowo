@@ -9,25 +9,12 @@ h1{
     text-shadow: 2px 2px darkred;
 }
 #title{
-    animation-name: title;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
     font-size: 3em;
-}
-@keyframes title{
-    0% {
-        rotate: -5deg;
-    }
-    100% {
-        rotate: 5deg;
-    }
 }
 section{
     margin:10px;
 }
-table{
+#stops,#saved,#route{
     background:white;
     margin:auto 10px;
     border-radius: 7.5px;
@@ -35,33 +22,71 @@ table{
     border-collapse: collapse;
     width: -webkit-fill-available;
     width:-moz-available;
+    overflow: hidden;
 }
-#stops{
-    margin-bottom: 20px;
-}
-tr{
-    border:1px solid grey;
+#stops > div,#saved > div,#route > div{
+    border-bottom:1px solid grey;
     background: linear-gradient(white, #f0e5e5);
 }
-td{
-    border:1px solid grey;
+#stops,#saved{
+    margin-bottom: 20px;
+}
+#stops > div> div:first-child{
+    background:linear-gradient(#ff9090, #dc1919);
+    color: white;
     padding:5px;
 }
-td[onclick*="getStops"]{
-    background: linear-gradient(#ffd8d8, #ff9595);
+#stops > div> div:last-child{
+    padding:5px;
+    color:#4c57a3;
+    margin-left: 10px;
 }
-td[onclick*="getStops"]:hover{
+#route > div > div:first-child,#saved > div > div:first-child{
+    text-align: center;
+    background: linear-gradient(white, #f0e5e5);
+    border-bottom:1px solid grey;
+}
+#route > div > div:first-child span,#saved > div > div:first-child span{
+    font-size:0.75em;
+    opacity: 0.5;
+}
+#route > div > div:last-child,#saved > div > div:last-child{
+    display: flex;
+}
+div[onclick*="getStops"]{
+    background: linear-gradient(#ffd8d8, #ff9595);
+    padding:5px;
+    border-right: 1px solid grey;
+    width:90%;
+}
+div[onclick*="getStops"] div:first-child{
+    font-size:0.9em;
+}
+div[onclick*="getStops"] div:last-child{
+    font-weight: bold;
+    font-size: 1.1em;
+}
+div[onclick*="getStops"]:hover,div[onclick*="getStops"]:active{
     background:linear-gradient(#e8b7b7, #e37690);
 }
 
-td[onclick*="saveStop"],td[onclick*="deleteStop"]{
+div[onclick*="saveStop"],div[onclick*="deleteStop"]{
     background: linear-gradient(#fffbd8, #ffd895);
-    text-align: center;
+    width:10%;
+    position: relative;
 }
-td[onclick*="saveStop"]:hover,td[onclick*="deleteStop"]:hover{
+div[onclick*="saveStop"]:hover,div[onclick*="deleteStop"]:hover,div[onclick*="saveStop"]:active,div[onclick*="deleteStop"]:active{
     background: linear-gradient(#ead9af, #dd916b);
 }
-td[onclick]:hover{
+div[onclick*="saveStop"] span,div[onclick*="deleteStop"] span{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    translate: -50% -50%;
+    color: rgb(117, 5, 5);
+  text-shadow: 1px 1px 1px orange;
+}
+div[onclick]:hover{
     cursor:pointer;
 }
 #nav{
@@ -70,6 +95,7 @@ td[onclick]:hover{
     background: #00000077;
     padding:5px 0;
     color:white;
+    z-index: 1;
 }
 #nav button{
     display:inline-block;
@@ -131,6 +157,7 @@ button:hover, button:active{
     translate: 100%;
     opacity: 0;
     transition: translate 1s, opacity 1s;
+    z-index: 99;
 }
 #infocontainer.active, #savedcontainer.active{
     translate:0;
@@ -141,8 +168,4 @@ button:hover, button:active{
     background:rgb(255, 201, 189);
     position:absolute;
     top:0;
-}
-span{
-    color:#4c57a3;
-    margin-left: 10px;
 }
