@@ -13,9 +13,12 @@
         article{
             position: static;
         }
-        #gallery {
-            display: flex;
+        #gallery .galleries {
             flex-wrap: wrap;
+            display:none;
+        }
+        #gallery .galleries:first-child {
+            display:flex;
         }
         .flex{
             flex:0 0 16.66667%;
@@ -53,6 +56,42 @@
   filter: var(--dropshadowdown);
   translate: 1px 6px;
         }
+        #pagenav,.arttop{
+            text-align: center;
+            text-indent: 0;
+      font-size: x-large;
+    line-height: 1.25;
+    display: block;
+    width: fit-content;
+    margin: 0.75em auto;
+    background: linear-gradient(#228bff3b, #9eccff24);
+    padding: 5px 10px;
+    border-radius: 5px;
+    filter: var(--dropshadow);
+    color: var(--blue);
+        }
+        #pagenav button{
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: inherit;
+  margin: 0;
+  color: var(--blue);
+  transition: color 0.5s;
+  padding: 2px 6px;
+}
+.arttop{
+  display:none;
+  margin-bottom: 0.25em;
+}
+.arttop a{
+  margin: 5px;
+  color: var(--blue);
+}
+#pagenav button:hover, .arttop a:hover{
+  color: var(--teal);
+}
         @media(max-width:1200px){
             .flex{
                 flex:0 0 25%
@@ -62,6 +101,9 @@
             .flex{
                 flex:0 0 50%
             }
+            .arttop {
+    display: block;
+}
         }
     </style>
 </head>
@@ -93,7 +135,9 @@
     </article>
       <article><h1>Submitted Drawings</h1>
       <div class="inner">
+        <div id="pagenav"><button onclick="prevpage()" style="transform: scaleX(-1);">➤</button>Page: <span id="num"></span><button onclick="nextpage()">➤</button></div>
         <div id="gallery">Loading images...</div>
+        <div class="arttop"><a href="#top">Back to top</a></div>
 	      <hr>
       </div>
     </article>

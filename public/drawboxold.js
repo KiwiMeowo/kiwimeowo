@@ -172,32 +172,25 @@ async function fetchImages() {
   try {
     const response = await fetch(GOOGLE_SHEET_URL);
     const csvText = await response.text();
-    const rows1 = csvText.split("\n").slice(1);
-    var rows = rows1.filter(rows1 => rows1 !== ",,\r");
+    const rows = csvText.split("\n").slice(1);
+console.log(rows[0]);
     const gallery = document.getElementById("gallery");
     gallery.innerHTML = "";
-    document.getElementById('num').innerText="1";
-    for (x=Math.ceil(rows.length/18)-1;x>=0;x--){
-      var page=document.createElement('div');
-      page.classList.add('galleries');
-      for(y=17;y>=0;y--){
-        if (rows[y+18*x]==undefined){
-          continue;
-        }
-        const columns = rows[y+18*x].split(",");
+    rows.reverse().forEach((row) => {
+      const columns = row.split(",");
       if (columns.length < 2) return;
 
       const timestamp = columns[0].trim();
       const imgUrl = columns[1].trim().replace(/"/g, "");
 
       if (imgUrl.startsWith("http")) {
-        var div = document.createElement("div");
+        const div = document.createElement("div");
         div.classList.add("flex");
 
         if (columns[2].trim()!="FALSE"){
             div.innerHTML = `
             <div class="image-container">
-                    <img src="${imgUrl}" alt="drawing" loading="lazy">
+                    <img src="${imgUrl}" alt="drawing">
                     <p>${timestamp}</p>
                     </div>
                 `;
@@ -209,11 +202,9 @@ async function fetchImages() {
                     </div>
                 `;
         }
+        gallery.appendChild(div);
       }
-      page.appendChild(div);
-      }
-      gallery.appendChild(page);
-    }
+    });
   } catch (error) {
     console.error("Error fetching images:", error);
     document.getElementById("gallery").textContent = "Failed to load images.";
@@ -229,21 +220,3 @@ for (i = 0; i < colors.length; i++) {
   })
   }
 fetchImages();
-function prevpage(){
-  if(document.getElementsByClassName('galleries')[parseInt(document.getElementById('num').innerText)-2]!=undefined){
-    for (x=0;x<document.getElementsByClassName('galleries').length;x++){
-      document.getElementsByClassName('galleries')[x].style.display='none';
-    }
-    document.getElementsByClassName('galleries')[parseInt(document.getElementById('num').innerText)-2].style.display='flex';
-    document.getElementById('num').innerText=parseInt(document.getElementById('num').innerText)-1;
-  }
-}
-function nextpage(){
-  if(document.getElementsByClassName('galleries')[parseInt(document.getElementById('num').innerText)]!=undefined){
-    for (x=0;x<document.getElementsByClassName('galleries').length;x++){
-      document.getElementsByClassName('galleries')[x].style.display='none';
-    }
-    document.getElementsByClassName('galleries')[parseInt(document.getElementById('num').innerText)].style.display='flex';
-    document.getElementById('num').innerText=parseInt(document.getElementById('num').innerText)+1;
-  }
-}
