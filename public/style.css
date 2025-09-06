@@ -65,20 +65,13 @@ a:hover, a:focus {
   center{
   margin:0.75em 0;
 }
-u {
+u{
+  text-decoration: none;
+}
+u, u a {
   color:var(--blue);
   box-shadow:inset 0 -0.625em 0 0 var(--highlightteal);
-  text-decoration: none;
   font-weight:600;
-}
-a u{
-  text-decoration: underline;
-  text-decoration-color: var(--blue);
-}
-a u:hover{
-  color: var(--teal);
-  text-decoration-color: var(--teal);
-  transition: color 0.5s, text-decoration-color 0.5s;
 }
 h2 a, a h2{
   color:var(--blue);
@@ -672,13 +665,12 @@ your own title.
 	background: linear-gradient(0.25turn, #92bcdb6b, #93c3e633);
   border: none;
   border-radius: 0 10px 10px 0;
-  height: 30px;
   min-width: 60px;
   color: var(--blue);
   border-left: 3px solid var(--blue);
   margin: 0 5px;
   font-size: initial;
-  padding:2px 7.5px;
+  padding:5px 7.5px;
   filter: var(--dropshadow);
 }
 .coolbutton:hover{

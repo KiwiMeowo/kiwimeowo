@@ -13,10 +13,7 @@
     <style>
     main{background: linear-gradient(#0b263b75, #1f084e73 150%), url(../fancy1.png);}
     :root{--yellow:#E2DBC7;--lteal:#9db5b7;--highlightteal:#B7CBD6;--teal:#1C3F5C;--blue:#0E1A36;--dblue:#000527;--shadow:#1b357082;}
-    li u{
-        font-size: 1.5em;
-    }
-    .inner a {
+    .inner a{
     display: block;
     padding: 7.5px;
     margin: 7.5px 200px;
@@ -30,6 +27,9 @@
     filter:drop-shadow(2px 2px 1px var(--shadow));
     text-decoration:none;
 }
+a u {
+  text-decoration: none;
+}
 .inner a:hover{
   filter:drop-shadow(1px 1px 1px var(--shadow));
   translate:1px 1px;
@@ -41,18 +41,17 @@
 .inner a:after {
     content: " ✧";
 }
-.inner .lock{filter:grayscale(1)}
-.inner .lock a{
+.inner a.lock{
   translate:0 !important;
   cursor:default;
   background:var(--yellow) !important;
-  filter:drop-shadow(2px 2px 1px var(--shadow)) !important;
+  filter:drop-shadow(2px 2px 1px var(--shadow)) grayscale(1)!important;
 }
-.inner .lock a:before {
+.inner a.lock:before {
     content: url("data:image/svg+xml,%3Csvg fill='%233f6884' height='1em' width='1em' version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 330 330' xml:space='preserve' stroke='%230E1A36'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cg id='XMLID_509_'%3E%3Cpath id='XMLID_510_' d='M65,330h200c8.284,0,15-6.716,15-15V145c0-8.284-6.716-15-15-15h-15V85c0-46.869-38.131-85-85-85 S80,38.131,80,85v45H65c-8.284,0-15,6.716-15,15v170C50,323.284,56.716,330,65,330z M180,234.986V255c0,8.284-6.716,15-15,15 s-15-6.716-15-15v-20.014c-6.068-4.565-10-11.824-10-19.986c0-13.785,11.215-25,25-25s25,11.215,25,25 C190,223.162,186.068,230.421,180,234.986z M110,85c0-30.327,24.673-55,55-55s55,24.673,55,55v45H110V85z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
         margin-right: 5px;
 }
-.inner .lock a:after {
+.inner a.lock:after {
     content: url("data:image/svg+xml,%3Csvg fill='%233f6884' height='1em' width='1em' version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 330 330' xml:space='preserve' stroke='%230E1A36'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cg id='XMLID_509_'%3E%3Cpath id='XMLID_510_' d='M65,330h200c8.284,0,15-6.716,15-15V145c0-8.284-6.716-15-15-15h-15V85c0-46.869-38.131-85-85-85 S80,38.131,80,85v45H65c-8.284,0-15,6.716-15,15v170C50,323.284,56.716,330,65,330z M180,234.986V255c0,8.284-6.716,15-15,15 s-15-6.716-15-15v-20.014c-6.068-4.565-10-11.824-10-19.986c0-13.785,11.215-25,25-25s25,11.215,25,25 C190,223.162,186.068,230.421,180,234.986z M110,85c0-30.327,24.673-55,55-55s55,24.673,55,55v45H110V85z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
         margin-left: 5px;
 }
@@ -79,19 +78,19 @@ h1,h2{
       <article><h1>Where do you wanna go?</h1>
       <div class="inner min">
         <h2>2025</h2>
-        <div class="lock"><a><u>Oct - Dec</u></a></div>
-        <div><a href="2025c.html"><u>Jul - Sep</u></a></div>
-        <div><a href="2025b.html"><u>Apr - Jun</u></a></div>
-        <div><a href="2025a.html"><u>Jan - Mar</u></a></div>
+        <a class="lock"><u>Oct - Dec</u></a>
+        <a href="2025c.html"><u>Jul - Sep</u></a>
+        <a href="2025b.html"><u>Apr - Jun</u></a>
+        <a href="2025a.html"><u>Jan - Mar</u></a>
         <hr>
         <h2>2024</h2>
-        <div><a href="2024d.html"><u>Oct - Dec</u></a></div>
-        <div><a href="2024c.html"><u>Jul - Sep</u></a></div>
-        <div><a href="2024b.html"><u>Apr - Jun</u></a></div>
-        <div><a href="2024a.html"><u>Jan - Mar</u></a></div>
+        <a href="2024d.html"><u>Oct - Dec</u></a>
+        <a href="2024c.html"><u>Jul - Sep</u></a>
+        <a href="2024b.html"><u>Apr - Jun</u></a>
+        <a href="2024a.html"><u>Jan - Mar</u></a>
         <hr>
         <h2>2023</h2>
-        <div><a href="2023.html"><u>Full</u></a></div>
+        <a href="2023.html"><u>Full</u></a>
       </div>
     </article>
     </section>
