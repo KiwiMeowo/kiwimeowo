@@ -1,6 +1,6 @@
 // For blog of 19 Apr 2025
 function normal(){
-    var weird = document.querySelectorAll(".weird");
+    var weird = document.getElementsByClassName("weird");
     for (i=0;i<weird.length;i++){
         weird[i].innerText=weird[i].innerText.replace(/\bAY\b/g, "A");
         weird[i].innerText=weird[i].innerText.replace(/BEE/g, "B");
