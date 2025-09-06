@@ -1,4 +1,5 @@
-// For blog of 19 Apr 2025
+// For blogs including the sacrilegious words of EFF-OH-OH-DEE
+// Use /secret/Encode.html for more help
 function normal(){
     var weird = document.getElementsByClassName("weird");
     for (i=0;i<weird.length;i++){
