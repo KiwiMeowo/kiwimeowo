@@ -840,13 +840,32 @@ img.spoiler:hover{
   display: block;
 }
 
-img.emote{
+/* emotes */
+img.emote, emote{
   display:inline-block;
   height:1em;
+  width:1em;
   border-radius: 0px;
     vertical-align:text-top;
     margin:0 2px;
     scale:1.5;
+    background-size: cover !important;
+    object-fit: contain !important;
+}
+emote.thonkery{
+  background:url(/emote/thonkery.webp);
+}
+emote.nya{
+  background:url(/emote/nya.webp);
+}
+emote.pome_shrug{
+  background:url(/emote/pome_shrug.webp);
+}
+emote.ouh{
+  background:url(/emote/ouh.webp);
+}
+emote.gumer{
+  background:url(/emote/gumer.webp);
 }
 .emoji{
   text-shadow: -0.8px 0 var(--lteal), 0 0.8px var(--lteal), 0.8px 0 var(--lteal), 0 -0.8px var(--lteal);
