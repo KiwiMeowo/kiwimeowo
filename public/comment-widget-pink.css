@@ -180,4 +180,5 @@
 }
 .nocomment{
     text-shadow: 2px 2px 2px var(--shadow);
+    margin: 0 25px;
 }
