@@ -47,11 +47,12 @@ article > h1:not(aside h1){
     margin: 0 20px;
     padding-inline: 0;
 }
-a{
+
+article a{
     color: rgb(29, 155, 240) !important;
     text-decoration: none;
 }
-a:hover{
+article a:hover{
     text-decoration: underline;
     text-decoration-thickness: 1.5px;
 }
@@ -97,7 +98,7 @@ h1,h2{
     border-radius: 16px;
     border: 1px solid var(--lteal);
 }
-#c_widget input[type="submit"]{
+#c_widget button, #c_widget input[type="submit"]{
     background: white;
     border-radius: 50px;
     color:black;
@@ -105,7 +106,7 @@ h1,h2{
     translate: none !important;
     padding: 10px 16px;
 }
-#c_widget input[type="submit"]:hover,#c_widget input[type="submit"]:focus{
+#c_widget input[type="submit"]:hover,#c_widget input[type="submit"]:focus,#c_widget button:hover,#c_widget button:focus{
     background: #D8DBDC;
 }
 </style>

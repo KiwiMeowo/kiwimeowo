@@ -147,6 +147,11 @@
 }
 .c-reply:last-child {margin-bottom: 0;}
 
+@media(max-width:700px){
+    .c-reply{
+        padding: 15px 20px;
+    }
+}
 .c-name {
     display: inline-block;
     margin: 0;
