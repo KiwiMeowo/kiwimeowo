@@ -214,7 +214,7 @@ function getComments() {
                 else {val1 = json.table.rows[r].c[pageIdx].v}
 
                 // Check if the page name matches before adding to comment array
-                if (val1 == v_pagePath) { 
+                if (val1.split(".html")[0] == v_pagePath.split(".html")[0]) { 
                     let comment = {}
                     for (c = 0; c < json.table.cols.length; c++) {
                         // Check for null values
