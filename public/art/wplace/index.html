@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Wplace</title>
+	<link rel="icon" type="image/x-icon" href="/favicon.ico?">
+	<link href="/style.css" rel="stylesheet" type="text/css" media="all">
+	<link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script src="/jquery.style-my-tooltips.js"></script>
+	<style>
+		:root {
+			--yellow: white;
+			--teal: #3D4E68;
+			--blue: #3D4E68;
+		}
+		h1,h2 {
+			text-shadow: none;
+		}
+		article>h1:not(aside h1) {
+			border-bottom: 1px solid var(--lteal);
+		}
+		hr{
+			border-top: 1px solid var(--lteal);
+		}
+		main {
+			background: #A3BDFA;
+		}
+		article {
+			box-shadow: 4px 4px 4px 2px var(--shadow);
+			border-radius: 30px;
+		}
+		.gallery {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+		}
+		.section {
+			flex: 0 0 20%;
+			max-width: 20%;
+		}
+		.box {
+			margin: 5px;
+			border: 2px solid #E0E5EE;
+			background: #F3F7FD;
+			padding: 10px;
+			border-radius: 10px;
+		}
+		.box img {
+			object-fit: cover;
+			aspect-ratio: 1 / 1;
+			width: 100%;
+		margin: auto;
+			border: 1px solid var(--teal);
+		}
+		@media(max-width:1200px){
+			.section {
+			flex: 0 0 30%;
+			max-width: 30%;
+		}
+		}
+		@media(max-width:700px){
+			.section {
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+		}
+	</style>
+</head>
+
+<body>
+	<nav>
+		<a href="/index.html">Home</a>
+		<a href="index.html">Art Index</a>
+	</nav>
+	<main>
+		<section class="wide">
+			<article>
+				<h1 style="text-align: center;">Wplace hell yeah</h1>
+				<div class="inner">
+					<p>Ever since I discovered Wplace, I have been quite addicted to drawing there. It is such an amazing experience to see different people's drawings and reactions. What I love the most is that I get to find people who have the same interests as me in Hong Kong, I almost thought I am the only geek in this place /j</p>
+					<p>Because the artwork can be temporary due to griefing and the work can be difficult to finish due to paint limits, I decided to make a page dedicated to my Wplace art.</p>
+					<p>(Also it would be great if you help me fill out some of the spaces. If you see empty spots with the <span style="color:red;">"F"</span> marker, you can go fill in the color. Thx :3)</p>
+					<hr>
+					<div class="gallery">
+						<div class="section">
+							<div class="box">
+								<img src="img/TCW.jpg">
+								<center><a href="https://wplace.live/?lat=22.266893618291263&lng=114.05012662177732&zoom=13.582737875695601" target="_blank">The Crane Wives: Foxlore Cover<br><span style="color:red;">(Ongoing!)</span></a></center>
+							</div>
+						</div>
+						<div class="section">
+							<div class="box">
+								<img src="img/TCW_mini.jpg">
+								<center><a href="https://wplace.live/?lat=22.369665162781992&lng=113.89368130927731&zoom=14.404063741924872" target="_blank">The Crane Wives: Foxlore Cover<br>Mini version</a></center>
+							</div>
+						</div>
+						<div class="section">
+							<div class="box">
+								<img src="img/CosmosLavender.jpg">
+								<center><a href="https://wplace.live/?lat=22.441495165611123&lng=114.02024380927733&zoom=13.94627629684779" target="_blank">Cosmos and Lavender<br>Unfortunately Lav got eaten by a swirl</a></center>
+							</div>
+						</div>
+						<div class="section">
+							<div class="box">
+								<img src="img/Pome.jpg">
+								<center><a href="https://wplace.live/?lat=22.316500092726955&lng=114.24471646552735&zoom=13.945495026493653" target="_blank">Pome<br>There are two Pomes actually</a></center>
+							</div>
+						</div>
+						<div class="section">
+							<div class="box">
+								<img src="img/tmkp.jpg">
+								<center><a href="https://wplace.live/?lat=22.267869653095325&lng=114.05012662177732&zoom=12.824003541572102" target="_blank">Timekeeper<br>There are two Timekeepers actually</a></center>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+		</section>
+	</main>
+	<script src="/viewer.js"></script>
+	<script src="/spoiler.js"></script>
+	<script src="/collapsible.js"></script>
+</body>
+
+</html>
