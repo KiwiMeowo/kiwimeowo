@@ -110,8 +110,10 @@ input:checked ~ label .checkmark:after {display: block;}
 #pin{background: linear-gradient(to bottom, #390549, #a82323 80%, #8ab648);height: 1.5em;width: 1.5em;margin: 5px auto;border-radius: 50%;filter: drop-shadow(2px 2px 2px var(--shadow));border: solid 1px #530c0c;}
 #pin:before {height: 0.2em;width: 0.4em;position: absolute;content: "";background: #e5faff;border-radius: 50%;right: 36%;top: 4px;box-shadow: 0 0 6px 3px #ff7d43;filter: blur(0.5px);}
 a{cursor:pointer}
-#playbar svg{fill:#B7CBD6;transition:fill 0.5s;filter: var(--dropshadow); margin:0 5px;}
-#playbar svg:hover{fill:#bcb9d6;filter: var(--dropshadowdown);translate:var(--down)}
+#playbar .svg{background:#B7CBD6;transition:background 0.5s;height:20px;width:20px;display: inline-block;vertical-align: middle;}
+#playbar .svg:hover{background:#bcb9d6;translate:var(--down)}
+#playbar a{filter: var(--dropshadow);}
+#playbar a:hover{filter: var(--dropshadowdown);}
     </style>
   </head>
  <body>
@@ -146,7 +148,7 @@ a{cursor:pointer}
    <audio src="https://www.dropbox.com/scl/fi/fkchvivycn2q1bc90nfov/Cat_purreow1.mp3?rlkey=u9hx979osgiovj02g0umvng2o&st=deuttx6b&raw=1" class="meow"></audio>
    <audio src="https://www.dropbox.com/scl/fi/87g7u51laastdu1bnr9rb/Cat_purreow2.mp3?rlkey=nb7j45afv8ndyevro6bvalnup&st=4ghzey83&raw=1" class="meow"></audio>
     <nav>
-    <a href="/index.html">Home</a>
+    <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
     <a href="blogmap.html">Full Blog Map</a>
     <button class="navcoll">Blog Options</button>
     <div class="open">
@@ -186,8 +188,8 @@ a{cursor:pointer}
       <article id="sidenav">
       <h1>Sidebar</h1>
         <div class="inner">
-		<a class="bar" href="/index.html">Home</a>
-    <a class="bar" href="blogmap.html" style="background: linear-gradient(.25turn, #ada9dd73, #afa9dd2e);">Full Blog Map</a>
+		<a class="bar" href="/index.html" style="--svg:url(assets/home.svg)">Home</a>
+    <a class="bar" href="blogmap.html" style="background: linear-gradient(.25turn, #ada9dd73, #afa9dd2e);--svg:url(assets/map.svg)">Full Blog Map</a>
         <button class="bar coll" type="button">2025 Blogs...</button>
 		<div class="cont">
 		<button class="bar bar2 lock" type="button">Oct-Dec</button>
@@ -257,10 +259,10 @@ for (i = 0; i < coll.length; i++) {
         <p id="new3" style="margin: 1.25em 0.5em;"><a href="http://www.hmix.net/" target="_blank">H/MIX - Moment</a></p>
 <div id="playbar" style="height: 1.5em;padding: 5px 0;background: linear-gradient(var(--teal), #645886);">
   <a onclick="document.getElementById('moment').play();document.getElementById('moment').volume = 0.5;document.getElementById('cd').style.animationPlayState='running';">
-    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 408.221 408.221" xml:space="preserve" stroke="white" height="100%"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M204.11,0C91.388,0,0,91.388,0,204.111c0,112.725,91.388,204.11,204.11,204.11c112.729,0,204.11-91.385,204.11-204.11 C408.221,91.388,316.839,0,204.11,0z M286.547,229.971l-126.368,72.471c-17.003,9.75-30.781,1.763-30.781-17.834V140.012 c0-19.602,13.777-27.575,30.781-17.827l126.368,72.466C303.551,204.403,303.551,220.217,286.547,229.971z"></path></g></g></g></svg>
+    <div class="svg" style="mask-image:url(/assets/play.svg);margin-right:5px;"></div>
     </a>
     <a onclick="document.getElementById('moment').pause();document.getElementById('cd').style.animationPlayState='paused';">
-    <svg fill="white" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="100%" viewBox="0 0 45.812 45.812" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M39.104,6.708c-8.946-8.943-23.449-8.946-32.395,0c-8.946,8.944-8.946,23.447,0,32.394 c8.944,8.946,23.449,8.946,32.395,0C48.047,30.156,48.047,15.653,39.104,6.708z M20.051,31.704c0,1.459-1.183,2.64-2.641,2.64 s-2.64-1.181-2.64-2.64V14.108c0-1.457,1.182-2.64,2.64-2.64s2.641,1.183,2.641,2.64V31.704z M31.041,31.704 c0,1.459-1.183,2.64-2.64,2.64s-2.64-1.181-2.64-2.64V14.108c0-1.457,1.183-2.64,2.64-2.64s2.64,1.183,2.64,2.64V31.704z"></path> </g> </g> </g> </g></svg>
+    <div class="svg" style="mask-image:url(/assets/pause.svg);margin-left:5px;"></div>
     </a>
 </div></div>
         </center>

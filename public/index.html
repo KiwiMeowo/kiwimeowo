@@ -16,6 +16,19 @@ nav{display:none}
 @media(max-width:1000px){
   nav{display:block;}
   #sidenav{display:none;}}
+
+.bar{
+  margin-right: 10px;
+}
+.bar:nth-child(even) {
+  filter: brightness(1.5) hue-rotate(-15deg) var(--dropshadow);
+  margin-left: 10px;
+  margin-right: 0;
+}
+.bar:nth-child(2n):hover {
+  filter: brightness(1.5) hue-rotate(-15deg) var(--dropshadowdown);
+}
+
 /*Site button collection*/
   .site .sitebutton a{display:block;width: max-content;}
   .animation .site:hover{animation-play-state: paused;}
@@ -162,14 +175,20 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 #piclog:hover{transition: color 0.5s, translate 0.1s;translate: 0px -2px;filter: drop-shadow(4px 6px var(--highlightteal));}
 #autohr{margin:10px 15px 0 15px;}
 .collapsible{text-align:center}
-#playbar svg{fill:white;transition:fill 0.5s;filter: var(--dropshadow);}
-#playbar svg:hover{fill:#bcb9d6;filter: var(--dropshadowdown);translate:var(--down)}
+#playbar .svg{background:white;transition:background 0.5s;height:16px;width:16px;display: inline-block;vertical-align: middle;}
+#playbutton .svg{mask-image: url(assets/play.svg);height: 20px;width: 20px;}
+#playbar .svg:hover{background:#bcb9d6;translate:var(--down)}
+#playbar a{filter: var(--dropshadow);}
+#playbar a:hover{filter: var(--dropshadowdown);}
 @keyframes spin{0%{rotate:0deg}100%{rotate:360deg}}
 #hrt{display:none;}
-@media ((max-width:1200px)and (min-width:1000px)) or (max-width:600px){
+@media(max-width:1200px) and (min-width:1000px){
+  #hrt{display:block;}
+}
+@media ((max-width:1200px) and (min-width:1000px)) or (max-width:700px){
   #auto1, #auto2{width:100%;}
   #autohr{margin:15px 0;}
-  #autobox,#hrt{display:block;}
+  #autobox{display:block;}
 }
 @keyframes cache {0%   {rotate:-5deg}100% {rotate:5deg}}
   </style>
@@ -228,19 +247,19 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
     <button class="navcoll">Navbar</button>
     <div class="open">
       <div>
-        <a href="index.html">Home</a><br>
-        <a href="blog/index.html">Blog</a><br>
-        <a href="art/index.html">Art</a><br>
-        <a href="oc/index.html">OCs</a><br>
-        <a href="fixiations/index.html">Fixiations</a><br>
-        <a href="hamster.html">Hamster</a><br>
-        <a href="about.html">About Me</a><br>
-        <a href="food.html">Food Log</a><br>
-        <a href="song.html">Fav songs</a><br>
-        <a href="https://kiwimeowo.atabook.org/">Guestbook</a><br>
-        <a href="drawbox.html">Drawbox</a><br>
-        <a href="bookmark.html">Bookmarks</a><br>
-        <a href="sitemap.html">Sitemap</a>
+        <a href="index.html" style="--svg:url(assets/home.svg)">Home</a><br>
+        <a href="blog/index.html" style="--svg:url(assets/book.svg)">Blog</a><br>
+        <a href="art/index.html" style="--svg:url(assets/art.svg)">Art</a><br>
+        <a href="oc/index.html" style="--svg:url(assets/cat.svg)">OCs</a><br>
+        <a href="fixiations/index.html" style="--svg:url(assets/heart.svg)">Fixiations</a><br>
+        <a href="hamster.html" style="--svg:url(assets/wheel.svg)">Hamster</a><br>
+        <a href="about.html" style="--svg:url(assets/portrait.svg)">About Me</a><br>
+        <a href="food.html" style="--svg:url(assets/food.svg)">Food Log</a><br>
+        <a href="song.html" style="--svg:url(assets/music.svg)">Fav songs</a><br>
+        <a href="https://kiwimeowo.atabook.org/" style="--svg:url(assets/quill.svg)">Guestbook</a><br>
+        <a href="drawbox.html" style="--svg:url(assets/marker.svg)">Drawbox</a><br>
+        <a href="bookmark.html" style="--svg:url(assets/bookmark.svg)">Bookmarks</a><br>
+        <a href="sitemap.html" style="--svg:url(assets/map.svg)">Sitemap</a>
       </div>
     </div>
   </nav>
@@ -373,35 +392,13 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
                 <p id="new3" style="margin: 1.5em 0.5em;"></p>
                 <div id="playbar" style="height: 1.5em;padding: 5px 0;background:var(--teal)">
                   <a href="/song.html" style="margin-right: 12.5px;">
-                    <svg fill="white" height="100%" width="1em" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330.001 330.001" xml:space="preserve" stroke="white">
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                      <g id="SVGRepo_iconCarrier">
-                        <path id="XMLID_239_" d="M320.741,1.142c-5.603-2.322-12.057-1.039-16.347,3.252L180,128.786V15c0-6.067-3.654-11.537-9.26-13.858 c-5.602-2.322-12.057-1.039-16.347,3.252L30,128.786V15c0-8.284-6.716-15-15-15S0,6.716,0,15v300c0,8.284,6.716,15,15,15 s15-6.716,15-15V201.212l124.394,124.395c2.869,2.87,6.706,4.394,10.609,4.394c1.933,0,3.882-0.374,5.737-1.142 c5.605-2.322,9.26-7.792,9.26-13.858V201.212l124.394,124.395c2.869,2.87,6.706,4.394,10.609,4.394c1.933,0,3.882-0.374,5.737-1.142 c5.605-2.322,9.26-7.792,9.26-13.858V15C330,8.933,326.346,3.464,320.741,1.142z"></path>
-                      </g>
-                    </svg>
+                    <div class="svg" style="mask-image:url(assets/left.svg)"></div>
                   </a>
                   <a id="playbutton" target="_blank">
-                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 408.221 408.221" xml:space="preserve" stroke="white" height="100%">
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                      <g id="SVGRepo_iconCarrier">
-                        <g>
-                          <g>
-                            <path d="M204.11,0C91.388,0,0,91.388,0,204.111c0,112.725,91.388,204.11,204.11,204.11c112.729,0,204.11-91.385,204.11-204.11 C408.221,91.388,316.839,0,204.11,0z M286.547,229.971l-126.368,72.471c-17.003,9.75-30.781,1.763-30.781-17.834V140.012 c0-19.602,13.777-27.575,30.781-17.827l126.368,72.466C303.551,204.403,303.551,220.217,286.547,229.971z"></path>
-                          </g>
-                        </g>
-                      </g>
-                    </svg>
+                    <div class="svg"></div>
                   </a>
                   <a href="/song.html" style="margin-left: 12.5px;">
-                    <svg fill="white" height="100%" width="1em" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330.001 330.001" xml:space="preserve" stroke="white">
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                      <g id="SVGRepo_iconCarrier">
-                        <path id="XMLID_238_" d="M315.001,0.001c-8.284,0-15,6.716-15,15v113.788L175.607,4.394c-4.29-4.29-10.743-5.574-16.347-3.252 c-5.605,2.322-9.26,7.792-9.26,13.858v113.788L25.607,4.394C21.317,0.104,14.864-1.18,9.26,1.142 c-5.605,2.322-9.26,7.792-9.26,13.858v300c0,6.067,3.654,11.537,9.26,13.858c1.855,0.769,3.805,1.143,5.736,1.143 c3.904,0,7.741-1.524,10.61-4.394l124.394-124.392v113.786c0,6.067,3.654,11.537,9.26,13.858c1.855,0.769,3.805,1.143,5.736,1.143 c3.904,0,7.741-1.524,10.61-4.394l124.394-124.392v113.786c0,8.284,6.716,15,15,15c8.284,0,15-6.716,15-15v-300 C330.001,6.716,323.285,0.001,315.001,0.001z"></path>
-                      </g>
-                    </svg>
+                    <div class="svg" style="mask-image:url(assets/right.svg)"></div>
                   </a>
                 </div>
               </div>
@@ -430,19 +427,19 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
       <article id="sidenav">
         <h1>Navbar</h1>
         <div class="inner">
-          <a class="bar" href="index.html">Home</a>
-          <a class="bar" href="blog/index.html">Blog</a>
-          <a class="bar" href="art/index.html">Art</a>
-          <a class="bar" href="oc/index.html">OCs</a>
-          <a class="bar" href="fixiations/index.html">Fixiations</a>
-          <a class="bar" href="hamster.html">Hamster</a>
-          <a class="bar" href="about.html">About Me</a>
-          <a class="bar" href="food.html">Food Log</a>
-          <a class="bar" href="song.html">Fav songs</a>
-          <a class="bar" href="https://kiwimeowo.atabook.org/">Guestbook</a>
-          <a class="bar" href="drawbox.html">Drawbox</a>
-          <a class="bar" href="bookmark.html">Bookmarks</a>
-          <a class="bar" href="sitemap.html">Sitemap</a>
+          <a class="bar" href="index.html" style="--svg:url(assets/home.svg)">Home</a>
+          <a class="bar" href="blog/index.html" style="--svg:url(assets/book.svg)">Blog</a>
+          <a class="bar" href="art/index.html" style="--svg:url(assets/art.svg)">Art</a>
+          <a class="bar" href="oc/index.html" style="--svg:url(assets/cat.svg)">OCs</a>
+          <a class="bar" href="fixiations/index.html" style="--svg:url(assets/heart.svg)">Fixiations</a>
+          <a class="bar" href="hamster.html" style="--svg:url(assets/wheel.svg)">Hamster</a>
+          <a class="bar" href="about.html" style="--svg:url(assets/portrait.svg)">About Me</a>
+          <a class="bar" href="food.html" style="--svg:url(assets/food.svg)">Food Log</a>
+          <a class="bar" href="song.html" style="--svg:url(assets/music.svg)">Fav songs</a>
+          <a class="bar" href="https://kiwimeowo.atabook.org/" style="--svg:url(assets/quill.svg)">Guestbook</a>
+          <a class="bar" href="drawbox.html" style="--svg:url(assets/marker.svg)">Drawbox</a>
+          <a class="bar" href="bookmark.html" style="--svg:url(assets/bookmark.svg)">Bookmarks</a>
+          <a class="bar" href="sitemap.html" style="--svg:url(assets/map.svg)">Sitemap</a>
         </div>
       </article>
       <article>

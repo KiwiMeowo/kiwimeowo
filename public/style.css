@@ -202,7 +202,20 @@ nav a:hover, footer a:hover, nav a:focus, footer a:focus {
   transition: color 0.5s ,text-decoration-color 0.5s;
   text-decoration-color: #bcb9d6;
   }
-
+  nav a[style*="--svg"]:before{
+  height: 15px;
+  display: inline-block;
+  aspect-ratio: 1/1;
+  margin-right: 5px;
+  mask-image: var(--svg);
+  background: white;
+  content: "";
+  transition: background 0.5s;
+  vertical-align: sub;
+}
+nav a[style*="--svg"]:hover:before{
+  background: #bcb9d6;
+}
 button.navcoll {
     margin: 7.5px 2px;
     color: var(--blue);
@@ -342,7 +355,18 @@ aside h1{
   width:-moz-available;
   cursor:pointer;
   }
-  
+  .bar[style*="--svg"]:before{
+  height: 15px;
+  display: inline-block;
+  aspect-ratio: 1/1;
+  margin-right: 5px;
+  mask-image: var(--svg);
+  background: var(--blue);
+  content: "";
+}
+.bar[style*="--svg"]:hover:before{
+  background: var(--dblue);
+}
 .bar:hover, .bar:focus{
   background: linear-gradient(0.25turn, #3654bf54,#3654bf21);
   border-left: 3px solid var(--dblue);
