@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My lovely OCs~</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?">
-    <link href="../style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="../style-my-tooltips.css" rel="stylesheet" type="text/css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-    <script src="../jquery.style-my-tooltips.js"></script>
-    <style>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My lovely OCs~</title>
+	<link rel="icon" type="image/x-icon" href="/favicon.ico?">
+	<link href="../style.css" rel="stylesheet" type="text/css" media="all">
+	<link href="../style-my-tooltips.css" rel="stylesheet" type="text/css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script src="../jquery.style-my-tooltips.js"></script>
+	<style>
         :root{
             --bg: #000000bb, #00000059 150%;
         }
@@ -26,10 +26,18 @@
             flex-wrap: wrap;
             margin: 30px 0;
             justify-content: center;
+          background-image: repeating-linear-gradient(#310101, #310101 2.5px,var(--shadow) 2.5px, var(--shadow) 52.5px, #0321515e 102.5px,#0321515e 237.5px, #0321515e 287.5px,var(--shadow) 337.5px, #310101 337.5px,#310101 340px),url(/assets/freepik-wood.jpg);
+  border-inline: 5px solid #310101;
+  border-block: 2.5px solid #310101;
+  box-shadow: inset 25px 0px 20px var(--shadow),inset -25px 0px 20px var(--shadow);
+  box-sizing: border-box;
         }
         .column{
             flex:0 0 33.333%;
             max-width: 33.333%;
+        }
+        .column:last-child{
+          border-bottom: none;
         }
         .book {
   width: 200px;
@@ -85,7 +93,7 @@
   transform: translateZ(-15px);
   background-color: pink;
   border-radius: 0 5px 5px 0;
-  box-shadow: -10px 0 50px 10px #666;
+  box-shadow: -10px 0 50px 10px #b8c5dda8;
   box-sizing: border-box;
   height: 283px;
   width: 200px;
@@ -146,55 +154,54 @@
             max-width: 100%;
         }
         }
-
     </style>
-  </head>
- <body>
-  <nav>
-      <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
-  </nav>
-  <main>
-    <h1>Pick up a book?</h1>
-    <div id="books">
-            <div class="column">
-                <a class="book-container" href="UtSS/index.html" title="Upon the Starry Sky (UtSS)">
-                    <div class="book" id="UtSS">
-                        <img src="cover/UtSS.jpg">
-                        <img src="chatprof/Cosmos.png" id="Cosmos" class="char" style="rotate: 10deg;right:20px">
-                        <img src="chatprof/Lavender.png" id="Lavender" class="char" style="rotate: 30deg; right:10px;">
-                        <img src="chatprof/Ruth.png" id="Ruth" class="char" style="rotate:-5deg; left:10px;top: 70px;">
-                        <img src="chatprof/Grey.png" id="Grey" class="char" style="rotate: 10deg; top: 120px;right:10px;">
-                        <img src="chatprof/Wolf.png" id="Wolf" class="char" style="rotate: -100deg; top:200px;">
-                    </div>
-                </a>
-            </div>
-            <div class="column">
-                <a class="book-container" href="DW/index.html" title="Dreamland Workshop (DW)">
-                    <div class="book" id="DW">
-                        <div class="bookinner">
-                            <h2 style="text-shadow: 2px 2px #ba6300;">Dreamland Workshop</h2>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="column">
-                <a class="book-container" href="other/index.html" title="Other OCs">
-                    <div class="book" id="other">
-                        <img src="cover/other.jpg">
-                    </div>
-                </a>
-            </div>
-            <div class="column">
-                <a class="book-container" href="story/index.html" title="Cool writing">
-                    <div class="book">
-                        <div class="bookinner">
-                            <h2 style="position: absolute;top:75%;left: 50%;translate: -50% -50%;background-color: #ffffffac;padding:10px 15px;color:#970000;text-shadow: 1px 1px pink;">Writings</h2>
-                            <img src="../art/Album18.jpg">
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </main>
+</head>
+<body>
+	<nav>
+		<a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
+	</nav>
+	<main>
+		<h1>Pick up a book?</h1>
+		<div id="books">
+			<div class="column">
+				<a class="book-container" href="UtSS/index.html" title="Upon the Starry Sky (UtSS)">
+					<div class="book" id="UtSS">
+						<img src="cover/UtSS.jpg">
+						<img src="chatprof/Cosmos.png" id="Cosmos" class="char" style="rotate: 10deg;right:20px">
+						<img src="chatprof/Lavender.png" id="Lavender" class="char" style="rotate: 30deg; right:10px;">
+						<img src="chatprof/Ruth.png" id="Ruth" class="char" style="rotate:-5deg; left:10px;top: 70px;">
+						<img src="chatprof/Grey.png" id="Grey" class="char" style="rotate: 10deg; top: 120px;right:10px;">
+						<img src="chatprof/Wolf.png" id="Wolf" class="char" style="rotate: -100deg; top:200px;">
+					</div>
+				</a>
+			</div>
+			<div class="column">
+				<a class="book-container" href="DW/index.html" title="Dreamland Workshop (DW)">
+					<div class="book" id="DW">
+						<div class="bookinner">
+							<h2 style="text-shadow: 2px 2px #ba6300;">Dreamland Workshop</h2>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="column">
+				<a class="book-container" href="other/index.html" title="Other OCs">
+					<div class="book" id="other">
+						<img src="cover/other.jpg">
+					</div>
+				</a>
+			</div>
+			<div class="column">
+				<a class="book-container" href="story/index.html" title="Cool writing">
+					<div class="book">
+						<div class="bookinner">
+							<h2 style="position: absolute;top:75%;left: 50%;translate: -50% -50%;background-color: #ffffffac;padding:10px 15px;color:#970000;text-shadow: 1px 1px pink;">Writings</h2>
+							<img src="../art/Album18.jpg">
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</main>
 </body>
 </html>
