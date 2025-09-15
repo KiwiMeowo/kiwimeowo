@@ -12,7 +12,7 @@ background-image: url(../../paper-texture.png);
 h1,h2{
   text-shadow: 1px 1px var(--lteal);
 }
-p.tags{
+.inner p.tags{
     text-indent: 0;
     font-size:0.90em;
   }
