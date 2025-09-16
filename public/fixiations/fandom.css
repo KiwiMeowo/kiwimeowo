@@ -8,7 +8,7 @@
     --shadow:#4304047a;
 }
 main{
-    background:linear-gradient(#af271ca3, #c52c4385 75%), url(/fancy1.png)
+    background:linear-gradient(#af271ca3, #c52c4385 75%), url(/assets/fancy.png)
     }
   ::-webkit-scrollbar-track {
   background-color: #b1251a;

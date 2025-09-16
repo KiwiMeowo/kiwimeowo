@@ -50,7 +50,7 @@ justify-content: space-around;
   padding:7.5px;
 }
 .simple{
-  background: linear-gradient(#0b263b75, #1f084e73 150%), url(/fancy1.png);
+  background: linear-gradient(#0b263b75, #1f084e73 150%), url(/assets/fancy.png);
   min-height: calc(100vh - 45px);
   position: static;
 }

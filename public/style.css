@@ -306,7 +306,7 @@ header {
   border: 5px solid #fff;
   border-radius: 50%;
   filter: drop-shadow(3px 3px var(--highlightteal));
-  content: url("cat.png");
+  content: url("oc/UtSS/icon/Cosmos.png");
   position: absolute;
   right: 0;
   }
@@ -315,7 +315,7 @@ header {
 main {
   padding: 50px 50px;
   margin: 0 auto;
-  background: linear-gradient(var(--bg)), url(fancy1.png); /*Gradient makes tiles "fade in".*/
+  background: linear-gradient(var(--bg)), url(/assets/fancy.png); /*Gradient makes tiles "fade in".*/
   min-height:calc(100vh - 100px);
   display:flex;
 }
