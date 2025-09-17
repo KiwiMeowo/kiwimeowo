@@ -96,8 +96,6 @@ article > h1{
   top:0;
   transform: rotateY(180deg);
   width: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 .relBack p{
   padding: 5px;
@@ -105,6 +103,8 @@ article > h1{
   border-radius: 0 0 5px 5px;
   color:var(--blue);
   text-shadow: none;
+  overflow-y: scroll;
+  height:calc(100% - 10px);
 }
 .relChar button{
   position: absolute;
@@ -113,17 +113,43 @@ article > h1{
   background: none;
   border: none;
   cursor: pointer;
-  text-shadow: 1.5px 1.5px var(--lteal);
+  padding: 2px;
+  animation-name: hint;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-timing-function: linear;
 }
 .relChar button:hover{
-  text-shadow: 1px 1px var(--lteal);
-  translate: 0.5px 0.5px;
+  translate: 0 0;
+  animation-play-state: paused;
+}
+@keyframes hint{
+  0%{
+    translate:-1px -1px;
+  }
+  49.9%{
+    translate:-1px -1px;
+  }
+  50%{
+    translate: 0px 0px;
+  }
+  100%{
+    translate: 0px 0px;
+  }
 }
 .relChar button:after {
-  content: "⧐";
-  color: var(--blue);
+  content: "";
+  width:15px;
+  height: 15px;
+  mask-image: url("/assets/triangle_corner.svg");
+  background: var(--blue);
   display: block;
   font-size: 1.5em;
+  transition: background 0.5s;
+}
+.relChar button:hover:after{
+  background: var(--teal);
 }
 .relChar h2{
   font-size: 1.25em;
