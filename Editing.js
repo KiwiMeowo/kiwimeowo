@@ -7,15 +7,18 @@ const filePath = '';
 // Read the HTML file
 fs.readFile(filePath, 'utf8', (err, data) => {
   if (err) {
-    console.error('Error reading the file:', err);
+    console.error('Where the fuck am I:', err);
     return;
   }
 
   // Load the HTML content into Cheerio
   const $ = cheerio.load(data);
 
-  // Select all elements with the class "e" and wrap them in a <div class="b">
-    $("#testing").wrap('<div class="b"></div>');
+  // Why is Node js like this
+
+    // $('.testing').each(function () {
+    //$(this).wrap('<div class="example"></div>');
+  //});
 
   // Get the modified HTML
   const modifiedHtml = $.html();
@@ -23,9 +26,9 @@ fs.readFile(filePath, 'utf8', (err, data) => {
   // Write the modified HTML back to the file
   fs.writeFile(filePath, modifiedHtml, 'utf8', (err) => {
     if (err) {
-      console.error('Error writing to the file:', err);
+      console.error('Ah fuck:', err);
       return;
     }
-    console.log('HTML file successfully updated!');
+    console.log("What's done is done. Done, done, done.");
   });
 });
