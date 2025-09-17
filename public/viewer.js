@@ -99,7 +99,7 @@ function checkCensor(openid){
 
 //Load image to prevent delay everytime you click a new image
 function loadIMG(openid){
-  artwork.src="/loading.gif";
+  artwork.src="/assets/loading.gif";
       setTimeout(function(){
         artwork.src=openid.getElementsByTagName("img")[0].src;
     },100);

@@ -2,8 +2,8 @@ function unhideRel(button,BoxName) {
     document.getElementById(BoxName).classList.remove("pop"); 
     button.style.display = "none"; 
   }
-function openRel(name){
-  document.getElementById(name).classList.toggle("impressactive");
+function toggleRel(element){
+  document.getElementById(element).classList.toggle("flip");
 }
 var playbuttons = document.getElementById("playbuttons").getElementsByTagName("button");
 var music = document.getElementById("playlist").getElementsByTagName("a");

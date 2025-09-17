@@ -1,98 +1,115 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My lovely OCs~</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico?">
-    <link href="../../style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="../oc.css" rel="stylesheet" type="text/css" media="all">
-    <link href="../../style-my-tooltips.css" rel="stylesheet" type="text/css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-    <script src="../../jquery.style-my-tooltips.js"></script>
-    <style>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My lovely OCs~</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?">
+  <link href="../../style.css" rel="stylesheet" type="text/css" media="all">
+  <link href="../oc.css" rel="stylesheet" type="text/css" media="all">
+  <link href="../../style-my-tooltips.css" rel="stylesheet" type="text/css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script src="../../jquery.style-my-tooltips.js"></script>
+  <style>
     </style>
-  </head>
- <body>
+</head>
+<body>
   <nav>
-      <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
-      <a href="../index.html">Worlds</a>
-      <a href="index.html">UtSS</a>
-    </nav>
-  
+    <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
+    <a href="../index.html">Worlds</a>
+    <a href="index.html">UtSS</a>
+  </nav>
+
   <main>
     <aside>
       <article>
         <div class="inner">
-        <div class="prof"><img src="icon/Cosmos.png"></div>
-	      <p>Name: <u>Cosmos ( she/her )</u></p>
-	      <p>Birthday: 15 November</p>
-	      <p>Height: 180 cm</p>
-	      <p>Element: ???</p>
-        <hr>
-        <h2>Likes</h2>
-        <ul>
-        <li>Flying around</li>
-        <li>Sunrise</li>
-        </ul>
-        <h2>Dislikes</h2>
-        <ul>
-        <li>Dark places</li>
-        <li>Being trapped</li>
-        </ul>
+          <div class="prof"><img src="icon/Cosmos.png"></div>
+          <p>Name: <u>Cosmos ( she/her )</u></p>
+          <p>Birthday: 15 November</p>
+          <p>Height: 180 cm</p>
+          <p>Element: ???</p>
+          <hr>
+          <h2>Likes</h2>
+          <ul>
+            <li>Flying around</li>
+            <li>Sunrise</li>
+          </ul>
+          <h2>Dislikes</h2>
+          <ul>
+            <li>Dark places</li>
+            <li>Being trapped</li>
+          </ul>
         </div>
       </article>
-      <article><h1>Her impressions of...</h1>
-      <div class="inner">
-        <div class="relChar">
-          <div class="relContain">
-            <div class="icon"><a href="Lavender.html"><img src="../chatprof/Lavender.png"></a></div>
-          <span><h3><a href="Lavender.html">Lavender:</a></h3>Close friend (Trust)</span>
+      <article>
+        <h1>Her impressions of...</h1>
+        <div class="inner">
+          <div class="relChar" id="Lavender">
+            <div class="relFront">
+              <div class="icon"><a href="Lavender.html"><img src="../chatprof/Lavender.png"></a>
+              </div>
+              <div class="info">
+                <h3><a href="Lavender.html">Lavender:</a></h3>
+                <p>Close friend (Trust)</p>
+                <button onclick="toggleRel('Lavender')"></button>
+              </div>
+            </div>
+            <div class="relBack" id="Lavender">
+              <p>"She may look cold, but she always protects us from danger!"</p>
+              <button onclick="toggleRel('Lavender')"></button>
+            </div>
           </div>
-          <button onclick="openRel('Lavender')">open</button>
-        </div>
-        <div class="impression" id="Lavender">
-          <p>"She may look cold, but she always protects us from danger!"</p>
-        </div>
 
-        <div class="relChar">
-          <div class="relContain">
-          <div class="icon"><a href="Grey.html"><img src="../chatprof/Grey.png"></a></div>
-          <span><h3><a href="Grey.html">Grey:</a></h3>Travel Companion (Trust)</span>
-        </div>
-          <button onclick="openRel('Grey')">open</button>
-        </div>
-        <div class="impression" id="Grey">
-          <p>"Hmm you seem kinda... hey why are you running away?!"</p>
-        </div>
-        <div class="relChar">
-          <div class="relContain">
-          <div class="icon"><a href="Ruth.html"><img src="../chatprof/Ruth.png"></a></div>
-          <span><h3><a href="Ruth.html">Ruth:</a></h3>Travel Companion (Trust)</span>
-        </div>
-        <button onclick="openRel('Ruth')">open</button>
-        </div>
-        <div class="impression" id="Ruth">
-          <p>"When I just met her, I already knew that she's nice!"</p>
-        </div>
+          <div class="relChar" id="Grey">
+            <div class="relFront">
+              <div class="icon"><a href="Grey.html"><img src="../chatprof/Grey.png"></a></div>
+              <div class="info">
+                <h3><a href="Grey.html">Grey:</a></h3>
+                <p>Travel Companion (Trust)</p>
+                <button onclick="toggleRel('Grey')"></button>
+              </div>
+            </div>
+            <div class="relBack">
+              <p>"Hmm you seem kinda... hey why are you running away?!"</p>
+              <button onclick="toggleRel('Grey')"></button>
+            </div>
+          </div>
+          <div class="relChar" id="Ruth">
+            <div class="relFront">
+              <div class="icon"><a href="Ruth.html"><img src="../chatprof/Ruth.png"></a></div>
+              <div class="info">
+                <h3><a href="Ruth.html">Ruth:</a></h3>
+                <p>Travel Companion (Trust)</p>
+                <button onclick="toggleRel('Ruth')"></button>
+              </div>
+            </div>
+            <div class="relBack" id="Ruth">
+              <p>"When I just met her, I already knew that she's nice!"</p>
+              <button onclick="toggleRel('Ruth')"></button>
+            </div>
+          </div>
 
-        <div class="relChar">
-          <div class="relContain">
-          <div class="icon"><a href="Wolf.html"><img src="../chatprof/Wolf.png"></a></div>
-          <span><h3><a href="Wolf.html">Wolf:</a></h3>Travel Companion (Friendly)</span>
-        </div>
-          <button onclick="openRel('Wolf')">open</button>
-        </div>
-        <div class="impression" id="Wolf">
-          <p>"He is strange but is not a threat, annoying at times but kinda funny as well!"</p>
-        </div>
+          <div class="relChar" id="Wolf">
+            <div class="relFront">
+              <div class="icon"><a href="Wolf.html"><img src="../chatprof/Wolf.png"></a></div>
+              <div class="info">
+                <h3><a href="Wolf.html">Wolf:</a></h3>Travel Companion (Friendly)<button onclick="toggleRel('Wolf')"></button>
+              </div>
+            </div>
+            <div class="relBack" id="Wolf">
+              <p>"He is strange but is not a threat, annoying at times but kinda funny as well!"</p>
+              <button onclick="toggleRel('Wolf')"></button>
+            </div>
+          </div>
         </div>
       </article>
       <article id="playlist">
         <h1>Playlist</h1>
         <div class="song inner">
-        <li><a href="https://youtu.be/qnX2CdOBcDI?si=o-afosoQl-OMYMyW">Hachi Donut Hole</a></li>
-        <li><a href="https://youtu.be/JhuaYitvAaw?si=DoWRYJWVSOAKTRDc">Harumaki Gohan Dreamless Dreams</a></li>
+          <li><a href="https://youtu.be/qnX2CdOBcDI?si=o-afosoQl-OMYMyW">Hachi Donut Hole</a></li>
+          <li><a href="https://youtu.be/JhuaYitvAaw?si=DoWRYJWVSOAKTRDc">Harumaki Gohan Dreamless
+              Dreams</a></li>
         </div>
         <div id="playbuttons">
           <button>⇤</button>
@@ -101,57 +118,109 @@
         </div>
       </article>
     </aside>
-    
+
     <section>
-      <article><h1>"Everything will work out if we work together!"</h1>
-      <div class="inner min">
-      <center><h2>Human form</h2></center>
-      <img src="ref/Cosmos.png">
-      <hr>
-      <center><h2>Cat form</h2></center>
-      <img src="ref/Cosmo.png">
-        <center><i>"Sealed inside an artifact, this entity was rumored to be a dangerous being capable of devouring unfortunate lives that come near it. However, when a wanderer breaks her out, instead of a life-threatening monster, a voice cheerfully greets her, asking to help save Stardust Isle. Despite allegedly able to share abilities, Cosmos was shocked to find she fails to do many things that entities of the same kind can do. However, the rumors regarding her powers aren't completely wrong."</i></center>
-        <hr>
-        <center><h2>Facts about her:</h2></center>
-        <ul>
-          <li>She's supposed to be a magical creature called cometling, for why she has a human form, that would require a lot of explaining...</li>
-          <li>She cares about her appearance quite much, and makes a lot of effort trying to look cool</li>
-          <li>She likes flying to somewhere high up and watch the view, particularly during dawn</li>
-          <li>Though she has strong magic within her, she does not know how to use it, so she trains magic with Lavender often</li>
-          <li>She's bad at lying, nor she enjoys doing it</li>
-          <li>She often suffers from nightmares, so she often finds Lavender for comfort</li>
+      <article>
+        <h1>"Everything will work out if we work together!"</h1>
+        <div class="inner min">
+          <center>
+            <h2>Human form</h2>
+          </center>
+          <img src="ref/Cosmos.png">
+          <hr>
+          <center>
+            <h2>Cat form</h2>
+          </center>
+          <img src="ref/Cosmo.png">
+          <center><i>"Sealed inside an artifact, this entity was rumored to be a dangerous being
+              capable of devouring unfortunate lives that come near it. However, when a wanderer
+              breaks her out, instead of a life-threatening monster, a voice cheerfully greets her,
+              asking to help save Stardust Isle. Despite allegedly able to share abilities, Cosmos
+              was shocked to find she fails to do many things that entities of the same kind can do.
+              However, the rumors regarding her powers aren't completely wrong."</i></center>
+          <hr>
+          <center>
+            <h2>Facts about her:</h2>
+          </center>
+          <ul>
+            <li>She's supposed to be a magical creature called cometling, for why she has a human
+              form, that would require a lot of explaining...</li>
+            <li>She cares about her appearance quite much, and makes a lot of effort trying to look
+              cool</li>
+            <li>She likes flying to somewhere high up and watch the view, particularly during dawn
+            </li>
+            <li>Though she has strong magic within her, she does not know how to use it, so she
+              trains magic with Lavender often</li>
+            <li>She's bad at lying, nor she enjoys doing it</li>
+            <li>She often suffers from nightmares, so she often finds Lavender for comfort</li>
           </ul>
-        <hr>
-        <ul>
-          <li>She's inspired by my Sky kid, hence the blue and gold colors</li>
-          <li>(It's also why I almost gave her twin tails)</li>
-          <li>She nearly became my sona until I decided she's too cool to be my sona</li>
+          <hr>
+          <ul>
+            <li>She's inspired by my Sky kid, hence the blue and gold colors</li>
+            <li>(It's also why I almost gave her twin tails)</li>
+            <li>She nearly became my sona until I decided she's too cool to be my sona</li>
           </ul>
-        <hr>
-      </div>
-    </article>
-      <article><h1>Gallery</h1>
-      <div class="inner">
-      <center><p>Hover to see my <span style="font-size:0.66em;">pointless</span> comments, click to view full image/album! Click outside the content or click on the close button to close image viewer.</p></center>
-      <div class="art">
-        <button class="artborder"><img loading="lazy" src="https://www.dropbox.com/scl/fi/zsct3tgucdo925byhgiu0/cosmosbirth3.jpg?rlkey=k6t8be7eb902g302umjjs9kc2&amp;st=aaa3e60u&amp;raw=1" title="Happy 3rd birthday Cosmos! I'm glad I prepared the art early, so that I can post this art on time despite my horrible food poisoning (15 Nov 2024)" alt="3rd birthday art for Cosmos" style=""></button>
-          <button class="artborder"><img src="https://www.dropbox.com/scl/fi/qz9l4ti2haoqzyrfsrbrc/IMG_8493.jpg?rlkey=gyigxkl9n714d94k1veiwb7bx&amp;raw=1" title="I think Cosmos has broken the fabric of reality at least once" alt="Drawing of Cosmos and Lavender referencing the meme 'Who Knocked Over My Onions'"></button>
-          <button class="artborder"><img style="object-position:top center;" src="https://www.dropbox.com/scl/fi/7576r16rxdb99x5y65qoo/F-6BfQVbIAAbkdA.jpeg?rlkey=lziops6x2e7v6yemxb0mok8yd&amp;st=6fky27an&amp;raw=1" title="Birthday art for Cosmos (15 Nov 2023)" alt="Drawing of Cosmos"></button>
-          <button class="artborder"><img style="object-position:top center;" src="https://www.dropbox.com/scl/fi/8gtoimqw12yrlcw4h9dbl/F8QDTZWbcAAdUmM.jpeg?rlkey=crax4uklp9f7ilenr9d494nj8&amp;st=y7stlria&amp;raw=1" title="Cosmos trying to lie about something something she's a human" alt="Cosmos lying while looking guilty af"></button>
-          <button class="artborder"><img style="object-position:top center;" src="https://www.dropbox.com/scl/fi/zuvr7kyjz6tvnkse9l2un/IMG_6206.jpg?rlkey=qfg8t6o1ucsrmtdqm24a51o7q&amp;st=p2bxroa3&amp;raw=1" title="Her current design is so different from before, but I like the newer one more." alt="Old design Cosmos meeting the newer Cosmos"></button>
-          <button class="artborder"><img style="object-position:top center;" src="https://www.dropbox.com/scl/fi/higxr91wex05iyem5bwze/IMG_6204.jpg?rlkey=8uxxprb4qqapyx9f55zofcqhk&amp;st=vcgvk9ke&amp;raw=1" title="If they were characters from a show or smth, I would've loved their dynamic so much, such a shame they are made by me who suck at writing" alt="Cosmos and Lavender fistbump"></button>
-          <button class="artborder"><img style="object-position:top center;" src="https://www.dropbox.com/scl/fi/1e2qirzv32xuw9a5apzxm/IMG_6203.jpg?rlkey=pxynob9xjlirly10ywqe2finq&amp;st=03g7nw8g&amp;raw=1" title="O_O" alt="Shocked Cosmos"></button>
-          <button class="artborder"><img style="object-position:top center;" src="https://www.dropbox.com/scl/fi/p19vz062r36uu0oyh7qyr/Fo8RBA1aUAAGwMe.jpeg?rlkey=5svhn494kohanbeu2p06vj7hq&amp;st=tmjgcnq5&amp;raw=1" title="A little doodle in my lore sketchbook, they are so adorable I can't" alt="Cosmos and Lavender fingergun"></button>
-          <button class="artborder"><img style="object-position:top center;" src="https://www.dropbox.com/scl/fi/45kx9nv015vvtuw943dpr/IMG_6201_2025-Jan-02.jpg?rlkey=kxwjqtgydel52etuug6sbn01v&st=lu2w1h5o&raw=1" title="Watercolor painting of Cosmos!" alt="Watercolor painting of Cosmos"></button>
-          <button class="artborder"><img style="object-position:top center;" src="https://www.dropbox.com/scl/fi/kilu835208utkavxmavmp/oldcosmos_2025-Jan-02.JPG?rlkey=j09mzoi67k4w8roldtp6arlxt&st=a4bb767u&raw=1" title="The earliest Cosmos colored ref" alt="Early reference of Cosmos"></button>
-          <button class="artborder"><img src="https://www.dropbox.com/scl/fi/srbt8ik63d2vuwkqkp2dr/rt.jpg?rlkey=5cwswz7ks6kwhcwv2g1q1261p&amp;raw=1" title="A old design, drawn before her finished ref" alt="Drawing of Cosmos"></button>
-          <button class="artborder"><img src="https://www.dropbox.com/scl/fi/uuf5i2orwzxd78m9pluoe/IMG_7647_2025-Jan-02.JPG?rlkey=7tcmiala5tva94n417z0abum2&st=otzqkahh&raw=1" alt="Cosmos' first appearance" title="Cosmos' first design"></button>
+          <hr>
+        </div>
+      </article>
+      <article>
+        <h1>Gallery</h1>
+        <div class="inner">
+          <center>
+            <p>Hover to see my <span style="font-size:0.66em;">pointless</span> comments, click to
+              view full image/album! Click outside the content or click on the close button to close
+              image viewer.</p>
+          </center>
+          <div class="art">
+            <button class="artborder"><img loading="lazy"
+                src="https://www.dropbox.com/scl/fi/zsct3tgucdo925byhgiu0/cosmosbirth3.jpg?rlkey=k6t8be7eb902g302umjjs9kc2&amp;st=aaa3e60u&amp;raw=1"
+                title="Happy 3rd birthday Cosmos! I'm glad I prepared the art early, so that I can post this art on time despite my horrible food poisoning (15 Nov 2024)"
+                alt="3rd birthday art for Cosmos" style=""></button>
+            <button class="artborder"><img
+                src="https://www.dropbox.com/scl/fi/qz9l4ti2haoqzyrfsrbrc/IMG_8493.jpg?rlkey=gyigxkl9n714d94k1veiwb7bx&amp;raw=1"
+                title="I think Cosmos has broken the fabric of reality at least once"
+                alt="Drawing of Cosmos and Lavender referencing the meme 'Who Knocked Over My Onions'"></button>
+            <button class="artborder"><img style="object-position:top center;"
+                src="https://www.dropbox.com/scl/fi/7576r16rxdb99x5y65qoo/F-6BfQVbIAAbkdA.jpeg?rlkey=lziops6x2e7v6yemxb0mok8yd&amp;st=6fky27an&amp;raw=1"
+                title="Birthday art for Cosmos (15 Nov 2023)" alt="Drawing of Cosmos"></button>
+            <button class="artborder"><img style="object-position:top center;"
+                src="https://www.dropbox.com/scl/fi/8gtoimqw12yrlcw4h9dbl/F8QDTZWbcAAdUmM.jpeg?rlkey=crax4uklp9f7ilenr9d494nj8&amp;st=y7stlria&amp;raw=1"
+                title="Cosmos trying to lie about something something she's a human"
+                alt="Cosmos lying while looking guilty af"></button>
+            <button class="artborder"><img style="object-position:top center;"
+                src="https://www.dropbox.com/scl/fi/zuvr7kyjz6tvnkse9l2un/IMG_6206.jpg?rlkey=qfg8t6o1ucsrmtdqm24a51o7q&amp;st=p2bxroa3&amp;raw=1"
+                title="Her current design is so different from before, but I like the newer one more."
+                alt="Old design Cosmos meeting the newer Cosmos"></button>
+            <button class="artborder"><img style="object-position:top center;"
+                src="https://www.dropbox.com/scl/fi/higxr91wex05iyem5bwze/IMG_6204.jpg?rlkey=8uxxprb4qqapyx9f55zofcqhk&amp;st=vcgvk9ke&amp;raw=1"
+                title="If they were characters from a show or smth, I would've loved their dynamic so much, such a shame they are made by me who suck at writing"
+                alt="Cosmos and Lavender fistbump"></button>
+            <button class="artborder"><img style="object-position:top center;"
+                src="https://www.dropbox.com/scl/fi/1e2qirzv32xuw9a5apzxm/IMG_6203.jpg?rlkey=pxynob9xjlirly10ywqe2finq&amp;st=03g7nw8g&amp;raw=1"
+                title="O_O" alt="Shocked Cosmos"></button>
+            <button class="artborder"><img style="object-position:top center;"
+                src="https://www.dropbox.com/scl/fi/p19vz062r36uu0oyh7qyr/Fo8RBA1aUAAGwMe.jpeg?rlkey=5svhn494kohanbeu2p06vj7hq&amp;st=tmjgcnq5&amp;raw=1"
+                title="A little doodle in my lore sketchbook, they are so adorable I can't"
+                alt="Cosmos and Lavender fingergun"></button>
+            <button class="artborder"><img style="object-position:top center;"
+                src="https://www.dropbox.com/scl/fi/45kx9nv015vvtuw943dpr/IMG_6201_2025-Jan-02.jpg?rlkey=kxwjqtgydel52etuug6sbn01v&st=lu2w1h5o&raw=1"
+                title="Watercolor painting of Cosmos!" alt="Watercolor painting of Cosmos"></button>
+            <button class="artborder"><img style="object-position:top center;"
+                src="https://www.dropbox.com/scl/fi/kilu835208utkavxmavmp/oldcosmos_2025-Jan-02.JPG?rlkey=j09mzoi67k4w8roldtp6arlxt&st=a4bb767u&raw=1"
+                title="The earliest Cosmos colored ref" alt="Early reference of Cosmos"></button>
+            <button class="artborder"><img
+                src="https://www.dropbox.com/scl/fi/srbt8ik63d2vuwkqkp2dr/rt.jpg?rlkey=5cwswz7ks6kwhcwv2g1q1261p&amp;raw=1"
+                title="A old design, drawn before her finished ref"
+                alt="Drawing of Cosmos"></button>
+            <button class="artborder"><img
+                src="https://www.dropbox.com/scl/fi/uuf5i2orwzxd78m9pluoe/IMG_7647_2025-Jan-02.JPG?rlkey=7tcmiala5tva94n417z0abum2&st=otzqkahh&raw=1"
+                alt="Cosmos' first appearance" title="Cosmos' first design"></button>
           </div>
-      </div>
-    </article>
-</section>
-</main>
-<script src="../oc.js"></script>
+        </div>
+      </article>
+    </section>
+  </main>
+  <script src="../oc.js"></script>
   <script src="../../viewer.js"></script>
 </body>
 </html>

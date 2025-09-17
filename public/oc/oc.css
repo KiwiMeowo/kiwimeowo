@@ -64,27 +64,75 @@ article > h1{
 }
 }
 .relChar{
+  margin:5px 0;
+  transition: transform 0.6s;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.relChar.flip{
+  transform: rotateY(180deg);
+}
+.relFront{
+  display:flex;
+  -webkit-transform:rotateY(0deg);
+}
+.relFront,.relBack{
   border-radius: 5px;
   background: linear-gradient(var(--highlightteal), transparent 150%);
-  overflow: hidden;
-  filter:var(--dropshadow);
-  margin:5px 0;
   border: 1px solid;
+  filter:var(--dropshadow);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  height: 100%;
 }
-.relContain{
-  display:flex;
-}
-.relChar h3{
-  margin:12.5px auto;
-}
-.relChar span{
+.info{
   margin:auto;
   color:var(--blue);
   width: calc(100% - 90px);
   padding: 5px 0;
 }
-.relChar h3{
-  margin:5px auto;
+.relBack{
+  position: absolute;
+  top:0;
+  transform: rotateY(180deg);
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.relBack p{
+  padding: 5px;
+  margin: 0;
+  border-radius: 0 0 5px 5px;
+  color:var(--blue);
+  text-shadow: none;
+}
+.relChar button{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-shadow: 1.5px 1.5px var(--lteal);
+}
+.relChar button:hover{
+  text-shadow: 1px 1px var(--lteal);
+  translate: 0.5px 0.5px;
+}
+.relChar button:after {
+  content: "⧐";
+  color: var(--blue);
+  display: block;
+  font-size: 1.5em;
+}
+.relChar h2{
+  font-size: 1.25em;
+  margin:0 auto;
+  margin-bottom: 5px;
+}
+.relFront p{
+  color:var(--blue);
+  margin: 0;
 }
 .icon{
   background: linear-gradient(var(--teal), var(--blue));
@@ -116,36 +164,7 @@ h3 a{
   color:var(--blue);
 }
 
-.relChar button{
-  width:-webkit-fill-available;
-  width:-moz-available;
-  margin:2px;
-  background: var(--yellow);
-  border:1px solid var(--blue);
-  color:var(--blue);
-  border-radius: 5px;
-  cursor:pointer;
-}
-.relChar button:hover{
-  background: var(--teal);
-  color:var(--dblue);
-}
-.impression{
-  max-height: 0;
-  min-height:0;
-  overflow: hidden;
-  transition: min-height 0.5s,max-height 0.5s;
-}
-.impression p{
-  border: 1.75px dashed var(--lteal);
-  border-top: none;
-  margin: 0;
-  padding: 5px;
-  border-radius: 0 0 5px 5px;
-}
-.impression.impressactive{
-  max-height:500px;
-}
+/*Hidden char rels*/
 .relChar.pop{
   display:none;
 }

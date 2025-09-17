@@ -54,93 +54,116 @@
       </ul>
       </div></article>
       <article><h1>His impressions of...</h1><div class="inner">
-        <div class="relChar">
-          <div class="relContain">
+        <div class="relChar" id="Lavender">
+          <div class="relFront">
           <div class="icon"><a href="Lavender.html"><img src="../chatprof/Lavender.png"></a></div>
-          <span><h3><a href="Lavender.html">Lavender:</a></h3>Travel companion (Friendly)</span>
+          <div class="info"><h3><a href="Lavender.html">Lavender:</a></h3>
+            <p>Travel companion (Friendly)</p>
+          <button onclick="toggleRel('Lavender')"></button>
+        </div>
           </div>
-          <button onclick="openRel('Lavender')">open</button>
-        </div>
-        <div class="impression" id="Lavender">
+          <div class="relBack">
           <p>"She is quite skillful in magic, I should learn from her."</p>
+          <button onclick="toggleRel('Lavender')"></button>
+        </div>
         </div>
 
-      <div class="relChar">
-        <div class="relContain">
+      <div class="relChar" id="Cosmos">
+        <div class="relFront">
         <div class="icon"><a href="Cosmos.html"><img src="../chatprof/Cosmos.png"></a></div>
-        <span><h3><a href="Cosmos.html">Cosmos:</a></h3>Travel companion (Wary)</span>
+        <div class="info"><h3><a href="Cosmos.html">Cosmos:</a></h3>
+        <p>Travel companion (Wary)</p>
+      <button onclick="toggleRel('Cosmos')"></button></div>
         </div>
-        <button onclick="openRel('Cosmos')">open</button>
-      </div>
-      <div class="impression" id="Cosmos">
+        <div class="relBack">
         <p>"Sorry... Can you stay a bit further away from me?"</p>
+        <button onclick="toggleRel('Cosmos')"></button>
+      </div>
       </div>
 
-      <div class="relChar">
-        <div class="relContain">
+      <div class="relChar" id="Ruth">
+        <div class="relFront">
         <div class="icon"><a href="Ruth.html"><img src="../chatprof/Ruth.png"></a></div>
-        <span><h3><a href="Ruth.html">Ruth:</a></h3>Travel companion (Neutral)</span>
-        </div>
-        <button onclick="openRel('Ruth')">open</button>
+        <div class="info">
+          <h3><a href="Ruth.html">Ruth:</a></h3>
+          <p>Travel companion (Neutral)</p>
+        <button onclick="toggleRel('Ruth')"></button>
       </div>
-      <div class="impression" id="Ruth">
+        </div>
+        <div class="relBack">
         <p>"...She seems curious about my necklace."</p>
+        <button onclick="toggleRel('Ruth')"></button>
+      </div>
       </div>
 
-      <div class="relChar">
-        <div class="relContain">
+      <div class="relChar" id="Wolf">
+        <div class="relFront">
         <div class="icon"><a href="Wolf.html"><img src="../chatprof/Wolf.png"></a></div>
-        <span><h3><a href="Wolf.html">Wolf:</a></h3>Travel companion (Neutral)</span>
+        <div class="info">
+          <h3><a href="Wolf.html">Wolf:</a></h3>
+        <p>Travel companion (Neutral)</p>
+      <button onclick="toggleRel('Wolf')"></button>
+    </div>
         </div>
-        <button onclick="openRel('Wolf')">open</button>
-      </div>
-      <div class="impression" id="Wolf">
+        <div class="relBack">
         <p>"When he actually takes things seriously, he is very good at being a leader."</p>
+        <button onclick="toggleRel('Wolf')"></button>
+      </div>
       </div>
 
-      <div class="relChar">
-        <div class="relContain">
+      <div class="relChar" id="Claire">
+        <div class="relFront">
         <div class="icon"><a href="Claire.html"><img src="../chatprof/Claire.png"></a></div>
-        <span><h3><a href="Claire.html">Claire:</a></h3>Mentor (Trust)</span>
+        <div class="info"><h3><a href="Claire.html">Claire:</a></h3><p>Mentor (Trust)</p><button onclick="toggleRel('Claire')"></button></div>
         </div>
-        <button onclick="openRel('Claire')">open</button>
-      </div>
-      <div class="impression" id="Claire">
+        <div class="relBack">
         <p>"I wish I could've help her more..."</p>
+        <button onclick="toggleRel('Claire')"></button>
+      </div>
       </div>
 
-      <div class="relChar">
-        <div class="relContain">
+      <div class="relChar" id="Solar">
+        <div class="relFront">
         <div class="icon"><a href="Solar.html"><img src="../chatprof/Solar.png"></a></div>
-        <span><h3><a href="Solar.html">Solar:</a></h3>Close Friend (Trust)</span>
+        <div class="info"><h3><a href="Solar.html">Solar:</a></h3>
+          <p>Close Friend (Trust)</p>
+          <button onclick="toggleRel('Solar')"></button>
         </div>
-        <button onclick="openRel('Solar')">open</button>
-      </div>
-      <div class="impression" id="Solar">
+        </div>
+        <div class="relBack">
         <p>"She was very kind, even if it didn't seem like it at first"</p>
+        <button onclick="toggleRel('Solar')"></button>
+      </div>
       </div>
 
-      <div class="relChar">
-        <div class="relContain">
+      <div class="relChar" id="Jaspers">
+        <div class="relFront">
         <div class="icon"><a href="Jaspers.html"><img src="../chatprof/Jaspers.png"></a></div>
-        <span><h3><a href="Jaspers.html">Jaspers:</a></h3>Close Friend (Trust)</span>
+        <div class="info">
+          <h3><a href="Jaspers.html">Jaspers:</a></h3>
+          <p>Close Friend (Trust)</p>
+        <button onclick="toggleRel('Jaspers')"></button></div>
         </div>
-        <button onclick="openRel('Jaspers')">open</button>
-      </div>
-      <div class="impression" id="Jaspers">
+        <div class="relBack">
         <p>"He wasn't actually a bad person."</p>
+        <button onclick="toggleRel('Jaspers')"></button>
+      </div>
       </div>
 
-      <button onclick="unhideRel(this,'A')" class="secret">???</button>
-      <div class="relChar pop" id="A">
-        <div class="relContain">
+      <button onclick="unhideRel(this,'Bun')" class="secret">???</button>
+      <div class="relChar pop" id="Bun">
+        <div class="relFront">
         <div class="icon"><a href="Bun.html"><img src="../chatprof/Bun.png"></a></div>
-        <span><h3><a href="Bun.html">Bun:</a></h3>Friend (Trust)</span>
-        </div>
-        <button onclick="openRel('Bun')">open</button>
+        <div class="info">
+          <h3><a href="Bun.html">Bun:</a></h3>
+          <p>Friend (Trust)</p>
+        <button onclick="toggleRel('Bun')"></button>
       </div>
-      <div class="impression" id="Bun">
+        </div>
+        <div class="relBack">
         <p>"I didn't have much time to get to know them, but they are very caring towards their friends"</p>
+        <button onclick="toggleRel('Bun')"></button>
+      </div>
       </div>
       </div></article>
     </aside>
