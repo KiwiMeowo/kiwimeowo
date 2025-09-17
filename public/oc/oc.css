@@ -142,7 +142,7 @@ article > h1{
   content: "";
   width:15px;
   height: 15px;
-  mask-image: url("/assets/triangle_corner.svg");
+  mask-image: url("/assets/Triangle_corner.svg");
   background: var(--blue);
   display: block;
   font-size: 1.5em;
