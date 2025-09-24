@@ -13,11 +13,11 @@
 section.wide{
   display:grid;
   grid-template: 
-  'a a a'
+  'title title title'
   'button button button'
-  'b c d'
-  'e e d'
-  'e e d';
+  'stories interesting res'
+  'credit credit res'
+  'credit credit tv';
   grid-gap:15px;
       grid-auto-columns: minmax(0, 1fr);
     grid-auto-flow: row;
@@ -46,9 +46,73 @@ li{
 img.button{
   margin:0;
 }
+#buttons{
+  grid-area:button;box-shadow: 4px 4px 4px 2px var(--shadow);border-radius: 0;background-image: url(/assets/paper-texture.png);
+  h1{
+    border-bottom: none;padding-bottom:0;
+  }
+  center{
+    text-shadow: 1px 1px var(--lteal);
+  }
+  button{
+    border:1px solid;
+    background: none;
+    border-radius: 5px;
+    filter:drop-shadow(1px 1px var(--lteal));
+    display: inline;
+    padding:2.5px 7.5px;
+    cursor: pointer;
+    transition: color 0.5s;
+  }
+  button:hover{
+      color:var(--blue);
+    }
+}
+#tv{
+  background: black;
+  border-radius: 0;
+  border:10px solid #3f0707;
+  box-shadow: 4px 4px 4px 2px var(--shadow);
+  box-sizing: border-box;
+  max-width: 400px;
+  margin: auto;
+  .inner{
+    height: calc(100% - 30px);
+    outline: 1px solid grey;
+  }
+  iframe{
+    border: 10px inset #5b5b5b;
+    box-sizing: border-box;
+  outline: 1px solid grey;
+    aspect-ratio: 1 / 1;
+    margin: 0;
+    display: block;
+    width: 100%;
+  }
+  center{
+    border: 1px solid grey;
+    padding: 10px;
+  }
+  center:before{
+    content: "●";
+    color:grey;
+    margin-right:10px;
+  }
+  center:after{
+    content: "●";
+    color:grey;
+    margin-left:10px;
+  }
+  a{
+    background: grey;
+    color:black;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+}
 @media(max-width:1000px){
   section.wide{
-    grid-template:'a''button''b''c''d''e';
+    grid-template:'title''button''stories''interesting''tv''res''credit';
     margin:0 auto;
   }
 }
@@ -82,15 +146,15 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 
   <main>
     <section class="wide">
-      <article style="grid-area:a;"><h1>Link Dump</h1>
+      <article style="grid-area:title;"><h1>Link Dump</h1>
       <div class="inner text">
 	        <p>This is the place I place useful/interesting links, which allows for more stuff to be placed than the one in the main page.</p>
 	      <hr>
       </article>
     </div>
-      <article style="grid-area:button;"><h1>Cool site buttons</h1>
+      <article id="buttons"><h1>Cool site buttons</h1>
       <div class="inner">
-        <div style="border: 7.5px double;border-radius: 5px;padding: 5px 0;display:flex;flex-wrap: wrap;justify-content: center;" id="animation" class="site freezeframe">
+        <div style="border: 5px double;outline: 1px solid;border-radius: 5px;padding: 5px 0;display:flex;flex-wrap: wrap;justify-content: center;" class="site freezeframe">
           <a href="https://strawbebby228.neocities.org/" target="_blank"><img src="https://strawbebby228.neocities.org/arts/UI/ButtonPink.gif" class="button"></a>
           <a href="https://palmistshouse.net/" target="_blank"><img src="button/palmistshouse.gif" class="button"></a>
           <a href="https://nonkiru.art/" target="_blank"><img src="button/nonkiru_button_light.gif" class="button"></a>
@@ -98,6 +162,7 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
           <a href="https://puddingpudd.com/" target="_blank"><img src="button/Pudd_Button_V3.gif" class="button"></a>
           <a href="https://icecreampizzer.art/" target="_blank"><img src="button/btn-pizzer.gif" class="button"></a>
           <a href="https://6ooey.neocities.org/" target="_blank"><img src="button/goobutton.png" class="button"></a>
+          <a href="https://temstuff.neocities.org/" target="_blank"><img src="button/tem.gif" class="button"></a>
             <a href="https://sunshine.nekoweb.org/" target="_blank"><img src="button/sunshine.gif" class="button"></a>
           <a href="https://snewberry.neocities.org" target="_blank"><img src="button/snewbutton.gif" class="button"></a>
           <a href="https://atomicgothic.neocities.org/" target="_blank"><img src="button/ag_main_button.gif" class="button"></a>
@@ -115,7 +180,7 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
           <a href="https://exclave.city/" target="_blank"><img src="button/exclave.gif" class="button"></a>
           <a href="https://forum.melonland.net/" target="_blank"><img src="button/MELONLAND-FORUM.gif" class="button"></a>
           <a href="https://wiggle.monster/" target="_blank"><img src="button/wiichicken.gif" class="button"></a>
-          <a href="https://melankorin.net/" target="_blank"><img src="https://melankorin.net/assets/img/buttons/button-1.gif" class="button"></a>
+          <a href="https://melankorin.net/" target="_blank"><img src="button/melankorin.gif" class="button"></a>
           <a href="https://strovi.neocities.org/" target="_blank"><img src="button/strovi.png" class="button"></a>
           <a href="https://melps.neocities.org/" target="_blank"><img src="button/limk1.jpg" style="width:88px;" class="button"></a>
           <a href="https://dirtiestlaundry.neocities.org/" target="_blank"><img src="button/laundry.gif" class="button"></a>
@@ -123,12 +188,12 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
           <div id="kallistero"><a class="kallistero-sticker" href="https://kallistero.neocities.org/" target="_blank"></a></div><script src="https://kallistero.neocities.org/sticker.js"></script>
           </div>
           <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
-          <p align="center">GIF Animation: 
+          <center align="center">GIF Animation: 
           <span style="display:inline-block">
-          <button class="start coolbutton" style="margin: 0 5px;">Play</button>
-       <button class="stop coolbutton" style="margin: 0 5px;">Pause</button>
+          <button class="start" style="margin: 0 5px;">Play</button>
+       <button class="stop" style="margin: 0 5px;">Pause</button>
        </span>
-       </p>
+       </center>
        <script>
      const manual = new Freezeframe('.freezeframe', {
       trigger: false,
@@ -145,11 +210,10 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
     </script>
       </div>
     </article>
-      <article style="grid-area:c;"><h1>Interesting</h1>
+      <article style="grid-area:interesting;"><h1>Interesting</h1>
       <div class="inner">
 	        <ul>
 	          <li><a href="https://motherfuckingwebsite.com/" target="_blank">Motherfucking Website</a></li>
-	          <li><a href="https://dimden.neocities.org/navlink/" target="_blank">Navlink Ads</a> <iframe style="border:none;aspect-ratio:1 / 1;height:180px;margin:0;display: block;max-width: 180px;" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe></li>
             <li><a href="https://caby.neocities.org/cat/" target="_blank">Please draw a cat <img src="button/plsdrawacat.gif" class="button"></a></li>
             <li><a href="https://orb.farm/" target="_blank">orb.farm, virtual ecosystem</a></li>
             <li><a href="https://thetadev.de/atlantiles/" target="_blank">Atlantiles</a></li>
@@ -158,7 +222,7 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 	      <hr>
       </div>
     </article>
-      <article style="grid-area:b;"><h1>Cool stories</h1>
+      <article style="grid-area:stories;"><h1>Cool stories</h1>
       <div class="inner">
         <ul>
 	        <li><a href="https://www.youtube.com/@gellheroes5s/featured" target="_blank" title="An original story project by MoniiMous. A group of four teens and a dog found five gells, and gained different superpowers. Learning that Aultimins being turned into gells against their will by the Great Neev Zeltzalu, this team decided to save and fight for the Autimins.">Gell Heroes (PROJECT: 5S)</a></li>
@@ -169,7 +233,13 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 	      <hr>
       </div>
     </article>
-      <article style="grid-area:d;"><h1>Resources/Useful</h1>
+    <article style="grid-area:tv;" id="tv">
+      <div class="inner">
+        <iframe src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
+        <center><a href="https://dimden.dev/navlinkads/" target="_blank">Navlink Ads</a></center>
+      </div>
+    </article>
+      <article style="grid-area:res;"><h1>Resources/Useful</h1>
       <div class="inner">
 	        <ul>
 	          <li><a href="https://eggramen.neocities.org/code/css_testpages" target="_blank">Eggramen: Layouts <img src="button/eggramen.png" class="button"></a></li>
@@ -177,7 +247,7 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 	          <li><a href="https://foollovers.com" target="_blank">Foollovers: Assets<img src="button/foollovers.gif" class="button"></a></li>
 	          <li><a href="https://unicodelookup.com/" target="_blank">Unicode Lookup</a></li>
 	          <li><a href="https://github.com/ajaxorg/ace/wiki/default-keyboard-shortcuts" target="_blank">Ace Text Editor Shortcuts (Which is the default Neocities text editor I think)</a></li>
-	          <li><a href="https://imageresizer.com/image-compressor" target="_blank">Image Compresser</a></li>
+	          <li><a href="https://compressimage.io/" target="_blank">Image Compresser</a></li>
 	          <li><a href="https://artshield.io/watermarker" target="_blank">Artshield: To camouflage your art from robot scrapers</a></li>
 	          <li><a href="http://referenceangle.com/" target="_blank">View head from different angles</a></li>
 	          <li><a href="https://yoksel.github.io/url-encoder/" target="_blank">SVG URL encoder</a></li>
@@ -188,7 +258,7 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 	      <hr>
       </div>
     </article>
-      <article style="grid-area:e;"><h1>Credits</h1>
+      <article style="grid-area:credit;"><h1>Credits</h1>
       <div class="inner">
 	        <ul class="e">
 	          <li>Layouts: <a href="https://eggramen.neocities.org/code/css_testpages" target="_blank">Eggramen <img src="button/eggramen.png" class="button"></a></a></li>
