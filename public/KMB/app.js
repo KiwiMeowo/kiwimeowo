@@ -53,12 +53,13 @@ function getStops(route,bound,service){
           html.data.forEach((stopnum)=>getStopName(stopnum.stop,route,bound,service));
         })
   }
+
 function getStopName(stopid,route,bound,service){
+  var row = document.createElement("div");
+  stops.appendChild(row);
   fetch(('https://data.etabus.gov.hk/v1/transport/kmb/stop/'+stopid))
   .then((response) => response.json())
   .then((html)=>{
-      var row = document.createElement("div");
-      stops.appendChild(row);
         var routeCell = document.createElement("div");
         row.appendChild(routeCell);
         routeCell.innerHTML = html.data.name_en;
@@ -88,6 +89,7 @@ function getStopName(stopid,route,bound,service){
         })
   })
 }
+
 function saveStop(route,bound,service){
   savedList=localStorage.getItem("saved");
   if (savedList==undefined||savedList==null||savedList==''){
@@ -106,7 +108,6 @@ function getSaved(){
   if (savedList!=undefined||savedList!=null||savedList!=''){
     for(x=0;x < eachroute.length;x++){
       routeinfo=eachroute[x].split(",");
-      console.log('https://data.etabus.gov.hk/v1/transport/kmb/route/'+routeinfo[0]+'/'+routeinfo[1]+'/'+routeinfo[2])
     fetch('https://data.etabus.gov.hk/v1/transport/kmb/route/'+routeinfo[0]+'/'+routeinfo[1]+'/'+routeinfo[2])
       .then((response) => response.json())
       .then((html)=>{
