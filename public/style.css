@@ -114,6 +114,27 @@ blockquote {
 figure{
   margin:0.75em 40px;
 }
+kbd{
+  text-indent: 0;
+  font-family: inherit;
+  background-color: var(--yellow);
+  border-radius: 2.5px;
+  border: 2px solid var(--teal);
+  box-shadow: 1px 1px 1px var(--shadow),0 2px 0 0 rgb(255 255 255 / 0.7) inset;
+  color: var(--teal);
+  display: inline-block;
+  padding: 0 4px;
+  font-size: 0.9em;
+}
+select {
+  border: 2px solid var(--teal);
+  border-radius: 5px;
+  font-family: inherit;
+  color: var(--teal);
+}
+fieldset{
+  border: 2px solid;
+}
 ul {
   list-style: "- ";
   color:var(--teal);

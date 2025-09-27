@@ -2,7 +2,7 @@ const fs = require('fs');
 const cheerio = require('cheerio');
 
 // Path to your HTML file
-const filePath = '';
+const filePath = 'templates/blog/post/2025/09-27.html';
 
 // Read the HTML file
 fs.readFile(filePath, 'utf8', (err, data) => {
@@ -15,10 +15,10 @@ fs.readFile(filePath, 'utf8', (err, data) => {
   const $ = cheerio.load(data);
 
   // Why is Node js like this
-
-    // $('.testing').each(function () {
-    //$(this).wrap('<div class="example"></div>');
-  //});
+  
+    $('pre').each(function () {
+    $(this).text($(this).html());
+  });
 
   // Get the modified HTML
   const modifiedHtml = $.html();
