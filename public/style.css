@@ -160,6 +160,10 @@ iframe{
   font-family: "CookieRunRegular";
   src: url("CookieRunRegular.ttf");
 }
+@font-face {
+  font-family: "ComicSansMS";
+  src: url("CookieRunRegular.ttf");
+}
 /*Miscellanous custom styling for various elements.*/
 h1, h2, h3 {
   font-weight:600;
