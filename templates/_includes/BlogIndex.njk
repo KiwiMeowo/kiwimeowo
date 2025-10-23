@@ -117,7 +117,7 @@ a{cursor:pointer}
     </style>
   </head>
  <body>
-   <div class="draggable" style="left: calc(100vw - 780px);top:155px;z-index:99" aria-hidden="true"><img src="idiot.png" style="height:200px;" title="Hint: You can move these fellas!" onmousedown="playMeow()"></div>
+   <div class="draggable" style="left: calc(100vw - 780px);top:155px;z-index:99" aria-hidden="true"><img src="idiot.png" style="height:200px;" title="Hint: You can move these fellas!" onmousedown="playMeow();"></div>
    <div class="draggable" style="right:4%;top:50px;z-index:99" aria-hidden="true"><img src="I_Keep_Forgetting.png" style="height:200px;transform: rotate(5deg);" title="Hint: You can move these fellas!"></div>
    
    <!--Notepad-->
@@ -239,7 +239,7 @@ for (i = 0; i < coll.length; i++) {
         </div>
         <hr>
         <center aria-hidden="true">
-        <div style="background: url('blanket_totallynotmine.png');background-size: contain;background-position: 0 50%;background-repeat: no-repeat;filter: brightness(110%);margin: auto;max-width: 280px;"><a onclick="playSound()"><img src="eepy.png" id="cosmos" title="Cosmos is soundly sleeping, let's not disturb her for now..." style="max-height:200px;filter: drop-shadow(2px 2px 1px #0e0b2e8c);"></a></div></center>
+        <div style="background: url('blanket_totallynotmine.png');background-size: contain;background-position: 0 50%;background-repeat: no-repeat;filter: brightness(110%);margin: auto;max-width: 280px;"><a onclick="playSound();"><img src="eepy.png" id="cosmos" title="Cosmos is soundly sleeping, let's not disturb her for now..." style="max-height:200px;filter: drop-shadow(2px 2px 1px #0e0b2e8c);"></a></div></center>
         <audio class="myAudio" src="https://www.dropbox.com/scl/fi/ka3cvedqeoi35fkbmypld/Cat_purr1.mp3?rlkey=z4oxz9vh7x2gyitrwmjebcysp&st=n2ygr479&raw=1"></audio>
         <audio class="myAudio" src="https://www.dropbox.com/scl/fi/h4h199bphtcc8cabc8ntw/Cat_purr2.mp3?rlkey=taqsuc10iggkwtqo8n4fkgxxu&st=lnl6zb7t&raw=1"></audio>
         <audio class="myAudio" src="https://www.dropbox.com/scl/fi/yypvil0u2xick11yauye9/Cat_purr3.mp3?rlkey=f4dk2c6gol98tbrlm4zierpxz&st=bj70fk20&raw=1"></audio>
@@ -430,23 +430,23 @@ document.body.onpointermove = event => {
     <div class="footer-column">
     <h2>Credits</h2>
 	<ul>
-	<p> Layout design: <a href="https://eggramen.neocities.org/code/css_testpages" target="_blank">Eggramen</a>
-	<br>Font used: <a href="https://fonts.google.com/specimen/Fraunces" target="_blank">Fraunces</a>, <a href="https://fonts.adobe.com/fonts/toppan-bunkyu-mincho-pr6n#licensing-section" target="_blank">Toppan Bunkyu Mincho</a>
-	<br>Collapsible: <a href="https://www.w3schools.com/howto/howto_js_collapsible.asp" target="_blank">w3schools</a>
-	<br>Clock: <a href="https://codepen.io/paulera/pen/BPwPNw" target="_blank">Paulo Amaral</a>
-	<br>Cat noises: Minecraft
-	<br>Draggable: <a href="https://www.w3schools.com/howto/howto_js_draggable.asp" target="_blank">w3school</a>
-	<br>Style-my-tooltips: <a href="https://manos.malihu.gr/style-my-tooltips-jquery-plugin/" target="_blank">Manos</a>
+  <li>Layout design: <a href="https://eggramen.neocities.org/code/css_testpages" target="_blank">Eggramen</a></li>
+  <li>Font used: <a href="https://fonts.google.com/specimen/Fraunces" target="_blank">Fraunces</a>, <a href="https://fonts.adobe.com/fonts/toppan-bunkyu-mincho-pr6n#licensing-section" target="_blank">Toppan Bunkyu Mincho</a></li>
+  <li>Collapsible: <a href="https://www.w3schools.com/howto/howto_js_collapsible.asp" target="_blank">w3schools</a></li>
+  <li>Clock: <a href="https://codepen.io/paulera/pen/BPwPNw" target="_blank">Paulo Amaral</a></li>
+  <li>Cat noises: Minecraft</li>
+  <li>Draggable: <a href="https://www.w3schools.com/howto/howto_js_draggable.asp" target="_blank">w3school</a></li>
+  <li>Style-my-tooltips: <a href="https://manos.malihu.gr/style-my-tooltips-jquery-plugin/" target="_blank">Manos</a></li>
 	</ul>
     </div>
     <div class="footer-column">
     <h2>Contacts</h2>
     <ul>
-	<p>Email: kiwimeow0308@gmail.com<br>
-	Twitter: <a href="https://twitter.com/KiwiMeowo" target="_blank">@KiwiMeowo</a><br>
-	Neocities Profile: <a href="https://neocities.org/site/kiwimeowo" target="_blank">KiwiMeowo</a><br>
-	Discord: kiwimeowo<br>
-	Artfight:&nbsp;<a href="https://artfight.net/~KiwiMeowo" target="_blank">KiwiMeowo</a></p>
+	  <li>Email: kiwimeow0308@gmail.com</li>
+    <li>Twitter: <a href="https://twitter.com/KiwiMeowo" target="_blank">@KiwiMeowo</a></li>
+    <li>Neocities Profile: <a href="https://neocities.org/site/kiwimeowo" target="_blank">KiwiMeowo</a></li>
+    <li>Discord: kiwimeowo</li>
+    <li>Artfight:&nbsp;<a href="https://artfight.net/~KiwiMeowo" target="_blank">KiwiMeowo</a></li>
 	</ul>
     </div>
   </footer>

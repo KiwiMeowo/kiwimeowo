@@ -486,8 +486,9 @@ footer {
   padding-bottom: 10px;
   display:flex;
   }
-  footer p{
+  footer li{
     color:#fff;
+    line-height: 1.25;
   }
 
 footer h2{
@@ -498,6 +499,7 @@ footer h2{
 }
 footer ul {
     padding-left: 15px;
+    list-style: "";
 }
 footer a {
   color: #fff;
