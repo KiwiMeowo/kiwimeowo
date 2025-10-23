@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiwiMeowo's site</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="/jquery.style-my-tooltips.js"></script>
+    </head>
+</html>
+<style>
+  @font-face {
+  font-family: "Minecraft";
+  src: url("deco/MC/Minecraft.otf");
+}
+:root{
+  --teal:black;
+  --skin: url(skins/Kyrea.png);
+}
+html{
+  font-family: "Minecraft";
+}
+body{
+  font-size: 1em;
+}
+main{
+  background:linear-gradient(#393939bf,#1c1c1cbf),url(deco/MC/Stone.webp);
+}
+article {
+  background: url(deco/MC/Birch_Planks.webp);
+  box-shadow: 4px 4px 4px 2px var(--shadow);
+  border-radius: 0;
+}
+article > h1:not(aside h1) {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+h1,h2,h3,p{
+  text-shadow: 1px 1px #44281d2c;
+  --blue:black;
+}
+/*Skin*/
+.container{
+  height:250px;
+  float:right;
+width: 75px;
+  margin: 0 25px;
+}
+.container3d {
+  position: relative;
+  width: 0;
+  scale: 7;
+  top: 50%;
+  translate: 0 -50%;
+}
+.scene {
+  position: relative;
+  transform-style: preserve-3d;
+  height: fit-content;
+  animation: spin 7.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  image-rendering: pixelated;
+  animation-direction:normal;
+  width: fit-content;
+  top: 50%;
+  > * {
+    transform-style: preserve-3d;
+  }
+}
+@keyframes spin {
+  0%   {transform: rotateY(0deg) rotateX(-10deg);}
+  50% {transform: rotateY(360deg) rotateX(10deg);}
+  100% {transform: rotateY(720deg) rotateX(-10deg);}
+}
+.scene div div {
+  image-rendering: pixelated;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%);
+}
+.scene div div::after {
+  content: " ";
+  position: absolute;
+  align-self: center;
+  height: 100%;
+  width: 100%;
+  scale: 1.125;
+  background: #ffffff01;
+  image-rendering: pixelated;
+}
+.scene[data="url"] div div,
+.scene[data="url"] div div:after {
+  background-image: var(--skin);
+}
+.head {
+  height: 8px;
+  width: 8px;
+}
+#head-front {
+  background-position: 56px 56px;
+  transform: translateZ(4px);
+}
+#head-front::after {
+  background-position: 24px 56px;
+  transform: translateZ(0.5px);
+}
+#head-back {
+  background-position: 40px 56px;
+  transform: rotateY(180deg) translateZ(4px);
+}
+#head-back::after {
+  background-position: 8px 56px;
+  transform: translateZ(0.5px);
+}
+#head-left {
+  background-position: 48px 56px;
+  transform: rotateY(90deg) translateZ(4px);
+}
+#head-left::after {
+  background-position: 16px 56px;
+  transform: translateZ(0.5px);
+}
+#head-right {
+  background-position: 64px 56px;
+  transform: rotateY(-90deg) translateZ(4px);
+}
+#head-right::after {
+  background-position: 32px 56px;
+  transform: translateZ(0.5px);
+}
+#head-top {
+  background-position: 56px 64px;
+  transform: translateY(-4px) rotateX(90deg);
+}
+#head-top::after {
+  background-position: 24px 64px;
+  transform: translateZ(0.5px);
+}
+#head-bottom {
+  background-position: 48px 64px;
+  transform: translateY(4px) rotateX(270deg) rotate(180deg);
+}
+#head-bottom::after {
+  background-position: 16px 64px;
+  transform: translateZ(0.5px);
+}
+.body {
+  width: 8px;
+  height: 12px;
+}
+#body-front {
+  background-position: 44px 44px;
+  transform: translateZ(2px);
+}
+#body-front::after {
+  background-position: 44px 28px;
+  transform: translateZ(0.5px);
+}
+#body-back {
+  background-position: 32px 44px;
+  transform: rotateY(180deg) translateZ(2px);
+}
+#body-back::after {
+  background-position: 32px 28px;
+  transform: translateZ(0.5px);
+}
+#body-left {
+  width: 4px;
+  background-position: 36px 44px;
+  transform: rotateY(90deg) translateZ(6px);
+}
+#body-left::after {
+  content: none;
+}
+#body-right {
+  width: 4px;
+  background-position: 48px 44px;
+  transform: rotateY(-90deg) translateZ(2px);
+}
+#body-right::after {
+  content: none;
+}
+#body-bottom {
+  width: 8px;
+  height: 4px;
+  background-position: 36px 48px;
+  transform: translateY(10px) rotateX(270deg);
+}
+#body-bottom::after {
+  display: none;
+}
+.left-slim-arm {
+  position: absolute;
+  width: 3px;
+  height: 12px;
+  transform: translateX(8px) translateY(-12px);
+}
+#left-slim-arm-front {
+  background-position: 28px 12px;
+  transform: translateZ(2px);
+}
+#left-slim-arm-front::after {
+  background-position: 12px 12px;
+  transform: translateZ(0.3px);
+}
+#left-slim-arm-back {
+  background-position: 21px 12px;
+  transform: rotateY(180deg) translateZ(2px);
+}
+#left-slim-arm-back::after {
+  background-position: 8px 12px;
+  transform: translateZ(0.3px);
+}
+#left-slim-arm-left {
+  width: 4px;
+  background-position: 25px 12px;
+  transform: rotateY(90deg) translateZ(1px);
+}
+#left-slim-arm-left::after {
+  background-position: 9px 12px;
+  transform: translateZ(0.15px);
+}
+#left-slim-arm-top {
+  width: 3px;
+  height: 4px;
+  background-position: 28px 16px;
+  transform: translateY(-2px) rotateX(90deg);
+}
+#left-slim-arm-top::after {
+  background-position: 12px 16px;
+  transform: translateZ(0.7px);
+}
+#left-slim-arm-bottom {
+  width: 3px;
+  height: 4px;
+  background-position: 25px 16px;
+  transform: translateY(10px) rotateX(270deg);
+}
+#left-slim-arm-bottom::after {
+  background-position: 14px 16px;
+  transform: translateZ(0.7px);
+}
+.right-slim-arm {
+  transform-style: preserve-3d;
+  position: absolute;
+  width: 3px;
+  height: 12px;
+  transform: translateX(-3px) translateY(-12px);
+}
+#right-slim-arm-front {
+  background-position: 20px 44px;
+  transform: translateZ(2px);
+}
+#right-slim-arm-front::after {
+  background-position: 20px 28px;
+  transform: translateZ(0.3px);
+}
+#right-slim-arm-back {
+  background-position: 13px 44px;
+  transform: rotateY(180deg) translateZ(2px);
+}
+#right-slim-arm-back::after {
+  background-position: 13px 28px;
+  transform: translateZ(0.3px);
+}
+#right-slim-arm-right {
+  width: 4px;
+  background-position: 17px 44px;
+  transform: rotateY(270deg) translateZ(2px);
+}
+#right-slim-arm-right::after {
+  background-position: 17px 28px;
+  transform: translateZ(0.15px);
+}
+#right-slim-arm-top {
+  width: 3px;
+  height: 4px;
+  background-position: 20px 48px;
+  transform: translateY(-2px) rotateX(90deg);
+}
+#right-slim-arm-top::after {
+  background-position: 20px 32px;
+  transform: translateZ(0.7px);
+}
+#right-slim-arm-bottom {
+  width: 3px;
+  height: 4px;
+  background-position: 17px 48px;
+  transform: translateY(10px) rotateX(270deg);
+}
+#right-slim-arm-bottom::after {
+  background-position: 17px 32px;
+  transform: translateZ(0.7px);
+}
+.left-leg {
+  position: absolute;
+  width: 4px;
+  height: 12px;
+  transform: translateX(4px) translateY(0px);
+}
+#left-leg-front {
+  background-position: 44px 12px;
+  transform: translateZ(2px);
+}
+#left-leg-front::after {
+  background-position: 60px 12px;
+  transform: translateZ(0.3px);
+}
+#left-leg-back {
+  background-position: 36px 12px;
+  transform: rotateY(180deg) translateZ(2px);
+}
+#left-leg-back::after {
+  background-position: 52px 12px;
+  transform: translateZ(0.3px);
+}
+#left-leg-left {
+  width: 4px;
+  background-position: 40px 12px;
+  transform: rotateY(90deg) translateZ(2px);
+}
+#left-leg-left::after {
+  background-position: 56px 12px;
+  transform: translateZ(0.15px);
+}
+#left-leg-top {
+  width: 4px;
+  height: 4px;
+  background-position: 44px 16px;
+  transform: translateY(-2px) rotateX(90deg);
+}
+#left-leg-top::after {
+  display: none;
+}
+#left-leg-bottom {
+  width: 4px;
+  height: 4px;
+  background-position: 40px 16px;
+  transform: translateY(10px) rotateX(270deg);
+}
+#left-leg-bottom::after {
+  background-position: 56px 16px;
+  transform: translateZ(0.7px);
+}
+.right-leg {
+  width: 4px;
+  height: 12px;
+  transform: translateX(0px) translateY(0px);
+}
+#right-leg-front {
+  background-position: 60px 44px;
+  transform: translateZ(2px);
+}
+#right-leg-front::after {
+  background-position: 60px 28px;
+  transform: translateZ(0.3px);
+}
+#right-leg-back {
+  background-position: 52px 44px;
+  transform: rotateY(180deg) translateZ(2px);
+}
+#right-leg-back::after {
+  background-position: 52px 28px;
+  transform: translateZ(0.3px);
+}
+#right-leg-right {
+  width: 4px;
+  background-position: 64px 44px;
+  transform: rotateY(270deg) translateZ(2px);
+}
+#right-leg-right::after {
+  background-position: 64px 28px;
+  transform: translateZ(0.15px);
+}
+#right-leg-top {
+  width: 4px;
+  height: 4px;
+  background-position: 60px 48px;
+  transform: translateY(-2px) rotateX(90deg);
+}
+#right-leg-top::after {
+  display: none;
+}
+#right-leg-bottom {
+  width: 4px;
+  height: 4px;
+  background-position: 56px 48px;
+  transform: translateY(10px) rotateX(270deg);
+}
+#left-leg-bottom::after {
+  background-position: 56px 32px;
+  transform: translateZ(0.7px);
+}
+
+</style>
+<body>
+    <nav>
+      <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
+      <a href="index.html">Fixiations</a>
+  </nav>
+  <main>
+    <section class="wide">
+        <article>
+            <h1>Minecraft</h1>
+            <div class="inner">
+              <div class="container">
+                  <div class="container3d">
+    <div class="scene" data="url">
+      <div class="head">
+        <div id="head-front"></div>
+        <div id="head-back"></div>
+        <div id="head-left"></div>
+        <div id="head-right"></div>
+        <div id="head-top"></div>
+        <div id="head-bottom"></div>
+      </div>
+      <div class="body">
+        <div id="body-front"></div>
+        <div id="body-back"></div>
+        <div id="body-left"></div>
+        <div id="body-right"></div>
+        <div id="body-bottom"></div>
+      </div>
+      <div class="slim left-slim-arm">
+        <div id="left-slim-arm-front"></div>
+        <div id="left-slim-arm-back"></div>
+        <div id="left-slim-arm-left"></div>
+        <div id="left-slim-arm-top"></div>
+        <div id="left-slim-arm-bottom"></div>
+      </div>
+      <div class="slim right-slim-arm">
+        <div id="right-slim-arm-front"></div>
+        <div id="right-slim-arm-back"></div>
+        <div id="right-slim-arm-right"></div>
+        <div id="right-slim-arm-top"></div>
+        <div id="right-slim-arm-bottom"></div>
+      </div>
+      <div class="left-leg">
+        <div id="left-leg-front"></div>
+        <div id="left-leg-back"></div>
+        <div id="left-leg-left"></div>
+        <div id="left-leg-top"></div>
+        <div id="left-leg-bottom"></div>
+      </div>
+      <div class="right-leg">
+        <div id="right-leg-front"></div>
+        <div id="right-leg-back"></div>
+        <div id="right-leg-right"></div>
+        <div id="right-leg-top"></div>
+        <div id="right-leg-bottom"></div>
+      </div>
+    </div>
+  </div>
+              </div>
+              <p>Minecraft was one of the biggest things in my childhood, it introduced a lot of internet culture, friends, and even my motivation to start my art journey! Even when I'm not as passionate about it as when I'm younger, I could never forget about the things that changed me forever.</p>
+              <h2>Minecraft PE</h2>
+              <p>So back when Minecraft was booming, I was told the existence of the Minecraft. I played Minecraft PE, which does not have the quality like the desktop version of course. However, I quickly became fascinated with the freedom to build basically everything. Houses, farms, conveyor belts (water stream), rollercoasters...</p>
+              <p>While I spent a lot of time without Minecraft Java, I still had a lot of fun playing it. Because a lot of blocks are missing in PE, I had to make compromises by using other similar blocks or just forget about them, I was quite sad item frames weren't a thing back then. But somehow, I still loved the stuff I built. I even built a whole city, with ice rinks, hotels, schools and stuff. As a little kid, I find it soothing to roleplay as a citizen living inside there, even if it is going to that school.</p>
+              <p>Another thing about Minecraft PE is that there was no day night cycle in creative mode back then. While the buildings looked good, I found it a bit lonely to see the same things with the same colors. But a maracle happened, not sure which update was that, but one time I was playing the world, and I got to see the sun set for the very first time. It was one of the most beautiful things I've seen in Minecraft.</p>
+              <h2>Minecraft: Java Edition</h2>
+              <p>On a birthday, I got a Minecraft Java account. I got to play with new blocks and play at famous servers, such as Mineplex, Hypixel, and HiveMC. With so much freedom given to me, I got to build really cool stuff in my own world, like building a cave house (I really like cave houses, I guess I like small houses), some random houses, <s>torture devices</s> food making machines.</p>
+              <p>But the best part of playing Minecraft Java Edition is the servers, where I found many online friends. Being a kid with repressed anger issues, I annoyed a lot of private rooms in Mineplex. Somehow, that got me some very kind friends. And after joining the Mineplex forum, I learnt about the ways of making online friends. I even started drawing because a person named MishyMolly made a post about how to draw a Minecraft character, and encouraged me when I tried to draw my skin.</p>
+              <p>I spent an incredible amount of time playing the servers, playing the minigames and horribly failing any pvp games. There was one time I nearly won a bridges game, but lost because I got stuck in the air due to lag. But no matter the outcome, I always enjoyed waiting for my friends to come online and playing with them.</p>
+              <p>Minecraft is the reason I started drawing, Kyrea existed, I learnt about a lot of Internet stuff and even made friends, both online and real-life. Because of my Minecraft fixiation, I got to bond with some of my primary school friends, finally finding some common interests with them. While most of the primary school experience was bitter, at least the last few years were enjoyable.</p>
+            </div>
+        </article>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-column">
+    <h2>Credits</h2>
+	<ul>
+	<p> Background: Minecraft textures</p>
+	</ul>
+    </div>
+  </footer>
+</body>

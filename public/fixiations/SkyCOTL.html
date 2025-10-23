@@ -17,6 +17,9 @@
             --dblue:#f2dea4;
             --yellow:#000000a0;
         }
+        main{
+          background: none;
+        }
         #bg{
             position: fixed;
             height: 100vh;
@@ -39,14 +42,20 @@
         hr{
             border-top:1px solid var(--teal);
         }
+        footer{
+          --blue: #2d3758;
+  --dblue: #1b1d4c;
+          z-index: 1;
+  position: relative;
+        }
     </style>
 <body>
     <nav>
     <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
       <a href="index.html">Fixiations</a>
   </nav>
+  <img src="deco/Sky/SkyBG.jpg" id="bg">
   <main>
-    <img src="deco/Sky/SkyBG.jpg" id="bg">
     <section class="wide">
         <article>
             <h1>Sky: Children of the Light</h1>
@@ -89,6 +98,14 @@
         </article>
     </section>
   </main>
+  <footer>
+    <div class="footer-column">
+    <h2>Credits</h2>
+	<ul>
+	<p> Background: Screenshot in Sky: COTL</p>
+	</ul>
+    </div>
+  </footer>
 </body>
 <script src="/spoiler.js"></script>
 </html>
