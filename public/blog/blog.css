@@ -7,6 +7,8 @@
   --dblue:#000527;
   --shadow:#1b357082;
   --bg:#0b263b75, #1f084e73;
+  --status1:#55a6ff3b;
+  --status2:#9eccff24;
 }
 .blognav {
   position:fixed;
@@ -90,8 +92,6 @@ justify-content: space-around;
 }
 .statusbox p{
   padding: 5px 10px;
-  --status1:#55a6ff3b;
-  --status2:#9eccff24;
   filter: var(--dropshadow);
   margin:0;
   text-indent: 0 !important;
@@ -130,7 +130,7 @@ justify-content: space-around;
 }
 }
 .blogcredit{
-    background: linear-gradient(#228bff3b, #9eccff24);
+    background: linear-gradient(var(--status1), var(--status2));
     color: var(--blue);
     padding: 0px 15px;
     margin: 0 20px;
