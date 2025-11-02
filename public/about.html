@@ -10,26 +10,10 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="/jquery.style-my-tooltips.js"></script>
   <style>
-  .ff-container.ff-responsive {width:max-content !important;}
+  .ff-container.ff-responsive {width:max-content !important;margin:5px;}
 canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 .site .ff-container.ff-responsive.ff-ready.ff-inactive{filter: var(--dropshadow);}
 .site a .ff-container.ff-responsive.ff-ready.ff-inactive:hover {translate:var(--down);filter: var(--dropshadowdown);}
-  @keyframes an {
-        0% {
-          transform: translateY(-20%);
-          opacity:0;
-        }
-        100% {
-          transform: translateY(0);
-          opacity:1;
-        }
-      }
-section.wide{
-  animation-duration: 1.5s;
-  animation-timing-function: ease-in-out;
-        animation-delay: 0s;
-        animation-name: an;
-}
 article{
   overflow:visible;
 }
@@ -39,22 +23,19 @@ border-radius:5px;
 margin:0 50px;
 padding:5px 15px;
 background:linear-gradient(var(--highlightteal),#76e0db41);
-min-height:288px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
 }
 #photo{
-position: absolute;
-    width: 150px;
+    width: 160px;
     outline: 4px solid var(--blue);
     background: var(--blue);
     border-radius: 5px;
     z-index: 1;
     filter:var(--dropshadow);
-        top: 25px;
+    top: 25px;
     left: 25px;
-    rotate: -13deg;
+    rotate: -5deg;
+    margin-right: 15px;
+    cursor:help;
 }
 #photo h3{
 color:var(--yellow);
@@ -114,95 +95,88 @@ aspect-ratio: 1/1;
     translate: 0 0;
         }
       }
-#info p, #info div:not(#photo, .meow), #info button{
-display:inline-block;
-background:white;
-padding:5px 10px;
-font-size:1.25em;
-border-radius:5px;
-filter:var(--dropshadow);
-margin: 0.75em 5px;
-font-size:1.1em;
-transition:scale 0.5s;
-vertical-align: middle;
-text-indent: 0;
+
+#intro{
+  background: white;
+  height: fit-content;
+  border-radius: 5px;
+  padding:10px;
+  filter:var(--dropshadow);
+  width:calc(100% - 175px)
 }
-#info a p:hover, #info button:hover{
+#intro::before {
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  background: white;
+  content: '';
+  top: 10px;
+  left: -4px;
+  transform: rotate(-225deg) skew(35deg, 10deg);
+  pointer-events: none;
+  z-index: -1;
+}
+#info hr{
+  border-color: var(--blue);
+}
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.minis > a, .minis > img, .minis > button{
+  height: 64px;
+  filter:var(--dropshadow);
+  transition: scale 0.5s;
+  margin: 5px;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.minis a img,.minis button img{
+  height:100%;
+}
+.minis a:hover, .minis button:hover{
   scale:1.1;
   z-index:1;
   cursor: pointer;
 }
-#info div#nametag{
-  rotate:-2deg;text-align: center;background:var(--blue);
-  padding: 0 10px 5px;
-  margin-left: 120px;
-  color:white;
-}
 @media(max-width:900px){
-#info p{
-margin: 0.75em 5px;
-padding:5px 10px;
-}
 #info{
   margin:0;
-  justify-content: space-around;
 }
-    #photo {
-        width: 200px;
-        position: static;
-        margin: auto;
-    }
-  #info div#nametag{
-    margin-left:5px;
-  }
 }
-.badge img{
-  display:inline-block !important;
-  border-radius: 0px !important;
+.badge img,.minis img{
   image-rendering: pixelated;
 }
-.site img{
+.site img,.stamp img,.badge img{
   display:inline-block !important;
+  border-radius:0px !important;
 }
-.stamp img{
-  display:inline-block;
-  border-radius:0px;
-}
-.link a{
+#nekoweb,#github,#artfight{
+  height:auto;
   background:var(--yellow);
   border-radius: 5px;
   display: inline-block;
-  box-shadow: 4px 4px 4px 2px var(--shadow);
+  filter:var(--dropshadow);
   padding:7px 14px;
   margin:7.5px;
-  position:relative;
-  transition: color 0.25s, background-color 0.25s;
+  transition: scale 0.5s;
   text-decoration:none;
 }
-.link a:hover{
-  background:#e6a95c;
-  translate: 2px 2px;
-  box-shadow: 2px 2px 4px 2px var(--shadow);
-  color:var(--dblue);
-}
-.link a.special#bluesky{
-  background:#4EA4EE;
+#artfight{
+  background:linear-gradient(#ff8585,#ffbf4a,#79c179,#5656ff,#9f5a9f);
   color:white;
+  text-shadow: 1px 1px var(--teal);
 }
-.link a.special#twitter{
-  background:black;
-  color:white;
-}
-.link a.special#nekoweb{
+#nekoweb{
   background:#ffeffb;
   color:#f03fad;
 }
-.link a.special#github{
+#github{
   background:#161B22;
   color:#4493f8;
-}
-.link a.special:hover{
-  filter: saturate(1.3) brightness(0.8) hue-rotate(5deg);
 }
   </style>
   </head>
@@ -215,47 +189,36 @@ padding:5px 10px;
     <section class="wide">
     <article><h1 style="text-align: center;">⭑ Hello there :3 ⭑</h1>
     <div class="inner">
+      <div style="min-height: 200px;display: flex;">
+        <div id="photo">
+        <div class="meow">
+        <h3>Don't look at me</h3>
+        <h3>Look at this car instead</h3>
+        <img src="blog/idiot.png">
+        </div>
+        <img src="art/notme.jpg">
+        <center><h3>It me!</h3></center>
+      </div>
+      <p id="intro">Hello,I am <u>KiwiMeowo (she/her)</u>, an artist from <u>Hong Kong</u> (and I can understand English and Chinese)! In this website, you will find all sorts of ramblings, art, and OC lore that you didn't ask for!</p>
+      </div>
       <center><u>Volume warning on clicking the hampter</u></center>
 	       <div id="info">
-          <div id="photo">
-  <div class="meow">
-    <h3>Don't look at me</h3>
-    <h3>Look at this car instead</h3>
-  <img src="blog/idiot.png">
-  </div>
-<img src="art/notme.jpg">
-<center><h3>It me!</h3></center>
-</div>
-<div id="nametag">Hello, my name is:</span><br><div style="background: white;margin:0;border-radius: 2.5px;filter:none;color:var(--teal)">KiwiMeow/KiwiMeowo<br><span style="opacity:0.75;font-size:0.9em;">(Kiwi)</span></div></div>
-<div style="rotate:9deg;background:linear-gradient(180deg, #ff9876, #dc4411 64%, #ab0909 100%);padding: 28px 10px;border-radius: 50%;color: white;text-shadow: 1px 1px #b40808;position: relative;"><div style="content:'';position: absolute;filter: none;margin: 0;padding: 0;width: 95%;height: 95%;translate: -8px -26px;border-bottom: 1px solid #8ef0ff9c;box-sizing: border-box;border-radius: 50%;background: linear-gradient(360deg, #8ef0ff9c 5%, transparent 38%);"></div><div style="content:'';position: absolute;filter: none;margin: 0;padding: 0;width: 65%;height: 50%;translate: 3px -26px;box-sizing: border-box;border-radius: 50%;background: linear-gradient(180deg, #fff3c09c 19%, transparent 90%);"></div>she/her</div>
-<p style="rotate:4deg;background:SandyBrown;border:2px solid white;"><span style="color:white;font-size:0.75em">Birthday:</span><br><span style="text-shadow: 1.5px 1.5px #ed6527;color: white;text-decoration: underline;">8 March</span></p>
-<p style="rotate:1deg;color:orangered;">Hong Kong 🇭🇰</p>
-<p style="rotate:2deg;background:var(--yellow);text-decoration: underline;text-decoration-color: var(--lteal);text-underline-offset: 3px;">I can speak:<br>- English<br>- 中文</p>
-<p style="rotate:-10deg;text-align: center;background-color: white;background-image: url(/assets/paper-texture.png);"><span style="font-size: 0.9em;color: var(--blue);text-shadow: 1px 1px var(--lteal);">Drawing </span><span style="font-size:0.75em">is my</span><br><span style="background: linear-gradient(to right, red, orange,green, blue, purple);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-decoration-color:var(--teal);filter:drop-shadow(1px 1px 1px var(--shadow));filter: drop-shadow(1px 1px 0px var(--highlightteal));font-size: 1.3em;">⭑Passion⭑</span></p>
-<button onclick="hampter()" style="color:DarkGoldenRod;border: none;line-height: inherit;font-size: inherit;">Hampter 🐹</button>
-<p style="rotate:-10deg;color:DarkRed;">OC brainrotting</p>
-<a href="oc/UtSS/Cosmos.html"><p style="rotate:-10deg;background: linear-gradient(rgb(19 0 44 / 75%), #e062e03b), url(background.jpg);background-size: cover;background-position: center; color:white;">Cosmos ∑:3</p></a>
-<a href="fixiations/Barou.html#ship"><p style="rotate:1deg;color:white; background:linear-gradient(to bottom, #560606, black 90%, #562e2e 95%);"><span style="color:red;">BAROU</span><span style="color:#badd1e">SAGI</span> OTP</p></a>
-<a href="fixiations/Pome.html"><p style="rotate:-4deg;background:linear-gradient(to bottom, #D52F25, darkred 90%, #a6231b 95%);color:white;">Pome Fan ✧(ᓀ ‸ ᓂ)✧</p></a>
-<a href="https://www.youtube.com/@WillWoodmusic" target="_blank"><p style="rotate:7deg;background:black;color:#d4ba91;">Will Wood enjoyer</p></a>
-<a href="https://www.youtube.com/user/thecranewives" target="_blank"><p style="rotate:-3deg;"><span style="background: linear-gradient(to right, orange,green);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-decoration-color:var(--teal)">LISTEN TO THE CRANE WIVES</span></p></a>
-</div>
-<hr>
-    <center>
-      <h2 style="display:inline;">Gif Animation:</h2>
-      <span style="display:inline-block;">
-        <button class="start coolbutton">Play</button>
-     <button class="stop coolbutton">Pause</button>
-     </span>
-     </center>
-	      <hr>
-	      <center class="badge freezeframe">
+          <h2>Little trinkets made by me</h2>
+          <div class="flex minis">
+            <img src="/art/minis/Birthday.png" alt="Birthday: March 8" title="My birthday is on March 8!">
+            <img src="/art/minis/Pronouns.png" alt="She/her" title="Wow... She has undyed hair and pronouns..." style="height:32px">
+            <button onclick="hampter()" title="Hampter"><img src="/art/minis/Hampter.png" alt="Hampter"></button>
+            <a href="fixiations/Pome.html" title="Pomegranate Cookie my beloved"><img src="/art/minis/Pome.png" alt="Pomegranate Cookie"></a>
+            <a href="oc/UtSS/Cosmos.html" title="Cosmos :3"><img src="/oc/chatprof/Cosmos.png" alt="Cosmos"></a>
+          </div>
+          <hr>
+          <h2>Other trinkets</h2>
+          <div class="flex badge freezeframe">
 	      <img src="button/hk_button.png">
 	      <img src="button/mcpastels.gif">
 	      <img src="button/Demisexual.png">
-	      </center>
-	      
-	      <center class="site freezeframe">
+	      </div>
+        <div class="flex site freezeframe">
 	      <img src="button/RAT_Button.gif" alt="RAT Button" class="button">
 	      <a href="https://molecule31.neocities.org" target="_blank"><img src="button/Css_Is_Awesome_Button.gif" style="image-rendering: pixelated;" class="button"></a>
 	      <a href="https://vidapon.net/freebies/" target="_blank"><img src="button/SkyCOTL_button.gif" class="button"></a>
@@ -264,28 +227,34 @@ padding:5px 10px;
 	      <img src="button/hollybutton.png" title="Button by me, feel free to use" class="button">
 	      <a href="https://artfight.net/" target="_blank"><img src="button/stamp_werewolves.png" style="image-rendering: pixelated;" class="button"></a>
 	      <a href="https://artfight.net/" target="_blank"><img src="button/stamp_stardust.png" style="image-rendering: pixelated;" class="button"></a>
-	      </center>
-	      
-	      <center class="stamp freezeframe">
+	      </div>
+        <div class="flex stamp freezeframe">
 	      <a href="https://www.deviantart.com/megumar/art/Pomegranate-Cookie-Stamp-766502237" target="_blank"><img src="button/pomestamp.png"></a>
 	      <a href="https://www.deviantart.com/megumar/art/Hollyberry-Cookie-Stamp-897964027" target="_blank"><img src="button/hbstamp.png"></a>
 	      <a href="https://www.deviantart.com/megumar/art/Timekeeper-Cookie-Stamp-892135907" target="_blank"><img src="button/tkstamp.png"></a>
 	      <a href="https://www.deviantart.com/megumar/art/Golden-Cheese-Cookie-Stamp-897964053" target="_blank"><img src="button/gcstamp.png"></a>
 	      <img src="button/RUN_AWAY_FELLAW_Stamp.gif" alt="HE RAN Stamp">
-	      </center>
-	      <hr>
+	      </div>
+        <hr>
+        <h2>Links</h2>
+        <div class="flex minis links">
+          <a href="mailto:kiwimeow0308@gmail.com" target="_blank" title="email" style="height:32px"><img src="/art/minis/Mail.png" alt="Email"></a>
+          <a href="https://neocities.org/site/kiwimeowo" target="_blank" title="Neocities profile"><img src="/art/minis/Neocities.png" alt="Neocities"></a>
+          <a href="https://github.com/KiwiMeowo" target="_blank" id="github">Github</a>
+          <a href="https://artfight.net/~KiwiMeowo" target="_blank" id="artfight">ArtFight</a>
+          <a href="https://kiwimeowo.nekoweb.org/" target="_blank" id="nekoweb">NekoWeb</a>
+          </div>
+         </div>
+<hr>
+    <center>
+      <h2 style="display:inline;">Gif Animation:</h2>
+      <span style="display:inline-block;">
+        <button class="start coolbutton">Play</button>
+     <button class="stop coolbutton">Pause</button>
+     </span>
+     </center>
       </div>
     </article>
-      <center class="link">
-      <a href="mailto:kiwimeow0308@gmail.com" target="_blank">Email</a>
-      <a href="https://twitter.com/KiwiMeowo" target="_blank" class="special" id="twitter">Twitter</a>
-      <a href="https://bsky.app/profile/kiwimeowo.neocities.org" target="_blank" class="special" id="bluesky">Bluesky</a>
-      <a href="https://neocities.org/site/kiwimeowo" target="_blank">Neocities</a>
-      <a href="https://github.com/KiwiMeowo" target="_blank" class="special" id="github">Github</a>
-      <a href="https://artfight.net/~KiwiMeowo" target="_blank">ArtFight</a>
-      <a href="https://kiwimeowo.nekoweb.org/" target="_blank" class="special" id="nekoweb">NekoWeb</a>
-      <a href="https://kiwimeowo.carrd.co/" target="_blank">Carrd</a>
-      </center>
 </section>
 </main>
 <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
