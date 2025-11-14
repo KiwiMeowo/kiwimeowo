@@ -448,7 +448,7 @@ article{
   }
 
 img::before {
-  position: absolute;
+  position: relative;
   white-space: wrap;
   display: block;
 }
