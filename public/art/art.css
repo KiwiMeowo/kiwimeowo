@@ -58,7 +58,7 @@ section.wide {
     display: block;
 }
 }
-.fra{
+#fra{
     border: 7.5px double var(--teal);
     width:100%;
     box-sizing: border-box;

@@ -1,0 +1,49 @@
+drawings.reverse();
+for (x=Math.ceil(drawings.length/18)-1;x>=0;x--){
+  var page=document.createElement('div');
+    page.classList.add('row');
+    page.setAttribute("id",x+1)
+    for(y=17;y>=0;y--){
+      if (drawings[y+18*x]==undefined){
+        continue;
+      } else{
+        var col=document.createElement("div");
+        col.classList.add("col")
+        var button = document.createElement("button");
+        button.classList.add("artborder");
+        var img = document.createElement("img");
+        img.setAttribute("loading",'lazy');
+        img.setAttribute("src",drawings[y+18*x].Link);
+        img.setAttribute("title",drawings[y+18*x].Comment,"( ",drawings[y+18*x].Comment," )");
+        button.append(img);
+        col.append(button);
+        page.append(col);
+      }
+    }
+  document.getElementById("fra").append(page);
+}
+
+// for (x=0;x<Math.ceil(drawings.length/18);x++){
+//   var page=document.createElement('div');
+//     page.classList.add('row');
+//     page.setAttribute("id",Math.ceil(drawings.length/18)-x)
+//     for(y=17;y>=0;y--){
+//       console.log(18*x-y,"+",x+1)
+//       if (drawings[18*x-y]==undefined){
+//         continue;
+//       } else{
+//         var col=document.createElement("div");
+//         col.classList.add("col")
+//         var button = document.createElement("button");
+//         button.classList.add("artborder");
+//         var img = document.createElement("img");
+//         img.setAttribute("loading",'lazy');
+//         img.setAttribute("src",drawings[18*x-y].Link);
+//         img.setAttribute("title",drawings[18*x-y].Comment,"( ",drawings[18*x-y].Comment," )");
+//         button.append(img);
+//         col.append(button);
+//         page.append(col);
+//       }
+//     }
+//   document.getElementById("fra").append(page);
+// }
