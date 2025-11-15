@@ -35,7 +35,7 @@ hr{
     border:0;
     border-top:1px solid var(--grey);
 }
-.fra{
+#fra{
     border:0;
     aspect-ratio: auto;
 }
