@@ -14,8 +14,14 @@ for (x=Math.ceil(drawings.length/18)-1;x>=0;x--){
         var img = document.createElement("img");
         img.setAttribute("loading",'lazy');
         img.setAttribute("src",drawings[y+18*x].Link);
-        img.setAttribute("title",drawings[y+18*x].Comment,"( ",drawings[y+18*x].Comment," )");
+        img.setAttribute("title",drawings[y+18*x].Comment+" ( "+drawings[y+18*x].Date+" )");
         button.append(img);
+        if (drawings[y+18*x].Style!=""){
+          img.setAttribute("style",drawings[y+18*x].Style);
+        }
+        if (drawings[y+18*x].Censor==true){
+          button.classList.add("censor");
+        }
         col.append(button);
         page.append(col);
       }
