@@ -9,7 +9,12 @@ for (x=Math.ceil(drawings.length/18)-1;x>=0;x--){
       } else{
         var col=document.createElement("div");
         col.classList.add("col")
-        var button = document.createElement("button");
+        if (drawings[y+18*x].Album!=""){
+          var button = document.createElement("a");
+          button.setAttribute("href",drawings[y+18*x].Album)
+        } else{
+          var button=document.createElement("button");
+        }
         button.classList.add("artborder");
         var img = document.createElement("img");
         img.setAttribute("loading",'lazy');
