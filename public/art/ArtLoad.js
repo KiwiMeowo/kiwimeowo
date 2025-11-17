@@ -13,8 +13,13 @@ for (x=Math.ceil(drawings.length/18)-1;x>=0;x--){
         button.classList.add("artborder");
         var img = document.createElement("img");
         img.setAttribute("loading",'lazy');
-        img.setAttribute("src",drawings[y+18*x].Link);
-        img.setAttribute("title",drawings[y+18*x].Comment+" ( "+drawings[y+18*x].Date+" )");
+        link=drawings[y+18*x].Link.replace("dl=0", "raw=1");
+        img.setAttribute("src",link);
+        date=link.split("_");
+        date=date[date.length-1];
+        date=date.split(".")[0];
+        date=`${date.split("-")[2]} ${date.split("-")[1]} 2026`
+        img.setAttribute("title",drawings[y+18*x].Comment+" ("+date+")");
         button.append(img);
         if (drawings[y+18*x].Style!=""){
           img.setAttribute("style",drawings[y+18*x].Style);
