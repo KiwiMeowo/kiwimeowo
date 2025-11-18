@@ -1042,8 +1042,10 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
         .then((html) => {
           var parser = new DOMParser();
           var doc = parser.parseFromString(html, "text/html");
-          var newsong = doc.querySelector('#new li');
+          var newsong = doc.querySelector('#new h2');
+          var newdesc = doc.querySelector('#new p');
           document.getElementById("new3").innerHTML = newsong.innerHTML;
+          document.querySelector("#new3 a").setAttribute("title",newdesc.innerText)
           document.getElementById("playbutton").href = newsong.getElementsByTagName("a")[0].href;
         })
         .catch(error => {
