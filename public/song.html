@@ -1,125 +1,148 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oh yeahh Bangers</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico?">
-    <link href="style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="emote.css" rel="stylesheet" type="text/css" media="all">
-    <link href="style-my-tooltips.css" rel="stylesheet" type="text/css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-    <script src="jquery.style-my-tooltips.js"></script>
-  <style>
-    main{
-        background: linear-gradient(#00000080, #a982f359 150%), url(/assets/fancy.png);
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KiwiMeowo's site</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?">
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script src="/jquery.style-my-tooltips.js"></script>
+</head>
+</html>
+<style>
+  :root{
+    --teal: white;
+      --blue:white;
+  }
+  .inner a:hover{
+        color:var(--lteal);
+        text-decoration-color:var(--lteal);
     }
-    section.wide{
-      width:100%;
-      width:-webkit-fill-available;
-      width:-moz-available;
-    }
-    article{
-        margin: auto;
-    max-width: 400px;
-    height: calc(100vh - 100px);
-    filter:none;
-    background:linear-gradient(var(--yellow),#a8b8c3 150%);
-    box-shadow: 4px 4px 4px 2px var(--shadow);
-    border-radius: 2.5px;
-    }
-    h1{
-        text-align: center;
-        background:linear-gradient(var(--yellow),#a8b8c3 150%);
-    }
-    .inner{
-      height: calc(100% - 206px);
-        margin: 10px 20px;
-  border: 1px solid;
-  border-radius: 5px;
-  background: black;
-  --teal: white;
-  --blue:white;
-    color: white;
-    overflow-y:scroll;
-    padding: 10px 15px;
-    }
-    .inner:before {
-    content: '';
-    background: linear-gradient(transparent 50%, #06092536 50%);
-    display: block;
-    background-size: 100% 2px, 4px 100%;
-    width: calc(100% - 42px);
-    height: calc(100% - 186px);
-    position: absolute;
-    z-index: 3;
-    pointer-events: none;
-    translate: -15px -10px;
-    border-radius: 5px;
-}
     hr{
         border:none;
         border-top:2px dotted white;
+    }
+  main{
+        background: linear-gradient(#00000080, #a982f359 150%), url(/assets/fancy.png);
+    }
+    article{
+      display: none;
+    }
+    article:first-child{
+      display: block;
+    }
+    #cd{
+      background: none;
+      box-shadow: none;
+    }
+    #cd .inner{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .col{
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+    .cdbox{
+      background: pink;
+      aspect-ratio: 1/1;
+      height:200px;
+      padding: 15px;
+      border:5px solid #c67478;
+      border-left: 30px solid #c67478;
+      margin: 30px auto;
+      box-shadow: 4px 4px 4px var(--shadow);
+      position: relative;
+    }
+    .cdbox p{
+rotate: 270deg;
+  width: 240px;
+  position: absolute;
+  left: -135px;
+  top: 94px;
+  text-indent: 0 !important;
+  text-align: center;
+  text-shadow: none;
+    }
+    .cdbox a{
+      filter:var(--dropshadow);
+      display: block;
+    }
+    .cdbox a:hover{
+      translate:0 -2px;
+      filter:drop-shadow(2px 4px 1px var(--shadow));
+    }
+    #cd h1, h2,p,li, .inner button, h3,.inner a, li{
+      text-shadow: 0px 0px 3px var(--lteal), 0px 0px 5px var(--lteal);
+      border-bottom: none;
     }
     li{
         list-style: "- ";
         margin: 10px 0;
     }
     li.fav{
-        list-style:"- ♥ ";
+        list-style:"♥ ";
     }
-    h2,p,li, .inner button, h3,.inner a{
-        --teal:white;
-        text-shadow: 0px 0px 3px #83cbff, 0px 0px 5px var(--lteal);
+    article:not(#cd){
+      --window:rgb(249, 148, 165);
+      border:2.5px solid var(--window);
+      border-radius: 5px;
+      background: rgba(0, 0, 0, 0.723);
+    box-shadow: 4px 4px 4px var(--shadow);
     }
-    .inner button{
-        background:none;
-        padding:0;
-        margin:0;
-        border:0;
-        transition: color 0.5s;
-        cursor:pointer;
-        text-decoration: underline;
-        text-underline-offset: 2px;
-    }
-    .inner button:hover, .inner a:hover{
-        color:var(--lteal);
-    }
-    button[onclick*="menu"]:after{
-        content:"<- Go Back";
-    }
-    .inner::-webkit-scrollbar-track {
-    background-color: black;
+    article:not(#cd) .inner {
+  height: calc(100vh - 190px);
+  overflow: hidden;
+  overflow-y: scroll;
 }
-.inner::-webkit-scrollbar-thumb {
-    background-color: white;
-    border-color: black;
-}
-#mp3button{
-  width: 90px;
-    margin: auto;
-    background: linear-gradient(var(--yellow), #a8b8c3 150%);
-    border: 1.5px solid;
-    border-radius: 50%;
-    filter: var(--dropshadow);
-}
-.playbuttons button {
-  width:30px;
+    article:not(#cd) .inner::before{
+      content: '';
+    background: linear-gradient(transparent 50%, #03072832 50%);
+    display: block;
+    background-size: 100% 2px, 4px 100%;
+    width: 100%;
+    height:calc(100% - 60px);
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+    translate: -25px -15px;
+    border-radius: 0 0 5px 5px;
+    }
+    article:not(#cd) > h1:not(aside h1){
+      background: var(--window);
+      border-bottom: none;
+      text-shadow: none;
+      font-size: 1.5em;
+      padding: 7.5px 10px;
+    }
+    article:not(#cd) h1 a{
+      background: white;
+  color: var(--window);
+  text-decoration: none;
   aspect-ratio: 1/1;
-  border:none;
-  cursor:pointer;
-  padding:2.5px 0;
-  background: none;
-}
-.playbuttons{
-  display:flex;
-  justify-content: center;
-}
-.playbuttons button:hover {
-  filter: brightness(0.9) saturate(1.2);
-}
-.inner li:first-of-type button:after,.inner li:first-of-type a:after{
+  height: 20px;
+  float: right;
+  text-align: center;
+  filter:drop-shadow(2px 2px var(--shadow));
+    }
+    article:not(#cd) h1 a:hover{
+      filter:drop-shadow(1px 1px var(--shadow));
+      translate: var(--down);
+    }
+    article:not(#cd) h1 a:after{
+        content:"x";
+    }
+    article h2{
+      font-size: 1.2em;
+    }
+    article p{
+      font-size: 0.9em;
+      opacity: 0.75;
+    }
+    article:not(#cd) .inner h2:first-of-type a:after{
     content: "♪";
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -137,194 +160,401 @@
     translate:0 -2px;
   }
 }
-.inner .text{
-    display:none;
+    img.spin {
+  max-height: 100px;
+  aspect-ratio: 1/1;
+  animation-name: spin;
+  animation-duration: 2500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  margin: 0;
+  position: absolute;
+  z-index: 4;
+  bottom: -50px;
+  right: -50px;
 }
-.inner .text:first-child{
-    display:block;
-}
-  </style>
-  </head>
- <body>
+    @keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+  }
+  @media (max-width:1100px){
+    .col{
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  @media (max-width:700px){
+    .col{
+      max-width:100%
+    }
+    #cd .inner{
+      display: block;
+    }
+  }
+</style>
+<body>
   <nav>
-      <a href="index.html" style="--svg:url(/assets/home.svg)"></a>
-    </nav>
+    <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
+  </nav>
   <main>
     <section class="wide">
-      <article>
-      <h1>♫ My fav songs ♬</h1>
-      <div class="inner">
-      <div class="text" id="menu">
-        <h2>Playlists</h2>
-        <li><button onclick="playlist('new')">My regularly-updated playlist</button></li>
-        <li><button onclick="playlist('post2018')">My life-changing post-2018 era playlist</button></li>
-        <li><button onclick="playlist('pre2018')">My nostalgic pre-2018 era playlist</button></li>
-        <li><button onclick="playlist('CraneWives')">My Crane Wives playlist</button></li>
-        <li><button onclick="playlist('WillWood')">My Will Wood playlist</button></li>
-        <hr>
-    </div>
-
-    <div class="text" id="new">
-        <button onclick="playlist('menu')"></button>
-        <h2>More songs I ramble about</h2>
-            <!--
-            <li><a href="" target="_blank" title="">Singer - Title</a></li>
-            -->
-            <li><a href="https://youtu.be/VbW2GNsoQ9c?si=NKsJhYJFZ6LO77m0" target="_blank" title="EVERYONE SHUT UP AND LISTEN TO THIS VERSION OF FIND HER!!!! Jesus chirst this songs gives me so much emotion, it gives a feeling of bittersweet childhood memories that you can't fully remember, and the melancholy of unable to return to the simpler times. I was only trying to find a background video to listen to while drawing, I didn't ask for a gut punch of feelings... But I'm not complaning though!">HUE CYCLES - Found</a></li>
-            <li><a href="https://youtu.be/Q0guReRtGWI?si=nDN7tRxR-PjsqQ2z" target="_blank" title="Dream BBQ has been out for a while, and the trailer ost is still banger as hell">Oliver Buckland - anemoia</a></li>
-            <li><a href="https://youtu.be/vjBFftpQxxM?si=UUbossar6m4d7m51" target="_blank" title="The song is extremely catchy, and I can't beliee the singer is actually a voicebank">FLAVOR FOLEY - BUTCHER VANITY</a></li>
-            <li><a href="https://youtu.be/6IhNJBelajU?si=JxZDSqSLEr1NZiML" target="_blank" title="They finally released this song, and yet again I was stunned by how amazing the song is">Yaelokre - Kid & Leveret</a></li>
-            <li><a href="https://youtu.be/IeyCdm9WwXM?si=SYjVttHkV7AYPfRs" target="_blank" title="The outro of DANDADAN is quite catchy, Zutomayo always creates awesome songs">ZUTOMAYO – TAIDADA</a></li>
-            <li><a href="https://youtu.be/Ozn2PUZh8hM?si=Oy4Wypyq6kYTVpac" target="_blank" title="It's a song I heard in my Danganronpa era, man SaiMatsu... Anyways I remembered this song because I'm feeling like sad love songs today, it's beautiful like the old covers.">Lizz Robinett (Cover) - Calc.</a></li>
-            <li><a href="https://youtu.be/fxPcJTU-A8U?si=yG5nmDtzyvzZQSBq" target="_blank" title="While I'm not exactly interested in the anime, the opening is extremely catchy, and it was trending when this song was first teased. I'd expect the full version to be less catchy at that time, but it turns out the entire song is very catchy.">Noko Shikanoko - シカ色デイズ</a></li>
-            <li><a href="https://youtu.be/LHdlw9F3KP4?si=_n0QxtS7l1e6zPeA" target="_blank" title="This song is INSANELY catchy. Some people might be surprised by the sexual implications in the lyrics, but I heard some comments saying those aren't even intentional?">Reol - LUVORATORRRRRY!</a></li>
-            <li><a href="https://youtu.be/jPiiEwgJqd8?si=1eOVHKwOW7ocUSRG" target="_blank" title="I probably looped this song for over 100 times this year">H△G - 星見る頃を過ぎても (Best Album Version)</a></li>
-            <li><a href="https://youtu.be/Swk-epKlXlw?si=Mq-EPbjjM8N-viUc" target="_blank" title="Despite being cis, I kinda feel the theme of being confused by your identity and self-loathing">Will Wood - I/Me/Myself (2024 Edit)</a></li>
-            <li><a href="https://www.youtube.com/watch?v=seJ83vfHoIU" target="_blank" title="I remember seeing a post about 'Listening to a song --> When the part that sounds like astral journey comes on', and I think this song is one of the examples, except the entire song feels like astral journey. (I mixed up astral journey and astral projection fml)">Ghost - Mary on a Cross</a></li>
-            <li><a href="https://youtu.be/QlIUHMLSVkw?si=s697yWSHIvaLZ-tD" target="_blank" title="I think I have a thing for songs with many people singing together. This song is so joyous">Goose House - Oto No Naru Houe</a></li>
-            <li><a href="https://youtu.be/IhBzi0EpG2k?si=jk-sUG59AfDqZCFk" target="_blank" title="Holy shit the second part of the song makes me ASCEND">Saint Motel - Daydream / Wetdream / Nightmare</a></li>
-            <li><a href="https://youtu.be/Wu6xiNf5Brg?si=BNiFZZPYNtEoZjMO" target="_blank" title="This is an OST for Golden Cheese Kingdom chapters in Cookie Run Kingdom. Don't skip out the story just because it's about cookies, the stories can be very good (sometimes), and this one is so emotional, it is my favourite story of all time, and this is my favourite OST in this arc.">Sohn Minsoo (Cookie Run) - Logging Off</a></li>
-            <li><a href="https://youtu.be/1k8craCGpgs?si=DU_Gn0T4IumIf3iF" target="_blank" title="The chorus is so good it makes me ascend">Journey - Don't Stop Believin'</a></li>
-            <li><a href="https://youtu.be/nk5d5zDvJw8?si=vNvWYz4TXvMXyEV4" target="_blank" title="This sounds so pretty, have been listening to this for a while">HΔG - Don't Forget</a></li>
-            <li><a href="https://youtu.be/UHbmkxv-874?si=Tef3EoFMo-KvFd9n" target="_blank" title="I love how joyful it sounds but the lyrics are sad">ライアーダンサー／重音テトSV</a></li>
-            <li><a href="https://youtu.be/7_QydNXI_ok" target="_blank" title="This is an ost in Katamari Damacy. I never heard of the game before I stumbled upon a twitter post featuring a gameplay of it. There's a bit of sadness in this song despite the tune">Katamari Damacy - Lonely Rolling Star</a></li> 
-            <li><a href="https://youtu.be/SOhICfem_8g" target="_blank" title="It feels weird having two songs with the same artist here, but I just have to include them both. I heard that fans of Will Wood prefer more intense songs from him, so songs like Falling Up is not liked as much. I couldn't believe that because Falling Up is such a comforting and touching song, it reminds me of listening to old songs during my childhood for some reason (IDK if it sounds similar to any Canto songs). PLS LISTEN TO THIS">Will Wood - Falling up</a></li>
-            <li><a href="https://youtu.be/ghb6eDopW8I?si=9ZFu4p3egY1P-9zR" target="_blank" title="Youtube recommendation doing its job again. It's so catchy but the lyrics are sorrowful, I love it">Of Monsters and Men - Little Talks</a></li>
-            <li><a href="https://youtu.be/NwFVSclD_uc" target="_blank" title="Pretty sure I found it from Youtube recommendations, it is short but emotional.">The Walters - I Love You So</a></li>
-            <li><a href="https://youtu.be/z__B_djrJc4?si=emZMH2u0vXoGS7VY" target="_blank" title="Listening to more songs recently, many of their songs are wonderful, and I love this cover">高嶺の花子さん／back number (Cover by Goose House)</a></li>
-            <hr>
-    </div>
-
-    <div class="text" id="post2018">
-        <button onclick="playlist('menu')"></button>
-        <h2>Songs slap so hard they are life-changing</h2>
-        <p>This is the my playlist of post-Cookie Run era (I had drastic change during 2017-2018), they are quite life-changing to some degree, they are just that good.</p>
-        <hr>
-            <li><a href="https://youtu.be/tjdgGUuTw2A" target="_blank" title="This is the 2nd opening of Blue Lock. I really love how intense the anime and the ost is, so much so I have to prepare myself everytime I listen to the openings. My favourite thing about the opening animation is how Barou looks cool AF.">ASH DA HERO - Judgement</a></li>
-            <li><a href="https://youtu.be/e1Ik4LTLizE?si=qXb2Znqfl1zVlJBt" target="_blank" title="A song that gets better everytime you listen to it. There's something about songs like this that makes me feel powerful, power of edgyness.">CircusP - Misery Loves Company</a></li>
-            <li><a href="https://youtu.be/p5kc8hJ3GcA" target="_blank" title="It is the opening for Your Lie in April. I did not watch this anime, however the song is extremely lovely, very iconic opening.">Goose House - Hikaru Nara</a></li>
-            <li><a href="https://youtu.be/CkUvjyGyZic" target="_blank" title="Found this song in the background of a gameplay video, it is very encouraging, my top tier song back in my secondary school days">RSP - Yasashii Uta</a></li>
-            <li class="fav"><a href="https://youtu.be/Hlq2KVSROCk?si=eHD1tb5OAS3ikiYD" target="_blank" title="You know, I have heard of this song way back when I played Deemo. But recently, I decided to listen to Mili's cover because I suddenly remembered it. What happened is that I realised the lyrics fit Jaspers x Claire SO MUCH, LIKE 99% FITTING. Now this song became my fixiation.">H△G - 星見る頃を過ぎても</a></li>
-            <li class="fav"><a href="https://youtu.be/gEhuGPXxRrA" target="_blank" title="I found this song through Youtube recommendations, and once I listened to it, I couldn't stop looping it. It is one of my fuels for writing OC lore">The Crane Wives - Curses</a></li>
-            <li><a href="https://youtu.be/x60xR0TEQ88" target="_blank" title="It is the ending song for Hell's Paradise. My sister is the one who introduced this anime and song to me. The anime's pacing is very nice, and that is a very big compliment from me. But this ending song is absolutely top tier.">Uru - Kami Hitoe</a></li>
-            <li><a href="https://youtu.be/FT0GKCuSaW0?si=LG7K17UbjU7EFuRY" target="_blank" title="Despite my grudges towards the anime, I still love this song a lot. During the early development stages of my OC lore, I sometimes imagine my OCs with this as the opening. It sounds so coollllll">Vaundy - Hadaka no Yuusha</a></li>
-            <li class="fav"><a href="https://youtu.be/4rX5a3bnG4s?si=SAVBZffQ9IAmMGou" target="_blank" title="I would dance and sing to this song if I could dance and sing in the first place. This sounds like a villain singing to the protag, and this type of songs is oddly empowering.">Will Wood - Laplace's Angel (Hurt People? Hurt People!)</a></li>
-            <li><a href="https://youtu.be/tgPLzNvDrXo?si=fBCUx37_MY98nz50" target="_blank" title="I found this song from Youtube recommendations, it sounds very comforting, I love the style a lot. This artist is very underrated, please go check them out!">Yaelokre - Neath the grove is a heart</a></li>
-            <li><a href="https://youtu.be/2t-ImiI34eY?si=DCwSPI0sh8EugRiT" target="_blank" title="I was first introduced to this song in a Danganronpa V3 animatic, the video was short but I loved the song. When the full song was uploaded to youtube, I was overjoyed!">平井ジロー - どうして</a></li>
-            <li><a href="https://youtu.be/l1Ryaz_fK6c?si=tBb4kFEeaQIkmk-A" target="_blank" title="I found this song from a Pomegranate Cookie animatic in Bilibili. Although the artist has mentioned the song used, it took me a while to find it on Youtube. Now everytime I listen to this song, it reminds me of Pome.">中島優美 - 蓮</a></li>
-            <hr>
-    </div>
-
-    <div class="text" id="pre2018">
-        <button onclick="playlist('menu')"></button>
-        <h2>My fav songs when I was younger</h2>
-        <p>This is the my playlist of pre-Cookie Run era (I had drastic change during 2017-2018), but TBH the songs are still very great! I used to listen to more Vocaloid songs (I still do, but not as much), also I really liked<span class="kyr"> Deemo </span>back in the days, but this game introduced so many banger songs.</p>
-        <hr>
-            <li><a href="https://youtu.be/cMkJDPvJxdk" target="_blank" title="If you are familiar with animation meme, you would definitely recognise this song. And guess what, this is the first ever animation meme song I heard. This song is very banger like seriously.">CircusP - Karma</a></li>
-            <li><a href="https://youtu.be/P8huHuKlCQk" target="_blank" title="I always loved the part when the Vocaloids sing together">FuwariP - Yume no Katachi</a></li>
-            <li><a href="https://youtu.be/_YHVPNOHySk?si=8qAYd-KbX9gkCQTg" target="_blank" title="This was the first song I've heard from Hamilton, I quickly binged all the songs from this musical. People say it is a bit overrated, but that idea is basically non-existent here because barely anyone knows this musicial in Hong Kong! The songs are fantastic.">Hamilton - Non-stop</a></li>
-            <li><a href="https://youtu.be/v9sR1Tm1diQ" target="_blank" title="When I was younger, I always loved emotional Vocaloid songs, and this is one of them. ">Halyosy - Connecting</a></li>
-            <li><a href="https://youtu.be/JhuaYitvAaw" target="_blank" title="I found this song from a Houseki no Kuni animatic, and this song fits the theme of the manga quite well. It is a song about growing up and leaving your childhood dreams behind, it is a sad but beautiful song.">Harumaki Gohan - Dreamless Dreams</a></li>
-              <li><a href="https://youtu.be/GIlMPJNk-pU" target="_blank" title="This is an ost in Puella Magi Madoka Magica. When I found this song while binging clips on Youtube, I felt like I had listened to it before, therefore I felt a sense of nostalgia. This song will be especially sad if you watched the anime.">Puella Magi Madoka Magica - And I'm home</a></li>
-              <li><a href="https://youtu.be/lhah85Ybb38" target="_blank" title="I used to love cats a lot, and willing to check out any media if it involves cats. Unfortunately, there's a high chance the media will involve a sad story and dead cats. This is the song that I was introduced to 96neko, a very amazing singer.">96猫×囚人P - クロノネガイ</a></li>
-            <li><a href="https://youtu.be/_aDHsn48aoY" target="_blank" title="I think I found this song from an Undertale animatic, it sounds so good ima cry">Kenshi Yonezu - Eine Kleine ( Cover by Shannon )</a></li>
-            <li><a href="https://youtu.be/AN72_SVbETA" target="_blank" title="This is one of the songs featured in Deemo, and it was one of my favourite songs in this game, and my sister agrees as well.">Mili - YUBIKIRI-GENMAN</a></li>
-            <li><a href="https://youtu.be/xHmgL3G-ny8?si=1Pa5eFVp0Wnxo-dW" target="_blank" title="It is extremely underrated, and also 96neko is always the GOAT">WhiteFlame - 下弦の月</a></li>
-            <li><a href="https://youtu.be/WDUA7z3703g?si=4V5D9l9kvHbxR540" target="_blank" title="I never really know about the full lore of this song series, but one thing I know is that the songs are bangers">ひとしずく×やま△ - Bad ∞ End ∞ Night</a></li>
-              <li><a href="https://youtu.be/bBcp_ljCBGU" target="_blank" title="This is a very iconic song in Hong Kong and many Chinese-speaking communies (I think), it was often sang in karaokes back in the day. When I was a child, I didn't really know how to enjoy art. But when I got older, I only realised how lovely this song is.">光良 - 童話</a></li>
-              <hr>
-    </div>
-
-    <div class="text" id="CraneWives">
-        <button onclick="playlist('menu')"></button>
-        <h2>Playlists</h2>
-        <p>I first found The Crane Wives back in 2021 June from Youtube recommendations, and the song is Curses. I was looking for new songs to listen to, so I gave it a try. I found it quite nice to listen to, but it turns out 'nice' is an understatement, because I couldn't stop looping the song. Later then, I decided to listen to their other songs, and they are very banger as well! I love their songs so much (especially Curses),  listening to them while thinking about my OCs bring me so much joy.</p>
-        <center><a href="https://www.youtube.com/channel/UCQ1ctrffvMbPct8cPOJL6xQ" target="_blank">The Crane Wives Channel</a></center>
-        <hr>
-        <li><a href="https://youtu.be/8YiaJwHLQkI?si=gQFlEQRvmdn8Ffnd" target="_blank">Arcturus Beaming</a></li>
-        <li><a href="https://youtu.be/zNMoC65nXcs?si=IP4nVITOH1WzqFgj" target="_blank">Back to the Ground</a></li>
-        <li><a href="https://youtu.be/hn16TCIJLsI?si=piVAHtY4g8qjuNDi" target="_blank">Bitter Medicine</a></li>
-        <li><a href="https://youtu.be/-9JbTrL3gq0?si=op57qS9bX1VQZpyp" target="_blank">Black Hole Fantasy</a></li>
-        <li><a href="https://youtu.be/bmckSpvxnBQ?si=_gasAVquadYttoTU" target="_blank">Canary in a Coal Mine</a></li>
-        <li class="fav"><a href="https://youtu.be/gEhuGPXxRrA?si=i1RJ3Q3vcxUOYQv0" target="_blank">Curses</a></li>
-        <li><a href="https://youtu.be/cEFgW-aBzug?si=brEK1ZWBLGDj7k2W" target="_blank">Easier</a></li>
-        <li><a href="https://youtu.be/4JetXkuIpxo?si=rY9DgkMneEzjq7KM" target="_blank">Here I Am</a></li>
-        <li><a href="https://youtu.be/pqBVIl9NJ3M?si=1S-0V3Hr1tIXLlAw" target="_blank">I Ain't Done</a></li>
-        <li><a href="https://youtu.be/syQ-YmDBM2I?si=XBH1TxmY0F7NBdBS" target="_blank">Icarus</a></li>
-        <li><a href="https://youtu.be/gLZEZTnrS0o?si=hVwjdyIiMc4JIiLo" target="_blank">Mad Dog</a></li>
-        <li><a href="https://youtu.be/9iPBJDMwGXk?si=ds1-n0D1zP6SL7Uy" target="_blank">Metaphors</a></li>
-        <li><a href="https://youtu.be/N5oZImPxT4Y?si=hYxelgwGBh0DSATI" target="_blank">New Discovery</a></li>
-        <li><a href="https://youtu.be/hkIp3XEEM_U?si=IjtP6TuAvUF0qjaA" target="_blank">Nobody</a></li>
-        <li><a href="https://youtu.be/MHB1DCyIVAQ?si=p8-bZBLwPiTdOIGt" target="_blank">Of Everlong</a></li>
-        <li><a href="https://youtu.be/O4C6ctMwurw?si=Vq2nZLpw9cE7OlaG" target="_blank">Pretty Little Things</a></li>
-        <li><a href="https://youtu.be/ZFBMyuN4NB0?si=mRjqp-mcU0JwZED7" target="_blank">Queen of Nothing</a></li>
-        <li><a href="https://youtu.be/gDbrrMsizfQ?si=pZhVa_GxGwOCA-wA" target="_blank">Safe Ship, Harbored</a></li>
-        <li class="fav"><a href="https://youtu.be/5qcnbseaK9I?si=JlOqBqCimxq6TuEV" target="_blank">Scars</a></li>
-        <li><a href="https://youtu.be/kqnvOCSn2ns?si=YlROc0aijGiInZ8h" target="_blank">Shallow River</a></li>
-        <li class="fav"><a href="https://youtu.be/Z1Cl0YSV1wI?si=EzhY6vO_coOmyr0x" target="_blank">Sleeping Giants</a></li>
-        <li><a href="https://youtu.be/KGkUye2L-38?si=_k__Ln59WUgvFEKh" target="_blank">Take Me to War</a></li>
-        <li><a href="https://youtu.be/4zPWGmklMCA?si=GXNjgxtKj-8OiAAd" target="_blank">The Garden</a></li>
-        <li><a href="https://youtu.be/CvrUj6WP4po?si=rQSVluy0SY8Sx1pp" target="_blank">The Glacier House</a></li>
-        <li><a href="https://youtu.be/twgV0WPCtUU?si=bpaVJR0L5T-gBarg" target="_blank">The Hand That Feeds</a></li>
-        <li><a href="https://youtu.be/BGztdO-GWsw?si=8yLt4Aye1987s5eP" target="_blank">The Moon Will Sing</a></li>
-        <li><a href="https://youtu.be/S8jeHMtFZUQ?si=_0IcKAcHhl4qMGCO" target="_blank">The Wolf</a></li>
-        <li><a href="https://youtu.be/jGLx95s2mrw?si=hrG-uG7VL-QJh81Y" target="_blank">Time Will Change You</a></li>
-        <li><a href="https://youtu.be/zMKUpMd04QI?si=kKQe6FkNwC73AaTp" target="_blank">Tongues & Teeth</a></li>
-        <li class="fav"><a href="https://youtu.be/MaDpFA9QaZM?si=qyusWDMu7jNNxNql" target="_blank">The Well</a></li>
-        <li><a href="https://youtu.be/DE9XSYmRUSs?si=tYzYfG9vJ33WUk_H" target="_blank">VOLTA</a></li>
-    </div>
-
-    <div class="text" id="WillWood">
-        <button onclick="playlist('menu')"></button>
-        <h2>Playlists</h2>
-        <p>I believe I found Will Wood's songs back in 2023 March. Through Youtube recommendations, I saw Will Wood's The Normal Album, from the vibes I thought it would be the kind I would enjoy. And at the very first song, it caught my heart.  What I like the most about his songs is that they come in a wide variety of genres, Laplace's Angel is more villain sounding, Tomcat Disposables is more melancholic, and I don't know how to describe Suburbia Overture but there's screaming. My favourite song by Will Wood is Falling Up, which is very underrated. The melody sounds like childhood, wonderful song to play when you are having a breakdown (and yes I have done that I'm serious). I'm sure there's at least one song you will love in all of Will Wood's songs.</p>
-        <hr>
-        <li><a href="https://youtu.be/B9wePPxOkLI?si=pOYyWAbzO4Wemi6R" target="_blank">2012</a></li>
-        <li><a href="https://youtu.be/w63orOykrsU?si=YSM0hJD9iP8NVYUE" target="_blank">6up 5oh Cop-Out (Pro / Con)</a></li>
-        <li><a href="https://youtu.be/xIoXE4q-Jes?si=zHfUrqnUhVVEymr_" target="_blank">Against the Kitchen Floor</a></li>
-        <li><a href="https://youtu.be/AoIhaAL3EQI?si=lfqk7v-qSRfcmFuT" target="_blank">Becoming the Last Names</a></li>
-        <li class="fav"><a href="https://youtu.be/k8_oxlkqx-U?si=bLOLx9TKHQ0WPSbK" target="_blank">Cicada Days</a></li>
-        <li><a href="https://youtu.be/fPd-iAMktY8?si=5b9KCUP0S2HsgOII" target="_blank">Euthanasia</a></li>
-        <li class="fav"><a href="https://youtu.be/-7tQds-Th9s?si=NZvtmJIb9KtGyLuE" target="_blank">Falling Up</a></li>
-        <li><a href="https://youtu.be/1esJFm4X8IQ?si=oEvxUEFWtxoFFCcv" target="_blank">Front Street</a></li>
-        <li><a href="https://youtu.be/-AvYfjmM7ww?si=BI0UMZAiyof_g5zs" target="_blank">Hand Me My Shovel, I'm Going In!</a></li>
-        <li><a href="https://youtu.be/SgnSMftcFN0?si=rdMfU7xrS7x3acqw" target="_blank">I/Me/Myself</a></li>
-        <li><a href="https://youtu.be/aBOJzx12cuw?si=Q7QHJy0rEOXfk7wi" target="_blank">Marsha, Thankk You for the Dialectics, but I Need You to Leave</a></li>
-        <li class="fav"><a href="https://youtu.be/GQXSK6IWymk?si=dDWfrnOH1n0nRKZD" target="_blank">Laplace's Angel (Hurt People? Hurt People!)</a></li>
-        <li><a href="https://youtu.be/JxLxAAqL1zI?si=9pGl0z8jzFDQ17Py" target="_blank">Love Me, Normally</a></li>
-        <li><a href="https://youtu.be/iOAj4pXWUX0?si=po7j_MGP9mL0wOpU" target="_blank">Red Moon</a></li>
-        <li><a href="https://youtu.be/ui2kW-OvtkA?si=SDUI_AUzXTXVJfiv" target="_blank">Suburbia Overture / Greetings from Mary Bell Township! / (Vampire) Culture / Love Me, Normally</a></li>
-        <li><a href="https://youtu.be/iVK8jzLLuDg?si=oF-wNjSLlmCcagtz" target="_blank">That's Enough, Let's Get You Home.</a></li>
-        <li class="fav"><a href="https://youtu.be/rO8SJ_PqTJQ?si=8jqj7cZ_I5sG8WIu" target="_blank">Tomcat Disposables</a></li>
-        <li><a href="https://youtu.be/LPlo-_m1NTc?si=4sp8-5WLp40NeYJ5" target="_blank">...well, better than the alternative</a></li>
-        <li><a href="https://youtu.be/qc54cWA4Y6g?si=eOsAwuGYf2PgSuz7" target="_blank">White Noise</a></li>
-        <li><a href="https://youtu.be/RHhgHmy0m9k?si=rPwiBGMcgh10zmX_" target="_blank">Willard!</a></li>
-    </div>
-      </div>
-      <div id="mp3button">
-        <div class="playbuttons">
-          <button>↑</button>
+      <article id="cd">
+        <h1 style="text-align: center;">♫ My fav songs ♬</h1>
+        <div class="inner">
+          <div class="col">
+            <div class="cdbox" style="background: #f3e3b8;border-color:#3f6884">
+              <p>Regularly updated playlist</p>
+              <a href="#new" onclick="playlist(this.getAttribute('href'))">
+                <img src="assets/cd.png">
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="cdbox" style="background: #f3e3b8;border-color:#3f6884">
+              <p>Post-2018 playlist</p>
+              <a href="#post2018" onclick="playlist(this.getAttribute('href'))">
+                <img src="assets/cd.png">
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="cdbox" style="background: #dfe6e9;border-color:#ff8fc1;">
+              <p>Pre-2018 playlist</p>
+              <a href="#pre2018" onclick="playlist(this.getAttribute('href'))">
+                <img src="assets/cd.png">
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="cdbox" style="border-color: #827B54;background: #D4D9D5;">
+              <p>The Crane Wives playlist</p>
+              <a href="#CraneWives" onclick="playlist(this.getAttribute('href'))">
+                <img src="assets/cd.png">
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="cdbox" style="border-color: black;background: rgb(255, 176, 123);">
+              <p style="color:orange">Will Wood playlist</p>
+              <a href="#WillWood" onclick="playlist(this.getAttribute('href'))">
+                <img src="assets/cd.png">
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="playbuttons">
-          <button>←</button>
-          <button style="border: 1.5px solid;border-radius: 50%;scale: 1.2;background: linear-gradient(var(--yellow), #a8b8c3 150%);">▶</button>
-          <button>→</button>
-        </div>
-        <div class="playbuttons">
-          <button>↓</button>
-        </div>
-      </div>
       </article>
-</section>
-</main>
-<script>
-    function playlist(playlist){
-        var menus = document.getElementsByClassName('text')
-        for (x=0;x<menus.length;x++){
-            menus[x].style.display='none';
-        }
-        document.getElementById(playlist).style.display='block';
+      <article id="new" style="--window:#3f6884">
+        <h1>More songs I ramble about <a href="#cd" onclick="playlist(this.getAttribute('href'))"></a></h1>
+        <div class="inner">
+          <h2><a href="https://youtu.be/VbW2GNsoQ9c?si=NKsJhYJFZ6LO77m0" target="_blank">HUE CYCLES - Found</a></h2>
+          <p>EVERYONE SHUT UP AND LISTEN TO THIS VERSION OF FIND HER!!!! Jesus chirst this songs gives me so much emotion, it gives a feeling of bittersweet childhood memories that you can't fully remember, and the melancholy of unable to return to the simpler times. I was only trying to find a background video to listen to while drawing, I didn't ask for a gut punch of feelings... But I'm not complaning though!</p>
+          <hr>
+          <h2><a href="https://youtu.be/Q0guReRtGWI?si=nDN7tRxR-PjsqQ2z" target="_blank">Oliver Buckland - anemoia</a></h2>
+          <p>This is one of the songs from Ena: Dream BBQ. This song is absolutely chilling, and I especially the motifs from Extinction Party. </p>
+          <hr>
+          <h2><a href="https://youtu.be/vjBFftpQxxM?si=UUbossar6m4d7m51" target="_blank">FLAVOR FOLEY - BUTCHER VANITY</a></h2>
+          <p>A song about eating people, mmm raw meat. The YiXi voicebank sounds incredibly realistic in this song, I was surprised at first that the singer isn't a real person. I also love how YiXi goes mad about wanting to eat human flesh mid away into the song, it's kinda scary but man that part is good.</p>
+          <hr>
+          <h2><a href="https://youtu.be/6IhNJBelajU?si=JxZDSqSLEr1NZiML" target="_blank">Yaelokre - Kid &amp; Leveret</a></h2>
+          <p>Keith always puts so much power into their songs, while I've yet to understand the lore, the emotions in the song keeps me interested the story behind.</p>
+          <hr>
+          <h2><a href="https://youtu.be/IeyCdm9WwXM?si=SYjVttHkV7AYPfRs" target="_blank">ZUTOMAYO – TAIDADA</a></h2>
+          <p>The outro of DANDADAN is quite catchy, Zutomayo always creates awesome songs</p>
+          <hr>
+          <h2><a href="https://youtu.be/Ozn2PUZh8hM?si=Oy4Wypyq6kYTVpac" target="_blank">Lizz Robinett (Cover) - Calc.</a></h2>
+          <p>It's a song I heard in my Danganronpa era, man SaiMatsu... Anyways I remembered this song because I'm feeling like sad love songs today, it's beautiful like the old covers.</p>
+          <hr>
+          <h2><a href="https://youtu.be/fxPcJTU-A8U?si=yG5nmDtzyvzZQSBq" target="_blank">Noko Shikanoko - シカ色デイズ</a></h2>
+          <p>While I'm not exactly interested in the anime, the opening is extremely catchy, and it was trending when this song was first teased. I'd expect the full version to be less catchy at that time, but it turns out the entire song is very catchy.</p>
+          <hr>
+          <h2><a href="https://youtu.be/LHdlw9F3KP4?si=_n0QxtS7l1e6zPeA" target="_blank">Reol - LUVORATORRRRRY!</a></h2>
+          <p>This song is INSANELY catchy. Some people might be surprised by the sexual undertones in the lyrics, but I heard some comments saying those aren't even intentional?</p>
+          <hr>
+          <h2><a href="https://youtu.be/jPiiEwgJqd8?si=1eOVHKwOW7ocUSRG" target="_blank">H△G - 星見る頃を過ぎても (Best Album Version)</a></h2>
+          <p>I probably looped this song for over 100 times this year, something something it reminds me of my OCs.</p>
+          <hr>
+          <h2><a href="https://youtu.be/Swk-epKlXlw?si=Mq-EPbjjM8N-viUc" target="_blank">Will Wood - I/Me/Myself (2024 Edit)</a></h2>
+          <p>I swear when I first heard this song, it felt like I had listened to it before. Despite being cis, I kinda feel the theme of being confused by your identity and self-loathing.</p>
+          <hr>
+          <h2><a href="https://www.youtube.com/watch?v=seJ83vfHoIU" target="_blank">Ghost - Mary on a Cross</a></h2>
+          <p>I remember seeing a post about 'Listening to a song --&gt; When the part that sounds like astral journey comes on', and I think this song is one of the examples, except the entire song feels like astral journey. (I mixed up astral journey and astral projection fml)</p>
+          <hr>
+          <h2><a href="https://youtu.be/QlIUHMLSVkw?si=s697yWSHIvaLZ-tD" target="_blank">Goose House - Oto No Naru Houe</a></h2>
+          <p>I think I have a thing for songs with many people singing together. This song is so joyous</p>
+          <hr>
+          <h2><a href="https://youtu.be/IhBzi0EpG2k?si=jk-sUG59AfDqZCFk" target="_blank">Saint Motel - Daydream / Wetdream / Nightmare</a></h2>
+          <p>Holy shit the second part of the song makes me ASCEND</p>
+          <hr>
+          <h2><a href="https://youtu.be/Wu6xiNf5Brg?si=BNiFZZPYNtEoZjMO" target="_blank">Sohn Minsoo (Cookie Run) - Logging Off</a></h2>
+          <p>This is an OST for Golden Cheese Kingdom chapters in Cookie Run Kingdom. Don't skip out the story just because it's about cookies, the stories can be very good (sometimes), and this one is so emotional, it is my favourite story of all time, and this is my favourite OST in this arc.</p>
+          <hr>
+          <h2><a href="https://youtu.be/1k8craCGpgs?si=DU_Gn0T4IumIf3iF" target="_blank">Journey - Don't Stop Believin'</a></h2>
+          <p>The chorus is so good it makes me ascend</p>
+          <hr>
+          <h2><a href="https://youtu.be/nk5d5zDvJw8?si=vNvWYz4TXvMXyEV4" target="_blank">HΔG - Don't Forget</a></h2>
+          <p>This sounds so pretty, have been listening to this for a while</p>
+          <hr>
+          <h2><a href="https://youtu.be/UHbmkxv-874?si=Tef3EoFMo-KvFd9n" target="_blank">ライアーダンサー／重音テトSV</a></h2>
+          <p>I love how joyful it sounds but the lyrics are sad</p>
+          <hr>
+          <h2><a href="https://youtu.be/7_QydNXI_ok" target="_blank">Katamari Damacy - Lonely Rolling Star</a></h2>
+          <p>This is an ost in Katamari Damacy. I never heard of the game before I stumbled upon a twitter post featuring a gameplay of it. There's a bit of sadness in this song despite the tune</p>
+          <hr>
+          <h2><a href="https://youtu.be/SOhICfem_8g" target="_blank">Will Wood - Falling up</a></h2>
+          <p>It feels weird having two songs with the same artist here, but I just have to include them both. I heard that fans of Will Wood prefer more intense songs from him, so songs like Falling Up is not liked as much. I couldn't believe that because Falling Up is such a comforting and touching song, it reminds me of listening to old songs during my childhood for some reason (IDK if it sounds similar to any Canto songs). PLS LISTEN TO THIS</p>
+          <hr>
+          <h2><a href="https://youtu.be/ghb6eDopW8I?si=9ZFu4p3egY1P-9zR" target="_blank">Of Monsters and Men - Little Talks</a></h2>
+          <p>Youtube recommendation doing its job again. It's so catchy but the lyrics are sorrowful, I love it</p>
+          <hr>
+          <h2><a href="https://youtu.be/NwFVSclD_uc" target="_blank">The Walters - I Love You So</a></h2>
+          <p>Pretty sure I found it from Youtube recommendations, it is short but emotional.</p>
+          <hr>
+          <h2><a href="https://youtu.be/z__B_djrJc4?si=emZMH2u0vXoGS7VY" target="_blank">高嶺の花子さん／back number (Cover by Goose House)</a></h2>
+          <p>Listening to more songs recently, many of their songs are wonderful, and I love this cover</p>
+          <hr>
+          <img class="spin" src="assets/cd.png">
+        </div>
+      </article>
+      <article id="post2018" style="--window:#3f6884">
+        <h1>Songs slap so hard they are life-changing <a href="#cd" onclick="playlist(this.getAttribute('href'))"></a></h1>
+        <div class="inner">
+          <p>This is the my playlist of post-Cookie Run era (I had drastic change during 2017-2018), they are quite life-changing to some degree, they are just that good.</p>
+          <hr>
+
+          <h2><a href="https://youtu.be/tjdgGUuTw2A" target="_blank">ASH DA HERO - Judgement</a></h2>
+          <p>This is the 2nd opening of Blue Lock. I really love how intense the anime and the ost is, so much so I have to prepare myself everytime I listen to the openings. My favourite thing about the opening animation is how Barou looks cool AF.</p>
+          <hr>
+          <h2><a href="https://youtu.be/e1Ik4LTLizE?si=qXb2Znqfl1zVlJBt" target="_blank">CircusP - Misery Loves Company</a></h2>
+          <p>A song that gets better everytime you listen to it. There's something about songs like this that makes me feel powerful, power of edgyness.</p>
+          <hr>
+          <h2><a href="https://youtu.be/p5kc8hJ3GcA" target="_blank">Goose House - Hikaru Nara</a></h2>
+          <p>It is the opening for Your Lie in April. I did not watch this anime, however the song is extremely lovely, very iconic opening.</p>
+          <hr>
+          <h2><a href="https://youtu.be/CkUvjyGyZic" target="_blank">RSP - Yasashii Uta</a></h2>
+          <p>Found this song in the background of a gameplay video, it is very encouraging, my top tier song back in my secondary school days</p>
+          <hr>
+          <h2><a href="https://youtu.be/Hlq2KVSROCk?si=eHD1tb5OAS3ikiYD" target="_blank">H△G - 星見る頃を過ぎても</a></h2>
+          <p>You know, I have heard of this song way back when I played Deemo. But recently, I decided to listen to Mili's cover because I suddenly remembered it. What happened is that I realised the lyrics fit Jaspers x Claire SO MUCH, LIKE 99% FITTING. Now this song became my fixiation.</p>
+          <hr>
+          <h2><a href="https://youtu.be/gEhuGPXxRrA" target="_blank">The Crane Wives - Curses</a></h2>
+          <p>I found this song through Youtube recommendations, and once I listened to it, I couldn't stop looping it. It is one of my fuels for writing OC lore</p>
+          <hr>
+          <h2><a href="https://youtu.be/x60xR0TEQ88" target="_blank">Uru - Kami Hitoe</a></h2>
+          <p>It is the ending song for Hell's Paradise. My sister is the one who introduced this anime and song to me. The anime's pacing is very nice, and that is a very big compliment from me. But this ending song is absolutely top tier.</p>
+          <hr>
+          <h2><a href="https://youtu.be/FT0GKCuSaW0?si=LG7K17UbjU7EFuRY" target="_blank">Vaundy - Hadaka no Yuusha</a></h2>
+          <p>Despite my grudges towards the anime, I still love this song a lot. During the early development stages of my OC lore, I sometimes imagine my OCs with this as the opening. It sounds so coollllll</p>
+          <hr>
+          <h2><a href="https://youtu.be/4rX5a3bnG4s?si=SAVBZffQ9IAmMGou" target="_blank">Will Wood - Laplace's Angel (Hurt People? Hurt People!)</a></h2>
+          <p>I would dance and sing to this song if I could dance and sing in the first place. This sounds like a villain singing to the protag, and this type of songs is oddly empowering.</p>
+          <hr>
+          <h2><a href="https://youtu.be/tgPLzNvDrXo?si=fBCUx37_MY98nz50" target="_blank">Yaelokre - Neath the grove is a heart</a></h2>
+          <p>I found this song from Youtube recommendations, it sounds very comforting, I love the style a lot. This artist is very underrated, please go check them out!</p>
+          <hr>
+          <h2><a href="https://youtu.be/2t-ImiI34eY?si=DCwSPI0sh8EugRiT" target="_blank">平井ジロー - どうして</a></h2>
+          <p>I was first introduced to this song in a Danganronpa V3 animatic, the video was short but I loved the song. When the full song was uploaded to youtube, I was overjoyed!</p>
+          <hr>
+          <h2><a href="https://youtu.be/l1Ryaz_fK6c?si=tBb4kFEeaQIkmk-A" target="_blank">中島優美 - 蓮</a></h2>
+          <p>I found this song from a Pomegranate Cookie animatic in Bilibili. Although the artist has mentioned the song used, it took me a while to find it on Youtube. Now everytime I listen to this song, it reminds me of Pome.</p>
+          <hr>
+          <img class="spin" src="assets/cd.png">
+        </div>
+      </article>
+      <article id="pre2018" style="--window:#ff8fc1;--lteal:#ff8fc1;">
+        <h1>Songs slap so hard they are life-changing <a href="#cd" onclick="playlist(this.getAttribute('href'))"></a></h1>
+        <div class="inner">
+          <p>This is the my playlist of pre-Cookie Run era (I had drastic change during 2017-2018), but TBH the songs are still very great! I used to listen to more Vocaloid songs (I still do, but not as much), also I really liked Deemo back in the days, but this game introduced so many banger songs.</p>
+          <hr>
+          <h2><a href="https://youtu.be/cMkJDPvJxdk" target="_blank">CircusP - Karma</a></h2>
+          <p>If you are familiar with animation meme, you would definitely recognise this song. And guess what, this is the first ever animation meme song I heard. This song is very banger like seriously.</p>
+          <hr>
+          <h2><a href="https://youtu.be/P8huHuKlCQk" target="_blank">FuwariP - Yume no Katachi</a></h2>
+          <p>I always loved the part when the Vocaloids sing together</p>
+          <hr>
+          <h2><a href="https://youtu.be/_YHVPNOHySk?si=8qAYd-KbX9gkCQTg" target="_blank">Hamilton - Non-stop</a></h2>
+          <p>This was the first song I've heard from Hamilton, I quickly binged all the songs from this musical. People say it is a bit overrated, but that idea is basically non-existent here because barely anyone knows this musicial in Hong Kong! The songs are fantastic.</p>
+          <hr>
+          <h2><a href="https://youtu.be/v9sR1Tm1diQ" target="_blank">Halyosy - Connecting</a></h2>
+          <p>When I was younger, I always loved emotional Vocaloid songs, and this is one of them. </p>
+          <hr>
+          <h2><a href="https://youtu.be/JhuaYitvAaw" target="_blank">Harumaki Gohan - Dreamless Dreams</a></h2>
+          <p>I found this song from a Houseki no Kuni animatic, and this song fits the theme of the manga quite well. It is a song about growing up and leaving your childhood dreams behind, it is a sad but beautiful song.</p>
+          <hr>
+          <h2><a href="https://youtu.be/GIlMPJNk-pU" target="_blank">Puella Magi Madoka Magica - And I'm home</a></h2>
+          <p>This is an ost in Puella Magi Madoka Magica. When I found this song while binging clips on Youtube, I felt like I had listened to it before, therefore I felt a sense of nostalgia. This song will be especially sad if you watched the anime.</p>
+          <hr>
+          <h2><a href="https://youtu.be/lhah85Ybb38" target="_blank">96猫×囚人P - クロノネガイ</a></h2>
+          <p>I used to love cats a lot, and willing to check out any media if it involves cats. Unfortunately, there's a high chance the media will involve a sad story and dead cats. This is the song that I was introduced to 96neko, a very amazing singer.</p>
+          <hr>
+          <h2><a href="https://youtu.be/_aDHsn48aoY" target="_blank">Kenshi Yonezu - Eine Kleine ( Cover by Shannon )</a></h2>
+          <p>I think I found this song from an Undertale animatic, it sounds so good ima cry</p>
+          <hr>
+          <h2><a href="https://youtu.be/AN72_SVbETA" target="_blank">Mili - YUBIKIRI-GENMAN</a></h2>
+          <p>This is one of the songs featured in Deemo, and it was one of my favourite songs in this game, and my sister agrees as well.</p>
+          <hr>
+          <h2><a href="https://youtu.be/xHmgL3G-ny8?si=1Pa5eFVp0Wnxo-dW" target="_blank">WhiteFlame - 下弦の月</a></h2>
+          <p>It is extremely underrated, and also 96neko is always the GOAT</p>
+          <hr>
+          <h2><a href="https://youtu.be/WDUA7z3703g?si=4V5D9l9kvHbxR540" target="_blank">ひとしずく×やま△ - Bad ∞ End ∞ Night</a></h2>
+          <p>I never really know about the full lore of this song series, but one thing I know is that the songs are bangers</p>
+          <hr>
+          <h2><a href="https://youtu.be/bBcp_ljCBGU" target="_blank">光良 - 童話</a></h2>
+          <p>This is a very iconic song in Hong Kong and many Chinese-speaking communies (I think), it was often sang in karaokes back in the day. When I was a child, I didn't really know how to enjoy art. But when I got older, I only realised how lovely this song is.</p>
+          <img class="spin" src="assets/cd.png">
+        </div>
+      </article>
+      <article id="CraneWives" style="--window:#827B54;--lteal:#D4D9D5;">
+        <h1>The band ever <a href="#cd" onclick="playlist(this.getAttribute('href'))"></a></h1>
+        <div class="inner">
+          <p>I first found The Crane Wives back in 2021 June from Youtube recommendations, and the song is Curses. I was looking for new songs to listen to, so I gave it a try. I found it quite nice to listen to, but it turns out 'nice' is an understatement, because I couldn't stop looping the song. Later then, I decided to listen to their other songs, and they are very banger as well! I love their songs so much (especially Curses), listening to them while thinking about my OCs bring me so much joy.</p>
+          <center><a href="https://www.youtube.com/channel/UCQ1ctrffvMbPct8cPOJL6xQ" target="_blank">The Crane Wives Channel</a></center>
+          <hr>
+          <h2><a href="https://youtu.be/8YiaJwHLQkI?si=gQFlEQRvmdn8Ffnd" target="_blank">Arcturus Beaming</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/zNMoC65nXcs?si=IP4nVITOH1WzqFgj" target="_blank">Back to the Ground</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/hn16TCIJLsI?si=piVAHtY4g8qjuNDi" target="_blank">Bitter Medicine</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/-9JbTrL3gq0?si=op57qS9bX1VQZpyp" target="_blank">Black Hole Fantasy</a></h2>
+          <p>I find this song quite interesting, it straightforwardly tells a story of a person who was too afraid to love, but eventually sees a version of herself who embraced that love, and gathered the courage to move on, finally meeting the one she loved. </p>
+          <hr>
+          <h2><a href="https://youtu.be/bmckSpvxnBQ?si=_gasAVquadYttoTU" target="_blank">Canary in a Coal Mine</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/gEhuGPXxRrA?si=i1RJ3Q3vcxUOYQv0" target="_blank">Curses</a></h2>
+          <p>The banger ever. I'm not much of a lyrics interpreter, but the song feels like it contains a hidden story, where a character burdened with a heavy past yearning for someone.</p>
+          <hr>
+          <h2><a href="https://youtu.be/cEFgW-aBzug?si=brEK1ZWBLGDj7k2W" target="_blank">Easier</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/4JetXkuIpxo?si=rY9DgkMneEzjq7KM" target="_blank">Here I Am</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/pqBVIl9NJ3M?si=1S-0V3Hr1tIXLlAw" target="_blank">I Ain't Done</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/syQ-YmDBM2I?si=XBH1TxmY0F7NBdBS" target="_blank">Icarus</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/gLZEZTnrS0o?si=hVwjdyIiMc4JIiLo" target="_blank">Mad Dog</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/9iPBJDMwGXk?si=ds1-n0D1zP6SL7Uy" target="_blank">Metaphors</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/N5oZImPxT4Y?si=hYxelgwGBh0DSATI" target="_blank">New Discovery</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/hkIp3XEEM_U?si=IjtP6TuAvUF0qjaA" target="_blank">Nobody</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/MHB1DCyIVAQ?si=p8-bZBLwPiTdOIGt" target="_blank">Of Everlong</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/O4C6ctMwurw?si=Vq2nZLpw9cE7OlaG" target="_blank">Pretty Little Things</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/ZFBMyuN4NB0?si=mRjqp-mcU0JwZED7" target="_blank">Queen of Nothing</a></h2>
+          <p>This song feels like it's about moving on from the past, yet the tone is tense, as if the character is trying to find a safe space, but their trauma keeps haunting them.</p>
+          <hr>
+          <h2><a href="https://youtu.be/gDbrrMsizfQ?si=pZhVa_GxGwOCA-wA" target="_blank">Safe Ship, Harbored</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/5qcnbseaK9I?si=JlOqBqCimxq6TuEV" target="_blank">Scars</a></h2>
+          <p>When their songs from their new album Beyond Beyond Beyond was being premiered, the song I looked forward the most is this one. This song is a spinoff(?) to Never Love an Anchor, and this completely demonstrates the feeling of brokenness and that there is something wrong with you. There is feeling of sadness, frustration and anger, and it resonated with me so much.</p>
+          <hr>
+          <h2><a href="https://youtu.be/kqnvOCSn2ns?si=YlROc0aijGiInZ8h" target="_blank">Shallow River</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/Z1Cl0YSV1wI?si=EzhY6vO_coOmyr0x" target="_blank">Sleeping Giants</a></h2>
+          <p>Everytime this song plays, I imagine hoards of forest creatures running, and it is epic.</p>
+          <hr>
+          <h2><a href="https://youtu.be/KGkUye2L-38?si=_k__Ln59WUgvFEKh" target="_blank">Take Me to War</a></h2>
+          <p>My favourite comment under this video: "<i>this makes me feel more in-touch with my inner chihuahua</i>"</p>
+          <hr>
+          <h2><a href="https://youtu.be/4zPWGmklMCA?si=GXNjgxtKj-8OiAAd" target="_blank">The Garden</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/CvrUj6WP4po?si=rQSVluy0SY8Sx1pp" target="_blank">The Glacier House</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/twgV0WPCtUU?si=bpaVJR0L5T-gBarg" target="_blank">The Hand That Feeds</a></h2>
+          <p>I do not yet have the guts to bite a hand that beats, but damn it feels so powerful.</p>
+          <hr>
+          <h2><a href="https://youtu.be/BGztdO-GWsw?si=8yLt4Aye1987s5eP" target="_blank">The Moon Will Sing</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/S8jeHMtFZUQ?si=_0IcKAcHhl4qMGCO" target="_blank">The Wolf</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/jGLx95s2mrw?si=hrG-uG7VL-QJh81Y" target="_blank">Time Will Change You</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/zMKUpMd04QI?si=kKQe6FkNwC73AaTp" target="_blank">Tongues &amp; Teeth</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/MaDpFA9QaZM?si=qyusWDMu7jNNxNql" target="_blank">The Well</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/DE9XSYmRUSs?si=tYzYfG9vJ33WUk_H" target="_blank">VOLTA</a></h2>
+          <hr>
+          <img class="spin" src="assets/cd.png">
+        </div>
+      </article>
+      <article id="WillWood" style="--window:black;--lteal:orange;">
+        <h1>Is there cheese in the great beyond? <a href="#cd" onclick="playlist(this.getAttribute('href'))"></a></h1>
+        <div class="inner">
+          <p>I believe I found Will Wood's songs back in 2023 March. Through Youtube recommendations, I saw Will Wood's The Normal Album, from the vibes I thought it would be the kind I would enjoy. And at the very first song, it caught my heart. What I like the most about his songs is that they come in a wide variety of genres, Laplace's Angel is more villain sounding, Tomcat Disposables is more melancholic, and I don't know how to describe Suburbia Overture but there's screaming. My favourite song by Will Wood is Falling Up, which is very underrated. The melody sounds like childhood, wonderful song to play when you are having a breakdown (and yes I have done that I'm serious). I'm sure there's at least one song you will love in all of Will Wood's songs.</p>
+          <hr>
+          <h2><a href="https://youtu.be/w63orOykrsU?si=YSM0hJD9iP8NVYUE" target="_blank">6up 5oh Cop-Out (Pro / Con)</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/xIoXE4q-Jes?si=zHfUrqnUhVVEymr_" target="_blank">Against the Kitchen Floor</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/AoIhaAL3EQI?si=lfqk7v-qSRfcmFuT" target="_blank">Becoming the Last Names</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/k8_oxlkqx-U?si=bLOLx9TKHQ0WPSbK" target="_blank">Cicada Days</a></h2>
+          <p>This song starts out peaceful, but at the climax the peace is disturbed, the music becomes loud like a mind breaking down from all the built up sadness and grief. It feels like realising how much you have lost over the years and feeling the pain of loss. But at the end, it seems it has a positive message that things can be rebuild if you try.</p>
+          <hr>
+          <h2><a href="https://youtu.be/fPd-iAMktY8?si=5b9KCUP0S2HsgOII" target="_blank">Euthanasia</a></h2>
+          <p>This is a song about euthanizing a beloved pet. As someone who owned several hamsters, they don't have a long lifespan and get sick easily, and there were times I have to consider enthanizing them so that they don't have to suffer too long. It is always a hard choice, but one thing pet owners may find relief in it is that the pets had a happy time spending time with their owners.</p>
+          <hr>
+          <h2><a href="https://youtu.be/-7tQds-Th9s?si=NZvtmJIb9KtGyLuE" target="_blank">Falling Up</a></h2>
+          <p>It is a quite comforting song, and yet I don't exactly know what this song means. It feels so nostalgic and yet I don't know why. But yea I love this song</p>
+          <hr>
+          <h2><a href="https://youtu.be/1esJFm4X8IQ?si=oEvxUEFWtxoFFCcv" target="_blank">Front Street</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/-AvYfjmM7ww?si=BI0UMZAiyof_g5zs" target="_blank">Hand Me My Shovel, I'm Going In!</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/SgnSMftcFN0?si=rdMfU7xrS7x3acqw" target="_blank">I/Me/Myself</a></h2>
+          <p>I swear when I first heard this song, it felt like I had listened to it before. Despite being cis, I kinda feel the theme of being confused by your identity and self-loathing.</p>
+          <hr>
+          <h2><a href="https://youtu.be/aBOJzx12cuw?si=Q7QHJy0rEOXfk7wi" target="_blank">Marsha, Thankk You for the Dialectics, but I Need You to Leave</a></h2>
+          <p>I think my favourite part of the song is that it pokes fun of those people who say they just tough their mental problems out instead of going to therapy.</p>
+          <hr>
+          <h2><a href="https://youtu.be/GQXSK6IWymk?si=dDWfrnOH1n0nRKZD" target="_blank">Laplace's Angel (Hurt People? Hurt People!)</a></h2>
+          <p>I would dance and sing to this song if I could dance and sing in the first place. This sounds like a villain singing to the protag, and this type of songs is oddly empowering.</p>
+          <hr>
+          <h2><a href="https://youtu.be/JxLxAAqL1zI?si=9pGl0z8jzFDQ17Py" target="_blank">Love Me, Normally</a></h2>
+          <p>Yea, I don't feel very normal either.</p>
+          <hr>
+          <h2><a href="https://youtu.be/iOAj4pXWUX0?si=po7j_MGP9mL0wOpU" target="_blank">Red Moon</a></h2>
+          <p>I love this song, I also love the <a href="https://youtu.be/KpKXx6t-XGo?si=qWoAWutBTJPUo5ju" target="_blank">live version of this song</a> as well.</p>
+          <hr>
+          <h2><a href="https://youtu.be/ui2kW-OvtkA?si=SDUI_AUzXTXVJfiv" target="_blank">Suburbia Overture / Greetings from Mary Bell Township! / (Vampire) Culture / Love Me, Normally</a></h2>
+          <p>My first Will Wood song, the sudden shift of the style mid way scared me, but it sounds so catchy!</p>
+          <hr>
+          <h2><a href="https://youtu.be/iVK8jzLLuDg?si=oF-wNjSLlmCcagtz" target="_blank">That's Enough, Let's Get You Home.</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/rO8SJ_PqTJQ?si=8jqj7cZ_I5sG8WIu" target="_blank">Tomcat Disposables</a></h2>
+          <p>This song feels the same as sitting at the back of the car during the night and watching the yellow streetlights outside the window. This song has a tragic story of a mouse trying to survive in a house, and ended up getting poisoned. The human has to kill the mouse to keep the house clean, but is it wrong for the mouse wanting to live?</p>
+          <hr>
+          <h2><a href="https://youtu.be/LPlo-_m1NTc?si=4sp8-5WLp40NeYJ5" target="_blank">...well, better than the alternative</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/qc54cWA4Y6g?si=eOsAwuGYf2PgSuz7" target="_blank">White Noise</a></h2>
+          <hr>
+          <h2><a href="https://youtu.be/RHhgHmy0m9k?si=rPwiBGMcgh10zmX_" target="_blank">Willard!</a></h2>
+          <hr>
+          <img class="spin" src="assets/cd.png">
+        </div>
+      </article>
+    </section>
+  </main>
+  <script>
+    var anchor = window.location.hash.substring(1);
+    if (anchor != "") {
+      playlist(anchor);
     }
-</script>
+    function playlist(playlist) {
+      var menus = document.getElementsByTagName('article')
+      for (x = 0; x < menus.length; x++) {
+        menus[x].style.display = 'none';
+      }
+      document.getElementById(playlist.replace("#", "")).style.display = 'block';
+    }
+  </script>
 </body>
 </html>
