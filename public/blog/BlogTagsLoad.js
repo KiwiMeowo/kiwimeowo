@@ -131,7 +131,7 @@ function fetchHtml(link) {
   document.getElementById("current").style.display = "none";
   load.innerHTML = "";
   document.getElementsByClassName("circle-out")[0].style.display="block";
-  fetch(link)
+  fetch(`${link}/index.html`)
   .then((response) => {
     return response.text();
   })

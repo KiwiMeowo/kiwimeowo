@@ -158,21 +158,21 @@ a{cursor:pointer}
 		<div class="open open2">
 		<div>
     <button class="bar2" onclick="Current();" type="button">Oct-Dec</button>
-    <button class="bar2" onclick="fetchHtml('2025c.html');" type="button">Jul-Sep</button>
-    <button class="bar2" onclick="fetchHtml('2025b.html');" type="button">Apr-Jun</button>
-		<button class="bar2" onclick="fetchHtml('2025a.html');" type="button">Jan-Mar</button>
+    <button class="bar2" onclick="fetchHtml('2025/3rd');" type="button">Jul-Sep</button>
+    <button class="bar2" onclick="fetchHtml('2025/2nd');" type="button">Apr-Jun</button>
+		<button class="bar2" onclick="fetchHtml('2025/1st');" type="button">Jan-Mar</button>
 		</div>
 		</div>
 		<button class="navcoll" type="button" style="border-radius: 0;background: transparent;border-right: 1px solid #ffffff78;">2024 Blogs...</button>
 		<div class="open open2">
 		<div>
-		  <button class="bar2" onclick="fetchHtml('2024d.html');" type="button">Oct-Dec</button>
-		<button class="bar2" onclick="fetchHtml('2024c.html');" type="button">Jul-Sep</button>
-		<button class="bar2" onclick="fetchHtml('2024b.html');" type="button">Apr-Jun</button>
-		<button class="bar2" onclick="fetchHtml('2024a.html');" type="button">Jan-Mar</button>
+		  <button class="bar2" onclick="fetchHtml('2024/4th');" type="button">Oct-Dec</button>
+		<button class="bar2" onclick="fetchHtml('2024/3rd');" type="button">Jul-Sep</button>
+		<button class="bar2" onclick="fetchHtml('2024/2st');" type="button">Apr-Jun</button>
+		<button class="bar2" onclick="fetchHtml('2024/1st');" type="button">Jan-Mar</button>
 		</div>
 		</div>
-		<button onclick="fetchHtml('2023.html');">2023 Blog</button>
+		<button onclick="fetchHtml('2023/index.html');">2023 Blog</button>
 		</div>
 		</div>
     </nav>
@@ -202,18 +202,18 @@ a{cursor:pointer}
     <button class="bar coll" type="button">2025 Blogs...</button>
 		<div class="cont">
 		<button class="bar bar2" onclick="Current();ShesGone();TagNumbers()" type="button">Oct-Dec</button>
-		<button class="bar bar2" onclick="fetchHtml('2025c.html');" type="button">Jul-Sep</button>
-		<button class="bar bar2" onclick="fetchHtml('2025b.html');" type="button">Apr-Jun</button>
-		<button class="bar bar2" onclick="fetchHtml('2025a.html');" type="button">Jan-Mar</button>
+		<button class="bar bar2" onclick="fetchHtml('2025/3rd');" type="button">Jul-Sep</button>
+		<button class="bar bar2" onclick="fetchHtml('2025/2nd');" type="button">Apr-Jun</button>
+		<button class="bar bar2" onclick="fetchHtml('2025/1st');" type="button">Jan-Mar</button>
 		</div>
 		<button class="bar coll" type="button">2024 Blogs...</button>
 		<div class="cont">
-		<button class="bar bar2" onclick="fetchHtml('2024d.html');" type="button">Oct-Dec</button>
-		<button class="bar bar2" onclick="fetchHtml('2024c.html');" type="button">Jul-Sep</button>
-		<button class="bar bar2" onclick="fetchHtml('2024b.html');" type="button">Apr-Jun</button>
-		<button class="bar bar2" onclick="fetchHtml('2024a.html');" type="button">Jan-Mar</button>
+		<button class="bar bar2" onclick="fetchHtml('2024/4th');" type="button">Oct-Dec</button>
+		<button class="bar bar2" onclick="fetchHtml('2024/3rd');" type="button">Jul-Sep</button>
+		<button class="bar bar2" onclick="fetchHtml('2024/2nd');" type="button">Apr-Jun</button>
+		<button class="bar bar2" onclick="fetchHtml('2024/1st');" type="button">Jan-Mar</button>
 		</div>
-		<button class="bar" onclick="fetchHtml('2023.html');" type="button">2023 Blog</button>
+		<button class="bar" onclick="fetchHtml('2023');" type="button">2023 Blog</button>
 <script>
 var coll = document.getElementsByClassName("coll");
 var i;
@@ -312,7 +312,7 @@ for (i = 0; i < coll.length; i++) {
       <div width="100%" style="box-sizing:border-box;min-height: calc(100vh - 50px);border-radius: 7.5px;border: 7.5px double;" id="frame">
       <div id="current">
     <div class="inner min blog">
-        {% for post in collections.2025d | reverse %}
+        {% for post in collections[ tag ] | reverse %}
         <a href="{{ post.url }}" class="collapsible{% if post.data.style or post.data.deco %} special{% endif %}" title="{{ post.data.filter }}" {% if post.data.style %}style="{{ post.data.style }}"{% endif %}>{{ post.data.title | safe }} <span class="blogdate">( {{ post.data.date | datestring }} )</span><hr><span class="blogpreviewtag">Tags: {{ post.data.filter }}</span>{{ post.data.deco | safe }}</a>
         {% endfor %}
     </div>
