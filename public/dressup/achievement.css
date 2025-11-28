@@ -1,0 +1,43 @@
+#achievement{
+  display:flex;
+  position: absolute;
+  z-index: 1;
+  background: var(--teal);
+  top:15px;
+  left:0;
+  padding: 5px 15px;
+  border-radius: 0 5px 5px 0;
+  filter:var(--dropshadow);
+  transition: left 2s;
+  animation-name:appear;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+#achievement p,#achievement h1{
+  color:var(--yellow);
+}
+#star{
+  content:'';
+  mask-image: url(/assets/star.svg);
+  background: var(--star);
+  height:64px;
+  width:64px;
+  margin-right:15px;animation-name: spin;animation-duration: 5000ms;animation-iteration-count: infinite;animation-timing-function: linear;
+  translate: 0 7px;
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+  }
+@keyframes appear{
+  from{
+    left:-510px;
+  } to{
+    left:0;
+  }
+}

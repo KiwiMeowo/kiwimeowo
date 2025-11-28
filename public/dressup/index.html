@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kyrea dress up ♫</title>
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+</head>
+<style>
+  body{
+    background:linear-gradient(rgba(170, 86, 255, 0.22),rgba(179, 234, 255, 0.06)),url(/assets/checkpattern.svg);
+    padding:0;
+    margin:0;
+    height:100vh;
+    width:100vw;
+    position: relative;
+  }
+  nav{
+    z-index: 111;
+  }
+  #menu{
+    position: absolute;
+    width: calc(100vw - 6vw);
+    height: calc(100vh - 100px);
+    z-index: 100;
+    background:linear-gradient(rgba(170, 86, 255, 0.22),rgba(179, 234, 255, 0.06)),url(/assets/checkpattern.svg);
+  }
+  #achievement{
+    border: 5px double white;
+  height: 342px;
+  overflow: hidden;
+  margin: 15px 0;
+  padding:0 15px;
+  overflow-y: scroll;
+  }
+  .achievement {
+  height: 300px;
+  display: flex;
+  padding: 15px;
+  max-width: 700px;
+  margin: auto;
+}
+.achievement img{
+  height:100%;
+  margin: 0;
+  border: 2px solid white;
+  width: 150px;
+}
+.desc{
+  margin: 0 15px;
+  width:100%;
+}
+.status{
+  text-align: center;
+  background: linear-gradient(0.25turn, #92bcdb6b, #93c3e633);
+  width:fit-content;
+  margin: auto;
+  filter:var(--dropshadow);
+  padding:5px 10px;
+  color:var(--blue);
+  border-radius: 5px;
+}
+  article{
+    min-height: 615px;
+    --yellow:#dfe6e9;
+    --boxdark:#f4c2e18f;
+  }
+  #Kyrea{
+    height:600px;
+    width:300px;
+    position: relative;
+    background: url(Kyrea.png);
+    margin: auto;
+    top:50%;
+    translate: 0 -50%;
+    background-size: contain;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .shirt,.pants,.shoes,.hat{
+    width:300px;
+    height: 180px;
+    position: absolute;
+    top:10px;
+    left:10px;
+    background-size: contain;
+  }
+  .hat img{
+    z-index: 0;
+  }
+  .shirt,.shoes{
+    z-index: 3;
+  }
+  .pants{
+    z-index: 2;
+  }
+  .shirt img,.pants img,.shoes img,.hat img{
+  object-fit: cover;
+  margin: auto;
+  display: block;
+  height: 200px;
+  width: 100%;
+  }
+  .hat img{
+    object-position: 0 0;
+  }
+  .shirt img{
+    object-position: 0 47%;
+  }
+  .pants img{
+    object-position: 0 71%;
+  }
+  .shoes img{
+    object-position: 0 100%;
+  }
+  #Hampter{object-position: 0 42%;translate: 0 -18px;}
+</style>
+<body>
+  <nav>
+      <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
+    </nav>
+  <main id="menu">
+    <section class="wide">
+      <article>
+        <h1 style="text-align: center;">Kyrea Dress Up game!</h1>
+      <div class="inner">
+        <p>This is a dress up game, you drag clothes onto Kyrea and she will put it on! This is also a achievement room, you might find some cool achievements throughout this website, and finding them gives you the reward of more clothes for Kyrea! She will be so happy seeing all these new clothes :3</p>
+        <ul>
+          <li>This does not work in mobile sadly</li>
+          <li>All progress will be gone if you clean cache</li>
+        </ul>
+        <div id="achievement">
+          <div class="achievement">
+            <img src="preview/Default.webp">
+          <div class="desc">
+            <h2>Default Outfit!</h2>
+          <p>Her normal outfit set, freely given to you... Or maybe you can interpret it is an achievement for clicking into this page?</p>
+          <div class="status">
+            Condition to obtain: Free
+          </div>
+          </div>
+          </div>
+          <hr>
+        </div>
+        <button class="coolbutton" style="margin: auto;display:block;" onclick="document.getElementById('menu').style.display='none';"><h2>Click here to proceed!</h2></button>
+      </div>
+    </article>
+    </section>
+  </main>
+  <div id="Kyrea"></div>
+  <div class="hat" style="top:10px;left:10px;"><img src="Ribbon.png"></div>
+  <div class="shirt" style="top:160px;left:10px;"><img src="Cardigan.png"></div>
+  <div class="pants" style="top:310px;left:10px;"><img src="Pants.png"></div>
+  <div class="shoes" style="top:410px;left:10px;"><img src="PawShoes.png"></div>
+  <script>
+      $( function() {
+    $( ".shirt,.pants,.shoes,.hat" ).draggable({
+      cursor: "grabbing",
+      handle:"img"
+    });
+    $( "#Kyrea" ).droppable({
+      drop: function( event, ui ) {
+        if (ui.draggable[0].classList.contains('shirt')){
+          ui.draggable
+          .css( "top","250px" )
+          .css( "left","570px" );
+        } else if (ui.draggable[0].classList.contains('pants')){
+          ui.draggable
+          .css( "top","350px" )
+          .css( "left","570px" );
+        } else if (ui.draggable[0].classList.contains('shoes')){
+          ui.draggable
+          .css( "top","464px" )
+          .css( "left","570px" );
+        } else if (ui.draggable[0].classList.contains('hat')){
+          ui.draggable
+          .css( "top","64px" )
+          .css( "left","570px" );
+        }
+      }
+    });
+  } );
+  </script>
+  <script src="unlock.js"></script>
+</body>
+</html>

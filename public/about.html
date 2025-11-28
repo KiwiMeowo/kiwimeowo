@@ -8,9 +8,13 @@
     <link href="style.css" rel="stylesheet" type="text/css" media="all">
     <link href="emote.css" rel="stylesheet" type="text/css" media="all">
     <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
+    <link href="/dressup/achievement.css" rel="stylesheet" type="text/css" media="all">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="/jquery.style-my-tooltips.js"></script>
   <style>
+    body{
+      --star:linear-gradient(gray, #b9b3ac);
+    }
   .ff-container.ff-responsive {width:max-content !important;margin:5px;}
 canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 .site .ff-container.ff-responsive.ff-ready.ff-inactive{filter: var(--dropshadow);}
@@ -260,7 +264,9 @@ aspect-ratio: 1/1;
 </section>
 </main>
 <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+<script src="/dressup/GetAchievement.js"></script>
 <script>
+  getAchievement("Hampter");
   function hampter() { 
         const player = document.getElementById('hampter');
         player.play();} 
