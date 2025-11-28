@@ -19,7 +19,7 @@
 }
 #star{
   content:'';
-  mask-image: url(/assets/star.svg);
+  mask-image: url(/assets/star2.svg);
   background: var(--star);
   height:64px;
   width:64px;
