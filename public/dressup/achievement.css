@@ -36,7 +36,7 @@
   }
 @keyframes appear{
   from{
-    left:-510px;
+    left:-530px;
   } to{
     left:0;
   }
