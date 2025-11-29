@@ -10,11 +10,13 @@
     <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="/jquery.style-my-tooltips.js"></script>
+    <link href="comic.css" rel="stylesheet" type="text/css" />
   </head>
  <body>
   <nav>
   <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
       <a href="index.html">Art Index</a>
+      <a href="index.html">Comic Index</a>
       <a href="javascript:history.back()">Back</a>
   </nav>
 
@@ -29,9 +31,11 @@
       <hr>
       </div>
     </article>
-      <article>
-      <div class="inner min">
+    <article>
+        <div class="inner min">
+          <div class="pagenav"><button onclick="prevpage()" style="transform: scaleX(-1);">➤</button>Page: <span class="num">1</span><button onclick="nextpage()">➤</button></div>
       <hr>
+      <div class="page show">
       <img src="https://www.dropbox.com/scl/fi/xqr1osil054dv22igwct1/IMG_0387.jpg?rlkey=kwl4lsrxudid10n7z7u2p12te&st=qkoqkx1v&raw=1" alt="Comic panel 4">
       <hr>
       <div class="text">
@@ -43,14 +47,10 @@
       <p>Lavender: "To be honest. techonologies like these still perplexes me"</p>
       <p>Grey: "It does feel unusual to not know about phones"</p>
       <p>Cosmos: "I mean, she lived alone, it makes kinda sense"</p>
-      <p style="text-align: right;">P. 4</p>
-      <hr>
+      <p class="date">P. 4</p>
       </div>
       </div>
-    </article>
-      <article>
-      <div class="inner min">
-      <hr>
+      <div class="page">
       <img src="https://www.dropbox.com/scl/fi/djq2i47972kkqiap7xq6z/IMG_0388.jpg?rlkey=2ac1s1g6g3po320a47xq28lle&st=xe4wsk9h&raw=1" alt="Comic panel 5">
       <hr>
       <div class="text">
@@ -61,15 +61,11 @@
       <p>Ruth: "Wolf! It has been a while!"</p>
       <p>Wolf: "I still can't believe it! That rabbit-looking thing added everyone to the poll... Except for ME!"</p>
       <p><i>New character: Wolf!</i></p>
-      <p style="text-align: right;">P. 5</p>
-      <hr>
+      <p class="date">P. 5</p>
       </div>
       </div>
-    </article>
-      <article>
-      <div class="inner min">
-      <hr>
-      <img src="https://www.dropbox.com/scl/fi/wznpg5t15r0zaivbra08z/IMG_0390.jpg?rlkey=5kmxtuh1g2kzfei2htg21q4i3&st=zjkzbtlj&raw=1" alt="Comic panel 6">
+      <div class="page">
+        <img src="https://www.dropbox.com/scl/fi/wznpg5t15r0zaivbra08z/IMG_0390.jpg?rlkey=5kmxtuh1g2kzfei2htg21q4i3&st=zjkzbtlj&raw=1" alt="Comic panel 6">
       <hr>
       <div class="text">
       <p>Ruth: "Maybe that's because you joined the team too recently?"</p>
@@ -77,12 +73,15 @@
       <p>Wolf: "THAT DOESN'T MEAN I SHOULD BE EXCLUDED FROM THIS!"</p>
       <p>Grey: "WE still don't know about the phone's nature, maybe it is good for him to not be involved?"</p>
       <p>Lavender: "Regardless, it doesn't seem it would cause any harm. Let's continue observing it."</p>
-      <p style="text-align: right;">P. 6</p>
-      <hr>
+      <p class="date">P. 6</p>
       </div>
+      </div>
+      <hr>
+      <div class="pagenav"><button onclick="prevpage()" style="transform: scaleX(-1);">➤</button>Page: <span class="num">1</span><button onclick="nextpage()">➤</button></div>
       </div>
     </article>
 </section>
 </main>
+<script src="comic.js"></script>
 </body>
 </html>

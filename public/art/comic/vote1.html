@@ -8,6 +8,7 @@
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
     <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
+    <link href="comic.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="/jquery.style-my-tooltips.js"></script>
   </head>
@@ -15,6 +16,7 @@
   <nav>
   <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
       <a href="index.html">Art Index</a>
+      <a href="index.html">Comic Index</a>
       <a href="javascript:history.back()">Back</a>
   </nav>
 
@@ -27,9 +29,11 @@
       <hr>
       </div>
     </article>
-      <article>
-      <div class="inner min">
+    <article>
+        <div class="inner min">
+          <div class="pagenav"><button onclick="prevpage()" style="transform: scaleX(-1);">➤</button>Page: <span class="num">1</span><button onclick="nextpage()">➤</button></div>
       <hr>
+      <div class="page show">
       <img src="https://www.dropbox.com/scl/fi/upyt1h9jxg7fskknsxjkz/IMG_0181.jpg?rlkey=nzqwf4fevu5lgmof9uh5asecg&st=nk90btlk&raw=1" alt="Comic panel 1">
       <hr>
       <div class="text">
@@ -39,15 +43,11 @@
       <p>Grey: Huh?!</p>
       <p><i>Grey Vote 1!</i></p>
       <p>Grey: Uhm thanks for voting for me, never thought I would have fans</p>
-      <p style="text-align: right;">P. 1</p>
-      <hr>
+      <p class="date">P. 1</p>
       </div>
       </div>
-    </article>
-      <article>
-      <div class="inner min">
-      <hr>
-      <img src="https://www.dropbox.com/scl/fi/f5dyr9qwasr9yagbde8so/IMG_0184.JPG?rlkey=ia6dbqtvs2yac9epx9qd2r762&st=j1rllf6h&raw=1" title="Silly cat" alt="Comic panel 2">
+      <div class="page">
+        <img src="https://www.dropbox.com/scl/fi/f5dyr9qwasr9yagbde8so/IMG_0184.JPG?rlkey=ia6dbqtvs2yac9epx9qd2r762&st=j1rllf6h&raw=1" title="Silly cat" alt="Comic panel 2">
       <hr>
       <div class="text">
       <p>Lavender: "It seems the voter left a comment"</p>
@@ -57,12 +57,15 @@
       <p>Ruth: Cat hug!</p>
       <p>Grey: AHHH STAY AWAY!</p>
       <p>Lavender: They ran off...</p>
-      <p style="text-align: right;">P. 2</p>
-      <hr>
+      <p class="date">P. 2</p>
       </div>
+      </div>
+      <hr>
+      <div class="pagenav"><button onclick="prevpage()" style="transform: scaleX(-1);">➤</button>Page: <span class="num">1</span><button onclick="nextpage()">➤</button></div>
       </div>
     </article>
 </section>
 </main>
+<script src="comic.js"></script>
 </body>
 </html>

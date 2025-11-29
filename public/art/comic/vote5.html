@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico?">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="comic.css" type="text/css" media="all">
     <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="/jquery.style-my-tooltips.js"></script>
@@ -15,6 +16,7 @@
   <nav>
   <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
       <a href="index.html">Art Index</a>
+      <a href="index.html">Comic Index</a>
       <a href="javascript:history.back()">Back</a>
   </nav>
 
@@ -25,8 +27,11 @@
       <p class="date">( 7 Aug 2024 )</p>
       <hr>
       </div></article>
-      <article><div class="inner min">
+      <article>
+        <div class="inner min">
+          <div class="pagenav"><button onclick="prevpage()" style="transform: scaleX(-1);">➤</button>Page: <span class="num">1</span><button onclick="nextpage()">➤</button></div>
       <hr>
+      <div class="page show">
       <img src="https://www.dropbox.com/scl/fi/r827p8cn3ouzca7du26ik/vote5p1.jpg?rlkey=1mm0wcqjnohrfvurfpu3u3fxh&st=42fk000u&raw=1" alt="Comic panel 1">
       <hr>
       <div class="text">
@@ -35,26 +40,22 @@
       <p>Claire: "The poll got a new vote!"</p>
       <p>Solar: "Oh! Whose is it?"</p>
       <p>Claire: "It's..."</p>
-      <p style="text-align: right;">P. 1</p>
-      <hr>
+      <p class="date">P. 1</p>
       </div>
-      </div></article>
-      <article><div class="inner min">
-      <hr>
-      <img src="https://www.dropbox.com/scl/fi/6sxgyqj5xmae6fb30lr28/vote5p2.jpg?rlkey=cdsluroddw3bk1lrtgbr3kgd4&st=ztha3mz5&raw=1" alt="Comic panel 2">
+      </div>
+      <div class="page">
+        <img src="https://www.dropbox.com/scl/fi/6sxgyqj5xmae6fb30lr28/vote5p2.jpg?rlkey=cdsluroddw3bk1lrtgbr3kgd4&st=ztha3mz5&raw=1" alt="Comic panel 2">
       <hr>
       <div class="text">
       <p><i>Jaspers! Vote +1</i></p>
       <p>Claire: "Congrats!"</p>
       <p>Jaspers: "Waitwait how am I supposed to respond to them? whatdoidowhatdoidowhatdoido"</p>
       <p>Solar: "Good job Jaspers, your training paid off!"</p>
-      <p style="text-align: right;">P. 2</p>
-      <hr>
+      <p class="date">P. 2</p>
       </div>
-      </div></article>
-      <article><div class="inner min">
-      <hr>
-      <img src="https://www.dropbox.com/scl/fi/ivq5quzslij16waixlyag/vote5p3.jpg?rlkey=jal5hn1o3ntwdqwmlasc6b1ps&st=xihir6za&raw=1" title="I love how I drew Jaspers here, he look so cute like O^O" alt="Comic panel 3">
+      </div>
+      <div class="page">
+        <img src="https://www.dropbox.com/scl/fi/ivq5quzslij16waixlyag/vote5p3.jpg?rlkey=jal5hn1o3ntwdqwmlasc6b1ps&st=xihir6za&raw=1" title="I love how I drew Jaspers here, he look so cute like O^O" alt="Comic panel 3">
       <hr>
       <div class="text">
       <p>Claire: "Anyway, here's the question for you!"</p>
@@ -63,24 +64,26 @@
       <p>Solar: "Really? How is your hair so good then? (I'm almost jealous)"</p>
       <p>Claire: "Even Grey was interested in your hair!"</p>
       <p>Jaspers: "Never thought a kid would approach me like that"</p>
-      <p style="text-align: right;">P. 3</p>
-      <hr>
+      <p class="date">P. 3</p>
       </div>
-      </div></article>
-      <article><div class="inner min">
-      <hr>
-      <img src="https://www.dropbox.com/scl/fi/giy28kt84ylg7gv9l6st0/vote5p4.jpg?rlkey=bq9dhd53orf99ta6b44ob63bj&st=dog6ohtr&raw=1" alt="Comic panel 4">
+      </div>
+      <div class="page">
+        <img src="https://www.dropbox.com/scl/fi/giy28kt84ylg7gv9l6st0/vote5p4.jpg?rlkey=bq9dhd53orf99ta6b44ob63bj&st=dog6ohtr&raw=1" alt="Comic panel 4">
       <hr>
       <div class="text">
       <p>Claire: "But have you considered cutting your hair? I can help you cut it if you want"</p>
       <p>Jaspers: "I think I will keep it this way. It feels more comfortable"</p>
       <p>Solar: "(Probably don't let her cut anyone's hair)"</p>
       <p><i>Remembers Grey after having his hair cut by Claire</i></p>
-      <p style="text-align: right;">P. 4</p>
-      <hr>
+      <p class="date">P. 4</p>
       </div>
-      </div></article>
+      </div>
+      <hr>
+      <div class="pagenav"><button onclick="prevpage()" style="transform: scaleX(-1);">➤</button>Page: <span class="num">1</span><button onclick="nextpage()">➤</button></div>
+      </div>
+    </article>
 </section>
 </main>
+<script src="comic.js"></script>
 </body>
 </html>

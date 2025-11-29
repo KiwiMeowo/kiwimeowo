@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico?">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
+    <link href="comic.css" rel="stylesheet" type="text/css" media="all">
     <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="/jquery.style-my-tooltips.js"></script>
@@ -15,6 +16,7 @@
   <nav>
   <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
       <a href="index.html">Art Index</a>
+      <a href="index.html">Comic Index</a>
       <a href="javascript:history.back()">Back</a>
   </nav>
 
@@ -27,9 +29,11 @@
       <hr>
       </div>
     </article>
-      <article>
+    <article>
         <div class="inner min">
+          <div class="pagenav"><button onclick="prevpage()" style="transform: scaleX(-1);">➤</button>Page: <span class="num">1</span><button onclick="nextpage()">➤</button></div>
       <hr>
+      <div class="page show">
       <img src="https://www.dropbox.com/scl/fi/t387e9rlkza4b95ejbnyf/Photo-15-5-2024-10-35-58-PM.jpg?rlkey=0aicm37jg09nncquf0oi3t2e8&st=77ny9zzn&raw=1" alt="Comic panel 1">
       <hr>
       <div class="text">
@@ -40,28 +44,22 @@
       <p>Claire: "I didn't expect them to program something like this"</p>
       <p>Claire: "But makes sense they would start a popularity poll (But are we the only ones?)"</p>
       <p>Jaspers: "And also they voted for Solar first-"</p>
-      <p style="text-align: right;">P. 1</p>
-      <hr>
+      <p class="date">P. 1</p>
       </div>
       </div>
-    </article>
-      <article>
-      <div class="inner min">
-      <hr>
-      <img src="https://www.dropbox.com/scl/fi/ycugkkt1bdutswfagmrao/Photo-15-5-2024-10-36-13-PM.jpg?rlkey=x5i8qipxwfs1embta6o46lhra&st=x5c5atoj&raw=1" alt="Comic panel 2">
+      <div class="page">
+        <img src="https://www.dropbox.com/scl/fi/ycugkkt1bdutswfagmrao/Photo-15-5-2024-10-36-13-PM.jpg?rlkey=x5i8qipxwfs1embta6o46lhra&st=x5c5atoj&raw=1" alt="Comic panel 2">
       <hr>
       <div class="text">
       <p><i>*Dramatic light noise*</i></p>
       <p>Solar: "Did someone mention me?"</p>
       <p><i>Solar: Vote +1</i></p>
       <p>Jaspers: "There she is"</p>
-      <p style="text-align: right;">P. 2</p>
-      <hr>
+      <p class="date">P. 2</p>
       </div>
-      </div></article>
-      <article><div class="inner min">
-      <hr>
-      <img src="https://www.dropbox.com/scl/fi/z823fzljdiiqjfzhh24gr/Photo-15-5-2024-10-37-06-PM.jpg?rlkey=jrhx3gfapb3s6ralsvqenwyh6&st=ri2a0icr&raw=1" alt="Comic panel 3" title="I still haven't figured out how the dorms should work in this setting">
+      </div>
+      <div class="page">
+        <img src="https://www.dropbox.com/scl/fi/z823fzljdiiqjfzhh24gr/Photo-15-5-2024-10-37-06-PM.jpg?rlkey=jrhx3gfapb3s6ralsvqenwyh6&st=ri2a0icr&raw=1" alt="Comic panel 3" title="I still haven't figured out how the dorms should work in this setting">
       <hr>
       <div class="text">
       <p>Solar: "I didn't know there is a poll now!"</p>
@@ -71,24 +69,27 @@
       <p><i>5:29am</i></p>
       <p>Claire: "Grey told me that not only she wakes up early"</p>
       <p>Claire: "She wakes up 5:30am sharp!"</p>
-      <p style="text-align: right;">P. 3</p>
+      <p class="date">P. 3</p>
       <hr>
       </div>
-      </div></article>
-      <article><div class="inner min">
-      <hr>
-      <img src="https://www.dropbox.com/scl/fi/147ig8mnw679v0uixbtxn/Photo-15-5-2024-10-39-07-PM.jpg?rlkey=8xf12iirw8000d0ugt3i5i2bd&st=t0yrxp82&raw=1" alt="Comic panel 4" title="You guys are really nice to Solar. I fully expected Someone else in RS, or even Jaspers to get the first vote, I imagined many ways Solar would get frustrated LMAO">
+      </div>
+      <div class="page">
+        <img src="https://www.dropbox.com/scl/fi/147ig8mnw679v0uixbtxn/Photo-15-5-2024-10-39-07-PM.jpg?rlkey=8xf12iirw8000d0ugt3i5i2bd&st=t0yrxp82&raw=1" alt="Comic panel 4" title="You guys are really nice to Solar. I fully expected Someone else in RS, or even Jaspers to get the first vote, I imagined many ways Solar would get frustrated LMAO">
       <hr>
       <div class="text">
       <p>Claire: "And when it's time for class, she's the one who drags me there"</p>
       <p>Solar: "I wish they would talk about something cooler, like my magic powers"</p>
       <p>Claire: "Maybe they are saving the cooler ones for later!"</p>
       <p>Jaspers: "Glad Solar is the one who got the first vote, or she would be upset"</p>
-      <p style="text-align: right;">P. 4</p>
-      <hr>
+      <p class="date">P. 4</p>
       </div>
-      </div></article>
+      </div>
+      <hr>
+      <div class="pagenav"><button onclick="prevpage()" style="transform: scaleX(-1);">➤</button>Page: <span class="num">1</span><button onclick="nextpage()">➤</button></div>
+      </div>
+    </article>
 </section>
 </main>
+<script src="comic.js"></script>
 </body>
 </html>
