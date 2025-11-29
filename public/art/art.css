@@ -8,7 +8,7 @@ section.wide {
     display: block;
     width: fit-content;
     margin: 0.75em auto;
-    background: linear-gradient(#228bff3b, #9eccff24);
+    background: var(--gradient);
     padding: 5px 10px;
     border-radius: 5px;
     filter: var(--dropshadow);

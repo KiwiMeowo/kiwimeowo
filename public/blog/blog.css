@@ -7,8 +7,8 @@
   --dblue:#000527;
   --shadow:#1b357082;
   --bg:#0b263b75, #1f084e73;
-  --status1:#55a6ff3b;
-  --status2:#9eccff24;
+  --gradient1: #228bff3b;
+  --gradient2: #9eccff24;
 }
 .blognav {
   position:fixed;
@@ -97,11 +97,11 @@ justify-content: space-around;
   text-indent: 0 !important;
 }
 .statusbox p:first-child,.statusbox p:nth-child(2) {
-    background: linear-gradient(var(--status1), color-mix(in srgb, var(--status1), var(--status2)));
+    background: linear-gradient(var(--gradient1), color-mix(in srgb, var(--gradient1), var(--gradient2)));
 }
 
 .statusbox p:nth-child(3),.statusbox p:nth-child(4) {
-    background: linear-gradient(color-mix(in srgb, var(--status1), var(--status2)),var(--status2));
+    background: linear-gradient(color-mix(in srgb, var(--gradient1), var(--gradient2)),var(--gradient2));
 }
 .blogtag{
   text-align: right;
@@ -130,7 +130,7 @@ justify-content: space-around;
 }
 }
 .blogcredit{
-    background: linear-gradient(var(--status1), var(--status2));
+    background: linear-gradient(var(--gradient1), var(--gradient2));
     color: var(--blue);
     padding: 0px 15px;
     margin: 0 20px;

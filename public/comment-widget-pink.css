@@ -62,7 +62,7 @@
 
 #c_widget button, #c_widget input[type=submit] {
     text-decoration: none;
-  background: linear-gradient(0.25turn, #92bcdb6b, #93c3e633);
+  background: linear-gradient(0.25turn, var(--gradient1), var(--gradient2));
   border: none;
   border-radius: 0 10px 10px 0;
   color: var(--blue);
@@ -116,7 +116,7 @@
   border-radius: 5px;
   border: 1px solid;
   outline: none;
-  background: #93C3E64A;
+  background: var(--highlightteal);
 }
 .c-input:focus, .c-input:hover{border-color:var(--blue);box-shadow:0 0 0 0.5px var(--blue);}
 .c-nameInput, .c-websiteInput {
@@ -129,7 +129,7 @@
 #c_submitButton {display: block;}
 #c_replyingText {
   color: var(--blue) !important;
-  box-shadow: inset 0 -0.625em 0 0 rgba(147,195,230,0.45);
+  box-shadow: inset 0 -0.625em 0 0 var(--highlightteal);
   text-decoration: none;}
 
 /* Comment section */

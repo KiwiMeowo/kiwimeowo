@@ -8,6 +8,9 @@
   --bg:#637b8759, #7750c359 150%;
   --shadow:#1a38748c;
   --boxdark:#b9907796;
+  --gradient1:#8dc5ee78;
+  --gradient2:#aecee633;
+  --gradient:linear-gradient(var(--gradient1),var(--gradient2));
   --dropshadow:drop-shadow(2px 2px 1px var(--shadow));
   --dropshadowdown:drop-shadow(1px 1px 1px var(--shadow));
   --down:1px 1px;
@@ -93,7 +96,7 @@ hr {
 
 blockquote {
     border-left: var(--blue) 3px solid;
-    background: linear-gradient(0.25turn, #9cc3df78, #93c3e633);
+    background: linear-gradient(0.25turn, var(--gradient1), var(--gradient2));
     padding: 0.1px 0.75rem;
     margin: 0.75em 1.5rem;
     border-radius: 0 5px 5px 0;
@@ -369,7 +372,7 @@ aside h1{
   font-size: 1em;
   line-height: 145%;
   border-left: 3px solid var(--blue);
-  background: linear-gradient(0.25turn, #9cc3df78, #93c3e633);
+  background: linear-gradient(0.25turn, var(--gradient1), var(--gradient2));
   padding: 5px;
   margin: 10px 0;
   color: var(--blue);
@@ -713,7 +716,7 @@ your own title.
 }
 }
 .coolbutton{
-	background: linear-gradient(0.25turn, #92bcdb6b, #93c3e633);
+	background: linear-gradient(0.25turn, var(--gradient1), var(--gradient2));
   border: none;
   border-radius: 0 10px 10px 0;
   min-width: 60px;
