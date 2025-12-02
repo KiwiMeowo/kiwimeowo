@@ -6,3 +6,7 @@
   --blue: #792b13;
   --dblue: #590a0a;
 }
+img.christmas {
+  position: absolute;
+  height: 75px;
+}

@@ -18,6 +18,34 @@ var achievements=[
     "Clothing":[
       {"Type":"shirt","Style":"top: 180px; left: 350px;","Image":"Hampter.png"}
     ]
+  },
+  {"Name":"AugustGalaxy",
+    "Desc":"Every little step leads to a bigger reward, even the tiny efforts you put into your work might contribute to something you are proud of. Perhaps you should look back sometimes and see how far you've come.",
+    "Criteria":"Read something lengthy and kinda boring (Clothing not released yet)",
+    "Preview":"preview/locked.webp",
+    "Clothing":[
+      //{"Type":"shirt","Style":"top:160px;left:200px;","Image":"OldShirt.png"},
+    ]
+  },
+  {"Name":"IceCream",
+    "Desc":"The cats are delighted to see you, and they gave you this outfit as a gratitude. The pastel tricolors makes you feel joyful like scoops of ice cream!",
+    "Criteria":"Visit KiwiMeowo's everyone site<br>(Hint: It is from Melonland!) (Clothing not released yet)",
+    "Preview":"preview/locked.webp",
+    "Clothing":[
+      /*{"Type":"shirt","Style":"top:160px;left:200px;","Image":"OldShirt.png"},
+      {"Type":"shoes","Style":"top:410px;left:200px;","Image":"OldShoes.png"},
+      {"Type":"hat","Style":"top:10px;left:200px;","Image":"OldRibbon.png"}*/
+    ]
+  },
+  {"Name":"Christmas",
+    "Desc":"Merry Christmas!",
+    "Criteria":"Click something with lot's of Christmas joy (Clothing not released yet)",
+    "Preview":"preview/locked.webp",
+    "Clothing":[
+      /*{"Type":"shirt","Style":"top:160px;left:200px;","Image":"OldShirt.png"},
+      {"Type":"shoes","Style":"top:410px;left:200px;","Image":"OldShoes.png"},
+      {"Type":"hat","Style":"top:10px;left:200px;","Image":"OldRibbon.png"}*/
+    ]
   }
 ]
 for (i = 0; i < achievements.length; i++){
