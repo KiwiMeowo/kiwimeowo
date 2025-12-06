@@ -39,9 +39,9 @@ imagescale.value=document.querySelectorAll(".artborder img")[value].style.scale;
   imagex.value="0";
   imagey.value="0";
 } else{
-  imagex.value=document.querySelectorAll(".artborder img")[value].style.translate.split(" ")[0].replace("%","");
+  imagex.value=document.querySelectorAll(".artborder img")[value].style.translate.split(" ")[0].replace("%","").replace("px","");
   if(document.querySelectorAll(".artborder img")[value].style.translate.split(" ")[1]!=undefined){
-    imagey.value=document.querySelectorAll(".artborder img")[value].style.translate.split(" ")[1].replace("%","");
+    imagey.value=document.querySelectorAll(".artborder img")[value].style.translate.split(" ")[1].replace("%","").replace("px","");
   } else{
     imagey.value="0";
   }
