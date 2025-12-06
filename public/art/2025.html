@@ -6,7 +6,8 @@
   <title>KiwiMeowo's Art Gallery</title>
   <link rel="icon" type="image/x-icon" href="../favicon.ico?">
   <link href="../style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="../emote.css" rel="stylesheet" type="text/css" media="all">
+  <link href="../emote.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/dressup/achievement.css" rel="stylesheet" type="text/css" media="all">
   <link href="art.css" rel="stylesheet" type="text/css" media="all">
   <link href="../style-my-tooltips.css" rel="stylesheet" type="text/css" />
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
@@ -30,6 +31,20 @@
           <div class="pagenum">
             <span class="pagenum2">Pages: </span>
             <span class="pagenum2"></span>
+          </div>
+          <!--Thumbnail editing code-->
+          <div id="thumbnail">
+            Toggle: <button style="transform: scaleX(-1);" onclick="prevNum()">➤</button><span id="imagenum">1</span><button onclick="nextNum()">➤</button>
+            <br>
+            Object-position: <input id="op" value="center"><button onclick="setStyle()">Apply</button>
+            <br>
+            Scale: <input id="sc" value="1"><button onclick="adjust(document.getElementById('sc'),-0.5)">-0.5</button><button onclick="setStyle()">Apply</button><button onclick="adjust(document.getElementById('sc'),0.5)">+0.5</button>
+            <br>
+            TranslateX: <input id="translatex" value="0"><button onclick="adjust(document.getElementById('translatex'),-10)">-10</button><button onclick="adjust(document.getElementById('translatex'),-1)">-1</button><button onclick="setStyle()">Apply</button><button onclick="adjust(document.getElementById('translatex'),1)">+1</button><button onclick="adjust(document.getElementById('translatex'),10)">+10</button>
+            <br>
+            TranslateY: <input id="translatey" value="0"><button onclick="adjust(document.getElementById('translatey'),-10)">-10</button><button onclick="adjust(document.getElementById('translatey'),-1)">-1</button><button onclick="setStyle()">Apply</button><button onclick="adjust(document.getElementById('translatey'),1)">+1</button><button onclick="adjust(document.getElementById('translatey'),10)">+10</button>
+            <br>
+            <input id="result"><button onclick="copy()">Copy</button>
           </div>
           <div id="fra">
             <!--
@@ -79,7 +94,7 @@
             <!--10-->
             <!--9-->
             <div class="col">
-              <button class="artborder"><img loading="lazy" src="https://www.dropbox.com/scl/fi/xfh6yfavo2pkvys1yqmp6/IMG_5657_2025-Nov-29.webp?rlkey=4kruhdqsms585uskhik1twopj&raw=1" title="Cosmos :3 <span class='blogdate'>(29 Nov 2025)</span>" alt="Cosmos" style=""></button>
+              <button class="artborder"><img loading="lazy" src="https://www.dropbox.com/scl/fi/xfh6yfavo2pkvys1yqmp6/IMG_5657_2025-Nov-29.webp?rlkey=4kruhdqsms585uskhik1twopj&raw=1" title="Cosmos :3 <span class='blogdate'>(29 Nov 2025)</span>" alt="Cosmos"></button>
               </div>
             <div class="col">
               <button class="artborder"><img loading="lazy" src="https://www.dropbox.com/scl/fi/phg7544f953kvme74zons/IMG_5627_2025-Nov-21.jpg?rlkey=nz3vn3e0y75gaulmf4q1jbm90&raw=1" title="Wolf, oejks I don't know what to draw (sorry about the image quality) <span class='blogdate'>(20 Nov 2025)</span>" alt="Wolf" style="scale:2;object-position: top;translate: 20%;"></button>
@@ -126,7 +141,7 @@
                 <button class="artborder"><img loading="lazy" src="https://www.dropbox.com/scl/fi/qhkcfv6poxwz4qvvh335d/BeachEpisode_20250920.jpg?rlkey=ez3y2ew1bqasnwdhew4x76yb4&raw=1" title="Tried out a new alcohol paper, it blends very well. I decided to draw RS in a beach episode. Where is Solar you ask? Perhaps she is the POV which Claire is looking at! <span class='blogdate'>(20 Sep 2025)</span>" alt="RS gang in a beach" style="object-position: top;scale:1.5;translate: -10% 0;"></button>
               </div>
               <div class="col">
-                <button class="artborder"><img loading="lazy" src="https://www.dropbox.com/scl/fi/n994ms1wmjz2zgpm2oc9x/IMG_5220_20250919.jpg?rlkey=kpjg6i1e2yj47u9wk7zi30a4f&raw=1" title="Happy birthday Kyrea and Kaylee! I wanted to draw something with cool composition, but I couldn't find much good ideas. So I just put them in a spinning cup, around the world around the world <span class='blogdate'>(19 Sep 2025)</span>" alt="Kyrea and Kaylee" style=""></button>
+                <button class="artborder"><img loading="lazy" src="https://www.dropbox.com/scl/fi/n994ms1wmjz2zgpm2oc9x/IMG_5220_20250919.jpg?rlkey=kpjg6i1e2yj47u9wk7zi30a4f&raw=1" title="Happy birthday Kyrea and Kaylee! I wanted to draw something with cool composition, but I couldn't find much good ideas. So I just put them in a spinning cup, around the world around the world <span class='blogdate'>(19 Sep 2025)</span>" alt="Kyrea and Kaylee"></button>
               </div>
               <div class="col">
                 <button class="artborder"><img loading="lazy" src="https://www.dropbox.com/scl/fi/l8szq8sow6ub521b4uswn/IMG_5201_20250914.JPG?rlkey=r9gvqaivi9u20ph3k9jn0uqet&raw=1" title="Cupcake is an old OC that is based of my Minecraft dog which died many times, because of her unusually horrible story, I have no idea which story I should put her in <span class='blogdate'>(14 Sep 2025)</span>" alt="Cupcake OC" style="object-position: top;scale:2;translate: 0 20%;"></button>
@@ -335,5 +350,7 @@
   </main>
   <script src="../viewer.js"></script>
   <script src="artgallery.js"></script>
+  <script src="/dressup/GetAchievement.js"></script>
+  <script src="thumbnail.js"></script>
 </body>
 </html>

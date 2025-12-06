@@ -87,6 +87,27 @@ section.wide {
     flex: 0 0 16.6666666667%;
     max-width: 16.6666666667%;
   }
+
+#thumbnail {
+background: var(--gradient);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  filter: var(--dropshadow);
+  color: var(--blue);
+  text-align: center;
+  display: none;
+}
+#thumbnail button {
+  background: none;
+  border: 1px solid;
+  color: var(--blue);
+  border-radius: 2.5px;
+  margin: 0 5px;
+}
+#thumbnail input{
+  width: 50px;
+}
 @media (max-width: 1200px){
   .col {
     flex: 0 0 20%;

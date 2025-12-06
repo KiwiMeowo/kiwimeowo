@@ -46,6 +46,16 @@ var achievements=[
       {"Type":"shoes","Style":"top:410px;left:200px;","Image":"OldShoes.png"},
       {"Type":"hat","Style":"top:10px;left:200px;","Image":"OldRibbon.png"}*/
     ]
+  },
+  {"Name":"Hacker",
+    "Desc":"How did you find it? Where did you find it? Why did you find it? You must be one Easter Egg finding master if you found it randomly.",
+    "Criteria":"Enter a special code in an art page... Ok it might be easier if you just open DevTools (Clothing not released yet)",
+    "Preview":"preview/locked.webp",
+    "Clothing":[
+      /*{"Type":"shirt","Style":"top:160px;left:200px;","Image":"OldShirt.png"},
+      {"Type":"shoes","Style":"top:410px;left:200px;","Image":"OldShoes.png"},
+      {"Type":"hat","Style":"top:10px;left:200px;","Image":"OldRibbon.png"}*/
+    ]
   }
 ]
 for (i = 0; i < achievements.length; i++){
