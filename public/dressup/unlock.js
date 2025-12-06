@@ -21,10 +21,10 @@ var achievements=[
   },
   {"Name":"AugustGalaxy",
     "Desc":"Every little step leads to a bigger reward, even the tiny efforts you put into your work might contribute to something you are proud of. Perhaps you should look back sometimes and see how far you've come.",
-    "Criteria":"Read something lengthy and kinda boring (Clothing not released yet)",
-    "Preview":"preview/locked.webp",
+    "Criteria":"Read something lengthy and kinda boring",
+    "Preview":"preview/AugustGalaxy.webp",
     "Clothing":[
-      //{"Type":"shirt","Style":"top:160px;left:200px;","Image":"OldShirt.png"},
+      {"Type":"shirt","Style":"top: 396px; left: 352px;","Image":"AugustGalaxy.png"},
     ]
   },
   {"Name":"IceCream",
@@ -39,12 +39,12 @@ var achievements=[
   },
   {"Name":"Christmas",
     "Desc":"Merry Christmas!",
-    "Criteria":"Click something with lot's of Christmas joy (Clothing not released yet)",
-    "Preview":"preview/locked.webp",
+    "Criteria":"Click something with lot's of Christmas joy",
+    "Preview":"preview/Christmas.webp",
     "Clothing":[
-      /*{"Type":"shirt","Style":"top:160px;left:200px;","Image":"OldShirt.png"},
-      {"Type":"shoes","Style":"top:410px;left:200px;","Image":"OldShoes.png"},
-      {"Type":"hat","Style":"top:10px;left:200px;","Image":"OldRibbon.png"}*/
+    {"Type":"shirt","Style":"top:160px;left:805px;","Image":"ChristmasSuit.png"},
+      {"Type":"shoes","Style":"top:410px;left:805px;","Image":"ChristmasBoots.png"},
+      {"Type":"hat","Style":"top:10px;left:805px;z-index:2;","Image":"ChristmasHat.png"}
     ]
   },
   {"Name":"Hacker",
