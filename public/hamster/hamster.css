@@ -1,0 +1,12 @@
+  main{
+    --teal: #e3dbb0;
+    --lteal: #6c3131;
+    --blue: #eceaca;
+  }
+  main{
+    background:url(/assets/minecraft_sand.webp);
+    background-size: 5%;
+  }
+  article{
+    background: linear-gradient(#ff8a534f),url(/assets/freepik-wood.jpg);
+  }

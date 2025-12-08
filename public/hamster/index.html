@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiwiMeowo's site</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
+    <link href="hamster.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="/jquery.style-my-tooltips.js"></script>
+    </head>
+</html>
+<style>
+  #hams{
+    display: flex;
+  flex-wrap: wrap;
+  }
+  .box{
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+.ham {
+  margin: 10px auto;
+  height: 140px;
+  aspect-ratio:1/1;
+  border: 2.5px solid #fff;
+  border-radius: 5px;
+  filter: drop-shadow(2px 2px var(--lteal));
+  display: block;
+  overflow:hidden;
+  }
+  .ham img{
+    aspect-ratio: 1/1;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  }
+  .box h2{
+    text-align: center;
+  }
+  @media(max-width:900px){
+    .box{
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  }
+  @media (max-width: 500px){
+	.ham {
+    height: 100px;
+}
+}
+</style>
+<body>
+    <nav>
+      <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
+  </nav>
+  <main>
+    <section class="wide">
+        <article>
+            <h1>Hammy!</h1>
+            <div class="inner">
+              <center>If you are in need of some cute hammy pics, I'll show you mine!</center>
+              <div id="hams">
+                <div class="box">
+                  <a href="Cucumber.html" class="ham">
+                    <img src="prof/Cucumber.webp">
+                  </a>
+                  <h2><a href="Cucumber.html">Cucumber</a></h2>
+                </div>
+                <div class="box">
+                  <a href="FeiFei&DootDoot.html" class="ham">
+                    <img src="prof/FeiFei&DootDoot.webp">
+                  </a>
+                  <h2><a href="FeiFei&DootDoot.html">FeiFei and DootDoot</a></h2>
+                </div>
+                <div class="box">
+                  <a href="Oreo.html" class="ham">
+                    <img src="prof/Oreo.jpg">
+                  </a>
+                  <h2><a href="Oreo.html">Oreo</a></h2>
+                </div>
+                <div class="box">
+                  <a href="Kuma.html" class="ham">
+                    <img src="prof/Kuma.webp" style="object-position: bottom;">
+                  </a>
+                  <h2><a href="Kuma.html">Kuma</a></h2>
+                </div>
+              </div>
+            </div>
+        </article>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-column">
+    <h2>Credits</h2>
+	<ul>
+	<li> Background: Minecraft textures</li>
+	</ul>
+    </div>
+  </footer>
+</body>
