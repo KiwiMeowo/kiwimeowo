@@ -36,7 +36,7 @@
           <div id="thumbnail">
             Toggle: <button style="transform: scaleX(-1);" onclick="prevNum()">➤</button><span id="imagenum">1</span><button onclick="nextNum()">➤</button>
             <br>
-            Object-position: <input id="op" value="center"><button onclick="setStyle()">Apply</button>
+            Object-position: <button onclick="document.getElementById('op').value='top';setStyle()">Top</button><button onclick="document.getElementById('op').value='center';setStyle()">Center</button><input id="op" value="center"><button onclick="setStyle()">Apply</button>
             <br>
             Scale: <input id="sc" value="1"><button onclick="adjust(document.getElementById('sc'),-0.5)">-0.5</button><button onclick="setStyle()">Apply</button><button onclick="adjust(document.getElementById('sc'),0.5)">+0.5</button>
             <br>
