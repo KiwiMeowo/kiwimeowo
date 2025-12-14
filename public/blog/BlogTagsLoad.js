@@ -3,12 +3,10 @@ var load = document.getElementById("load");
 var loadblogs = load.getElementsByClassName("collapsible");
 var loaddate1 = load.getElementsByClassName('date');
 
-var selectid = document.getElementById("select");
-var select = selectid.getElementsByTagName("input");
-var number = selectid.getElementsByClassName("number");
+var select = document.querySelectorAll("#select input");
+var number = document.querySelectorAll("#select number");
 
-var excludeid = document.getElementById("exclude");
-var exclude = excludeid.getElementsByTagName("input");
+var exclude = document.querySelectorAll("#exclude number");
 
 var blogs = document.getElementsByClassName("collapsible");
 
@@ -23,13 +21,7 @@ function BlogDate() {
     loaddate1[i].innerText = loadblogs[i].getElementsByClassName("blogdate")[0].innerText;
   };
 }
-function BlogTag() {
-  for (x = 0; x < loadblogs.length; x++) {
-    var classtags = loadblogs[x].title.split(", ");
-    loadblogs[x].setAttribute("data-include", classtags.length);
-    loadblogs[x].setAttribute("data-exclude", 0);
-  }
-}
+
 /*Collapsible and close button code*/
 function collapse() {
   var content = load.getElementsByClassName("content");
@@ -67,19 +59,6 @@ function collapse() {
           content.style.maxHeight = content.scrollHeight + 5000 + "px";
         }
       });
-    }
-  }
-}
-/*Calculates the number of blogs containing each tag (for old blogs)*/
-function TagNumbersLoad() {
-  for (x = 0; x < number.length; x++) {
-    number[x].innerHTML = 0;
-    var find = select[x].id;
-    for (y = 0; y < loadblogs.length; y++) {
-      var tag = loadblogs[y].title.split(", ");
-      if (tag.includes(find)) {
-        number[x].innerHTML = parseInt(number[x].innerHTML) + 1;
-      }
     }
   }
 }
@@ -125,7 +104,7 @@ function Current() {
   showAll();
   unexcludeAll();
   ShesGone();
-  TagNumbers();
+  TagNumbers('current');
 }
 /*Fetch old blogs*/
 function fetchHtml(link) {
@@ -146,8 +125,8 @@ function fetchHtml(link) {
         BlogDate();
         spoiler();
       }
-      BlogTag();
-      TagNumbersLoad();
+      BlogTag('load');
+      TagNumbers('load');
       ShesGone();
       setTimeout(Tooltips, 100);
       document.getElementsByClassName("circle-out")[0].style.display = "none";
@@ -174,25 +153,25 @@ function spoiler() {
 }
 /*Codes that run on load*/
 /*Calculates the number of blogs containing each tag (for current blogs)*/
-function TagNumbers() {
+function TagNumbers(version) {
   for (x = 0; x < number.length; x++) {
     number[x].innerHTML = 0;
-    for (y = 0; y < blogs.length; y++) {
-      var tag = blogs[y].title.split(", ");
-      if (tag.includes(select[x].id)) {
-        number[x].innerHTML = parseInt(number[x].innerHTML) + 1;
-      }
-    }
+    var countblog=document.querySelectorAll(`#${version} .collapsible[title*='${select[x].id}']`);
+    number[x].innerHTML = countblog.length;
   }
 }
-TagNumbers();
+TagNumbers('current');
 
 /*Add include filter values, the number given to each blog is their total tag numbers, unchecking a corresponding tag will deduct by one for the blogs that include said tag, when it reaches 0, the blog is hidden*/
-for (x = 0; x < blogs.length; x++) {
-  var classtags = blogs[x].title.split(", ");
-  blogs[x].setAttribute("data-include", classtags.length);
-  blogs[x].setAttribute("data-exclude", 0);
+function BlogTag(version) {
+  var blogs=document.querySelectorAll(`#${version} .collapsible`);
+  for (x = 0; x < blogs.length; x++) {
+    var classtags = blogs[x].title.split(", ");
+    blogs[x].setAttribute("data-include", classtags.length);
+    blogs[x].setAttribute("data-exclude", 0);
+  }
 }
+BlogTag('current')
 
 for (i = 0; i < select.length; i++) {
   select[i].checked = true;

@@ -199,7 +199,7 @@ a{cursor:pointer}
 		</div>
     <button class="bar coll" type="button">2025 Blogs...</button>
 		<div class="cont">
-		<button class="bar bar2" onclick="Current();ShesGone();TagNumbers()" type="button">Oct-Dec</button>
+		<button class="bar bar2" onclick="Current()" type="button">Oct-Dec</button>
 		<button class="bar bar2" onclick="fetchHtml('2025/3rd');" type="button">Jul-Sep</button>
 		<button class="bar bar2" onclick="fetchHtml('2025/2nd');" type="button">Apr-Jun</button>
 		<button class="bar bar2" onclick="fetchHtml('2025/1st');" type="button">Jan-Mar</button>
@@ -278,12 +278,21 @@ for (i = 0; i < coll.length; i++) {
       <div style="margin:0.75em 0">
       <div id="select" style="margin: auto;width: fit-content;text-align: center;">
       <span class="option" title="I talk about art stuff, including drawings, website and prob others"><input type="checkbox" id="Art"><label for="Art"><span class="checkmark"></span>Art (<span class="number"></span>)</label></span>
+
       <span class="option" title="I talk about my opinions on stuff, but honestly this tag is so broad it can mean anything"><input type="checkbox" id="Discussion"><label for="Discussion"><span class="checkmark"></span>Discussion (<span class="number"></span>)</label></span>
+
       <span class="option" title="'Sweet dreams are made of this~' There's not a lot of dreams that are worth talking about, so there might not be much"><input type="checkbox" id="Dream"><label for="Dream"><span class="checkmark"></span>Dream (<span class="number"></span>)</label></span>
+
+      <span class="option" title="Stuff I like maybe too much"><input type="checkbox" id="Fixiation"><label for="Fixiation"><span class="checkmark"></span>Fixiation (<span class="number"></span>)</label></span>
+
     <span class="option" title="When I finally do gaming"><input type="checkbox" id="Game"><label for="Game"><span class="checkmark"></span>Game (<span class="number"></span>)</label></span>
+
     <span class="option" title="My life isn't that interesting, but you can still read them"><input type="checkbox" id="Life"><label for="Life"><span class="checkmark"></span>Life (<span class="number"></span>)</label></span>
+
     <span class="option" title="I ramble about OC stuff, I love them sm"><input type="checkbox" id="OC"><label for="OC"><span class="checkmark"></span>OC (<span class="number"></span>)</label></span>
+
     <span class="option" title="Cool media I just wanna talk about"><input type="checkbox" id="Review"><label for="Review"><span class="checkmark"></span>Review (<span class="number"></span>)</label></span>
+
     <span class="option" title="Not exactly all negative stuff. It's either 1. me crying about tragedy of life, 2. me sappily talk about something happy, or 3. full on rants (prob about romance subplots)"><input type="checkbox" id="Vent"><label for="Vent"><span class="checkmark"></span>Vent (<span class="number"></span>)</label></span>
     </div>
     <center style="margin:0;">
@@ -295,12 +304,21 @@ for (i = 0; i < coll.length; i++) {
       <div style="margin:0.75em 0">
       <div id="exclude" style="margin: auto;width: fit-content;text-align: center;">
       <span class="option" title="I talk about art stuff, including drawings, website and prob others"><input type="checkbox" id="Art2"><label for="Art2"><span class="checkmark"></span>Art</label></span>
+
       <span class="option" title="I talk about my opinions on stuff, but honestly this tag is so broad it can mean anything"><input type="checkbox" id="Discussion2"><label for="Discussion2"><span class="checkmark"></span>Discussion</label></span>
+
       <span class="option" title="'Sweet dreams are made of this~' There's not a lot of dreams that are worth talking about, so there might not be much"><input type="checkbox" id="Dream2"><label for="Dream2"><span class="checkmark"></span>Dream</label></span>
+
+      <span class="option" title="Stuff I like maybe too much"><input type="checkbox" id="Fixiation2"><label for="Fixiation2"><span class="checkmark"></span>Fixiation</label></span>
+
     <span class="option" title="When I finally do gaming"><input type="checkbox" id="Game2"><label for="Game2"><span class="checkmark"></span>Game</label></span>
+    
     <span class="option" title="My life isn't that interesting, but you can still read them"><input type="checkbox" id="Life2"><label for="Life2"><span class="checkmark"></span>Life</label></span>
+
     <span class="option" title="I ramble about OC stuff, I love them sm"><input type="checkbox" id="OC2"><label for="OC2"><span class="checkmark"></span>OC</label></span>
+
     <span class="option" title="Cool media I just wanna talk about"><input type="checkbox" id="Review2"><label for="Review2"><span class="checkmark"></span>Review</label></span>
+
     <span class="option" title="Not exactly all negative stuff. It's either 1. me crying about tragedy of life, 2. me sappily talk about something happy, or 3. full on rants (prob about romance subplots)"><input type="checkbox" id="Vent2"><label for="Vent2"><span class="checkmark"></span>Vent</label></span>
     <center style="margin:0;">
       <button class="coolbutton" onclick="unexcludeAll()">Uncheck All</button>
