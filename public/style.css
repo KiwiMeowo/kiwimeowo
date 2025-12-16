@@ -17,14 +17,14 @@
 }
 html{
   font-weight:500;
-  font-family: "Fraunces","Toppan-Bunkyu-Mincho",serif, sans-serif;
+  font-family: "Fraunces","Toppan-Bunkyu-Mincho","NotoSansSymbol2",serif, sans-serif;
   color: var(--teal);
   text-decoration-color:var(--teal);
   scroll-behavior: smooth;
 }
 button, input, textarea{
   font-weight:500;
-  font-family: "Fraunces","Toppan-Bunkyu-Mincho",serif, sans-serif;
+  font-family: "Fraunces","Toppan-Bunkyu-Mincho","NotoSansSymbol2",serif, sans-serif;
 }
 body {
   margin: 0;
@@ -118,16 +118,17 @@ figure{
   margin:0.75em 40px;
 }
 kbd{
-  text-indent: 0;
+text-indent: 0;
   font-family: inherit;
-  background-color: var(--yellow);
+  background: linear-gradient(var(--yellow),var(--boxdark) 150%);
   border-radius: 2.5px;
-  border: 2px solid var(--teal);
-  box-shadow: 1px 1px 1px var(--shadow),0 2px 0 0 rgb(255 255 255 / 0.7) inset;
+  border: 1.5px solid var(--teal);
+  box-shadow: 1px 1px 1px var(--shadow);
   color: var(--teal);
   display: inline-block;
   padding: 0 4px;
   font-size: 0.9em;
+  border-color: var(--teal) var(--dblue) var(--dblue) var(--teal);
 }
 select {
   border: 2px solid var(--teal);
@@ -166,6 +167,10 @@ iframe{
 @font-face {
   font-family: "ComicSansMS";
   src: url("ComicSansMS.ttf");
+}
+@font-face{
+  font-family: "NotoSansSymbol2";
+  src:url('/assets/NotoSansSymbols2-Regular.ttf');
 }
 /*Miscellanous custom styling for various elements.*/
 h1, h2, h3 {
