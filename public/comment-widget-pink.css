@@ -92,17 +92,19 @@
 #c_inputDiv {
     background-color: var(--yellow);
     border-radius: 7.5px;
-    padding: 15px 25px;
     box-shadow: 4px 4px 4px 2px var(--shadow), inset 0 50px 50px -20px color-mix(in srgb, var(--yellow),#b99077),inset 0 -50px 50px -20px color-mix(in srgb, var(--yellow), #b99077);
 }
+
+#c_form{
+  padding: 15px 25px;
+}
+
 #c_container {margin-top: 10px;color:var(--yellow)}
 
 #c_widgetTitle {
-  margin-top: 5px;
-  font-size: 2em;
-  color: var(--blue);
-  padding-bottom: 20px;
+  padding: 15px 20px;
   border-bottom: 1.75px dashed var(--lteal);
+  margin: 0;
 }
 
 .c-inputWrapper {

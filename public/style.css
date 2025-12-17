@@ -418,6 +418,7 @@ section.wide {
   margin: 0 6vw;
   width: -webkit-fill-available;
   width:-moz-available;
+  z-index: 1;
 }
 .double section{
     width: calc(100% - 640px);

@@ -10,6 +10,14 @@
   --gradient1: #228bff3b;
   --gradient2: #9eccff24;
 }
+#bg{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top:0;
+  left: 0;
+  object-fit: cover;
+}
 .blognav {
   position:fixed;
   z-index: 99;

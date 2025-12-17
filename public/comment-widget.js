@@ -87,12 +87,12 @@ document.getElementsByTagName('head')[0].appendChild(c_cssLink);
 // HTML Form
 const v_mainHtml = `
     <div id="c_inputDiv">
+    <h1 id="c_widgetTitle">${s_widgetTitle}</h1>
         <form id="c_form" onsubmit="c_submitButton.disabled = true; v_submitted = true;" method="post" target="c_hiddenIframe" action="https://docs.google.com/forms/d/e/${s_formId}/formResponse"></form>
     </div>
     <div id="c_container">${s_loadingText}</div>
 `;
 const v_formHtml = `
-    <h2 id="c_widgetTitle">${s_widgetTitle}</h2>
 
     <div id="c_nameWrapper" class="c-inputWrapper">
         <label class="c-label c-nameLabel" for="entry.${s_nameId}">${s_nameFieldLabel}</label>
