@@ -4,9 +4,9 @@ var loadblogs = load.getElementsByClassName("collapsible");
 var loaddate1 = load.getElementsByClassName('date');
 
 var select = document.querySelectorAll("#select input");
-var number = document.querySelectorAll("#select number");
+var exclude = document.querySelectorAll("#exclude input");
 
-var exclude = document.querySelectorAll("#exclude number");
+var number = document.querySelectorAll("#select .number");
 
 var blogs = document.getElementsByClassName("collapsible");
 
@@ -155,7 +155,6 @@ function spoiler() {
 /*Calculates the number of blogs containing each tag (for current blogs)*/
 function TagNumbers(version) {
   for (x = 0; x < number.length; x++) {
-    number[x].innerHTML = 0;
     var countblog=document.querySelectorAll(`#${version} .collapsible[title*='${select[x].id}']`);
     number[x].innerHTML = countblog.length;
   }

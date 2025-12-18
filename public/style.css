@@ -838,6 +838,7 @@ a.collapsible:after {
 }
 .collapsible:hover .blogpreviewtag,.collapsible:focus .blogpreviewtag{
   background: var(--dblue);
+  color:var(--highlightteal);
 }
 /*Blog page spoiler censors*/
 .spoiler {
