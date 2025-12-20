@@ -830,11 +830,19 @@ a.collapsible:after {
   text-indent: 0;
 }
 .blogpreviewtag{
-  font-size:0.75em;
+  font-size: 0.75em;
   background: var(--teal);
   color: var(--yellow);
-  padding: 2.5px 5px;
+  padding: 0 5px;
   border-radius: 5px;
+  float: left;
+}
+.wordcount{
+  float:right;
+  font-size: 0.75em;
+  opacity: 0.75;
+  text-decoration: underline dashed;
+  text-decoration-thickness: 1px;
 }
 .collapsible:hover .blogpreviewtag,.collapsible:focus .blogpreviewtag{
   background: var(--dblue);

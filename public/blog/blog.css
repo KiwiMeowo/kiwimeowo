@@ -111,18 +111,24 @@ justify-content: space-around;
 .statusbox p:nth-child(3),.statusbox p:nth-child(4) {
     background: linear-gradient(color-mix(in srgb, var(--gradient1), var(--gradient2)),var(--gradient2));
 }
-.blogtag{
-  text-align: right;
+.bloginfo{
   margin: 1.25em auto;
   width: 80%;
 }
-.blogtag span{
+.blogtags{
   font-size: 1.1em;
   color: var(--yellow);
   border-radius: 5px;
   padding: 4px 12px;
   filter: var(--dropshadow);
   background: linear-gradient(#1a25759e, #5877b7a3);
+}
+.blogwords{
+  float:right;
+  opacity: 0.75;
+  font-size: 0.75em;
+  text-decoration: underline dashed;
+  text-decoration-thickness: 1px;
 }
 @media(max-width:800px){
   .statusbox {

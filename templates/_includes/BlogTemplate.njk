@@ -37,7 +37,7 @@
         <p>Mood: {{ mood }}</p>
         <p>Random thought: {{ thought | safe }}</p>
         </div>
-        <p class="blogtag"><span>Tags: {{ filter }}</span></p>
+        <div class="bloginfo"><span class="blogtags">Tags: {{ filter }}</span><span class="blogwords">{{ content | wordCount }} words ({{ content | readingTime }} read)</span></div>
         {{ content | safe }}
         {% if credit %}
         <div class="blogcredit">
