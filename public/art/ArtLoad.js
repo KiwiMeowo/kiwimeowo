@@ -18,7 +18,10 @@ for (x=Math.ceil(drawings.length/18)-1;x>=0;x--){
         button.classList.add("artborder");
         var img = document.createElement("img");
         img.setAttribute("loading",'lazy');
-        link=drawings[y+18*x].Link.replace("dl=0", "raw=1");
+        link=drawings[y+18*x].Link;
+        if(link.includes('dl=0')){
+          link=link.replace("dl=0", "raw=1");
+        }
         img.setAttribute("src",link);
         date=link.split("_");
         date=date[date.length-1];
