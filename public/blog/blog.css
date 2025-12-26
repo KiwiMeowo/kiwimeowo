@@ -122,6 +122,7 @@ justify-content: space-around;
   padding: 4px 12px;
   filter: var(--dropshadow);
   background: linear-gradient(#1a25759e, #5877b7a3);
+  display: inline-block;
 }
 .blogwords{
   float:right;
