@@ -5,9 +5,13 @@
   --teal:#3f6884;
   --blue:#2d3758;
   --dblue:#1b1d4c;
-    --bg:#637b8759, #7750c359 150%;
+  --bg:#637b8759, #7750c359 150%;
   --shadow:#1a38748c;
   --boxdark:#b9907796;
+  --gradient1:#8dc5ee78;
+  --gradient2:#aecee633;
+  --gradient:linear-gradient(var(--gradient1),var(--gradient2));
+  --dropshadow:drop-shadow(2px 2px 1px var(--shadow));
 }
 @font-face {
     font-family:'Fraunces';
@@ -45,6 +49,10 @@
  }
 link{
     display:block;
+  font-size: 0.9em;
+  text-decoration: underline;
+    text-decoration-thickness: auto;
+  text-decoration-thickness: 1.5px;
 }
  link[href="https://kiwimeowo.neocities.org/"], description{
    margin: 15px 25px;
@@ -64,9 +72,16 @@ link{
     padding:0;
  }
  guid {
-   display:block;
+   display:inline-block;
+   background: var(--gradient);
+   filter:var(--dropshadow);
+   color:var(--blue);
+   padding: 2px 5px;
+   border-radius: 5px;
  }
- 
+ guid::before {
+  content: "GUID: ";
+}
  pubDate {
    display:block;
    text-align: right;

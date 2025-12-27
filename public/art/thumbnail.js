@@ -101,7 +101,7 @@ function RSScopy(){
   var art=document.querySelectorAll(".artborder img")[currentnum];
   var date=art.getAttribute('title').split('>(')[art.getAttribute('title').split('>(').length-1].split(')<')[0];
   var weekDay=Weeks[new Date(date).getDay()];
-  copyText.value=`<item><title>${art.getAttribute('alt')}</title><link href="https://kiwimeowo.neocities.org/art/2025.html">${art.getAttribute('src').replace("&","&amp;")}</link><guid>${art.getAttribute('src').split('/')[6].split("?")[0]}</guid><description>${art.getAttribute('title').split('<span')[0].replace(/</g,"").replace(/>/g,"")}</description><pubDate>${weekDay}, ${date} ${(new Date()).toTimeString()}</pubDate><enclosure url="${art.getAttribute('src').replace("&","&amp;")}" type="image/${art.getAttribute('src').split(".")[3].split("?")[0]}" /></item>`;
+  copyText.value=`<item><title>${art.getAttribute('alt')}</title><guid>${art.getAttribute('src').split('/')[6].split("?")[0]}</guid><link href="https://kiwimeowo.neocities.org/art/2025.html">${art.getAttribute('src').replace("&","&amp;")}</link><description>${art.getAttribute('title').split('<span')[0].replace(/</g,"").replace(/>/g,"")}</description><pubDate>${weekDay}, ${date} ${(new Date()).toTimeString()}</pubDate><enclosure url="${art.getAttribute('src').replace("&","&amp;")}" type="image/${art.getAttribute('src').split(".")[3].split("?")[0]}" /></item>`;
   // Select the text field
   copyText.select();
   copyText.setSelectionRange(0, 99999); // For mobile devices
