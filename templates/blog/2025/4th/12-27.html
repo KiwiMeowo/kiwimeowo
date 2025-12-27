@@ -1,0 +1,116 @@
+---
+layout: BlogTemplate_v2.njk
+tags: ['blog','2025/4th']
+style: >
+
+deco: >
+
+bg: 
+filter: Art
+title: Website Update
+subtitle: Ooo Kiwi has been working hard
+weather: Cool
+songname: Zelda Twilight Princess - Malo Mart
+songlink: https://youtu.be/mD_N2bTGXEs?si=Q_-WrGOqBDIMN4Ni
+songcomment: This is my brain trying to understand code
+mood: Alright
+thought: Wow I coded the whole day,,,
+date: 2025-12-27
+credit:
+---
+
+<!--Art Discussion Dream Fixation Game Life OC Review Vent-->
+<p>For the past few days, or actually for a while, I have been thinking of ways to make my website more enjoyable for visitors. While I won't sacrifice my enjoyment for others, I still want people to easily navigate my stuff and see a large variety of stuff.</p>
+<hr>
+<h2>Fixations</h2>
+<p>For one, I revamped my fixation section, I placed Blorbos and Shrines into their own pages, and the fixation index feels like my main page, except it's dedicated to my fandoms and Pome! I also added a page linking to many artists I particularly enjoy, makes me feel sad that some of the Cookie Run artists I used to enjoy aren't active in social media anymore.</p>
+<p>I have considered adding a Microblog section as well. It acts like my current blog page, except it's small like Tweets. What's that for? It would act like fandom rambles, sharing fanart and screaming for my favs, stuff that wouldn't be long enough for my Blog section. But after a bit of considering, I realised it doesn't do a lot, as I can just do that on BlueSky <span style="font-size: 0.66em;">well except social media is big and scary</span> <span style="font-size: 0.33em;">and I feel scared seeing people like my ramblings...</span></p>
+<p>Well maybe I'll leave my idea for another day when I found more ways to do with it.</p>
+<hr>
+<h2>Art RSS idea</h2>
+<p>This is an idea I have had in my mind for a while, I have an blog RSS, why not an art RSS? However, it initially sounds too annoying, especially if you do it manually. In an RSS feed, for every item, you have to put these elements (or at least how I format them):</p>
+<pre>
+  &#x3C;item&#x3E;
+&#x3C;title&#x3E;[Title name]&#x3C;/title&#x3E;
+&#x3C;link href=&#x22;[Link]&#x22;&#x3E;[Link]&#x3C;/link&#x3E;
+&#x3C;guid&#x3E;[Some name]&#x3C;/guid&#x3E;
+&#x3C;description&#x3E;[Description]&#x3C;/description&#x3E;
+&#x3C;pubDate&#x3E;[Date]&#x3C;/pubDate&#x3E;
+&#x3C;/item&#x3E;
+</pre>
+<p>The reason I have blog RSS set up is because I can have it automated using 11ty, I don't have to copy and paste that code and paste the details everytime I have a new blog. </p>
+<p>To demonstrate how frustrated I would be if I have an art RSS, this is the normal procedure for uploading a new art</p>
+<ol>
+  <li>Take a picture of my art</li>
+  <li>Crop image and set filters</li>
+  <li>Upload to my laptop</li>
+  <li>Compress it</li>
+  <li>Put it in my Dropbox folder</li>
+  <li>Open my art page and copy/paste my art container</li>
+  <li>Copy the link in Dropbox and paste it</li>
+  <li>Set the thumbnail by adding style (though live preview window)</li>
+  <li>Upload!</li>
+</ol>
+<p>If I have to update the RSS manually, I have to do this everytime I upload a new art:</p>
+<ol>
+  <li>Take a picture of my art</li>
+  <li>Crop image and set filters</li>
+  <li>Upload to my laptop</li>
+  <li>Compress it</li>
+  <li>Put it in my Dropbox folder</li>
+  <li>Open my art page and copy/paste my art container</li>
+  <li>Copy the link in Dropbox and paste it</li>
+  <li>Set the thumbnail by adding style (though live preview window)</li>
+  <li style="color:red">Look for feed page (It's not easy finding individual files among lots of files)</li>
+  <li style="color:red">copy/paste item template</li>
+  <ol style="color:red">
+    <li>Copy file name as title and paste</li>
+    <li>Copy file link as link and guid, and paste</li>
+    <li>Copy comments as description and paste</li>
+    <li>Copy date as date and paste</li>
+  </ol>
+  <li>Upload!</li>
+</ol>
+<p>Adding five more steps actually increases my mental workload by a lot, and going back and forth between files is very mentally draining. This is why I don't have an art ASS feed for a long time. However, I still wish to add an art RSS feed, since it would be easier for people to catch up with my updates.</p>
+<hr>
+<h2>Art RSS ideas?</h2>
+<p>Initally, I thought of my 11ty plugins. By using a json file containing my art in the _data folder, I can make a page generating the art elements and a RSS feed. It sounded good at first, but slowly I felt like the work won't be worth it:</p>
+<ul>
+  <li>The knowledge for 11ty is a bit specific, there isn't that much resources for it</li>
+  <li>The way I organise my art is by going through for loops in the amount of art divided by 18, then more for loops... It got too complex and I don't know how to do it in 11ty.</li>
+</ul>
+<p>Moreover, it actually don't reduce my workload that well:</p>
+<ol>
+  <li>Take a picture of my art</li>
+  <li>Crop image and set filters</li>
+  <li>Upload to my laptop</li>
+  <li>Compress it</li>
+  <li>Put it in my Dropbox folder</li>
+  <li style="color:red">Open _data/art.json at the very bottom of my site folder</li>
+  <li>Copy/paste my art container</li>
+  <li>Copy the link in Dropbox and paste it</li>
+  <li style="color:red">Run "npm run build"</li>
+  <li style="color:red">Go back up the my art page and open live preview</li>
+  <li>Set the thumbnail by adding style (though live preview window)</li>
+  <li style="color:red">Run "npm run build" again</li>
+  <li>Upload!</li>
+</ol>
+<p>It's four more steps, two of them are running a terminal command. While npm run build is good at creating blog pages, it just feels tedious if it's for art. Also, I have to look through my folder too much for this solution, not good :/.</p>
+<hr>
+<h2>Solution</h2>
+<p>After all that 11ty code tinkering, I realised I have been overthinking the whole time. Just like how I implemented thumbnail.js for img styling, I can just add a code to copy an RSS item!</p>
+<ol>
+  <li>Take a picture of my art</li>
+  <li>Crop image and set filters</li>
+  <li>Upload to my laptop</li>
+  <li>Compress it</li>
+  <li>Put it in my Dropbox folder</li>
+  <li>Open my art page and copy/paste my art container</li>
+  <li>Copy the link in Dropbox and paste it</li>
+  <li>Set the thumbnail by adding style (though live preview window)</li>
+  <li style="color:red">Copy RSS item code (though live preview window as well!)</li>
+  <li style="color:red">Open and paste the RSS code into the feed</li>
+  <li>Upload!</li>
+</ol>
+<p>It's only two steps, and not much folder navigation needed, not much file writing needed either. It's just one copy, one paste, done! Man I'm so grateful I learnt Javascript.</p>
+<p>I have added some optimization (like pinning the art gallery and the feed) so that I can make the process a bit easier. Anyways, if you want to follow my art gallery, now it's the perfect chance to add the feed to your RSS reader! If you don't have one, I believe Feedly (which I downloaded on my phone) works the best. It has no ads and simple to use, but there might be another good RSS feed readers out there!</p>
