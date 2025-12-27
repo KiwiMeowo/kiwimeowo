@@ -1,0 +1,94 @@
+:root{
+  --yellow:#f3e3b8;
+  --lteal:#8cacac;
+  --highlightteal:#9cc3dfab;
+  --teal:#3f6884;
+  --blue:#2d3758;
+  --dblue:#1b1d4c;
+    --bg:#637b8759, #7750c359 150%;
+  --shadow:#1a38748c;
+  --boxdark:#b9907796;
+}
+@font-face {
+    font-family:'Fraunces';
+    src: url(../Fraunces.ttf);
+   }
+ rss {
+    font-family: "Fraunces","Toppan-Bunkyu-Mincho",serif, sans-serif;
+   background: linear-gradient(var(--bg)), url(/assets/fancy.png);
+   color:var(--teal);
+   font-weight:500;
+   line-height: 145%;
+  font-size: 0.90em;
+  padding: 25px 50px;
+  display:block;
+  min-height: calc(100vh - 50px);
+ }
+ 
+ title {
+    font-size: 2em;
+    color:var(--blue);
+    display:block;
+    padding: 17.5px 25px;
+    border-bottom: 1.75px dashed var(--lteal);
+    text-shadow: 2px 2px var(--lteal);
+    font-weight: 600;
+    line-height: 1;
+   }
+ 
+ channel {
+    margin: 0 6vw;
+   background-color: var(--yellow);
+   display:block;
+   border-radius:7.5px;
+   box-shadow: 4px 4px 4px 2px var(--shadow), inset 0 50px 50px -20px var(--boxdark),inset 0 -50px 50px -20px var(--boxdark);
+ }
+link{
+    display:block;
+}
+ link[href="https://kiwimeowo.neocities.org/"], description{
+   margin: 15px 25px;
+ }
+ item{
+    margin: 15px 25px;
+    display:block;
+    border-bottom:1.75px dashed var(--lteal);
+ }
+ item:first-of-type{
+    border-top:1.75px dashed var(--lteal);
+ }
+ item title{
+    font-size: 1.5em;
+    margin: 12.5px 0px;
+    border:0;
+    padding:0;
+ }
+ guid {
+   display:block;
+ }
+ 
+ pubDate {
+   display:block;
+   text-align: right;
+   font-size: 0.9em;
+   margin: 0.5em 0;
+ }
+ 
+ description {
+   display:block;
+   text-indent:25px;
+ }
+ item description{
+    margin:15px 0;
+ }
+ item:last-child {
+  border-bottom: 0;
+}
+ @media (max-width: 900px) {
+    rss{
+        padding: 25px 4vw;
+    }
+    channel {
+        margin: 0 auto;
+    }
+}
