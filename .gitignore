@@ -6,3 +6,6 @@ node_modules/
 public/art/2026.html
 public/JSedit.html
 public/art/comic/template.html
+**/test.html
+**/old.html
+public/fixations/microblog

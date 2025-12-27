@@ -29,7 +29,7 @@ function draw_model(canvas_id,scratch_id,scale,hat) {
 	canvas_container.height = 44.8*scale;
 	
 	var skin = new Image();
-	skin.src = '/fixiations/skins/Kyrea.png';
+	skin.src = '/art/skins/Kyrea.png';
 	
 	skin.onload = function(){
 		//Draw the skin on to the scratch
@@ -122,7 +122,7 @@ function draw_model_left(canvas_id,scratch_id,username,scale,hat) {
 	
 	var skin = new Image();
 	//skin.src = 'https://web.archive.org/web/20171025140636/http://s3.amazonaws.com/MinecraftSkins/' + username + '.png' - Causes DOM Security Errors. So I made a php script that grabs it instead.
-	skin.src = '/fixiations/skins/Kyrea.png';
+	skin.src = '/art/skins/Kyrea.png';
 	
 	skin.onload = function(){
 		//Draw the skin on to the scratch
@@ -209,7 +209,7 @@ function draw_hat(canvas_id,scale) {
 	
 	//User's Minecraft Skin
 	var skin = new Image();
-	skin.src = '/fixiations/skins/Kyrea.png';
+	skin.src = '/art/skins/Kyrea.png';
 	
 	skin.onload = function(){
 		//Draw hat initially so we can test if it's one color
@@ -240,7 +240,7 @@ function draw_head(canvas_id,scale) {
 	
 	//User's Minecraft Skin
 	var head_original = new Image();
-	head_original.src = '/fixiations/skins/Kyrea.png';
+	head_original.src = '/art/skins/Kyrea.png';
 	
 	head_original.onload = function(){
 		//Draw the head

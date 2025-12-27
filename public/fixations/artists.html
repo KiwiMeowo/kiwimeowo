@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiwiMeowo's site</title>
+    <link rel="icon" type="image/x-icon" href="deco/pome.ico?">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
+    <link href="fandom.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="/jquery.style-my-tooltips.js"></script>
+      <style>
+        .flex{
+          display: flex;
+          flex-wrap: wrap;
+        justify-content: space-evenly;
+        }
+        .fandom{
+          flex: 0 0 33.33%;
+          max-width: 33.33%;
+        }
+        @media (max-width:900px){
+          .fandom{
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+        }
+        .fandominner{
+          border: 5px double white;
+  padding: 5px 15px;
+  margin: 5px;
+  background-image: url(/assets/paper-texture.png);
+  background-color: #ffdee4;
+  box-shadow: 2px 2px 4px var(--shadow);
+  position: relative;
+        }
+        .fandominner:after{
+          content: "";
+  background-image: url(deco/CR/Hollyberry_soul_jam.webp);
+  height: 40px;
+  position: absolute;
+  background-size: cover;
+  aspect-ratio: 6/5;
+  top: -15px;
+  right: -15px;
+  rotate: 15deg;
+  z-index: 1;
+  filter: var(--dropshadow);
+        }
+      </style>
+  </head>
+ <body>
+  <nav>
+    <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
+    <a href="index.html">Fixation index</a>
+    </nav>
+  <main>
+    <section class="wide">
+      <article id="fandom"><h1>Artist from various fandoms</h1>
+        <div class="inner">
+          <p>One of the first things I do when I get into a new fandom is to look for cool fan art. They are one of the strongest pillars in a fandom, and I can never thank them enough for giving me such a wonderful time!</p>
+          <hr>
+          <div class="flex">
+            <div class="fandom">
+              <div class="fandominner">
+                <h2>Cookie Run</h2>
+                <ul>
+                  <li><a href="https://x.com/santsunagi" title="A fellow mutual and Pome enjoyer" target="_blank">石像</a></li>
+                  <li><a href="https://x.com/Star0_012/media" title="Draws a lot of Hollyberry" target="_blank">Star0_012</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="fandom">
+              <div class="fandominner">
+                <h2>Cookie Run</h2>
+                <ul>
+                  <li><a href="https://x.com/tama_gara" title="Artists who draws Barou a lot" target="_blank">マツモトシィマ</a></li>
+                  <li><a href="https://x.com/Star0_012/media" title="Draws a lot of Hollyberry" target="_blank">Star0_012</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="fandom">
+              <div class="fandominner">
+                <h2>Blue Lock</h2>
+                <ul>
+                  <li><a href="https://bsky.app/profile/pikminpreggedup.bsky.social" title="The artist who drew the Opera O bird creature" target="_blank">shen toes</a></li>
+                  <li><a href="https://bsky.app/profile/junsaiyamano.bsky.social" title="A artist who draws Air Shakur x Fine Motion a lot" target="_blank">蓴菜</a></li>
+                  <li><a href="https://x.com/kazue1000" title="They draw baseball poses really well" target="_blank">kazue1000</a></li>
+                  <li><a href="https://x.com/dimo3434" title="Animating Blue Lock moments when the official ones doesn't" target="_blank">Dimo</a></li>
+                  <li><a href="https://x.com/lalamelonflora" title="Draws a lot of Ubers members" target="_blank">Melon</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="fandom">
+              <div class="fandominner">
+                <h2>OCs</h2>
+                <ul>
+                  <li><a href="https://bsky.app/profile/podorovines.bsky.social" target="_blank" title="Author for Seven Leaf Clover and Silly Strike">Podoro</a></li>
+                  <li><a href="https://bsky.app/profile/fourleafisland.art" target="_blank" title="Author for Laika's Comet">Four Leaf Island</a></li>
+                  <li><a href="https://x.com/WomeGa55" title="Artist who loves drawing old women" target="_blank">Womega</a></li>
+                  <li><a href="https://bsky.app/profile/pekepekex.bsky.social" target="_blank" title="The artist shows the OC stories through drawings, I'm really curious about the world building">Peke</a></li>
+                  <li><a href="https://x.com/MrCaky" target="_blank" title="Cute OCs and cute art :3">Caky</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+  <script src="/spoiler.js"></script>
+</body>
+</html>

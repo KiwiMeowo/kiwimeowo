@@ -6,6 +6,46 @@
     --blue: #781007;
     --dblue: #480702;
     --shadow:#4304047a;
+    --gradient1: #ffa6a6d1;
+  --gradient2: #fee4ff33;
+}
+.title{
+    border-left-color:#84261e;
+    border-top-color:#84261e;
+  }
+header{
+  background: linear-gradient(#5d10103b,#5d10103b), url(deco/CR/Arson.png);
+    background-size: cover;
+    background-position: center 60%;
+}
+.title-pic{
+  content: url(deco/CR/pomg.png);
+  margin-left: 100px;
+  left: 0;
+  margin-right: 0;
+}
+.title-text {
+  padding-right: 0;
+  padding-left: 220px;
+  text-align: left;
+}
+@media (max-width: 600px) {
+  .title-text {
+    padding-left: 140px;
+    width: calc(100% - 140px);
+  }
+}
+@media (max-width: 1200px) {
+  .title-pic {
+    margin-left: 7vw;
+  }
+}
+  .bar {
+    background: linear-gradient(0.25turn, #e6454538,#f2828221);
+}
+.bar:hover, .bar:focus{
+  cursor:pointer;
+  background: linear-gradient(0.25turn, #c1111154,#c1111126);
 }
 main{
     background:linear-gradient(#af271ca3, #c52c4385 75%), url(/assets/fancy.png)

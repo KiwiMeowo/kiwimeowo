@@ -7,54 +7,12 @@
     <link rel="icon" type="image/x-icon" href="deco/pome.ico?">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
-    <link href="fandom.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/fixations/fandom.css" rel="stylesheet" type="text/css" media="all">
     <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="/jquery.style-my-tooltips.js"></script>
       <style>
-.bo{
-  animation-name: fade;animation-duration: 1.5s;
-}
-.fan{
-  display:block;
-  border:2px solid;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 0.75em auto;
-  max-width: 800px;
-  background: var(--yellow);
-  text-shadow: 1px 0px white, -1px 0px white, 0px 1px white, 0px -1px white, 0 0, 2px 2px var(--highlightteal);
-  filter: var(--dropshadow);
-}
-a.fan[style]{
-  background:linear-gradient(#281f1f48,#281f1f48), var(--fanbg);
-      background-size: cover;
-}
-.ship .fan{
-  border-style: dashed;
-  text-align: center;
-}
-.ship .fan img{
-  display: inline-block;
-  filter:drop-shadow(1px 1px var(--lteal));
-  height: 1em;
-  scale:3;
-}
-.ship .fan img:first-of-type{
-  margin-right:20px;
-}
-.ship .fan img:last-of-type{
-  margin-left:20px;
-}
-a.fan:hover{
-  filter: brightness(1.1) saturate(1.1) var(--dropshadowdown);
-  translate: var(--down);
-}
-a.fan:after {
-  content: "\27A4";
-  float: right;
-}
-@keyframes fade {from {opacity: .6} to {opacity: 1}}
+
 @keyframes wiggle {0% {rotate: -5deg;} 100%{rotate: 5deg;}}
 .rows {
     display: flex;
@@ -62,8 +20,8 @@ a.fan:after {
         justify-content: space-evenly;
 }
 .item{
-  flex: 0 0 20%;
-    max-width: 20%;
+  flex: 0 0 16.66666%;
+    max-width: 16.66666%;
 }
 .frame{
   display:inline-block;
@@ -89,6 +47,8 @@ a .frame:hover{
 .frame center{
   color:var(--yellow);
   margin: 0.5em 0;
+  font-size: 0.75em;
+  line-height: 1.5;
 }
 a .frame center{
   text-decoration:underline;
@@ -145,94 +105,16 @@ flex hr{
        margin: 7.5px 5px;
 }
 }
-
-.title{
-    border-left-color:#84261e;
-    border-top-color:#84261e;
-  }
-header{
-  background: linear-gradient(#5d10103b,#5d10103b), url(deco/CR/Arson.png);
-    background-size: cover;
-    background-position: center 60%;
-}
-.title-pic{
-  content: url(deco/CR/pomg.png);
-}
-  .bar {
-    background: linear-gradient(0.25turn, #e6454538,#f2828221);
-}
-.bar:hover, .bar:focus{
-  cursor:pointer;
-  background: linear-gradient(0.25turn, #c1111154,#c1111126);
-}
-
-  ::-webkit-scrollbar-track {
-  background-color: #b1251a;
-  }
-
-    ::-webkit-scrollbar-thumb { 
-  border-color:#b1251a;
-  }
-  
   </style>
   </head>
  <body>
   <nav>
     <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
-      <a onclick="openCity('fandom')" href="#fandom">Fandoms</a>
-		<a onclick="openCity('blorbo')" href="#blorbo">Blorbos</a>
-		<a onclick="openCity('ship')" href="#ship">Ships</a>
+    <a href="../index.html">Fixation index</a>
     </nav>
-  <header></header>
-  
-    <div class="title">
-      <div class="title-text">
-      <h1>KiwiMeowo's Interests</h1>
-      </div>
-        <div class="title-pic"></div>
-    </div>
-  
   <main>
     <section class="wide">
-      <article id="fandom"><h1>I spent too much time online</h1>
-        <div class="inner" id="fan">
-        <p>As someone who kinda grew up in the internet, I have my fair shair of fandom experiences. In this fandom section, I will share what I was fixiated with, and perhaps even write an whole essay on a certain topic. Hope you will get to know me and the media more!</p>
-        <hr>
-        <h1>A list of my fixiations</h1>
-        <a class="fan" href="Minecraft.html" style="--fanbg: url(deco/MC/Stone.webp);background-size: auto;">Minecraft</a>
-        <div class="fan">Undertale/Deltarune</div>
-        <div class="fan">Danganronpa</div>
-        <div class="fan">Houseki no Kuni</div>
-        <a class="fan" href="CookieRun.html" style="--fanbg: url(deco/CR/Legend_of_the_millennial_tree_title_screen.webp);background-position: 0 32%;">Cookie Run</a>
-        <a href="SkyCOTL.html" class="fan" style="--fanbg:url(deco/Sky/SkyButton.jpg);background-position: 0 72%;">Sky : Children of the Light</a>
-        <div class="fan">Dororo (2019)</div>
-        <div class="fan">Your Turn to Die</div>
-        <div class="fan">The Crane Wives</div>
-        <div class="fan">Will Wood</div>
-        <div class="fan" style="--fanbg:url(deco/bllk.jpg);background-position: 0 86%;">Blue Lock</div>
-        <hr>
-        <h1>Media I also love</h1>
-        <flex>
-          <div id="games">
-            <h2>Games</h2>
-            <div class="fan">Potion Craft</div>
-            <div class="fan">Project: Eden's Garden</div>
-            <a class="fan" href="SmallCampus.html" style="--fanbg: url(deco/StudyBuilding.png);background-position: 0 67%;">小校園：學習大樓 (Small Campus: Study Building)</a>
-          </div>
-          <hr>
-          <div id="shows">
-            <h2>Shows</h2>
-            <div class="fan">The Promised Neverland</div>
-          </div>
-        </flex>
-        <hr>
-        <h2>Others</h2>
-        <div class="fan">Hamilton</div>
-        <div class="fan">Milgram</div>
-        <div class="fan">Ride the Cyclone</div>
-        </div>
-      </article>
-        <article id="blorbo">
+        <article>
       <h1>Unusual attachment to fictional characters</h1><div class="inner">
         <div class="text">
         <p>I have plenty of characters that I like, maybe because of the design, personalities, story etc. Some characters I like so much I can talk about them for a long time, so I made collapsibles for some charactersacters. Open them if you are interested! </p></div>
@@ -243,7 +125,7 @@ header{
           <div class="item">
             <div class="frame" title="Feels weird she managed to make me feel connected the most out of all the characters I've seen before but here we are.">
             <div class="photo">
-            <img src="deco/EvaIcon.jpg">
+            <img src="../deco/EvaIcon.jpg">
             </div>
             <center>Eva Tsunaka<span>(Project: Eden's Garden)</span></center>
             </div>
@@ -252,7 +134,7 @@ header{
         <div class="item">
         <div class="frame" title="I have a thing for woman who looks dead inside, Lavender may or may not have affected my taste. Anyway, when I first saw Rosemary, I expected her to be cold and distant. But in fact, she is very caring towards her friends, like when I saw her comforting the sweet peas, I melted">
         <div class="photo">
-        <img src="deco/CR/RosemaryIcon.png">
+        <img src="../deco/CR/RosemaryIcon.png">
         </div>
         <center>Rosemary Cookie<span>(Cookie Run: Witch's Castle)</span></center>
         </div>
@@ -261,7 +143,7 @@ header{
         <div class="item">
         <div class="frame" title="I'm still disappointed Zest isn't a girl, but still doesn't change the fact he's pretty. I love this twink.">
         <div class="photo">
-        <img src="deco/CR/ZestIcon.png">
+        <img src="../deco/CR/ZestIcon.png">
         </div>
         <center>Lemon Zest Cookie<span>(Cookie Run: Tower of Adventures)</span></center>
         </div>
@@ -270,7 +152,7 @@ header{
         <div class="item">
         <div class="frame" title="Best Cookie Run story arc of all time, Golden Cheese my GOAT">
         <div class="photo">
-        <img src="deco/CR/GCIcon.png">
+        <img src="../deco/CR/GCIcon.png">
         </div>
         <center>Golden Cheese Cookie<span>(Cookie Run: Kingdom)</span></center>
         </div>
@@ -279,7 +161,7 @@ header{
         <div class="item">
         <div class="frame" title="I really like the sprite Gim goes -.-*, looks very cute and squishable">
         <div class="photo">
-        <img src="deco/CR/GimIcon.png">
+        <img src="../deco/CR/GimIcon.png">
         </div>
         <center>Gim Cookie<span>(Cookie Run)</span></center>
         </div>
@@ -288,7 +170,7 @@ header{
         <div class="item">
         <div class="frame" title="His voice is kinda hot, I love this twink">
         <div class="photo">
-        <img src="deco/CR/PruneIcon.webp">
+        <img src="../deco/CR/PruneIcon.webp">
         </div>
         <center>Prune Juice Cookie<span>(Cookie Run: Kingdom)</span></center>
         </div>
@@ -298,7 +180,7 @@ header{
         <a href="Barou.html">
         <div class="frame" style="--teal: linear-gradient(#600000 80%, red 120%);--blue: linear-gradient(#390000 80%, #9b0000 120%);background-size: cover;background-position: center;">
         <div class="photo">
-        <img src="deco/BarouIcon.jpg">
+        <img src="../deco/BLLK/BarouIcon.jpg">
         </div>
         <center>Barou Shoei &hearts;<span>(Blue Lock)</span></center>
         </div>
@@ -309,7 +191,7 @@ header{
         <a href="Chigiri.html">
         <div class="frame" style="--teal:linear-gradient(#ff73b8 50%, #ff0d56 120%);--blue:linear-gradient(#ef4f7f 50%, #b90000 120%);background-size: cover;background-position: center;">
         <div class="photo">
-        <img src="deco/ChigiriIcon.jpg">
+        <img src="../deco/BLLK/ChigiriIcon.jpg">
         </div>
         <center>Chigiri Hyoma &hearts;<span>(Blue Lock)</span></center>
         </div>
@@ -319,7 +201,7 @@ header{
         <div class="item">
         <div class="frame" title="I liked him for around 30 minutes and was heartbroken by his betrayal. Still, I miss him a lot.">
         <div class="photo">
-        <img src="deco/KuonIcon.png">
+        <img src="../deco/KuonIcon.png">
         </div>
         <center>Kuon Wataru<span>(Blue Lock)</span></center>
         </div>
@@ -328,7 +210,7 @@ header{
         <div class="item">
         <div class="frame" title="I never even played Pok&eacute;mon before, I just think Rika is hot">
         <div class="photo">
-        <img src="deco/RikaIcon.png">
+        <img src="../deco/RikaIcon.png">
         </div>
         <center>Rika<span>(Pok&eacute;mon)</span></center>
         </div>
@@ -337,7 +219,7 @@ header{
         <div class="item">
         <div class="frame" title="Hell yeah Detroit: Become Human reference">
         <div class="photo">
-        <img src="deco/WolfgangIcon.png">
+        <img src="../deco/WolfgangIcon.png">
         </div>
         <center>Akire Wolfgang<span>(Project: Eden's Garden)</span></center>
         </div>
@@ -346,11 +228,11 @@ header{
         <div class="item">
         <a href="Hollyberry.html">
         <div class="frame" style="--teal: linear-gradient(#ffc7df69, #5d1010b3),url(deco/CR/Hb_mural_wheel_bg.webp);--blue: linear-gradient(#d57fa499, #310000d4), url(deco/CR/Hb_mural_wheel_bg.webp);background-size: cover;background-position: center;">
-        <img src="deco/CR/Relic_Hollyberry_Cookie's_Never-drying_Goblet.webp" style="width: 25%;translate: 15px -43px;bottom: 0;right: 0;" class="deco">
-        <img src="deco/CR/Hollyberry_soul_jam.webp" style="width: 20%;translate: 20px -20px;rotate: 30deg;bottom: 0;right: 0;filter: drop-shadow(0px 0px 5px #ffa9a9);" class="deco">
-        <img src="deco/CR/Relic_Hollyberrian_Royal_Crown.webp" style="width: 30%;translate: -25px -34px;rotate: -25deg;" class="deco">
+        <img src="../deco/CR/Relic_Hollyberry_Cookie's_Never-drying_Goblet.webp" style="width: 25%;translate: 15px -43px;bottom: 0;right: 0;" class="deco">
+        <img src="../deco/CR/Hollyberry_soul_jam.webp" style="width: 20%;translate: 20px -20px;rotate: 30deg;bottom: 0;right: 0;filter: drop-shadow(0px 0px 5px #ffa9a9);" class="deco">
+        <img src="../deco/CR/Relic_Hollyberrian_Royal_Crown.webp" style="width: 30%;translate: -25px -34px;rotate: -25deg;" class="deco">
         <div class="photo">
-        <img src="deco/CR/Hollyberry_profile.webp">
+        <img src="../deco/CR/Hollyberry_profile.webp">
         </div>
         <center>Hollyberry Cookie &hearts;<span>(Cookie Run: Kingdom)</span></center>
         </div>
@@ -360,7 +242,7 @@ header{
         <div class="item">
         <div class="frame" title="A god who fucks with timelines on purpose just because she's bored? Hell yeah I love her">
         <div class="photo">
-        <img src="deco/CR/TKIcon.png">
+        <img src="../deco/CR/TKIcon.png">
         </div>
         <center>Timekeeper Cookie<span>(Cookie Run)</span></center>
         </div>
@@ -369,7 +251,7 @@ header{
         <div class="item">
         <div class="frame" title="The Operation: Timeguard is such an interesting story, croissant's cool design caught my eye, and the fact how she and Timekeeper are the same character from different timelines is such a cool concept to me.">
         <div class="photo">
-        <img src="deco/CR/CrontIcon.png">
+        <img src="../deco/CR/CrontIcon.png">
         </div>
         <center>Croissant Cookie<span>(Cookie Run)</span></center>
         </div>
@@ -378,7 +260,7 @@ header{
         <div class="item">
         <div class="frame" title="Something about their expression tells me a story full of tragedy. I sometimes go out of bounds to visit them, they feel like a parental figure.">
         <div class="photo">
-        <img src="deco/Sky/VaultIcon.jpg">
+        <img src="../deco/Sky/VaultIcon.jpg">
         </div>
         <center>Vault Elder<span>(Sky: Children of the Light)</span></center>
         </div>
@@ -387,7 +269,7 @@ header{
         <div class="item">
         <div class="frame" title="When I first saw them in the cutscene and they started fighting for the candle, I was like 'yep, they're my fav now'">
         <div class="photo">
-        <img src="deco/Sky/ValleyIcon.jpg">
+        <img src="../deco/Sky/ValleyIcon.jpg">
         </div>
         <center>Valley Elders<span>(Sky: Children of the Light)</span></center>
         </div>
@@ -396,7 +278,7 @@ header{
         <div class="item">
         <div class="frame" title="His character might be very suspicious, but it is hard to resist his muscles and huge tits-">
         <div class="photo">
-        <img src="deco/KeijiIcon.png">
+        <img src="../deco/KeijiIcon.png">
         </div>
         <center>Shinogi Keiji<span>(Your Turn to Die)</span></center>
         </div>
@@ -405,7 +287,7 @@ header{
         <div class="item">
         <div class="frame" title="In the short moments he's on screen, man he's so cool...">
         <div class="photo">
-        <img src="deco/KyojuroIcon.webp">
+        <img src="../deco/KyojuroIcon.webp">
         </div>
         <center>Rengoku Kyojuro<span>(Demon Slayer)</span></center>
         </div>
@@ -414,7 +296,7 @@ header{
         <div class="item">
         <div class="frame" title="Due to personal reasons I stopped playing this game, but man I like this pretty guy">
         <div class="photo">
-        <img src="deco/Helz.jpg" style="object-position: top;scale: 2;translate: 0 24%;">
+        <img src="../deco/Helz.jpg" style="object-position: top;scale: 2;translate: 0 24%;">
         </div>
         <center>&#28023;&#21746;<span>(Shining Nikki)</span></center>
         </div>
@@ -423,7 +305,7 @@ header{
         <div class="item">
         <div class="frame" title="There isn't much to her about Mutsu. She is a archer/bodyguard who cares for Tahomaru as if he's her sibling. The bond between Tahomaru, Mutsu and her brother Hyogo is shown clearly in the anime. Even if they are antagonists, seeing them interacting is very heart-warming, found family is one of my greatest weaknesses. Also a fun fact that most people, even Dororo fans likely don't know because the fandom wiki didn't mention it. In the ending illustration of episode 23, a painting of Mutsu and Hyogo with the words '&#23433;&#27743;&#22985;&#24351;' in the background is shown. '&#22985;&#24351;' means older sister and younger brother, and '&#23433;&#27743;', which is 'Yasue' in Romaji if Google Translate is correct, is the surname of the siblings. That means her full name is Yasue Mutsu.">
         <div class="photo">
-        <img src="deco/Mutsu.webp">
+        <img src="../deco/Mutsu.webp">
         </div>
         <center>Mutsu<span>(Dororo 2019)</span></center>
         </div>
@@ -432,7 +314,7 @@ header{
         <div class="item">
         <div class="frame" title="I just think they're neat">
         <div class="photo">
-        <img src="deco/CR/DJIcon.webp" style="scale: 142%;translate: 0 7%;"></div>
+        <img src="../deco/CR/DJIcon.webp" style="scale: 142%;translate: 0 7%;"></div>
         <center>DJ Cookie<span>(Cookie Run)</span></center>
         </div>
         </div>
@@ -440,11 +322,11 @@ header{
         <div class="item">
         <a href="Pome.html">
         <div class="frame" style="--teal: linear-gradient(#ffc7df69, #5d1010b3), url(deco/CR/COD_gacha_background.webp);--blue: linear-gradient(#bc517f96, #3f0606c9), url(deco/CR/COD_gacha_background.webp);background-size: cover;background-position: center;">
-        <img src="deco/CR/Pomegranate_Cookie_Jelly.png" style="width: 17%;translate: -10px -10px;rotate: -5deg;" class="deco">
-        <img src="deco/CR/Pomegranate_Cookie_Jelly.png" style="width: 10%;translate: -16px 35px;rotate: -15deg;" class="deco">
-        <img src="deco/CR/PomeCandy.png" style="width: 30%;translate: 15px -39px;rotate: 30deg;bottom: 0;right: 0;" class="deco">
+        <img src="../deco/CR/Pomegranate_Cookie_Jelly.png" style="width: 17%;translate: -10px -10px;rotate: -5deg;" class="deco">
+        <img src="../deco/CR/Pomegranate_Cookie_Jelly.png" style="width: 10%;translate: -16px 35px;rotate: -15deg;" class="deco">
+        <img src="../deco/CR/PomeCandy.png" style="width: 30%;translate: 15px -39px;rotate: 30deg;bottom: 0;right: 0;" class="deco">
         <div class="photo">
-        <img src="deco/CR/Pomegranate_profile.webp">
+        <img src="../deco/CR/Pomegranate_profile.webp">
         </div>
         <center>Pomegranate Cookie &hearts;<span>(Cookie Run)</span></center>
         </div>
@@ -454,7 +336,7 @@ header{
         <div class="item">
         <div class="frame" title="Her puns made me fall for her">
         <div class="photo">
-        <img src="deco/CR/AvoIcon.webp" style="scale: 171%;translate: 0 21%;">
+        <img src="../deco/CR/AvoIcon.webp" style="scale: 171%;translate: 0 21%;">
         </div>
         <center>Avocado Cookie<span>(Cookie Run)</span></center>
         </div>
@@ -463,7 +345,7 @@ header{
         <div class="item">
         <div class="frame" title="I love how silly they are">
         <div class="photo">
-        <img src="deco/AmeIcon.png">
+        <img src="../deco/AmeIcon.png">
         </div>
         <center>Amethyst Twins<span>(Houseki no Kuni)</span></center>
         </div>
@@ -472,7 +354,7 @@ header{
         <div class="item">
         <div class="frame" title="Idk how but I really liked the older sibling like vibes from them.">
         <div class="photo">
-        <img src="deco/YellowIcon.png">
+        <img src="../deco/YellowIcon.png">
         </div>
         <center>Yellow Diamond<span>(Houseki no Kuni)</span></center>
         </div>
@@ -481,7 +363,7 @@ header{
         <div class="item">
         <div class="frame" title="She's such a elegant and pretty character, and nothing could have prepared me for chapter 2...">
         <div class="photo">
-        <img src="deco/KirumiIcon.png">
+        <img src="../deco/KirumiIcon.png">
         </div>
         <center>Tojo Kirumi<span>(Danganronpa v3)</span></center>
         </div>
@@ -490,7 +372,7 @@ header{
         <div class="item">
         <div class="frame" title="I really liked his sprites with his hat on, and his blushing sprite is especially adorable">
         <div class="photo">
-        <img src="deco/ShuichiIcon.png">
+        <img src="../deco/ShuichiIcon.png">
         </div>
         <center>Saihara Shuichi<span>(Danganronpa v3)</span></center>
         </div>
@@ -500,20 +382,6 @@ header{
         <hr>
         </div>
       </article>
-      <article>
-      <h1>Ships sailed~</h1><div class="inner ship">
-        <p><u>I don't often ship characters,</u> honestly I'm surprised to learn that many people have OTPs ever since they were very young. Not sure why but 99% of the time I don't care the romantic potential of characters ( maybe related to the fact I don't like romance plots ).</p>
-        <p>But over the years, I actually found pairing that I find adorable, either due to<u>&nbsp;cute fan art,</u>&nbsp;or the fact its<u>&nbsp;enemies to lovers&nbsp;</u><span style="font-size:0.66em">(I love enemies to lovers)</span>.</p>
-        <p style="text-align:center;">( Note: The ships are ordered from earliest to latest )</p>
-        <hr>
-        <h1>A list of my OTPs</h1>
-        <div class="fan"><img src="deco/CR/cookie0127_head.png">DJ Cookie x Lemon Cookie (Cookie Run)<img src="deco/CR/cookie0052_head.png"></div>
-        <div class="fan">Vault Elder x Wasteland Elder (Sky: Children of the Light)</div>
-        <div class="fan"><img src="deco/CR/Hollyberry_head.webp" style="scale:2.5">Hollyberry Cookie x Pitaya Cookie (Cookie Run: Kingdom)<img src="deco/CR/Pitaya_dragon_head.webp"></div>
-        <a class="fan" href="Barou.html#ship"><u>Barou Shouei x Isagi Yoichi (Blue Lock) </u></a>
-          <hr>
-      </div>
-    </article>
     </section>
   </main>
   <footer>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiwiMeowo's site</title>
+    <link rel="icon" type="image/x-icon" href="deco/pome.ico?">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../fandom.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="/jquery.style-my-tooltips.js"></script>
+      <style>
+.fan{
+  display:block;
+  border:2px solid;
+  border-radius: 5px;
+  padding: 7.5px 20px;
+  margin: 0.75em auto;
+  max-width: 800px;
+  background: var(--yellow);
+  text-shadow: 1px 0px white, -1px 0px white, 0px 1px white, 0px -1px white, 0 0, 2px 2px var(--highlightteal);
+  filter: var(--dropshadow);
+}
+a.fan[style]{
+  background:linear-gradient(#281f1f48,#281f1f48), var(--fanbg);
+      background-size: cover;
+}
+.ship .fan{
+  border-style: dashed;
+  text-align: center;
+}
+.ship .fan img{
+  display: inline-block;
+  filter:drop-shadow(1px 1px var(--lteal));
+  height: 1em;
+  scale:3;
+}
+.ship .fan img:first-of-type{
+  margin-right:20px;
+}
+.ship .fan img:last-of-type{
+  margin-left:20px;
+}
+a.fan:hover{
+  filter: brightness(1.1) saturate(1.1) var(--dropshadowdown);
+  translate: var(--down);
+}
+a.fan:after {
+  content: "\27A4";
+  float: right;
+}
+.flex{
+  display: flex;
+}
+.flex hr{
+  margin: 0 15px;
+}
+#games,#shows{
+  width:50%;
+  padding:0 10px;
+}
+@media(max-width:1200px){
+  .item{
+  flex: 0 0 25%;
+    max-width: 25%;
+}
+}
+@media(max-width:800px){
+  flex{
+    display: block;
+  }
+  #games,#shows{
+    width:100%;
+    padding: 0;
+  }
+  .item{
+  flex: 0 0 50%;
+    max-width: 50%;
+}
+.frame{
+       margin: 7.5px 5px;
+}
+}
+  </style>
+  </head>
+ <body>
+  <nav>
+    <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
+    <a href="../index.html">Fixation index</a>
+    </nav>
+  <main>
+    <section class="wide">
+      <article id="fandom"><h1>A list of my fixiations</h1>
+        <div class="inner">
+        <a class="fan" href="Minecraft.html" style="--fanbg: url(../deco/MC/Stone.webp);background-size: auto;">Minecraft</a>
+        <div class="fan" title="This is the game that taught me about fourth wall breaking, it broke my mind when characters remember your past actions.">Undertale/Deltarune</div>
+        <div class="fan" title="Yes I was a Dangan fan. But what fascinated me the most isn't just the game itself, but the fan content the fandom has.">Danganronpa</div>
+        <div class="fan" title="This anime was there for me during one of the hardest times, I loved how much angst and tragedy it showed me">Houseki no Kuni</div>
+        <a class="fan" href="CookieRun.html" style="--fanbg: url(../deco/CR/Legend_of_the_millennial_tree_title_screen.webp);background-position: 0 32%;">Cookie Run</a>
+        <a href="SkyCOTL.html" class="fan" style="--fanbg:url(deco/Sky/SkyButton.jpg);background-position: 0 72%;">Sky : Children of the Light</a>
+        <div class="fan" title="I love killing games">Your Turn to Die</div>
+        <div class="fan" title="The first band I've obsessed over, their songs are so good">The Crane Wives</div>
+        <div class="fan" title="WW songs have so much variety, and it managed to capture my heart.">Will Wood</div>
+        <div class="fan" title="It is unapologetically dramatic, and I love it for that" style="--fanbg:url(../deco/bllk.jpg);background-position: 0 86%;">Blue Lock</div>
+        <div class="fan" title="Despite it seemingly like just an idol game targeted for young lonely men, there's a lot of fun characters and banger songs. Also a lot of trivia, I love trivia.">Umamusume</div>
+        <div class="fan" title="How did they release banger after banger???">Flavor Foley</div>
+        <hr>
+        <h1>Media I also love</h1>
+        <div class="flex">
+          <div id="games">
+            <h2>Games</h2>
+            <div class="fan">Potion Craft</div>
+            <div class="fan">Project: Eden's Garden</div>
+            <a class="fan" href="SmallCampus.html" style="--fanbg: url(../deco/StudyBuilding.png);background-position: 0 67%;">小校園：學習大樓 (Small Campus: Study Building)</a>
+          </div>
+          <hr>
+          <div id="shows">
+            <h2>Shows</h2>
+            <div class="fan">The Promised Neverland</div>
+          </div>
+        </div>
+        <hr>
+        <h2>Others</h2>
+        <div class="fan">Hamilton</div>
+        <div class="fan">Milgram</div>
+        <div class="fan">Ride the Cyclone</div>
+        <div class="fan">Flavor Foley</div>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-column">
+    <h2>Credits</h2>
+	<ul>
+    <li>Layout design: <a href="https://eggramen.neocities.org/code/css_testpages" target="_blank">Eggramen</a></li>
+    <li>Font used: <a href="https://fonts.google.com/specimen/Fraunces" target="_blank">Fraunces</a>, <a href="https://fonts.adobe.com/fonts/toppan-bunkyu-mincho-pr6n#licensing-section" target="_blank">Toppan Bunkyu Mincho</a></li>
+    <li>Background and Profile Pic: Cookie Run by Devsisters</li>
+    <li>Collapsible: <a href="https://www.w3schools.com/howto/howto_js_collapsible.asp" target="_blank">w3schools</a></li>
+    <li>Style-my-tooltips: <a href="https://manos.malihu.gr/style-my-tooltips-jquery-plugin/" target="_blank">Manos</a></li>
+    <li>Assets of media shown: Official content/screenshot</li>
+	</ul>
+    </div>
+    <div class="footer-column">
+    <h2>Contacts</h2>
+    <ul>
+	    <li>Email: kiwimeow0308@gmail.com</li>
+      <li>Twitter: <a href="https://twitter.com/KiwiMeowo" target="_blank">@KiwiMeowo</a></li>
+      <li>Neocities Profile: <a href="https://neocities.org/site/kiwimeowo" target="_blank">KiwiMeowo</a></li>
+      <li>Discord: kiwimeowo</li>
+      <li>Artfight:&nbsp;<a href="https://artfight.net/~KiwiMeowo" target="_blank">KiwiMeowo</a></li>
+	</ul>
+    </div>
+  </footer>
+  <script src="/spoiler.js"></script>
+</body>
+</html>
