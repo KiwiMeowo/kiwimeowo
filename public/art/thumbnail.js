@@ -101,7 +101,7 @@ function RSScopy(){
   var art=document.querySelectorAll(".artborder img")[currentnum];
   var date=art.getAttribute('title').split('>(')[art.getAttribute('title').split('>(').length-1].split(')<')[0];
   var weekDay=Weeks[new Date(date).getDay()];
-  copyText.value=`<item><title>${art.getAttribute('alt')}</title><link href="https://kiwimeowo.neocities.org/art/2025.html">https://kiwimeowo.neocities.org/art/2025.html</link><guid>${art.getAttribute('src').split('/')[6].split("?")[0]}</guid><description>${art.getAttribute('title').split('<span')[0]} <img src='${art.getAttribute('src')}'></description><pubDate>${weekDay}, ${date} 00:00:00 GMT</pubDate></item>`;
+  copyText.value=`<item><title>${art.getAttribute('alt')}</title><link href="https://kiwimeowo.neocities.org/art/2025.html">${art.getAttribute('src').split('/')[6].split("?")[0]}</link><guid>${art.getAttribute('src').split('/')[6].split("?")[0]}</guid><description>${art.getAttribute('title').split('<span')[0]}</description><pubDate>${weekDay}, ${date} 00:00:00 GMT</pubDate><enclosure url="${art.getAttribute('src').replace("&","&amp;")}" type="image" /></item>`;
   // Select the text field
   copyText.select();
   copyText.setSelectionRange(0, 99999); // For mobile devices
