@@ -95,3 +95,17 @@ function copy() {
   // Copy the text inside the text field
   document.execCommand('copy');
 }
+var Weeks = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+function RSScopy(){
+  var copyText = document.getElementById("rss");
+  var art=document.querySelectorAll(".artborder img")[currentnum];
+  var date=art.getAttribute('title').split('>(')[art.getAttribute('title').split('>(').length-1].split(')<')[0];
+  var weekDay=Weeks[new Date(date).getDay()];
+  copyText.value=`<item><title>${art.getAttribute('alt')}</title><link href="https://kiwimeowo.neocities.org/art/2025.html">https://kiwimeowo.neocities.org/art/2025.html</link><guid>${art.getAttribute('src')}</guid><description>${art.getAttribute('title').split('<span')[0]}</description><pubDate>${weekDay}, ${date} 00:00:00 GMT</pubDate></item>`;
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  document.execCommand('copy');
+}

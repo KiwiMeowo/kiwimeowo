@@ -87,12 +87,34 @@
       <article>
         <h1>Did you know?</h1>
         <div class="inner">
-          <center>
+          <center id="Trivia">
             <h2>Cookie Run Fact</h2>
             <p>Pomegranate Cookie was responsible for cursing Moonlight Cookie, Wind Archer Cookie, Sugar Swan, and Millennial Tree Cookie!</p>
           </center>
         </div>
       </article>
+      <script>
+        var Trivia=[
+          {"Media":"Cookie Run",
+            "Desc":"Pomegranate Cookie was responsible for cursing Moonlight Cookie, Wind Archer Cookie, Sugar Swan, and Millennial Tree Cookie!"
+          },
+          {"Media":"Cookie Run",
+            "Desc":"While Pure Vanilla Cookie and White Lily Cookie were first officially introduced in Jan 2021, their designs were shown as far as Rouguefort's debut",
+            "Img":"deco/CR/RoguefortTrial.webp"
+          },
+          {"Media":"Cookie Run",
+            "Desc":"Although Hollyberry Cookie was first debuted in 2021, but her kingdom has existed back in Cookie Run Line. The kingdom was located in Primeval Jungle, in the first land of the map, it features a broken-down castle with potraits of Royalberry Cookie and Jungleberry Cookie holding baby Princess Cookie and Tiger Lily Cookie in her hands."
+          },
+        ]
+        var randomTrivia=Math.floor(Math.random()*Trivia.length);
+        document.querySelector("#Trivia h2").innerHTML=`${Trivia[randomTrivia].Media} Fact`;
+        document.querySelector("#Trivia p").innerHTML=Trivia[randomTrivia].Desc;
+        if (Trivia[randomTrivia].Img){
+          var pic=document.createElement('img');
+          pic.setAttribute("src",Trivia[randomTrivia].Img);
+          document.querySelector("#Trivia").append(pic);
+        }
+      </script>
 
       <article>
         <h1>Playlist</h1>
@@ -111,12 +133,12 @@
                     </g>
                   </g>
                 </svg>
-                <p id="new3" style="margin: 10px 5px"><a href="https://youtu.be/UOMA0IV7RCc?si=ynFFP8Tc1YK_FQMN" target="_blank" title="Good lord Fenomeno,,,, &lt;3">Umamusume - Ms Victoria (covered by Fenomeno)</a></p>
+                <p id="song" style="margin: 10px 5px"><a href="">Song - Name</a></p>
                 <div id="playbar" style="height: 1.5em;padding: 5px 0;background:var(--teal)">
                   <a href="/song.html" style="margin-right: 12.5px;">
                     <div class="svg" style="mask-image:url(/assets/left.svg)"></div>
                   </a>
-                  <a id="playbutton" target="_blank" href="https://youtu.be/UOMA0IV7RCc?si=ynFFP8Tc1YK_FQMN">
+                  <a id="playbutton" target="_blank" href="">
                     <div class="svg"></div>
                   </a>
                   <a href="/song.html" style="margin-left: 12.5px;">
@@ -127,6 +149,167 @@
             </center>
         </div>
       </article>
+      <script>
+        function getTooltips() {
+      //style-my-tootltips by malihu (http://manos.malihu.gr)
+      //plugin home http://manos.malihu.gr/style-my-tooltips-jquery-plugin
+      (function ($) {
+        var methods = {
+          init: function (options) {
+            var defaults = {
+              tip_follows_cursor: true, //tooltip follows cursor: boolean
+              tip_delay_time: 200, //tooltip delay before displaying: milliseconds
+              tip_fade_speed: 200, //tooltip fade in/out speed: milliseconds
+              attribute: "title" //tooltip text come from this attribute
+            },
+              options = $.extend(defaults, options);
+            if ($("#s-m-t-tooltip").length === 0) {
+              $("body").append("<div id='s-m-t-tooltip'><div></div></div>");
+            }
+            var smtTooltip = $("#s-m-t-tooltip");
+            smtTooltip.css({
+              "position": "absolute",
+              "display": "none"
+            }).data("smt-z-index", smtTooltip.css("z-index")).children("div").css({
+              "width": "100%",
+              "height": "100%"
+            });
+
+            function smtGetCursorCoords(event) {
+              var smtCursorCoordsX = event.pageX,
+                smtCursorCoordsY = event.pageY;
+              smtTooltip.style_my_tooltips("position", {
+                smtCursorCoordsX: smtCursorCoordsX,
+                smtCursorCoordsY: smtCursorCoordsY
+              });
+            }
+            $(document).on("mouseout mousedown click", ".smt-current-element", function () {
+              var $this = $(this);
+              clearTimeout(smtTooltip_delay);
+              smtTooltip.style_my_tooltips("hide", {
+                speed: $this.data("smt-fade-speed")
+              });
+              $(document).unbind("mousemove");
+              $this.removeClass("smt-current-element");
+              if ($this.attr(options.attribute) === "") {
+                $this.attr(options.attribute, $this.data("smt-title"));
+              }
+            });
+            return this["on"]("mouseover", function (event) {
+              var $this = $(this),
+                title = $this.attr(options.attribute);
+              $this.addClass("smt-current-element").data({
+                "smt-title": title,
+                "smt-fade-speed": options.tip_fade_speed
+              }).attr(options.attribute, "");
+              smtTooltip.style_my_tooltips("update", {
+                title: title,
+                speed: options.tip_fade_speed,
+                delay: options.tip_delay_time,
+                tip_follows_cursor: options.tip_follows_cursor
+              });
+              $(document).bind("mousemove", function (event) {
+                smtGetCursorCoords(event);
+              });
+            });
+          },
+          update: function (options) {
+            var $this = $(this);
+            $this.stop().css({
+              "display": "none",
+              "z-index": $this.data("smt-z-index")
+            }).children("div").html(options.title);
+            smtTooltip_delay = setTimeout(function () {
+              $this.style_my_tooltips("show", {
+                speed: options.speed,
+                tip_follows_cursor: options.tip_follows_cursor
+              })
+            }, options.delay);
+          },
+          show: function (options) {
+            var $this = $(this);
+            $this.stop().fadeTo(options.speed, 1);
+            if (!options.tip_follows_cursor) {
+              $(document).unbind("mousemove");
+            }
+          },
+          hide: function (options) {
+            var $this = $(this);
+            $this.stop().fadeTo(options.speed, 0, function () {
+              $this.css({
+                "z-index": "-1"
+              });
+            });
+          },
+          position: function (options) {
+            var $this = $(this),
+              winScrollX = $(window).scrollLeft(),
+              winScrollY = $(window).scrollTop(),
+              tipWidth = $this.outerWidth(true),
+              tipHeight = $this.outerHeight(true),
+              leftOffset = (options.smtCursorCoordsX + tipWidth) - winScrollX,
+              topOffset = (options.smtCursorCoordsY + tipHeight) - winScrollY;
+            if (leftOffset <= $(window).width() && leftOffset <= $(document).width()) {
+              $this.css("left", options.smtCursorCoordsX);
+            } else {
+              var thePosX = options.smtCursorCoordsX - tipWidth;
+              if (thePosX >= winScrollX) {
+                $this.css("left", thePosX);
+              } else {
+                $this.css("left", winScrollX);
+              }
+            }
+            if (topOffset <= $(window).height() && topOffset <= $(document).height()) {
+              $this.css("top", options.smtCursorCoordsY);
+            } else {
+              var thePosY = options.smtCursorCoordsY - tipHeight;
+              if (thePosY >= winScrollY) {
+                $this.css("top", thePosY);
+              } else {
+                $this.css("top", winScrollY);
+              }
+            }
+          }
+        }
+        $.fn.style_my_tooltips = function (method) {
+          if (methods[method]) {
+            return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+          } else if (typeof method === "object" || !method) {
+            return methods.init.apply(this, arguments);
+          } else {
+            $.error("Method " + method + " does not exist");
+          }
+        };
+      })(jQuery);
+      (function ($) {
+        $(document).ready(function () {
+          $('#song [title]').style_my_tooltips();
+        });
+      })(jQuery);
+
+    }
+
+        var song = document.getElementById('song');
+        fetch('/song.html', { cache: "no-store" })
+        .then((response) => {
+          return response.text();
+        })
+        .then((html) => {
+          var parser = new DOMParser();
+          var doc = parser.parseFromString(html, "text/html");
+          var newsong = doc.querySelectorAll('#Fixation h2');
+          var random=Math.floor(Math.random()*newsong.length);
+          newsong = doc.querySelectorAll('#Fixation h2')[random];
+          var newdesc = doc.querySelectorAll('#Fixation p')[random+1];
+          song.innerHTML = newsong.innerHTML;
+          document.querySelector("#song a").setAttribute("title",newdesc.innerText)
+          document.getElementById("playbutton").href = newsong.getElementsByTagName("a")[0].href;
+          getTooltips();
+        })
+        .catch(error => {
+          document.getElementById("song").innerHTML = "Error - Error";
+        });
+      </script>
 
     </aside>
   </main>

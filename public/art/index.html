@@ -14,7 +14,7 @@
       .flexbox{
         width:50%;
       }
-    .inner a {
+    .flex a {
     display: block;
     padding: 5px;
     margin: 7.5px 20px;
@@ -29,28 +29,28 @@
     filter:drop-shadow(2px 2px 1px var(--shadow));
     text-decoration:none;
 }
-.inner a:hover{
+.flex a:hover{
   filter:drop-shadow(1px 1px 1px var(--shadow)) saturate(1.7) brightness(0.8);
   translate:1px 1px;
 }
-.inner a:before {
+.flex a:before {
     content: "✧ ";
 }
-.inner a:after {
+.flex a:after {
     content: " ✧";
 }
-.inner .lock{filter:grayscale(1)}
-.inner .lock a{
+.flex .lock{filter:grayscale(1)}
+.flex .lock a{
   translate:0 !important;
   cursor:default;
   filter:drop-shadow(2px 2px 1px var(--shadow)) !important;
 }
-.inner .lock a:before {
+.flex .lock a:before {
     content: url("/assets/lock.svg");
         filter: drop-shadow(2px 0px white) drop-shadow(-2px 0px white) drop-shadow(0px 2px white) drop-shadow(0px -2px white);
         margin-right: 5px;
 }
-.inner .lock a:after {
+.flex .lock a:after {
     content: url("/assets/lock.svg");
         filter: drop-shadow(2px 0px white) drop-shadow(-2px 0px white) drop-shadow(0px 2px white) drop-shadow(0px -2px white);
         margin-left: 5px;
@@ -75,12 +75,15 @@
       <article><h1>Art Archives</h1>
         <div class="inner text">
       <p>Welcome to my arts page! I used to post more art on my Twitter, but now you can view them on my site!! The images are ordered from newest to oldest, but some of the orders might be messed up, especially those in 2023.</p>
-      <center><u>- Each page contains 18 images, you can navigate by clicking on the numbers in the pages list<br>
+      <center>
+        <u>- Each page contains 18 images, you can navigate by clicking on the numbers in the pages list<br>
       - All content in here should be for general audience, but if there are any possible discomforting content, I have already blurred it.<br>
       - Repost is alright if you credit me (also telling me where you posted is preferred)
       <br>
-      -  Using them for genAI is prohibited</u></center>
-      <center>Hope you will enjoy them!</center>
+      -  Using them for genAI is prohibited
+    </u>
+    </center>
+<center><h2>Hope you will enjoy them, and subscribe to my RSS feed! <a href="feed.xml" target="_blank"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 455.731 455.731" xml:space="preserve" fill="#000000" style="height:1em;border-radius:2.5px;" class="button"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g><rect x="0" y="0" style="fill:var(--blue);" width="455.731" height="455.731"></rect><g><path style="fill:var(--yellow);" d="M296.208,159.16C234.445,97.397,152.266,63.382,64.81,63.382v64.348 c70.268,0,136.288,27.321,185.898,76.931c49.609,49.61,76.931,115.63,76.931,185.898h64.348 C391.986,303.103,357.971,220.923,296.208,159.16z"></path><path style="fill:var(--yellow);" d="M64.143,172.273v64.348c84.881,0,153.938,69.056,153.938,153.939h64.348 C282.429,270.196,184.507,172.273,64.143,172.273z"></path><circle style="fill:var(--yellow);" cx="109.833" cy="346.26" r="46.088"></circle></g></g></g></svg></a></h2></center>
       <hr>
       <div class="flex">
         <div class="flexbox">

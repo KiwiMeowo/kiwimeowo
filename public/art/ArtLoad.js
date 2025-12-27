@@ -27,7 +27,7 @@ for (x=Math.ceil(drawings.length/18)-1;x>=0;x--){
         date=date[date.length-1];
         date=date.split(".")[0];
         if(date.split("-")[2]!=undefined){
-          date=`${date.split("-")[2]} ${date.split("-")[1]} 2026`
+          date=`${date.split("-")[2]} ${date.split("-")[1]} ${date.split("-")[0]}`
           img.setAttribute("title",drawings[y+18*x].Comment+" ("+date+")");
         }else{
           img.setAttribute("title",drawings[y+18*x].Comment);

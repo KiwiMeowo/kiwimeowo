@@ -98,7 +98,7 @@ background: var(--gradient);
   text-align: center;
   display: none;
 }
-#thumbnail button {
+#thumbnail button:not(.coolbutton) {
   background: none;
   border: 1px solid;
   color: var(--blue);
