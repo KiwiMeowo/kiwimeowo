@@ -98,7 +98,7 @@ function copy() {
 function RSScopy(){
   var copyText = document.getElementById("rss");
   var art=document.querySelectorAll(".artborder img")[currentnum];
-  copyText.value=`<item><title>${art.getAttribute('alt')}</title><guid>${art.getAttribute('src').replace("&","&amp;")}</guid><link href="https://kiwimeowo.neocities.org/art/2025.html">${art.getAttribute('src').replace("&","&amp;")}</link><description><![CDATA[${art.getAttribute('title')}]]></description><pubDate>${(new Date()).toUTCString()}</pubDate><enclosure url="${art.getAttribute('src').replace("&","&amp;")}" type="image/${art.getAttribute('src').split(".")[3].split("?")[0]}" /></item>`;
+  copyText.value=`<item><title>${art.getAttribute('alt')}</title><guid>${art.getAttribute('src').replace("&","&amp;")}</guid><link href="https://kiwimeowo.neocities.org/art/2025.html">${art.getAttribute('src').replace("&","&amp;")}</link><description><![CDATA[${art.getAttribute('title')}]]></description><pubDate>${(new Date()).toString().replace(" ",", ").replace(' (Hong Kong Standard Time)','').replace('GMT','')}</pubDate><enclosure url="${art.getAttribute('src').replace("&","&amp;")}" type="image/${art.getAttribute('src').split(".")[3].split("?")[0]}" /></item>`;
   // Select the text field
   copyText.select();
   copyText.setSelectionRange(0, 99999); // For mobile devices
