@@ -142,7 +142,7 @@ rotate: 270deg;
       font-size: 0.9em;
       opacity: 0.75;
     }
-    article:not(#cd) .inner h2:first-of-type a:after{
+    article:not(#cd) .inner h2:first-of-type a:after,.playing:after{
     content: "♪";
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -151,6 +151,20 @@ rotate: 270deg;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
     scale:1.1;
+}
+.playing:after{
+  content: "[Playing ♪]";
+  margin-left: 10px;
+}
+#LastFM img{
+  float:right;
+}
+#LastFM .date{
+  text-align:left;
+  text-indent: 0;
+}
+#LastFM .songbox {
+  min-height: 64px;
 }
 @keyframes note{
   0%{
@@ -206,6 +220,14 @@ rotate: 270deg;
         <h1 style="text-align: center;">♫ My fav songs ♬</h1>
         <div class="inner">
           <div class="col">
+            <div class="cdbox" style="background: #FEFDFD;border-color:#C11A1A">
+              <p>Last.fm</p>
+              <a href="#LastFM" onclick="playlist(this.getAttribute('href'))">
+                <img src="assets/cd.png">
+              </a>
+            </div>
+          </div>
+          <div class="col">
             <div class="cdbox" style="background: #f3e3b8;border-color:#3f6884">
               <p>Regularly updated playlist</p>
               <a href="#new" onclick="playlist(this.getAttribute('href'))">
@@ -254,6 +276,65 @@ rotate: 270deg;
             </div>
           </div>
         </div>
+      </article>
+      <article id="LastFM" style="--window:#C11A1A;--lteal:#C11A1ACC;">
+        <h1>More songs I ramble about <a href="#cd" onclick="playlist(this.getAttribute('href'))"></a></h1>
+        <div class="inner">
+          <p>I've set up <a href="https://www.last.fm/user/KiwiMeowo" target="_blank">Last.fm</a>, now everyone can see what I'm listening to, is it a good thing?</p>
+          <hr>
+          <!--
+          <h2><a href="" target="_blank">Author - Song</a></h2>
+          <p>Text</p>
+          <hr>
+          -->
+        </div>
+        <script>
+          var lastfm=document.querySelector('#LastFM .inner');
+          fetch('http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=KiwiMeowo&api_key=554c4b2676b67f380116024c7f39b9fc&limit=9&format=json', { cache: "no-store" })
+          .then((response) => {
+          return response.text();
+        })
+        .then((json) => {
+          var content = JSON.parse(json)
+          console.log(content.recenttracks.track)
+          content.recenttracks.track.forEach(song => {
+            var cont=document.createElement('div');
+            cont.classList.add('songbox');
+            var er=document.createElement('h2');
+            var head=document.createElement('a');
+            er.append(head);
+            if (typeof song['@attr']==='object'){
+              if (song['@attr'].nowplaying=='true'){
+                head.classList.add('playing');
+              }
+            }
+            head.innerText=`${song.artist['#text']} - ${song.name}`;
+            head.setAttribute('href',song.url);
+            head.setAttribute('target','_blank');
+            var image=document.createElement('img');
+            if(song.image[1]['#text']==''){
+              image.setAttribute('src','/assets/NoCover.webp')
+            } else{
+              image.setAttribute('src',song.image[1]['#text'])
+            }
+            var date=document.createElement('p');
+            date.classList.add('date');
+            cont.append(image)
+            cont.append(er);
+            if (typeof song.date==='object'){
+              date.innerText=song.date['#text'];
+            } else{
+              date.innerText='Currently';
+            }
+            cont.append(date);
+            lastfm.append(cont);
+            lastfm.append(document.createElement('hr'))
+          });
+        })
+        .catch(error => {
+          document.getElementById("new").innerHTML = "error";
+        });
+        </script>
       </article>
       <article id="new" style="--window:#3f6884">
         <h1>More songs I ramble about <a href="#cd" onclick="playlist(this.getAttribute('href'))"></a></h1>
