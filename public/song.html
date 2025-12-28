@@ -299,6 +299,7 @@ rotate: 270deg;
         .then((json) => {
           var content = JSON.parse(json)
           console.log(content.recenttracks.track)
+          var current=new Date();
           content.recenttracks.track.forEach(song => {
             var cont=document.createElement('div');
             cont.classList.add('songbox');
@@ -325,13 +326,18 @@ rotate: 270deg;
             cont.append(er);
             if (typeof song.date==='object'){
             var dateset=new Date(song.date['#text']);
-            dateset.setHours(dateset.getHours()+8);
-            let year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(dateset);
-            let month = new Intl.DateTimeFormat('en', { month: 'short' }).format(dateset);
-            let day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(dateset);
-              date.innerText=`${day} ${month} ${year}, ${dateset.toLocaleTimeString().replace(':00','')}`;
+              dateset.setHours(dateset.getHours()+8);
+              if (Math.floor((current.getTime()-dateset.getTime())/1000/60)<60){
+                date.innerText=`Last Played: ${Math.floor((current.getTime()-dateset.getTime())/1000/60)} minute(s) ago`;
+              } else if(Math.floor((current.getTime()-dateset.getTime())/1000/60/60)<24){
+                date.innerText=`Last Played: ${Math.floor((current.getTime()-dateset.getTime())/1000/60/60)} hour(s) ago`;
+              } else if(Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24)<7){
+                date.innerText=`Last Played: ${Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24/7)} week(s) ago`;
+              } else{
+                date.innerText=`Last Played: ${Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24/7/4)} month(s) ago`;
+              }
             } else{
-              date.innerText='Currently';
+              date.innerText='Last Played: Right now!';
             }
             cont.append(date);
             lastfm.append(cont);

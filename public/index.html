@@ -359,7 +359,7 @@ content: '';
               <div style="background:linear-gradient(black,#3b4f55);border: 2px solid var(--teal);border-radius: 5px;min-height: 114px;">
                 <div id="new3">
                   <img id="album" src="" alt="Album music">
-                  <a href="" target="_blank" style="max-width: 350px;display:block;"></a>
+                  <a href="" target="_blank" style="max-width: 350px;display:block;">Author - Name</a>
                   <div class="date" style="color:white;text-align: center;">Listening</div>
                 </div>
                 <div id="playbar" style="height: 1.5em;padding: 5px 0;background:var(--teal);">
@@ -831,14 +831,19 @@ content: '';
           document.querySelector("#new3 a").setAttribute('target','_blank');
           document.querySelector('#playbutton').setAttribute('href',song.url);
           if (typeof song.date==='object'){
-          var date=new Date(song.date['#text']);
-          date.setHours(date.getHours()+8);
-          let year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(date);
-          let month = new Intl.DateTimeFormat('en', { month: 'short' }).format(date);
-          let day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(date);
-              document.querySelector("#new3 .date").innerText=`Listening: ${day} ${month} ${year}, ${date.toLocaleTimeString().replace(':00','')}`;
-            } else{
-              document.querySelector("#new3 .date").innerText='Listening: Now!';
+            var current=new Date();
+          var dateset=new Date(song.date['#text']);
+          dateset.setHours(dateset.getHours()+8);
+          if (Math.floor((current.getTime()-dateset.getTime())/1000/60)<60){
+            document.querySelector("#new3 .date").innerText=`Last Played: ${Math.floor((current.getTime()-dateset.getTime())/1000/60)} minute(s) ago`;
+          } else if(Math.floor((current.getTime()-dateset.getTime())/1000/60/60)<24){
+            document.querySelector("#new3 .date").innerText=`Last Played: ${Math.floor((current.getTime()-dateset.getTime())/1000/60/60)} hour(s) ago`;
+          } else if(Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24)<7){
+            document.querySelector("#new3 .date").innerText=`Last Played: ${Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24/7)} week(s) ago`;
+          } else{
+            document.querySelector("#new3 .date").innerText=`Last Played: ${Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24/7/4)} month(s) ago`;}
+          } else{
+              document.querySelector("#new3 .date").innerText='Last played: Right now!';
               document.querySelector("#new3").classList.add('playing');
             }
           if(song.image[1]['#text']==''){
