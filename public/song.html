@@ -322,7 +322,12 @@ rotate: 270deg;
             cont.append(image)
             cont.append(er);
             if (typeof song.date==='object'){
-              date.innerText=song.date['#text'];
+            var dateset=new Date(song.date['#text']);
+            dateset.setHours(dateset.getHours()+8);
+            let year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(dateset);
+            let month = new Intl.DateTimeFormat('en', { month: 'short' }).format(dateset);
+            let day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(dateset);
+              date.innerText=`${day} ${month} ${year}, ${dateset.toLocaleTimeString().replace(':00','')}`;
             } else{
               date.innerText='Currently';
             }

@@ -1045,7 +1045,12 @@ content: '';
           document.querySelector("#new3 a").setAttribute('target','_blank');
           document.querySelector('#playbutton').setAttribute('href',song.url);
           if (typeof song.date==='object'){
-              document.querySelector("#new3 .date").innerText=`Listening: ${song.date['#text']}`;
+          var date=new Date(song.date['#text']);
+          date.setHours(date.getHours()+8);
+          let year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(date);
+          let month = new Intl.DateTimeFormat('en', { month: 'short' }).format(date);
+          let day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(date);
+              document.querySelector("#new3 .date").innerText=`Listening: ${day} ${month} ${year}, ${date.toLocaleTimeString().replace(':00','')}`;
             } else{
               document.querySelector("#new3 .date").innerText='Listening: Now!';
               document.querySelector("#new3").classList.add('playing');
