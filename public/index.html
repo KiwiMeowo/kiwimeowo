@@ -8,7 +8,6 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico?">
   <link href="style.css" rel="stylesheet" type="text/css" media="all" />
   <link href="emote.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="webring/webring.css" rel="stylesheet" type="text/css" media="all" />
   <link href="christmas.css" rel="stylesheet" type="text/css" media="all" />
   <link href="style-my-tooltips.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://darkosparko.nekoweb.org/webrings/galactic-webring/galactic-webring.css">
@@ -46,8 +45,7 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 #control button:hover{border:1px solid #D2BA9B;color:#D2BA9B;}
 
 /*Status cafe stuff*/
-#statuscafe-username-real{font-weight: 600;font-size: 1em;text-shadow: 2px 2px var(--lteal);color: var(--blue) !important;text-decoration: none !important;margin: 12.5px 0px;}
-#statuscafe-username-real:hover, #statuscafe-username-real:focus{color: var(--teal) !important;transition: color 0.5s;}
+#statuscafe-username a{font-weight: 600;font-size: 1em;text-shadow: 2px 2px var(--lteal);color: var(--blue) !important;text-decoration: none !important;margin: 12.5px 0px;}
 
 /*Snowflake*/
 .snowflake {color: #fff;font-size: 1em;font-family: Arial, sans-serif;text-shadow: 0 0 7.5px #2d3758;background:none;}
@@ -298,6 +296,7 @@ content: '';
               #announce{
                 display: none;
               }
+              .snowflakes{display:none;}
               .snowflake .in:after{
                 content:"❄";
                 font-family: monospace;
@@ -328,29 +327,7 @@ content: '';
               <hr id="autohr">
               <div id="auto2">
                 <div id="statuscafe" style="margin-top: 12.5px;">
-                  <div id="statuscafe-username" style="display:none"></div>
-                  <a href="https://status.cafe/users/kiwimeowo" target="_blank" id="statuscafe-username-real">kiwimeowo</a> <span class="emoji"></span> <span id="time"></span>
-                  <script>
-                    function emoji() {
-                      var emoj = document.getElementById("statuscafe-username").innerText;
-                      time = emoj.split(" ");
-                      emoji = emoj.split(" ")[1];
-                      time.shift();
-                      time.shift();
-                      return [emoji, (time.join(" "))];
-                    }
-                    var observer = new MutationObserver(function (mutations) {
-                      if (document.getElementById("statuscafe-username").innerText != "") {
-                        console.log(":3");
-                        let [x, y] = emoji();
-                        document.getElementsByClassName("emoji")[0].innerHTML = x;
-                        document.getElementById("time").innerHTML = y;
-                        observer.disconnect();
-                      }
-                    });
-
-                    observer.observe(document, { attributes: false, childList: true, characterData: false, subtree: true });
-                  </script>
+                  <div id="statuscafe-username"></div>
                 </div>
                 <div id="statuscafe-content"></div>
                 <script src="https://status.cafe/current-status.js?name=kiwimeowo" defer></script>
@@ -453,65 +430,40 @@ content: '';
               </div>
             </div>
           </div>
-          <hr>
-          <div class="webringarea">
-            <div class="mywebrings">
-              <div id="selfinsertwebring">
-                <div id='templateWebring'>
-                  <div id='webringiconbox'>
-                    <img id='iconWebring' src='webring/baroubaroukyun.jpg' alt="Self-Insert Webring Icon">
-                  </div>
-                  <div id='webringdescbox'>
-                    <p id='webringdesc'>
-                      <strong>KiwiMeowo</strong>
-                      <br>is playing UNO with<br>
-                      <strong>Barou Shouei</strong>
-                      <br>from <strong>Blue Lock</strong>!
-                    </p>
-                  </div>
-                  <div id='webringlinks'>
-                    <p id='linkparaWebring'> | <a href='https://webring.koinuko.pink/members.php' target='_blank'>Members List</a> | <br>Part of the <a href='https://webring.koinuko.pink' target='_blank'>Self-Insert Webring</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div id='galactic-webring'>
-                <script type="text/javascript" src="https://darkosparko.nekoweb.org/webrings/galactic-webring/galactic-webring-variables.js"></script>
-                <script type="text/javascript" src="https://darkosparko.nekoweb.org/webrings/galactic-webring/galactic-webring-widget.js"></script>
-              </div>
-            </div>
-            <div class="mywebrings">
-              <center>
-                <a id="galleryring" href="https://zorrpu.com/Webring/GalleryRing" target="_blank">
-                  <img class="gallerytitle" src="https://zorrpu.com/Webring/G.png">
-                  <img class="profile" src="webring/Gallery_Ring.png">
-                </a>
-                <object id="melonland-surf-club" data="https://melonland.net/surf-badge.svg?fill=#3f6884" type="image/svg+xml"></object>
-              </center>
-                <div id="hotline"><a href="https://hotlinewebring.club/kiwimeowo/next">⇤</a> <a href="https://hotlinewebring.club/" target="_blank">Hotline Webring</a> <a href="https://hotlinewebring.club/kiwimeowo/previous">⇥</a></div>
-              <center>
-                <div style="display: inline-flex;justify-content: center;vertical-align: middle;" id="nutring">
-                  <script src="https://nuthead.neocities.org/ring/ring.js"></script>
-                </div>
-                <div style="display:inline-flex;">
-                  <script src="https://snewberry.neocities.org/catfolk/webstring.js"></script>
-                </div>
-              </center>
-              <center><a href="http://neocreatives.byethost5.com/" target="_blank" style="display:inline-block"><img src="button/neocreatives.gif" class="button" style="margin: 2px;"></a> <a href="https://kiwimeowo.neocities.org/federi_neighbours" target="_blank" style="display:inline-block"><img src="button/by-astraya.png" style="margin:2px;" class="button">
-                  <span style="font-size:0.66em;position: absolute;margin-left: -20px;margin-top: -4px;">(archive)</span></a></center>
-                  <div id="oc-webring-widget">
-              <div id="ocinner">
-                <div id="oc-webring-title"><a href="https://tofutush.github.io/oc-webring">OC Webring</a></div>
-              <div id="oc-webring-controls">
-                  <a href="https://tofutush.github.io/oc-webring/prev/?site=Upon the Starry Sky and other OCs">Previous</a> |
-                  <a href="https://tofutush.github.io/oc-webring/rand/?site=Upon the Starry Sky and other OCs">Random</a> |
-                  <a href="https://tofutush.github.io/oc-webring/next/?site=Upon the Starry Sky and other OCs">Next</a>
-              </div>
-              </div>
+          <div style="border: 4px solid #550000;background: linear-gradient(#ffca8561, #ffe4e445), url(assets/freepik-wood.jpg);border-radius: 5px;padding:10px 15px;filter:var(--dropshadow);margin:10px 0;" id="animation" class="site freezeframe">
+            <div class="sitebutton"><a href="https://puddingpudd.com/" target="_blank" style="margin-right: auto;"><img src="button/Pudd_Button_V3.gif" class="button"></a></div>
+            <div class="hr"></div>
+            <div class="sitebutton"><a href="https://pianobonds.neocities.org/" target="_blank" style="margin-left: auto;"><img src="button/8831piano.gif" class="button"></a></div>
+            <div class="hr"></div>
+            <div class="sitebutton"><a href="https://sadly.link/" target="_blank" style="margin-right: auto;"><img src="button/sl-button.png" class="button"></a></div>
+            <div class="hr"></div>
           </div>
-            </div>
+          <div align="center" id="control">GIF Animation:
+            <span style="display:inline-block">
+              <button class="start">Play</button>
+              <button class="stop">Stop</button>
+            </span>
           </div>
           <hr>
+          <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
+          <center style="margin: 0;">
+            <a href="bookmark.html" style="padding: 2.5px 10px;padding-right: 20px;display: block;background: var(--gradient);filter: var(--dropshadow);border-radius: 0 0 20px 0;margin:5px 0;border-left: 3px solid var(--blue);color: var(--blue);width:max-content">Other links here!</a>
+          </center>
+          </span>
+          <script>
+            const manual = new Freezeframe('.freezeframe', {
+              trigger: false,
+              warnings: false,
+              overlay: false
+            });
+            document.querySelector('.start').addEventListener('click', () => {
+              manual.start();
+
+            });
+            document.querySelector('.stop').addEventListener('click', () => {
+              manual.stop();
+            });
+          </script>
         </div>
       </article>
 
@@ -601,48 +553,7 @@ content: '';
         </div>
       </article>
 
-      <!--Site button-->
-      <article>
-        <h1>Cool sites and people</h1>
-        <div class="inner">
-          <div style="border: 4px solid #550000;background: linear-gradient(#ffca8561, #ffe4e445), url(assets/freepik-wood.jpg);border-radius: 5px;padding:10px 15px;filter:var(--dropshadow)" id="animation" class="site freezeframe">
-            <div class="sitebutton"><a href="https://puddingpudd.com/" target="_blank" style="margin-right: auto;"><img src="button/Pudd_Button_V3.gif" class="button"></a></div>
-            <div class="hr"></div>
-            <div class="sitebutton"><a href="https://pianobonds.neocities.org/" target="_blank" style="margin-left: auto;"><img src="button/8831piano.gif" class="button"></a></div>
-            <div class="hr"></div>
-            <div class="sitebutton"><a href="https://sadly.link/" target="_blank" style="margin-right: auto;"><img src="button/sl-button.png" class="button"></a></div>
-            <div class="hr"></div>
-          </div>
-          <div align="center" id="control">GIF Animation:
-            <span style="display:inline-block">
-              <button class="start">Play</button>
-              <button class="stop">Stop</button>
-            </span>
-          </div>
-          <hr>
-          <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
-          <center style="margin: 0;">
-            <a href="bookmark.html" style="padding: 2.5px 10px;padding-right: 20px;display: block;background: var(--gradient);filter: var(--dropshadow);border-radius: 0 0 20px 0;margin:5px 0;border-left: 3px solid var(--blue);color: var(--blue);width:max-content">Other links here!</a>
-          </center>
-          </span>
-          <script>
-            const manual = new Freezeframe('.freezeframe', {
-              trigger: false,
-              warnings: false,
-              overlay: false
-            });
-            document.querySelector('.start').addEventListener('click', () => {
-              manual.start();
-
-            });
-            document.querySelector('.stop').addEventListener('click', () => {
-              manual.stop();
-            });
-          </script>
-        </div>
-      </article>
-
-      <article id="wplace">
+      <!-- <article id="wplace">
         <h1>Ongoing Wplace Art</h1>
         <div class="inner">
           <img src="art/wplace/img/Coyote.jpg">
@@ -650,7 +561,6 @@ content: '';
         </div>
         <style>
           #wplace{
-            display: none;
 			border: 2px solid #E0E5EE;
 			background: #F3F7FD;
 			--teal: #3D4E68;
@@ -665,7 +575,8 @@ content: '';
       width:150px;border: 1px solid var(--teal);
     }
         </style>
-      </article>
+      </article> 
+      -->
 
       <!--OC chat-->
       <article>
@@ -822,7 +733,7 @@ content: '';
             });
         </script>
       </article>
-      <article id="hrt">
+      <!-- <article id="hrt">
         <div class="inner">
           <div style="border: 2px solid green;width: -moz-available;height: 250px;position: relative;border-radius:5px;background: linear-gradient(90deg,#7C7809,#D2A87D);">
             <a href="https://x.com/snakesandrews" target="_blank"><img style="animation-name: hor-movement, ver-movement;animation-duration: 2.164s, 5.21s;animation-iteration-count: infinite;animation-direction: alternate;animation-timing-function: linear;position: absolute;image-rendering: pixelated;" src="JM.png"></a>
@@ -847,7 +758,7 @@ content: '';
   }
 }
 </style>
-      </article>
+      </article> -->
     </aside>
   </main>
   <!--Footer-->

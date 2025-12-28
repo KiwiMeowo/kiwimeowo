@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico?">
     <link href="style.css" rel="stylesheet" type="text/css" media="all">
     <link href="emote.css" rel="stylesheet" type="text/css" media="all">
+    <link href="webring/webring.css" rel="stylesheet" type="text/css" media="all" />
     <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="/jquery.style-my-tooltips.js"></script>
@@ -15,6 +16,7 @@ section.wide{
   display:grid;
   grid-template: 
   'title title title'
+  'webring webring webring'
   'button button button'
   'stories interesting res'
   'credit credit res'
@@ -113,7 +115,7 @@ img.button{
 }
 @media(max-width:1000px){
   section.wide{
-    grid-template:'title''button''stories''interesting''tv''res''credit';
+    grid-template:'title''webring''button''stories''interesting''tv''res''credit';
     margin:0 auto;
   }
 }
@@ -151,14 +153,74 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
       <div class="inner text">
 	        <p>This is the place I place useful/interesting links, which allows for more stuff to be placed than the one in the main page.</p>
 	      <hr>
-      </article>
     </div>
+    </article>
+    <article style="grid-area:webring;"><h1>Link Dump</h1>
+      <div class="inner text">
+	      <div class="webringarea">
+            <div class="mywebrings">
+              <div id="selfinsertwebring">
+                <div id='templateWebring'>
+                  <div id='webringiconbox'>
+                    <img id='iconWebring' src='webring/baroubaroukyun.jpg' alt="Self-Insert Webring Icon">
+                  </div>
+                  <div id='webringdescbox'>
+                    <p id='webringdesc'>
+                      <strong>KiwiMeowo</strong>
+                      <br>is playing UNO with<br>
+                      <strong>Barou Shouei</strong>
+                      <br>from <strong>Blue Lock</strong>!
+                    </p>
+                  </div>
+                  <div id='webringlinks'>
+                    <p id='linkparaWebring'> | <a href='https://webring.koinuko.pink/members.php' target='_blank'>Members List</a> | <br>Part of the <a href='https://webring.koinuko.pink' target='_blank'>Self-Insert Webring</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div id='galactic-webring'>
+                <script type="text/javascript" src="https://darkosparko.nekoweb.org/webrings/galactic-webring/galactic-webring-variables.js"></script>
+                <script type="text/javascript" src="https://darkosparko.nekoweb.org/webrings/galactic-webring/galactic-webring-widget.js"></script>
+              </div>
+            </div>
+            <div class="mywebrings">
+              <center>
+                <a id="galleryring" href="https://zorrpu.com/Webring/GalleryRing" target="_blank">
+                  <img class="gallerytitle" src="https://zorrpu.com/Webring/G.png">
+                  <img class="profile" src="webring/Gallery_Ring.png">
+                </a>
+                <object id="melonland-surf-club" data="https://melonland.net/surf-badge.svg?fill=#3f6884" type="image/svg+xml"></object>
+              </center>
+                <div id="hotline"><a href="https://hotlinewebring.club/kiwimeowo/next">⇤</a> <a href="https://hotlinewebring.club/" target="_blank">Hotline Webring</a> <a href="https://hotlinewebring.club/kiwimeowo/previous">⇥</a></div>
+              <center>
+                <div style="display: inline-flex;justify-content: center;vertical-align: middle;" id="nutring">
+                  <script src="https://nuthead.neocities.org/ring/ring.js"></script>
+                </div>
+                <div style="display:inline-flex;">
+                  <script src="https://snewberry.neocities.org/catfolk/webstring.js"></script>
+                </div>
+              </center>
+              <center><a href="http://neocreatives.byethost5.com/" target="_blank" style="display:inline-block"><img src="button/neocreatives.gif" class="button" style="margin: 2px;"></a> <a href="https://kiwimeowo.neocities.org/federi_neighbours" target="_blank" style="display:inline-block"><img src="button/by-astraya.png" style="margin:2px;" class="button">
+                  <span style="font-size:0.66em;position: absolute;margin-left: -20px;margin-top: -4px;">(archive)</span></a></center>
+                  <div id="oc-webring-widget">
+              <div id="ocinner">
+                <div id="oc-webring-title"><a href="https://tofutush.github.io/oc-webring">OC Webring</a></div>
+              <div id="oc-webring-controls">
+                  <a href="https://tofutush.github.io/oc-webring/prev/?site=Upon the Starry Sky and other OCs">Previous</a> |
+                  <a href="https://tofutush.github.io/oc-webring/rand/?site=Upon the Starry Sky and other OCs">Random</a> |
+                  <a href="https://tofutush.github.io/oc-webring/next/?site=Upon the Starry Sky and other OCs">Next</a>
+              </div>
+              </div>
+          </div>
+            </div>
+          </div>
+    </div>
+    </article>
       <article id="buttons"><h1>Cool site buttons</h1>
       <div class="inner">
         <div style="border: 5px double;outline: 1px solid;border-radius: 5px;padding: 5px 0;display:flex;flex-wrap: wrap;justify-content: center;" class="site freezeframe">
           <a href="https://strawbebby228.neocities.org/" target="_blank"><img src="https://strawbebby228.neocities.org/arts/UI/ButtonPink.gif" class="button"></a>
           <a href="https://palmistshouse.net/" target="_blank"><img src="button/palmistshouse.gif" class="button"></a>
-          <a href="https://nonkiru.art/" target="_blank"><img src="button/nonkiru_button_light.gif" class="button"></a>
           <a href="https://neoratz.neocities.org/" target="_blank"><img src="button/neoratz.gif" class="button"></a>
           <a href="https://puddingpudd.com/" target="_blank"><img src="button/Pudd_Button_V3.gif" class="button"></a>
           <a href="https://icecreampizzer.art/" target="_blank"><img src="button/btn-pizzer.gif" class="button"></a>
@@ -172,7 +234,6 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
           <a href="https://wasongo.art/" target="_blank"><img src="button/wasongo_button3.gif" class="button"></a>
             <a href="https://ninacti0n.neocities.org/" target="_blank"><img src="button/RS animated button.gif" class="button"></a>
           <a href="https://nerucom.neocities.org/" target="_blank"><img src="button/nerucom.gif" class="button"></a>
-          <a href="https://temperature.neocities.org/" target="_blank"><img src="button/banner.gif" class="button"></a>
           <a href="https://nenrikido.neocities.org/" target="_blank"><img src="button/nenrikido.gif" class="button"></a>
           <a href="https://ne0nbandit.art/" target="_blank"><img src="button/nbbanner.png" class="button"></a>
           <a href="https://sadly.link/" target="_blank"><img src="button/sl-button.png" class="button"></a>
@@ -187,6 +248,11 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
           <a href="https://dirtiestlaundry.neocities.org/" target="_blank"><img src="button/laundry.gif" class="button"></a>
           <a href="https://zenmaistudio.com/" target="_blank"><img src="button/zenmai.png" class="button"></a>
           <div id="kallistero"><a class="kallistero-sticker" href="https://kallistero.neocities.org/" target="_blank"></a></div><script src="https://kallistero.neocities.org/sticker.js"></script>
+          </div>
+          <h2>Broken Links :(</h2>
+          <div style="border: 5px double;outline: 1px solid;border-radius: 5px;padding: 5px 0;display:flex;flex-wrap: wrap;justify-content: center;" class="site freezeframe">
+            <a href="https://nonkiru.art/" target="_blank"><img src="button/nonkiru_button_light.gif" class="button"></a>
+            <a href="https://temperature.neocities.org/" target="_blank"><img src="button/banner.gif" class="button"></a>
           </div>
           <script src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"></script>
           <center align="center">GIF Animation: 
