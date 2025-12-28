@@ -1,0 +1,143 @@
+/*Self insert*/
+
+  #templateWebring a {
+    color: #513aa0;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: #513aa0;
+    text-underline-offset: 2px;
+    display: inline-block;
+  }
+
+  #templateWebring a:hover {
+    font-weight: bold;
+    color: #A43379;
+    text-decoration-color: #A43379;
+  }
+
+  #templateWebring {
+    border-radius: 5px;
+    min-width: 180px !important;
+    text-align: center !important;
+    border: 2px solid #513aa0 !important;
+    margin: 15px auto !important;
+    background-image: url('cat_bg.png');
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template: 'a b''c c';
+    grid-gap: 7.5px;
+    padding: 7.5px;
+    grid-template-columns: 104px auto;
+  }
+
+  #webringiconbox {
+    grid-area: a;
+    border-radius: 7.5px;
+    border: 2px solid #513aa0 !important;
+    overflow: hidden !important;
+    height: 100px !important;
+    width: 100px !important;
+    padding: 0px !important;
+    margin: auto !important;
+    box-sizing: content-box !important;
+    max-width: 100% !important;
+    display: block !important;
+    clear: none !important
+  }
+
+  #iconWebring {
+    margin: 0px !important;
+    padding: 0px !important;
+    box-sizing: content-box !important
+  }
+
+  #webringdescbox {
+    width: -webkit-fill-available;
+    width: -moz-available;
+    border: 1px dashed #513aa0 !important;
+    grid-area: b;
+    position: relative;
+  }
+
+  #webringdesc {
+    width: -webkit-fill-available;
+    width: -moz-available;
+    line-height: normal !important;
+    font-weight: normal !important;
+    color: #4042a3 !important;
+    font-size: small !important;
+    text-align: center !important;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    margin: 0;
+  }
+
+  #webringlinks {
+    line-height: normal !important;
+    font-weight: normal !important;
+    border: 1px dashed #513aa0 !important;
+    grid-area: c;
+  }
+
+  #linkparaWebring {
+    color: #4042a3 !important;
+    font-size: small !important;
+    margin: 10px auto !important;
+    line-height: normal !important;
+    text-align: center !important;
+    padding: 0px !important;
+  }
+
+  #webringdesc strong {
+    color: #513aa0;
+  }
+  @media ((max-width:1200px)and (min-width:1000px)) or (max-width:600px){
+    #templateWebring{
+      grid-template: 'a''b''c';
+    }
+    #webringdesc {
+  position: static;
+  transform: translatey(0);
+  margin: 0;
+}
+#linkparaWebring,#webringdesc{
+  margin:10px !important;
+}
+  }
+/*Hotline webring*/
+#hotline{padding: 5px;width: 175px;border-radius: 20px;background:#fa9aba;font-style: italic;filter: var(--dropshadow);display: block;margin: 0.75em auto;text-align: center;}
+#hotline a{text-decoration:none !important;color:white !important;}
+#hotline a:hover{text-decoration:underline !important;text-decoration-thickness:1.5px !important;}
+
+/*Button sized webrings*/
+#nutring a,#catfolk-webring img,#galleryring { filter: var(--dropshadow); }
+#nutring a:hover,#catfolk-webring img:hover,#galleryring:hover { translate: var(--down); filter: var(--dropshadowdown); }
+
+/*Galatic webring*/
+#galactic-box{width:100%;}
+#galactic-box .gw-logo,#galactic-box .spot-image,#galactic-box .gw-content-wrapper {margin-bottom:0;}
+#galactic-box .gw-content-wrapper {margin-bottom: 10px;width: 100%;justify-content: space-around;}
+#galactic-box div {margin-right:0 !important;}
+#galactic-box .spot-image,#galactic-box .gw-logo {width: 80px;}
+#galactic-box .spot-name {width:auto;font-size: 0.75em;}
+#galactic-box .gw-content-wrapper a{font-size: 1.5em;}
+#galactic-box .gw-nav-wrapper .gw-link {line-height: normal;font-size: 0.75em;}
+
+/*Gallery webring*/
+#galleryring{border: 3px solid #328FF0; border-radius: 5px; padding: 2px 5px; background-color:#A2DEFF;display:inline-block;width:fit-content;margin: auto;}
+#galleryring .gallerytitle{image-rendering: pixelated;width: 100px;}
+#galleryring .profile{border-radius: 5px;image-rendering: pixelated;outline: 1px solid white;}
+
+/*Surf club webring*/
+#melonland-surf-club{width: 75px;filter: var(--dropshadow);cursor:pointer;height: 100px;margin-left: 10px;}
+
+/*Webring resizing according to device*/
+.webringarea{display:block;}
+.mywebrings{width:100%;}
+@media(max-width:1000px) and (min-width:550px){
+  .webringarea{display:flex;}
+  .mywebrings{width:50%;}
+}
