@@ -134,6 +134,25 @@
 /*Surf club webring*/
 #melonland-surf-club{width: 75px;filter: var(--dropshadow);cursor:pointer;height: 100px;margin-left: 10px;}
 
+/*OC webring*/
+#oc-webring-widget {
+  background: radial-gradient(50% 50% at 100% 0, var(--_g)), radial-gradient(50% 50% at 0 100%, var(--_g)), radial-gradient(50% 50%, var(--_g)), radial-gradient(50% 50%, var(--_g)) calc(var(--s)/2) calc(var(--s)/2) var(--c1);
+  --_g: var(--c1) 0% 5%, var(--c2) 6% 15%, var(--c1) 16% 25%, var(--c2) 26% 35%, var(--c1) 36% 45%, var(--c2) 46% 55%, var(--c1) 56% 65%, var(--c2) 66% 75%, var(--c1) 76% 85%, var(--c2) 86% 95%, #0000 96%;
+  --s: calc(var(--font-size) * 10);
+  --c1: #fff;
+  --c2: var(--bg);
+  --font-size: clamp(16px, 0.75rem + 0.8vw, 24px);
+  background-size: var(--s) var(--s);
+  background-attachment: fixed;
+  --bg: #fff9f2;
+  padding: 10px 15px;
+  border-radius: 5px;
+  --box-shadow: 0 0 4px 4px #0002;
+  box-shadow: var(--box-shadow);
+  --teal:#e56b6f;
+}
+#ocinner{background-color: var(--bg);box-shadow: 0 0 4px 4px #0002;border-radius: 5px;padding:5px;text-align: center;}
+
 /*Webring resizing according to device*/
 .webringarea{display:block;}
 .mywebrings{width:100%;}
