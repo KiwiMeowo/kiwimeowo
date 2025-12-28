@@ -833,15 +833,21 @@ content: '';
           if (typeof song.date==='object'){
             var current=new Date();
           var dateset=new Date(song.date['#text']);
+          var date=document.querySelector("#new3 .date");
           dateset.setHours(dateset.getHours()+8);
           if (Math.floor((current.getTime()-dateset.getTime())/1000/60)<60){
-            document.querySelector("#new3 .date").innerText=`Last Played: ${Math.floor((current.getTime()-dateset.getTime())/1000/60)} minute(s) ago`;
-          } else if(Math.floor((current.getTime()-dateset.getTime())/1000/60/60)<24){
-            document.querySelector("#new3 .date").innerText=`Last Played: ${Math.floor((current.getTime()-dateset.getTime())/1000/60/60)} hour(s) ago`;
-          } else if(Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24)<7){
-            document.querySelector("#new3 .date").innerText=`Last Played: ${Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24/7)} week(s) ago`;
-          } else{
-            document.querySelector("#new3 .date").innerText=`Last Played: ${Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24/7/4)} month(s) ago`;}
+                date.innerText=`Last Played: ${Math.floor((current.getTime()-dateset.getTime())/1000/60)} minute(s) ago`;
+              } else if(Math.floor((current.getTime()-dateset.getTime())/1000/60/60)<24){
+                date.innerText=`Last Played: ${Math.floor((current.getTime()-dateset.getTime())/1000/60/60)} hour(s) ago`;
+              } else if(Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24)<7){
+                date.innerText=`Last Played: ${Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24)} day(s) ago`;
+              } else if(Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24/7)<4){
+                date.innerText=`Last Played: ${Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24/7)} week(s) ago`;
+              } else if(Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24/7/4)<24){
+                date.innerText=`Last Played: ${Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24/7/4)} month(s) ago`;
+              } else{
+                date.innerText=`Last Played: ${Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24/7/4/24)} year(s) ago`;
+              }
           } else{
               document.querySelector("#new3 .date").innerText='Last played: Right now!';
               document.querySelector("#new3").classList.add('playing');
