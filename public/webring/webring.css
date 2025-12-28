@@ -117,14 +117,14 @@
 #nutring a:hover,#catfolk-webring img:hover,#galleryring:hover { translate: var(--down); filter: var(--dropshadowdown); }
 
 /*Galatic webring*/
-#galactic-box{width:100%;}
-#galactic-box .gw-logo,#galactic-box .spot-image,#galactic-box .gw-content-wrapper {margin-bottom:0;}
-#galactic-box .gw-content-wrapper {margin-bottom: 10px;width: 100%;justify-content: space-around;}
+#galactic-box{width:100% !important;}
+#galactic-box .gw-logo,#galactic-box .spot-image,#galactic-box .gw-content-wrapper {margin-bottom:0 !important;}
+#galactic-box .gw-content-wrapper {margin-bottom: 10px !important;width: 100% !important;justify-content: space-around !important;}
 #galactic-box div {margin-right:0 !important;}
-#galactic-box .spot-image,#galactic-box .gw-logo {width: 80px;}
-#galactic-box .spot-name {width:auto;font-size: 0.75em;}
-#galactic-box .gw-content-wrapper a{font-size: 1.5em;}
-#galactic-box .gw-nav-wrapper .gw-link {line-height: normal;font-size: 0.75em;}
+#galactic-box .spot-image,#galactic-box .gw-logo {width: 80px !important;}
+#galactic-box .spot-name {width:auto !important;font-size: 0.75em !important;}
+#galactic-box .gw-content-wrapper a{font-size: 1.5em !important;}
+#galactic-box .gw-nav-wrapper .gw-link {line-height: normal !important;font-size: 0.75em !important;}
 
 /*Gallery webring*/
 #galleryring{border: 3px solid #328FF0; border-radius: 5px; padding: 2px 5px; background-color:#A2DEFF;display:inline-block;width:fit-content;margin: auto;}
