@@ -114,6 +114,13 @@ blockquote {
   pre::-webkit-scrollbar-thumb {
     border: 1px solid var(--teal);
 }
+code {
+  background: var(--blue);
+  color: var(--yellow);
+  padding: 2px 5px;
+  border-radius: 5px;
+  border: 1px solid var(--blue);
+}
 figure{
   margin:0.75em 40px;
 }

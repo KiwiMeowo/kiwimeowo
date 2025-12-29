@@ -1,0 +1,84 @@
+---
+layout: BlogTemplate_v2.njk
+tags: ['blog','2025/4th']
+style: >
+
+deco: >
+
+bg: 
+filter: Life
+title: Imblearn when I get my FUCKING HANDS ON YOU-
+subtitle: I caught the goose, the chase is over
+weather: Kinda cool
+songname: The Crane Wives - Curses
+songlink: https://www.last.fm/music/The+Crane+Wives/Foxlore/Curses?utm_source=last.fm&utm_medium=application&utm_campaign=last.fm_desktop_application&utm_content=2.1.39&utm_term=OSX
+songcomment: ASHES ASHES, DUST TO DUST, THE DEVIL'S AFTER BOTH OF US
+mood: Alright
+thought: I'm stupid
+date: 2025-12-29
+credit:
+---
+
+<!--Art Discussion Dream Fixation Game Life OC Review Vent-->
+<p>As you might not know, I'm currently studying a major that is computer related, and I'm doing a machine learning project. To simplify what I'm doing, let's pretend I have a bunch of data about cats and dogs, like their ear sizes, voice volumes, running speed in the span of four minutes, etc. Then I will extract useful information from the data, which is called <u>features</u>, useful features include the mean speed for running, BMI, etc. Then I will split the data into train and test data, and give the algorithms (such as k-nearest neighbor, support vector machine etc) the training data to seek out patterns, kinda like giving them homework. And to test whether they can tell if the corresponding data is a cat or dog, I can give them the test data, like an exam. And the better the accuracy, the better the model.</p>
+<hr>
+<h2>I'm so lost</h2>
+<p>Ok the boring nerd stuff is over, anyways the project has been going steadily well. It was confusing to start as first (as I barely knowing anything about machine learning before), but now I at least know that cross-validation is more for the training phase than testing phase. For a long while though, there has been a major obstacle, which is using the Imblearn package.</p>
+<p>There is a bunch of methods that can make your model perform better, and <u>SMOTE</u> (Synthetic Minority Oversampling TEchnique) is one of them. And to get SMOTE, you need to download Imblearn (Imbalanced Learn), which I tried, a lot of times. However:</p>
+<blockquote>
+  <p>ImportError: cannot import name '_MissingValues' from 'sklearn.utils._param_validation'</p>
+</blockquote>
+<p><span style="font-size: 0.66em;">My error isn't actually that message but I didn't save a picture before I fixed that problem and I will not recreate that problem again.</span></p>
+<p>I was quite confused by this error, so I look up online to see if anyone has a solution.</p>
+<blockquote>
+  <p>For those who came across this issue on Jupyter notebook, here's how I solved it</p>
+  <ol>
+    <li><code>!pip uninstall scikit-learn --yes</code></li>
+    <li><code>!pip uninstall imblearn --yes</code></li>
+    <li><code>!pip install scikit-learn==1.2.2</code></li>
+    <li><code>!pip install imblearn</code></li>
+    <li>Restart anaconda navigator It should work</li>
+  </ol>
+  <p class="date"><a href="https://stackoverflow.com/a/77483403" target="_blank">Divik Shrivastava</a></p>
+</blockquote>
+<p>And so I did... And it didn't work, the same error showed up at first. And when I tried it in another day, I couldn't even downgrade scikit-learn. The error message was long, but to summarise:</p>
+<blockquote>
+  <p>Error compiling Cython file:</p>
+</blockquote>
+<p>So I looked for the solution again:</p>
+<blockquote>
+  <p>Python setuptools solved the problem.</p>
+  <p><a href="http://docs.cython.org/src/quickstart/install.html" target="_blank">http://docs.cython.org/src/quickstart/install.html</a></p>
+  <p><code>easy_install cython</code> or <code>pip install cython</code></p>
+  <p class="date"><a href="https://stackoverflow.com/a/15176470" target="_blank">Liatz</a></p>
+</blockquote>
+<p>So I did... And it didn't work, at all. The same error popped up when I tried to downgrade scikit-learn.</p>
+<p>According to my teacher, Imblearn isn't only only package out there that offers SMOTE. So I searched for other packages,and there is one, called smote_variants. So I tried to install it...</p>
+<blockquote>
+  <p>The 'sklearn' PyPI package is deprecated, use 'scikit-learn' rather than 'sklearn' for pip commands.</p>
+  <p>Here is how to fix this error in the main use cases:</p>
+  <ul>
+    <li>use 'pip install scikit-learn' rather than 'pip install sklearn'</li>
+    <li>replace 'sklearn' by 'scikit-learn' in your pip requirements files(requirements.txt, setup.py, setup.cfg, Pipfile, etc ...)</li>
+    <li>if the 'sklearn' package is used by one of your dependencies, it would be great if you take some time to track which package uses 'sklearn' instead of 'scikit-learn' and report it to their issue tracker</li>
+    <li>as a last resort, set the environment variable SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True to avoid this error</li>
+  </ul>
+</blockquote>
+<p>Yea I don't even know at this point, how do I even do any of that.</p>
+<hr>
+<p>So after all these fixing and running, and still getting nowhere, I was starting to feel exhausted. You know what, is this even worth it? <a href="https://www.blog.trainindata.com/smote-in-python-a-guide-to-balanced-datasets/" target="_blank">There are many people who say</a> <a href="https://stackoverflow.com/a/72368366">who say SMOTE</a> <a href="https://datascience.stackexchange.com/questions/106461/why-smote-is-not-used-in-prize-winning-kaggle-solutions">isn't that good anyways</a>.</p>
+<p>But then, I noticed something in my error-filled terminal, something so important it's ridiculous that I overlooked it... The packages aren't even installed in the right folder!</p>
+<p>Not sure how or why, pip started to install the packages into a version of Python that I'm not using. So to make it install packages to the right places, I went searching again:</p>
+<blockquote>
+  <p>You need to use <code>python -m pip install</code>. Why? <code>pip</code> is an executable that may or may not share an installation directory with your standard <code>python</code>. You can verify this by comparing:</p>
+  <pre>
+    pip -V
+
+    python -m pip -V
+  </pre>
+  <p>The latter command, <code>python -m pip install</code> ensures that <code>pip</code> is the one linked to the <code>python</code> command you run for IDLE.</p>
+  <p class="date"><a href="https://stackoverflow.com/a/75952384" target="_blank">C.Nivs</a></p>
+</blockquote>
+<p>Yea I install package by just using <code>pip install xxx</code>. So I installed the old version of scikit-learn and imblearn using this command, and restarted... It finally worked!!! YIPPEE!!!</p>
+<hr>
+<p>So this issue is finally over, I can rest well, knowing whenever SMOTE improves my model, it will be useful data for my report.</p>
