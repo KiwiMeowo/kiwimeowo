@@ -160,7 +160,10 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 #autohr{margin:10px 15px 0 15px;}
 .collapsible{text-align:center}
 
+#playbox{background:linear-gradient(black,#3b4f55);border: 2px solid var(--teal);border-radius: 5px;min-height: 114px;}
 #new3{padding:15px 10px;--teal:white;--dblue:var(--lteal);text-shadow: 0px 0px 3px var(--lteal), 0px 0px 5px var(--lteal);position: relative;}
+#new3 a{max-width: 425px;display:block;margin-left: 75px;}
+#playbox .date{color:white;text-align: center;margin-left: 75px;}
 #album{position: absolute;top:50%;translate:0 -50%;box-shadow: 0px 0px 4px 1px white;aspect-ratio: 1/1;height:64px;}
 #new3::after {
 content: '';
@@ -222,7 +225,7 @@ content: '';
   <div class="draggable" style="top: 470px; right:0;" aria-hidden="true"><img src="art/hat.png" class="christmas" style="translate: 47px;"><img src="art/cook.png" loading="lazy" style="width:225px;" title="Hint: You can move these fellas!"></div>
   <div class="draggable" style="top: 1194px;left: 27%;" aria-hidden="true"><img src="art/hat.png" class="christmas" style="translate: 9px;"><img src="art/ClaireCat.png" loading="lazy" style="width: 180px;height: 180px;object-fit: cover;object-position: left;" title="Hint: You can move these fellas!"></div>
   <div class="draggable" style="top: 780px; right:23%;" aria-hidden="true"><img src="art/hat.png" class="christmas" style="translate: 17px -28px;"><img src="art/SolarCat.png" loading="lazy" style="width:225px;" title="Hint: You can move these fellas!"></div>
-  <div class="draggable" style="top: 1940px;right: 23%;" aria-hidden="true"><img src="art/hat.png" class="christmas" style="translate: 23px -31px;"><img src="art/JaspersCat.png" loading="lazy" style="width: 225px;object-fit: cover;object-position: center;height: 142px;" title="Hint: You can move these fellas!"></div>
+  <div class="draggable" style="top: 2100px;right: 23%;" aria-hidden="true"><img src="art/hat.png" class="christmas" style="translate: 23px -31px;"><img src="art/JaspersCat.png" loading="lazy" style="width: 225px;object-fit: cover;object-position: center;height: 142px;" title="Hint: You can move these fellas!"></div>
   <script src="/draggable.js"></script>
   <!--Snowflakes-->
   <div class="snowflakes" aria-hidden="true"><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div></div>
@@ -295,7 +298,7 @@ content: '';
               #announce{
                 display: none;
               }
-              .snowflakes{display:none;}
+              /* .snowflakes{display:none;} */
               .snowflake .in:after{
                 content:"❄";
                 font-family: monospace;
@@ -356,11 +359,11 @@ content: '';
                     </g>
                   </g>
                 </svg>
-              <div style="background:linear-gradient(black,#3b4f55);border: 2px solid var(--teal);border-radius: 5px;min-height: 114px;">
+              <div id="playbox">
                 <div id="new3">
                   <img id="album" src="" alt="Album music">
-                  <a href="" target="_blank" style="max-width: 350px;display:block;">Author - Name</a>
-                  <div class="date" style="color:white;text-align: center;">Listening</div>
+                  <a href="" target="_blank">Author - Name</a>
+                  <div class="date">Listening</div>
                 </div>
                 <div id="playbar" style="height: 1.5em;padding: 5px 0;background:var(--teal);">
                   <a href="/song.html" style="margin-right: 12.5px;">
