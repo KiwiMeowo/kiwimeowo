@@ -139,7 +139,7 @@
 #melonland-surf-club{width: 100px;filter: var(--dropshadow);cursor:pointer;height: 100px;margin-left: 10px;}
 
 /*Cookie run webring*/
-#ckwr{margin:0;}
+#ckwr{margin:0 !important;}
 /*OC webring*/
 #oc-webring-widget {
   background: url('OCRingBG.png');
