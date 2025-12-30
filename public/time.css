@@ -1,0 +1,58 @@
+body.morning{
+  --yellow:#FDF0C5;
+  --boxdark:#DBBD9C;
+  --teal:#44667C;
+  --blue: #213F60;
+  --dblue: #2a305e;
+  --highlightteal: #9bc3d28a;
+  --gradient1: #95ddee78;
+  --gradient2: #a6ddee33;
+  --bg:#61747759, #7970da59 150%;
+}
+body.morning header {
+  background: linear-gradient(rgba(213, 249, 255, 0.11), #ffc1f533), url(header/Morning.webp);
+  background-size: cover;
+  background-position: 0 35%;
+  }
+body.sunset{
+--yellow: #fde6d1;
+  --lteal: #a3a8e8;
+  --highlightteal: #a6b7df61;
+  --teal: #43669d;
+  --blue: #453b75;
+  --dblue: #2d1b4c;
+  --bg: #636c8759, #a650c359 150%;
+  --shadow: #151a5b8c;
+  --boxdark: #db978496;
+  --gradient1: #8db3ee78;
+  --gradient2: #fbcff433;
+}
+body.sunset header {
+  background: linear-gradient(rgba(213, 249, 255, 0.11), #ffc1f533), url(header/Sunset.webp);
+  background-size: cover;
+  background-position: 0 35%;
+  }
+body.afternoon header {
+  background: linear-gradient(rgba(213, 249, 255, 0.11), #ffc1f533), url(header/Afternoon.webp);
+  background-size: cover;
+  background-position: 0 5%;
+  }
+  body.night{
+    --teal:#365489;
+    --yellow:#C7B6CE;
+    --blue:#0C174B;
+    --dblue:#02003C;
+    --bg: #2c166559, #a650c359 150%;
+    --gradient1: #8278e078;
+  --gradient2: #cf96c633;
+  --lteal:#7485B1;
+  --highlightteal:#7f93df78;
+  }
+body.night header {
+  background: linear-gradient(rgba(213, 249, 255, 0.11), #ffc1f533), url(header/Night.webp);
+  background-size: cover;
+  background-position: 0 11%;
+  }
+body.night .draggable, body.night img[src*='Album']{
+  filter: drop-shadow(0 0 5px #ffd9fe4f) drop-shadow(0 0 10px #ffd9fe4f);
+}

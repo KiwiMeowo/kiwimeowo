@@ -6,7 +6,26 @@
   --blue: #792b13;
   --dblue: #590a0a;
 }
-img.christmas {
+.draggable:before,.draggable:after {
   position: absolute;
+  display: block;
   height: 75px;
+  width: 75px;
+  content: '';
+  top:0;
+  left:0;
+  background-size: contain;
 }
+.draggable:before{background-image: url('art/hat.png');}
+#mii-cosmos:before{
+  translate: 117px -11px;rotate: 20deg;
+}
+#silly:before{translate: 50px -10px;rotate: -12deg;}
+#silly:after{
+  translate: 90px 35px;rotate: -12deg;background-image: url('art/hat.png');}
+#teamwork:before{translate: 46px -30px;rotate: -5deg;}
+#teamwork:after{background-image: url('art/hat.png');translate: 136px -10px;rotate: -5deg;scale: 0.7;}
+#cook:before{translate: 47px;}
+#ClaireCat:before{translate: 9px;}
+#SolarCat:before{translate: 17px -28px;}
+#JaspersCat:before{translate: 23px -31px;}

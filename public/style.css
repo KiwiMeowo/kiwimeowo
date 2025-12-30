@@ -18,8 +18,6 @@
 html{
   font-weight:500;
   font-family: "Fraunces","Toppan-Bunkyu-Mincho","NotoSansSymbol2",serif, sans-serif;
-  color: var(--teal);
-  text-decoration-color:var(--teal);
   scroll-behavior: smooth;
 }
 button, input, textarea{
@@ -34,6 +32,8 @@ body {
   font-size: 0.90em;
   overflow-x: hidden;
   position:relative;
+  color: var(--teal);
+  text-decoration-color:var(--teal);
   }
 a, s{
   text-decoration-thickness: 1.5px;
@@ -301,7 +301,7 @@ button.navcoll.act{
 /*Header image.*/
 header {
   height: 200px;
-  background: linear-gradient(rgba(10,0,10,0.5), #ff8dff3b), url(background.jpg);
+  background: linear-gradient(rgba(10,0,10,0.5), #ff8dff3b), url(header/background.jpg);
   background-size: cover;
   background-position: center;
   }

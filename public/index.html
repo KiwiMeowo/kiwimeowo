@@ -8,15 +8,16 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico?">
   <link href="style.css" rel="stylesheet" type="text/css" media="all" />
   <link href="emote.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="christmas.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="time.css" rel="stylesheet" type="text/css" media="all" />
+  <!-- <link href="christmas.css" rel="stylesheet" type="text/css" media="all" /> -->
   <link href="style-my-tooltips.css" rel="stylesheet" type="text/css" />
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
   <style>
 #counter img {filter: hue-rotate(-15deg) saturate(0.5);image-rendering: pixelated;}
-nav{display:none}
+nav, section .theme{display:none}
 @media(max-width:1000px){
-  nav{display:block;}
-  #sidenav{display:none;}}
+  nav,section .theme{display:block;}
+  #sidenav,aside .theme{display:none;}}
 
 .bar{
   margin-right: 10px;
@@ -190,6 +191,18 @@ content: '';
     scale:1.1;
   content: "[Playing ♪]";
   margin-left: 10px;}
+.theme button {
+  background: var(--gradient);
+  border: 1px solid var(--teal);
+  box-shadow: 2px 2px 2px var(--shadow);
+  border-radius: 5px;
+  cursor:pointer;
+  margin: 2px;
+}
+.theme button:hover{
+box-shadow: 1px 1px 2px var(--shadow);
+translate:1px 1px;
+}
   @keyframes note{
   0%{
     translate: 0 2px;
@@ -216,16 +229,15 @@ content: '';
 @keyframes cache {0%   {rotate:-5deg}100% {rotate:5deg}}
   </style>
 </head>
-
 <body>
   <!--Draggables-->
-  <div class="draggable" style="left: calc(100vw - 780px);top:80px;" aria-hidden="true"><img src="art/hat.png" class="christmas" style="translate: 117px -11px;rotate: 20deg;"><img src="art/MiitopiaCosmos.png" loading="lazy" style="width:250px;" title="Hint: You can move these fellas!"></div>
-  <div class="draggable" style="top:360px;left:23%;" aria-hidden="true"><img src="art/hat.png" class="christmas" style="translate: 50px -10px;rotate: -12deg;"><img src="art/hat.png" class="christmas" style="translate: 90px 35px;rotate: -10deg;"><img src="art/silly.png" loading="lazy" style="width:250px;" title="Hint: You can move these fellas!"></div>
-  <div class="draggable" style="top: 660px; left: 17%;" aria-hidden="true"><img src="art/hat.png" class="christmas" style="translate: 46px -30px;rotate: -5deg;"><img src="art/hat.png" class="christmas" style="translate: 136px -10px;rotate: -5deg;scale: 0.7;"><img src="art/teamwork.png" loading="lazy" style="width:225px;" title="Hint: You can move these fellas!"></div>
-  <div class="draggable" style="top: 470px; right:0;" aria-hidden="true"><img src="art/hat.png" class="christmas" style="translate: 47px;"><img src="art/cook.png" loading="lazy" style="width:225px;" title="Hint: You can move these fellas!"></div>
-  <div class="draggable" style="top: 1194px;left: 27%;" aria-hidden="true"><img src="art/hat.png" class="christmas" style="translate: 9px;"><img src="art/ClaireCat.png" loading="lazy" style="width: 180px;height: 180px;object-fit: cover;object-position: left;" title="Hint: You can move these fellas!"></div>
-  <div class="draggable" style="top: 780px; right:23%;" aria-hidden="true"><img src="art/hat.png" class="christmas" style="translate: 17px -28px;"><img src="art/SolarCat.png" loading="lazy" style="width:225px;" title="Hint: You can move these fellas!"></div>
-  <div class="draggable" style="top: 2100px;right: 23%;" aria-hidden="true"><img src="art/hat.png" class="christmas" style="translate: 23px -31px;"><img src="art/JaspersCat.png" loading="lazy" style="width: 225px;object-fit: cover;object-position: center;height: 142px;" title="Hint: You can move these fellas!"></div>
+  <div class="draggable" id="mii-cosmos" style="left: calc(100vw - 780px);top:80px;" aria-hidden="true"><img src="art/MiitopiaCosmos.png" loading="lazy" style="width:250px;" title="Hint: You can move these fellas!"></div>
+  <div class="draggable" style="top:360px;left:23%;" aria-hidden="true" id="silly"><img src="art/silly.png" loading="lazy" style="width:250px;" title="Hint: You can move these fellas!"></div>
+  <div class="draggable" style="top: 660px; left: 17%;" aria-hidden="true" id="teamwork"><img src="art/teamwork.png" loading="lazy" style="width:225px;" title="Hint: You can move these fellas!"></div>
+  <div class="draggable" style="top: 470px; right:0;" aria-hidden="true" id="cook"><img src="art/cook.png" loading="lazy" style="width:225px;" title="Hint: You can move these fellas!"></div>
+  <div class="draggable" style="top: 1194px;left: 27%;" aria-hidden="true" id="ClaireCat"><img src="art/ClaireCat.png" loading="lazy" style="width: 180px;height: 180px;object-fit: cover;object-position: left;" title="Hint: You can move these fellas!"></div>
+  <div class="draggable" style="top: 780px; right:23%;" aria-hidden="true" id="SolarCat"><img src="art/SolarCat.png" loading="lazy" style="width:225px;" title="Hint: You can move these fellas!"></div>
+  <div class="draggable" style="top: 2100px;right: 23%;" aria-hidden="true" id="JaspersCat"><img src="art/JaspersCat.png" loading="lazy" style="width: 225px;object-fit: cover;object-position: center;height: 142px;" title="Hint: You can move these fellas!"></div>
   <script src="/draggable.js"></script>
   <!--Snowflakes-->
   <div class="snowflakes" aria-hidden="true"><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div><div class="snowflake"><div class="in"></div></div></div>
@@ -262,6 +274,14 @@ content: '';
 
   <main class="double">
     <section style="order:2;">
+      <article class="theme">
+        <div class="inner">
+          <div style="border: 3px solid var(--blue);color:var(--blue);padding: 15px 20px;border-radius: 7.5px;background: var(--gradient);filter: var(--dropshadow);text-align: center;margin: 10px auto;max-width: 160px;">
+        <div class="clock" style="font-size: 2.4em;"></div>
+        </div>
+          <center><button>Auto</button><button>Morning</button><button>Afteroon</button><br><button>Sunset</button><button>Night</button></center>
+        </div>
+      </article>
       <article>
         <h1>What's up</h1>
         <div class="inner min">
@@ -298,7 +318,7 @@ content: '';
               #announce{
                 display: none;
               }
-              /* .snowflakes{display:none;} */
+              .snowflakes{display:none;}
               .snowflake .in:after{
                 content:"❄";
                 font-family: monospace;
@@ -479,6 +499,75 @@ content: '';
     </aside>
 
     <aside style="order:3;position:unset;">
+      <article class="theme">
+        <div class="inner">
+          <div style="border: 3px solid var(--blue);color:var(--blue);padding: 15px 20px;border-radius: 7.5px;background: var(--gradient);filter: var(--dropshadow);text-align: center;margin: 10px auto;max-width: 160px;">
+        <div class="clock" style="font-size: 2.4em;"></div>
+        </div>
+          <center><button>Auto</button><button>Morning</button><button>Afteroon</button><br><button>Sunset</button><button>Night</button></center>
+        </div>
+        <script>
+          var timeset=document.querySelectorAll('.theme button');
+          timeset.forEach(element => {
+            element.addEventListener("click", function() {
+              document.body.className='';
+              if (this.innerText=='Auto'){
+                autoTheme();
+              } else{
+                document.body.classList.add(this.innerText.toLowerCase());
+              }
+            });
+          });
+          var clock = document.getElementsByClassName('clock');
+  function dateToText(date) {
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+     var seconds = date.getSeconds();
+    if (minutes < 10) minutes = '0'+minutes;
+    if  (seconds < 10) seconds = '0'+seconds;
+    if (hours < 10) hours = '0'+hours;
+    return hours + ":" + minutes + ":" + seconds;
+}
+function updateClocks() {
+	var offset = window.arrOffsets;
+		clock[0].innerHTML = dateToText(new Date(new Date().getTime()+offset));
+    clock[1].innerHTML = dateToText(new Date(new Date().getTime()+offset));
+}
+function startClocks() {
+	window.arrOffsets = 0;
+		timezone = +8;
+		if (!isNaN(timezone)) {
+			var tzDifference = timezone * 60 + (new Date()).getTimezoneOffset();
+			var offset = tzDifference * 60 * 1000;
+			window.arrOffsets=offset;
+	}
+	updateClocks();
+	setInterval(updateClocks, 1000);
+}
+
+function autoTheme(){
+  let classtimeset=clock[0].innerText.split(':')[0];
+    if (classtimeset <10 && classtimeset >5){
+      document.body.classList.add('morning')
+    } else if (classtimeset >=10 && classtimeset<18){
+      document.body.classList.add('afternoon')
+    }else if (classtimeset==18){
+      document.body.classList.add('sunset')
+    }else if (classtimeset>18||classtimeset<=5){
+      document.body.classList.add('night')
+    }
+}
+var imageobserver = new MutationObserver(function (mutations) {
+      if (clock[0].innerHTML != "") {
+        autoTheme();
+        imageobserver.disconnect();
+      }
+    });
+
+imageobserver.observe(document, { attributes: false, childList: true, characterData: false, subtree: true });
+startClocks();
+</script>
+      </article>
       <article>
         <h1>! E-sim for Gaza !</h1>
         <div class="inner">
