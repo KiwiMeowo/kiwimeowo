@@ -236,8 +236,8 @@ for (i = 0; i < coll.length; i++) {
         <h2>Weather in Hong Kong:</h2>
         <center>
         <div style="border: 3px solid;padding: 15px 12.5px;border-radius: 7.5px;max-width: 175px;background: var(--gradient);overflow: hidden;filter: var(--dropshadow);">
-        <div class="cloc" timezones="+8" style="height: 21.6px;font-size:1.25em;margin-bottom:5px;color:#1C3F5CC0;"></div>
-        <div class="clock" timezone="+8" style="height: 40.5px;font-size: 2.4em;"></div>
+        <div id="hkdate" timezones="+8" style="height: 21.6px;font-size:1.25em;margin-bottom:5px;color:#1C3F5CC0;"></div>
+        <div id="hktime" timezone="+8" style="height: 40.5px;font-size: 2.4em;"></div>
         <div id="id41bac878d6cb6" a='{"t":"s","v":"1.2","lang":"en","locs":[1469],"ssot":"c","sics":"ms","cbkg":"#1C3F5C","cfnt":"#FFFFFF","slpd":8,"slgp":7,"slbr":"8","sfnt":"a","slfs":24,"slis":32}' style="width:120px;border-radius: 7.5px;height: 25px;">Weather Data Source: <a href="https://sharpweather.com/weather_hong_kong/30_days/">30 days weather Hong Kong</a></div><script async src="https://static1.sharpweather.com/widgetjs/?id=id41bac878d6cb6"></script>
         </div>
         <h2 id="birthannounce" style="animation-name: birthday;animation-duration: 1s;animation-iteration-count: infinite;animation-direction: alternate;animation-timing-function: ease-in-out;"></h2>
@@ -337,89 +337,7 @@ for (i = 0; i < coll.length; i++) {
         </div>
         </div>
         <script src="BlogTagsLoad.js"></script>
-    <script>
-        //The clock and birthday timer
-function dateToText(date) {
-    var hours = date.getHours();
-    var minutes = date.getMinutes();
-     var seconds = date.getSeconds();
-    if (minutes < 10) minutes = '0'+minutes;
-    if  (seconds < 10) seconds = '0'+seconds;
-    if (hours < 10) hours = '0'+hours;
-    return hours + ":" + minutes + ":" + seconds;
-}
-function dayToText(date) {
-    var day = date.getDate();
-    var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", 
-                       "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
-     var month = monthNames[date.getMonth()];
-     var year = date.getFullYear();
-    if (day < 10) day = '0'+day;
-    return day + " " + month + " " + year;
-}
-function updateClocks() {
-	var offset = window.arrOffsets;
-  var birthlist=[["Claire and Grey","01-12"],["Solar","02-26"],["Ruth","06-13"],["Lavender","07-25"],["Mira","07-26"],["Kyrea","09-19"],["Jaspers, Bun and Penelope","09-29"],["Cosmos","11-15"],["Wolf","11-22"]];
-  var birthdate=document.getElementById("birthdate");
-  var birthguy=document.getElementById("birthguy");
-  dot=document.getElementById("dot");
-  if (dot.innerHTML=="..."){
-  dot.innerHTML=".";
-  } else if (dot.innerHTML=="."){
-    dot.innerHTML="..";
-  } else if (dot.innerHTML==".."){
-    dot.innerHTML="...";
-  }
-	clock = document.getElementsByClassName('clock')[0];
-  cloc = document.getElementsByClassName('cloc')[0];
-		clock.innerHTML = dateToText(new Date(new Date().getTime()+offset));
-		cloc.innerHTML = dayToText(new Date(new Date().getTime()+offset));
-    var thismonth=((new Date(new Date().getTime()+offset)).getMonth()+1);
-    if (thismonth<10){
-    thismonth='0'+thismonth;
-    }
-    var thisday=(new Date(new Date().getTime()+offset)).getDate();
-    if (thisday<10){
-    thisday='0'+thisday;
-    }
-    var today= thismonth+ "-" + thisday;
-    currentyr=(new Date(new Date().getTime()+offset)).getFullYear();
-    for (x=0;x<birthlist.length;x++){
-    if (today<birthlist[x][1]){
-    birthdate.innerHTML=(new Date(currentyr+"-"+birthlist[x][1])-new Date(currentyr+"-"+today))/(24*3600*1000);
-    birthguy.innerHTML=birthlist[x][0];
-    break
-    } else if (today==birthlist[x][1]){
-    document.getElementById("birthannounce").innerHTML="Happy birthday " + birthlist[x][0] + "!";
-    	if (x+1!=birthlist.length){
-      birthdate.innerHTML=(new Date(currentyr+"-"+birthlist[x+1][1])-new Date(currentyr+"-"+today))/(24*3600*1000);
-      birthguy.innerHTML=birthlist[x+1][0];
-      } else{
-      birthdate.innerHTML=(new Date((currentyr+1)+"-"+birthlist[0][1])-new Date(currentyr+"-"+today))/(24*3600*1000);
-      birthguy.innerHTML=birthlist[0][0];
-      }
-    }else if (x+1==birthlist.length){
-    birthdate.innerHTML=(new Date((currentyr+1)+"-"+birthlist[0][1])-new Date(currentyr+"-"+today))/(24*3600*1000);
-    birthguy.innerHTML=birthlist[0][0];
-    } 
-    }
-}
-function startClocks() {
-	clockElements = document.getElementsByClassName('clock');
-  clockElement = document.getElementsByClassName('cloc');
-	window.arrOffsets = 0;
-		timezone = parseInt(clockElements[0].getAttribute('timezone'));
-		if (!isNaN(timezone)) {
-			var tzDifference = timezone * 60 + (new Date()).getTimezoneOffset();
-			var offset = tzDifference * 60 * 1000;
-			window.arrOffsets=offset;
-	}
-	updateClocks();
-	setInterval(updateClocks, 1000);
-}
-
-setTimeout(startClocks, 100);
-</script>
+        <script src="clock.js"></script>
 <script> 
 /*For Cosmos plush */
 function playMeow() { 
