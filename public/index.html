@@ -280,7 +280,7 @@ translate:1px 1px;
           <div class="hkdate" style="font-size:1.25em;color:var(--teal);opacity: 0.75;"></div>
         <div class="hktime" style="font-size: 2.4em;line-height: 1.1;"></div>
         </div>
-          <center><button>Auto</button><button>Morning</button><button>Afteroon</button><br><button>Sunset</button><button>Night</button></center>
+          <center><button>Auto</button><button>Morning</button><button>Afternoon</button><br><button>Sunset</button><button>Night</button></center>
         </div>
       </article>
       <article>
@@ -506,7 +506,7 @@ translate:1px 1px;
             <div class="hkdate" style="font-size:1.25em;color:var(--teal);opacity: 0.75;"></div>
         <div class="hktime" style="font-size: 2.4em;line-height: 1.1;"></div>
         </div>
-          <center><button>Auto</button><button>Morning</button><button>Afteroon</button><br><button>Sunset</button><button>Night</button></center>
+          <center><button>Auto</button><button>Morning</button><button>Afternoon</button><br><button>Sunset</button><button>Night</button></center>
         </div>
         <script>
           var timeset=document.querySelectorAll('.theme button');
@@ -518,6 +518,7 @@ translate:1px 1px;
               } else{
                 document.body.classList.add(this.innerText.toLowerCase());
               }
+              localStorage.setItem("KiwiTheme",this.innerText.toLowerCase());
             });
           });
           var hkdate = document.getElementsByClassName('hkdate');
@@ -571,15 +572,12 @@ function autoTheme(){
       document.body.classList.add('night')
     }
 }
-var imageobserver = new MutationObserver(function (mutations) {
-      if (hktime[0].innerHTML != "") {
-        autoTheme();
-        imageobserver.disconnect();
-      }
-    });
-
-imageobserver.observe(document, { attributes: false, childList: true, characterData: false, subtree: true });
 startClocks();
+if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="auto"){
+  autoTheme();
+}else{
+  document.body.classList.add(localStorage.getItem("KiwiTheme"));
+}
 </script>
       </article>
       <article>

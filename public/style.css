@@ -301,9 +301,9 @@ button.navcoll.act{
 /*Header image.*/
 header {
   height: 200px;
-  background: linear-gradient(rgba(10,0,10,0.5), #ff8dff3b), url(header/background.jpg);
+  background: linear-gradient(rgba(10,0,10,0.5), #ff8dff3b), url(header/Afternoon.webp);
   background-size: cover;
-  background-position: center;
+  background-position: 0 11%;
   }
 
 /*Title bar with icon and title/tagline.*/

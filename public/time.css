@@ -32,11 +32,7 @@ body.sunset header {
   background-size: cover;
   background-position: 0 35%;
   }
-body.afternoon header {
-  background: linear-gradient(rgba(213, 249, 255, 0.11), #ffc1f533), url(header/Afternoon.webp);
-  background-size: cover;
-  background-position: 0 5%;
-  }
+
   body.night{
     --teal:#365489;
     --yellow:#C7B6CE;
