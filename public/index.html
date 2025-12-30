@@ -277,7 +277,8 @@ translate:1px 1px;
       <article class="theme">
         <div class="inner">
           <div style="border: 3px solid var(--blue);color:var(--blue);padding: 15px 20px;border-radius: 7.5px;background: var(--gradient);filter: var(--dropshadow);text-align: center;margin: 10px auto;max-width: 160px;">
-        <div class="clock" style="font-size: 2.4em;"></div>
+          <div class="hkdate" style="font-size:1.25em;color:var(--teal);opacity: 0.5;"></div>
+        <div class="hktime" style="font-size: 2.4em;line-height: 1.1;"></div>
         </div>
           <center><button>Auto</button><button>Morning</button><button>Afteroon</button><br><button>Sunset</button><button>Night</button></center>
         </div>
@@ -502,7 +503,8 @@ translate:1px 1px;
       <article class="theme">
         <div class="inner">
           <div style="border: 3px solid var(--blue);color:var(--blue);padding: 15px 20px;border-radius: 7.5px;background: var(--gradient);filter: var(--dropshadow);text-align: center;margin: 10px auto;max-width: 160px;">
-        <div class="clock" style="font-size: 2.4em;"></div>
+            <div class="hkdate" style="font-size:1.25em;color:var(--teal);opacity: 0.5;"></div>
+        <div class="hktime" style="font-size: 2.4em;"></div>
         </div>
           <center><button>Auto</button><button>Morning</button><button>Afteroon</button><br><button>Sunset</button><button>Night</button></center>
         </div>
@@ -518,8 +520,18 @@ translate:1px 1px;
               }
             });
           });
-          var clock = document.getElementsByClassName('clock');
-  function dateToText(date) {
+          var hkdate = document.getElementsByClassName('hkdate');
+          var hktime = document.getElementsByClassName('hktime');
+          function dateToText(date) {
+    var day = date.getDate();
+    var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+                       "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+     var month = monthNames[date.getMonth()];
+     var year = date.getFullYear();
+    if (day < 10) day = '0'+day;
+    return day + " " + month + " " + year;
+}
+  function timeToText(date) {
     var hours = date.getHours();
     var minutes = date.getMinutes();
      var seconds = date.getSeconds();
@@ -529,9 +541,11 @@ translate:1px 1px;
     return hours + ":" + minutes + ":" + seconds;
 }
 function updateClocks() {
-	var offset = window.arrOffsets;
-		clock[0].innerHTML = dateToText(new Date(new Date().getTime()+offset));
-    clock[1].innerHTML = dateToText(new Date(new Date().getTime()+offset));
+    var offset = window.arrOffsets;
+    hkdate[0].innerHTML = dateToText(new Date(new Date().getTime()+offset));
+    hkdate[1].innerHTML = dateToText(new Date(new Date().getTime()+offset));
+		hktime[0].innerHTML = timeToText(new Date(new Date().getTime()+offset));
+    hktime[1].innerHTML = timeToText(new Date(new Date().getTime()+offset));
 }
 function startClocks() {
 	window.arrOffsets = 0;
@@ -546,7 +560,7 @@ function startClocks() {
 }
 
 function autoTheme(){
-  let classtimeset=clock[0].innerText.split(':')[0];
+  let classtimeset=hktime[0].innerText.split(':')[0];
     if (classtimeset <10 && classtimeset >5){
       document.body.classList.add('morning')
     } else if (classtimeset >=10 && classtimeset<18){
@@ -558,7 +572,7 @@ function autoTheme(){
     }
 }
 var imageobserver = new MutationObserver(function (mutations) {
-      if (clock[0].innerHTML != "") {
+      if (hktime[0].innerHTML != "") {
         autoTheme();
         imageobserver.disconnect();
       }
