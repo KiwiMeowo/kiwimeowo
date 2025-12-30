@@ -119,7 +119,6 @@ code {
   color: var(--yellow);
   padding: 2px 5px;
   border-radius: 5px;
-  border: 1px solid var(--blue);
 }
 figure{
   margin:0.75em 40px;
