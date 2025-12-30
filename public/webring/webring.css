@@ -8,6 +8,7 @@
     text-decoration-color: #513aa0;
     text-underline-offset: 2px;
     display: inline-block;
+    line-height: 1;
   }
 
   #templateWebring a:hover {
