@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="/blog/feed.css"?>
 <?xml-stylesheet href="feed.css"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
 <atom:link href="https://kiwimeowo.neocities.org/art/feed.xml" rel="self" />
   <title>Kiwi&#39;s Art Feed</title>
-  <link href="https://kiwimeowo.neocities.org/">https://kiwimeowo.neocities.org/</link>
+  <link>https://kiwimeowo.neocities.org/art/index.html</link>
   <description>I am a drawer</description>
-  <item><title>Mini Kyrea</title><guid>https://www.dropbox.com/scl/fi/0wyprsmbngafkphms8ye4/IMG_5815_2025-Dec-28.webp?rlkey=591ww856l7t4smmn49d5lrzrt&amp;raw=1</guid><link>https://www.dropbox.com/scl/fi/0wyprsmbngafkphms8ye4/IMG_5815_2025-Dec-28.webp?rlkey=591ww856l7t4smmn49d5lrzrt&amp;raw=1</link><description><![CDATA[<img src="https://www.dropbox.com/scl/fi/0wyprsmbngafkphms8ye4/IMG_5815_2025-Dec-28.webp?rlkey=591ww856l7t4smmn49d5lrzrt&amp;raw=1">The Minis are mentally sick in the head /ref <span class='blogdate'>(28 Dec 2025)</span>]]></description><pubDate>Sun, 28 Dec 2025 15:40:03 GMT</pubDate></item>
-  <item><title>Claire</title><guid>https://www.dropbox.com/scl/fi/68ak5sowualheov60n0w7/IMG_5812_2025-Dec-28.webp?rlkey=15364tchrb2w9gzn3jgmn5tak&amp;raw=1</guid><link>https://www.dropbox.com/scl/fi/68ak5sowualheov60n0w7/IMG_5812_2025-Dec-28.webp?rlkey=15364tchrb2w9gzn3jgmn5tak&amp;raw=1</link><description><![CDATA[Claire doodle <span class='blogdate'>(28 Dec 2025)</span>]]></description><pubDate>Sun, 28 Dec 2025 14:00:02 GMT</pubDate></item>
+  <item><title>Mini Kyrea</title><guid>https://www.dropbox.com/scl/fi/0wyprsmbngafkphms8ye4/IMG_5815_2025-Dec-28.webp?rlkey=591ww856l7t4smmn49d5lrzrt&amp;raw=1</guid><link>https://kiwimeowo.neocities.org/art/2025.html</link><description><![CDATA[<img src="https://www.dropbox.com/scl/fi/0wyprsmbngafkphms8ye4/IMG_5815_2025-Dec-28.webp?rlkey=591ww856l7t4smmn49d5lrzrt&amp;raw=1">The Minis are mentally sick in the head /ref <span class='blogdate'>(28 Dec 2025)</span>]]></description><pubDate>Sun, 28 Dec 2025 15:40:03 GMT</pubDate></item>
+  <item><title>Claire</title><guid>https://www.dropbox.com/scl/fi/68ak5sowualheov60n0w7/IMG_5812_2025-Dec-28.webp?rlkey=15364tchrb2w9gzn3jgmn5tak&amp;raw=1</guid><link>https://kiwimeowo.neocities.org/art/2025.html</link><description><![CDATA[Claire doodle <span class='blogdate'>(28 Dec 2025)</span>]]></description><pubDate>Sun, 28 Dec 2025 14:00:02 GMT</pubDate></item>
 </channel>
 </rss>

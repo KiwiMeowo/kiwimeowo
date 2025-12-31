@@ -4,42 +4,42 @@
 <channel>
 <atom:link href="https://kiwimeowo.neocities.org/blog/blog/feed.xml" rel="self" />
   <title>Kiwi&#39;s Blog Feed</title>
-  <link href="https://kiwimeowo.neocities.org/">https://kiwimeowo.neocities.org/</link>
+  <link>https://kiwimeowo.neocities.org/</link>
   <description>I wonder how many people would follow my blogs using this feed...</description>
   <item>
+    <title>2025 Year Review</title>
+    <link>https://kiwimeowo.neocities.org/blog/2025/4th/12-31.html</link>
+    <guid>https://kiwimeowo.neocities.org/blog/2025/4th/12-31.html</guid>
+    <description>Yup it&#39;s a year indeed</description>
+    <pubDate>Wed, 31 Dec 2025 08:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>Imblearn when I get my FUCKING HANDS ON YOU-</title>
-    <link href="https://kiwimeowo.neocities.org/blog/2025/4th/12-29.html">https://kiwimeowo.neocities.org/blog/2025/4th/12-29.html</link>
+    <link>https://kiwimeowo.neocities.org/blog/2025/4th/12-29.html</link>
     <guid>https://kiwimeowo.neocities.org/blog/2025/4th/12-29.html</guid>
     <description>I caught the goose, the chase is over</description>
     <pubDate>Mon, 29 Dec 2025 08:00:00 GMT</pubDate>
   </item>
   <item>
     <title>Website Update</title>
-    <link href="https://kiwimeowo.neocities.org/blog/2025/4th/12-27.html">https://kiwimeowo.neocities.org/blog/2025/4th/12-27.html</link>
+    <link>https://kiwimeowo.neocities.org/blog/2025/4th/12-27.html</link>
     <guid>https://kiwimeowo.neocities.org/blog/2025/4th/12-27.html</guid>
     <description>Ooo Kiwi has been working hard</description>
     <pubDate>Sat, 27 Dec 2025 08:00:00 GMT</pubDate>
   </item>
   <item>
     <title>The n-th Twitter Migration</title>
-    <link href="https://kiwimeowo.neocities.org/blog/2025/4th/12-26.html">https://kiwimeowo.neocities.org/blog/2025/4th/12-26.html</link>
+    <link>https://kiwimeowo.neocities.org/blog/2025/4th/12-26.html</link>
     <guid>https://kiwimeowo.neocities.org/blog/2025/4th/12-26.html</guid>
     <description>Where should they go?</description>
     <pubDate>Fri, 26 Dec 2025 08:00:00 GMT</pubDate>
   </item>
   <item>
     <title>Christmas</title>
-    <link href="https://kiwimeowo.neocities.org/blog/2025/4th/12-25.html">https://kiwimeowo.neocities.org/blog/2025/4th/12-25.html</link>
+    <link>https://kiwimeowo.neocities.org/blog/2025/4th/12-25.html</link>
     <guid>https://kiwimeowo.neocities.org/blog/2025/4th/12-25.html</guid>
     <description>It&#39;s Christmas</description>
     <pubDate>Thu, 25 Dec 2025 08:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>Dried up pens</title>
-    <link href="https://kiwimeowo.neocities.org/blog/2025/4th/12-23.html">https://kiwimeowo.neocities.org/blog/2025/4th/12-23.html</link>
-    <guid>https://kiwimeowo.neocities.org/blog/2025/4th/12-23.html</guid>
-    <description>Consequences of not using the pens I bought</description>
-    <pubDate>Tue, 23 Dec 2025 08:00:00 GMT</pubDate>
   </item>
 </channel>
 </rss>

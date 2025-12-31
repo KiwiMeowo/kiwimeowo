@@ -30,7 +30,7 @@
     <section class="wide">
       <article><h1>{{ title | safe }}</h1>
       <div class="inner min">
-      <h1>{{ subtitle }}</h1>
+      <h2>{{ subtitle }}</h2>
       <div class="statusbox">
         <p>Weather: {{ weather }}</p>
         <p>Listening to: {% if not nosong %}<a href="{{ songlink }}" target="_blank" title="{{ songcomment }}">{{ songname }}</a>{% else %}{{ nosong }}{% endif %}</p>

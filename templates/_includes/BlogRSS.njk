@@ -16,14 +16,14 @@
 <channel>
 <atom:link href="{{ permalink | htmlBaseUrl(metadata.base) }}" rel="self" />
   <title>{{ metadata.title }}</title>
-  <link href="{{ metadata.base | addPathPrefixToFullUrl }}">{{ metadata.base | addPathPrefixToFullUrl }}</link>
+  <link>{{ metadata.base | addPathPrefixToFullUrl }}</link>
   <description>{{ metadata.description }}</description>
   {%- set ten = collections.blog | reverse %}
   {%- for post in ten | limit(5) %}
   {%- set absolutePostUrl %}{{ post.url | htmlBaseUrl(metadata.base) }}{% endset %}
   <item>
     <title>{{ post.data.title }}</title>
-    <link href="{{ absolutePostUrl }}">{{ absolutePostUrl }}</link>
+    <link>{{ absolutePostUrl }}</link>
     <guid>{{ absolutePostUrl }}</guid>
     <description>{{ post.data.subtitle }}</description>
     <pubDate>{{ post.date | dateToRfc822 }}</pubDate>

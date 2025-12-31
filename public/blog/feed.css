@@ -45,7 +45,7 @@
 link{
     display:block;
 }
- link[href="https://kiwimeowo.neocities.org/"], description{
+ channel > link, description{
    margin: 15px 25px;
  }
  item{

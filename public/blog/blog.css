@@ -76,10 +76,14 @@ justify-content: space-around;
     margin: 15px 7.5px;
   }
 }
+.inner h2:first-child {
+  margin: 0;
+  font-size: 1.75em;
+}
 /*Status box in blog page*/
 .statusbox {
 	width:75%;
-	margin:auto;
+	margin: 0.75em auto;
 	display:grid;
 	grid-template: 'a b''c d';
 	grid-gap: 7.5px;
@@ -112,7 +116,7 @@ justify-content: space-around;
     background: linear-gradient(color-mix(in srgb, var(--gradient1), var(--gradient2)),var(--gradient2));
 }
 .bloginfo{
-  margin: 1.25em auto;
+  margin: 0 auto;
   width: 80%;
 }
 .blogtags{
