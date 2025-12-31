@@ -1,5 +1,5 @@
 :root{
-  --yellow:#f3e3b8;
+  --yellow:#ffedbd;
   --lteal:#8cacac;
   --highlightteal:#9cc3dfab;
   --teal:#3f6884;
@@ -214,6 +214,7 @@ h1{
   cursor:grabbing;
 }
 /*Sticky navigation links at the top of the page.*/
+header,article,footer{transition: background 0.5s,color 0.5s, text-decoration-color 0.5s, box-shadow 0.5s;}
 nav {
   position:fixed;
   z-index: 99;
