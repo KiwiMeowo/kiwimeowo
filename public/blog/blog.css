@@ -118,6 +118,9 @@ justify-content: space-around;
 .bloginfo{
   margin: 0 auto;
   width: 80%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .blogtags{
   font-size: 1.1em;
@@ -129,11 +132,12 @@ justify-content: space-around;
   display: inline-block;
 }
 .blogwords{
-  float:right;
   opacity: 0.75;
   font-size: 0.75em;
   text-decoration: underline dashed;
+  text-decoration-thickness: auto;
   text-decoration-thickness: 1px;
+  margin-left: auto;
 }
 @media(max-width:800px){
   .statusbox {
