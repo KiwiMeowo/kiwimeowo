@@ -902,7 +902,7 @@ if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="
           var parser = new DOMParser();
           var doc = parser.parseFromString(html, "text/html");
           var newdrawing = doc.querySelector('script[data-id="fetch"]').innerText;
-          eval(newdrawing);
+          var drawings=JSON.parse(newdrawing.replace(/drawings=/,'').replace('];',']')) 
           newart=drawings[0];
           if (newart.Album!=""){
           var button = document.createElement("a");
