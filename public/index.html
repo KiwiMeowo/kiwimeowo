@@ -547,6 +547,10 @@ function updateClocks() {
     hkdate[1].innerHTML = dateToText(new Date(new Date().getTime()+offset));
 		hktime[0].innerHTML = timeToText(new Date(new Date().getTime()+offset));
     hktime[1].innerHTML = timeToText(new Date(new Date().getTime()+offset));
+    if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="auto"){
+      document.body.className='';
+      autoTheme();
+      }
 }
 function startClocks() {
 	window.arrOffsets = 0;
