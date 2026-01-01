@@ -586,6 +586,7 @@ function autoTheme(){
 }
 startClocks();
 if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="auto"){
+  let classtimeset=hktime[0].innerText.split(':')[0];
   if (classtimeset <10 && classtimeset >5){
       document.body.classList.add('morning');
       chattable.initialize({stylesheet: `chattable/morning.css`});
