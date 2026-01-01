@@ -83,8 +83,7 @@ html{
    display: inline-block;
    border-radius: 15px 15px 15px 2px;
    position: relative}
- .msgBody {
-   text-align: justify}
+
  #input, #nameEntry {
    background-color: var(--teal);
    color:var(--yellow);
@@ -123,10 +122,6 @@ width:15px;}
  .msgWrapper {
    width: 100%;
 }
- .msgWrapper:has(.received) {
-   justify-content: flex-start}
- .msgWrapper:has(.sent) {
-   justify-content: flex-end}
  .pinned {
    position: relative}
  .pinned:after {
