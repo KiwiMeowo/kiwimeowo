@@ -525,6 +525,7 @@ translate:1px 1px;
                 autoTheme();
               } else{
                 document.body.classList.add(this.innerText.toLowerCase());
+                chattable.reinitialize({stylesheet: `chattable/${this.innerText.toLowerCase()}.css`});
               }
               localStorage.setItem("KiwiTheme",this.innerText.toLowerCase());
             });
@@ -572,16 +573,28 @@ function startClocks() {
 	setInterval(updateClocks, 1000);
 }
 
-function autoTheme(){
+function autoTheme(chattable=false){
   let classtimeset=hktime[0].innerText.split(':')[0];
     if (classtimeset <10 && classtimeset >5){
       document.body.classList.add('morning')
+      if(chattable==true){
+        chattable.reinitialize({stylesheet: `chattable/morning.css`});
+      }
     } else if (classtimeset >=10 && classtimeset<18){
       document.body.classList.add('afternoon')
+      if(chattable==true){
+        chattable.reinitialize({stylesheet: `chattable/afternoon.css`});
+      }
     }else if (classtimeset==18){
       document.body.classList.add('sunset')
+      if(chattable==true){
+        chattable.reinitialize({stylesheet: `chattable/sunset.css`});
+      }
     }else if (classtimeset>18||classtimeset<=5){
       document.body.classList.add('night')
+      if(chattable==true){
+        chattable.reinitialize({stylesheet: `chattable/night.css`});
+      }
     }
 }
 startClocks();
