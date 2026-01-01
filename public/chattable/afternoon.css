@@ -1,0 +1,211 @@
+:root{
+  --yellow:#ffedbd;
+  --lteal:#8cacac;
+  --highlightteal:#9cc3dfab;
+  --teal:#3f6884;
+  --blue:#2d3758;
+  --dblue:#1b1d4c;
+  --bg:#637b8759, #7750c359 150%;
+  --shadow:#1a38748c;
+  --gradient1:#8dc5ee78;
+  --gradient2:#aecee633;
+  --gradient:linear-gradient(var(--gradient1),var(--gradient2));
+  --dropshadow:drop-shadow(2px 2px 1px var(--shadow));
+  --dropshadowdown:drop-shadow(1px 1px 1px var(--shadow));
+  --down:1px 1px;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("https://kiwimeowo.neocities.org/Fraunces.ttf");
+}
+html{
+  font-family: "Fraunces";
+  font-size: 0.90em;
+  color:var(--blue);
+}
+:where(#top_banner){color:var(--yellow);}
+#background{
+  padding:5px;
+}
+.allMessages {
+   display: block;
+   margin: 5px;
+   padding: 5px 10px;
+   max-width: 80%;
+   clear: both;
+   background: var(--gradient);
+   color: var(--blue);
+   filter:var(--dropshadow);
+  border:1px solid var(--teal);}
+ .allMessages:hover {
+   filter: var(--dropshadowdown);
+  translate: var(--down);}
+.allMessages.containsOnlyEmojis .emoji {
+    height: 50px}
+.allMessages.pm {
+  padding-top: 26px}
+.allMessages.pm:before {
+  content: "Private Message";
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 16px;
+  width: calc(100% - 26px);
+  line-height: 16px;
+  position: absolute;
+  right: 26px;
+  top: 5px;
+  font-size: 12px;
+  font-weight: bolder;
+  opacity: 0.5}
+.allMessages.pm:after {
+  content: " ";
+  display: block;
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-image: url("/media/lock.svg");
+  background-size: 100% 100%;
+  opacity: 0.5}
+ .sent {
+  margin-left: auto;
+   border-radius: 15px 15px 2px 15px;
+   position: relative;
+  width: fit-content;}
+.senderInfo {
+   font-style: italic;
+   color: var(--blue);
+   font-weight: 500}
+ .recieved {
+   display: inline-block;
+   border-radius: 15px 15px 15px 2px;
+   position: relative}
+ .msgBody {
+   text-align: justify}
+ #input, #nameEntry {
+   background-color: var(--teal);
+   color:var(--yellow);
+   border-radius: 0}
+ #input:empty::before {
+   content: "Send a message...";
+  color:var(--yellow);
+opacity: 0.5;}
+ .owner {
+   background-color: transparent;
+   background-image: url('/media/owner.png');
+   background-size: 100% 100%;
+  height:15px;
+width:15px;}
+ .mod {
+   background-color: transparent;
+   background-image: url('/media/mod.png');
+   background-size: 100% 100%;
+   height:15px;
+width:15px;}
+ #timestamp {
+   font-size: 0.75em;
+   color: var(--blue);
+   width: fit-content;
+   margin: 0 5px;
+   }
+   .sent + #timestamp{
+    margin-left: auto;
+   }
+ #textInput {
+   background-color: #FFF;
+   background-image: url('/media/doodle.jpg');
+   background-size: 100% auto;
+   background-attachment: local;
+   background-repeat: repeat}
+ .msgWrapper {
+   width: 100%;
+}
+ .msgWrapper:has(.received) {
+   justify-content: flex-start}
+ .msgWrapper:has(.sent) {
+   justify-content: flex-end}
+ .pinned {
+   position: relative}
+ .pinned:after {
+   display: none;
+   content: ""}
+.pinned > .allMessages {
+  position: relative}
+.pinned > .allMessages::after {
+   display: inline-block;
+   position: absolute;
+   right: 2px;
+   top: 2px;
+   content: "📌"}
+#top_banner {
+  background: var(--teal)}
+#replyBanner {
+  display: inline-block;
+  background-color: var(--teal);
+  color:var(--yellow);
+  border-radius: 5px 5px 0 0;
+  margin-left: 15px;
+  padding: 2px 10px;
+left:auto;
+right:0;}
+#emojiTray{background: #ffedbdAA;}
+#emojiTray h3{
+  font-weight:600;
+  color: var(--blue);
+  text-shadow: 2px 2px var(--lteal);}
+.emojiInGrid{height: 2em;}
+:where(#emojiTrayToggle),:where(#settings){
+  background-color: var(--yellow);
+  mask-image: url(/media/emoji.png);
+  mask-size: contain;
+  background-image: none;
+}
+:where(#settings){mask-image: url(/media/settings.png);}
+#is_typing {
+  height: 15px;
+  border-radius: 7px;
+  background-color: #EEE;
+  box-shadow: 1px 1px 1px #777}
+#is_typing > span {
+  background-color: #777}
+pre:has(>code){
+  margin: 5px;
+  background-color: rgba(0, 0, 0, 0.25)}
+#settingsWindow{background:#ffedbd55;}
+#settingsMenu{
+  p{
+    margin:5px 0;
+    background: var(--gradient);
+    filter:var(--dropshadow);
+    padding:5px;
+    border-radius: 5px;
+  }
+  label{
+    margin:0;
+  }
+  h2{
+    font-weight:600;
+  color: var(--blue);
+  text-shadow: 2px 2px var(--lteal);
+  }
+#buttons button{
+    background: linear-gradient(0.25turn, var(--gradient1), var(--gradient2));
+  border: none;
+  border-radius: 0 10px 10px 0;
+  min-width: 60px;
+  color: var(--blue);
+  border-left: 3px solid var(--blue);
+  margin: 0 5px;
+  font-size: initial;
+  padding:5px 7.5px;
+  filter: var(--dropshadow);
+  }
+  hr{
+    border:0;
+  border-top: 2px dashed var(--lteal);
+  border-right: 2px dashed var(--lteal);
+  margin: 15px auto;
+  }
+}

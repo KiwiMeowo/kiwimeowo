@@ -1,15 +1,14 @@
 :root{
-  --yellow:#ffedbd;
-  --lteal:#8cacac;
-  --highlightteal:#9cc3dfab;
-  --teal:#3f6884;
-  --blue:#2d3758;
-  --dblue:#1b1d4c;
-  --bg:#637b8759, #7750c359 150%;
+    --yellow:#E9E8DB;
+  --boxdark:#EAD9BA;
+  --teal:#306296;
+  --blue: #1F2E5F;
+  --dblue: #0D104C;
+  --highlightteal: #9bc3d28a;
+  --gradient1: #95ddee78;
+  --gradient2: #a6ddee33;
+  --bg:#61747759, #7970da59 150%;
   --shadow:#1a38748c;
-  --boxdark:#b9907796;
-  --gradient1:#8dc5ee78;
-  --gradient2:#aecee633;
   --gradient:linear-gradient(var(--gradient1),var(--gradient2));
   --dropshadow:drop-shadow(2px 2px 1px var(--shadow));
   --dropshadowdown:drop-shadow(1px 1px 1px var(--shadow));
@@ -22,14 +21,16 @@
 html{
   font-family: "Fraunces";
   font-size: 0.90em;
+  color:var(--blue);
 }
+:where(#top_banner){color:var(--yellow);}
 #background{
   padding:5px;
 }
 .allMessages {
    display: block;
    margin: 5px;
-   padding: 10px;
+   padding: 5px 10px;
    max-width: 80%;
    clear: both;
    background: var(--gradient);
@@ -94,11 +95,15 @@ opacity: 0.5;}
  .owner {
    background-color: transparent;
    background-image: url('/media/owner.png');
-   background-size: 100% 100%}
+   background-size: 100% 100%;
+  height:15px;
+width:15px;}
  .mod {
    background-color: transparent;
    background-image: url('/media/mod.png');
-   background-size: 100% 100%}
+   background-size: 100% 100%;
+   height:15px;
+width:15px;}
  #timestamp {
    font-size: 0.75em;
    color: var(--blue);
@@ -137,17 +142,17 @@ opacity: 0.5;}
 #top_banner {
   background: var(--teal)}
 #replyBanner {
-  font-size: 10pt;
   display: inline-block;
-  background-color: #777;
-  border-radius: 8px 8px 0 0;
-  box-shadow: 1px 1px 3px #AAA;
+  background-color: var(--teal);
+  color:var(--yellow);
+  border-radius: 5px 5px 0 0;
   margin-left: 15px;
-  padding: 2px;
-  padding-right: 10px;
-  padding-left: 10px}
-#emojiTray{background: var(--gradient);}
-#emojiTray h3{font-weight:600;
+  padding: 2px 10px;
+left:auto;
+right:0;}
+#emojiTray{background: #ffedbdAA;}
+#emojiTray h3{
+  font-weight:600;
   color: var(--blue);
   text-shadow: 2px 2px var(--lteal);}
 .emojiInGrid{height: 2em;}
@@ -168,14 +173,39 @@ opacity: 0.5;}
 pre:has(>code){
   margin: 5px;
   background-color: rgba(0, 0, 0, 0.25)}
+#settingsWindow{background:#ffedbd55;}
 #settingsMenu{
   p{
     margin:5px 0;
     background: var(--gradient);
     filter:var(--dropshadow);
-    padding:2px 5px;
+    padding:5px;
+    border-radius: 5px;
   }
   label{
     margin:0;
+  }
+  h2{
+    font-weight:600;
+  color: var(--blue);
+  text-shadow: 2px 2px var(--lteal);
+  }
+#buttons button{
+    background: linear-gradient(0.25turn, var(--gradient1), var(--gradient2));
+  border: none;
+  border-radius: 0 10px 10px 0;
+  min-width: 60px;
+  color: var(--blue);
+  border-left: 3px solid var(--blue);
+  margin: 0 5px;
+  font-size: initial;
+  padding:5px 7.5px;
+  filter: var(--dropshadow);
+  }
+  hr{
+    border:0;
+  border-top: 2px dashed var(--lteal);
+  border-right: 2px dashed var(--lteal);
+  margin: 15px auto;
   }
 }

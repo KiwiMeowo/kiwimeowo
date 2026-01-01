@@ -501,7 +501,7 @@ translate:1px 1px;
         <div class="inner">
           <iframe src="https://iframe.chat/embed?chat=KiwiChatbox" id="chattable" style="width: -moz-available;width: -webkit-fill-available;height: 350px;border: 2px solid var(--teal);border-radius: 5px;"></iframe>
           <script>
-            chattable.initialize({stylesheet: "chattable.css"});
+            
           </script>
         </div>
       </article>
@@ -586,9 +586,22 @@ function autoTheme(){
 }
 startClocks();
 if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="auto"){
-  autoTheme();
+  if (classtimeset <10 && classtimeset >5){
+      document.body.classList.add('morning');
+      chattable.initialize({stylesheet: `chattable/morning.css`});
+    } else if (classtimeset >=10 && classtimeset<18){
+      document.body.classList.add('afternoon');
+      chattable.initialize({stylesheet: `chattable/afternoon.css`});
+    }else if (classtimeset==18){
+      document.body.classList.add('sunset');
+      chattable.initialize({stylesheet: `chattable/sunset.css`});
+    }else if (classtimeset>18||classtimeset<=5){
+      document.body.classList.add('night');
+      chattable.initialize({stylesheet: `chattable/night.css`});
+    }
 }else{
   document.body.classList.add(localStorage.getItem("KiwiTheme"));
+  chattable.initialize({stylesheet: `chattable/${localStorage.getItem("KiwiTheme")}.css`});
 }
 </script>
       </article>
