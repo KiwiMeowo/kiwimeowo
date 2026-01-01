@@ -290,7 +290,7 @@ button.navcoll.act{
 .open a{
   cursor:pointer;
 }
-.open div:first-child {
+.openinner {
     padding: 7.5px 0px;
     border-top: solid 1px #ffffff78;
 }

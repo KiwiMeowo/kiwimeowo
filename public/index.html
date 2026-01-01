@@ -244,7 +244,7 @@ translate:1px 1px;
   <nav>
     <button class="navcoll">Navbar</button>
     <div class="open">
-      <div>
+      <div class="openinner">
         <a href="index.html" style="--svg:url(assets/home.svg)">Home</a><br>
         <a href="blog/index.html" style="--svg:url(assets/book.svg)">Blog</a><br>
         <a href="art/index.html" style="--svg:url(assets/art.svg)">Art</a><br>
@@ -286,7 +286,7 @@ translate:1px 1px;
       <article>
         <h1>What's up</h1>
         <div class="inner min">
-          <img src="art/Album19.jpg" style="border:1px solid;max-width:100%;" alt="Drawing of Grey, Solar, Jaspers and Claire sleeping on a grass bed, and Bun's legs">
+          <img src="art/AlbumCover/Album19.jpg" style="border:1px solid;max-width:100%;" alt="Drawing of Grey, Solar, Jaspers and Claire sleeping on a grass bed, and Bun's legs">
           <div class="text">
             <p>Welcome to<u>&nbsp;Kiwi's&nbsp;</u>website, this is where I will post random stuff, like fandom rambles and original art stuff. As a socially-awkward person, I found it extremely difficult to express myself, even on the internet. Fortunately, I found sharing on my own site is way less stressful, and unlike in other social media, I don't have to worry about likes or views, it feels more comfortable talking about my more personal stuff. So here you might understand me more! <emote class="nya" title=":nya:"></emote>
             </p>
@@ -336,7 +336,7 @@ translate:1px 1px;
           <div style="border: 1px double;border-radius: 5px;border-width: 7.5px;padding: 5px 15px;">
             <div id="autobox">
               <div id="auto1">
-                <h2><a href="art/2025.html">New Art:</a> <a href="art/feed.xml" target="_blank"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 455.731 455.731" xml:space="preserve" fill="#000000" style="height:1em;border-radius:2.5px;" class="button"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g><rect x="0" y="0" style="fill:var(--blue);" width="455.731" height="455.731"></rect><g><path style="fill:var(--yellow);" d="M296.208,159.16C234.445,97.397,152.266,63.382,64.81,63.382v64.348 c70.268,0,136.288,27.321,185.898,76.931c49.609,49.61,76.931,115.63,76.931,185.898h64.348 C391.986,303.103,357.971,220.923,296.208,159.16z"></path><path style="fill:var(--yellow);" d="M64.143,172.273v64.348c84.881,0,153.938,69.056,153.938,153.939h64.348 C282.429,270.196,184.507,172.273,64.143,172.273z"></path><circle style="fill:var(--yellow);" cx="109.833" cy="346.26" r="46.088"></circle></g></g></g></svg></a></h2>
+                <h2><a href="art/2026.html">New Art:</a> <a href="art/feed.xml" target="_blank"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 455.731 455.731" xml:space="preserve" fill="#000000" style="height:1em;border-radius:2.5px;" class="button"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g><rect x="0" y="0" style="fill:var(--blue);" width="455.731" height="455.731"></rect><g><path style="fill:var(--yellow);" d="M296.208,159.16C234.445,97.397,152.266,63.382,64.81,63.382v64.348 c70.268,0,136.288,27.321,185.898,76.931c49.609,49.61,76.931,115.63,76.931,185.898h64.348 C391.986,303.103,357.971,220.923,296.208,159.16z"></path><path style="fill:var(--yellow);" d="M64.143,172.273v64.348c84.881,0,153.938,69.056,153.938,153.939h64.348 C282.429,270.196,184.507,172.273,64.143,172.273z"></path><circle style="fill:var(--yellow);" cx="109.833" cy="346.26" r="46.088"></circle></g></g></g></svg></a></h2>
                 <center style="position: relative;">
                   <div class="paper" style="rotate: 340deg;top: 25px;left: -5px;opacity: 0.75;"></div>
                   <div class="paper" style="rotate: 350deg;"></div>
@@ -894,15 +894,48 @@ if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="
   </footer>
   <script>
     function fetchHtml() {
-      fetch('art/2025.html', { cache: "no-store" })
+      fetch('art/2026.html', { cache: "no-store" })
         .then((response) => {
           return response.text();
         })
         .then((html) => {
           var parser = new DOMParser();
           var doc = parser.parseFromString(html, "text/html");
-          var newdrawing = doc.querySelector('.col').innerHTML;
-          document.getElementById("new").innerHTML = newdrawing;
+          var newdrawing = doc.querySelector('script[data-id="fetch"]').innerText;
+          eval(newdrawing);
+          newart=drawings[0];
+          if (newart.Album!=""){
+          var button = document.createElement("a");
+          button.setAttribute("href",newart.Album)
+        } else{
+          var button=document.createElement("button");
+        }
+        button.classList.add("artborder");
+        var img = document.createElement("img");
+        img.setAttribute("loading",'lazy');
+        link=newart.Link;
+        if(link.includes('dl=0')){
+          link=link.replace("dl=0", "raw=1");
+        }
+        img.setAttribute("alt",newart.Alt)
+        img.setAttribute("src",link);
+        date=link.split("_");
+        date=date[date.length-1];
+        date=date.split(".")[0];
+        if(date.split("-")[2]!=undefined){
+          date=`${date.split("-")[2]} ${date.split("-")[1]} ${date.split("-")[0]}`
+          img.setAttribute("title",newart.Comment+" ("+date+")");
+        }else{
+          img.setAttribute("title",newart.Comment);
+        }
+        if (newart.Style!=""){
+          img.setAttribute("style",newart.Style);
+        }
+        if (newart.Censor==true){
+          button.classList.add("censor");
+        }
+        button.append(img);
+        document.querySelector('#new').append(button);
         })
         .catch(error => {
           document.getElementById("new").innerHTML = "error";

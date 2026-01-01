@@ -7,6 +7,13 @@
   <link>https://kiwimeowo.neocities.org/</link>
   <description>I wonder how many people would follow my blogs using this feed...</description>
   <item>
+    <title>Yearly cleaning</title>
+    <link>https://kiwimeowo.neocities.org/blog/2026/1st/01-01.html</link>
+    <guid>https://kiwimeowo.neocities.org/blog/2026/1st/01-01.html</guid>
+    <description>Somewhat of a routine</description>
+    <pubDate>Thu, 01 Jan 2026 08:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>2025 Year Review</title>
     <link>https://kiwimeowo.neocities.org/blog/2025/4th/12-31.html</link>
     <guid>https://kiwimeowo.neocities.org/blog/2025/4th/12-31.html</guid>
@@ -33,13 +40,6 @@
     <guid>https://kiwimeowo.neocities.org/blog/2025/4th/12-26.html</guid>
     <description>Where should they go?</description>
     <pubDate>Fri, 26 Dec 2025 08:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>Christmas</title>
-    <link>https://kiwimeowo.neocities.org/blog/2025/4th/12-25.html</link>
-    <guid>https://kiwimeowo.neocities.org/blog/2025/4th/12-25.html</guid>
-    <description>It&#39;s Christmas</description>
-    <pubDate>Thu, 25 Dec 2025 08:00:00 GMT</pubDate>
   </item>
 </channel>
 </rss>

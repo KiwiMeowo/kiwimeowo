@@ -1,0 +1,68 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <title>KiwiMeowo's Art Gallery</title>
+  <link rel="icon" type="image/x-icon" href="../favicon.ico?">
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/dressup/achievement.css" rel="stylesheet" type="text/css" media="all">
+  <link href="art.css" rel="stylesheet" type="text/css" media="all">
+  <link href="../style-my-tooltips.css" rel="stylesheet" type="text/css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script src="../jquery.style-my-tooltips.js"></script>
+</head>
+  <!-- No need to change the dl=0 to raw=1
+  Put link in Album if the art should link to an album/page
+      {"Link":"Link",
+        "Comment":"Comment",
+        "Alt":"Alt",
+        "Style":"",
+        "Album":"",
+        "Censor":false}, -->
+<script data-id="fetch">
+    drawings=[
+      {"Link":"https://www.dropbox.com/scl/fi/lxgrm4cmfyjajyjcswl60/IMG_5839_2026-Jan-01.webp?rlkey=aanb085ui6c94prj603x593wj&dl=0",
+        "Comment":"Happy New Year! From now on, I will be using a Javascript code that turns a list of object variables containing my art into viewable HTML boxes, so no need to manually check if there's 18 images in each window and add a new one! (Can't explain in simple terms)",
+        "Alt":"Happy Cosmos under firework",
+        "Style":"scale: 2.5; translate: 10% 20%; object-position: center top;",
+        "Album":"",
+        "Censor":false}
+    ];
+  </script>
+<body><span id="top"></span>
+  <nav>
+    <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
+    <a href="index.html">Back</a>
+  </nav>
+
+  <main>
+    <section class="wide">
+      <article>
+        <h1>2026 Art</h1>
+        <div class="inner">
+          <center>
+            <p>Hover to see my comments, click to view full image/album! Click outside the content
+              or click on the close button to close image viewer.</p>
+          </center>
+          <div class="pagenum">
+            <span class="pagenum2">Pages: </span>
+            <span class="pagenum2"></span>
+          </div>
+          <!--Thumbnail editing code-->
+          <div id="thumbnail"></div>
+          <div id="fra">
+          </div>
+          <div class="arttop"><a href="#top">Back to top</a></div>
+        </div>
+      </article>
+    </section>
+  </main>
+  <script src="ArtLoad.js"></script>
+  <script src="../viewer.js"></script>
+  <script src="artgallery.js"></script>
+  <script src="/dressup/GetAchievement.js"></script>
+  <script src="thumbnail.js"></script>
+</body>
+</html>

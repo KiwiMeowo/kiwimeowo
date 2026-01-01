@@ -107,6 +107,11 @@ background: var(--gradient);
 }
 #thumbnail input{
   width: 50px;
+  height: fit-content;
+  margin: 0 5px;
+}
+#thumbnail center{
+  color:var(--blue);
 }
 @media (max-width: 1200px){
   .col {

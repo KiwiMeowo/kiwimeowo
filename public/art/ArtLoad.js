@@ -22,6 +22,7 @@ for (x=Math.ceil(drawings.length/18)-1;x>=0;x--){
         if(link.includes('dl=0')){
           link=link.replace("dl=0", "raw=1");
         }
+        img.setAttribute("alt",drawings[y+18*x].Alt)
         img.setAttribute("src",link);
         date=link.split("_");
         date=date[date.length-1];
@@ -32,13 +33,13 @@ for (x=Math.ceil(drawings.length/18)-1;x>=0;x--){
         }else{
           img.setAttribute("title",drawings[y+18*x].Comment);
         }
-        button.append(img);
         if (drawings[y+18*x].Style!=""){
           img.setAttribute("style",drawings[y+18*x].Style);
         }
         if (drawings[y+18*x].Censor==true){
           button.classList.add("censor");
         }
+        button.append(img);
         col.append(button);
         page.append(col);
       }
