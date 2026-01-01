@@ -12,6 +12,7 @@
   <!-- <link href="christmas.css" rel="stylesheet" type="text/css" media="all" /> -->
   <link href="style-my-tooltips.css" rel="stylesheet" type="text/css" />
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script src="https://iframe.chat/scripts/main.min.js"></script>
   <style>
 #counter img {filter: hue-rotate(-15deg) saturate(0.5);image-rendering: pixelated;}
 nav, section .theme{display:none}
@@ -216,6 +217,10 @@ translate:1px 1px;
 #playbar .svg:hover{background:#bcb9d6;translate:var(--down)}
 #playbar a{filter: var(--dropshadow);text-decoration: none;}
 #playbar a:hover{filter: var(--dropshadowdown);}
+.log{
+  margin: 0;
+  padding-left: 15px;
+}
 @keyframes spin{0%{rotate:0deg}100%{rotate:360deg}}
 #hrt{display:none;}
 @media(max-width:1200px) and (min-width:1000px){
@@ -494,7 +499,10 @@ translate:1px 1px;
       <article>
         <h1>Kiwi Chatbox</h1>
         <div class="inner">
-          <iframe src="https://www3.cbox.ws/box/?boxid=3530699&boxtag=Cpo98c" width="100%" height="350" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+          <iframe src="https://iframe.chat/embed?chat=KiwiChatbox" id="chattable" style="width: -moz-available;width: -webkit-fill-available;height: 350px;border: 2px solid var(--teal);border-radius: 5px;"></iframe>
+          <script>
+            chattable.initialize({stylesheet: "chattable.css"});
+          </script>
         </div>
       </article>
     </aside>
