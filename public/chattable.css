@@ -17,7 +17,7 @@
 }
 @font-face {
   font-family: "Fraunces";
-  src: url("Fraunces.ttf");
+  src: url("https://kiwimeowo.neocities.org/Fraunces.ttf");
 }
 html{
   font-family: "Fraunces";
@@ -30,9 +30,10 @@ html{
    display: block;
    margin: 5px;
    padding: 10px;
-   font-size: 10pt;
    max-width: 80%;
    clear: both;
+   background: var(--gradient);
+   color: var(--blue);
    filter:var(--dropshadow);
   border:1px solid var(--teal);}
  .allMessages:hover {
@@ -70,8 +71,6 @@ html{
  .sent {
   margin-left: auto;
    border-radius: 15px 15px 2px 15px;
-   background: var(--gradient);
-   color: var(--blue);
    position: relative;
   width: fit-content;}
 .senderInfo {
@@ -81,12 +80,7 @@ html{
  .recieved {
    display: inline-block;
    border-radius: 15px 15px 15px 2px;
-   background-color: #04b58f;
-   color: #FFF;
    position: relative}
- .recieved > .senderInfo {
-   font-style: italic;
-   color: #02755d}
  .msgBody {
    text-align: justify}
  #input, #nameEntry {
