@@ -40,9 +40,9 @@ imagescale.value=document.querySelectorAll(".artborder img")[value].style.scale;
   imagex.value="0";
   imagey.value="0";
 } else{
-  imagex.value=document.querySelectorAll(".artborder img")[value].style.translate.split(" ")[0].replace("%","").replace("px","");
+  imagex.value=document.querySelectorAll(".artborder img")[value].style.translate.split(" ")[0].replace(/%|px/,"");
   if(document.querySelectorAll(".artborder img")[value].style.translate.split(" ")[1]!=undefined){
-    imagey.value=document.querySelectorAll(".artborder img")[value].style.translate.split(" ")[1].replace("%","").replace("px","");
+    imagey.value=document.querySelectorAll(".artborder img")[value].style.translate.split(" ")[1].replace(/%|px/,"");
   } else{
     imagey.value="0";
   }
