@@ -7,17 +7,24 @@
     <link rel="icon" type="image/x-icon" href="../favicon.ico?">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="blog.css" type="text/css" media="all">
     <link href="../style-my-tooltips.css" rel="stylesheet" type="text/css">
     <link type="text/css" rel="stylesheet" href="../comment-widget-pink.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="../jquery.style-my-tooltips.js"></script>
     <style>
-    main{background: linear-gradient(#0b263b75, #1f084e73 150%), url(/assets/fancy.png);}
-    :root{--yellow:#E2DBC7;--lteal:#9db5b7;--highlightteal:#B7CBD6;--teal:#1C3F5C;--blue:#0E1A36;--dblue:#000527;--shadow:#1b357082;}
+      .flex{
+        display:flex;
+        flex-wrap: wrap;
+      }
+      .flexbox{
+        max-width:25%;
+        flex: 0 0 25%;
+      }
     .inner a{
     display: block;
-    padding: 7.5px;
-    margin: 7.5px 200px;
+    padding: 5px;
+    margin: 7.5px 10px;
     font-size: 1.25em;
     text-align: center;
     border: 3px solid;
@@ -59,13 +66,14 @@ a u {
 .inner .lock u{
   text-decoration: none;
 }
-@media(max-width:900px){
-  .inner a{
-    margin:7.5px auto;
-  }
-}
 h1,h2{
     text-align:center;
+}
+@media(max-width:900px){
+      .flexbox{
+        max-width:50%;
+        flex: 0 0 50%;
+      }
 }
     </style>
   </head>
@@ -78,26 +86,34 @@ h1,h2{
     <section class="wide">
       <article><h1>Where do you wanna go?</h1>
       <div class="inner min">
-        <h2>2026</h2>
+        <div class="flex">
+          <div class="flexbox">
+            <h2>2026</h2>
         <a class="lock"><u>Oct - Dec</u></a>
         <a class="lock"><u>Jul - Sep</u></a>
         <a class="lock"><u>Apr - Jun</u></a>
         <a href="2026/1st/index.html"><u>Jan - Mar</u></a>
         <hr>
+      </div>
+      <div class="flexbox">
         <h2>2025</h2>
         <a href="2025/4th/index.html"><u>Oct - Dec</u></a>
         <a href="2025/3rd/index.html"><u>Jul - Sep</u></a>
         <a href="2025/2nd/index.html"><u>Apr - Jun</u></a>
         <a href="2025/1st/index.html"><u>Jan - Mar</u></a>
         <hr>
-        <h2>2024</h2>
+      </div>
+        <div class="flexbox">
+          <h2>2024</h2>
         <a href="2024/4th/index.html"><u>Oct - Dec</u></a>
         <a href="2024/3rd/index.html"><u>Jul - Sep</u></a>
         <a href="2024/2nd/index.html"><u>Apr - Jun</u></a>
         <a href="2024/1st/index.html"><u>Jan - Mar</u></a>
         <hr>
-        <h2>2023</h2>
-        <a href="2023/index.html"><u>Full</u></a>
+        </div>
+        <div class="flexbox"><h2>2023</h2>
+        <a href="2023/index.html"><u>Full</u></a></div>
+        </div>
       </div>
     </article>
     </section>
