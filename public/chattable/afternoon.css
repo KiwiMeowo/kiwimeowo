@@ -105,7 +105,7 @@ width:15px;}
 width:15px;}
  #timestamp {
    font-size: 0.75em;
-   color: var(--blue);
+   color: var(--teal);
    width: fit-content;
    margin: 0 5px;
    }
