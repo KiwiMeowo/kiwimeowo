@@ -1,4 +1,4 @@
-body.morning{
+body.morning,body:has(input[id*='Morning']:checked){
   --yellow:#E9E8DB;
   --boxdark:#EAD9BA;
   --teal:#306296;
@@ -9,12 +9,12 @@ body.morning{
   --gradient2: #a6ddee33;
   --bg:#61747759, #7970da59 150%;
 }
-body.morning header {
+body.morning header,body:has(input[id*='Morning']:checked) header {
   background: linear-gradient(rgba(213, 249, 255, 0.11), #ffc1f533), url(header/Morning.webp);
   background-size: cover;
   background-position: 0 35%;
   }
-body.sunset{
+body.sunset,body:has(input[id*='Sunset']:checked){
 --yellow: #fde6d1;
   --lteal: #a3a8e8;
   --highlightteal: #a6b7df61;
@@ -27,13 +27,13 @@ body.sunset{
   --gradient1: #8db3ee78;
   --gradient2: #fbcff433;
 }
-body.sunset header {
+body.sunset header,body:has(input[id*='Sunset']:checked) header{
   background: linear-gradient(rgba(213, 249, 255, 0.11), #ffc1f533), url(header/Sunset.webp);
   background-size: cover;
   background-position: 0 35%;
   }
 
-  body.night{
+  body.night,body:has(input[id*='Night']:checked){
     --teal:#365489;
     --yellow:#C7B6CE;
     --blue:#0C174B;
@@ -44,11 +44,11 @@ body.sunset header {
   --lteal:#7485B1;
   --highlightteal:#7f93df78;
   }
-body.night header {
+body.night header,body:has(input[id*='Night']:checked) header {
   background: linear-gradient(rgba(213, 249, 255, 0.11), #ffc1f533), url(header/Night.webp);
   background-size: cover;
   background-position: 0 11%;
   }
-body.night .draggable, body.night img[src*='Album']{
+body.night .draggable, body.night img[src*='Album'],body:has(input[id*='Night']:checked) .draggable,body:has(input[id*='Night']:checked) img[src*='Album']{
   filter: drop-shadow(0 0 5px #ffd9fe4f) drop-shadow(0 0 10px #ffd9fe4f);
 }

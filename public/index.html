@@ -192,17 +192,25 @@ content: '';
     scale:1.1;
   content: "[Playing ♪]";
   margin-left: 10px;}
-.theme button {
+.theme label {
   background: var(--gradient);
   border: 1px solid var(--teal);
   box-shadow: 2px 2px 2px var(--shadow);
   border-radius: 5px;
   cursor:pointer;
   margin: 2px;
+  font-size: 0.9em;
+  padding:0 5px;
+  display: inline-block;
+  line-height: 1.25;
 }
-.theme button:hover{
+.theme input{
+  display: none;
+}
+.theme label:hover,.theme input:checked + label{
 box-shadow: 1px 1px 2px var(--shadow);
 translate:1px 1px;
+filter: hue-rotate(20deg) saturate(2) brightness(0.7);
 }
   @keyframes note{
   0%{
@@ -285,7 +293,7 @@ translate:1px 1px;
           <div class="hkdate" style="font-size:1.25em;color:var(--teal);opacity: 0.75;"></div>
         <div class="hktime" style="font-size: 2.4em;line-height: 1.1;"></div>
         </div>
-          <center><button>Auto</button><button>Morning</button><button>Afternoon</button><br><button>Sunset</button><button>Night</button></center>
+          <center><input type="radio" id="Auto2" name="theme"><label for="Auto2">Auto</label><input type="radio" id="Morning2" name="theme"><label for="Morning2">Morning</label><input type="radio" id="Afternoon2" name="theme"><label for="Afternoon2">Afternoon</label><br><input type="radio" id="Sunset2" name="theme"><label for="Sunset2">Sunset</label><input type="radio" id="Night2" name="theme"><label for="Night2">Night</label></center>
         </div>
       </article>
       <article>
@@ -514,20 +522,19 @@ translate:1px 1px;
             <div class="hkdate" style="font-size:1.25em;color:var(--teal);opacity: 0.75;"></div>
         <div class="hktime" style="font-size: 2.4em;line-height: 1.1;"></div>
         </div>
-          <center><button>Auto</button><button>Morning</button><button>Afternoon</button><br><button>Sunset</button><button>Night</button></center>
+          <center><input type="radio" id="Auto" name="theme"><label for="Auto">Auto</label><input type="radio" id="Morning" name="theme"><label for="Morning">Morning</label><input type="radio" id="Afternoon" name="theme"><label for="Afternoon">Afternoon</label><br><input type="radio" id="Sunset" name="theme"><label for="Sunset">Sunset</label><input type="radio" id="Night" name="theme"><label for="Night">Night</label></center>
         </div>
         <script>
-          var timeset=document.querySelectorAll('.theme button');
+          var timeset=document.querySelectorAll('.theme input');
           timeset.forEach(element => {
             element.addEventListener("click", function() {
-              document.body.className='';
-              if (this.innerText=='Auto'){
+              if (this.getAttribute('id').replace("2",'')=='Auto'){
                 autoTheme(true);
               } else{
-                document.body.classList.add(this.innerText.toLowerCase());
-                chattable.reinitialize({stylesheet: `chattable/${this.innerText.toLowerCase()}.css`});
+                document.body.className='';
+                chattable.reinitialize({stylesheet: `chattable/${this.getAttribute('id').replace("2",'').toLowerCase()}.css`});
               }
-              localStorage.setItem("KiwiTheme",this.innerText.toLowerCase());
+              localStorage.setItem("KiwiTheme",this.getAttribute('id').replace("2",'').toLowerCase());
             });
           });
           var hkdate = document.getElementsByClassName('hkdate');
@@ -556,8 +563,7 @@ function updateClocks() {
     hkdate[1].innerHTML = dateToText(new Date(new Date().getTime()+offset));
 		hktime[0].innerHTML = timeToText(new Date(new Date().getTime()+offset));
     hktime[1].innerHTML = timeToText(new Date(new Date().getTime()+offset));
-    if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="auto"){
-      document.body.className='';
+    if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="auto"||localStorage.getItem("KiwiTheme")==""){
       autoTheme();
       }
 }
@@ -598,7 +604,8 @@ function autoTheme(chattheme=false){
     }
 }
 startClocks();
-if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="auto"){
+document.addEventListener('DOMContentLoaded', function() {
+if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="auto"||localStorage.getItem("KiwiTheme")==""){
   let classtimeset=hktime[0].innerText.split(':')[0];
   if (classtimeset <10 && classtimeset >5){
       document.body.classList.add('morning');
@@ -614,9 +621,10 @@ if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="
       chattable.initialize({stylesheet: `chattable/night.css`});
     }
 }else{
-  document.body.classList.add(localStorage.getItem("KiwiTheme"));
   chattable.initialize({stylesheet: `chattable/${localStorage.getItem("KiwiTheme")}.css`});
 }
+}, false);
+
 </script>
       </article>
       <article>
