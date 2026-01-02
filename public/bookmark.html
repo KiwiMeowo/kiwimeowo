@@ -17,7 +17,7 @@ section.wide{
   display:grid;
   grid-template: 
   'title title title'
-  'webring webring webring'
+  'webring webring fanlisting'
   'button button button'
   'stories interesting res'
   'credit credit res'
@@ -72,6 +72,34 @@ img.button{
       color:var(--blue);
     }
 }
+#fanlistings{
+  background: var(--gradient),url(/assets/checkpattern.svg);
+  height: 100%;
+  padding:2px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px var(--shadow);
+}
+.faninner{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#fanlistings a {
+  height: fit-content;
+  margin: 1px;
+  border:1px solid white;
+  padding:1px;
+  filter:var(--dropshadow);
+  display: inline-block;
+}
+#fanlistings a:hover {
+  filter: var(--dropshadowdown);
+  translate: var(--down);
+}
+#fanlistings img{
+  border-radius: 0;
+  border:2px solid white;
+}
 #tv{
   background: black;
   border-radius: 0;
@@ -116,7 +144,7 @@ img.button{
 }
 @media(max-width:1000px){
   section.wide{
-    grid-template:'title''webring''button''stories''interesting''tv''res''credit';
+    grid-template:'title''webring''fanlisting''button''stories''interesting''tv''res''credit';
     margin:0 auto;
   }
 }
@@ -218,6 +246,38 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
                 <object id="melonland-surf-club" data="https://melonland.net/surf-badge.svg?fill=#3f6884" type="image/svg+xml"></object>
           </div>
     </div>
+    </article>
+    <article style="grid-area:fanlisting;">
+      <h1>Fanlistings</h1>
+      <div class="inner">
+        <div id="fanlistings">
+          <div class="faninner">
+            <a href="https://milkchocolate.fanfreak.net" target="_blank"><img src="button/fanlisting/mc50-4.png" alt="Milk Chocolate"></a>
+          <a href="https://chocolatesauce.fanfreak.net/index.php" target="_blank"><img src="button/fanlisting/choco_sauce.png" alt="Milk Chocolate"></a>
+          <a href="https://kelsey.altervista.org/cookies/index.php" target="_blank"><img src="button/fanlisting/chocochip_cookies.png" alt="Chocolate Chip Cookies"></a>
+          <a href="https://10-31.net/megan/garlic/index.php" target="_blank"><img src="button/fanlisting/garlic_bread.png" alt="Garlic Bread"></a>
+          <a href="https://thewildrose.org/rice/index.php" target="_blank"><img src="button/fanlisting/rice.jpg" alt="Rice"></a>
+          <a href="https://thewildrose.org/spaghetti/index.php" target="_blank"><img src="button/fanlisting/spaghetti.png" alt="Spaghetti"></a>
+          <a href="https://herotovillain.com/pizza" target="_blank"><img src="button/fanlisting/pizza.png" alt="Pizza"></a>
+          <a href="https://10-31.net/kara/ramen" target="_blank"><img src="button/fanlisting/ramen.png" alt="Ramen"></a>
+          <a href="https://salmon.fanfreak.net/index.php" target="_blank"><img src="button/fanlisting/salmon.png" alt="Salmon"></a>
+          <a href="https://silent.am/spud/index.php" target="_blank"><img src="button/fanlisting/potatoes50502.png" alt="Potatoes"></a>
+          <a href="https://fries.fanfreak.net/index.php" target="_blank"><img src="button/fanlisting/fries.png" alt="Fries"></a>
+          <a href="https://love.strongisfighting.org/hamburgers" target="_blank"><img src="button/fanlisting/burger.png" alt="Burgers"></a>
+          <a href="https://prettylies.net/eggs" target="_blank"><img src="button/fanlisting/scrambled_eggs.png" alt="Scrambled Eggs"></a>
+          <a href="https://bacon.imora.net/" target="_blank"><img src="button/fanlisting/bacon.png" alt="Bacon"></a>
+          <a href="https://precious-memory.net/food/onions/index.php" target="_blank"><img src="button/fanlisting/onions.gif" alt="Onions"></a>
+          <a href="https://lacey.altervista.org/avocados/index.php" target="_blank"><img src="button/fanlisting/avocado.png" alt="Avocado"></a>
+          <a href="https://silent.am/bananas/index.php" target="_blank"><img src="button/fanlisting/bananas50501.png" alt="Bananas"></a>
+          <a href="https://heartdreams.net/icecream" target="_blank"><img src="button/fanlisting/ice_cream.png" alt="Ice Cream"></a>
+          <a href="https://contradiction.altervista.org/cheesecake/index.php" target="_blank"><img src="button/fanlisting/cheesecake.png" alt="Cheesecake"></a>
+          <a href="http://donuts.i-heart-you.net" target="_blank"><img src="button/fanlisting/donuts50x50_03.gif" alt="Donuts"></a>
+          <a href="https://10-31.net/megan/cottoncandy/index.php" target="_blank"><img src="button/fanlisting/cotton_candy.png" alt="Cotton Candy"></a>
+          <a href="https://starlit.altervista.org/gummycola/index.php" target="_blank"><img src="button/fanlisting/gummycola.png" alt="Gummy Cola"></a>
+          <a href="https://fans.thislove.nu/h2o" target="_blank"><img src="button/fanlisting/water.png" alt="Water"></a>
+          </div>
+        </div>
+      </div>
     </article>
       <article id="buttons"><h1>Cool site buttons</h1>
       <div class="inner">
