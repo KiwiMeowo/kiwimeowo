@@ -179,7 +179,7 @@ justify-content: space-around;
     margin: 15px 7.5px;
   }
 }
-.inner h2:first-child {
+section .inner h2:first-child {
   margin: 0;
   font-size: 1.75em;
 }
