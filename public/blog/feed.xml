@@ -2,9 +2,9 @@
 <?xml-stylesheet href="feed.css"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<atom:link href="https://kiwimeowo.neocities.org/blog/blog/feed.xml" rel="self" />
+<atom:link href="https://kiwimeowo.neocities.org/blog/feed.xml" rel="self" />
   <title>Kiwi&#39;s Blog Feed</title>
-  <link>https://kiwimeowo.neocities.org/</link>
+  <link>https://kiwimeowo.neocities.org/blog/index.html</link>
   <description>I wonder how many people would follow my blogs using this feed...</description>
   <item>
     <title>The water heater broke</title>
@@ -40,6 +40,41 @@
     <guid>https://kiwimeowo.neocities.org/blog/2025/4th/12-27.html</guid>
     <description>Ooo Kiwi has been working hard</description>
     <pubDate>Sat, 27 Dec 2025 08:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>The n-th Twitter Migration</title>
+    <link>https://kiwimeowo.neocities.org/blog/2025/4th/12-26.html</link>
+    <guid>https://kiwimeowo.neocities.org/blog/2025/4th/12-26.html</guid>
+    <description>Where should they go?</description>
+    <pubDate>Fri, 26 Dec 2025 08:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Christmas</title>
+    <link>https://kiwimeowo.neocities.org/blog/2025/4th/12-25.html</link>
+    <guid>https://kiwimeowo.neocities.org/blog/2025/4th/12-25.html</guid>
+    <description>It&#39;s Christmas</description>
+    <pubDate>Thu, 25 Dec 2025 08:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Dried up pens</title>
+    <link>https://kiwimeowo.neocities.org/blog/2025/4th/12-23.html</link>
+    <guid>https://kiwimeowo.neocities.org/blog/2025/4th/12-23.html</guid>
+    <description>Consequences of not using the pens I bought</description>
+    <pubDate>Tue, 23 Dec 2025 08:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>CARDIAC CONTREPOINT</title>
+    <link>https://kiwimeowo.neocities.org/blog/2025/4th/12-20.html</link>
+    <guid>https://kiwimeowo.neocities.org/blog/2025/4th/12-20.html</guid>
+    <description>Banger after bangers</description>
+    <pubDate>Sat, 20 Dec 2025 08:00:00 GMT</pubDate>
+  </item>
+  <item>
+    <title>Chat AIs, in the perspective of a loner</title>
+    <link>https://kiwimeowo.neocities.org/blog/2025/4th/12-18.html</link>
+    <guid>https://kiwimeowo.neocities.org/blog/2025/4th/12-18.html</guid>
+    <description>How I feel about the rise of chat AIs</description>
+    <pubDate>Thu, 18 Dec 2025 08:00:00 GMT</pubDate>
   </item>
 </channel>
 </rss>

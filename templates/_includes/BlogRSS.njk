@@ -14,12 +14,12 @@
 <?xml-stylesheet href="feed.css"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-<atom:link href="{{ permalink | htmlBaseUrl(metadata.base) }}" rel="self" />
+<atom:link href="{{ metadata.base }}{{ permalink }}" rel="self" />
   <title>{{ metadata.title }}</title>
-  <link>{{ metadata.base | addPathPrefixToFullUrl }}</link>
+  <link>https://kiwimeowo.neocities.org/blog/index.html</link>
   <description>{{ metadata.description }}</description>
   {%- set ten = collections.blog | reverse %}
-  {%- for post in ten | limit(5) %}
+  {%- for post in ten | limit(10) %}
   {%- set absolutePostUrl %}{{ post.url | htmlBaseUrl(metadata.base) }}{% endset %}
   <item>
     <title>{{ post.data.title }}</title>
