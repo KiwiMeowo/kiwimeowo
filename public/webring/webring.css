@@ -98,19 +98,6 @@
   #webringdesc strong {
     color: #513aa0;
   }
-  @media ((max-width:1200px)and (min-width:1000px)) or (max-width:600px){
-    #templateWebring{
-      grid-template: 'a''b''c';
-    }
-    #webringdesc {
-  position: static;
-  transform: translatey(0);
-  margin: 0;
-}
-#linkparaWebring,#webringdesc{
-  margin:10px !important;
-}
-  }
 /*Hotline webring*/
 #hotline{padding: 5px;width: 175px;border-radius: 20px;background:#fa9aba;font-style: italic;filter: var(--dropshadow);display: block;margin: 0.75em auto;text-align: center;}
 #hotline a{text-decoration:none !important;color:white !important;}

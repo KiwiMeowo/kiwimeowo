@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiwiMeowo's site</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="/jquery.style-my-tooltips.js"></script>
+    </head>
+    <style>
+      #fanlisting{
+        display: flex;
+        background: var(--gradient),url(/assets/checkpattern.svg);
+        box-shadow: 1px 1px 2px var(--shadow);
+        flex-wrap: wrap;
+      }
+      .fanlistings{
+        flex:0 0 33.333%;
+        max-width:33.333%;
+      }
+      .plate {
+  height: 250px;
+  width: 250px;
+  background: linear-gradient(115deg,white,#dddddd);
+  margin: 15px auto;
+  filter: var(--dropshadow);
+  border-radius: 50%;
+  position: relative;
+}
+.plate::before {
+  width: 70%;
+  height: 70%;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border: 2px solid var(--shadow);
+  border-right:2px solid white;
+  border-bottom:2px solid white;
+  border-radius: 50%;
+  filter: blur(4px);
+}
+.plate a{
+  display: inline-block;
+  position: absolute;
+  translate: -50% -50%;
+}
+.plate img{
+  border-radius: 0;
+}
+.plate h2{
+  background: #ffffffAA;
+  position: relative;
+  top: 20px;
+  text-align: center;
+}
+@media (max-width:1100px){
+  .fanlistings{
+        flex:0 0 50%;
+        max-width:50%;
+      }
+}
+@media (max-width:700px){
+  .fanlistings{
+        flex:0 0 100%;
+        max-width:100%;
+      }
+}
+    </style>
+</html>
+<body>
+    <nav>
+      <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
+      <a href="bookmark.html">Return</a>
+  </nav>
+  <main>
+    <section class="wide">
+        <article>
+            <h1>Welcome to my picnic?!</h1>
+            <div class="inner">
+             <div id="fanlisting">
+              <div class="fanlistings">
+                <div class="plate">
+                  <h2>Salmon Nigiri Sushi</h2>
+                  <a href="https://thewildrose.org/rice/index.php" target="_blank" style="top: calc(50% + 15px);left: calc(50% - 30px);"><img src="button/fanlisting/rice.jpg" alt="Rice"></a>
+                  <a href="https://thewildrose.org/rice/index.php" target="_blank" style="top: calc(50% + 15px);left: 50%;"><img src="button/fanlisting/rice.jpg" alt="Rice"></a>
+                  <a href="https://thewildrose.org/rice/index.php" target="_blank" style="top: calc(50% + 15px);left: calc(50% + 30px);"><img src="button/fanlisting/rice.jpg" alt="Rice"></a>
+                <a href="https://salmon.fanfreak.net/index.php" target="_blank" style="top: calc(50% - 15px);left: calc(50% - 30px);"><img src="button/fanlisting/salmon.png" alt="Salmon"></a>
+                <a href="https://salmon.fanfreak.net/index.php" target="_blank" style="top: calc(50% - 15px);left: 50%;"><img src="button/fanlisting/salmon.png" alt="Salmon"></a>
+                <a href="https://salmon.fanfreak.net/index.php" target="_blank" style="top: calc(50% - 15px);left: calc(50% + 30px);"><img src="button/fanlisting/salmon.png" alt="Salmon"></a>
+              </div>
+              </div>
+              <div class="fanlistings">
+                <div class="plate">
+                  <h2>Cookies with Chocolate Syrup</h2>
+                  <a href="https://kelsey.altervista.org/cookies/index.php" target="_blank" style="top: calc(50% - 15px);left: calc(50% - 30px);"><img src="button/fanlisting/chocochip_cookies.png" alt="Chocolate Chip Cookies"></a>
+                  <a href="https://kelsey.altervista.org/cookies/index.php" target="_blank" style="top: calc(50% - 15px);left: 50%;"><img src="button/fanlisting/chocochip_cookies.png" alt="Chocolate Chip Cookies"></a>
+                  <a href="https://kelsey.altervista.org/cookies/index.php" target="_blank" style="top: calc(50% - 15px);left: calc(50% + 30px);"><img src="button/fanlisting/chocochip_cookies.png" alt="Chocolate Chip Cookies"></a>
+                  <a href="https://kelsey.altervista.org/cookies/index.php" target="_blank" style="top: calc(50% + 15px);left: calc(50% - 25px);"><img src="button/fanlisting/chocochip_cookies.png" alt="Chocolate Chip Cookies"></a>
+                  <a href="https://kelsey.altervista.org/cookies/index.php" target="_blank" style="top: calc(50% + 15px);left: calc(50% + 25px);"><img src="button/fanlisting/chocochip_cookies.png" alt="Chocolate Chip Cookies"></a>
+                  <a href="https://chocolatesauce.fanfreak.net/index.php" target="_blank" style="top: 50%;left: calc(50% - 30px);"><img src="button/fanlisting/choco_sauce.png" alt="Chocolate Sauce"></a>
+                  <a href="https://chocolatesauce.fanfreak.net/index.php" target="_blank" style="top: 50%;left: 50%"><img src="button/fanlisting/choco_sauce.png" alt="Chocolate Sauce"></a>
+                  <a href="https://chocolatesauce.fanfreak.net/index.php" target="_blank" style="top: 50%;left: calc(50% + 30px);"><img src="button/fanlisting/choco_sauce.png" alt="Chocolate Sauce"></a>
+                </div>
+              </div>
+              <div class="fanlistings">
+                <div class="plate">
+                  <h2>Basic Fast Food (?)</h2>
+                  <a href="https://fries.fanfreak.net/index.php" target="_blank" style="top:calc(50% - 15px);left:calc(50% - 30px);"><img src="button/fanlisting/fries.png" alt="Fries"></a>
+                  <a href="https://starlit.altervista.org/gummycola/index.php" target="_blank" style="top:calc(50% - 15px);left:calc(50% + 30px);"><img src="button/fanlisting/gummycola.png" alt="Gummy Cola"></a>
+                  <a href="https://love.strongisfighting.org/hamburgers" target="_blank" style="top:calc(50% + 15px);left:50%;"><img src="button/fanlisting/burger.png" alt="Burgers"></a>
+                </div>
+              </div>
+              <div class="fanlistings">
+                <div class="plate">
+                  <h2>Totally normal pizza</h2>
+                  <a href="https://herotovillain.com/pizza" target="_blank" style="top:calc(50% + 15px);left:50%;"><img src="button/fanlisting/pizza.png" alt="Pizza"></a>
+                  <a href="https://silent.am/bananas/index.php" target="_blank" style="top:calc(50% - 15px);left:50%;"><img src="button/fanlisting/bananas50501.png" alt="Bananas"></a>
+                </div>
+              </div>
+              <div class="fanlistings">
+                <div class="plate">
+                  <h2>Breakfast Time</h2>
+                  <a href="https://prettylies.net/eggs" target="_blank" style="top:calc(50% + 15px);left:calc(50% + 15px);"><img src="button/fanlisting/scrambled_eggs.png" alt="Scrambled Eggs"></a>
+                  <a href="https://bacon.imora.net/" target="_blank" style="top:calc(50% - 15px);left:calc(50% - 15px);"><img src="button/fanlisting/bacon.png" alt="Bacon"></a>
+                </div>
+              </div>
+              <div class="fanlistings">
+                <div class="plate">
+                  <h2>I need a soup</h2>
+                  <a href="https://10-31.net/megan/garlic/index.php" target="_blank" style="top:calc(50% + 15px);left:calc(50% + 15px);"><img src="button/fanlisting/garlic_bread.png" alt="Garlic Bread"></a>
+                  <a href="https://thewildrose.org/spaghetti/index.php" target="_blank" style="top:calc(50% - 15px);left:calc(50% - 15px);"><img src="button/fanlisting/spaghetti.png" alt="Spaghetti"></a>
+                </div>
+              </div>
+             </div>  
+            </div>
+        </article>
+    </section>
+  </main>
+</body>
