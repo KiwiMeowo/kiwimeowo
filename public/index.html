@@ -508,9 +508,6 @@ filter: hue-rotate(20deg) saturate(2) brightness(0.7);
         <h1>Kiwi Chatbox</h1>
         <div class="inner">
           <iframe src="https://iframe.chat/embed?chat=KiwiChatbox" id="chattable" style="width: -moz-available;width: -webkit-fill-available;height: 350px;border: 2px solid var(--teal);border-radius: 5px;"></iframe>
-          <script>
-            
-          </script>
         </div>
       </article>
     </aside>
@@ -525,20 +522,29 @@ filter: hue-rotate(20deg) saturate(2) brightness(0.7);
           <center><input type="radio" id="Auto" name="theme"><label for="Auto">Auto</label><input type="radio" id="Morning" name="theme"><label for="Morning">Morning</label><input type="radio" id="Afternoon" name="theme"><label for="Afternoon">Afternoon</label><br><input type="radio" id="Sunset" name="theme"><label for="Sunset">Sunset</label><input type="radio" id="Night" name="theme"><label for="Night">Night</label></center>
         </div>
         <script>
+          var hkdate = document.getElementsByClassName('hkdate');
+          var hktime = document.getElementsByClassName('hktime');
           var timeset=document.querySelectorAll('.theme input');
           timeset.forEach(element => {
             element.addEventListener("click", function() {
               if (this.getAttribute('id').replace("2",'')=='Auto'){
-                autoTheme(true);
+                let classtimeset=hktime[1].getAttribute('id');
+                if (classtimeset=='morning'){
+                  chattable.reinitialize({stylesheet: `chattable/morning.css`});
+                } else if (classtimeset=='afternoon'){
+                    chattable.reinitialize({stylesheet: `chattable/afternoon.css`});
+                }else if (classtimeset=='sunset'){
+                    chattable.reinitialize({stylesheet: `chattable/sunset.css`});
+                }else if (classtimeset=='night'){
+                    chattable.reinitialize({stylesheet: `chattable/night.css`});
+                }
               } else{
                 document.body.className='';
                 chattable.reinitialize({stylesheet: `chattable/${this.getAttribute('id').replace("2",'').toLowerCase()}.css`});
               }
-              localStorage.setItem("KiwiTheme",this.getAttribute('id').replace("2",'').toLowerCase());
+              localStorage.setItem("KiwiTheme",this.getAttribute('id').replace("2",''));
             });
           });
-          var hkdate = document.getElementsByClassName('hkdate');
-          var hktime = document.getElementsByClassName('hktime');
           function dateToText(date) {
     var day = date.getDate();
     var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", 
@@ -555,17 +561,24 @@ filter: hue-rotate(20deg) saturate(2) brightness(0.7);
     if (minutes < 10) minutes = '0'+minutes;
     if  (seconds < 10) seconds = '0'+seconds;
     if (hours < 10) hours = '0'+hours;
-    return hours + ":" + minutes + ":" + seconds;
+    return [hours.toString(),minutes.toString(),seconds.toString()];
 }
 function updateClocks() {
     var offset = window.arrOffsets;
     hkdate[0].innerHTML = dateToText(new Date(new Date().getTime()+offset));
     hkdate[1].innerHTML = dateToText(new Date(new Date().getTime()+offset));
-		hktime[0].innerHTML = timeToText(new Date(new Date().getTime()+offset));
-    hktime[1].innerHTML = timeToText(new Date(new Date().getTime()+offset));
-    if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="auto"||localStorage.getItem("KiwiTheme")==""){
-      autoTheme();
-      }
+    var time=timeToText(new Date(new Date().getTime()+offset))
+		hktime[0].innerHTML = `${time[0]}:${time[1]}:${time[2]}`;
+    hktime[1].innerHTML = `${time[0]}:${time[1]}:${time[2]}`;
+    if (time[0] <10 && time[0] >5){
+      hktime[1].setAttribute("id","morning")
+      }else if (time[0] >=10 && time[0]<18){
+      hktime[1].setAttribute("id","afternoon")
+    }else if (time[1]==18){
+      hktime[1].setAttribute("id","sunset")
+    }else if (time[0]>18||time[0]<=5){
+      hktime[1].setAttribute("id","night")
+    }
 }
 function startClocks() {
 	window.arrOffsets = 0;
@@ -578,52 +591,25 @@ function startClocks() {
 	updateClocks();
 	setInterval(updateClocks, 1000);
 }
-
-function autoTheme(chattheme=false){
-  let classtimeset=hktime[0].innerText.split(':')[0];
-    if (classtimeset <10 && classtimeset >5){
-      document.body.classList.add('morning')
-      if(chattheme==true){
-        chattable.reinitialize({stylesheet: `chattable/morning.css`});
-      }
-    } else if (classtimeset >=10 && classtimeset<18){
-      document.body.classList.add('afternoon')
-      if(chattheme==true){
-        chattable.reinitialize({stylesheet: `chattable/afternoon.css`});
-      }
-    }else if (classtimeset==18){
-      document.body.classList.add('sunset')
-      if(chattheme==true){
-        chattable.reinitialize({stylesheet: `chattable/sunset.css`});
-      }
-    }else if (classtimeset>18||classtimeset<=5){
-      document.body.classList.add('night')
-      if(chattheme==true){
-        chattable.reinitialize({stylesheet: `chattable/night.css`});
-      }
-    }
-}
 startClocks();
 document.addEventListener('DOMContentLoaded', function() {
-if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="auto"||localStorage.getItem("KiwiTheme")==""){
-  let classtimeset=hktime[0].innerText.split(':')[0];
-  if (classtimeset <10 && classtimeset >5){
-      document.body.classList.add('morning');
+if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="Auto"||localStorage.getItem("KiwiTheme")==""){
+  document.getElementById('Auto').checked=true;
+  let classtimeset=hktime[1].getAttribute('id');
+  if (classtimeset=='morning'){
       chattable.initialize({stylesheet: `chattable/morning.css`});
-    } else if (classtimeset >=10 && classtimeset<18){
-      document.body.classList.add('afternoon');
+    } else if (classtimeset=='afternoon'){
       chattable.initialize({stylesheet: `chattable/afternoon.css`});
-    }else if (classtimeset==18){
-      document.body.classList.add('sunset');
+    }else if (classtimeset=='sunset'){
       chattable.initialize({stylesheet: `chattable/sunset.css`});
-    }else if (classtimeset>18||classtimeset<=5){
-      document.body.classList.add('night');
+    }else if (classtimeset=='night'){
       chattable.initialize({stylesheet: `chattable/night.css`});
     }
 }else{
-  chattable.initialize({stylesheet: `chattable/${localStorage.getItem("KiwiTheme")}.css`});
+  document.getElementById(localStorage.getItem("KiwiTheme")).checked=true;
+  chattable.initialize({stylesheet: `chattable/${localStorage.getItem("KiwiTheme").toLowerCase()}.css`});
 }
-}, false);
+});
 
 </script>
       </article>
