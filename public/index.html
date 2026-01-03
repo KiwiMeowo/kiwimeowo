@@ -594,7 +594,7 @@ function startClocks() {
 }
 startClocks();
 document.addEventListener('DOMContentLoaded', function() {
-if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="Auto"||localStorage.getItem("KiwiTheme")==""){
+if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="Auto"||localStorage.getItem("KiwiTheme")==""||localStorage.getItem("KiwiTheme")=="auto"){
   document.getElementById('Auto').checked=true;
   let classtimeset=hktime[1].getAttribute('id');
   if (classtimeset=='morning'){
