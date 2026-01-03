@@ -59,8 +59,8 @@ aside .act{background: linear-gradient(0.25turn, #3654bf54,#3654bf2b);border-lef
 .coolbutton{margin: 5px;}
 
 .option{position: relative;display: inline-block;}
-label{color:var(--teal);transition:color 0.5s;cursor:pointer;}
-input {opacity: 0;position: absolute;cursor:pointer;}
+.option label{color:var(--teal);transition:color 0.5s;cursor:pointer;}
+.option input {opacity: 0;position: absolute;cursor:pointer;}
 
 .checkmark {
     content: "";
@@ -91,10 +91,10 @@ input {opacity: 0;position: absolute;cursor:pointer;}
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-input ~ label:hover{color: var(--dblue);}
-input ~ label:hover .checkmark {color: var(--dblue);box-shadow: 0 0 0 0.5px var(--dblue);}
-#exclude input:checked ~ label .checkmark, input:checked ~ label .checkmark{background: linear-gradient(var(--blue),var(--teal));color: var(--blue);}
-input:checked ~ label .checkmark:after {display: block;}
+.option input ~ label:hover{color: var(--dblue);}
+.option input ~ label:hover .checkmark {color: var(--dblue);box-shadow: 0 0 0 0.5px var(--dblue);}
+#exclude .option input:checked ~ label .checkmark, .option input:checked ~ label .checkmark{background: linear-gradient(var(--blue),var(--teal));color: var(--blue);}
+.option input:checked ~ label .checkmark:after {display: block;}
 #exclude, #exclude button {--teal: #b00;--blue: #5d0028;--dblue: #490000;}
 #exclude .checkmark{background:#e6b3934a;}
 #exclude .coolbutton{background: linear-gradient(0.25turn, #db92926b, #e6939333);}
