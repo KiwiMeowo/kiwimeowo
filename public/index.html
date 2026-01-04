@@ -1207,7 +1207,7 @@ if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="
             artwork.classList.remove("censor");
             artwork.removeEventListener("click", censor);
           }
-          artwork.src = "loading.gif";
+          artwork.src = "assets/loading.gif";
           setTimeout(function () {
             artwork.src = art[artwork.getAttribute("data-openid")].getElementsByTagName("img")[0].src;
           }, 100);
