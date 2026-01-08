@@ -195,7 +195,7 @@ h1{
 .text p, section .inner p{
   text-indent: 25px;
 }
-.text center p, section .inner center p{
+.text center p, section .inner center p,.inner p *{
   text-indent: 0;
 }
 .date{

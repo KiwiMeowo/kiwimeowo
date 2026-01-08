@@ -109,8 +109,7 @@ function Current() {
 /*Fetch old blogs*/
 function fetchHtml(link) {
   document.getElementById("current").style.display = "none";
-  load.innerHTML = "";
-  document.getElementsByClassName("circle-out")[0].style.display = "block";
+  load.innerHTML = '<p>Loading <div id="star">⭐</div></p>';
   fetch(`${link}/index.html`)
     .then((response) => {
       return response.text();
@@ -129,11 +128,9 @@ function fetchHtml(link) {
       TagNumbers('load');
       ShesGone();
       setTimeout(Tooltips, 100);
-      document.getElementsByClassName("circle-out")[0].style.display = "none";
     })
     .catch((error) => {
       load.innerHTML = "<p>Whoops my code broke</p>" + `<p>${error}</p>`;
-      document.getElementsByClassName("circle-out")[0].style.display = "none";
     });
 }
 /*Reset tags back to default (Check all include tags, uncheck all exclude tags)*/
