@@ -20,6 +20,7 @@ h1,h2{
     text-decoration: underline;
     text-decoration-style: dotted;
     text-underline-offset: 1.5px;
+    text-decoration-thickness: 1.5px;
     display:inline-block;
     margin: 0 2px;
   }
