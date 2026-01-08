@@ -12,7 +12,7 @@ body:has(input[id*='Auto']:checked):has(.hktime[id='morning']),body:has(input[id
 body:has(input[id*='Auto']:checked):has(.hktime[id='morning']) header,body:has(input[id*='Morning']:checked) header {
   background: linear-gradient(rgba(213, 249, 255, 0.11), #ffc1f533), url(header/Morning.webp);
   background-size: cover;
-  background-position: 0 35%;
+  background-position: 0 65%;
   }
 body:has(input[id*='Auto']:checked):has(.hktime[id='sunset']),body:has(input[id*='Sunset']:checked){
 --yellow: #fde6d1;
@@ -30,7 +30,7 @@ body:has(input[id*='Auto']:checked):has(.hktime[id='sunset']),body:has(input[id*
 body:has(input[id*='Auto']:checked):has(.hktime[id='sunset']) header,body:has(input[id*='Sunset']:checked) header{
   background: linear-gradient(rgba(213, 249, 255, 0.11), #ffc1f533), url(header/Sunset.webp);
   background-size: cover;
-  background-position: 0 35%;
+  background-position: 0 45%;
   }
 
 body:has(input[id*='Auto']:checked):has(.hktime[id='night']),body:has(input[id*='Night']:checked){
@@ -47,7 +47,7 @@ body:has(input[id*='Auto']:checked):has(.hktime[id='night']),body:has(input[id*=
 body:has(input[id*='Auto']:checked):has(.hktime[id='night']) header,body:has(input[id*='Night']:checked) header {
   background: linear-gradient(rgba(213, 249, 255, 0.11), #ffc1f533), url(header/Night.webp);
   background-size: cover;
-  background-position: 0 11%;
+  background-position: 0 40%;
   }
 body:has(input[id*='Auto']:checked):has(.hktime[id='night']) .draggable, body:has(input[id*='Auto']:checked):has(.hktime[id='night']) img[src*='Album'],body:has(input[id*='Night']:checked) .draggable,body:has(input[id*='Night']:checked) img[src*='Album']{
   filter: drop-shadow(0 0 5px #ffd9fe4f) drop-shadow(0 0 10px #ffd9fe4f);
