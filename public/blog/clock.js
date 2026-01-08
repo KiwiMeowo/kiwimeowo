@@ -19,7 +19,6 @@ function dateToText(date) {
                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
      var month = monthNames[date.getMonth()];
      var year = date.getFullYear();
-    if (day < 10) day = '0'+day;
     return day + " " + month + " " + year;
 }
 function updateClocks() {

@@ -552,7 +552,6 @@ filter: hue-rotate(20deg) saturate(2) brightness(0.7);
                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
      var month = monthNames[date.getMonth()];
      var year = date.getFullYear();
-    if (day < 10) day = '0'+day;
     return day + " " + month + " " + year;
 }
   function timeToText(date) {
@@ -575,7 +574,7 @@ function updateClocks() {
       hktime[1].setAttribute("id","morning")
       }else if (time[0] >=10 && time[0]<18){
       hktime[1].setAttribute("id","afternoon")
-    }else if (time[1]==18){
+    }else if (time[0]==18){
       hktime[1].setAttribute("id","sunset")
     }else if (time[0]>18||time[0]<=5){
       hktime[1].setAttribute("id","night")
