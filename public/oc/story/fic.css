@@ -16,7 +16,7 @@ h1,h2{
     text-indent: 0;
     font-size:0.90em;
   }
-  line{
+  u{
     text-decoration: underline;
     text-decoration-style: dotted;
     text-underline-offset: 1.5px;
@@ -24,6 +24,6 @@ h1,h2{
     display:inline-block;
     margin: 0 2px;
   }
-  line.warning{
+  u.warning{
     color:#b81212;text-decoration-color:#b81212;
   }
