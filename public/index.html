@@ -12,7 +12,7 @@
   <!-- <link href="christmas.css" rel="stylesheet" type="text/css" media="all" /> -->
   <link href="style-my-tooltips.css" rel="stylesheet" type="text/css" />
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-  <script src="https://iframe.chat/scripts/main.min.js"></script>
+  <!-- <script src="https://iframe.chat/scripts/main.min.js"></script> -->
   <style>
 #counter img {filter: hue-rotate(-15deg) saturate(0.5);image-rendering: pixelated;}
 nav, section .theme{display:none}
@@ -528,7 +528,7 @@ filter: hue-rotate(20deg) saturate(2) brightness(0.7);
           var timeset=document.querySelectorAll('.theme input');
           timeset.forEach(element => {
             element.addEventListener("click", function() {
-              if (this.getAttribute('id').replace("2",'')=='Auto'){
+              /*if (this.getAttribute('id').replace("2",'')=='Auto'){
                 let classtimeset=hktime[1].getAttribute('id');
                 if (classtimeset=='morning'){
                   chattable.reinitialize({stylesheet: `chattable/morning.css`});
@@ -542,7 +542,7 @@ filter: hue-rotate(20deg) saturate(2) brightness(0.7);
               } else{
                 document.body.className='';
                 chattable.reinitialize({stylesheet: `chattable/${this.getAttribute('id').replace("2",'').toLowerCase()}.css`});
-              }
+              }*/
               localStorage.setItem("KiwiTheme",this.getAttribute('id').replace("2",''));
             });
           });
@@ -595,7 +595,7 @@ startClocks();
 document.addEventListener('DOMContentLoaded', function() {
 if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="Auto"||localStorage.getItem("KiwiTheme")==""||localStorage.getItem("KiwiTheme")=="auto"){
   document.getElementById('Auto').checked=true;
-  let classtimeset=hktime[1].getAttribute('id');
+/*  let classtimeset=hktime[1].getAttribute('id');
   if (classtimeset=='morning'){
       chattable.initialize({stylesheet: `chattable/morning.css`});
     } else if (classtimeset=='afternoon'){
@@ -604,10 +604,10 @@ if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="
       chattable.initialize({stylesheet: `chattable/sunset.css`});
     }else if (classtimeset=='night'){
       chattable.initialize({stylesheet: `chattable/night.css`});
-    }
+    }*/
 }else{
   document.getElementById(localStorage.getItem("KiwiTheme")).checked=true;
-  chattable.initialize({stylesheet: `chattable/${localStorage.getItem("KiwiTheme").toLowerCase()}.css`});
+  //chattable.initialize({stylesheet: `chattable/${localStorage.getItem("KiwiTheme").toLowerCase()}.css`});
 }
 });
 
