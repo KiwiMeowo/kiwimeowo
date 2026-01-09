@@ -7,6 +7,13 @@
   <link>https://kiwimeowo.neocities.org/blog/index.html</link>
   <description>I wonder how many people would follow my blogs using this feed...</description>
   <item>
+    <title>JS-like CSS</title>
+    <link>https://kiwimeowo.neocities.org/blog/2026/1st/01-09.html</link>
+    <guid>https://kiwimeowo.neocities.org/blog/2026/1st/01-09.html</guid>
+    <description>Theme toggle buttons, pop ups, CSS can do that!</description>
+    <pubDate>Fri, 09 Jan 2026 08:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>AIA Carnival 2026</title>
     <link>https://kiwimeowo.neocities.org/blog/2026/1st/01-07.html</link>
     <guid>https://kiwimeowo.neocities.org/blog/2026/1st/01-07.html</guid>
@@ -68,13 +75,6 @@
     <guid>https://kiwimeowo.neocities.org/blog/2025/4th/12-23.html</guid>
     <description>Consequences of not using the pens I bought</description>
     <pubDate>Tue, 23 Dec 2025 08:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>CARDIAC CONTREPOINT</title>
-    <link>https://kiwimeowo.neocities.org/blog/2025/4th/12-20.html</link>
-    <guid>https://kiwimeowo.neocities.org/blog/2025/4th/12-20.html</guid>
-    <description>Banger after bangers</description>
-    <pubDate>Sat, 20 Dec 2025 08:00:00 GMT</pubDate>
   </item>
 </channel>
 </rss>
