@@ -27,3 +27,11 @@ h1,h2{
   u.warning{
     color:#b81212;text-decoration-color:#b81212;
   }
+u::after {
+  content: ',';
+  margin-right: 5px;
+}
+u:last-child:after {
+  content: '';
+  margin-right: 0;
+}

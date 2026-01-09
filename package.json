@@ -2,7 +2,8 @@
     "name": "kiwimeowonpm",
     "private": true,
     "scripts": {
-        "build": "npx @11ty/eleventy"
+        "build": "npx @11ty/eleventy",
+        "watch": "npx @11ty/eleventy --watch --incremental --ignore-initial"
     },
     "devDependencies": {
         "@11ty/eleventy": "^3.0.0"

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I can write now hell yeah</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
+    <link href="fic.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+  .fic{
+    border: 1.75px solid var(--teal);
+    background:linear-gradient(#b1d7ff61, #fafdff61);
+    filter: var(--dropshadow);
+    margin: 15px 0;
+  }
+  .ficinner{
+    padding:0 15px;
+  }
+  .fic hr{
+    border-color:var(--teal);
+  }
+  .fic h2{
+    background: var(--teal);
+    margin: 0;
+    padding: 12.5px 15px;
+    text-shadow: 2px 2px var(--blue);
+    color:var(--yellow);
+    text-decoration-color: var(--yellow);
+  }
+  .fic h2 a{
+    color:var(--yellow);
+    text-decoration-color: var(--yellow);
+  }
+  .fic h2 a:hover{
+    color:var(--lteal);
+    text-decoration-color: var(--lteal);
+  }
+    </style>
+  </head>
+ <body>
+    <nav>
+      <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
+      <a href="../index.html">Worlds</a>
+    </nav>
+
+  <main>
+    <section class="wide">
+      <article><h1>Story of Upon the Starry Sky</h1>
+      <div class="inner text">
+        {% for post in collections[ 'UtSS' ] | reverse %}
+        <div class="fic">
+        <h2><a href="{{ post.url }}">{{ post.data.title }}</a> | UtSS</h2>
+        <div class="ficinner">
+          <p class="tags">Tags: {% for tag in post.data.WritingTags %}<u>{{ tag }}</u>{% endfor %}</p>
+          <p>{{ post.data.desc | safe }}</p>
+        <hr>
+        <p class="date">Words: {{ post.content | wordCount }} | Written in: {{ post.data.WritingDate }}</p>
+        </div>
+      </div>
+      {% endfor %}
+      <hr>
+      </div>
+    </article>
+      <article><h1>My other small works</h1>
+        <div class="inner text">
+          {% for post in collections[ 'other' ] | reverse %}
+        <div class="fic">
+        <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+        <div class="ficinner">
+          <p class="tags">Tags: {% if post.data.warning %}{% for warning in post.data.warning %}<u class='warning'>{{ warning }}</u>{% endfor %}{% endif %}{% for tag in post.data.WritingTags %}<u>{{ tag }}</u>{% endfor %}</p>
+          <p>{{ post.data.desc | safe }}</p>
+        <hr>
+        <p class="date">Words: {{ post.content | wordCount }} | Written in: {{ post.data.WritingDate }}</p>
+        </div>
+      </div>
+      {% endfor %}
+        <hr>
+        </div>
+      </article>
+</section>
+</main>
+</body>
+</html>

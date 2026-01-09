@@ -3,16 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rainbow Hortensia</title>
+    <title>{{ title }}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico?">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
     <link href="fic.css" rel="stylesheet" type="text/css" media="all">
-  <style>
-  </style>
   </head>
  <body>
-    <nav>
+  <nav>
       <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
       <a href="../index.html">Worlds</a>
       <a href="index.html">Back</a>
@@ -20,18 +18,25 @@
 
   <main>
     <section class="wide">
-      <article><h1>Title</h1>
-        <div class="inner">
-          <p class="tags">Tags: <line></line></p>
-          <p>Text</p>
+      <article><h1>{{ title }}</h1>
+      <div class="inner">
+        <div class="text">
+          <p class="tags">Tags: {% for tag in WritingTags %}<u>{{ tag }}</u>{% endfor %}</p>
+          <p>{{ desc | safe }}</p>
+          {% if authornotes %}
           <hr>
-          <p class="date">Words: xx | Written in: xx xx 2026</p>
+          <h2>Author Notes:</h2>
+          {{ authornotes | safe }}
+          {% endif %}
+        </div>
+        <hr>
+        <p class="date">Words: {{ content | wordCount }} | Written in: {{ WritingDate }}</p>
       </div>
     </article>
       <article>
         <div class="inner">
-          <p></p>
-          <hr>
+        {{ content | safe }}
+        <hr>
       </div>
     </article>
 </section>
