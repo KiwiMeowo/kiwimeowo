@@ -19,7 +19,7 @@ document.addEventListener('keydown', function(event) {
 if (window.location.host=="127.0.0.1:3000"){
   document.getElementById("thumbnail").style.display="block";
 }
-var art=document.querySelectorAll('.artborder:not(:has(img[src=""])) img');
+var artselect=document.querySelectorAll('.artborder:not(:has(img[src=""])) img');
 var imagenum=document.getElementById("imagenum");
 var imageop=document.getElementById("op");
 var imagescale=document.getElementById("sc");
@@ -29,26 +29,26 @@ var currentnum=0;
 imagenum.innerText=1;
 
 function showImg(value){
-  imageop.value=art[value].style.objectPosition;
-  if(art[value].style.objectPosition==""){
+  imageop.value=artselect[value].style.objectPosition;
+  if(artselect[value].style.objectPosition==""){
   imageop.value="center";
 }
-imagescale.value=art[value].style.scale;
-  if(art[value].style.scale==""){
+imagescale.value=artselect[value].style.scale;
+  if(artselect[value].style.scale==""){
   imagescale.value="1";
 }
-  if(art[value].style.translate==""){
+  if(artselect[value].style.translate==""){
   imagex.value="0";
   imagey.value="0";
 } else{
-  imagex.value=art[value].style.translate.split(" ")[0].replace(/%|px/,"");
-  if(art[value].style.translate.split(" ")[1]!=undefined){
-    imagey.value=art[value].style.translate.split(" ")[1].replace(/%|px/,"");
+  imagex.value=artselect[value].style.translate.split(" ")[0].replace(/%|px/,"");
+  if(artselect[value].style.translate.split(" ")[1]!=undefined){
+    imagey.value=artselect[value].style.translate.split(" ")[1].replace(/%|px/,"");
   } else{
     imagey.value="0";
   }
 }
-document.getElementById("result").value=art[currentnum].getAttribute('style');
+document.getElementById("result").value=artselect[currentnum].getAttribute('style');
 }
 showImg(0)
 function prevNum(){
@@ -69,21 +69,21 @@ function adjust(style,value){
 }
 function setStyle(){
   if(imageop.value!="center"){
-    art[currentnum].style.objectPosition=imageop.value;
+    artselect[currentnum].style.objectPosition=imageop.value;
   }else{
-    art[currentnum].style.objectPosition="";
+    artselect[currentnum].style.objectPosition="";
   }
   if(imagescale.value!="1"){
-    art[currentnum].style.scale=imagescale.value;
+    artselect[currentnum].style.scale=imagescale.value;
   } else{
-    art[currentnum].style.scale="";
+    artselect[currentnum].style.scale="";
   }
   if(imagex.value!="0"||imagey.value!="0"){
-    art[currentnum].style.translate=`${imagex.value}% ${imagey.value}%`;
+    artselect[currentnum].style.translate=`${imagex.value}% ${imagey.value}%`;
   } else{
-    art[currentnum].style.translate="";
+    artselect[currentnum].style.translate="";
   }
-    document.getElementById("result").value=art[currentnum].getAttribute('style');
+    document.getElementById("result").value=artselect[currentnum].getAttribute('style');
 }
 
 function copy() {
@@ -99,8 +99,8 @@ function copy() {
 }
 function RSScopy(){
   var copyText = document.getElementById("rss");
-  var art=art[currentnum];
-  copyText.value=`<item><title>${art.getAttribute('alt')}</title><guid>${art.getAttribute('src').replace("&","&amp;")}</guid><link>https://kiwimeowo.neocities.org${window.location.pathname}</link><description><![CDATA[<img src="${art.getAttribute('src').replace("&","&amp;")}">${art.getAttribute('title')}]]></description><pubDate>${(new Date()).toUTCString()}</pubDate></item>`;
+  var artselect=artselect[currentnum];
+  copyText.value=`<item><title>${artselect.getAttribute('alt')}</title><guid>${artselect.getAttribute('src').replace("&","&amp;")}</guid><link>https://kiwimeowo.neocities.org${window.location.pathname}</link><description><![CDATA[<img src="${artselect.getAttribute('src').replace("&","&amp;")}">${artselect.getAttribute('title')}]]></description><pubDate>${(new Date()).toUTCString()}</pubDate></item>`;
   // Select the text field
   copyText.select();
   copyText.setSelectionRange(0, 99999); // For mobile devices

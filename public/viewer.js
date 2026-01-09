@@ -1,5 +1,5 @@
 //Define the elements that will trigger the window when clicked
-var art = document.querySelectorAll('.artborder');
+var art = document.querySelectorAll('.artborder:not(:has(img[src=""]))');
 //Create window HTML at the bottom
 var createwindow=document.createElement('div');
   createwindow.id="window";
@@ -99,6 +99,7 @@ function checkCensor(openid){
 
 //Load image to prevent delay everytime you click a new image
 function loadIMG(openid){
+  console.log(openid)
   artwork.src="/assets/loading.gif";
       setTimeout(function(){
         artwork.src=openid.getElementsByTagName("img")[0].src;
