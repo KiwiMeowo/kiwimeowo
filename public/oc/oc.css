@@ -69,7 +69,7 @@ article > h1{
   position: relative;
   transform-style: preserve-3d;
 }
-.relChar.flip{
+.relChar:has(.info input:checked){
   transform: rotateY(180deg);
 }
 .relFront{
@@ -106,7 +106,7 @@ article > h1{
   overflow-y: scroll;
   height:calc(100% - 10px);
 }
-.relChar button{
+.relChar label{
   position: absolute;
   right: 0;
   bottom: 0;
@@ -120,7 +120,7 @@ article > h1{
   animation-direction: alternate;
   animation-timing-function: linear;
 }
-.relChar button:hover{
+.relChar label:hover{
   translate: 0 0;
   animation-play-state: paused;
 }
@@ -138,7 +138,7 @@ article > h1{
     translate: 0px 0px;
   }
 }
-.relChar button:after {
+.relChar label:after {
   content: "";
   width:15px;
   height: 15px;
@@ -148,8 +148,11 @@ article > h1{
   font-size: 1.5em;
   transition: background 0.5s;
 }
-.relChar button:hover:after{
+.relChar label:hover:after{
   background: var(--teal);
+}
+.relChar input{
+  display:none;
 }
 .relChar h2{
   font-size: 1.25em;
