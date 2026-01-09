@@ -88,6 +88,9 @@ section.wide {
     max-width: 16.6666666667%;
   }
 
+  .col:has(img[src='']){
+    display:none;
+  }
 #thumbnail {
 background: var(--gradient);
   border-radius: 5px;

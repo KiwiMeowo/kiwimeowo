@@ -19,6 +19,7 @@ document.addEventListener('keydown', function(event) {
 if (window.location.host=="127.0.0.1:3000"){
   document.getElementById("thumbnail").style.display="block";
 }
+var art=document.querySelectorAll('.artborder:not(:has(img[src=""])) img');
 var imagenum=document.getElementById("imagenum");
 var imageop=document.getElementById("op");
 var imagescale=document.getElementById("sc");
@@ -28,26 +29,26 @@ var currentnum=0;
 imagenum.innerText=1;
 
 function showImg(value){
-  imageop.value=document.querySelectorAll(".artborder img")[value].style.objectPosition;
-  if(document.querySelectorAll(".artborder img")[value].style.objectPosition==""){
+  imageop.value=art[value].style.objectPosition;
+  if(art[value].style.objectPosition==""){
   imageop.value="center";
 }
-imagescale.value=document.querySelectorAll(".artborder img")[value].style.scale;
-  if(document.querySelectorAll(".artborder img")[value].style.scale==""){
+imagescale.value=art[value].style.scale;
+  if(art[value].style.scale==""){
   imagescale.value="1";
 }
-  if(document.querySelectorAll(".artborder img")[value].style.translate==""){
+  if(art[value].style.translate==""){
   imagex.value="0";
   imagey.value="0";
 } else{
-  imagex.value=document.querySelectorAll(".artborder img")[value].style.translate.split(" ")[0].replace(/%|px/,"");
-  if(document.querySelectorAll(".artborder img")[value].style.translate.split(" ")[1]!=undefined){
-    imagey.value=document.querySelectorAll(".artborder img")[value].style.translate.split(" ")[1].replace(/%|px/,"");
+  imagex.value=art[value].style.translate.split(" ")[0].replace(/%|px/,"");
+  if(art[value].style.translate.split(" ")[1]!=undefined){
+    imagey.value=art[value].style.translate.split(" ")[1].replace(/%|px/,"");
   } else{
     imagey.value="0";
   }
 }
-document.getElementById("result").value=document.querySelectorAll(".artborder img")[currentnum].getAttribute('style');
+document.getElementById("result").value=art[currentnum].getAttribute('style');
 }
 showImg(0)
 function prevNum(){
@@ -68,21 +69,21 @@ function adjust(style,value){
 }
 function setStyle(){
   if(imageop.value!="center"){
-    document.querySelectorAll(".artborder img")[currentnum].style.objectPosition=imageop.value;
+    art[currentnum].style.objectPosition=imageop.value;
   }else{
-    document.querySelectorAll(".artborder img")[currentnum].style.objectPosition="";
+    art[currentnum].style.objectPosition="";
   }
   if(imagescale.value!="1"){
-    document.querySelectorAll(".artborder img")[currentnum].style.scale=imagescale.value;
+    art[currentnum].style.scale=imagescale.value;
   } else{
-    document.querySelectorAll(".artborder img")[currentnum].style.scale="";
+    art[currentnum].style.scale="";
   }
   if(imagex.value!="0"||imagey.value!="0"){
-    document.querySelectorAll(".artborder img")[currentnum].style.translate=`${imagex.value}% ${imagey.value}%`;
+    art[currentnum].style.translate=`${imagex.value}% ${imagey.value}%`;
   } else{
-    document.querySelectorAll(".artborder img")[currentnum].style.translate="";
+    art[currentnum].style.translate="";
   }
-    document.getElementById("result").value=document.querySelectorAll(".artborder img")[currentnum].getAttribute('style');
+    document.getElementById("result").value=art[currentnum].getAttribute('style');
 }
 
 function copy() {
@@ -98,7 +99,7 @@ function copy() {
 }
 function RSScopy(){
   var copyText = document.getElementById("rss");
-  var art=document.querySelectorAll(".artborder img")[currentnum];
+  var art=art[currentnum];
   copyText.value=`<item><title>${art.getAttribute('alt')}</title><guid>${art.getAttribute('src').replace("&","&amp;")}</guid><link>https://kiwimeowo.neocities.org${window.location.pathname}</link><description><![CDATA[<img src="${art.getAttribute('src').replace("&","&amp;")}">${art.getAttribute('title')}]]></description><pubDate>${(new Date()).toUTCString()}</pubDate></item>`;
   // Select the text field
   copyText.select();

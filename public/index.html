@@ -935,41 +935,8 @@ if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="
         .then((html) => {
           var parser = new DOMParser();
           var doc = parser.parseFromString(html, "text/html");
-          var newdrawing = doc.querySelector('script[data-id="fetch"]').innerText;
-          var drawings=JSON.parse(newdrawing.replace(/drawings=/,'').replace('];',']')) 
-          newart=drawings[0];
-          if (newart.Album!=""){
-          var button = document.createElement("a");
-          button.setAttribute("href",newart.Album)
-        } else{
-          var button=document.createElement("button");
-        }
-        button.classList.add("artborder");
-        var img = document.createElement("img");
-        img.setAttribute("loading",'lazy');
-        link=newart.Link;
-        if(link.includes('dl=0')){
-          link=link.replace("dl=0", "raw=1");
-        }
-        img.setAttribute("alt",newart.Alt)
-        img.setAttribute("src",link);
-        date=link.split("_");
-        date=date[date.length-1];
-        date=date.split(".")[0];
-        if(date.split("-")[2]!=undefined){
-          date=`${date.split("-")[2]} ${date.split("-")[1]} ${date.split("-")[0]}`
-          img.setAttribute("title",newart.Comment+" ("+date+")");
-        }else{
-          img.setAttribute("title",newart.Comment);
-        }
-        if (newart.Style!=""){
-          img.setAttribute("style",newart.Style);
-        }
-        if (newart.Censor==true){
-          button.classList.add("censor");
-        }
-        button.append(img);
-        document.querySelector('#new').append(button);
+          var newdrawing = doc.querySelector('.col:not(:has(img[src=""]))').innerHTML;
+          document.getElementById("new").innerHTML = newdrawing;
         })
         .catch(error => {
           document.getElementById("new").innerHTML = "error";
