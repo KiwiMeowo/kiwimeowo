@@ -99,8 +99,8 @@ function copy() {
 }
 function RSScopy(){
   var copyText = document.getElementById("rss");
-  var artselect=artselect[currentnum];
-  copyText.value=`<item><title>${artselect.getAttribute('alt')}</title><guid>${artselect.getAttribute('src').replace("&","&amp;")}</guid><link>https://kiwimeowo.neocities.org${window.location.pathname}</link><description><![CDATA[<img src="${artselect.getAttribute('src').replace("&","&amp;")}">${artselect.getAttribute('title')}]]></description><pubDate>${(new Date()).toUTCString()}</pubDate></item>`;
+  var rssart=artselect[currentnum];
+  copyText.value=`<item><title>${rssart.getAttribute('alt')}</title><guid>${rssart.getAttribute('src').replace("&","&amp;")}</guid><link>https://kiwimeowo.neocities.org${window.location.pathname}</link><description><![CDATA[<img src="${rssart.getAttribute('src').replace("&","&amp;")}">${rssart.getAttribute('title')}]]></description><pubDate>${(new Date()).toUTCString()}</pubDate></item>`;
   // Select the text field
   copyText.select();
   copyText.setSelectionRange(0, 99999); // For mobile devices
