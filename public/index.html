@@ -528,22 +528,7 @@ filter: hue-rotate(20deg) saturate(2) brightness(0.7);
           var timeset=document.querySelectorAll('.theme input');
           timeset.forEach(element => {
             element.addEventListener("click", function() {
-              /*if (this.getAttribute('id').replace("2",'')=='Auto'){
-                let classtimeset=hktime[1].getAttribute('id');
-                if (classtimeset=='morning'){
-                  chattable.reinitialize({stylesheet: `chattable/morning.css`});
-                } else if (classtimeset=='afternoon'){
-                    chattable.reinitialize({stylesheet: `chattable/afternoon.css`});
-                }else if (classtimeset=='sunset'){
-                    chattable.reinitialize({stylesheet: `chattable/sunset.css`});
-                }else if (classtimeset=='night'){
-                    chattable.reinitialize({stylesheet: `chattable/night.css`});
-                }
-              } else{
-                document.body.className='';
-                chattable.reinitialize({stylesheet: `chattable/${this.getAttribute('id').replace("2",'').toLowerCase()}.css`});
-              }*/
-              localStorage.setItem("KiwiTheme",this.getAttribute('id').replace("2",''));
+              localStorage.setItem("KiwiTheme",this.getAttribute('id'));
             });
           });
           function dateToText(date) {
@@ -595,19 +580,8 @@ startClocks();
 document.addEventListener('DOMContentLoaded', function() {
 if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="Auto"||localStorage.getItem("KiwiTheme")==""||localStorage.getItem("KiwiTheme")=="auto"){
   document.getElementById('Auto').checked=true;
-/*  let classtimeset=hktime[1].getAttribute('id');
-  if (classtimeset=='morning'){
-      chattable.initialize({stylesheet: `chattable/morning.css`});
-    } else if (classtimeset=='afternoon'){
-      chattable.initialize({stylesheet: `chattable/afternoon.css`});
-    }else if (classtimeset=='sunset'){
-      chattable.initialize({stylesheet: `chattable/sunset.css`});
-    }else if (classtimeset=='night'){
-      chattable.initialize({stylesheet: `chattable/night.css`});
-    }*/
 }else{
   document.getElementById(localStorage.getItem("KiwiTheme")).checked=true;
-  //chattable.initialize({stylesheet: `chattable/${localStorage.getItem("KiwiTheme").toLowerCase()}.css`});
 }
 });
 
