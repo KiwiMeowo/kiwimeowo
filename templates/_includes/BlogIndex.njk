@@ -32,6 +32,7 @@ nav,.cont{display:none;}
 }
 
 .openinner .open div{border-bottom: solid 1px #ffffff78;margin: 5px 10px;}
+.openinner .navcol{border-radius: 0;background: transparent;border-right: 1px solid #ffffff78;}
 aside .act{background: linear-gradient(0.25turn, #3654bf54,#3654bf2b);border-left: 3px solid var(--dblue);color: var(--dblue);}
 
 @media(max-width:900px){
@@ -134,13 +135,13 @@ a{cursor:pointer}
     <button class="navcoll">Blog Options</button>
     <div class="open">
     <div class="openinner">
-    <button class="navcoll" type="button" style="border-radius: 0;background: transparent;border-right: 1px solid #ffffff78;">2026 Blogs...</button>
+    <button class="navcoll" type="button">2026 Blogs...</button>
 		<div class="open">
 		<div class="openinner">
 		<button onclick="Current()" type="button">Jan-Mar</button>
 		</div>
 		</div>
-    <button class="navcoll" type="button" style="border-radius: 0;background: transparent;border-right: 1px solid #ffffff78;">2025 Blogs...</button>
+    <button class="navcoll" type="button">2025 Blogs...</button>
 		<div class="open">
 		<div class="openinner">
     <button onclick="fetchHtml('2025/4th');" type="button">Oct-Dec</button>
@@ -149,7 +150,7 @@ a{cursor:pointer}
 		<button onclick="fetchHtml('2025/1st');" type="button">Jan-Mar</button>
 		</div>
 		</div>
-		<button class="navcoll" type="button" style="border-radius: 0;background: transparent;border-right: 1px solid #ffffff78;">2024 Blogs...</button>
+		<button class="navcoll" type="button">2024 Blogs...</button>
 		<div class="open">
 		<div>
 		  <button onclick="fetchHtml('2024/4th');" type="button">Oct-Dec</button>

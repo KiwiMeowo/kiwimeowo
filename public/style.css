@@ -257,7 +257,7 @@ nav a:hover, footer a:hover, nav a:focus, footer a:focus {
 nav a[style*="--svg"]:hover:before{
   background: #bcb9d6;
 }
-button.navcoll {
+nav>button.navcoll {
     margin: 7.5px 2px;
     color: var(--blue);
     background: #ebebffbf;
@@ -268,12 +268,12 @@ button.navcoll {
     filter:var(--dropshadow);
 }
 
-button.navcoll:hover, button.navcoll.act{
+nav>button.navcoll:hover, nav>button.navcoll.act{
     background: #bcb9d6bf;
     border-color:#ccc9e3;
     transition: background 0.5s, border-color 0.5s;
 }
-button.navcoll.act{
+nav>button.navcoll.act{
   translate:var(--down);
   filter:var(--dropshadowdown);
 }
