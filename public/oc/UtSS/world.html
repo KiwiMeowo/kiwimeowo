@@ -7,17 +7,6 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico?">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
-    <!-- To be used -->
-    <script>
-    var urls=["/oc/secret/lonelycreator.html","/oc/secret/theoriginalthree.html"]
-    function randomUrl() {
-			var randomIndex = Math.floor(Math.random() * urls.length);
-			var randomUrl = urls[randomIndex];
-			var link = document.createElement("a");
-			link.href = randomUrl;
-			link.click();
-		}
-    </script>
   </head>
  <body>
   <nav>
@@ -31,7 +20,13 @@
         <div class="inner">
       <div class="text">
       <p><i>"Welcome to Stardust Isle! This is a land where art is the core of the people's lifestyle. Here is a guide to this world, I hope you will enjoy your stay!"</i></p>
-      <p>"...But that is only the past. <a onclick="randomUrl()" href="" class="secret">Blessed by the creator</a>, this wonderful world was once full of artistic talents and wonderful spell casters. One day, the creator once protected the land disappeared without a trace. Ever since that, the world slowly fell into disarray. Will this land be saved once and for all?"</p>
+      <p>"...But that is only the past. <a id="secretlink" class="secret">Blessed by the creator</a>, this wonderful world was once full of artistic talents and wonderful spell casters. One day, the creator once protected the land disappeared without a trace. Ever since that, the world slowly fell into disarray. Will this land be saved once and for all?"</p>
+      <script>
+    var urls=["/oc/secret/The_Lonely_Creator_and_The_Cometling.html","/oc/secret/The_Original_Three.html"]
+    var randomIndex = Math.floor(Math.random() * urls.length);
+    var randomUrl = urls[randomIndex];
+    document.getElementById('secretlink').setAttribute('href',randomUrl);
+    </script>
       </div>
       <hr>
       </div>
@@ -69,7 +64,7 @@
       <article><h1>The lands</h1>
       <div class="inner">
       <h2>The Tower of the Divine</h2>
-      <p>It is said that this tower, which is located at the center of the Stardust Isle, was once the home to the creator of this world. But in the current days, it is maintained by a team called The Sky Pioneer who promised to save the world from doom and bring back to glory days. However, in the recent days, their work was kept hidden from public and the tower seems to be constantly heightened. Just what are they planning?</p>
+      <p>It is said that this tower, which is located at the center of the Stardust Isle, was once the home to the creator of this world. But in the current days, it is maintained by a team called The Sky Pioneer who promised to save the world from doom and bring back to glory days. However, ever since Mira passed away, the actions of this team has been kept secretive. Just what are they planning?</p>
       <hr>
       <h2>Voided Lands</h2>
       <p>Stardust Isle used to be a lot larger. However, since long ago, the parts of the earth was consumed by some sort of pure black substance. Any efforts of removing it has been futile, and all life that came near it quickly got ill. With no choice, the areas consumed by the void was barred from entering. As years go by, the Voided Lands kept increasing in size, and with the population quickly declining, all prohibition from entering and recovering has ceased. But perhaps, there are secrets laying inside of this area?</p>
