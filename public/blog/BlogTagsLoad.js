@@ -109,7 +109,7 @@ function Current() {
 /*Fetch old blogs*/
 function fetchHtml(link) {
   document.getElementById("current").style.display = "none";
-  load.innerHTML = '<p>Loading <div id="star">⭐</div></p>';
+  load.innerHTML = '<p>Loading <span id="star">⭐</span></p>';
   fetch(`${link}/index.html`)
     .then((response) => {
       return response.text();
