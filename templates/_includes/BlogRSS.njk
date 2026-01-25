@@ -26,7 +26,8 @@
     <title>{{ post.data.title }}</title>
     <link>{{ absolutePostUrl }}</link>
     <guid>{{ absolutePostUrl }}</guid>
-    <description>{{ post.data.subtitle }}</description>
+    {%- set word = post.content | preview %}
+    <description><![CDATA[<h2>{{ post.data.subtitle }}</h2>{{ word | safe }}<p><a href="{{ absolutePostUrl }}">...Continue reading</a></p>]]></description>
     <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
   </item>
   {%- endfor %}

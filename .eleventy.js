@@ -14,6 +14,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter('datestring', (dateObj) => {
       return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('d LLL yyyy');
    });
+    eleventyConfig.addFilter('preview', (content) => {
+      return `${content.split('</p>')[0].split('-->')[1].replace(/\n/g,'')}</p>`;
+   });
     eleventyConfig.addLiquidFilter("dateToRfc822", pluginRss.dateToRfc822);
     eleventyConfig.addTransform("htmlmin", function (content) {
         if ((this.page.outputPath || "").endsWith(".html")) {
