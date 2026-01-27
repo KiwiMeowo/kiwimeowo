@@ -363,7 +363,7 @@ main {
 
 /*Contains the sidebar boxes.*/
 aside{
-  width: 320px;
+  width: 300px;
   margin: 0;
   }
 aside h1{
@@ -386,8 +386,8 @@ aside h1{
   line-height: 145%;
   border-left: 3px solid var(--blue);
   background: linear-gradient(0.25turn, var(--gradient1), var(--gradient2));
-  padding: 5px;
-  margin: 10px 0;
+  padding: 4px;
+  margin: 7.5px 0;
   color: var(--blue);
   text-decoration: none;
   border-radius: 0px 0px 50px 0px;
@@ -419,7 +419,7 @@ aside h1{
   
 /*Contains main content boxes.*/
 section{
-	width: calc(100% - 320px);
+	width: calc(100% - 300px);
 	margin-left:15px;
 }
 section.wide {
@@ -429,7 +429,7 @@ section.wide {
   z-index: 1;
 }
 .double section{
-    width: calc(100% - 640px);
+    width: calc(100% - 600px);
     margin: 0 15px;
 }
   
