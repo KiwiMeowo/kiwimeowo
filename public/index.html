@@ -353,6 +353,9 @@ filter: hue-rotate(20deg) saturate(2) brightness(0.7);
                   <img src="Pen.png" style="position: absolute;height: 150px;z-index: 1;right: 20px;bottom: -25px;pointer-events: none;filter:var(--dropshadow)">
                   <div id="new"></div>
                 </center>
+                <hr>
+                <h2><a href="blog/index.html">New Blog:</a> <a href="blog/feed.xml" target="_blank"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 455.731 455.731" xml:space="preserve" fill="#000000" style="height:1em;border-radius:2.5px;" class="button"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g><rect x="0" y="0" style="fill:var(--blue);" width="455.731" height="455.731"></rect><g><path style="fill:var(--yellow);" d="M296.208,159.16C234.445,97.397,152.266,63.382,64.81,63.382v64.348 c70.268,0,136.288,27.321,185.898,76.931c49.609,49.61,76.931,115.63,76.931,185.898h64.348 C391.986,303.103,357.971,220.923,296.208,159.16z"></path><path style="fill:var(--yellow);" d="M64.143,172.273v64.348c84.881,0,153.938,69.056,153.938,153.939h64.348 C282.429,270.196,184.507,172.273,64.143,172.273z"></path><circle style="fill:var(--yellow);" cx="109.833" cy="346.26" r="46.088"></circle></g></g></g></svg></a></h2>
+                <center id="new2"></center>
               </div>
               <hr id="autohr">
               <div id="auto2">
@@ -363,8 +366,55 @@ filter: hue-rotate(20deg) saturate(2) brightness(0.7);
                 <script src="https://status.cafe/current-status.js?name=kiwimeowo" defer></script>
                 <center><a style="display:inline-block;" href="https://status.cafe" target="_blank"><img src="https://status.cafe/assets/button.png" alt="Status Cafe" class="button"></a></center>
                 <hr>
-                <h2><a href="blog/index.html">New Blog:</a> <a href="blog/feed.xml" target="_blank"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 455.731 455.731" xml:space="preserve" fill="#000000" style="height:1em;border-radius:2.5px;" class="button"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g><rect x="0" y="0" style="fill:var(--blue);" width="455.731" height="455.731"></rect><g><path style="fill:var(--yellow);" d="M296.208,159.16C234.445,97.397,152.266,63.382,64.81,63.382v64.348 c70.268,0,136.288,27.321,185.898,76.931c49.609,49.61,76.931,115.63,76.931,185.898h64.348 C391.986,303.103,357.971,220.923,296.208,159.16z"></path><path style="fill:var(--yellow);" d="M64.143,172.273v64.348c84.881,0,153.938,69.056,153.938,153.939h64.348 C282.429,270.196,184.507,172.273,64.143,172.273z"></path><circle style="fill:var(--yellow);" cx="109.833" cy="346.26" r="46.088"></circle></g></g></g></svg></a></h2>
-                <center id="new2"></center>
+                <div style="background: linear-gradient(140deg, #e6e6e6, #e6e6e6 50px, white 100px, white 250px, #e6e6e6 300px); border:5px outset grey; box-shadow: 2px 2px 4px var(--shadow), inset 1px 1px 1px var(--shadow); padding:7.5px;position: relative;">
+                  <script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed@latest/dist/bsky-embed.es.js" async></script>
+              <bsky-embed
+                feed="at://did:plc:qd5snu2svaea2qiwvwt56yti/app.bsky.feed.generator/aaap5qobmyuua"
+                limit="1"
+                load-more="false"
+                disable-autoplay="true"
+                link-image="true"
+                mode=""
+                custom-styles="
+                .p-4.border-b.border-slate-300.dark\:border-slate-800{
+                  padding:0;
+                  font-family: ComicSansMS;
+                }
+                a[href*='KiwiPicFeed'] {
+            text-shadow: none;
+            color: var(--dblue);
+            box-shadow: inset 0 -0.625em 0 0 var(--highlightteal);
+            font-size: 1.5em;
+            transition:color 0.5s;
+            }
+            a[href*='KiwiPicFeed']:hover{
+            color:var(--teal);
+            }
+            .w-14.h-14.rounded-full, .text-ellipsis.overflow-hidden.whitespace-nowrap, .text-slate-500.text-sm {
+            display: none;
+            }
+            .w-full.max-w-\[calc\(100\%-70px\)\] {
+            max-width: 100%;
+            }
+            .border-b {
+            border: 0;
+            }
+            .mt-4 {
+            margin: auto;
+            max-width: 200px;
+            }
+            .mt-4 a {
+              margin: 5px;
+              display: block;
+            }
+            .rounded-md{
+            filter: var(--dropshadow);
+            border: 1px solid;
+            }
+            "
+              >
+              </bsky-embed>
+                </div>
               </div>
             </div>
             <hr>
@@ -439,54 +489,6 @@ filter: hue-rotate(20deg) saturate(2) brightness(0.7);
           <a class="bar" href="bookmark.html" style="--svg:url(assets/bookmark.svg)">Bookmarks</a>
           <a class="bar" href="dressup/index.html" style="--svg:url(assets/star.svg)">Dressup Room</a>
           <a class="bar" href="sitemap.html" style="--svg:url(assets/map.svg)">Sitemap</a>
-        </div>
-      </article>
-      <article>
-        <div class="inner">
-          <div style="background: linear-gradient(140deg, #e6e6e6, #e6e6e6 50px, white 100px, white 250px, #e6e6e6 300px); border:5px outset grey; box-shadow: 2px 2px 4px var(--shadow), inset 1px 1px 1px var(--shadow); padding:7.5px;position: relative;">
-                  <script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed@latest/dist/bsky-embed.es.js" async></script>
-              <bsky-embed
-                feed="at://did:plc:qd5snu2svaea2qiwvwt56yti/app.bsky.feed.generator/aaap5qobmyuua"
-                limit="1"
-                load-more="false"
-                disable-autoplay="true"
-                link-image="true"
-                mode=""
-                custom-styles="
-                .p-4.border-b.border-slate-300.dark\:border-slate-800{
-                  padding:0;
-                  font-family: ComicSansMS;
-                }
-                a[href*='KiwiPicFeed'] {
-            text-shadow: none;
-            color: var(--dblue);
-            box-shadow: inset 0 -0.625em 0 0 var(--highlightteal);
-            font-size: 1.5em;
-            transition:color 0.5s;
-            }
-            a[href*='KiwiPicFeed']:hover{
-            color:var(--teal);
-            }
-            .w-14.h-14.rounded-full, .text-ellipsis.overflow-hidden.whitespace-nowrap, .text-slate-500.text-sm {
-            display: none;
-            }
-            .w-full.max-w-\[calc\(100\%-70px\)\] {
-            max-width: 100%;
-            }
-            .border-b {
-            border: 0;
-            }
-            .mt-4 {
-            margin: 5px;
-            }
-            .rounded-md{
-            filter: var(--dropshadow);
-            border: 1px solid;
-            }
-            "
-              >
-              </bsky-embed>
-                </div>
         </div>
       </article>
       <article>
