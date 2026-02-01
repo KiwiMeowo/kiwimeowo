@@ -883,14 +883,13 @@ img.spoiler:hover{
 }
 
 .art{
-  overflow-x: auto;
-  overflow-y: hidden;
   border: 7.5px double;
   border-radius: 5px;
   padding: 5px 10px;
   white-space: nowrap;
-  color: var(--teal);
-  min-height: 190px;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .art .artborder{
@@ -899,14 +898,14 @@ img.spoiler:hover{
   margin:5px;
   border: 3px dotted;
   filter: drop-shadow(4px 4px var(--highlightteal));
-  max-height: 181px;
-  max-width: 181px;
+  width: 170px;
+  height: 170px;
   vertical-align: middle;
 }
 .art img{
   object-fit:cover;
   aspect-ratio: 1/1;
-  width:175px;
+  width:100%;
   margin:auto;
 }
 .yt{
