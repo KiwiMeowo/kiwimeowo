@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico?">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
-    <link href="fic.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/oc/fic.css" rel="stylesheet" type="text/css" media="all">
     <style>
   .fic{
     border: 1.75px solid var(--teal);
@@ -42,7 +42,8 @@
  <body>
     <nav>
       <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
-      <a href="../index.html">Worlds</a>
+      <a href="../../index.html">OC index</a>
+      <a href="../index.html">UtSS</a>
     </nav>
 
   <main>
@@ -63,22 +64,6 @@
       <hr>
       </div>
     </article>
-      <article><h1>My other small works</h1>
-        <div class="inner text">
-          {% for post in collections[ 'other' ] | reverse %}
-        <div class="fic">
-        <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-        <div class="ficinner">
-          <p class="tags">Tags: {% if post.data.warning %}{% for warning in post.data.warning %}<u class='warning'>{{ warning }}</u>{% endfor %}{% endif %}{% for tag in post.data.WritingTags %}<u>{{ tag }}</u>{% endfor %}</p>
-          <p>{{ post.data.desc | safe }}</p>
-        <hr>
-        <p class="date">Words: {{ post.content | wordCount }} | Written in: {{ post.data.WritingDate }}</p>
-        </div>
-      </div>
-      {% endfor %}
-        <hr>
-        </div>
-      </article>
 </section>
 </main>
 </body>
