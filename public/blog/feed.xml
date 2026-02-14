@@ -8,6 +8,13 @@
   <link>https://kiwimeowo.neocities.org/blog/index.html</link>
   <description>I wonder how many people would follow my blogs using this feed...</description>
   <item>
+    <title>[object Object]</title>
+    <link>https://kiwimeowo.neocities.org/blog/2026/1st/02-14.html</link>
+    <guid>https://kiwimeowo.neocities.org/blog/2026/1st/02-14.html</guid>
+    <description><![CDATA[<h2>Damn there&#39;s horror in my cookie game</h2><p>The newest chapter of the Dark Enchantress War just fully released (The chapter was out days ago, but the last few stages are released yesterday).</p><p><a href="https://kiwimeowo.neocities.org/blog/2026/1st/02-14.html">...Continue reading</a></p>]]></description>
+    <pubDate>Sat, 14 Feb 2026 08:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>Period (pain)</title>
     <link>https://kiwimeowo.neocities.org/blog/2026/1st/02-10.html</link>
     <guid>https://kiwimeowo.neocities.org/blog/2026/1st/02-10.html</guid>
@@ -74,13 +81,6 @@
     <description><![CDATA[<h2>I miss them :(
 </h2><h2 style="color: red;">Warning for dissociation (I think)</h2><p>It's late at night because I drank coffee in the afternoon, and now my brain is wandering.</p><p><a href="https://kiwimeowo.neocities.org/blog/2026/1st/01-14.html">...Continue reading</a></p>]]></description>
     <pubDate>Wed, 14 Jan 2026 08:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>JS-like CSS</title>
-    <link>https://kiwimeowo.neocities.org/blog/2026/1st/01-09.html</link>
-    <guid>https://kiwimeowo.neocities.org/blog/2026/1st/01-09.html</guid>
-    <description><![CDATA[<h2>Theme toggle buttons, pop ups, CSS can do that!</h2><p>So in my many years of learning coding and Javascript, I have utilised JS a lot in my website, ranging from blog tag filtering, fetch APIs for the index page, image viewers, and more. While using them too much might slow down the site, there are just so many stuff I want to do, I couldn't stop adding new JS code!</p><p><a href="https://kiwimeowo.neocities.org/blog/2026/1st/01-09.html">...Continue reading</a></p>]]></description>
-    <pubDate>Fri, 09 Jan 2026 08:00:00 GMT</pubDate>
   </item>
 </channel>
 </rss>
