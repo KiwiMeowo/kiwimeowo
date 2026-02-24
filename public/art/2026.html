@@ -59,9 +59,8 @@
             <p>Hover to see my comments, click to view full image/album! Click outside the content
               or click on the close button to close image viewer.</p>
           </center>
-          <div class="pagenum">
-            <span class="pagenum2">Pages: </span>
-            <span class="pagenum2"></span>
+          <div id="pagenum">
+            Pages: <button style="transform: scaleX(-1);" class="movepage">➤➤</button><button style="transform: scaleX(-1);" class="movepage">➤</button><span id="page"><input min="1" max="20" type="number" maxlength="2" value="1"><button>Go</button></span><button class="movepage">➤</button><button class="movepage">➤➤</button>
           </div>
           <!--Thumbnail editing code-->
           <div id="thumbnail"></div>
@@ -69,7 +68,7 @@
             <!--To add new row:-->
             <!--
 
-            <div class="row" id="">
+            <div class="row">
               <div class="col">
                 <button class="artborder"><img loading="lazy" src="" title="text <span class='blogdate'>(xx xxx 2026)</span>" alt="" style=""></button>
               </div>
@@ -132,7 +131,7 @@
             - Change <button> to <a> for album/external link
             - Add censor to button class if the image is to be censored (e.g. <button class="artborder censor">...)
             -->
-              <div class="row" id="2">
+              <div class="row">
               <div class="col">
                 <button class="artborder"><img loading="lazy" src="" title="text <span class='blogdate'>(xx xxx 2026)</span>" alt="" style=""></button>
               </div>
@@ -188,7 +187,7 @@
                 <button class="artborder"><img loading="lazy" src="https://www.dropbox.com/scl/fi/42no7ur2v1pvcj7pf9r46/IMG_6189_2026-Feb-23.webp?rlkey=cw9jh6z7s4709klww18z2mby9&raw=1" title="I noticed I often use up alcohol markers for shading, but I have too many color pencils stocked up, so I figured I should swap the tools. I went a bit too hard on the shading, but overall it's quite good. Not sure if color pencils would be too cumbersome for larger drawings, but this is a nice experiment <span class='blogdate'>(23 Feb 2026)</span>" alt="Kyrea doodle" style="object-position: center top; scale: 1.5; translate: 10% 20%;"></button>
               </div>
             </div>
-            <div class="row" id="1">
+            <div class="row">
               <div class="col">
                 <button class="artborder"><img loading="lazy" src="https://www.dropbox.com/scl/fi/xguk3gyfi6ddzlrvw7c5y/IMG_6179_2026-Feb-21.webp?rlkey=c3xj7l8yei8dplhmihjd1nrvn&raw=1" title="Claire doodle, I really enjoy the new pens I bought <span class='blogdate'>(21 Feb 2026)</span>" alt="Claire doodle on MSPaint note paper"></button>
               </div>

@@ -1,24 +1,28 @@
-var a= document.getElementsByClassName("pagenum2")[1];
-var x = document.getElementsByClassName("row");
-for (i = 0; i < x.length; i++){
-  a.innerHTML+="<button onclick='openCity(" + (x.length-i) + ")'></button><span class='numdivider'></span>";
+var row = document.getElementsByClassName("row");
+var pagenum=document.querySelector('#page input');
+var movepage=document.getElementsByClassName('movepage');
+function openPage(name) {
+  for (i = 0; i < row.length; i++) {
+    row[i].style.display = "none";  
   }
-  var b= a.getElementsByTagName("button");
-  for (i = 0; i < b.length; i++){
-    b[i].innerText=i+1;
-    }
-  b[0].style.color='var(--yellow)';
-function openCity(cityName) {
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  document.getElementById(cityName.toString()).style.display = "flex";  
+  document.getElementsByClassName('row')[name].style.display = "flex";  
 }
-for (i = 0; i < b.length; i++) {
-b[i].addEventListener("click", function() {
-  for (e = 0; e < b.length; e++) {
-    b[e].style.color="";
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    openPage(pagenum.value-1);
   }
-this.style.color="var(--yellow)";
-})
+});
+function GoPage(num){
+  if(document.getElementsByClassName('row')[parseInt(pagenum.value)-1+num]!=undefined){
+    openPage(pagenum.value-1+num)
+    pagenum.value=parseInt(pagenum.value)+num;
+  }
 }
+openPage(0);
+pagenum.value=1;
+pagenum.setAttribute('max',row.length)
+document.querySelector('#page button').setAttribute('onclick','openPage(parseInt(pagenum.value)-1)');
+movepage[0].setAttribute('onclick','openPage(0),pagenum.value=1');
+movepage[1].setAttribute('onclick','GoPage(-1)');
+movepage[2].setAttribute('onclick','GoPage(1)');
+movepage[3].setAttribute('onclick','openPage(row.length-1), pagenum.value=row.length');

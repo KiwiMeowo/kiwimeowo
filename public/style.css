@@ -15,6 +15,9 @@
   --dropshadowdown:drop-shadow(1px 1px 1px var(--shadow));
   --down:1px 1px;
 }
+*{
+  text-decoration-thickness: 1.5px !important;
+}
 html{
   font-weight:500;
   font-family: "Fraunces","Toppan-Bunkyu-Mincho","NotoSansSymbol2",serif, sans-serif;
