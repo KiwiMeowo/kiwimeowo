@@ -3,8 +3,8 @@ section.wide {
   }
 #pagenum, .arttop{
   text-indent: 0;
-      font-size: x-large;
-    line-height: 1.25;
+    font-size: 1.5em;
+    line-height: 1.5;
     display: block;
     width: fit-content;
     margin: 0.75em auto;
@@ -13,6 +13,7 @@ section.wide {
     border-radius: 5px;
     filter: var(--dropshadow);
     color: var(--blue);
+    text-align: center;
 }
 #page{
   border: 2px solid var(--blue);
@@ -30,6 +31,9 @@ section.wide {
   background: var(--blue);
   color: var(--lteal);
   text-decoration: none;
+}
+#pagenum .movepage{
+  font-size: 0.75em;
 }
 #pagenum button{
   text-decoration: underline;
@@ -52,16 +56,6 @@ section.wide {
 .arttop a{
   margin: 5px;
   color: var(--blue);
-}
-.numdivider:after{
-  content:"\00A0\007C\00A0";
-}
-.numdivider:nth-last-child(1):after{
-  content:"";
-}
-.numdivider:nth-child(12n):after{
-  content:"";
-  display:block;
 }
 @media(max-width:700px){
 	.arttop {
