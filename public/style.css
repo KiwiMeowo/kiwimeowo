@@ -154,7 +154,7 @@ li, ul p{
   margin:0.5em 0;
 }
 li::marker {
-  content: '★ ';
+  content: '🟊 ';
 }
 .song li{
       list-style:"-\00A0";

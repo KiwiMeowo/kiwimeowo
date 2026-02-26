@@ -18,13 +18,10 @@
   ul{
     margin:10px 0;
   }
-  li{
-    list-style:"-\00A0";
-  }
-  li a{
+  ul li a{
     font-size:1.5em;
   }
-  ul li a{
+  ul ul li a{
     font-size:1.17em;
   }
   ::marker {
@@ -46,6 +43,7 @@ li a{
     <section class="wide">
       <article><h1>Site map</h1>
         <div class="inner">
+          <ul>
       <li><a href="index.html">Home</a><span class="desc"></span>Where it all begins</li>
       <ul>
       <li><a href="salmon.html">Unary-Surrender</a><span class="desc"></span>May my first ever HTML site be remembered forever</li>
@@ -156,7 +154,8 @@ li a{
       <li><a href="dressup/index.html">Dressup Room</a><span class="desc"></span>A dress up room that is also an achievement room!</li>
       <li><a href="sitemap.html">Site map</a><span class="desc"></span>▲ You are here!</li>
       <li><a href="not_found.html">Not found</a><span class="desc"></span>Not much to see there, but you can view it if you want</li>
-      </div>
+          </ul>
+        </div>
     </article>
 </section>
 </main>
