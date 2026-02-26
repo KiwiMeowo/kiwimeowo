@@ -353,6 +353,7 @@ header {
   content: url("oc/UtSS/icon/Cosmos.png");
   position: absolute;
   right: 0;
+  overflow: hidden;
   }
   
 /*Contains the main content and sidebar.*/
