@@ -250,7 +250,6 @@ nav a:hover, footer a:hover, nav a:focus, footer a:focus {
   height: 15px;
   display: inline-block;
   aspect-ratio: 1/1;
-  margin-right: 5px;
   mask-image: var(--svg);
   background: white;
   content: "";

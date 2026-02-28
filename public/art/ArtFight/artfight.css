@@ -5,6 +5,10 @@
     --black:#222222;
     --grey:#444444;
 }
+header{
+  background-image: url(/header/background.jpg);
+  background-position: center;
+}
 .title{
     border:0;
     background:var(--grey);
