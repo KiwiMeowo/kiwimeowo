@@ -77,13 +77,6 @@ const s_rightButtonText = '>>';
 // Fix the URL parameters setting for Rarebit just in case
 if (s_fixRarebitIndexPage) {s_includeUrlParameters = true}
 
-// Apply CSS
-const c_cssLink = document.createElement('link');
-c_cssLink.type = 'text/css';
-c_cssLink.rel = 'stylesheet';
-c_cssLink.href = s_stylePath;
-document.getElementsByTagName('head')[0].appendChild(c_cssLink);
-
 // HTML Form
 const v_mainHtml = `
     <div id="c_inputDiv">
@@ -111,6 +104,7 @@ const v_formHtml = `
     </div>
 
     <input id="c_submitButton" name="c_submitButton" type="submit" value="${s_submitButtonLabel}" disabled>
+    <hr>
 `;
 
 // Insert main HTML to page
@@ -227,6 +221,7 @@ function getComments() {
                     }
                     comment.Timestamp2 = json.table.rows[r].c[0].f;
                     comments.push(comment);
+                    console.log(comments);
                 }
             }
         }
@@ -296,6 +291,7 @@ function displayComments(comments) {
 
         comment.className = 'c-comment';
         c_container.appendChild(comment);
+        c_container.appendChild(document.createElement('hr'));
         a_commentDivs.push(document.getElementById(comment.id)); // Add to array for use later
     }
 
@@ -402,16 +398,22 @@ function createComment(data) {
     }
 
     // Text content
-    let text = document.createElement('p');
     let filteredText = data.Text;
     if (s_wordFilterOn) {filteredText = filteredText.replace(v_filteredWords, s_filterReplacement)}
-    text.innerText = filteredText;
-    text.className = 'c-text';
+    let paragraphs=filteredText.split('\n')
     if(data.Moderated == false) {
+      let text = document.createElement('p');
         text.innerText = 'This comment is awaiting moderation'; // Change this value to whatever you want
+        text.className = 'c-text';
+        comment.appendChild(text);
+    } else{
+      paragraphs.forEach(element => {
+      let text = document.createElement('p');
+      text.className = 'c-text';
+      text.innerText = element;
+      comment.appendChild(text);
+    });
     }
-    comment.appendChild(text);
-    
     return comment;
 }
 
