@@ -900,16 +900,22 @@ img.spoiler:hover{
   display:inline-block;
   margin:5px;
   border: 3px dotted;
-  filter: drop-shadow(4px 4px var(--highlightteal));
   width: 170px;
   height: 170px;
   vertical-align: middle;
+  rotate: 45deg;
+  scale:0.75;
 }
-.art img{
+
+.art .artborder img {
   object-fit:cover;
   aspect-ratio: 1/1;
   width:100%;
   margin:auto;
+  rotate: -45deg;
+  min-width: 230px;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 .yt{
   aspect-ratio: 16/9;
@@ -917,10 +923,6 @@ img.spoiler:hover{
   max-width: 700px;
   margin: 0.75em auto;
   display: block;
-}
-
-.emoji{
-  text-shadow: -0.8px 0 var(--lteal), 0 0.8px var(--lteal), 0.8px 0 var(--lteal), 0 -0.8px var(--lteal);
 }
 
 /*Art gallery stuff, don't ask me, I don't understand what I did as well*/

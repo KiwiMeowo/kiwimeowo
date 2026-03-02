@@ -12,7 +12,6 @@
   <!-- <link href="christmas.css" rel="stylesheet" type="text/css" media="all" /> -->
   <link href="style-my-tooltips.css" rel="stylesheet" type="text/css" />
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-  <!-- <script src="https://iframe.chat/scripts/main.min.js"></script> -->
   <style>
 #counter img {filter: hue-rotate(-15deg) saturate(0.5);image-rendering: pixelated;}
 nav, section .theme{display:none}
@@ -158,7 +157,7 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 #autohr{margin:10px 15px 0 15px;}
 .collapsible{text-align:center}
 
-#playbox{background:linear-gradient(black,#3b4f55);border: 2px solid var(--teal);border-radius: 5px;min-height: 114px;}
+#playbox{background:linear-gradient(black,#3b4f55);border: 2px solid var(--teal);border-radius: 5px;min-height: 114px;box-shadow: 4px 4px 2px var(--shadow);}
 #new3{padding:15px 10px;--teal:white;--dblue:var(--lteal);text-shadow: 0px 0px 3px var(--lteal), 0px 0px 5px var(--lteal);position: relative;}
 #new3 a{max-width: 425px;display:block;margin-left: 75px;}
 #playbox .date{color:white;text-align: center;margin-left: 75px;}
@@ -236,7 +235,6 @@ filter: hue-rotate(20deg) saturate(2) brightness(0.7);
   #autohr{margin:15px 0;}
   #autobox{display:block;}
 }
-@keyframes cache {0%   {rotate:-5deg}100% {rotate:5deg}}
   </style>
 </head>
 <body>
@@ -306,7 +304,7 @@ filter: hue-rotate(20deg) saturate(2) brightness(0.7);
             <p><i><mark>- This website is mobile-friendly, but it is recommended to view on 1920×1080 desktop display.
                   <br>- This website utilizes Javascript A LOT
                   <br>- This website will contain swears, dark topics in blogs, and men/women without shirts, just in case you don't like them.</mark></i></p>
-            <h1 style="animation-name: cache;animation-duration: 1s;animation-iteration-count: infinite;animation-direction: alternate;animation-timing-function: ease-in-out;"><i style="box-shadow: inset 0 -0.625em 0 0 var(--highlightteal);">- Remember to clear cache, and have fun!</i></h1>
+            <h1 style="rotate:-2.5deg"><i><mark>- Remember to clear cache, and have fun!</mark></i></h1>
             <a style="display:inline-block;filter: sepia(0.6);" href="http://www.mabsland.com/Adoption.html" target="_blank"><img src="button/Censor_14c.gif" class="button"></a>
           </center>
           <center id="counter">
@@ -320,7 +318,7 @@ filter: hue-rotate(20deg) saturate(2) brightness(0.7);
             <center>
               <h1>☆ Announcement ☆</h1>
             </center>
-            <p>Happy birthday Grey and Claire</p>
+            <p>Happy birthday Solar (sorry I forgot to edit the name)!</p>
             <button class="artborder"><img loading="lazy" src="https://www.dropbox.com/scl/fi/yeougv2zvytyoa1wbdjrp/IMG_6200_2026-Feb-27.webp?rlkey=jw81ipf0a53cs589ebi3ncbbl&raw=1" title="Happy late birthday Solar! I'm happy to do a full drawing with her using my new coloring techniques, and it came out quite well <span class='blogdate'>(27 Feb 2026)</span>" alt="Birthday art of Solar, sitting on the grass" style="object-position: center top; scale: 2; translate: 0% 20%;"></button>
             <p class="date">( 26 Feb 2026 )</p>
             <hr>
@@ -422,19 +420,7 @@ filter: hue-rotate(20deg) saturate(2) brightness(0.7);
             </div>
             <hr>
             <h2><a href="song.html#LastFM">Listening:</a></h2>
-            <center style="filter:var(--dropshadow);position: relative;margin: 5px 25px;">
-              <svg width="75px" height="75px" viewBox="0 0 55.231 55.231" xmlns="http://www.w3.org/2000/svg" fill="var(--teal)" style="float: left;right: -35px;animation-name: spin;animation-duration: 5000ms;animation-iteration-count: infinite;animation-timing-function: linear;position: absolute;top: -35px;z-index: -1;">
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <g id="Group_27" data-name="Group 27" transform="translate(-361.081 -1142.626)">
-                      <path id="Path_67" data-name="Path 67" d="M391.322,1164.448l5.62-17.683,7.391,4.127,6.176,7.375,2.03,4.857-17.944,4.733Z" fill="#d1d3d4"></path>
-                      <path id="Path_68" data-name="Path 68" d="M383.064,1171.9l-17.667,5.67,4.147,7.379,7.393,6.155,4.862,2.016,4.683-17.957Z" fill="#d1d3d4"></path>
-                      <circle id="Ellipse_11" data-name="Ellipse 11" cx="24.881" cy="24.881" r="24.881" transform="translate(363.136 1146.059) rotate(-1.588)" fill="none" stroke="var(--teal)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></circle>
-                      <path id="Path_69" data-name="Path 69" d="M395.06,1170.241a6.365,6.365,0,1,1-6.364-6.365A6.364,6.364,0,0,1,395.06,1170.241Z" fill="none" stroke="var(--teal)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-                    </g>
-                  </g>
-                </svg>
+            <center style="position: relative;">
               <div id="playbox">
                 <div id="new3">
                   <img id="album" src="" alt="Album music">
@@ -463,12 +449,7 @@ filter: hue-rotate(20deg) saturate(2) brightness(0.7);
         <div class="inner">
           <div class="art">
             <button class="artborder"><img loading="lazy" src="https://www.dropbox.com/scl/fi/zsct3tgucdo925byhgiu0/cosmosbirth3.jpg?rlkey=k6t8be7eb902g302umjjs9kc2&st=aaa3e60u&raw=1" title="Happy 3rd birthday Cosmos! I'm glad I prepared the art early, so that I can post this art on time despite my horrible food poisoning (15 Nov 2024)" alt="3rd birthday art for Cosmos"></button>
-            <button class="artborder"><img loading="lazy" src="https://www.dropbox.com/scl/fi/hnjrhxnwh5hec95catnh0/GC1mHesbEAAS-1K.jpeg?rlkey=a5tsq6oz9wqxewwwe4nd8kp41&st=rqsqwg6h&raw=1" title="I made a drawing for my Ipad cover! I love how it feels like a comic book cover. However, it turns out the Ipad case is very blurry, smh." alt="Drawing of Lavender and Cosmos" style="object-position: center -5px;"></button>
-            <button class="artborder"><img loading="lazy" src="https://www.dropbox.com/scl/fi/6netcgxghl8g4yvq33oas/imcryinsohard.jpg?rlkey=evp50vtza8rw4vfpqg6y7vldg&amp;st=cbdh8ge0&amp;raw=1" title="Recommended to enjoy this piece while listening to Past the Stargazing Season, bro is so in love &lt;\333 (5 Aug 2024)" alt="Drawing of Jaspers and Claire"></button>
-            <button class="artborder"><img loading="lazy" src="https://www.dropbox.com/scl/fi/uowvklv5887zs9ydsd3me/HBDLav.jpg?rlkey=g3sbdi6pg64pfj7cyzzwsjwj4&amp;st=0y4ixdqb&amp;raw=1" title="HAPPY BIRTHDAY LAVENDER, SORRY FOR NOT REMEMBERING YOUR BIRTHDAY FOR THE PAST 6 YEARS. I am VERY proud of this piece, the background is phenomenal, and the shading is just scrumptious, like I wouldn't believe I drew this if I forgot my drawing process. (25 Jul 2024)" alt="Birthday art for Lavender" class=""></button>
-            <a href="/art/comic/charm1.html" target="_blank" class="artborder"><img loading="lazy" src="https://www.dropbox.com/scl/fi/o751u6z1fvxtzjtssej54/ch1.jpg?rlkey=t3ba7agjyef60rpa13efu2yhu&raw=1" title="Finally, I have finished drawing my first comic in years! This is just a silly comic featuring Jaspers and Solar, please click to enjoy!" alt="Cover image for the short comic, Charm! Part 1"></a>
-            <button class="artborder"><img loading="lazy" style="object-position: 60%;" src="https://www.dropbox.com/scl/fi/og88ieebrpgqnuoc06hd3/F_MvU3Ob0AAxTbb.jpeg?rlkey=ih2v2egbb5nhuvq8wj7e4z46w&st=owlfyxac&raw=1" title="Look at how cute they are 🥹" alt="Paper doll Cosmos and Lavender"></button>
-            <button class="artborder"><img loading="lazy" style="object-position:top center;" src="art/ILoveThem.jpg" title="The old main page art, my most favourite characters" alt="Drawing of Cosmos, Lavender, Kyrea and Jaspers in a group photo"></button>
+            <button class="artborder"><img loading="lazy" src="https://www.dropbox.com/scl/fi/g5rqrubvsxloteh7ly6lh/gaygayhomosexualgay_20250816.jpg?rlkey=o6alz4bp0oo0sum5sdv36579c&raw=1" title="Very late Lavender and Mira birthday art! I wish they could be happy <span class='blogdate'>(16 Aug 2025)</span>" alt="Lavender and Mira lying on the grass" style="object-position: top;"></button>
           </div>
         </div>
       </article>
@@ -548,7 +529,6 @@ filter: hue-rotate(20deg) saturate(2) brightness(0.7);
       <article>
         <h1>Kiwi Chatbox</h1>
         <div class="inner">
-          <!-- <iframe src="https://iframe.chat/embed?chat=KiwiChatbox" id="chattable" style="width: -moz-available;width: -webkit-fill-available;height: 350px;border: 2px solid var(--teal);border-radius: 5px;"></iframe> -->
           <iframe src="https://www3.cbox.ws/box/?boxid=3530699&boxtag=Cpo98c" width="100%" height="300" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" style="width: -moz-available;width: -webkit-fill-available;height: 350px;border-radius: 5px;"></iframe>	
         </div>
       </article>
