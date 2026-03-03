@@ -36,6 +36,9 @@ section{
     color: white;
     padding:5px;
 }
+#stops > .Nearest> div:first-child{
+  background: #4499eb;
+}
 #stops > div> div:last-child{
     padding:5px;
     color:#4c57a3;

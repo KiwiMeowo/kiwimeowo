@@ -10,7 +10,8 @@
   <h1 id="title">Bus Stop Routes</h1>
   <img src="Bus.jpg" style="width: 100vw;object-fit: cover;object-position: 0 75%;display: block;aspect-ratio: 1440/300;">
   <div id="nav">
-    <center><button id="refresh" onclick="getRouteInfo()">Refresh</button><button onclick="getSaved()">Saved Routes</button></center>
+    <center><button id="refresh" onclick="getRouteInfo()">Refresh</button><button onclick="getSaved()">Saved Routes</button>
+    <p id="geolocation"></p></center>
     <div id="search"><b>Search: </b><input type="text" id="input"><button onclick="document.getElementById(document.getElementById('input').value.toUpperCase()).scrollIntoView({
       behavior: 'auto',
       block: 'center',
@@ -34,7 +35,7 @@
         <div id="info">
             <div class="head">
                 <h1>Stops</h1>
-            <button class="return" onclick="Return('infocontainer')">Return</button><button id="refresh2">Refresh</button>
+            <button class="return" onclick="Return('infocontainer')">Return</button><button id="refresh2">Refresh</button><button id="gotonearest" onclick="Goto()">Go to nearest stop</button>
             </div>
             <div id="stops"></div>
         </div>

@@ -1,6 +1,9 @@
 var tcontent = document.getElementById("route");
 var stops = document.getElementById('stops');
 var saved = document.getElementById('saved');
+if(navigator.geolocation){
+  document.getElementById('geolocation').innerText='Geolocation is available!';
+}
 function getRouteInfo(){
   if(window.navigator.onLine){
 fetch('https://data.etabus.gov.hk/v1/transport/kmb/route/')
@@ -50,16 +53,58 @@ function getStops(route,bound,service){
         .then((response) => response.json())
         .then((html)=>{
           stops.innerHTML='';
+          shortest=undefined;
           html.data.forEach((stopnum)=>getStopName(stopnum.stop,route,bound,service));
         })
   }
 
+function distance(lat1,lon1,lat2,lon2){
+  const R = 6371e3; // metres
+const φ1 = lat1 * Math.PI/180; // φ, λ in radians
+const φ2 = lat2 * Math.PI/180;
+const Δφ = (lat2-lat1) * Math.PI/180;
+const Δλ = (lon2-lon1) * Math.PI/180;
+
+const a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
+          Math.cos(φ1) * Math.cos(φ2) *
+          Math.sin(Δλ/2) * Math.sin(Δλ/2);
+const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+
+const d = R * c; // in metres
+return d;
+}
+
+function success(position) {
+  lat=position.coords.latitude;
+  long=position.coords.longitude;
+  var alldist=[];
+  var stops=document.querySelectorAll('#stops > div');
+  for (x = 0; x < stops.length; x++) {
+    var currentlat=stops[x].getAttribute('data-lat');
+    var currentlong=stops[x].getAttribute('data-long');
+  dist=distance(lat,long,currentlat,currentlong);
+  alldist.push(dist)
+  stops[x].setAttribute('data-dist',dist);
+  }
+  stops[alldist.indexOf(Math.min(...alldist))].classList.add('Nearest');
+  document.querySelector('.Nearest').scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+        }); 
+}
+function Goto(){
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success);
+  }
+}
 function getStopName(stopid,route,bound,service){
   var row = document.createElement("div");
   stops.appendChild(row);
   fetch(('https://data.etabus.gov.hk/v1/transport/kmb/stop/'+stopid))
   .then((response) => response.json())
   .then((html)=>{
+    row.setAttribute('data-lat',html.data.lat)
+    row.setAttribute('data-long',html.data.long)
         var routeCell = document.createElement("div");
         row.appendChild(routeCell);
         routeCell.innerHTML = html.data.name_en;
@@ -88,6 +133,7 @@ function getStopName(stopid,route,bound,service){
           }
         })
   })
+  .then(Goto)
 }
 
 function saveStop(route,bound,service){
