@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiwiMeowo's site</title>
+    <link rel="icon" type="image/x-icon" href="/fixations/deco/pome.ico?">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
+    <link href="fandom.css" rel="stylesheet" type="text/css" media="all">
+    <link href="style-my-tooltips.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="/jquery.style-my-tooltips.js"></script>
+    <style>
+      :root{
+        --teal:#2B2B2B;
+        --blue:#2B2B2B;
+        --gradient1:#7FCDB6;
+        --gradient2:#ffff6385;
+        --highlightteal:#ffff6385;
+      }
+      #bg{
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+            top:0;
+            left: 0;
+            filter: brightness(0.9);
+            object-fit: cover;
+            scale: 2;
+        }
+      #bubble{
+        position: absolute;
+  background: var(--gradient);
+  border: 1px solid var(--teal);
+  z-index: 1;
+  line-height: 1.5;
+  font-size: 1.5em;
+  transform: skewX(-10deg) rotate(-5deg);
+  color: var(--blue);
+  padding: 5px 10px;
+      }
+      #bubble span{
+        font-size: 2em;
+        text-shadow: 2px 2px #ffd75d;
+      }
+      #bubble span:before{
+        content:'CRMobPHXS';
+        position: absolute;
+    -webkit-text-stroke: 0.2em white;
+    z-index: -1;
+      }
+      ul li{
+        list-style-image:url('/assets/cheese.svg');
+        object-fit: cover;
+      }
+      ul li::marker{
+        content: unset;
+      }
+      table{
+        width: calc(100% - 80px);
+        margin: 0 40px;
+        border-spacing: 5px;
+        filter: var(--dropshadow);
+        table-layout: fixed;
+      }
+      td{
+        background: var(--gradient);
+        padding: 5px 10px;
+        border: 1px solid var(--teal);
+      }
+      td i{
+        font-size: 1.75em;
+        color: var(--blue);
+        text-shadow: 2px 2px #ffd75d;
+      }
+      article{
+        border:5px solid #C05827;
+        border-radius: 0;
+        background: none;
+      }
+      .inner{
+        background: var(--gradient);
+      }
+      article > h1:not(aside h1){
+        background: #F8CC48;
+        border-bottom: none;
+      }
+      article > h1:first-child:before{
+        content:'⧖I▽ ';
+      }
+      article > h1:first-child:after{
+        content:' ▽I⧖';
+        float: right;
+      }
+      @media (max-width:900px){
+        table{
+          margin: 0;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+ <body>
+  <nav>
+    <a href="/sitemap.html" style="--svg:url(/assets/map.svg)"></a>
+  <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
+    <a href="../index.html">Fixations</a>
+    </nav>
+  <main>
+    <img src="deco/CR/Cutscene_ep17_07.webp" id="bg">
+    <section class="wide">
+      <article><h1>Looking for a <i>semi-competitive PV</i> guild?</h1>
+      <div class="inner" style="position: relative;">
+        <div id="bubble">Then join us at:<br><span>CRMobPHXS</span></div>
+      <img src="PHXS.webp" style="height: 400px;width: 100%;object-fit: cover;object-position: bottom;">
+      <hr>
+      <table>
+        <tbody>
+          <tr>
+          <td>Guild LV: <br><i>70 (max!)</i></td>
+          <td>Guild Battle:<br><i>GrandMaster I</i></td>
+        </tr>
+        <tr>
+          <td>Cookie Alliance: <br><i>Top 3%</i></td>
+          <td>Relics: <br><i>114/114 (LVL 10+)</i></td>
+        </tr>
+        </tbody>
+      </table>
+      </div>
+      </article>
+      <article>
+        <h1>Requirements</h1>
+        <div class="inner">
+          <ul>
+            <li>Kingdom LVL 50+</li>
+            <li>15B+ per battle</li>
+            <ul>
+              <li>Time skippers are ok!</li>
+            </ul>
+            <li>Play Alliance as well if you can</li>
+            <li>Try your best to follow meta teams</li>
+            <li>Be prepared for any guild events, including Golden Age of Trade</li>
+            <li>You may get kicked if you are inactive for 14+ days</li>
+            <ul>
+              <li>If you are too busy to play, you can just notify me :3</li>
+            </ul>
+            <li>There is a Discord server, I will send you the link once you have been approved</li>
+          </ul>
+          <hr>
+            <center>If interested, please contact me on <mark>Discord (@KiwiMeowo)</mark> or <mark>email (kiwimeow0308@gmail.com)</mark>!</center>
+        </div>
+      </article>
+</section>
+</main>
+  <script src="/viewer.js"></script>
+  <script src="/spoiler.js"></script>
+<script src="/collapsible.js"></script>
+</body>
+</html>
