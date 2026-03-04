@@ -52,6 +52,10 @@
     -webkit-text-stroke: 0.2em white;
     z-index: -1;
       }
+      #Emblem{
+        position: absolute;
+        top: 15px;left: 15px;width: 150px;filter:drop-shadow(0 0 4px white) drop-shadow(0 0 2px white);
+      }
       ul li{
         list-style-image:url('/assets/cheese.svg');
         object-fit: cover;
@@ -70,6 +74,7 @@
         background: var(--gradient);
         padding: 5px 10px;
         border: 1px solid var(--teal);
+        hyphens: auto;
       }
       td i{
         font-size: 1.75em;
@@ -100,6 +105,13 @@
           margin: 0;
           width: 100%;
         }
+        #bubble{
+          font-size: 1em;
+          left: 110px;
+        }
+        #Emblem{
+          width: 100px;
+        }
       }
     </style>
   </head>
@@ -116,13 +128,13 @@
       <div class="inner" style="position: relative;">
         <div id="bubble">Then join us at:<br><span>CRMobPHXS</span></div>
       <img src="PHXS.webp" style="height: 400px;width: 100%;object-fit: cover;object-position: bottom;">
-      <img style="position: absolute;top: 15px;left: 15px;width: 150px;filter:drop-shadow(0 0 4px white) drop-shadow(0 0 2px white)" src="Emblem.png" alt="Emblem">
+      <img id="Emblem" src="Emblem.png" alt="Emblem">
       <hr>
       <table>
         <tbody>
           <tr>
           <td>Guild LV: <br><i>70 (max!)</i></td>
-          <td>Guild Battle:<br><i>GrandMaster I</i></td>
+          <td>Guild Battle:<br><i>Grand<wbr>Master I</i></td>
         </tr>
         <tr>
           <td>Cookie Alliance: <br><i>Top 3%</i></td>

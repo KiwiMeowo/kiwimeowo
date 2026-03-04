@@ -75,6 +75,7 @@ guid {
    color:var(--blue);
    padding: 2px 5px;
    border-radius: 5px;
+   word-break: break-all;
  }
  guid::before {
   content: "GUID: ";
@@ -95,6 +96,7 @@ pubDate::after {
  description {
    display:block;
    text-indent:25px;
+   word-break: break-word;
  }
  item description{
     margin:15px 0;
