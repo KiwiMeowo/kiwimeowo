@@ -55,6 +55,9 @@ function getStops(route,bound,service){
           stops.innerHTML='';
           shortest=undefined;
           html.data.forEach((stopnum)=>getStopName(stopnum.stop,route,bound,service));
+          setTimeout(() => {
+            Goto()
+          }, 500);
         })
   }
 
@@ -85,6 +88,7 @@ function success(position) {
   dist=distance(lat,long,currentlat,currentlong);
   alldist.push(dist)
   stops[x].setAttribute('data-dist',dist);
+  stops[x].classList.remove('Nearest');
   }
   stops[alldist.indexOf(Math.min(...alldist))].classList.add('Nearest');
   document.querySelector('.Nearest').scrollIntoView({
@@ -133,7 +137,6 @@ function getStopName(stopid,route,bound,service){
           }
         })
   })
-  .then(Goto)
 }
 
 function saveStop(route,bound,service){
