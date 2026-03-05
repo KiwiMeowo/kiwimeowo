@@ -127,7 +127,9 @@
 #melonland-surf-club{width: 100px;filter: var(--dropshadow);cursor:pointer;height: 100px;margin-left: 10px;}
 
 /*Cookie run webring*/
-#ckwr{margin:0 !important;}
+#ckwr .webring-title,#ckwr .webring-next, #ckwr .webring-prev{filter:none;opacity:1;}
+#ckwr .webring-wrapper{background: linear-gradient(#ab7373a8,#ffecec40),url(https://evehibi.nekoweb.org/ckwr/dynbg.png);background-size: cover;
+  background-position-y: 15%;}
 /*OC webring*/
 #oc-webring-widget {
   background: url('OCRingBG.png');
