@@ -9,6 +9,9 @@
 p,i,li{
   text-shadow: 1px 1px var(--lteal);
 }
+a[href^="#"]:after{
+  content:' ⬇';
+}
 article {
     border-radius: 1px;
     border: 2px solid var(--yellow);
@@ -70,6 +73,38 @@ article > h1{
 	.col .prof {
     height: 100px;
 }
+}
+#rels{
+  height: 125px;
+  overflow: hidden;
+  position: relative;
+}
+#rels > label{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(transparent,var(--yellow) 50%);
+  padding: 15px 0;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  text-decoration: underline;
+}
+#rels>label:before{
+  content:'View more...';
+}
+#rels>label input{
+  display: none;
+}
+#rels:has(> label input:checked){
+  height: auto;
+}
+#rels > label:has(input:checked){
+  position: relative;
+}
+#rels > label:has(input:checked):before{
+  content:'View less...';
 }
 .relChar{
   margin:5px 0;
@@ -287,4 +322,106 @@ h3 a{
   100%{
     translate:0 -2px;
   }
+}
+.facts{
+  display: flex;
+}
+.facts>div{
+  width: 50%;
+}
+.facts hr{
+  margin: 0 15px;
+}
+.facts h2{
+  text-align: center;
+}
+@media (max-width: 700px){
+  .facts{
+    display: block;
+  }
+  .facts>div{
+    width:100%;
+  }
+  .facts hr{
+  margin: 15px auto;
+}
+}
+
+#splashscreen{
+  background: url(/header/Night.webp);
+  background-size: cover;
+  height: calc(100vh - 100px);
+  overflow: hidden;
+}
+.chartitle {
+  height: 50%;
+}
+#splashscreen article{
+  max-height: calc(50% - 22px);
+}
+#splashscreen aside,#splashscreen section{
+  height: 100%;
+}
+#splashscreen section{
+  margin-left:150px;
+}
+#splashscreen img{
+  height: calc(100vh - 100px);
+  margin: auto;
+  filter: drop-shadow(0 0 7px white);
+  display: block;
+}
+.chartitle h1{
+  font-size:9em;
+}
+.chartitle h2{
+  font-size:3em;
+}
+.chartitle h1,.chartitle h2{
+  color:white;
+}
+#splashscreen + hr{
+  background: linear-gradient(var(--dblue), var(--blue));
+  height:30px;
+  border: 5px;
+    border-top-style: none;
+    border-top-color: currentcolor;
+    border-right-style: none;
+    border-right-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-color: currentcolor;
+    border-left-style: none;
+    border-left-color: currentcolor;
+  border-style: outset inset inset outset;
+  border-color: var(--blue) var(--dblue) var(--dblue) var(--blue);
+  margin: 0 auto;
+}
+
+@media(max-width:1000px){
+  #splashscreen aside{
+    position: absolute;
+    width: calc(100% - 100px);
+  }
+  #splashscreen img{
+    margin-right: 25px;
+  }
+  #splashscreen section{
+  margin-left:0;
+  width: 100%;
+}
+#splashscreen img{
+  scale:1.5;
+  translate: 50px 100px;
+}
+.chartitle{
+  position: relative;
+  z-index: 2;
+  translate: 0 150px;
+}
+.chartitle h1{
+  font-size: 6em;
+}
+.chartitle h2{
+  font-size: 2em;
+}
 }

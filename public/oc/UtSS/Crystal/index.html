@@ -7,10 +7,10 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico?">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
-    <link href="../oc.css" rel="stylesheet" type="text/css" media="all">
-    <link href="../../style-my-tooltips.css" rel="stylesheet" type="text/css" />
+    <link href="/oc/oc.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-    <script src="../../jquery.style-my-tooltips.js"></script>
+    <script src="/jquery.style-my-tooltips.js"></script>
     <style>
       :root{
 --yellow: #fff3d8;
@@ -24,10 +24,10 @@
   </head>
  <body>
   <nav>
-      <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
-      <a href="../index.html">Worlds</a>
-      <a href="index.html">UtSS</a>
-    </nav>
+    <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
+    <a href="../../index.html">Worlds</a>
+    <a href="../index.html">UtSS</a>
+  </nav>
   <main>
     <aside>
       <article>
@@ -54,7 +54,8 @@
       <article>
         <h1>Her impressions of...</h1>
         <div class="inner">
-          <div class="relChar" id="Crystel">
+          <div id="rels">
+            <div class="relChar" id="Crystel">
         <div class="relFront">
         <div class="icon"><a href="Crystel.html"><img src="../chatprof/wip.png"></a></div>
         <div class="info">
@@ -70,8 +71,8 @@
       </div>
       <div class="relChar" id="Solar">
           <div class="relFront">
-          <div class="icon"><a href="Solar.html"><img src="../chatprof/Solar.png"></a></div>
-          <div class="info"><h2><a href="Solar.html">Solar:</a></h2><p>Acquaintances (Admiration)</p>
+          <div class="icon"><a href="../Solar/index.html"><img src="../Solar/chatprof.png"></a></div>
+          <div class="info"><h2><a href="../Solar/index.html">Solar:</a></h2><p>Acquaintances (Admiration)</p>
             <label><input type="radio" name="solar"></label>
           </div>
           </div>
@@ -82,9 +83,9 @@
         </div>
       <div class="relChar" id="Jaspers">
         <div class="relFront">
-        <div class="icon"><a href="Jaspers.html"><img src="../chatprof/Jaspers.png"></a></div>
+        <div class="icon"><a href="../Jaspers/index.html"><img src="../Jaspers/chatprof.png"></a></div>
         <div class="info">
-          <h2><a href="Jaspers.html">Jaspers:</a></h2>
+          <h2><a href="../Jaspers/index.html">Jaspers:</a></h2>
           <p>Acquaintances (Neutal)</p>
         <label><input type="radio" name="jaspers"></label>
       </div>
@@ -94,6 +95,8 @@
         <label><input type="radio" name="jaspers"></label>
       </div>
       </div>
+            <label><input type="checkbox" name="rels"></label>
+          </div>
         </div>
       </article>
     </aside>
@@ -104,19 +107,26 @@
         <!-- <img src="ref/Lavender.png"> -->
         <center><i>"A excitable girl who loves to observe the things around her, and record them all down in her precious sketchbooks. Having a brilliant memory, she spends her time drawing down what she saw throughout the day, saving that moment into her collection."</i></center>
         <hr>
-        <center><h2>Facts about her:</h2></center>
-          <ul>
+        <div class="facts">
+          <div>
+            <h2>Lore facts:</h2>
+            <ul>
           <li>While she's often joyful and friendly, make sure not to disturb her at night, where she's concentrating drawing...</li>
           <li>She does own a camera, but she only uses it for more special occasions</li>
           <li>She sometimes help with Crystel's investigations, her attention to small details does help a lot</li>
           <li>She can manipulate light with her powers, but she mainly uses it as flashlight</li>
           </ul>
-        <hr>
+          </div>
+          <hr>
+          <div>
+            <h2>Meta facts:</h2>
         <ul>
           <li>She is a somewhat old OC, dating back to 2016, she was meant to be Kyrea's best friend.</li>
           <li>All the older designs are all me trying to have fun with details and decorations.</li>
           <li>She's supposed to have a camera motif, hence the crystal name, cuz glass and lens and stuff.</li>
           </ul>
+          </div>
+        </div>
           <hr>
       </div>
     </article>

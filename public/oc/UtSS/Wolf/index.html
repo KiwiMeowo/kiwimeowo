@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My lovely OCs~</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico?">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
-    <link href="../oc.css" rel="stylesheet" type="text/css" media="all">
-    <link href="../../style-my-tooltips.css" rel="stylesheet" type="text/css" />
+    <link href="/oc/oc.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-    <script src="../../jquery.style-my-tooltips.js"></script>
+    <script src="/jquery.style-my-tooltips.js"></script>
     <style>
     :root{
         --yellow: #b7deda;
@@ -26,14 +26,14 @@
  <body>
   <nav>
       <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
-      <a href="../index.html">Worlds</a>
-      <a href="index.html">UtSS</a>
+      <a href="../../index.html">Worlds</a>
+      <a href="../index.html">UtSS</a>
     </nav>
   <main>
     <aside>
       <article>
         <div class="inner">
-        <div class="prof"><img src="icon/Wolf.png"></div>
+        <div class="prof"><img src="icon.png"></div>
 	      <p>Name: <mark>Wolf ( he/him )</mark></p>
 	      <p>Birthday: 22 November</p>
 	      <p>Height: 169 cm</p>
@@ -55,10 +55,12 @@
       </article>
       <article><h1>His impressions of...</h1>
         <div class="inner">
+          <div id="rels">
+
         <div class="relChar" id="Lavender">
           <div class="relFront">
-          <div class="icon"><a href="Lavender.html"><img src="../chatprof/Lavender.png"></a></div>
-          <div class="info"><h2><a href="Lavender.html">Lavender:</a></h2><p>Travel Companion (Neutral)</p><label><input type="radio" name="lavender"></label></div>
+          <div class="icon"><a href="../Lavender/index.html"><img src="../Lavender/chatprof.png"></a></div>
+          <div class="info"><h2><a href="../Lavender/index.html">Lavender:</a></h2><p>Travel Companion (Neutral)</p><label><input type="radio" name="lavender"></label></div>
           </div>
           <div class="relBack">
           <p>"The mystery behind her magic element makes me even more curious about her!"</p>
@@ -68,8 +70,8 @@
         
         <div class="relChar" id="Cosmos">
           <div class="relFront">
-          <div class="icon"><a href="Cosmos.html"><img src="../chatprof/Cosmos.png"></a></div>
-          <div class="info"><h2><a href="Cosmos.html">Cosmos:</a></h2><p>Travel Companion (Neutral)</p><label><input type="radio" name="cosmos"></label></div>
+          <div class="icon"><a href="../Cosmos/index.html"><img src="../Cosmos/chatprof.png"></a></div>
+          <div class="info"><h2><a href="../Cosmos/index.html">Cosmos:</a></h2><p>Travel Companion (Neutral)</p><label><input type="radio" name="cosmos"></label></div>
           </div>
           <div class="relBack">
           <p>"...A cometling?... Not interested."</p>
@@ -79,8 +81,8 @@
         
         <div class="relChar" id="Ruth">
           <div class="relFront">
-          <div class="icon"><a href="Ruth.html"><img src="../chatprof/Ruth.png"></a></div>
-          <div class="info"><h2><a href="Ruth.html">Ruth:</a></h2><p>Travel Companion (Friendly)</p><label><input type="radio" name="ruth"></label></div>
+          <div class="icon"><a href="../Ruth/index.html"><img src="../Ruth/chatprof.png"></a></div>
+          <div class="info"><h2><a href="../Ruth/index.html">Ruth:</a></h2><p>Travel Companion (Friendly)</p><label><input type="radio" name="ruth"></label></div>
           </div>
           <div class="relBack">
           <p>"I can see the potential within you, you should become my sidekick!"</p>
@@ -90,8 +92,8 @@
 
         <div class="relChar" id="Grey">
           <div class="relFront">
-          <div class="icon"><a href="Grey.html"><img src="../chatprof/Grey.png"></a></div>
-          <div class="info"><h2><a href="Grey.html">Grey:</a></h2><p>Travel Companion (Friendly)</p><label><input type="radio" name="grey"></label></div>
+          <div class="icon"><a href="../Grey/index.html"><img src="../Grey/chatprof.png"></a></div>
+          <div class="info"><h2><a href="../Grey/index.html">Grey:</a></h2><p>Travel Companion (Friendly)</p><label><input type="radio" name="grey"></label></div>
           </div>
           <div class="relBack">
           <p>"Join me, and I shall make you as powerful as me!"</p>
@@ -110,6 +112,8 @@
           <label><input type="radio" name="raven"></label>
         </div>
         </div>
+        <label><input type="checkbox" name="rels"></label>
+          </div>
         </div>
       </article>
     </aside>
@@ -117,11 +121,13 @@
     <section>
       <article><h1>"You are too boring!"</h1>
         <div class="inner min">
-        <img src="ref/Wolf.png">
+        <img src="ref.png">
         <center><i>"A loud traveller hops into the spotlight, it is the charismatic Wolf! Despite being a water-element user, he does not enjoy being calm or peaceful. Instead, he wants to team up with the 'Great Scientist Raven', and take over the world! Despite saying this, why isn't he with that said friend, but instead, sticks with Lavender's team? Currently, he is bothering the travellers, causing tomfoolery every step they go, just what does this guy want?"</i></center>
         <hr>
-        <center><h2>Facts about him:</h2></center>
-        <ul>
+        <div class="facts">
+          <div>
+            <h2>Lore facts:</h2>
+            <ul>
           <li>He was very close with Raven, but something seemed to have happened between the two...</li>
           <li>He changed his name to Wolf because it sounds way cooler</li>
           <li>The equipment he's wearing is gifted by Raven</li>
@@ -129,13 +135,17 @@
           <li>His stamina is rather low</li>
           <li>He has a special ability which he'd rather not show off</li>
           </ul>
+          </div>
           <hr>
-          <ul>
+          <div>
+            <h2>Meta facts:</h2>
+            <ul>
           <li>He is based off my childhood OCs, which were based off my school bullies LOL</li>
           <li>He and Raven are planned to be Lavender's travel companions initially (like, back in 2021-ish), now it's just Wolf here</li>
           <li>He is named Wolf because from what I know, wolves are close friends with ravens</li>
           </ul>
-        <hr>
+          </div>
+        </div>
       </div>
     </article>
       <article><h1>Gallery</h1>

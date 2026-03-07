@@ -362,6 +362,8 @@ main {
   background: linear-gradient(var(--bg)), url(/assets/fancy.png); /*Gradient makes tiles "fade in".*/
   min-height:calc(100vh - 100px);
   display:flex;
+  z-index: 2;
+  position: relative;
 }
 
 /*Contains the sidebar boxes.*/
@@ -369,7 +371,7 @@ aside{
   width: 300px;
   margin: 0;
   }
-aside h1{
+aside article h1{
   font-size: 1.2rem;
   padding: 10px;
   margin: auto;

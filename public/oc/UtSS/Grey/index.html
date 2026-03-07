@@ -7,10 +7,10 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico?">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
-    <link href="../oc.css" rel="stylesheet" type="text/css" media="all">
-    <link href="../../style-my-tooltips.css" rel="stylesheet" type="text/css" />
+    <link href="/oc/oc.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-    <script src="../../jquery.style-my-tooltips.js"></script>
+    <script src="/jquery.style-my-tooltips.js"></script>
     <style>
     :root{
       --yellow:#1b0c39;
@@ -27,15 +27,15 @@
     </style>
   </head>
  <body>
-    <nav>
-      <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
-      <a href="../index.html">Worlds</a>
-      <a href="index.html">UtSS</a>
-    </nav>
+  <nav>
+    <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
+    <a href="../../index.html">Worlds</a>
+    <a href="../index.html">UtSS</a>
+  </nav>
   <main>
     <aside>
       <article><div class="inner">
-      <div class="prof"><img src="icon/Grey.png"></div>
+      <div class="prof"><img src="icon.png"></div>
 	    <p>Name: <mark>Grey ( he/him )</mark></p>
 	    <p>Birthday: 12 January</p>
 	    <p>Height: 174 cm</p>
@@ -55,10 +55,11 @@
       </ul>
       </div></article>
       <article><h1>His impressions of...</h1><div class="inner">
-        <div class="relChar" id="Lavender">
+        <div id="rels">
+          <div class="relChar" id="Lavender">
           <div class="relFront">
-          <div class="icon"><a href="Lavender.html"><img src="../chatprof/Lavender.png"></a></div>
-          <div class="info"><h2><a href="Lavender.html">Lavender:</a></h2>
+          <div class="icon"><a href="../Lavender/index.html"><img src="../Lavender/chatprof.png"></a></div>
+          <div class="info"><h2><a href="../Lavender/index.html">Lavender:</a></h2>
             <p>Travel companion (Friendly)</p>
           <label><input class="relopen" type="radio" name="lavender"></label>
         </div>
@@ -71,8 +72,8 @@
 
       <div class="relChar" id="Cosmos">
         <div class="relFront">
-        <div class="icon"><a href="Cosmos.html"><img src="../chatprof/Cosmos.png"></a></div>
-        <div class="info"><h2><a href="Cosmos.html">Cosmos:</a></h2>
+        <div class="icon"><a href="../Cosmos/index.html"><img src="../Cosmos/chatprof.png"></a></div>
+        <div class="info"><h2><a href="../Cosmos/index.html">Cosmos:</a></h2>
         <p>Travel companion (Wary)</p>
       <label><input class="relopen" type="radio" name="cosmos"></label></div>
         </div>
@@ -84,9 +85,9 @@
 
       <div class="relChar" id="Ruth">
         <div class="relFront">
-        <div class="icon"><a href="Ruth.html"><img src="../chatprof/Ruth.png"></a></div>
+        <div class="icon"><a href="../Ruth/index.html"><img src="../Ruth/chatprof.png"></a></div>
         <div class="info">
-          <h2><a href="Ruth.html">Ruth:</a></h2>
+          <h2><a href="../Ruth/index.html">Ruth:</a></h2>
           <p>Travel companion (Neutral)</p>
         <label><input class="relopen" type="radio" name="ruth"></label>
       </div>
@@ -99,9 +100,9 @@
 
       <div class="relChar" id="Wolf">
         <div class="relFront">
-        <div class="icon"><a href="Wolf.html"><img src="../chatprof/Wolf.png"></a></div>
+        <div class="icon"><a href="../Wolf/index.html"><img src="../Wolf/chatprof.png"></a></div>
         <div class="info">
-          <h2><a href="Wolf.html">Wolf:</a></h2>
+          <h2><a href="../Wolf/index.html">Wolf:</a></h2>
         <p>Travel companion (Neutral)</p>
       <label><input class="relopen" type="radio" name="wolf"></label>
     </div>
@@ -114,8 +115,8 @@
 
       <div class="relChar" id="Claire">
         <div class="relFront">
-        <div class="icon"><a href="Claire.html"><img src="../chatprof/Claire.png"></a></div>
-        <div class="info"><h2><a href="Claire.html">Claire:</a></h2><p>Mentor (Trust)</p>
+        <div class="icon"><a href="../Claire/index.html"><img src="../Claire/chatprof.png"></a></div>
+        <div class="info"><h2><a href="../Claire/index.html">Claire:</a></h2><p>Mentor (Trust)</p>
           <label><input class="relopen" type="radio" name="claire"></label>
         </div>
         </div>
@@ -127,8 +128,8 @@
 
       <div class="relChar" id="Solar">
         <div class="relFront">
-        <div class="icon"><a href="Solar.html"><img src="../chatprof/Solar.png"></a></div>
-        <div class="info"><h2><a href="Solar.html">Solar:</a></h2>
+        <div class="icon"><a href="../Solar/index.html"><img src="../Solar/chatprof.png"></a></div>
+        <div class="info"><h2><a href="../Solar/index.html">Solar:</a></h2>
           <p>Close Friend (Trust)</p>
           <label><input class="relopen" type="radio" name="solar"></label>
         </div>
@@ -141,9 +142,9 @@
 
       <div class="relChar" id="Jaspers">
         <div class="relFront">
-        <div class="icon"><a href="Jaspers.html"><img src="../chatprof/Jaspers.png"></a></div>
+        <div class="icon"><a href="../Jaspers/index.html"><img src="../Jaspers/chatprof.png"></a></div>
         <div class="info">
-          <h2><a href="Jaspers.html">Jaspers:</a></h2>
+          <h2><a href="../Jaspers/index.html">Jaspers:</a></h2>
           <p>Close Friend (Trust)</p>
         <label><input type="radio" name="jaspers"></label>
       </div>
@@ -157,9 +158,9 @@
       <button onclick="unhideRel(this,'Bun')" class="secret">???</button>
       <div class="relChar pop" id="Bun">
         <div class="relFront">
-        <div class="icon"><a href="Bun.html"><img src="../chatprof/Bun.png"></a></div>
+        <div class="icon"><a href="../Bun/index.html"><img src="../chatprof/Bun.png"></a></div>
         <div class="info">
-          <h2><a href="Bun.html">Bun:</a></h2>
+          <h2><a href="../Bun/index.html">Bun:</a></h2>
           <p>Friend (Trust)</p>
         <label><input type="radio" name="bun"></label>
       </div>
@@ -169,18 +170,21 @@
         <label><input type="radio" name="bun"></label>
       </div>
       </div>
+        </div>
       </div></article>
     </aside>
     
     <section>
       <article><h1>"If I don't find them, I can never forgive myself"</h1><div class="inner min">
-        <img src="ref/Grey.png">
+        <img src="ref.png">
         <div class="text">
         <center><i>" This gloomy boy may look cold at first. However, he often acts like an kind older brother, taking care of others especially those younger than him. It is said that Grey wishes to be as powerful and reliable as his mentor, who left for a mission and went missing. Grey seems to avoid using magic, and is often very cautious around his surrondings. Nevertheless, when danger arrives, he will not hesitate to protect his allies, no matter the opponent. "</i></center>
 	      </div>
         <hr>
-        <center><h2>Facts about him:</h2></center>
-          <ul>
+        <div class="facts">
+          <div>
+            <h2>Lore facts:</h2>
+            <ul>
           <li>The gemstone on his necklace was given by Claire</li>
           <li>Despite how strong his electric magic is, his own powers can hurt himself badly</li>
           <li>Though he is afraid of thinking about it, deep down he can't help thinking his friends are long gone...</li>
@@ -190,8 +194,11 @@
           <li>He does enjoy doing art stuff</li>
           <li>Maybe Grey had lighter hair when he was younger?</li>
           </ul>
+          </div>
         <hr>
-        <ul>
+        <div>
+          <h2>Meta facts:</h2>
+          <ul>
           <li>He is one of my oldest OCs ( along with Claire ), but his current design looks nothing like his old one</li>
           <li>I was following an art tutorial and the two characters I drew came out quite nice, and I made them my OCs, which are Grey and Claire now.</li>
           <li>This new design is inspired by his old name 薄霧城·灰銘, given by a friend</li>
@@ -200,6 +207,8 @@
           <li>Claire and him were intended to be siblings, but after weird world-building stuff, I changed that</li>
           <li>His character motif is thunder and fog</li>
           </ul>
+        </div>
+        </div>
         <hr>
       </div></article>
       <article><h1>Gallery</h1><div class="inner">

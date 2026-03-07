@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My lovely OCs~</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico?">
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
-    <link href="../oc.css" rel="stylesheet" type="text/css" media="all">
-    <link href="../../style-my-tooltips.css" rel="stylesheet" type="text/css" />
+    <link href="/oc/oc.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-    <script src="../../jquery.style-my-tooltips.js"></script>
+    <script src="/jquery.style-my-tooltips.js"></script>
     <style>
     /*Claire*/
     :root{
@@ -32,16 +32,16 @@
     </style>
   </head>
  <body>
-    <nav>
-      <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
-      <a href="../index.html">Worlds</a>
-      <a href="index.html">UtSS</a>
-    </nav>
+  <nav>
+    <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
+    <a href="../../index.html">Worlds</a>
+    <a href="../index.html">UtSS</a>
+  </nav>
   <main>
       <aside>
       <article>
         <div class="inner">
-      <div class="prof"><img src="icon/Jaspers.jpg"></div>
+      <div class="prof"><img src="icon.jpg"></div>
 	    <p>Name: <mark>Jaspers ( he/him )</mark></p>
 	    <p>Birthday: 29 September </p>
 	    <p>Height: 189 cm</p>
@@ -62,10 +62,12 @@
     </article>
       <article><h1>His impressions of...</h1>
         <div class="inner">
+          <div id="rels">
+
         <div class="relChar" id="Claire">
           <div class="relFront">
-          <div class="icon"><a href="Claire.html"><img src="../chatprof/Claire.png"></a></div>
-          <div class="info"><h2><a href="Claire.html">Claire:</a></h2><p>Close friend (Trust)</p>
+          <div class="icon"><a href="../Claire/index.html"><img src="../Claire/chatprof.png"></a></div>
+          <div class="info"><h2><a href="../Claire/index.html">Claire:</a></h2><p>Close friend (Trust)</p>
             <label><input type="radio" name="claire"></label>
           </div>
           </div>
@@ -77,8 +79,8 @@
 
         <div class="relChar" id="Solar">
           <div class="relFront">
-          <div class="icon"><a href="Solar.html"><img src="../chatprof/Solar.png"></a></div>
-          <div class="info"><h2><a href="Solar.html">Solar:</a></h2><p>Close friend (Trust)</p>
+          <div class="icon"><a href="../Solar/index.html"><img src="../Solar/chatprof.png"></a></div>
+          <div class="info"><h2><a href="../Solar/index.html">Solar:</a></h2><p>Close friend (Trust)</p>
             <label><input type="radio" name="solar"></label>
           </div>
           </div>
@@ -90,8 +92,8 @@
 
         <div class="relChar" id="Grey">
           <div class="relFront">
-          <div class="icon"><a href="Grey.html"><img src="../chatprof/Grey.png"></a></div>
-          <div class="info"><h2><a href="Grey.html">Grey:</a></h2><p>Close friend (Trust)</p>
+          <div class="icon"><a href="../Grey/index.html"><img src="../Grey/chatprof.png"></a></div>
+          <div class="info"><h2><a href="../Grey/index.html">Grey:</a></h2><p>Close friend (Trust)</p>
             <label><input type="radio" name="grey"></label>
           </div>
           </div>
@@ -104,8 +106,8 @@
         <button onclick="unhideRel(this,'Bun')" class="secret">???</button>
         <div class="relChar pop" id="Bun">
           <div class="relFront">
-          <div class="icon"><a href="Bun.html"><img src="../chatprof/Bun.png"></a></div>
-          <div class="info"><h2><a href="Bun.html">Bun:</a></h2><p>Friend..? (Wary)</p>
+          <div class="icon"><a href="../Bun/index.html"><img src="../chatprof/Bun.png"></a></div>
+          <div class="info"><h2><a href="../Bun/index.html">Bun:</a></h2><p>Friend..? (Wary)</p>
             <label><input type="radio" name="bun"></label>
           </div>
           </div>
@@ -114,17 +116,21 @@
           <label><input type="radio" name="bun"></label>
         </div>
         </div>
+        <label><input type="checkbox" name="rels"></label>
+          </div>
         </div>
       </article>
     </aside>
       <section>
       <article><h1>"...Why would you hang out with me?"</h1>
         <div class="inner min">
-      <img src="ref/Jaspers.png">
+      <img src="ref.png">
         <center><i>"This loner had immense strength, and even able to compete against Solar! Despite his intimidating and large appearance, he was often quite laidback and wouldn't fight anyone, usually. He often spent his time alone, but after a certain incident involving the reckless Solar, he somehow was brought into this small friend group. For he wished to find a direction in life, he joined the journey of discovery, but he would not be prepared for the terror awaiting in the shadows..."</i></center>
         <hr>
-        <h2><center>Facts about him</center></h2>
-        <ul>
+        <div class="facts">
+          <div>
+            <h2>Lore facts:</h2>
+            <ul>
         <li>He is known to be very strong in physique</li>
         <li>His skill was not named due to the lack of information</li>
         <li>He struggled a lot with his emotions, he often pretended to be calm and avoided conflict</li>
@@ -134,12 +140,17 @@
         <li>Nobody really knew why he didn't wear shirts, not even he knew</li>
         <li><a href="/art/comic/charm1.html">He was quite bad at smiling, people gets scared when he did that</a></li>
         </ul>
+          </div>
         <hr>
-        <ul>
+        <div>
+          <h2>Meta facts:</h2>
+          <ul>
         <li>In the old concepts, he used to have animal ears and wings like Cosmos, but honestly just one cat-person is enough</li>
         <li>He also used to have some sort of rivalry with Cosmos, well now he doesn't even know her, i guess?</li>
         <li>He used to at least wear a tanktop, but since Cosmos is already wearing one, I decided to take his top off, sorry Jaspers</li>
         </ul>
+        </div>
+        </div>
         <hr>
       </div>
     </article>
