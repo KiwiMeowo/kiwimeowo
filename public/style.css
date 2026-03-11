@@ -458,7 +458,7 @@ article{
   padding: 15px 25px;
   }
   
-.inner img {
+.inner img,.inner video {
   max-width: 100%; /*Prevent image overflow.*/
   height: auto;
   border-radius: 5px; /*Give images in content rounded corners.*/
@@ -631,7 +631,7 @@ your own title.
   }
   
 @media (min-width: 700px){
-.min img{
+.min img, .min video{
   max-height:500px;
   }
 }
