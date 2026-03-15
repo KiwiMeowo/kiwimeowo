@@ -317,6 +317,8 @@ header {
   border: 5px;
   border-style: outset inset inset outset;
   border-color: #344b91 var(--dblue) var(--dblue) #344b91;
+  z-index: 3;
+  position: relative;
   }
   
 .title-text, .title-pic {
