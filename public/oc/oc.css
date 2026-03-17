@@ -350,11 +350,11 @@ h3 a{
 #splashscreen{
   background: url(/header/Night.webp);
   background-size: cover;
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
   overflow: hidden;
 }
 .chartitle {
-  height: 50%;
+  height: calc(50vh - 50px);
 }
 #splashscreen article{
   max-height: calc(50% - 22px);
