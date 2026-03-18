@@ -56,6 +56,37 @@
         <div class="inner">
           <img src="deco/CR/Unlock_darkmode.webp" alt="Pome and others">
           <p>As someone who kinda grew up in the internet, I have my fair shair of fandom experiences. In this fandom section, I will share what I was fixiated with, and perhaps even write an whole essay on a certain topic. Hope you will get to know me and the media more!</p>
+          <hr>
+          <div id="Trivia">
+            <h1>Did you know?</h1>
+            <center>
+              <h2>Cookie Run Fact</h2>
+            <p>Pomegranate Cookie was responsible for cursing Moonlight Cookie, Wind Archer Cookie, Sugar Swan, and Millennial Tree Cookie!</p>
+            </center>
+          </div>
+          <script>
+        var Trivia=[
+          {"Media":"Cookie Run",
+            "Desc":"Pomegranate Cookie was responsible for cursing Moonlight Cookie, Wind Archer Cookie, Sugar Swan, and Millennial Tree Cookie!"
+          },
+          {"Media":"Cookie Run",
+            "Desc":"While Pure Vanilla Cookie and White Lily Cookie were first officially introduced in Jan 2021, their designs were shown as far as Rouguefort's debut",
+            "Img":"deco/CR/RoguefortTrial.webp"
+          },
+          {"Media":"Cookie Run",
+            "Desc":"Although Hollyberry Cookie was first debuted in 2021, but her kingdom has existed back in Cookie Run Line. The kingdom was located in Primeval Jungle, in the first land of the map, it features a broken-down castle with potraits of Royalberry Cookie and Jungleberry Cookie holding baby Princess Cookie and Tiger Lily Cookie in her hands.",
+            "Img":"deco/CR/Jungle.jpg"
+          },
+        ]
+        var randomTrivia=Math.floor(Math.random()*Trivia.length);
+        document.querySelector("#Trivia h2").innerHTML=`${Trivia[randomTrivia].Media} Fact`;
+        document.querySelector("#Trivia p").innerHTML=Trivia[randomTrivia].Desc;
+        if (Trivia[randomTrivia].Img){
+          var pic=document.createElement('img');
+          pic.setAttribute("src",Trivia[randomTrivia].Img);
+          document.querySelector("#Trivia").append(pic);
+        }
+      </script>
         </div>
       </article>
       <!-- <article>
@@ -120,36 +151,23 @@
     <aside style="order:3;position:unset;">
 
       <article>
-        <h1>Did you know?</h1>
-        <div class="inner">
-          <center id="Trivia">
-            <h2>Cookie Run Fact</h2>
-            <p>Pomegranate Cookie was responsible for cursing Moonlight Cookie, Wind Archer Cookie, Sugar Swan, and Millennial Tree Cookie!</p>
-          </center>
+        <h1>Cool stuff</h1>
+        <div class="inner" id="cool" style="text-align: center;">
+          <a href="blorbos/Pome.html" title="Pomegranate Cookie my beloved"><img src="/art/minis/Pome.png" alt="Pomegranate Cookie" style="image-rendering: pixelated;"></a>
+          <img src="/button/pomebutton.png" title="Button by me, feel free to use" class="button">
+	      <img src="/button/ShaMilk_Not_Welcomed.png" title="Button by me, sorry if you are a Shadow Milk fan, but I enjoy punting him like a ball" class="button">
+        <img src="/button/hollybutton.png" title="Button by me, feel free to use" class="button">
+        <a href="https://www.deviantart.com/megumar/art/Pomegranate-Cookie-Stamp-766502237" target="_blank"><img src="/button/pomestamp.png"></a>
+	      <a href="https://www.deviantart.com/megumar/art/Hollyberry-Cookie-Stamp-897964027" target="_blank"><img src="/button/hbstamp.png"></a>
+	      <a href="https://www.deviantart.com/megumar/art/Timekeeper-Cookie-Stamp-892135907" target="_blank"><img src="/button/tkstamp.png"></a>
+	      <a href="https://www.deviantart.com/megumar/art/Golden-Cheese-Cookie-Stamp-897964053" target="_blank"><img src="/button/gcstamp.png"></a>
         </div>
+        <style>
+          #cool img,#cool a{
+            display: inline-block;
+          }
+        </style>
       </article>
-      <script>
-        var Trivia=[
-          {"Media":"Cookie Run",
-            "Desc":"Pomegranate Cookie was responsible for cursing Moonlight Cookie, Wind Archer Cookie, Sugar Swan, and Millennial Tree Cookie!"
-          },
-          {"Media":"Cookie Run",
-            "Desc":"While Pure Vanilla Cookie and White Lily Cookie were first officially introduced in Jan 2021, their designs were shown as far as Rouguefort's debut",
-            "Img":"deco/CR/RoguefortTrial.webp"
-          },
-          {"Media":"Cookie Run",
-            "Desc":"Although Hollyberry Cookie was first debuted in 2021, but her kingdom has existed back in Cookie Run Line. The kingdom was located in Primeval Jungle, in the first land of the map, it features a broken-down castle with potraits of Royalberry Cookie and Jungleberry Cookie holding baby Princess Cookie and Tiger Lily Cookie in her hands."
-          },
-        ]
-        var randomTrivia=Math.floor(Math.random()*Trivia.length);
-        document.querySelector("#Trivia h2").innerHTML=`${Trivia[randomTrivia].Media} Fact`;
-        document.querySelector("#Trivia p").innerHTML=Trivia[randomTrivia].Desc;
-        if (Trivia[randomTrivia].Img){
-          var pic=document.createElement('img');
-          pic.setAttribute("src",Trivia[randomTrivia].Img);
-          document.querySelector("#Trivia").append(pic);
-        }
-      </script>
 
       <article>
         <h1>Playlist</h1>
