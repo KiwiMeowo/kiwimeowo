@@ -1,0 +1,52 @@
+  main{
+    --teal: #e3dbb0;
+    --lteal: #6c3131;
+    --blue: #eceaca;
+  }
+  main{
+    background:linear-gradient(#93b0e7, #e0fffe);
+  }
+  article{
+    background: linear-gradient(#ff8a534f),url(/assets/freepik-wood.jpg);
+  }
+  center,p{
+    text-shadow: 1px 1px var(--shadow);
+  }
+  #hams{
+    display: flex;
+  flex-wrap: wrap;
+  }
+  .box{
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+.ham {
+  margin: 10px auto;
+  height: 140px;
+  aspect-ratio:1/1;
+  border: 2.5px solid #fff;
+  border-radius: 5px;
+  filter: drop-shadow(2px 2px var(--lteal));
+  display: block;
+  overflow:hidden;
+  }
+  .ham img{
+    aspect-ratio: 1/1;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  }
+  .box h2{
+    text-align: center;
+  }
+  @media(max-width:900px){
+    .box{
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  }
+  @media (max-width: 500px){
+	.ham {
+    height: 100px;
+}
+}
