@@ -78,6 +78,7 @@ article > h1{
   height: 125px;
   overflow: hidden;
   position: relative;
+  padding: 0 2px;
 }
 #rels > label{
   position: absolute;
