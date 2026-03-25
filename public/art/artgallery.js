@@ -18,6 +18,13 @@ if (document.getElementById('tags')){
     document.getElementById(cate).append(tagg);
   })
 })
+document.getElementById('reset').addEventListener("click",function(){
+  for (x = 0; x < checks.length; x++) {
+    checks[x].checked = false;
+}
+tagon=[];
+    InitializePage();
+})
 }
 var checks=document.querySelectorAll('#tags input');
 
@@ -83,14 +90,6 @@ for (x = 0; x < checks.length; x++) {
   });
 }
 InitializePage()
-
-document.getElementById('reset').addEventListener("click",function(){
-  for (x = 0; x < checks.length; x++) {
-    checks[x].checked = false;
-}
-tagon=[];
-    InitializePage();
-})
 
 document.querySelector('#page button').setAttribute('onclick','openPage(parseInt(pagenum.value)-1)');
 movepage[0].setAttribute('onclick','openPage(1),pagenum.value=1');
