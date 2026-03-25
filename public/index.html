@@ -55,40 +55,14 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 #poll label{cursor:pointer;transition:color 0.5s;}
 #poll input {opacity: 0;cursor:pointer;float:left;}
 
-.checkmark {
-    content: "";
-    position: absolute;
-    text-align: left;
-    float: left;
-    height: 13px;
-    width: 13px;
-    margin: 2px;
-    margin-top: 3px;
-    color: var(--teal);
-    display: block;
-    border-radius: 2.5px;
-    border: 1px solid;
-    background: var(--highlightteal);
-}
+.checkmark { content: ""; position: absolute; text-align: left; float: left; height: 13px; width: 13px; margin: 2px; margin-top: 3px; color: var(--teal); display: block; border-radius: 2.5px; border: 1px solid; background: var(--highlightteal); }
+
 #poll input ~ label:hover{color: var(--dblue);}
 #poll input ~ label:hover .checkmark {color: var(--dblue);box-shadow: 0 0 0 0.5px var(--dblue);}
 #poll input:checked ~ label .checkmark {background: linear-gradient(var(--blue),var(--teal));color: var(--blue);}
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
+.checkmark:after { content: ""; position: absolute; display: none; }
 #poll input:checked ~ label .checkmark:after {display: block;}
-#poll .checkmark:after {
-    left:3px;
-  width: 4px;
-  height: 8px;
-  border: solid white;
-  border-width: 0 2.5px 2.5px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
+#poll .checkmark:after { left:3px; width: 4px; height: 8px; border: solid white; border-width: 0 2.5px 2.5px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
 
 /*Gaze donation drive slide*/
 .fade {animation-name: fade;animation-duration: 1.5s;}
