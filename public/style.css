@@ -460,7 +460,7 @@ article{
   padding: 15px 25px;
   }
   
-.inner img,.inner video {
+.inner > img,.inner > video {
   max-width: 100%; /*Prevent image overflow.*/
   height: auto;
   border-radius: 5px; /*Give images in content rounded corners.*/
@@ -469,6 +469,7 @@ article{
   margin:auto;
   text-wrap: auto;
   text-align: left;
+  margin: 0.5em auto;
   }
 
 img::before {
