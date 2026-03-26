@@ -2,13 +2,13 @@ article:nth-child(2){
   min-height: 796px;
 }
 article .page{
-  display:none;
-}
-article .page.show{
   display:flex;
 }
+article .page.hide{
+  display:none;
+}
 .page img{
-  max-width: 75%;
+  max-width: 50%;
   position: relative;
   max-height: calc(100vh - 100px);
 }
@@ -51,12 +51,15 @@ text-align: center;
   margin: 0 15px;
 }
 @media (max-width:700px){
-  article .page.show{
+  article .page{
     display: block;
   }
   .page .text{
     width: 100%;
   }
+  .page img{
+  max-width: 100%;
+}
   .page hr{
   margin: 15px auto;
 }
