@@ -42,16 +42,9 @@ function InitializePage(){
   } else{
     artcol = document.querySelectorAll(`.col`);
   }
-  for (x=Math.ceil(artcol.length/18)-1;x>=0;x--){
-    for(y=18;y>0;y--){
-      if (artcol[artcol.length-(y+18*x)]==undefined){
-        continue;
-      }
-else{
-  artcol[artcol.length-(y+18*x)].setAttribute('data-group',Math.ceil(artcol.length/18)-x)
+for(x=0;x<artcol.length;x++){
+      artcol[x].setAttribute('data-group',Math.ceil(artcol.length/18)-Math.ceil((artcol.length-x)/18)+1)
 }
-    }
-} 
 openPage(1);
 pagenum.value=1;
 pagenum.setAttribute('max',Math.ceil(artcol.length/18))

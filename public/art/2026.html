@@ -59,6 +59,9 @@
           <center>
             <p>Hover to see my comments, click to view full image/album! Click outside the content
               or click on the close button to close image viewer.</p>
+              <noscript>
+                <p><mark>Note: Javascript appears to be disabled! While you can still view the gallery, some functions may be unavailable, such as lightbox and tag filtering.</mark></p>
+              </noscript>
               <p id="tags">
                 <span id="Character">Character: </span>
                 <span id="Media">Media: </span>
@@ -74,6 +77,14 @@
           <div id="thumbnail"></div>
           <div id="fra">
             <!--
+              Guide for the gallery:
+              - Change <button> to <a> for album/external link
+              - Add censor to button class if the image is to be censored (e.g. <button class="artborder censor">...)
+              
+              Tags:
+                Finish: Doodle, Middle, Polished
+                Special: Birthday
+
               <div class="col">
                 <button class="artborder">
                   <img loading="lazy" 
@@ -84,10 +95,6 @@
                   style="">
                 </button>
               </div>
-
-            Guide for the gallery:
-            - Change <button> to <a> for album/external link
-            - Add censor to button class if the image is to be censored (e.g. <button class="artborder censor">...)
             -->
 
             <div class="col">
