@@ -1,5 +1,5 @@
 var pagenum=document.querySelectorAll('.page .date');
-var pages=document.getElementsByClassName('page');
+var pages=document.querySelectorAll('.page');
 
 pages.forEach(item => {
   item.classList.add('hide');
@@ -14,8 +14,8 @@ function prevpage(){
     for (let x = 0; x < pages.length; x++){
       pages[x].classList.add('hide');
     }
-    document.querySelectorAll(".num")[0].innerText=parseInt(document.querySelector(".num").innerText)-1;
-    document.querySelectorAll(".num")[1].innerText=parseInt(document.querySelector(".num").innerText)-1;
+    document.querySelectorAll(".num")[0].innerText=parseInt(document.querySelectorAll(".num")[0].innerText)-1;
+    document.querySelectorAll(".num")[1].innerText=parseInt(document.querySelectorAll(".num")[1].innerText)-1;
     pages[parseInt(document.querySelector(".num").innerText)-1].classList.remove('hide');
   }
 }
@@ -24,8 +24,8 @@ function nextpage(){
     for (let x = 0; x < pages.length; x++){
       pages[x].classList.add('hide');
     }
-    document.querySelectorAll(".num")[0].innerText=parseInt(document.querySelector(".num").innerText)+1;
-    document.querySelectorAll(".num")[1].innerText=parseInt(document.querySelector(".num").innerText)+1;
+    document.querySelectorAll(".num")[0].innerText=parseInt(document.querySelectorAll(".num")[0].innerText)+1;
+    document.querySelectorAll(".num")[1].innerText=parseInt(document.querySelectorAll(".num")[1].innerText)+1;
     pages[parseInt(document.querySelector(".num").innerText)-1].classList.remove('hide');
   }
 }
