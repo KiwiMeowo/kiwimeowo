@@ -5,7 +5,7 @@ var tagon=[];
 
 var taglist={
   Character:["Lavender","Cosmos","Grey","Ruth","Wolf","Solar","Claire","Jaspers","Kyrea","Other OCs", "Cookie Run"],
-  Media:['Color Pencil','Alcohol Marker'],
+  Media:['Pen/Pencil','Color Pencil','Alcohol Marker'],
   Finish:["Doodle","Middle","Polished"],
   Special:['Birthday','Comic']
 }
