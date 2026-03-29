@@ -867,32 +867,6 @@ if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="
             });
         </script>
       </article>
-      <!-- <article id="hrt">
-        <div class="inner">
-          <div style="border: 2px solid green;width: -moz-available;height: 250px;position: relative;border-radius:5px;background: linear-gradient(90deg,#7C7809,#D2A87D);">
-            <a href="https://x.com/snakesandrews" target="_blank"><img style="animation-name: hor-movement, ver-movement;animation-duration: 2.164s, 5.21s;animation-iteration-count: infinite;animation-direction: alternate;animation-timing-function: linear;position: absolute;image-rendering: pixelated;" src="JM.png"></a>
-          </div>
-        </div>
-        <style>
-@keyframes hor-movement {
-  from {
-    left: 0%;
-  }
-  to {
-    left: calc(100% - 26px);
-  }
-}
-
-@keyframes ver-movement {
-  from {
-    top: 0%;
-  }
-  to {
-    top: calc(100% - 32px);
-  }
-}
-</style>
-      </article> -->
     </aside>
   </main>
   <!--Footer-->
@@ -1001,7 +975,7 @@ if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="
     fetchHtml2();
     fetchSong();
     var imageobserver = new MutationObserver(function (mutations) {
-      if (document.getElementById("new").innerHTML != "" && document.getElementById("new2").innerHTML != "" && document.getElementById("new3").innerHTML != "") {
+      if (document.getElementById("new").innerHTML.includes("<img") && document.getElementById("new2").innerHTML != "" && document.getElementById("new3").innerHTML != "") {
         console.log("All fetch functions finished");
         getTooltips();
         indexwindow();
