@@ -100,7 +100,7 @@ function copy() {
 function RSScopy(){
   var copyText = document.getElementById("rss");
   var rssart=artselect[currentnum];
-  copyText.value=`<item><title>${rssart.getAttribute('alt')}</title><guid>${rssart.getAttribute('src').replace("&","&amp;")}</guid><link>https://kiwimeowo.neocities.org${window.location.pathname}</link><description><![CDATA[<img src="${rssart.getAttribute('src').replace("&","&amp;")}">${rssart.getAttribute('title')}]]></description><pubDate>${(new Date()).toUTCString()}</pubDate></item>`;
+  copyText.value=`<item><title>${rssart.getAttribute('alt')}</title><guid>${rssart.getAttribute('src').replace("&","&amp;")}</guid><link>https://kiwimeowo.neocities.org${window.location.pathname}</link><description><![CDATA[<img src="${rssart.getAttribute('src').replace("&","&amp;")}"><p>${rssart.getAttribute('title')}</p>${rssart.parentElement.tagName=='A'?'<p><a href="'+rssart.parentElement.getAttribute('href')+'">Open album</a></p>':''}]]></description><pubDate>${(new Date()).toUTCString()}</pubDate></item>`;
   // Select the text field
   copyText.select();
   copyText.setSelectionRange(0, 99999); // For mobile devices

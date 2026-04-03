@@ -4,10 +4,10 @@ var artcol = document.querySelectorAll('.col');
 var tagon=[];
 
 var taglist={
-  Character:["Lavender","Cosmos","Grey","Ruth","Wolf","Solar","Claire","Jaspers","Kyrea","Other OCs", "Cookie Run"],
+  Character:["Lavender","Cosmos","Grey","Ruth","Wolf","Solar","Claire","Jaspers","Crystal","Kyrea","Other OCs", "Cookie Run"],
   Media:['Pen/Pencil','Color Pencil','Alcohol Marker'],
   Finish:["Doodle","Middle","Polished"],
-  Special:['Birthday','Comic']
+  Special:['Birthday','Comic','Album','Festive']
 }
 if (document.getElementById('tags')){
   Object.keys(taglist).forEach(cate=>{
