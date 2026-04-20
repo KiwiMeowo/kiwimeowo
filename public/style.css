@@ -681,13 +681,16 @@ your own title.
   height:37px;
   width:84px;
 }
-#window img{
+#window img, #window video{
     max-height: 100%;
     width: 50%;
     display: block;
     object-fit: contain;
     margin:auto 0;
     background: #9cc3df3d;
+}
+#window img[src=""], #window video[src=""]{
+  display: none;
 }
 #window .text{
     transform: translateY(-50%);
@@ -712,6 +715,9 @@ your own title.
     border-radius: 5px;
     padding: 4px 10px;
     transition: color 0.5s, border-color 0.5s;
+}
+#window #link[href*="http"]{
+  display: block;
 }
 #artnav button:hover, #window #link:hover{
   color:#bcb9d6;
@@ -980,7 +986,7 @@ a[target="_blank"] .artborder{
     translate: 0px -2px;
     filter: drop-shadow(4px 6px var(--highlightteal));
 }
-.artborder img{
+.artborder img, .artborder video{
   margin:auto;
   width: 100%;
   object-fit: cover;
@@ -1005,6 +1011,10 @@ a.artborder:hover, .art a.artborder:hover{
 .artborder.censor img, #window img.censor{
     filter: blur(5px) saturate(50%) contrast(0.5);
     cursor:pointer;
+}
+.artborder:has(video){
+  border-style: solid;
+  border-color: #dc1010 white white #dc1010;
 }
 /* width */
 ::-webkit-scrollbar {

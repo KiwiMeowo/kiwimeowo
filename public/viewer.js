@@ -3,11 +3,11 @@ var art = document.querySelectorAll('.artborder:not(:has(img[src=""]))');
 //Create window HTML at the bottom
 var createwindow=document.createElement('div');
   createwindow.id="window";
-  createwindow.innerHTML='<div id="artview"><img src=""><div class="text"><p></p><a id="link">Open Album</a></div></div><div id="artnav"><button id="prevart">⭠ Prev</button><button id="x">[ x ]</button><button id="nextart">Next ⭢</button></div>';
+  createwindow.innerHTML='<div id="artview"><img src=""><video src="" controls></video><div class="text"><p></p><a id="link">Open Album</a></div></div><div id="artnav"><button id="prevart">⭠ Prev</button><button id="x">[ x ]</button><button id="nextart">Next ⭢</button></div>';
   document.body.appendChild(createwindow);
 	var artwindow=document.getElementById('window');
-	var artwork=artwindow.getElementsByTagName("img")[0];
-	var artdesc=artwindow.getElementsByTagName("p")[0];
+	var artwork=artwindow.querySelector("img");
+	var artdesc=artwindow.querySelector("p");
   var artlink=document.getElementById("link");
 
 //For every element with artborder class
@@ -18,7 +18,6 @@ var createwindow=document.createElement('div');
       //If you click the element, "a" tags will not open the window
       if (this.tagName!="A"){
         // Hide the Open Album element
-        artlink.style.display="none";
         artlink.href=="";
         // Save open id in the window image element
         artwork.setAttribute("data-openid", this.getAttribute("data-openid"));
@@ -38,6 +37,7 @@ var createwindow=document.createElement('div');
         artwindow.style.transform="translateY(-50%)";
       artwindow.style.opacity="0";
       artwindow.style.zIndex="-1";
+      artwindow.querySelector('video').src="";
     }
 });
 
@@ -78,10 +78,8 @@ document.getElementById("nextart").addEventListener("click",function(){
 // If the opened image is anchor tag, then the window will show an Open Album button
 function checkAnchor(openid){
   if((openid.tagName)=="A"){
-    artlink.style.display="block";
     artlink.setAttribute("href",openid.href);
    } else{
-    artlink.style.display="none";
     artlink.href=="";
    }
 }
@@ -99,13 +97,14 @@ function checkCensor(openid){
 
 //Load image to prevent delay everytime you click a new image
 function loadIMG(openid){
-  console.log(openid)
-  artwork.src="/assets/loading.gif";
-      setTimeout(function(){
-        artwork.src=openid.getElementsByTagName("img")[0].src;
-    },100);
-    artwork.setAttribute("alt", openid.getElementsByTagName("img")[0].getAttribute("alt"));
-  artdesc.innerHTML=openid.getElementsByTagName("img")[0].title;
+  artwindow.querySelector('video').src="";
+  artwindow.querySelector('img').src="";
+  artwindow.querySelector(openid.children[0].tagName).src="/assets/loading.gif";
+    setTimeout(function(){
+      artwindow.querySelector(openid.children[0].tagName).src=openid.querySelector(openid.children[0].tagName).src;
+  },100);
+  artwindow.querySelector(openid.children[0].tagName).setAttribute("alt", openid.querySelector(openid.children[0].tagName).getAttribute("alt"));
+  artdesc.innerHTML=openid.querySelector(openid.children[0].tagName).title!=''?openid.querySelector(openid.children[0].tagName).title:'[No comment]';
 }
 
 // Toggle censor

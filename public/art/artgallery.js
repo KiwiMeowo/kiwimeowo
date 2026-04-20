@@ -33,7 +33,7 @@ function InitializePage(){
     item.removeAttribute('data-group');
     item.style.display = "none";
   })
-  if(tagon!=[]){
+  if(tagon.length!=0){
     var str=''
     tagon.forEach((item)=>{
       str=str+`[data-tags*="${item}"]`
@@ -88,4 +88,4 @@ document.querySelector('#page button').setAttribute('onclick','openPage(parseInt
 movepage[0].setAttribute('onclick','openPage(1),pagenum.value=1');
 movepage[1].setAttribute('onclick','GoPage(-1)');
 movepage[2].setAttribute('onclick','GoPage(1)');
-movepage[3].setAttribute('onclick','openPage(Math.ceil(artcol.length/18)-1), pagenum.value=Math.ceil(artcol.length/18)');
+movepage[3].setAttribute('onclick','openPage(Math.ceil(artcol.length/18)), pagenum.value=Math.ceil(artcol.length/18)');
