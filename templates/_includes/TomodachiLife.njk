@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiwiMeowo's Tomodachi Life</title>
+    <link rel="icon" type="image/x-icon" href="/fixations/deco/pome.ico?">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
+    <link href="fandom.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="/art/art.css" type="text/css" media="all">
+    <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="/jquery.style-my-tooltips.js"></script>
+    <link href="/fixations/deco/TomodachiLife.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <style>
+    .collapsible{
+      background:#ee8436;border:none;--teal:white;--lteal:white;--dblue:white;--yellow:#EE8436;box-shadow:0 2px 0 rgba(140,90,0,.3),0 4px 8px rgba(80,40,0,.16);--highlightteal:#EE8436;border-radius:15px;
+    }
+    #flex{
+      display: flex;
+    }
+    #flex > div{
+      width: 50%;
+    }
+    #flex > hr{
+      margin: 0 15px;
+    }
+    @media (max-width:900px){
+      #flex{
+        display: block;
+      }
+      #flex > div{
+        width: 100%;
+      }
+      #flex > hr{
+      margin: 15px auto;
+    }
+    }
+  </style>
+ <body>
+  <nav>
+    <a href="/sitemap.html" style="--svg:url(/assets/map.svg)"></a>
+    <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
+      <a href="../index.html">Fixations</a>
+      <a href="index.html">Shrines</a>
+  </nav>
+  <main>
+    <section class="wide">
+      <article>
+        <h1>Welcome to 吊你老母</h1>
+        <div class="inner min">
+          <p>Tomodachi Life: Living the Dream, a game in the Nintendo Switch console, is released on 16 April 2026. It's the newer adaptation of the 3DS game Tomodachi Life.</p>
+          <p>As someone who loves playing around with my OCs, this is a great game for me to see my characters interact in a silly media. And the fact it has extra customizations and functions (Same sex marriage, custom clothing, controllable interactions) makes it an even more fun game.</p>
+          <img loading="lazy" src="https://www.dropbox.com/scl/fi/2udmmb4w1az6chn6cqfcy/2026041815292800_c.webp?rlkey=w3u9clo1uoxfdwbqi0zndz435&raw=1" alt="My Tomodachi Life Miis">
+          <hr>
+          <div id="flex">
+            <div>
+              <h2>Main achievements</h2>
+              <ul>
+            {% for goal in goals %}
+            <li>{{ goal }}</li>
+            {% endfor %}
+          </ul>
+            </div>
+          <hr>
+          <div>
+            <h2>Blogs</h2>
+            {% for post in collections['Tomo'] | reverse %}
+        <a href="{{ post.url }}" class="collapsible{% if post.data.style or post.data.deco %} special{% endif %}" title="{{ post.data.filter }}" {% if post.data.style %}style="{{ post.data.style }}"{% endif %}>{{ post.data.title | safe }} <span class="blogdate">( {{ post.data.date | datestring }} )</span><hr><span class="blogpreviewtag">Tags: {{ post.data.filter }}</span><span class="wordcount">{{ post.content | wordCount }} words ({{ post.content | readingTime }} read)</span>{{ post.data.deco | safe }}</a>
+        {% endfor %}
+          </div>
+          </div>
+          <hr>
+          <div id="pagenum">
+            Pages: <br><button style="transform: scaleX(-1);" class="movepage">➤➤</button><button style="transform: scaleX(-1);" class="movepage">➤</button><span id="page"><input min="1" max="20" type="number" maxlength="2" value="1"><button>Go</button></span><button class="movepage">➤</button><button class="movepage">➤➤</button>
+          </div>
+          <div id="fra">
+{{ content | safe }}
+</div>
+        </div>
+      </article>
+    </section>
+  </main>
+  <script src="/art/artgallery.js"></script>
+  <script src="/viewer.js"></script>
+  <script src="jq"></script>
+</body>
+</html>
