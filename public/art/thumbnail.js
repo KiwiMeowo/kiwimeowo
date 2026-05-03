@@ -16,7 +16,7 @@ document.addEventListener('keydown', function(event) {
     }
   }
 });
-if (window.location.host=="127.0.0.1:3000"){
+if (window.location.host.includes("127.0.0.1")){
   document.getElementById("thumbnail").style.display="block";
 }
 var artselect=document.querySelectorAll('.artborder:not(:has(img[src=""])) img');
