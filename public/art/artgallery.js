@@ -4,7 +4,7 @@ var artcol = document.querySelectorAll('.col');
 var tagon=[];
 
 var taglist={
-  Character:["Lavender","Cosmos","Grey","Ruth","Wolf","Solar","Claire","Jaspers","Crystal","Kyrea","Other OCs", "Cookie Run"],
+  Character:["Lavender","Cosmos","Grey","Ruth","Wolf","Solar","Claire","Jaspers","Crystal","Kyrea","Other OCs", "Fan Art"],
   Media:['Pen/Pencil','Color Pencil','Alcohol Marker'],
   Finish:["Doodle","Middle","Polished"],
   Special:['Birthday','Comic','Album','Festive']
