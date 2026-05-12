@@ -49,7 +49,7 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 #statuscafe-username a{font-weight: 600;font-size: 1em;text-shadow: 2px 2px var(--lteal);color: var(--blue) !important;text-decoration: none !important;margin: 12.5px 0px;}
 
 /*Snowflake*/
-.snowflake {color: #fff;font-size: 1em;font-family: Arial, sans-serif;text-shadow: 0 0 7.5px #2d3758;background:none;}
+.snowflake {color: #fff;font-size: 1em;font-family: Arial, sans-serif;text-shadow: 0 0 7.5px #152a70;background:none;}
 .snowflake,.snowflake .in{animation-iteration-count:infinite;animation-play-state:running}@keyframes snowflakes-fall{0%{transform:translateY(0)}100%{transform:translateY(110vh)}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;user-select:none;cursor:default;animation-name:snowflakes-shake;animation-duration:3s;animation-timing-function:ease-in-out}.snowflake .in{animation-duration:10s;animation-name:snowflakes-fall;animation-timing-function:linear}.snowflake:nth-of-type(0){left:1%;animation-delay:0s}.snowflake:nth-of-type(0) .in{animation-delay:0s}.snowflake:first-of-type{left:10%;animation-delay:1s}.snowflake:first-of-type .in,.snowflake:nth-of-type(8) .in{animation-delay:1s}.snowflake:nth-of-type(2){left:20%;animation-delay:.5s}.snowflake:nth-of-type(2) .in,.snowflake:nth-of-type(6) .in{animation-delay:6s}.snowflake:nth-of-type(3){left:30%;animation-delay:2s}.snowflake:nth-of-type(11) .in,.snowflake:nth-of-type(3) .in{animation-delay:4s}.snowflake:nth-of-type(4){left:40%;animation-delay:2s}.snowflake:nth-of-type(10) .in,.snowflake:nth-of-type(4) .in{animation-delay:2s}.snowflake:nth-of-type(5){left:50%;animation-delay:3s}.snowflake:nth-of-type(5) .in{animation-delay:8s}.snowflake:nth-of-type(6){left:60%;animation-delay:2s}.snowflake:nth-of-type(7){left:70%;animation-delay:1s}.snowflake:nth-of-type(7) .in{animation-delay:2.5s}.snowflake:nth-of-type(8){left:80%;animation-delay:0s}.snowflake:nth-of-type(9){left:90%;animation-delay:1.5s}.snowflake:nth-of-type(9) .in{animation-delay:3s}.snowflake:nth-of-type(10){left:25%;animation-delay:0s}.snowflake:nth-of-type(11){left:65%;animation-delay:2.5s}
 
 /*Poll CSS*/
@@ -58,8 +58,8 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 
 .checkmark { content: ""; position: absolute; text-align: left; float: left; height: 13px; width: 13px; margin: 2px; margin-top: 3px; color: var(--teal); display: block; border-radius: 2.5px; border: 1px solid; background: var(--highlightteal); }
 
-#poll input ~ label:hover{color: var(--dblue);}
-#poll input ~ label:hover .checkmark {color: var(--dblue);box-shadow: 0 0 0 0.5px var(--dblue);}
+#poll input ~ label:hover{color: var(--blue);}
+#poll input ~ label:hover .checkmark {color: var(--blue);box-shadow: 0 0 0 0.5px var(--blue);}
 #poll input:checked ~ label .checkmark {background: linear-gradient(var(--blue),var(--teal));color: var(--blue);}
 .checkmark:after { content: ""; position: absolute; display: none; }
 #poll input:checked ~ label .checkmark:after {display: block;}
@@ -113,7 +113,7 @@ canvas.ff-canvas.ff-canvas-ready{image-rendering: pixelated;}
 .lav{color:#683e8c;}
 .lav h3{text-shadow: 2px 2px #dbb9e1;color: #411284;}
 .cosmos{color:#3f6884;}
-.cosmos h3{text-shadow: 2px 2px #8cacac;color: #2d3758;}
+.cosmos h3{text-shadow: 2px 2px #8cacac;color: #152a70;}
 .ruth{color:#8c2f00;}
 .ruth h3{color:#a93c05;text-shadow: 2px 2px #ffc471;}
 .grey{color:#6a5978;}
@@ -378,7 +378,7 @@ filter: hue-rotate(20deg) saturate(2) brightness(0.7);
                 }
                 a[href*='KiwiPicFeed'] {
             text-shadow: none;
-            color: var(--dblue);
+            color: var(--blue);
             box-shadow: inset 0 -0.625em 0 0 var(--highlightteal);
             font-size: 1.5em;
             transition:color 0.5s;

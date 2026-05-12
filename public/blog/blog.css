@@ -49,8 +49,8 @@ justify-content: space-around;
   background: var(--yellow);
   filter: var(--dropshadow);
   border-radius: 5px;
-  color: var(--dblue);
-  text-decoration-color: var(--dblue);
+  color: var(--blue);
+  text-decoration-color: var(--blue);
   }
   .blognav a span{
     border-radius: 5px;

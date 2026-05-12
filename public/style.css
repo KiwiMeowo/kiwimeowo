@@ -3,7 +3,7 @@
   --lteal:#8cacac;
   --highlightteal:#9cc3dfab;
   --teal:#3f6884;
-  --blue:#2d3758;
+  --blue:#152a70;
   --dblue:#1b1d4c;
   --bg:#637b8759, #7750c359 150%;
   --shadow:#1a38748c;
@@ -57,7 +57,7 @@ a[target="_blank"]{
 }
 .secret:hover{
   cursor:pointer;
-  color:var(--dblue);
+  color:var(--blue);
 }
 p{
   margin: 0.75em 0;
@@ -66,7 +66,7 @@ a{
   transition: color 0.5s, text-decoration-color 0.5s;
 }
 a:hover, a:focus {
-  color: var(--dblue);
+  color: var(--blue);
   }
   center{
   margin:0.75em 0;
@@ -413,12 +413,12 @@ aside article h1{
   content: "";
 }
 .bar[style*="--svg"]:hover:before{
-  background: var(--dblue);
+  background: var(--blue);
 }
 .bar:hover, .bar:focus{
   background: linear-gradient(0.25turn, #3654bf54,#3654bf21);
-  border-left: 3px solid var(--dblue);
-  color: var(--dblue);
+  border-left: 3px solid var(--blue);
+  color: var(--blue);
   translate: var(--down);
   filter: var(--dropshadowdown);
   transition: none;
@@ -759,8 +759,8 @@ your own title.
 }
 .coolbutton:hover{
   background: linear-gradient(0.25turn, #3654bf54,#3654bf2b);
-  border-left: 3px solid var(--dblue);
-  color: var(--dblue);
+  border-left: 3px solid var(--blue);
+  color: var(--blue);
   cursor:pointer;
   translate: var(--down);
   filter: var(--dropshadowdown);
@@ -795,8 +795,8 @@ a.collapsible{
 
 .active, .collapsible:hover, .collapsible:focus {
   background-color: var(--highlightteal);
-  border-color: var(--dblue);
-  color: var(--dblue);
+  border-color: var(--blue);
+  color: var(--blue);
 }
 .active{
   translate: var(--down);
@@ -814,12 +814,12 @@ a.collapsible:after {
   content: "\27A4";
 }
 .collapsible:hover::after,.collapsible:focus::after {
-  color: var(--dblue);
+  color: var(--blue);
 }
 
 .active:after {
   content: "\2212";
-  color: var(--dblue);
+  color: var(--blue);
 }
 
 .content {
@@ -834,7 +834,7 @@ a.collapsible:after {
 }
 .close{
   display:inline-block;
-  color:var(--dblue);
+  color:var(--blue);
   border-radius: 7.5px;
   cursor:pointer;
   border: 0;
@@ -869,13 +869,13 @@ a.collapsible:after {
   text-decoration-thickness: 1px;
 }
 .collapsible:hover .blogpreviewtag,.collapsible:focus .blogpreviewtag{
-  background: var(--dblue);
+  background: var(--blue);
   color:var(--highlightteal);
 }
 /*Blog page spoiler censors*/
 .spoiler {
-  color:var(--dblue);
-  background-color: var(--dblue);
+  color:var(--blue);
+  background-color: var(--blue);
   transition: 0.5s ease-in-out;
   cursor:pointer;
 }
@@ -981,7 +981,7 @@ a[target="_blank"] .artborder{
   cursor:alias;
 }
 .artborder:hover, .artborder:focus {
-    color: var(--dblue);
+    color: var(--blue);
     transition: color 0.5s, translate 0.1s;
     translate: 0px -2px;
     filter: drop-shadow(4px 6px var(--highlightteal));

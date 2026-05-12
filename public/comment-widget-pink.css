@@ -75,8 +75,8 @@
 }
 #c_widget button:hover, #c_widget input[type=submit]:hover {
     background: linear-gradient(0.25turn, #3654bf54,#3654bf2b);
-  border-left: 3px solid var(--dblue);
-  color: var(--dblue);
+  border-left: 3px solid var(--blue);
+  color: var(--blue);
   cursor:pointer;
   translate: 1px 1px;
   filter: var(--dropshadowdown);
@@ -84,8 +84,8 @@
 #c_widget button:disabled, #c_widget input[type=submit]:disabled {opacity: 60%;}
 #c_widget button:disabled:hover, #c_widget input[type=submit]:disabled:hover {
     background: linear-gradient(0.25turn, #3654bf54,#3654bf2b);
-  border-left: 3px solid var(--dblue);
-  color: var(--dblue);
+  border-left: 3px solid var(--blue);
+  color: var(--blue);
   translate: 1px 1px;
   filter: var(--dropshadowdown);
 }
