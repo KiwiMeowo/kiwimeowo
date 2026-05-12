@@ -1,0 +1,32 @@
+---
+layout: BlogTemplate_v2.njk
+tags: ['blog','2026/2nd']
+style: >
+
+deco: >
+
+bg: 
+filter: Discussion
+title: Art Fight HTML Update
+subtitle: Despite everything, I like the HTML update
+weather: Hot
+songname: Yorushike - Bubble
+songlink: https://www.last.fm/music/Yorushika/_/Bubble
+songcomment: My boyfriend told me about this song, the music and the video goes so hard
+mood: Trying to relax
+thought: Graduation trip... To go... Or not to go... That is a question...
+date: 2026-05-12
+credit:
+---
+
+<!--Art Discussion Dream Fixation Game Life OC Review Vent-->
+<p>Few days ago, Art Fight updated, inlcuding Tag System update and Rules update. There are a lot of complains regarding the rules, including the DNIs and tracing references made by yourself. I honestly doubt the rules are well-defined, or even feasible. How do you know if an artwork is drawn by tracing a reference, especially if the reference is a photo taken by the artist? However, one thing good from this update is the HTML update, replacing the BBCode system used for bios,  permissions and comments.</p>
+<p>As a non-donator of Art Fight, I do not have custom CSS theme for my profile, therefore the styling is quite limited. While BBcode allows for colors, fonts, and maybe some cool line dividers made with symbols, it isn't as good as having all the HTML and CSS stuff on your hands. Moreover, the BBCode editor in Art Fight is very unstable, I might want to alter the font-size, but after I saved it, the change would not be visible at all for some reason. As a result, I feel very annoyed everytime I need to change something.</p>
+<p>The day I heard the HTML editor was here, I was estatic! I immediately rushed to my profile, rebuilding the code. Because how clumsy I was with the BBCode editor, there's a lot of redundant lines of code, some &lt;span&gt;s might contain no strings at all. After some time, the bio codes had more consistency. Moreover, with the help of Bootstrap (I had no knowledge prior to this, had to scroll the pages for more insight), I could even create responsive columns, no more long ass descriptions.</p>
+<p>However, I had noticed some problems about styling the pages.</p>
+<h2>Theme clash</h2>
+<p>In the Art Fight website, the overall theme is monochrome and simple, not much flashy stuff going on. I could just bring the style I have here directly to my AF profile, but it would clash greatly with the website, especially the fact I don't have the perk to alter the theme with CSS. I am a bit unsure if I should make the descriptions too colorful.</p>
+<h2>Color responsiveness</h2>
+<p>With inline styling, I can do more fancy stuff with the character descriptions. However, as much as I want to add more colors to my text, another major problem is not everyone uses dark mode. If I use bright yellow text, it would look great in dark mode, but not in light mode. Perhaps I can contain the text in a fixed background, but the colors might still contrast a lot with the overall theme (see above).</p>
+<p>Anyways, I decided to first update my descriptions with a simple theme first. Back when BBCode was used, editing description is hard, not only is it somewhat wonky, I do need to edit the format one by one, too time-consuming. But since it now uses HTML, I have a way to make it easier: 11ty. First, I prepare the character bio template. Then for each character, I add a new page for them and type down their info. Using 11ty, I can just generate the stuff out and copy them to Art Fight, easy peasy. Seeing all my characters descriptions having consistency is very satisfying.</p>
+<p>I'm still thinking of better format I could give for my OC pages, but for now, the pages look good enough. Now, I should go work on new refs, maybe.</p>
