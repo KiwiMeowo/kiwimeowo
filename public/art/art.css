@@ -108,8 +108,20 @@ background: var(--gradient);
   color:var(--blue);
 }
 
+#tags{
+  max-width: 1000px;
+  display: block;
+  margin: auto;
+}
+
 #tags > span{
   display:block;
+  margin: 10px 0;
+}
+#reset{
+  margin:auto;
+  text-align: center;
+  display: block;
 }
 .option{position: relative;display: inline-block;margin: 2px;background: var(--highlightteal); padding: 0 2px; border-radius: 2.5px;}
 .option label{color:var(--dblue);transition:color 0.5s;cursor:pointer;}

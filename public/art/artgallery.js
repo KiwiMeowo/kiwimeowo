@@ -5,16 +5,19 @@ var tagon=[];
 
 var taglist={
   Character:["Lavender","Cosmos","Grey","Ruth","Wolf","Solar","Claire","Jaspers","Crystal","Kyrea","Other OCs", "Fan Art"],
-  Media:['Pen/Pencil','Color Pencil','Alcohol Marker'],
   Finish:["Doodle","Middle","Polished"],
   Special:['Birthday','Comic','Album','Festive']
 }
 if (document.getElementById('tags')){
   Object.keys(taglist).forEach(cate=>{
+  var tag=document.createElement('span');
+  tag.innerText=cate+': ';
+  tag.setAttribute('id',cate)
+  document.getElementById('tags').append(tag);
   taglist[cate].forEach(item=>{
     var tagg=document.createElement('span');
     tagg.classList.add('option');
-    tagg.innerHTML=`<input type="checkbox" id="${item}"><label for="${item}"><span class="checkmark"></span>${item}</label>`
+    tagg.innerHTML=`<input type="checkbox" id="${item}"><label for="${item}"><span class="checkmark"></span>${item} (${document.querySelectorAll('img[data-tags*="'+item+'"]').length})</label>`
     document.getElementById(cate).append(tagg);
   })
 })
