@@ -18,7 +18,7 @@
       box-shadow: 0 7px 0 rgba(140, 90, 0, 0.30), 0 14px 20px rgba(80, 40, 0, 0.16);
       border-radius: 20px;
     }
-    .blogtags,.statusbox p, #pagenum{
+    .blogtags,.statusbox p, #pagenum,#arttop{
       --blue:var(--yellow);
       background: #EE8436 !important;
       color: var(--yellow);

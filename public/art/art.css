@@ -1,7 +1,7 @@
 section.wide {
     margin: 0px auto;
   }
-#pagenum, .arttop{
+#pagenum, #arttop{
   text-indent: 0;
     font-size: 1.5em;
     line-height: 1.5;
@@ -46,19 +46,18 @@ section.wide {
   transition: color 0.5s;
   padding: 2px 6px;
 }
-#pagenum button:hover, .arttop a:hover{
+#pagenum button:hover, #arttop:hover{
   color: var(--teal);
 }
-.arttop{
+#arttop{
   display:none;
-  margin-bottom: 0.25em;
-}
-.arttop a{
-  margin: 5px;
+  padding: 5px 10px;
   color: var(--blue);
+  margin: 0.25em auto;
+  width: max-content;
 }
 @media(max-width:700px){
-	.arttop {
+	#arttop {
     display: block;
 }
 }

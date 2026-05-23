@@ -57,7 +57,7 @@
   filter: var(--dropshadowdown);
   translate: 1px 6px;
         }
-        #pagenav,.arttop{
+        #pagenav,#arttop{
             text-align: center;
             text-indent: 0;
       font-size: x-large;
@@ -82,15 +82,13 @@
   transition: color 0.5s;
   padding: 2px 6px;
 }
-.arttop{
+#arttop{
   display:none;
-  margin-bottom: 0.25em;
-}
-.arttop a{
-  margin: 5px;
+  margin: 0.25em auto;
+  padding: 5px 10px;
   color: var(--blue);
 }
-#pagenav button:hover, .arttop a:hover{
+#pagenav button:hover, #arttop:hover{
   color: var(--teal);
 }
         @media(max-width:1200px){
@@ -102,7 +100,7 @@
             .flex{
                 flex:0 0 50%
             }
-            .arttop {
+            #arttop {
     display: block;
 }
         }
@@ -139,7 +137,7 @@
       <div class="inner">
         <div id="pagenav"><button onclick="prevpage()" style="transform: scaleX(-1);">➤</button>Page: <span id="num"></span><button onclick="nextpage()">➤</button></div>
         <div id="gallery">Loading images...</div>
-        <div class="arttop"><a href="#top">Back to top</a></div>
+        <a id="arttop" href="#top">Back to top</a>
 	      <hr>
       </div>
     </article>
