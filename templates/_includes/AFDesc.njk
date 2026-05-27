@@ -24,7 +24,7 @@ body{
 <div class="col-md-6">
 <p style="color:{{ color }};font-size:1.25em;">⋄ ⋆&nbsp;<span style="font-family:Georgia;">Random Trivia</span>&nbsp;⋆ ⋄</p>
 {% for triv in metafacts %}
-<p><span style="color:{{ color }};">{% if symbol %}{{ symbol }}{% else %}☆{% endif %}</span> <span style="font-family:Georgia;">{{ triv | safe }}</span><p>
+<p><span style="color:{{ color }};">{% if symbol %}{{ symbol }}{% else %}☆{% endif %}</span> <span style="font-family:Georgia;">{{ triv | safe }}</span></p>
 {% endfor %}
 </div>
 </div>
