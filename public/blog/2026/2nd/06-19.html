@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>KiwiMeowo - TADC: The Last Act, Part 2</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?">
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/blog/blog.css" rel="stylesheet" type="text/css" media="all">
+  <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css">
+  <link type="text/css" rel="stylesheet" href="/comment-widget-pink.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script src="/jquery.style-my-tooltips.js"></script>
+  <style>
+  :root{
+    --teal:#C3B5B7;
+    --yellow:#3C3931;
+    --bg:#000000AA,#90909033;
+    --blue:white;
+    --highlightteal:#616161;
+  }
+  #c_widget, article{
+    box-shadow: 4px 4px 4px 2px var(--shadow);
+  }
+  .blogtags,.statusbox p{
+  background: #C3B5B7 !important;
+    color: #3C3931 !important;
+  }
+</style>
+</head>
+<body>
+  <nav><a href="/sitemap.html" style="--svg:url(/assets/map.svg)"></a> <a href="/index.html" style="--svg:url(/assets/home.svg)"></a> <a href="/blog/index.html">Blog</a> <a href="/blog/blogmap.html">Blog Map</a></nav>
+  <main>
+    <section class="wide">
+      <article>
+        <h1>TADC: The Last Act, Part 2</h1>
+        <div class="inner min" style="text-align: center;">
+          <h2>Whoopies, It seems it isn't time for this review yet!</h2>
+          <p style="font-size: 1.25em;">Time until Youtube/Netflix release:</p>
+          <p id="demo" style="font-size: 2em;color: white;"></p>
+          <hr>
+        </div>
+        <script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jun 19 2026").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Movie is released!... Now wait for Kiwi to upload the blog...";
+  }
+}, 1000);
+</script>
+      </article>
+    </section>
+  </main>
+  <script src="/spoiler.js"></script>
+</body>
+</html>
