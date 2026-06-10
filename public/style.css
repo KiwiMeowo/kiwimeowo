@@ -199,7 +199,7 @@ h1{
 .text center p, section .inner center p,.inner p *{
   text-indent: 0;
 }
-.inner > :is(p, center, ul,li) a::after {
+.inner > :is(p, center, ul,li) a[target='_blank']::after {
   content: ' ➜]';
   display: inline;
   font-size: 0.5em;
