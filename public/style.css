@@ -199,6 +199,12 @@ h1{
 .text center p, section .inner center p,.inner p *{
   text-indent: 0;
 }
+.inner > :is(p, center, ul,li) a::after {
+  content: ' ➜]';
+  display: inline;
+  font-size: 0.5em;
+  vertical-align: super;
+}
 .date{
   text-align: right;
   font-size: 0.9em;
@@ -497,6 +503,7 @@ img.button, svg.button{
   filter: var(--dropshadow);
   image-rendering: pixelated;
   border-radius:0;
+  display: inline-block;
 }
 
 a img.button:hover,a svg.button:hover {
