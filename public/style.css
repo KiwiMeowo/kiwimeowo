@@ -923,8 +923,6 @@ img.spoiler:hover{
   width: 170px;
   height: 170px;
   vertical-align: middle;
-  rotate: 45deg;
-  scale:0.75;
 }
 
 .art .artborder img {
@@ -932,10 +930,6 @@ img.spoiler:hover{
   aspect-ratio: 1/1;
   width:100%;
   margin:auto;
-  rotate: -45deg;
-  min-width: 230px;
-  margin-top: -30px;
-  margin-left: -30px;
 }
 .yt{
   aspect-ratio: 16/9;
