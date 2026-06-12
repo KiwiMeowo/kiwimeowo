@@ -27,8 +27,8 @@
         <a href="/blog/index.html"><span>Return</span></a>
         {% if nextPost %}<a href="{{ nextPost.url }}">{% endif %}<span>Next ⭢</span>{% if nextPost %}</a>{% endif %}
   </div>
-  {% if bg %}<img src="{{ bg }}" id="bg">{% endif %}
   <main>
+  {% if bg %}<img src="{{ bg }}" id="bg">{% endif %}
     <section class="wide">
       <article><h1>{{ title | safe }}</h1>
       <div class="inner min">

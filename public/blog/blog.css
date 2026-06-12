@@ -137,7 +137,7 @@ section .inner h2:first-child {
   border-radius: 5px;
   padding: 4px 12px;
   filter: var(--dropshadow);
-  background: linear-gradient(#1a25759e, #5877b7a3);
+  background: linear-gradient(var(--teal), var(--gradient1));
   display: inline-block;
 }
 .blogwords{
@@ -185,3 +185,4 @@ section .inner h2:first-child {
 	margin:0;
 }
 }
+.recap{background:url(/assets/paper-texture.png);background-color:rgba(0,0,0,0);background-color:#fff;box-shadow:1px 1px 1px var(--shadow);border-radius:5px;padding:5px;margin:.75em auto}
