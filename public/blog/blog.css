@@ -56,7 +56,7 @@ justify-content: space-around;
     border-radius: 5px;
     padding: 0 7.5px;
     filter: var(--dropshadow);
-    background: linear-gradient(135deg, #9cc3df78, #93c3e633);
+    background: linear-gradient(135deg, var(--gradient1),var(--gradient2));
   }
   .blognav a:hover,.blognav a:focus{
     background: #bcb9d6de;
@@ -69,11 +69,13 @@ justify-content: space-around;
   padding:7.5px;
 }
 .simple{
-  background: linear-gradient(#0b263b75, #1f084e73 150%), url(/assets/fancy.png);
   min-height: calc(100vh - 45px);
   position: static;
 }
-.simple .blog{
+.simple main{
+  padding-top: 0;
+}
+.simple article{
   margin: 15px 15%;
   margin-top: 45px !important;
   background: var(--yellow);

@@ -217,3 +217,38 @@ function blogHide(blog) {
     content.style.maxHeight = null;
   }
 }
+
+// Open blog through the link
+let getblog = new URLSearchParams(window.location.search);
+if (getblog.get("year")=="2023"||getblog.get("year").includes("2024")){
+  var ob = new MutationObserver(function(mutations) {
+   if (document.querySelectorAll("#load .collapsible")!=null&&document.querySelectorAll("#load .collapsible").length!=0) {
+          if(getblog.get("name")){
+          for (x = 0; x < document.querySelectorAll('#load .collapsible').length; x++) {
+            if(document.querySelectorAll('#load .collapsible')[x].innerText.includes(getblog.get("name"))){
+              var foundblog=document.querySelectorAll('#load .collapsible')[x]
+              foundblog.classList.toggle("active");
+              if(!document.hidden){
+                foundblog.scrollIntoView({
+              behavior: 'smooth'
+            });
+              }
+          var content = foundblog.nextElementSibling;
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + 5000 + "px";
+          } 
+          break
+          }
+          if (x==document.querySelectorAll('#load .collapsible').length-1){
+            console.log("Can't find blog :(")
+          }
+            }
+          }
+        ob.disconnect();
+    }
+});
+  fetchHtml(getblog.get("year").toString())
+ob.observe(document, {attributes: false, childList: true, characterData: false, subtree:true});
+}

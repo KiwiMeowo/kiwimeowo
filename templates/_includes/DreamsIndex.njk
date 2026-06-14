@@ -1,0 +1,57 @@
+---
+pagination:
+  data: dreams
+  size: 20
+permalink: "blog/dreams/{% if pagination.pageNumber == 0 %}index{% else %}page-{{ pagination.pageNumber+1 }}{% endif %}.html"
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <title>Welcome to my land of Dreams ⋆</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
+    <link href="dreams.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="/jquery.style-my-tooltips.js"></script>
+  </head>
+  <nav>
+    <a href="/sitemap.html" style="--svg:url(/assets/map.svg)"></a>
+      <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
+      <a href="/blog/index.html">Blog</a>
+  </nav>
+  <div class="blognav">
+      {% if pagination.href.previous %}<a href="{{ pagination.href.first }}">{% endif %}<span>⇤ First</span>{% if pagination.href.previous %}</a>{% endif %}
+      {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">{% endif %}<span>⭠ Previous</span>{% if pagination.href.previous %}</a>{% endif %}
+        {% if pagination.href.next %}<a href="{{ pagination.href.next }}">{% endif %}<span>Next ⭢</span>{% if pagination.href.next %}</a>{% endif %}
+        {% if pagination.href.next %}<a href="{{ pagination.href.last }}">{% endif %}<span>Last ⇥</span>{% if pagination.href.next %}</a>{% endif %}
+  </div>
+  <header></header>
+    <div class="title">
+      <div class="title-text">
+      <h1>Sweet Dreams are made of this ⋆</h1>
+      </div>
+    </div>
+ <body>
+    <main>
+    <section class="wide">
+    {% for dream in pagination.items %}
+    <article>
+    <div class="inner">
+    <h1>{{ dream.date }}</h1>
+    <p class="tags">Category: {{ dream.category }} | Rating: {{ dream.rating }}</p>
+    {{ dream.detail | safe }}
+    {% if dream.long and dream.long != 'false' %}
+    <p class="more"><a href="{{ dream.long }}">Read more -&gt;</a></p>
+    {% endif %}
+    </div>
+    </article>
+    {% endfor %}
+    </section>
+    </main>
+</body>
+</html>

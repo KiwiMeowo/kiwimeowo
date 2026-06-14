@@ -1,0 +1,86 @@
+:root{
+    --bg:#bc59ff77,#e4b5ff66;
+    --yellow:#000000cc;
+    --teal:#ffecfb;
+    --lteal:#bc59ff;
+    --highlightteal:#bc59ff;
+    --boxdark:#d284ff80;
+    --gradient1:#bc59ff77;
+    --gradient2:#e4b5ff66;
+    --blue:white;
+  }
+  header{
+    background: linear-gradient(rgba(213, 249, 255, 0.11), #ffc1f533), url(/header/Night.webp);
+  background-size: cover;
+  background-position: 0 40%;
+  }
+  .title{
+    text-align:center;
+    background: linear-gradient(#bc59ff,#e4b5ff);
+  border-color: #e4b5ff #a037e7 #a037e7 #e4b5ff;
+  }
+  .title-text {
+  width: auto;
+  padding-right: 0;
+}
+article {
+  box-shadow: inset 0 -50px 50px -20px var(--boxdark);
+  filter: drop-shadow(4px 4px 1px var(--shadow));
+}
+h1,h2{
+  color:white;
+}
+.more{
+  text-align: right;
+}
+.more a{
+  background: linear-gradient(#ffffffed,#e4c4ff9e);color: black;padding: 2px 5px;border-radius: 5px;filter: var(--dropshadow);
+  translate: 0 0;
+  display: inline-block;
+}
+.more a:hover{
+  translate: var(--down);
+  filter: var(--dropshadowdown);
+}
+.tags {
+  color: #e4b5ff;
+  text-decoration: underline dashed;
+    text-decoration-thickness: auto;
+}
+.blognav {
+  position:fixed;
+  z-index: 99;
+  width: 100%;
+  background: rgb(15 14 49 / 50%); 
+  bottom:0;
+  padding: 10px 0;
+  display: flex;
+justify-content: space-around;
+  }
+  .blognav a,.blognav span:not(a span){
+    filter: var(--dropshadow);
+    display: inline-block;
+    padding:3px 6px;
+  }
+  .blognav span:not(a span){
+    color: var(--yellow);
+  }
+  .blognav a {
+  background: var(--yellow);
+  filter: var(--dropshadow);
+  border-radius: 5px;
+  color: var(--blue);
+  text-decoration-color: var(--blue);
+  }
+  .blognav a span{
+    border-radius: 5px;
+    padding: 0 7.5px;
+    filter: var(--dropshadow);
+    background: linear-gradient(135deg, var(--gradient1),var(--gradient2));
+  }
+  .blognav a:hover,.blognav a:focus{
+    background: #bcb9d6de;
+    transition: background 0.5s;
+  translate:var(--down);
+  filter:var(--dropshadowdown);
+}
