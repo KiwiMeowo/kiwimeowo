@@ -2,7 +2,7 @@
 pagination:
   data: dreams
   size: 20
-permalink: "blog/dreams/{% if pagination.pageNumber == 0 %}index{% else %}page-{{ pagination.pageNumber+1 }}{% endif %}.html"
+permalink: "blog/dreams/{% if pagination.pageNumber == 0 %}index{% else %}page-{{ pagination.pageNumber | plus: 1 }}{% endif %}.html"
 ---
 <!DOCTYPE html>
 <html>
