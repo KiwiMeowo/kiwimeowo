@@ -23,6 +23,8 @@
   width: auto;
   padding-right: 0;
 }
+a svg.button{filter:drop-shadow(2px 2px var(--lteal))}
+a svg.button:hover{filter:drop-shadow(1px 1px var(--lteal))}
 article {
   box-shadow: inset 0 -50px 50px -20px var(--boxdark);
   filter: drop-shadow(4px 4px 1px var(--shadow));

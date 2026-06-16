@@ -1,0 +1,16 @@
+:root{
+  --bg:#bc59ff77,#e4b5ff66;
+    --yellow:#000000cc;
+    --teal:#ffecfb;
+    --lteal:#bc59ff;
+    --highlightteal:#bc59ff;
+    --boxdark:#d284ff80;
+    --gradient1:#bc59ff77;
+    --gradient2:#e4b5ff66;
+    --blue:white;
+  --dblue:white;
+  --shadow:#1b357082;
+  --gradient:linear-gradient(var(--gradient1),var(--gradient2));
+  --dropshadow:drop-shadow(2px 2px 1px var(--shadow));
+  --down:1px 1px;
+}

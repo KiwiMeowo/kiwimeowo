@@ -4,7 +4,7 @@
    }
  rss {
     font-family: "Fraunces","Toppan-Bunkyu-Mincho",serif, sans-serif;
-   background: linear-gradient(#637b8759, #7750c359 150%), url(/assets/fancy.png);
+   background: linear-gradient(var(--bg)), url(/assets/fancy.png);
    color:var(--teal);
    font-weight:500;
    line-height: 145%;
