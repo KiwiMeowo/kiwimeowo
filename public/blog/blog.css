@@ -72,15 +72,12 @@ justify-content: space-around;
   min-height: calc(100vh - 45px);
   position: static;
 }
-.simple main{
-  padding-top: 0;
-}
 .simple article{
   margin: 15px 15%;
-  margin-top: 45px !important;
   background: var(--yellow);
   border-radius: 7.5px;
   box-shadow: 4px 4px 4px 2px var(--shadow);
+  width:100%
 }
 @media(max-width:700px){
   .simple .blog{
