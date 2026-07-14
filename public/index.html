@@ -196,7 +196,7 @@ filter: hue-rotate(20deg) saturate(2) brightness(0.7);
 #playbar .svg:hover{background:#bcb9d6;translate:var(--down)}
 #playbar a{filter: var(--dropshadow);text-decoration: none;}
 #playbar a:hover{filter: var(--dropshadowdown);}
-.log{
+#log ul{
   margin: 0;
   padding-left: 15px;
 }
@@ -821,18 +821,18 @@ if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="
         <div class="inner">
           <div id="log" style="overflow-x:hidden;overflow-y:auto;border: 7.5px double;border-radius: 5px;padding: 5px 15px;">
             <hr>
-            <center><a href="updatelog.html">More update logs here</a></center>
+            <center><a href="updatelog/index.html">More update logs here</a></center>
           </div>
         </div>
         <script>
-          fetch('updatelog.html', { cache: "no-store" })
+          fetch('updatelog/index.html', { cache: "no-store" })
             .then((response) => {
               return response.text();
             })
             .then((html) => {
               var parser = new DOMParser();
               var doc = parser.parseFromString(html, "text/html");
-              var newblog = doc.querySelector('.log');
+              var newblog = doc.querySelector('ul');
               document.getElementById("log").prepend(newblog);
             })
             .catch(error => {
