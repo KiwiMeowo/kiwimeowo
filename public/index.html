@@ -363,58 +363,41 @@ filter: hue-rotate(20deg) saturate(2) brightness(0.7);
                 <script src="https://status.cafe/current-status.js?name=kiwimeowo" defer></script>
                 <center><a style="display:inline-block;" href="https://status.cafe" target="_blank"><img src="https://status.cafe/assets/button.png" alt="Status Cafe" class="button"></a></center>
                 <hr>
-                <div style="background: linear-gradient(140deg, #e6e6e6, #e6e6e6 50px, white 100px, white 250px, #e6e6e6 300px); border:5px outset grey; box-shadow: 2px 2px 4px var(--shadow), inset 1px 1px 1px var(--shadow); padding:7.5px;position: relative;">
+                <div style="background: linear-gradient(140deg, #e6e6e6, #e6e6e6 50px, white 100px, white 250px, #e6e6e6 300px); border:5px outset grey; box-shadow: 2px 2px 4px var(--shadow), inset 1px 1px 1px var(--shadow); padding:7.5px;position: relative;font-family: ComicSansMS" id="KiwiPicFeed">
                   <noscript>
                       <h1>This is where I would put my pic</h1>
                       <p>If you had turned on Javascript</p>
                     </noscript>
-                  <script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed@latest/dist/bsky-embed.es.js" async></script>
-              <bsky-embed
-                feed="at://did:plc:qd5snu2svaea2qiwvwt56yti/app.bsky.feed.generator/aaap5qobmyuua"
-                limit="1"
-                load-more="false"
-                disable-autoplay="true"
-                link-image="true"
-                mode=""
-                custom-styles="
-                .p-4.border-b.border-slate-300.dark\:border-slate-800{
-                  padding:0;
-                  font-family: ComicSansMS;
-                }
-                a[href*='KiwiPicFeed'] {
-            text-shadow: none;
-            color: var(--blue);
-            box-shadow: inset 0 -0.625em 0 0 var(--highlightteal);
-            font-size: 1.5em;
-            transition:color 0.5s;
-            }
-            a[href*='KiwiPicFeed']:hover{
-            color:var(--teal);
-            }
-            .w-14.h-14.rounded-full, .text-ellipsis.overflow-hidden.whitespace-nowrap, .text-slate-500.text-sm {
-            display: none;
-            }
-            .w-full.max-w-\[calc\(100\%-70px\)\] {
-            max-width: 100%;
-            }
-            .border-b {
-            border: 0;
-            }
-            .mt-4 {
-            margin: auto;
-            max-width: 200px;
-            }
-            .mt-4 a {
-              margin: 5px;
-              display: block;
-            }
-            .rounded-md{
-            filter: var(--dropshadow);
-            border: 1px solid;
-            }
-            "
-              >
-              </bsky-embed>
+              <h1 style="text-shadow: none; color: var(--blue); font-size: 1.5em;"><mark>#KiwiPicFeed</mark></h1>
+              <button class="artborder"><img src="" alt="Kiwi Pic Feed" style="object-fit: cover;"></button>
+              <p></p>
+              <p class="date"></p>
+              <script>
+                fetch("https://docs.google.com/spreadsheets/d/1tZn36T1Yraxea_X4H0rH3fYSbithjO29o_8etyo0Jac/gviz/tq?")
+                .then(response=>{return response.text()})
+                .then(text=>{
+                  var table=JSON.parse(text.split('\n')[1].replace(/google.visualization.Query.setResponse\(|\);/g, ''));
+                  var newest=table.table.rows[table.table.rows.length-1].c;
+                  document.querySelector("#KiwiPicFeed img").setAttribute("src",newest[1].v.replace("open?","thumbnail?")+"&sz=w1500-h1500");
+                  document.querySelector("#KiwiPicFeed img").setAttribute("title",newest[2].v);
+                  document.querySelectorAll("#KiwiPicFeed p")[0].innerText=newest[2].v;
+                  var current=new Date();
+                  eval(`var dateset= new ${newest[0].v}`) 
+                  if (Math.floor((current.getTime()-dateset.getTime())/1000/60)<60){
+                document.querySelectorAll("#KiwiPicFeed p")[1].innerText=`${Math.floor((current.getTime()-dateset.getTime())/1000/60)} minute(s) ago`;
+              } else if(Math.floor((current.getTime()-dateset.getTime())/1000/60/60)<24){
+                document.querySelectorAll("#KiwiPicFeed p")[1].innerText=`${Math.floor((current.getTime()-dateset.getTime())/1000/60/60)} hour(s) ago`;
+              } else if(Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24)<7){
+                document.querySelectorAll("#KiwiPicFeed p")[1].innerText=`${Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24)} day(s) ago`;
+              } else if(Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24/7)<4){
+                document.querySelectorAll("#KiwiPicFeed p")[1].innerText=`${Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24/7)} week(s) ago`;
+              } else if(Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24/7/4)<24){
+                document.querySelectorAll("#KiwiPicFeed p")[1].innerText=`${Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24/7/4)} month(s) ago`;
+              } else{
+                document.querySelectorAll("#KiwiPicFeed p")[1].innerText=`${Math.floor((current.getTime()-dateset.getTime())/1000/60/60/24/7/4/24)} year(s) ago`;
+              }
+                }) 
+              </script>
                 </div>
               </div>
             </div>
@@ -701,31 +684,6 @@ if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="
         </div>
       </article>
 
-      <!-- <article id="wplace">
-        <h1>Ongoing Wplace Art</h1>
-        <div class="inner">
-          <img src="art/wplace/img/Coyote.jpg">
-						<center><a href="https://wplace.live/?lat=22.041573505617357&lng=115.48221646552732&zoom=15" target="_blank">The Crane Wives: Coyote Stories Cover</a></center>
-        </div>
-        <style>
-          #wplace{
-			border: 2px solid #E0E5EE;
-			background: #F3F7FD;
-			--teal: #3D4E68;
-			--blue: #3D4E68;
-			box-shadow: 4px 4px 4px 2px var(--shadow);
-			border-radius: 30px;
-		}
-    #wplace h1{
-      border-bottom: none;
-    }
-    #wplace img{
-      width:150px;border: 1px solid var(--teal);
-    }
-        </style>
-      </article> 
-      -->
-
       <!--OC chat-->
       <article>
         <h1>A glimpse of my OCs' lives</h1>
@@ -990,7 +948,7 @@ if(localStorage.getItem("KiwiTheme")==null||localStorage.getItem("KiwiTheme")=="
     fetchHtml2();
     fetchSong();
     var imageobserver = new MutationObserver(function (mutations) {
-      if (document.getElementById("new").innerHTML.includes("<img") && document.getElementById("new2").innerHTML != "" && document.getElementById("new3").innerHTML != "") {
+      if (document.getElementById("new").innerHTML.includes("<img") && document.getElementById("new2").innerHTML != "" && document.getElementById("new3").innerHTML != "" && document.querySelector("#KiwiPicFeed img").getAttribute("src")!="") {
         console.log("All fetch functions finished");
         getTooltips();
         indexwindow();
