@@ -2,7 +2,8 @@
 pagination:
   data: dreams.dreams
   size: 20
-permalink: "blog/dreams/{% if pagination.pageNumber == 0 %}index{% else %}page-{{ pagination.pageNumber | plus: 1 }}{% endif %}.html"
+  reverse: true
+permalink: "blog/dreams/{% if not pagination.page.next %}index{% else %}page-{{ pagination.pages.length | minus: pagination.pageNumber }}{% endif %}.html"
 ---
 <!DOCTYPE html>
 <html>
@@ -25,10 +26,10 @@ permalink: "blog/dreams/{% if pagination.pageNumber == 0 %}index{% else %}page-{
       <a href="/blog/index.html">Blog</a>
   </nav>
   <div class="blognav">
-      {% if pagination.href.previous %}<a href="{{ pagination.href.first }}">{% endif %}<span>⇤ First</span>{% if pagination.href.previous %}</a>{% endif %}
-      {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">{% endif %}<span>⭠ Previous</span>{% if pagination.href.previous %}</a>{% endif %}
-        {% if pagination.href.next %}<a href="{{ pagination.href.next }}">{% endif %}<span>Next ⭢</span>{% if pagination.href.next %}</a>{% endif %}
-        {% if pagination.href.next %}<a href="{{ pagination.href.last }}">{% endif %}<span>Last ⇥</span>{% if pagination.href.next %}</a>{% endif %}
+      {% if pagination.href.next %}<a href="{{ pagination.href.last }}">{% endif %}<span>⇤ First</span>{% if pagination.href.next %}</a>{% endif %}
+      {% if pagination.href.next %}<a href="{{ pagination.href.next }}">{% endif %}<span>⭠ Previous</span>{% if pagination.href.next %}</a>{% endif %}
+      {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">{% endif %}<span>Next ⭢</span>{% if pagination.href.previous %}</a>{% endif %}
+      {% if pagination.href.previous %}<a href="{{ pagination.href.first }}">{% endif %}<span>Last ⇥</span>{% if pagination.href.previous %}</a>{% endif %}
   </div>
   <header></header>
     <div class="title">
@@ -39,7 +40,7 @@ permalink: "blog/dreams/{% if pagination.pageNumber == 0 %}index{% else %}page-{
  <body>
     <main>
     <section class="wide">
-    {% for dream in pagination.items %}
+    {% for dream in pagination.items | reverse %}
     <article>
     <div class="inner">
     <h1>{{ dream.date }}</h1>

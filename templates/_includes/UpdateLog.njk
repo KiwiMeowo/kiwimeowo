@@ -2,7 +2,8 @@
 pagination:
   data: logs
   size: 50
-permalink: "updatelog/{% if pagination.pageNumber == 0 %}index{% else %}page-{{ pagination.pageNumber | plus: 1 }}{% endif %}.html"
+  reverse: true
+permalink: "updatelog/{% if not pagination.page.next %}index{% else %}page-{{ pagination.pages.length | minus: pagination.pageNumber }}{% endif %}.html"
 ---
 <!DOCTYPE html>
 <html>
@@ -65,16 +66,16 @@ justify-content: space-around;
       <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
   </nav>
   <div class="blognav">
-      {% if pagination.href.previous %}<a href="{{ pagination.href.first }}">{% endif %}<span>⇤ First</span>{% if pagination.href.previous %}</a>{% endif %}
-      {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">{% endif %}<span>⭠ Previous</span>{% if pagination.href.previous %}</a>{% endif %}
-        {% if pagination.href.next %}<a href="{{ pagination.href.next }}">{% endif %}<span>Next ⭢</span>{% if pagination.href.next %}</a>{% endif %}
-        {% if pagination.href.next %}<a href="{{ pagination.href.last }}">{% endif %}<span>Last ⇥</span>{% if pagination.href.next %}</a>{% endif %}
+      {% if pagination.href.next %}<a href="{{ pagination.href.last }}">{% endif %}<span>⇤ First</span>{% if pagination.href.next %}</a>{% endif %}
+      {% if pagination.href.next %}<a href="{{ pagination.href.next }}">{% endif %}<span>⭠ Previous</span>{% if pagination.href.next %}</a>{% endif %}
+      {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">{% endif %}<span>Next ⭢</span>{% if pagination.href.previous %}</a>{% endif %}
+      {% if pagination.href.previous %}<a href="{{ pagination.href.first }}">{% endif %}<span>Last ⇥</span>{% if pagination.href.previous %}</a>{% endif %}
   </div>
   <main>
     <section class="wide">
       <article><h1>Update Log</h1>
         <div class="inner min">
-        {% for log in pagination.items %}
+        {% for log in pagination.items| reverse %}
         <ul>
         {% for info in log.infos %}
         <li>{{ info | safe }}</li>
