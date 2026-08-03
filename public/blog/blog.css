@@ -73,15 +73,15 @@ justify-content: space-around;
   position: static;
 }
 .simple article{
-  margin: 15px 15%;
-  background: var(--yellow);
-  border-radius: 7.5px;
   box-shadow: 4px 4px 4px 2px var(--shadow);
-  width:100%
 }
-@media(max-width:700px){
-  .simple .blog{
-    margin: 15px 7.5px;
+.simple section{
+  margin:0 auto;
+  width: calc(100% - 30%);
+}
+@media(max-width:800px){
+  .simple section{
+    width: 100%;
   }
 }
 section .inner h2:first-child {

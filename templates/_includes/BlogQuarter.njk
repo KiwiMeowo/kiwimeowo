@@ -34,6 +34,7 @@ permalink: /blog/{{ tag }}/index.html
       <a href="/blog/blogmap.html">Blog Map</a>
   </nav>
     <main>
+    <section>
     <article>
     <div class="inner min blog">
     {% for post in collections[ tag ] | reverse %}
@@ -41,6 +42,7 @@ permalink: /blog/{{ tag }}/index.html
         {% endfor %}
           </div>
     </article>
+    </section>
     </main>
 </body>
 </html>
