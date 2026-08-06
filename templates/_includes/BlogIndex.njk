@@ -13,6 +13,7 @@
     <link href="../style-my-tooltips.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="../jquery.style-my-tooltips.js"></script>
+    <script src="https://u.widget.st/ar.js"></script>
     <style>
     /*Index*/
 .title{border-color: #153959 var(--dblue) var(--dblue) #153959;}
@@ -41,7 +42,6 @@ aside .act{background: linear-gradient(0.25turn, #3654bf54,#3654bf2b);border-lef
 }
 
 #cosmos{cursor:pointer;}
-#id41bac878d6cb6{font-family: "Fraunces" !important;}
 @keyframes birthday {0%   {rotate:-2.5deg}100% {rotate:2.5deg}}
 .coolbutton{margin: 5px;}
 
@@ -228,10 +228,12 @@ for (i = 0; i < coll.length; i++) {
         <div style="max-width:330px;margin:auto;">
         <h2>Weather in Hong Kong:</h2>
         <center>
-        <div style="border: 3px solid;padding: 15px 12.5px;border-radius: 7.5px;max-width: 175px;background: var(--gradient);overflow: hidden;filter: var(--dropshadow);">
-        <div id="hkdate" style="height: 21.6px;font-size:1.25em;color:var(--teal);opacity: 0.75;"></div>
-        <div id="hktime" style="height: 40.5px;font-size: 2.4em;"></div>
-        <div id="id41bac878d6cb6" a='{"t":"s","v":"1.2","lang":"en","locs":[1469],"ssot":"c","sics":"ms","cbkg":"#1C3F5C","cfnt":"#FFFFFF","slpd":8,"slgp":7,"slbr":"8","sfnt":"a","slfs":24,"slis":32}' style="width:120px;border-radius: 7.5px;height: 25px;">Weather Data Source: <a href="https://sharpweather.com/weather_hong_kong/30_days/">30 days weather Hong Kong</a></div><script async src="https://static1.sharpweather.com/widgetjs/?id=id41bac878d6cb6"></script>
+        <div style="border: 3px solid;padding: 15px 12.5px;border-radius: 7.5px;max-width: 200px;background: var(--gradient);overflow: hidden;filter: var(--dropshadow);">
+        <div id="hkdate" style="height: 21.6px;font-size:1.5em;color:var(--teal);opacity: 0.75;"></div>
+        <div id="hktime" style="height: 40.5px;font-size: 2.5em;"></div>
+        <div style="background:var(--teal);padding: 8px;margin:5px;border-radius:5px;">
+        <ws-widget type="weather" iid="2800"></ws-widget>
+        </div>
         </div>
         <div class="js">
         <h2 id="birthannounce" style="animation-name: birthday;animation-duration: 1s;animation-iteration-count: infinite;animation-direction: alternate;animation-timing-function: ease-in-out;"></h2>
