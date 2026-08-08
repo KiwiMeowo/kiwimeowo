@@ -371,10 +371,14 @@ function createComment(data) {
     let name = document.createElement('h3');
     let filteredName = data.Name;
     if (s_wordFilterOn) {filteredName = filteredName.replace(v_filteredWords, s_filterReplacement)}
-    name.innerText = filteredName;
     name.className = 'c-name';
-    if(data.Moderated == false) {
-        name.innerText = 'Guest'; // Change 'Guest' to whatever you want
+    if(data.Moderated == true) {
+      name.innerText = filteredName;
+      if(filteredName=="KiwiMeowo"){
+        name.classList.add("kiwimeowo");
+      }
+    } else{
+      name.innerText = 'Guest'; // Change 'Guest' to whatever you want
     }
     comment.appendChild(name);
 

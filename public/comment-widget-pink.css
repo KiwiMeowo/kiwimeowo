@@ -188,3 +188,16 @@
     margin: 0 25px;
     color: var(--teal);
 }
+.kiwimeowo{
+  background: var(--gradient);
+  filter: var(--dropshadow);
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-shadow: none;
+}
+.kiwimeowo:after{
+  content:'🟊';
+  animation-name: spin;animation-duration: 4000ms;animation-iteration-count: infinite;animation-timing-function: linear;margin-left: 5px;
+  display: inline-block;
+}
+@keyframes spin{0%{rotate:0deg}100%{rotate:360deg}}
