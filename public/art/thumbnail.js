@@ -30,12 +30,6 @@ if (window.location.host.includes("127.0.0.1")){
   if(event.key==='x'){
     nextNum();
   }
-  if(event.key==='r'){
-    copy();
-  }
-  if(event.key==='t'){
-    RSScopy();
-  }
   })
 } else{
   var cheatcode=[];
