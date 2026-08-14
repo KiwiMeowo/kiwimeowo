@@ -1,8 +1,44 @@
 // I edit the position of the thumbnails by adding scale, translate and/or object position. However, when I edit it while live preview is on, there is a chance the images stop showing (Prob because live preview refreshes the page too much, and the browser doesn't like that). I can also open a new browser window and use DevTools... But that's too many steps.
 // So I made this code to edit the style through the live preview window without opening DevTools. I can just adjust the style on the page, then copy it directly to my code! 
 // Originally wanted the thumbnail thing to activate by using the Konami code, but I realised I could just turn it on when it is local hosted. Well I guess I can leave it in as an Easter Egg.
-document.getElementById('thumbnail').innerHTML=`Toggle: <button onclick=prevNum() style=transform:scaleX(-1)>➤</button><span id=imagenum>1</span><button onclick=nextNum()>➤</button><br>Object-position: <button onclick='document.getElementById("op").value="top",setStyle()'>Top</button><button onclick='document.getElementById("op").value="center",setStyle()'>Center</button><input id=op value=center><button onclick=setStyle()>Apply</button><br>Scale: <input id=sc value=1><button onclick='adjust(document.getElementById("sc"),-.5)'>-0.5</button><button onclick=setStyle()>Apply</button><button onclick='adjust(document.getElementById("sc"),.5)'>+0.5</button><center>TranslateX: <input id=translatex value=0> TranslateY: <input id=translatey value=0><div style="text-align:center"><button onclick='adjust(document.getElementById("translatey"),10)'style=rotate:270deg>⯮</button><br><button onclick='adjust(document.getElementById("translatey"),1)'style=rotate:270deg>➤</button><br><button onclick='adjust(document.getElementById("translatex"),10)'>⯬</button><button onclick='adjust(document.getElementById("translatex"),1)'style=transform:scaleX(-1)>➤</button><button onclick=setStyle()>Apply</button><button onclick='adjust(document.getElementById("translatex"),-1)'>➤</button><button onclick='adjust(document.getElementById("translatex"),-10)'>⯮</button><br><button onclick='adjust(document.getElementById("translatey"),-1)'style=rotate:90deg>➤</button><br><button onclick='adjust(document.getElementById("translatey"),-10)'style=rotate:90deg>⯮</button></div></center>Style: <input id=result><button onclick=copy()>Copy</button><br><button onclick=RSScopy() style=margin:5px class=coolbutton>Copy RSS</button><input id=rss>`;
-var cheatcode=[];
+document.getElementById('thumbnail').innerHTML=`Toggle: <button onclick='prevNum()' style='transform:scaleX(-1)'>➤</button><span id='imagenum'>1</span><button onclick='nextNum()'>➤</button><br>Object-position: <button onclick='document.getElementById("op").value="top",setStyle()'>Top</button><button onclick='document.getElementById("op").value="center",setStyle()'>Center</button><input id=op value=center><button onclick=setStyle()>Apply</button><br>Scale: <input id=sc value=1><button onclick='adjust(document.getElementById("sc"),-.5)'>-0.5</button><button onclick=setStyle()>Apply</button><button onclick='adjust(document.getElementById("sc"),.5)'>+0.5</button><center>TranslateX: <input id=translatex value=0> TranslateY: <input id=translatey value=0><div style="text-align:center"><button onclick='adjust(document.getElementById("translatey"),10)'style=rotate:270deg>⯮</button><br><button onclick='adjust(document.getElementById("translatey"),1)'style=rotate:270deg>➤</button><br><button onclick='adjust(document.getElementById("translatex"),10)'>⯬</button><button onclick='adjust(document.getElementById("translatex"),1)'style=transform:scaleX(-1)>➤</button><button onclick=setStyle()>Apply</button><button onclick='adjust(document.getElementById("translatex"),-1)'>➤</button><button onclick='adjust(document.getElementById("translatex"),-10)'>⯮</button><br><button onclick='adjust(document.getElementById("translatey"),-1)'style=rotate:90deg>➤</button><br><button onclick='adjust(document.getElementById("translatey"),-10)'style=rotate:90deg>⯮</button></div></center>Style: <input id=result><button onclick=copy()>Copy</button><br><button onclick=RSScopy() style=margin:5px class=coolbutton>Copy RSS</button><input id=rss>`;
+
+if (window.location.host.includes("127.0.0.1")){
+  document.getElementById("thumbnail").style.display="block";
+  document.addEventListener('keydown',function(event){
+    if(event.key==='w'){
+    adjust(document.getElementById("translatey"),10);
+  }
+  if(event.key==='a'){
+    adjust(document.getElementById("translatex"),10);
+  }
+  if(event.key==='s'){
+    adjust(document.getElementById("translatey"),-10);
+  }
+  if(event.key==='d'){
+    adjust(document.getElementById("translatex"),-10);
+  }
+    if(event.key==='q'){
+    adjust(document.getElementById("sc"),-.5);
+  }
+  if(event.key==='e'){
+    adjust(document.getElementById("sc"),.5);
+  }
+  if(event.key==='z'){
+    prevNum();
+  }
+  if(event.key==='x'){
+    nextNum();
+  }
+  if(event.key==='r'){
+    copy();
+  }
+  if(event.key==='t'){
+    RSScopy();
+  }
+  })
+} else{
+  var cheatcode=[];
 document.addEventListener('keydown', function(event) {
   if (event.key === 'ArrowLeft'||event.key === 'ArrowRight'||event.key === 'ArrowUp'||event.key === 'ArrowDown'||event.key === 'a'||event.key === 'b') {
     cheatcode.push(event.key)
@@ -16,8 +52,6 @@ document.addEventListener('keydown', function(event) {
     }
   }
 });
-if (window.location.host.includes("127.0.0.1")){
-  document.getElementById("thumbnail").style.display="block";
 }
 var artselect=document.querySelectorAll('.artborder:not(:has(img[src=""])) img');
 var imagenum=document.getElementById("imagenum");
