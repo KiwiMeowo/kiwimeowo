@@ -4,22 +4,33 @@ var artcol = document.querySelectorAll('.col');
 var tagon=[];
 
 var taglist={
-  Character:["Lavender","Cosmos","Grey","Ruth","Wolf","Solar","Claire","Jaspers","Crystal","Crystel","Cyan","Ember","Kyrea","Other OCs", "Fan Art"],
+  Character:["Lavender","Cosmos","Grey","Ruth","Wolf","Mira","br",
+    "Solar","Claire","Jaspers","Crystal","Crystel","Cyan","Ember","br",
+    "Kyrea","Kaylee","Cupcake","Carnelian","Other OCs", "Fan Art"],
   Finish:["Doodle","Middle","Polished"],
   Special:['Birthday','Comic','Album','Festive']
 }
 if (document.getElementById('tags')){
   Object.keys(taglist).forEach(cate=>{
-  var tag=document.createElement('span');
-  tag.innerText=cate+': ';
+  var tag=document.createElement('tr');
+  var tagname=document.createElement('td');
+  tagname.innerText=cate+': ';
   tag.setAttribute('id',cate)
-  document.getElementById('tags').append(tag);
+  var tags=document.createElement('td');
   taglist[cate].forEach(item=>{
-    var tagg=document.createElement('span');
+    if(item=='br'){
+    var brek=document.createElement('br');
+    tags.append(brek);
+    }else{
+      var tagg=document.createElement('span');
     tagg.classList.add('option');
     tagg.innerHTML=`<input type="checkbox" id="${item}"><label for="${item}"><span class="checkmark"></span>${item} (${document.querySelectorAll('img[data-tags*="'+item+'"]').length})</label>`
-    document.getElementById(cate).append(tagg);
+    tags.append(tagg);
+    }
   })
+  tag.append(tagname);
+  tag.append(tags);
+  document.getElementById('tags').append(tag);
 })
 document.getElementById('reset').addEventListener("click",function(){
   for (x = 0; x < checks.length; x++) {
