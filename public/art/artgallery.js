@@ -6,7 +6,7 @@ var tagon=[];
 var taglist={
   Character:["Lavender","Cosmos","Grey","Ruth","Wolf","Mira","br",
     "Solar","Claire","Jaspers","Crystal","Crystel","Cyan","Ember","br",
-    "Kyrea","Kaylee","Cupcake","Carnelian","Other OCs", "Fan Art"],
+    "Kyrea","Kaylee","Cupcake","Carnelian","Other OCs", "Fan Art","Gift"],
   Finish:["Doodle","Middle","Polished"],
   Special:['Birthday','Comic','Album','Festive']
 }

@@ -30,6 +30,9 @@ if (window.location.host.includes("127.0.0.1")){
   if(event.key==='x'){
     nextNum();
   }
+  if(event.key==='1'){
+    document.getElementById("op").value="top",setStyle();
+  }
   })
 } else{
   var cheatcode=[];
