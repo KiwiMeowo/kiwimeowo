@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiwiMeowo's Comic</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="/jquery.style-my-tooltips.js"></script>
+    <link href="comic.css" rel="stylesheet" type="text/css" />
+  </head>
+ <body>
+  <nav>
+    <a href="/sitemap.html" style="--svg:url(/assets/map.svg)"></a>
+  <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
+      <a href="index.html">Art Index</a>
+      <a href="index.html">Comic Index</a>
+      <a href="javascript:history.back()">Back</a>
+  </nav>
+
+  <main>
+    <section class="wide">
+      <article><h1>{{ title }}</h1>
+      <div class="inner min">
+      {{ content | safe }}
+      <p class="date">( {{ date | datestring }} )</p>
+      <hr>
+      </div>
+    </article>
+    <article>
+        <div class="inner min">
+          <div class="pagenav"><button onclick="prevpage()" style="transform: scaleX(-1);">➤</button>Page: <span class="num">1</span><button onclick="nextpage()">➤</button></div>
+      <hr>
+      {%- set num = 1 %}
+      {% for panel in panels %}
+      <div class="page">
+      <img src="{{ panel.img }}" alt="Comic panel {{ num }}">
+      <hr>
+      <div class="text">
+      {{ panel.desc | safe }}
+      <p class="date">P. {{ num }}</p>
+      </div>
+      </div> 
+      {%- set num = num + 1 %}
+      {% endfor %}
+      <hr>
+      <div class="pagenav"><button onclick="prevpage()" style="transform: scaleX(-1);">➤</button>Page: <span class="num">1</span><button onclick="nextpage()">➤</button></div>
+      </div>
+    </article>
+</section>
+</main>
+<script src="comic.js"></script>
+</body>
+</html>
