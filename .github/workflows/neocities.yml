@@ -1,5 +1,4 @@
-- name: Deploy to Neocities
-  uses: bcomnes/deploy-to-neocities@v3.0.5
+name: Deploy to neocities
 
 # only run on changes to main. Use main or master depending on whatever your default branch is called.
 on:
