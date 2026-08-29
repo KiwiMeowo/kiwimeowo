@@ -8,7 +8,7 @@ var taglist={
     "Solar","Claire","Jaspers","Crystal","Crystel","Cyan","Ember","br",
     "Kyrea","Kaylee","Cupcake","Carnelian","Other OCs", "Fan Art","Gift"],
   Finish:["Doodle","Middle","Polished"],
-  Special:['Birthday','Comic','Album','Festive']
+  Special:['Birthday','Comic','Album','Festive',"Meme"]
 }
 if (document.getElementById('tags')){
   Object.keys(taglist).forEach(cate=>{
