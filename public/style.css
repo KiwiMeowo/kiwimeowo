@@ -994,7 +994,7 @@ a[target="_blank"] .artborder{
   aspect-ratio: 1 / 1;
 }
 a.artborder, .art a.artborder{
-  border: 2px dashed #478431;
+  border: 2px dashed #52ff14;
   filter: drop-shadow(4px 4px #78d80b6c);
 }
 a.artborder:hover, .art a.artborder:hover{

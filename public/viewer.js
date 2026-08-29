@@ -80,7 +80,7 @@ function checkAnchor(openid){
   if((openid.tagName)=="A"){
     artlink.setAttribute("href",openid.href);
    } else{
-    artlink.href=="";
+    artlink.setAttribute("href","");
    }
 }
 
