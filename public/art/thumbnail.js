@@ -50,7 +50,7 @@ document.addEventListener('keydown', function(event) {
   }
 });
 }
-var artselect=document.querySelectorAll('.artborder:not(:has(img[src=""])) img');
+var artselect=document.querySelectorAll('.artborder:not(:has(img[src=""])) img, .artborder video');
 var imagenum=document.getElementById("imagenum");
 var imageop=document.getElementById("op");
 var imagescale=document.getElementById("sc");
@@ -131,7 +131,7 @@ function copy() {
 function RSScopy(){
   var copyText = document.getElementById("rss");
   var rssart=artselect[currentnum];
-  copyText.value=`<item><title>${rssart.getAttribute('alt')}</title><guid>${rssart.parentElement.tagName=='A'? 'https://kiwimeowo.neocities.org'+rssart.parentElement.getAttribute('href') :rssart.getAttribute('src').replace("&","&amp;")}</guid><link>https://kiwimeowo.neocities.org${window.location.pathname}</link><description><![CDATA[<img src="${rssart.getAttribute('src').replace("&","&amp;")}"><p>${rssart.getAttribute('title')}</p>${rssart.parentElement.tagName=='A'?'<p><a href="'+rssart.parentElement.getAttribute('href')+'">Open album</a></p>':''}]]></description><pubDate>${(new Date()).toUTCString()}</pubDate></item>`;
+  copyText.value=`<item><title>${rssart.getAttribute('alt')}</title><guid>${rssart.parentElement.tagName=='A'? 'https://kiwimeowo.neocities.org'+rssart.parentElement.getAttribute('href') :rssart.getAttribute('src').replace("&","&amp;")}</guid><link>https://kiwimeowo.neocities.org${window.location.pathname}</link><description><![CDATA[<${rssart.tagName.toLowerCase()} src="${rssart.getAttribute('src').replace("&","&amp;")}"><p>${rssart.getAttribute('title')}</p>${rssart.parentElement.tagName=='A'?'<p><a href="'+rssart.parentElement.getAttribute('href')+'">Open album</a></p>':''}]]></description><pubDate>${(new Date()).toUTCString()}</pubDate></item>`;
   // Select the text field
   copyText.select();
   copyText.setSelectionRange(0, 99999); // For mobile devices
