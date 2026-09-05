@@ -1,0 +1,5 @@
+.Default{left:10px;}.Default.hat{top:10px;}.Default.shirt{top:160px;}.Default.pants{top:310px;}.Default.shoes{top:410px;}
+.Classic{ left:200px; } .Classic.shirt{ top:160px; } .Classic.pants{ top:310px; } .Classic.shoes{ top:410px; } .Classic.hat{ top:10px; }
+.Hampter.shirt{top: 180px; left: 350px;} .Hampter.shirt img{object-position: 0 41%;}
+.AugustGalaxy.shirt{top: 396px; left: 352px;} .AugustGalaxy.shirt img{height: 300px; object-position: 0 55%;}
+.Christmas{left:805px;}.Christmas.shirt{top:160px;}.Christmas.shoes{top:410px;}.Christmas.hat{top:10px;z-index:2;} .Christmas.shirt img{ height: 400px; object-position: 0 80%;}

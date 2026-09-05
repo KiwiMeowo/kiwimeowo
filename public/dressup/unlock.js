@@ -5,10 +5,10 @@ var achievements=[
     "Criteria":"Visit Kyrea's bedroom",
     "Preview":"preview/Classic.webp",
     "Clothing":[
-      {"Type":"shirt","Style":"top:160px;left:200px;","Image":"OldShirt.png"},
-      {"Type":"pants","Style":"top:310px;left:200px;","Image":"OldPants.png"},
-      {"Type":"shoes","Style":"top:410px;left:200px;","Image":"OldShoes.png"},
-      {"Type":"hat","Style":"top:10px;left:200px;","Image":"OldRibbon.png"}
+      {"Type":"shirt","Image":"OldShirt.png"},
+      {"Type":"pants","Image":"OldPants.png"},
+      {"Type":"shoes","Image":"OldShoes.png"},
+      {"Type":"hat","Image":"OldRibbon.png"}
     ]
   },
   {"Name":"Hampter",
@@ -16,7 +16,7 @@ var achievements=[
     "Criteria":"Click on clickable hampter",
     "Preview":"preview/Hampter.webp",
     "Clothing":[
-      {"Type":"shirt","Style":"top: 180px; left: 350px;","Image":"Hampter.png"}
+      {"Type":"shirt","Image":"Hampter.png"}
     ]
   },
   {"Name":"AugustGalaxy",
@@ -24,7 +24,7 @@ var achievements=[
     "Criteria":"Read something lengthy and kinda boring",
     "Preview":"preview/AugustGalaxy.webp",
     "Clothing":[
-      {"Type":"shirt","Style":"top: 396px; left: 352px;","Image":"AugustGalaxy.png"},
+      {"Type":"shirt","Image":"AugustGalaxy.png"},
     ]
   },
   {"Name":"IceCream",
@@ -32,9 +32,9 @@ var achievements=[
     "Criteria":"Visit KiwiMeowo's everyone site<br>(Hint: It is from Melonland!) (Clothing not released yet)",
     "Preview":"preview/locked.webp",
     "Clothing":[
-      /*{"Type":"shirt","Style":"top:160px;left:200px;","Image":"OldShirt.png"},
-      {"Type":"shoes","Style":"top:410px;left:200px;","Image":"OldShoes.png"},
-      {"Type":"hat","Style":"top:10px;left:200px;","Image":"OldRibbon.png"}*/
+      /*{"Type":"shirt","Image":"OldShirt.png"},
+      {"Type":"shoes","Image":"OldShoes.png"},
+      {"Type":"hat","Image":"OldRibbon.png"}*/
     ]
   },
   {"Name":"Christmas",
@@ -42,9 +42,9 @@ var achievements=[
     "Criteria":"Click something with lot's of Christmas joy",
     "Preview":"preview/Christmas.webp",
     "Clothing":[
-    {"Type":"shirt","Style":"top:160px;left:805px;","Image":"ChristmasSuit.png"},
-      {"Type":"shoes","Style":"top:410px;left:805px;","Image":"ChristmasBoots.png"},
-      {"Type":"hat","Style":"top:10px;left:805px;z-index:2;","Image":"ChristmasHat.png"}
+    {"Type":"shirt","Image":"ChristmasSuit.png"},
+      {"Type":"shoes","Image":"ChristmasBoots.png"},
+      {"Type":"hat","Image":"ChristmasHat.png"}
     ]
   },
   {"Name":"Hacker",
@@ -52,9 +52,9 @@ var achievements=[
     "Criteria":"Enter a special code in an art page... Ok it might be easier if you just open DevTools (Clothing not released yet)",
     "Preview":"preview/locked.webp",
     "Clothing":[
-      /*{"Type":"shirt","Style":"top:160px;left:200px;","Image":"OldShirt.png"},
-      {"Type":"shoes","Style":"top:410px;left:200px;","Image":"OldShoes.png"},
-      {"Type":"hat","Style":"top:10px;left:200px;","Image":"OldRibbon.png"}*/
+      /*{"Type":"shirt","Image":"OldShirt.png"},
+      {"Type":"shoes","Image":"OldShoes.png"},
+      {"Type":"hat","Image":"OldRibbon.png"}*/
     ]
   }
 ]
@@ -67,8 +67,8 @@ for (i = 0; i < achievements.length; i++){
     cloth=achievements[i].Clothing[j];
     addcloth=document.createElement('div');
     addcloth.classList.add(cloth.Type);
-    addcloth.style=cloth.Style;
-    addcloth.innerHTML=`<img src="${cloth.Image}" id="${cloth.Image.replace('.png','')}">`;
+    addcloth.classList.add(achievements[i].Preview.replace(/preview\/|.webp/g,''));
+    addcloth.innerHTML=`<img src="${cloth.Image}">`;
     document.body.append(addcloth)
   } 
   } else {

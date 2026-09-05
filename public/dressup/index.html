@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kyrea dress up ♫</title>
   <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  <link href="clothing.css" rel="stylesheet" type="text/css" media="all">
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
 </head>
@@ -83,8 +84,6 @@
     width:300px;
     height: 180px;
     position: absolute;
-    top:10px;
-    left:10px;
     background-size: contain;
   }
   .hat img{
@@ -96,18 +95,21 @@
   .pants{
     z-index: 2;
   }
-  .shirt img,.pants img,.shoes img,.hat img{
+  :is(.shirt,.pants,.shoes,.hat) img{
   object-fit: cover;
   margin: auto;
   display: block;
   height: 200px;
   width: 100%;
   }
+  :is(.shirt,.pants,.shoes,.hat) img:hover{
+    filter: brightness(1.1);
+  }
   .hat img{
     object-position: 0 0;
   }
   .shirt img{
-    object-position: 0 47%;
+    object-position: 0 41%;
   }
   .pants img{
     object-position: 0 71%;
@@ -115,13 +117,6 @@
   .shoes img{
     object-position: 0 100%;
   }
-  #Hampter{object-position: 0 42%;translate: 0 -18px;}
-  #AugustGalaxy{height: 300px;object-position: 0 62%;}
-  #ChristmasSuit {
-  height: 400px;
-  object-position: 0 85%;
-  translate: 0 -12px;
-}
 </style>
 <body>
   <nav>
@@ -157,10 +152,10 @@
     </section>
   </main>
   <div id="Kyrea"></div>
-  <div class="hat" style="top:10px;left:10px;"><img src="Ribbon.png"></div>
-  <div class="shirt" style="top:160px;left:10px;"><img src="Cardigan.png"></div>
-  <div class="pants" style="top:310px;left:10px;"><img src="Pants.png"></div>
-  <div class="shoes" style="top:410px;left:10px;"><img src="PawShoes.png"></div>
+  <div class="Default hat"><img src="Ribbon.png"></div>
+  <div class="Default shirt"><img src="Cardigan.png"></div>
+  <div class="Default pants"><img src="Pants.png"></div>
+  <div class="Default shoes"><img src="PawShoes.png"></div>
   <script>
       $( function() {
     $( ".shirt,.pants,.shoes,.hat" ).draggable({
@@ -171,7 +166,7 @@
       drop: function( event, ui ) {
         if (ui.draggable[0].classList.contains('shirt')){
           ui.draggable
-          .css( "top","250px" )
+          .css( "top","220px" )
           .css( "left","570px" );
         } else if (ui.draggable[0].classList.contains('pants')){
           ui.draggable
