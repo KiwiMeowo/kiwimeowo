@@ -112,16 +112,32 @@
     object-position: 0 41%;
   }
   .pants img{
-    object-position: 0 71%;
+    object-position: 0 61%;
+    height: 120px;
   }
   .shoes img{
     object-position: 0 100%;
+  }
+  #SelectClothes span{
+    background-color:#bcb9d6bf;
+    color: var(--blue);
+    padding: 2.5px 5px;
+    border:1px solid #ccc9e3;
+    margin: 5px;
+    border-radius: 5px;
   }
 </style>
 <body>
   <nav>
     <a href="/sitemap.html" style="--svg:url(/assets/map.svg)"></a>
       <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
+      <button class="navcoll">Change Page!</button>
+    <div class="open">
+    <div class="openinner">
+		<center id="SelectClothes"><span><input type="checkbox" id="Default"><label for="Default">Default</label></span></center>
+		</div>
+		</div>
+    <script src="/navcoll.js"></script>
     </nav>
   <main id="menu">
     <section class="wide">
@@ -152,10 +168,10 @@
     </section>
   </main>
   <div id="Kyrea"></div>
-  <div class="Default hat"><img src="Ribbon.png"></div>
-  <div class="Default shirt"><img src="Cardigan.png"></div>
-  <div class="Default pants"><img src="Pants.png"></div>
-  <div class="Default shoes"><img src="PawShoes.png"></div>
+  <div class="Default hat"><img src="clothings/Ribbon.png"></div>
+  <div class="Default shirt"><img src="clothings/Cardigan.png"></div>
+  <div class="Default pants"><img src="clothings/Pants.png"></div>
+  <div class="Default shoes"><img src="clothings/PawShoes.png"></div>
   <script>
       $( function() {
     $( ".shirt,.pants,.shoes,.hat" ).draggable({

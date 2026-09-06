@@ -3,3 +3,4 @@
 .Hampter.shirt{top: 180px; left: 350px;} .Hampter.shirt img{object-position: 0 41%;}
 .AugustGalaxy.shirt{top: 396px; left: 352px;} .AugustGalaxy.shirt img{height: 300px; object-position: 0 55%;}
 .Christmas{left:805px;}.Christmas.shirt{top:160px;}.Christmas.shoes{top:410px;}.Christmas.hat{top:10px;z-index:2;} .Christmas.shirt img{ height: 400px; object-position: 0 80%;}
+.ArtExplorer{left: 1000px;} .ArtExplorer.shirt{top:160px;}.ArtExplorer.pants{top:310px;} .ArtExplorer.hat{z-index:3;top:10px;}

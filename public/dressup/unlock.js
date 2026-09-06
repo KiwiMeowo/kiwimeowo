@@ -47,17 +47,18 @@ var achievements=[
       {"Type":"hat","Image":"ChristmasHat.png"}
     ]
   },
-  {"Name":"Hacker",
+  {"Name":"ArtExplorer",
     "Desc":"How did you find it? Where did you find it? Why did you find it? You must be one Easter Egg finding master if you found it randomly.",
     "Criteria":"Enter a special code in an art page... Ok it might be easier if you just open DevTools (Clothing not released yet)",
-    "Preview":"preview/locked.webp",
+    "Preview":"preview/ArtExplorer.webp",
     "Clothing":[
-      /*{"Type":"shirt","Image":"OldShirt.png"},
-      {"Type":"shoes","Image":"OldShoes.png"},
-      {"Type":"hat","Image":"OldRibbon.png"}*/
+      {"Type":"shirt","Image":"NeoShirt.png"},
+      {"Type":"pants","Image":"NeoSkirt.png"},
+      {"Type":"hat","Image":"NeoFlower.png"}
     ]
   }
 ]
+var SelectClothes=document.querySelector("#SelectClothes");
 for (i = 0; i < achievements.length; i++){
   achieve=document.createElement('div');
   achieve.classList.add('achievement');
@@ -67,14 +68,40 @@ for (i = 0; i < achievements.length; i++){
     cloth=achievements[i].Clothing[j];
     addcloth=document.createElement('div');
     addcloth.classList.add(cloth.Type);
-    addcloth.classList.add(achievements[i].Preview.replace(/preview\/|.webp/g,''));
-    addcloth.innerHTML=`<img src="${cloth.Image}">`;
-    document.body.append(addcloth)
+    addcloth.classList.add(achievements[i].Name);
+    addcloth.innerHTML=`<img src="clothings/${cloth.Image}">`;
+    document.body.append(addcloth);
   } 
+  var ClothesSpan=document.createElement("span");
+  var ClothesSelectBox=document.createElement("input");
+    ClothesSelectBox.setAttribute("id",achievements[i].Name);
+    ClothesSelectBox.setAttribute("type","checkbox");
+    var ClothesLabel=document.createElement("label");
+    ClothesLabel.setAttribute("for",achievements[i].Name);
+    ClothesLabel.innerText=achievements[i].Name;
+    ClothesSpan.append(ClothesSelectBox);
+    ClothesSpan.append(ClothesLabel);
+    SelectClothes.append(ClothesSpan);
   } else {
     achieve.innerHTML=`<img src="preview/locked.webp"><div class="desc"><h2>Not found</h2><p>Look around and unlock this outfit!</p><div class="status">Condition to obtain: ${achievements[i].Criteria}</div>`;
   }
   achievement.append(achieve);
   hr=document.createElement('hr');
   achievement.append(hr);
+}
+var checks=document.querySelectorAll('input');
+for (x = 0; x < checks.length; x++) {
+    checks[x].checked = true;
+    checks[x].addEventListener("change", function () {
+      console.log(this.getAttribute("id"));
+    if(this.checked==false){
+      document.querySelectorAll('.'+this.getAttribute("id")).forEach(item=>{
+      item.style.display="none";
+    })
+    }else{
+      document.querySelectorAll('.'+this.getAttribute("id")).forEach(item=>{
+      item.style.display="block";
+    })
+    }
+  });
 }
