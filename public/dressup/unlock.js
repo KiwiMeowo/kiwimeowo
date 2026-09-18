@@ -1,4 +1,4 @@
-var achievement=document.getElementById("achievement");
+var achievement=document.getElementById("achieved");
 var achievements=[
   {"Name":"Classic",
     "Desc":"Kyrea's outfit from a long time ago, still looks good!",
@@ -28,13 +28,11 @@ var achievements=[
     ]
   },
   {"Name":"IceCream",
-    "Desc":"The cats are delighted to see you, and they gave you this outfit as a gratitude. The pastel tricolors makes you feel joyful like scoops of ice cream!",
+    "Desc":"The cats are delighted to see you, and they gave you this outfit as a gratitude. The pastel tricolors makes you feel joyful like scoops of ice cream! (Also Kyrea's hair passes through the hood, don't ask why)",
     "Criteria":"Visit KiwiMeowo's everyone site<br>(Hint: It is from Melonland!) (Clothing not released yet)",
-    "Preview":"preview/locked.webp",
+    "Preview":"preview/IceCream.webp",
     "Clothing":[
-      /*{"Type":"shirt","Image":"OldShirt.png"},
-      {"Type":"shoes","Image":"OldShoes.png"},
-      {"Type":"hat","Image":"OldRibbon.png"}*/
+      {"Type":"shirt","Image":"IceCream.png"}
     ]
   },
   {"Name":"Christmas",
@@ -61,7 +59,7 @@ var achievements=[
 var SelectClothes=document.querySelector("#SelectClothes");
 for (i = 0; i < achievements.length; i++){
   achieve=document.createElement('div');
-  achieve.classList.add('achievement');
+  achieve.classList.add('achieved');
   if (localStorage.getItem(achievements[i].Name)=="true"){
     achieve.innerHTML=`<img src="${achievements[i].Preview}"><div class="desc"><h2>${achievements[i].Name}</h2><p>${achievements[i].Desc}</p><div class="status">Condition to obtain: ${achievements[i].Criteria}</div>`;
     for (j = 0; j < achievements[i].Clothing.length; j++){

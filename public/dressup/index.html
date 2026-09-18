@@ -6,6 +6,7 @@
   <title>Kyrea dress up ♫</title>
   <link href="/style.css" rel="stylesheet" type="text/css" media="all">
   <link href="clothing.css" rel="stylesheet" type="text/css" media="all">
+  <link href="achievement.css" rel="stylesheet" type="text/css" media="all">
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
 </head>
@@ -17,6 +18,7 @@
     height:100vh;
     width:100vw;
     position: relative;
+    --star:linear-gradient(#d8e9e8, #e2cb85, #bb414e);
   }
   nav{
     z-index: 111;
@@ -25,10 +27,10 @@
     position: absolute;
     width: calc(100vw - 6vw);
     height: calc(100vh - 100px);
-    z-index: 100;
+    z-index: 9;
     background:linear-gradient(rgba(170, 86, 255, 0.22),rgba(179, 234, 255, 0.06)),url(/assets/checkpattern.svg);
   }
-  #achievement{
+  #achieved{
     border: 5px double white;
   height: 342px;
   overflow: hidden;
@@ -36,14 +38,14 @@
   padding:0 15px;
   overflow-y: scroll;
   }
-  .achievement {
+  .achieved {
   height: 300px;
   display: flex;
   padding: 15px;
   max-width: 700px;
   margin: auto;
 }
-.achievement img{
+.achieved img{
   height:100%;
   margin: 0;
   border: 2px solid white;
@@ -149,8 +151,8 @@
           <li>This does not work in mobile sadly</li>
           <li>All progress will be gone if you clean cache</li>
         </ul>
-        <div id="achievement">
-          <div class="achievement">
+        <div id="achieved">
+          <div class="achieved">
             <img src="preview/Default.webp">
           <div class="desc">
             <h2>Default Outfit!</h2>
@@ -202,5 +204,13 @@
   } );
   </script>
   <script src="unlock.js"></script>
+  <script src="GetAchievement.js"></script>
+  <script>
+    // The code is for when you search a special page in Melonland
+    let icecream= new URLSearchParams(window.location.search);
+    if (icecream.get("referrer") =="melonland"){
+      getAchievement("IceCream");
+    }
+  </script>
 </body>
 </html>
