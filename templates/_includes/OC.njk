@@ -8,6 +8,7 @@
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     <link href="/emote.css" rel="stylesheet" type="text/css" media="all">
     <link href="/oc/oc.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/art/art.css" rel="stylesheet" type="text/css" media="all">
     <link href="/style-my-tooltips.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="/jquery.style-my-tooltips.js"></script>
@@ -135,6 +136,7 @@
         </div></article>
         {% if gallery %}
       <article><h1>Gallery</h1><div class="inner">
+      <div id="thumbnail"></div>
       <div class="art">
       {% for art in gallery%}
       {{ art | safe }}
@@ -146,5 +148,6 @@
 </main>
 <script src="/oc/oc.js"></script>
   <script src="/viewer.js"></script>
+  <script src="/art/thumbnail.js"></script>
 </body>
 </html>

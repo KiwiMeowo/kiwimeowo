@@ -114,7 +114,7 @@ function setStyle(){
   } else{
     artselect[currentnum].style.translate="";
   }
-    document.getElementById("result").value=artselect[currentnum].getAttribute('style');
+    document.getElementById("result").value=artselect[currentnum].getAttribute('style').replace(/: /g,':');
 }
 
 function copy() {
