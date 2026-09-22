@@ -3,7 +3,15 @@ var art = document.querySelectorAll('.artborder:not(:has(img[src=""]))');
 //Create window HTML at the bottom
 var createwindow=document.createElement('div');
   createwindow.id="window";
-  createwindow.innerHTML='<div id="artview"><img src=""><video src="" controls></video><div class="text"><p></p><a id="link">Open Album</a></div></div><div id="artnav"><button id="prevart">⭠ Prev</button><button id="x">[ x ]</button><button id="nextart">Next ⭢</button></div>';
+  createwindow.innerHTML=`
+  <div id="artview"><img src=""><video src="" controls></video>
+  <div class="text">
+  <p></p><a id="link">Open Album</a>
+  <hr>
+  </div>
+  </div>
+  <div id="artnav"><button id="prevart">⭠ Prev</button><button id="x">[ x ]</button><button id="nextart">Next ⭢</button>
+  </div>`;
   document.body.appendChild(createwindow);
 	var artwindow=document.getElementById('window');
 	var artwork=artwindow.querySelector("img");
