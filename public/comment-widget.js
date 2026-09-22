@@ -79,11 +79,13 @@ if (s_fixRarebitIndexPage) {s_includeUrlParameters = true}
 
 // HTML Form
 const v_mainHtml = `
-    <div id="c_inputDiv">
+    <article id="c_inputDiv">
     <h1 id="c_widgetTitle">${s_widgetTitle}</h1>
+        <div class="inner">
         <form id="c_form" onsubmit="c_submitButton.disabled = true; v_submitted = true;" method="post" target="c_hiddenIframe" action="https://docs.google.com/forms/d/e/${s_formId}/formResponse"></form>
-    </div>
-    <div id="c_container">${s_loadingText}</div>
+        <div id="c_container">${s_loadingText}</div>
+        </div>
+    </article>
 `;
 const v_formHtml = `
 
@@ -102,7 +104,7 @@ const v_formHtml = `
         <textarea class="c-input c-textInput" name="entry.${s_textId}" id="entry.${s_textId}" rows="4" cols="50"  maxlength="${s_maxLength}" required></textarea>
         <input name="entry.${s_moderatedId}" id="entry.${s_moderatedId}" type="hidden" readonly value="false">
     </div>
-
+    <mark style="display: none;" id="c_replyingText"></mark>
     <input id="c_submitButton" name="c_submitButton" type="submit" value="${s_submitButtonLabel}" disabled>
     <hr>
 `;
@@ -142,9 +144,6 @@ c_pageInput.id = 'entry.' + s_pageId; c_pageInput.name = c_pageInput.id;
 c_form.appendChild(c_pageInput);
 
 // Add the "Replying to..." text to document
-let c_replyingText = document.createElement('span');
-c_replyingText.style.display = 'none'; c_replyingText.id = 'c_replyingText';
-c_form.appendChild(c_replyingText);
 c_replyingText = document.getElementById('c_replyingText');
 
 // Add the invisible reply input to document
@@ -273,7 +272,6 @@ function displayComments(comments) {
     v_commentMin = v_commentMax - s_commentsPerPage;
 
     // Main comments (not replies)
-    comments.reverse(); // Newest comments go to top
     for (i = 0; i < comments.length; i++) {
         let comment = createComment(comments[i]);
         

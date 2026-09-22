@@ -699,15 +699,25 @@ your own title.
 #window img[src=""], #window video[src=""]{
   display: none;
 }
+#window .artdesc{
+transform: translateY(-50%);
+  top: calc(50% - 12px);
+  position: relative;
+  height: fit-content;
+  --teal: white;
+  --blue: white;
+  --lteal: #bcb9d6;
+  --dblue: #bcb9d6;
+  --highlightteal: #bcb9d6ab;
+  overflow-y: scroll;
+  max-height: calc(100% - 22px);
+  width: 50%;
+}
 #window .text{
-    transform: translateY(-50%);
-    top: calc(50% - 20px);
-    position: relative;
-    height: fit-content;
-    margin:0.75em;
-    max-width:50%;
-  --teal:white;
-  --dblue:#bcb9d6;
+  padding: 15px;
+}
+#window hr{
+  border-top: 1px solid white;
 }
 #window #link{
   display: none;
@@ -730,19 +740,130 @@ your own title.
   color:#bcb9d6;
   border-color:#bcb9d6;
 }
+
+/* Main */
+#window #c_widget{
+  display: none;
+}
+#c_widget button, #c_widget input[type=submit] {
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+  margin: 10px 0px;
+  display: inline-block;
+  background: transparent;
+  border: 1.5px solid;
+  border-radius: 5px;
+  padding: 2px 6px;
+  transition: color 0.5s, border-color 0.5s;
+}
+#c_widget button:hover, #c_widget input[type=submit]:hover, #c_widget button:disabled:hover, #c_widget input[type=submit]:disabled:hover {
+color: #bcb9d6;
+  border-color: #bcb9d6;
+}
+#c_widget button:hover, #c_widget input[type=submit]:hover{ cursor:pointer;}
+#c_widget button:disabled:hover, #c_widget input[type=submit]:disabled:hover{cursor:not-allowed;}
+#c_widget button:disabled, #c_widget input[type=submit]:disabled {opacity: 60%;}
+/* Input section */
+.c-inputWrapper {
+    display: block;
+    margin: 5px 0;
+}
+.c-input {
+    padding: 4px;
+  color: var(--teal);
+  border-radius: 5px;
+  border: 1px solid;
+  outline: none;
+  background: var(--highlightteal);
+}
+.c-input:focus, .c-input:hover{border-color:var(--blue);box-shadow:0 0 0 0.5px var(--blue);}
+.c-nameInput, .c-websiteInput {
+  margin: 0 2.5px;
+}
+.c-textInput {
+    width: calc(100% - 10px);
+    resize: none;
+}
+#c_submitButton {display: block;}
+#c_replyingText {
+margin: 10px 0}
+
+/* Comment section */
+.c-reply {
+    margin: 15px 0;
+    padding: 10px 5px;
+    border-top: 1.75px dashed var(--lteal);
+}
+.c-reply:last-child {margin-bottom: 0;}
+.c-replyContainer {
+  border-left: 2px solid var(--lteal);
+  padding-left: 15px;
+  margin-left: 20px;
+}
+@media(max-width:700px){
+    .c-reply{
+        padding: 15px 20px;
+    }
+}
+.c-name {
+    display: inline-block;
+    margin: 0;
+    margin-right: 10px;
+    padding: 0;
+}
+.c-site {
+    text-transform: lowercase;
+}
+.c-site:hover {color: var(--blue);}
+.c-timestamp {
+    float: right;
+    opacity: 60%;
+    color:var(--teal);
+}
+.c-text {
+    text-indent: 25px;
+}
+
+/* Pagination */
+#c_pagination {text-align: center;}
+.c-expandButton {
+    float: right;
+    margin-top: 10px;
+}
+.c-paginationButton {
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.kiwimeowo{
+  background: var(--gradient);
+  filter: var(--dropshadow);
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-shadow: none;
+}
+.kiwimeowo:after{
+  content:'🟊';
+  animation-name: spin;animation-duration: 4000ms;animation-iteration-count: infinite;animation-timing-function: linear;margin-left: 5px;
+  display: inline-block;
+}
+@keyframes spin{0%{rotate:0deg}100%{rotate:360deg}}
 @media(max-width:900px){
   #window #artview{
   display:block;
+  overflow-y: scroll;
 }
 #window img, #window video{
     width: 100%;
     max-height: 60%;
     margin-left:auto;
 }
-#window .text{
+#window .artdesc{
   transform: translateY(0);
   top: 0;
-  max-width: none;
+  overflow-y:visible;
+  width: 100%;
 }
 #artnav{
   margin:0 10px;
