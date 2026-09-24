@@ -10,7 +10,7 @@ var createwindow=document.createElement('div');
   <div class="text">
   <p></p><a id="link">Open Album</a>
   <hr>
-  <div id="c_widget"></div>
+  <div id="art_c_widget"></div>
   </div>
   </div>
   </div>
@@ -21,7 +21,7 @@ var createwindow=document.createElement('div');
 	var artwork=artwindow.querySelector("img");
 	var artdesc=artwindow.querySelector("p");
   var artlink=document.getElementById("link");
-  var getComments=undefined;
+  var getArtComments=undefined;
 
 //For every element with artborder class
 function applyviewer(){
@@ -117,15 +117,15 @@ function checkCensor(openid){
 function loadIMG(openid){
   artwindow.querySelector('video').src="";
   artwindow.querySelector('img').src="";
-  document.querySelector("#window #c_widget").style.display="none";
+  document.querySelector("#window #art_c_widget").style.display="none";
   artwindow.querySelector(openid.children[0].tagName).src="/assets/loading.gif";
   var url =openid.querySelector(openid.children[0].tagName).src;
     setTimeout(function(){
       artwindow.querySelector(openid.children[0].tagName).src=url;
   },100);
-  if(openid.tagName=="BUTTON" && getComments!=undefined && openid.hasAttribute("nocom")==false){
-    document.querySelector("#window #c_widget").style.display="block";
-    getComments(url.includes("dropbox")?url.split("?")[0].split('/')[url.split("?")[0].split('/').length-1]:new URL(url).pathname);
+  if(openid.tagName=="BUTTON" && getArtComments!=undefined && openid.hasAttribute("nocom")==false){
+    document.querySelector("#window #art_c_widget").style.display="block";
+    getArtComments(url.includes("dropbox")?url.split("?")[0].split('/')[url.split("?")[0].split('/').length-1]:new URL(url).pathname);
   }
   artwindow.querySelector(openid.children[0].tagName).setAttribute("alt", openid.querySelector(openid.children[0].tagName).getAttribute("alt"));
   artdesc.innerHTML=openid.querySelector(openid.children[0].tagName).title!=''?openid.querySelector(openid.children[0].tagName).title:'[No comment]';

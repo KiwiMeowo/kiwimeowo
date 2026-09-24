@@ -742,10 +742,10 @@ transform: translateY(-50%);
 }
 
 /* Main */
-#window #c_widget{
+#window #art_c_widget{
   display: none;
 }
-#c_widget button, #c_widget input[type=submit] {
+#art_c_widget button, #art_c_widget input[type=submit] {
   font-size: 1em;
   color: white;
   cursor: pointer;
@@ -757,13 +757,13 @@ transform: translateY(-50%);
   padding: 2px 6px;
   transition: color 0.5s, border-color 0.5s;
 }
-#c_widget button:hover, #c_widget input[type=submit]:hover, #c_widget button:disabled:hover, #c_widget input[type=submit]:disabled:hover {
+#art_c_widget button:hover, #art_c_widget input[type=submit]:hover, #art_c_widget button:disabled:hover, #art_c_widget input[type=submit]:disabled:hover {
 color: #bcb9d6;
   border-color: #bcb9d6;
 }
-#c_widget button:hover, #c_widget input[type=submit]:hover{ cursor:pointer;}
-#c_widget button:disabled:hover, #c_widget input[type=submit]:disabled:hover{cursor:not-allowed;}
-#c_widget button:disabled, #c_widget input[type=submit]:disabled {opacity: 60%;}
+#art_c_widget button:hover, #art_c_widget input[type=submit]:hover{ cursor:pointer;}
+#art_c_widget button:disabled:hover, #art_c_widget input[type=submit]:disabled:hover{cursor:not-allowed;}
+#art_c_widget button:disabled, #art_c_widget input[type=submit]:disabled {opacity: 60%;}
 /* Input section */
 .c-inputWrapper {
     display: block;

@@ -110,7 +110,7 @@ const v_formHtml = `
 `;
 
 // Insert main HTML to page
-document.getElementById('c_widget').innerHTML = v_mainHtml;
+document.getElementById('art_c_widget').innerHTML = v_mainHtml;
 const c_form = document.getElementById('c_form');
 if (s_commentsOpen) {c_form.innerHTML = v_formHtml} 
 else {c_form.innerHTML = s_closedCommentsText}
@@ -162,11 +162,11 @@ c_hiddenIframe = document.getElementById('c_hiddenIframe');
 function fixFrame() {
     v_submitted = false;
     c_hiddenIframe.srcdoc = '';
-    getComments(c_pageInput.value); // Reload comments after submission
+    getArtComments(c_pageInput.value); // Reload comments after submission
 }
 
 // Processes comment data with the Google Sheet ID
-function getComments(filename) {
+function getArtComments(filename) {
     // Disable the submit button while comments are reloaded
     c_submitButton.disabled;
     c_pageInput.value = filename; 
