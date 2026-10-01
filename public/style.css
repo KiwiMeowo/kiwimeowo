@@ -1138,6 +1138,21 @@ a.artborder:hover, .art a.artborder:hover{
   border-style: solid;
   border-color: #dc1010 white white #dc1010;
 }
+
+.col2{
+  display: flex;
+  > *:not(hr){
+  width:50%;
+}
+}
+@media(max-width:900%){
+  .col2{
+  display: block;
+  > *:not(hr){
+  width:100%;
+}
+}
+}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
