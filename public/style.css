@@ -1143,13 +1143,15 @@ a.artborder:hover, .art a.artborder:hover{
   display: flex;
   > *:not(hr){
   width:50%;
+  margin: 0 5px;
 }
 }
-@media(max-width:900%){
+@media(max-width:900px){
   .col2{
   display: block;
   > *:not(hr){
   width:100%;
+  margin: 10px 0;
 }
 }
 }
