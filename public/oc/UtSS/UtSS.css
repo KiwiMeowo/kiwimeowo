@@ -1,0 +1,30 @@
+:root{
+          --bg:#82708db4,#9c7c9a6c;
+            --yellow:#f2e2ef;
+        --teal:#70518c;
+        --lteal:#b856d477;
+        --blue:#4e307f;
+        --highlightteal:#ffc1fca3;
+        --gradient1:#6d2ea36a;
+        --gradient2:#ffc1fc59;
+        }
+p,i,li{
+  text-shadow: 1px 1px var(--lteal);
+}
+a[href^="#"]:after{
+  content:' ⬇';
+}
+article {
+    border-radius: 1px;
+    border: 2px solid var(--yellow);
+  padding: 3px;
+  background:none;
+  filter: drop-shadow(5px 5px 2px var(--shadow));
+  box-shadow: none;
+}
+article > h1{
+  background:var(--yellow);
+}
+.inner{
+  background:var(--yellow);
+}

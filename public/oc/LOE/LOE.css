@@ -1,0 +1,34 @@
+:root{
+  --yellow:#433e5b98;
+  --teal:#dcfaff;
+  --blue:white;
+  --dblue:#e0e7ff;
+  --lteal:#152a70;
+  --highlightteal: #152a7073;
+}
+@font-face {
+    font-family:'Credit_Valley';
+    src: url(credit.valley-regular.otf);
+   }
+body{
+  font-family:'Credit_Valley';
+  font-size: 1em;
+  letter-spacing: 0.5px;
+}
+main{
+background: linear-gradient(#00808024, #ffffffa3), url(bg.jpg);
+  background-size: cover;
+}
+article{
+  box-shadow: 4px 4px 4px 2px var(--shadow);
+  border-radius: 2.5px;
+}
+article > h1:not(aside h1) {
+  border-bottom: 1.75px solid var(--blue);
+}
+hr{
+  border-top: 1px solid var(--blue);
+}
+footer h2, footer li, footer a{
+  color:var(--lteal);
+}
