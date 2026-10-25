@@ -183,10 +183,17 @@ a{cursor:pointer}
         <div class="inner">
 		<a class="bar" href="/index.html" style="--svg:url(assets/home.svg)">Home</a>
     <a class="bar" href="blogmap.html" style="background: linear-gradient(.25turn, #ada9dd73, #afa9dd2e);--svg:url(assets/map.svg)">Full Blog Map</a>
-    <button class="bar coll" type="button">2026 Blogs...</button>
+    <button class="bar coll" type="button">2027 Blogs...</button>
 		<div class="cont">
 		<button class="bar lock" type="button">Oct-Dec</button>
-    <button class="bar" onclick="Current()" type="button">Jul-Sep</button>
+    <button class="bar lock" type="button">Jul-Sep</button>
+		<button class="bar lock" type="button">Apr-Jun</button>
+		<button class="bar lock" type="button">Jan-Mar</button>
+		</div>
+    <button class="bar coll" type="button">2026 Blogs...</button>
+		<div class="cont">
+		<button class="bar" onclick="Current()" type="button">Oct-Dec</button>
+    <button class="bar" onclick="fetchHtml('2026/3rd')" type="button">Jul-Sep</button>
 		<button class="bar" onclick="fetchHtml('2026/2nd');" type="button">Apr-Jun</button>
 		<button class="bar" onclick="fetchHtml('2026/1st');" type="button">Jan-Mar</button>
 		</div>
