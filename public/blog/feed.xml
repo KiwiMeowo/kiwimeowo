@@ -8,6 +8,13 @@
   <link>https://kiwimeowo.neocities.org/blog/index.html</link>
   <description>I wonder how many people would follow my blogs using this feed...</description>
   <item>
+    <title>Rant on art protection tools against AI</title>
+    <link>https://kiwimeowo.neocities.org/blog/2026/4th/11-10.html</link>
+    <guid>https://kiwimeowo.neocities.org/blog/2026/4th/11-10.html</guid>
+    <description><![CDATA[<h2>The pains of sharing art online</h2><p>Being an artist, I too, have concerns of someone taking my art and use it to train AI or process my images with AI. I have done a few things to prevent that from happening (or at least, discourage malicious people): Posting less art on social media, adding robot.txt to my site, posting the low resolution versions of my pics. There's also some tools that people would recommend, which claimed to prevent AI from replicating your artstyle, or even poison the AI models if enough poisoned images got into its database. However, I often feel sceptical about them, and it's not (just) because they might not work.</p><p><a href="https://kiwimeowo.neocities.org/blog/2026/4th/11-10.html">...Continue reading</a></p>]]></description>
+    <pubDate>Tue, 10 Nov 2026 08:00:00 GMT</pubDate>
+  </item>
+  <item>
     <title>Beach Cleaning</title>
     <link>https://kiwimeowo.neocities.org/blog/2026/4th/11-07.html</link>
     <guid>https://kiwimeowo.neocities.org/blog/2026/4th/11-07.html</guid>
@@ -70,13 +77,6 @@
     <guid>https://kiwimeowo.neocities.org/blog/2026/3rd/09-24.html</guid>
     <description><![CDATA[<h2>A spreadsheet nobody asked for</h2><p>It is a question that many had asked: How profittable are the orders in Huntcook anyways? You can earn money by orders, but you can also sell the dishes straight from the inventory. Heck, why not straight up sell the ingredients? Wouldn't that be way more time efficient? But most people would rebute that "Wouldn't it make more sense for the orders to be more profitabble than selling from the inventory?". Therefore, I decided to do some calculations for the selling prices for the ingredients, recipes, and the profits it brings using different money earning methods.</p><p><a href="https://kiwimeowo.neocities.org/blog/2026/3rd/09-24.html">...Continue reading</a></p>]]></description>
     <pubDate>Thu, 24 Sep 2026 08:00:00 GMT</pubDate>
-  </item>
-  <item>
-    <title>Dress up games/Character creator</title>
-    <link>https://kiwimeowo.neocities.org/blog/2026/3rd/09-19.html</link>
-    <guid>https://kiwimeowo.neocities.org/blog/2026/3rd/09-19.html</guid>
-    <description><![CDATA[<h2>See my OCs in different styles</h2><p>In this blog of <a href="/blog/2025/1st/01-01.html">1 Jan 2025</a>, I mentioned collecting stickers and stuff, which includes dress up stickers. Thinking back, I wondered why I hadn't elaborated on that topic, because I loved playing dress up games or character creators as a kid. Talking abt these two types here because they are so similar in nature.</p><p><a href="https://kiwimeowo.neocities.org/blog/2026/3rd/09-19.html">...Continue reading</a></p>]]></description>
-    <pubDate>Sat, 19 Sep 2026 08:00:00 GMT</pubDate>
   </item>
 </channel>
 </rss>
