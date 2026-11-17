@@ -17,7 +17,13 @@
       <a href="../index.html">UtSS</a>
       <a href="index.html">Back</a>
     </nav>
-
+  {% if chapters %}
+  <div class="blognav">
+      {% if prev %}<a href="{{ prev }}">{% endif %}<span>⭠ Previous</span>{% if prev %}</a>{% endif %}
+        <a href="index.html"><span>Chapter Select</span></a>
+        {% if next %}<a href="{{ next }}">{% endif %}<span>Next ⭢</span>{% if next %}</a>{% endif %}
+  </div>
+  {% endif %}
   <main>
     <section class="wide">
       <article><h1>{{ title }}</h1>
@@ -29,6 +35,15 @@
           <hr>
           <h2>Author Notes:</h2>
           {{ authornotes | safe }}
+          {% endif %}
+          {% if chapsel %}
+          <hr>
+          <h2>Chapter select:</h2>
+          <ul>
+          {% for chaps in chapsel %}
+            <li><a href="{{ chaps.link }}">{{ chaps.name | safe }}</a></li>
+          {% endfor %}
+          </ul>
           {% endif %}
         </div>
         <hr>

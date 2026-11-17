@@ -35,3 +35,40 @@ u:last-child:after {
   content: '';
   margin-right: 0;
 }
+.blognav {
+  position:fixed;
+  z-index: 99;
+  width: 100%;
+  background: rgb(15 14 49 / 50%); 
+  bottom:0;
+  padding: 10px 0;
+  display: flex;
+justify-content: space-around;
+  }
+  .blognav a,.blognav span:not(a span){
+    filter: var(--dropshadow);
+    display: inline-block;
+    padding:3px 6px;
+  }
+  .blognav span:not(a span){
+    color: var(--yellow);
+  }
+  .blognav a {
+  background: var(--yellow);
+  filter: var(--dropshadow);
+  border-radius: 5px;
+  color: var(--blue);
+  text-decoration-color: var(--blue);
+  }
+  .blognav a span{
+    border-radius: 5px;
+    padding: 0 7.5px;
+    filter: var(--dropshadow);
+    background: linear-gradient(135deg, var(--gradient1),var(--gradient2));
+  }
+  .blognav a:hover,.blognav a:focus{
+    background: #bcb9d6de;
+    transition: background 0.5s;
+  translate:var(--down);
+  filter:var(--dropshadowdown);
+}

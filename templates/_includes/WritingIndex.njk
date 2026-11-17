@@ -56,9 +56,9 @@
         <h2><a href="{{ post.url }}">{{ post.data.title }}</a> | UtSS</h2>
         <div class="ficinner">
           <p class="tags">Tags: {% for tag in post.data.WritingTags %}<u>{{ tag }}</u>{% endfor %}</p>
-          <p>{{ post.data.desc | safe }}</p>
+          {{ post.data.desc | safe }}
         <hr>
-        <p class="date">Words: {{ post.content | wordCount }} | Written in: {{ post.data.WritingDate }}</p>
+        <p class="date">{% if post.data.chapters %}Chapters: {{ post.data.chapters }}{% else %}Words: {{ post.content | wordCount }}{% endif %} | Written in: {{ post.data.WritingDate }}</p>
         </div>
       </div>
       {% endfor %}
