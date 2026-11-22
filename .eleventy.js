@@ -18,7 +18,7 @@ module.exports = function (eleventyConfig) {
       return `${content.split('</p>')[0].split('-->')[1].replace(/\n/g,'')}</p>`;
    });
    eleventyConfig.addFilter('underscore', (content) => {
-      return content.replace(" ","_");
+      return content.replace(/ /g,"_");
    });
     eleventyConfig.addLiquidFilter("dateToRfc822", pluginRss.dateToRfc822);
     eleventyConfig.addTransform("htmlmin", function (content) {

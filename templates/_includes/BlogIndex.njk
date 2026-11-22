@@ -349,7 +349,7 @@ for (i = 0; i < coll.length; i++) {
       <div width="100%" style="box-sizing:border-box;min-height: calc(100vh - 50px);border-radius: 7.5px;border: 7.5px double;" id="frame">
       <div id="current">
     <div class="inner min blog">
-        {% for post in collections[ tag ] | reverse %}
+        {% for post in collections[ blogquarter.blogquarter[0] ] | reverse %}
         <a href="{{ post.url }}" class="collapsible{% if post.data.style or post.data.deco %} special{% endif %}" title="{{ post.data.filter }}" {% if post.data.style %}style="{{ post.data.style }}"{% endif %}>{{ post.data.title | safe }} <span class="blogdate">( {{ post.data.date | datestring }} )</span><hr><span class="blogpreviewtag">Tags: {{ post.data.filter }}</span><span class="wordcount">{{ post.content | wordCount }} words ({{ post.content | readingTime }} read)</span>{{ post.data.deco | safe }}</a>
         {% endfor %}
     </div>

@@ -13,15 +13,17 @@
   <nav>
   <a href="/sitemap.html" style="--svg:url(/assets/map.svg)"></a>
       <a href="/index.html" style="--svg:url(/assets/home.svg)"></a>
-      <a href="../../index.html">OC index</a>
-      <a href="../index.html">UtSS</a>
-      <a href="index.html">Back</a>
+      <a href="/oc/index.html">OC index</a>
+      <a href="/oc/UtSS/index.html">UtSS</a>
+      <a href="/oc/UtSS/story/index.html">Back</a>
     </nav>
   {% if chapters %}
   <div class="blognav">
-      {% if prev %}<a href="{{ prev }}">{% endif %}<span>⭠ Previous</span>{% if prev %}</a>{% endif %}
+  {% set previousPost = collections[ title | underscore ] | getPreviousCollectionItem %}
+  {% set nextPost = collections[ title | underscore ] | getNextCollectionItem %}
+      {% if previousPost %}<a href="{{ previousPost.url }}">{% endif %}<span>⭠ Previous</span>{% if previousPost %}</a>{% endif %}
         <a href="index.html"><span>Chapter Select</span></a>
-        {% if next %}<a href="{{ next }}">{% endif %}<span>Next ⭢</span>{% if next %}</a>{% endif %}
+        {% if nextPost %}<a href="{{ nextPost.url }}">{% endif %}<span>Next ⭢</span>{% if nextPost %}</a>{% endif %}
   </div>
   {% endif %}
   <main>
@@ -30,18 +32,19 @@
       <div class="inner">
         <div class="text">
           <p class="tags">Tags: {% for tag in WritingTags %}<u>{{ tag }}</u>{% endfor %}</p>
+          {% if subtitle %}<h2>{{ subtitle | safe }}</h2>{% endif %}
           <p>{{ desc | safe }}</p>
           {% if authornotes %}
           <hr>
           <h2>Author Notes:</h2>
           {{ authornotes | safe }}
           {% endif %}
-          {% if chapsel %}
+          {% if chapters %}
           <hr>
           <h2>Chapter select:</h2>
           <ul>
-          {% for chaps in chapsel %}
-            <li><a href="{{ chaps.link }}">{{ chaps.name | safe }}</a></li>
+          {% for chaps in collections[ title | underscore ] %}
+            <li{% if page.url == chaps.url %} aria-current="page"{% endif %}>{% if page.url != chaps.url %}<a href="{{ chaps.url }}">{% endif %}{{ chaps.data.subtitle | safe }}{% if page.url != chaps.url %}</a>{% endif %}</li>
           {% endfor %}
           </ul>
           {% endif %}
